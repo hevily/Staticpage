@@ -1,0 +1,282 @@
+*{
+    margin: 0;padding: 0;
+    font-family:'Microsoft YaHei','Hiragino Sans GB',Helvetica,Arial,'Lucida Grande',sans-serif;
+}
+body{
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.navbar{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    max-width:640px;
+    height: 50px;
+    padding:10px 20px 10px 20px;
+    border-radius: 0;
+    border: none;
+    text-align: center;
+    margin-bottom: 0;
+    background-color: #f27302;
+}
+.container-fluid{
+    max-width:640px;
+}
+.content_body{
+    margin-top: 60px;
+}
+.btn_menu{
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    float: left;
+    border-radius: 0;
+}
+
+.my_theater_group{
+    display: block;
+    margin-top: 0;
+    padding: 5px;
+    color: #ffffff;
+    font-size: 20px;
+}
+.header_strings{
+    float: left;
+}
+.header_add a img {
+    width: 30px;
+    height: 30px;
+}
+.btn_search{
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    float: right;
+}
+.btn-menu>a img,.btn-search>a img{
+    width: 30px;
+    height: 30px;
+}
+.btn-default:hover{
+    background-color: inherit;
+    color: inherit;
+}
+.btn-default:focus{
+    background-color: #f27302;
+}
+.btn{
+    outline: none;
+}
+.glyphicon{
+    color: #ffffff;
+}
+.btn-default{
+    background-color: #f27302;
+    border: none;
+}
+.fade{
+    opacity:0;
+    -webkit-transition:opacity 0.55s linear;
+    -o-transition:opacity 0.55s linear;
+    transition:opacity 0.55s linear
+}
+
+.modal-body{
+    padding: 0;
+}
+.container-fluid{
+    padding-left:0;
+    padding-right: 0;
+}
+.list-nav a{
+    color: #8a8a8a;
+}
+.list-nav{
+    font-size: 16px;
+    text-align: left;
+}
+.list-nav li{
+    padding-left: 20px;
+    list-style: none;
+    border-bottom:1px solid rgba(100,100,100,0.35);
+    height: 42px;
+    line-height: 42px;
+}
+.head-menu{
+    position: absolute;
+    top: 50px;
+}
+.head-menu .nav-icon img{
+    width: 20px;
+    height: 20px;
+    margin-right:3rem;
+    margin-top: -6px;
+}
+
+.head-menu{
+    display: none;
+    position: fixed;
+    width: 100%;
+    max-width: 640px;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(51,51,51,0.4);
+    left: 0;
+	top:50px;
+}
+
+.head-content{
+    position: fixed;
+    z-index: 111;
+    height: 100%;
+    width: 50%;
+    background-color: rgba(51,51,51,.95);
+    left: 0;
+}
+.nav-icon img:nth-child(2){
+    display: none;
+}
+.active img:nth-child(1){
+    display: none;
+}
+.active img:nth-child(2){
+    display: inline-block;
+}
+.active a{
+    color:#f27302;
+}
+.film-list{
+    position: relative;
+    padding-top: 50px;
+}
+/*clearfix*/
+.clearfix:before,
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.clearfix:after {clear: both;}
+.clearfix {zoom: 1;} /* IE < 8 */
+.film-list li{
+    list-style-type: none;
+}
+.film-title{
+    border-bottom: 1px solid #ebebeb;
+    padding: 10px 10px 0 10px ;
+}
+.film-name{
+    float: left;
+}
+.action-point{
+    position: relative;
+    width: 20%;
+    float: left;
+    text-align: center;
+    color: #797979;
+    font-size: 12px;
+    margin-top: 10px;
+}
+.action-point img {
+    display: block;
+    width: 50%;
+    max-width: 30px;
+    max-height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.action-point p{
+    margin: 0;
+}
+.action-point .action-name{
+    display: inline-block;
+    margin-top: 4px;
+}
+.film-list{
+    min-height: 100%;
+}
+.film{
+    margin-top: 10px;
+    border: 1px solid #e4e4e4;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+.film-name{
+    float: left;
+    font-size: 16px;
+}
+.film-name p{
+    font-weight: bolder;
+}
+.film-num{
+    float: right;
+    font-size: 14px;
+    color: #797979;
+}
+.film-num p{
+    font-size: 12px;
+}
+.film-aciton{
+    padding: 14px 10px 10px 10px;
+    clear: both;
+}
+.container{
+    max-width: 640px;
+    padding: 0 10px 0 10px;
+    background-color: #ebebeb;
+
+}
+.radius-badge{
+    /*padding: 1px;*/
+    top: -7px;
+    height: 14px;
+    left: 55%;
+    float: right;
+    min-width: 15px;
+    border: 1px solid #ff3737;
+    border-radius: 9px;
+    position: absolute;
+    background-color: #ff3737;
+    color: #fff;
+    font-size: 12px;
+    line-height: 11px;
+}
+
+/*无剧组新建 有一剧组新建*/
+.none-group{
+    width: 100%;
+    position: relative;
+    padding: 50px 10px 0px;
+    background-color: #fff;
+}
+.none-group img,.none-group p,.none-group input,.one-group input{
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.one-group{
+    background-color: #fff;
+    padding-top: 30px;
+}
+.none-group p{
+    text-align: center;
+}
+.add-new-group{
+    height: 35px;
+    width: 120px;
+    color: #ffffff;
+    border: 1px solid #f27302;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #f27302;
+
+}

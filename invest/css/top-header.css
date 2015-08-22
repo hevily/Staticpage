@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Microsoft YaHei";
+}
+
+.navbar {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    max-width: 640px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 0;
+    border: none;
+    text-align: center;
+    margin-bottom: 0;
+    background-color: #f27302;
+}
+
+.container-fluid {
+    max-width: 640px;
+}
+
+.content_body {
+    margin-top: 55px;
+}
+
+.btn_menu {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    float: left;
+    border-radius: 0;
+}
+
+.my_theater_group {
+    display: block;
+    margin-top: 0;
+    padding: 5px;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.header_strings {
+    float: left;
+}
+
+.btn_search {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    float: right;
+}
+
+.btn-menu > a img, .btn-search > a img {
+    width: 30px;
+    height: 30px;
+}
+
+.btn-default:hover {
+    background-color: inherit;
+    color: inherit;
+}
+
+.btn-default:focus {
+    background-color: #f27302;
+}
+
+.glyphicon {
+    color: #ffffff;
+}
+
+.btn-default {
+    background-color: #f27302;
+    border: none;
+}
+
+.fade {
+    opacity: 0;
+    -webkit-transition: opacity 0.55s linear;
+    -o-transition: opacity 0.55s linear;
+    transition: opacity 0.55s linear
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.modal-dialog {
+    margin-top: 55px;
+    max-width: 640px;
+}
+
+.modal-dialog_menu {
+    margin-left: 0;
+    float: left;
+}
+
+.modal-dialog_search {
+    max-width: 640px;
+    margin-right: 0;
+    float: right;
+}
+
+.modal-content {
+    max-width: 640px;
+    border-radius: 0;
+    border: 1px solid #999;
+}
+
+.modal-backdrop {
+    max-width: 640px;
+    background-color: inherit;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h3 {
+    font-size: 20px;
+}

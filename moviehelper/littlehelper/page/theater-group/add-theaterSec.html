@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../../../../Frame/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../css/div-select.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/theater-group.css"/>
+
+    <script src="../../../../Frame/jQuery/jquery-2.1.3.min.js"></script>
+    <script src="../../../../Frame/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../js/div-select/div-select.js"></script>
+    <script src="../../js/theater-group.js" language="javascript"></script>
+    <title>新建剧组第二步</title>
+</head>
+<body>
+<div class="layerOut">
+    <div class="layer-title">
+        <!--标题-->
+    </div>
+    <div class="layer-action">
+        <a type="button" class="btn btn-black cancel-layout">取消</a>
+        <a type="button" class="btn btn-orange save-layout">保存&关闭</a>
+    </div>
+    <div class="layer-content">
+        <textarea name="copy-to" id="#null" cols="30" rows="10" placeholder="请将复制的内容粘贴到此处" style="padding: 4px;"></textarea>
+    </div>
+</div>
+
+<nav class="navbar  navbar-default navbar-static-top">
+    <div class="row">
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            <div class="header_menu">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-default  btn_menu" data-toggle="modal" style="outline: none;margin-left: -10px;">
+                    <a href="add-theater-group.html"><img src="../../img/add-theater/back.png"/></a>
+                    <!--<span class="glyphicon glyphicon-align-justify"></span>-->
+                </button>
+
+
+
+            </div>
+        </div>
+        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            <h3 class="my_theater_group">新建剧组</h3>
+        </div>
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            <div class="header_add">
+                <div>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn_search btn-default add-theater-group" data-toggle="modal" data-target="#myModal_search-disable" style="float: right">
+                        <!--<span class="glyphicon glyphicon-search"></span>-->
+                        <a href="#"><img src="../../img/icon/menu.png"/></a>
+                    </button>
+                    <!-- Modal -->
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container step-content">
+
+    <div class="step clearfix" style="padding-bottom: 10px;">
+        <div class="step-title clearfix">
+            <div class="step-rad">
+                <p><span>2&nbsp;&nbsp;</span>剧本大纲导入</p>
+            </div>
+        </div>
+        <div class="step-details ">
+            <div class="gather">
+                <span class="hideimg">300字 <img src="../../img/add-theater/selecting.png" alt="选择剧集"/></span>
+                <span class="hideimg">500字 <img src="../../img/add-theater/selecting.png" alt="选择剧集"/></span>
+            </div>
+        </div>
+        <div class="step-details charnt sr-only">
+            <div class="row">
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div class="charn">
+                        <a href="javascript:;" type="button" class="chara char3">300字<img src="../../img/add-theater/selecting.png" alt="选中图标"/></a>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div class="charn">
+                        <a href="javascript:;" type="button" class="chara char5">500字<img src="../../img/add-theater/selecting.png" alt="选中图标"/></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gap bggray"></div>
+
+    <div class="step clearfix">
+        <div class="step-title">
+            <div class="step-rad">
+                <p><span>3&nbsp;&nbsp;</span>人物小传导入</p>
+            </div>
+        </div>
+        <div class="btn-add-actor clearfix">
+            <div class="row">
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pd4" style="padding-left: 25px;text-align: center;">
+                    <input type="button" value="+主要角色" class="btn btn-orange btn-ss"/>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pd4" style="text-align: center;">
+                    <input type="button" value="+特约角色" class="btn btn-orange btn-ss"/>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pd4" style="text-align: center;padding-right: 25px;">
+                    <input type="button" value="+群众角色" class="btn btn-orange btn-ss"/>
+                </div>
+            </div>
+        </div>
+        <div class="step-details clearfix">
+            <div class="profile">
+                <div class="profilename">
+                    <input type="text" value="王大锤（12场）" readonly="readonly"/>
+                </div>
+                <div class="profile-detail">
+                    <input type="text" value="好演技，" readonly="readonly"/>
+                </div>
+            </div>
+            <div class="profile-edit">
+                <div class="edit-img">
+                    <a href="javascript:;"><img src="../../img/add-theater/edit.png" alt="编辑"/></a>
+                </div>
+                <div class="save-btn">
+                    <div class="cancel-profile">
+                        <a href="javascript:;">取消</a>
+                    </div>
+                    <div class="save-profile">
+                        <a href="javascript:;">保存</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="step-details clearfix">
+            <div class="profile">
+                <div class="profilename">
+                    <input type="text" value="王大锤（12场）" readonly="readonly"/>
+                </div>
+                <div class="profile-detail">
+                    <input type="text" value="好演技，" readonly="readonly"/>
+                </div>
+            </div>            <div class="profile-edit">
+                <div class="edit-img">
+                    <a href="javascript:;"><img src="../../img/add-theater/edit.png" alt="编辑"/></a>
+                </div>
+                <div class="save-btn">
+                    <div class="cancel-profile">
+                        <a href="javascript:;">取消</a>
+                    </div>
+                    <div class="save-profile">
+                        <a href="javascript:;">保存</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="step-details clearfix">
+            <div class="profile">
+                <div class="profilename">
+                    <input type="text" value="王大锤（12场）" readonly="readonly"/>
+                </div>
+                <div class="profile-detail">
+                    <input type="text" value="好演技，" readonly="readonly"/>
+                </div>
+            </div>
+            <div class="profile-edit">
+                <div class="edit-img">
+                    <a href="javascript:;"><img src="../../img/add-theater/edit.png" alt="编辑"/></a>
+                </div>
+                <div class="save-btn">
+                    <div class="cancel-profile">
+                        <a href="javascript:;">取消</a>
+                    </div>
+                    <div class="save-profile">
+                        <a href="javascript:;">保存</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gap bggray"></div>
+    <div class="step clearfix" style="padding-bottom: 10px;">
+        <div class="step-title">
+            <div class="step-rad">
+                <p><span>4&nbsp;&nbsp;</span>剧本分集大纲导入</p>
+            </div>
+        </div>
+        <div class="step-details ">
+            <div class="gather">
+                <span class="hideimg">第一集 <img src="../../img/add-theater/selecting.png" alt="选择剧集"/></span>
+                <span class="hideimg">第二集 <img src="../../img/add-theater/selecting.png" alt="选择剧集"/></span>
+                <span class="hideimg">第三集 <img src="../../img/add-theater/selecting.png" alt="选择剧集"/></span>
+                <span class="hideimg">第四集 <img src="../../img/add-theater/selecting.png" alt="选择剧集"/></span>
+                <span class="hideimg">第五集 <img src="../../img/add-theater/selecting.png" alt="选择剧集"/></span>
+                <span class="hideimg">第六集 <img src="../../img/add-theater/selecting.png" alt="选择剧集"/></span>
+                <span class="hideimg">第七集 <img src="../../img/add-theater/selecting.png" alt="选择剧集"/></span>
+            </div>
+        </div>
+    </div>
+    <div class="gap bggray"></div>
+    <div class="step clearfix">
+        <div class="step-title">
+            <div class="step-rad">
+                <p><span>5&nbsp;&nbsp;</span>剧本导入</p>
+            </div>
+        </div>
+        <div class="step-details clearfix">
+            <div class="email">
+                <input type="text" placeholder="输入邮箱地址,获取跳转到PC的导入链接" style="font-size: 12px;padding-left: 2px;"/>
+            </div>
+            <div class="send-email">
+                <a href="javascript:;">发送</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="finish">
+        <a type="text" class="btn btn-orange prevS" href="add-theater-group.html">上一步</a>
+        <a type="text" class="btn btn-orange finishS">完成</a>
+    </div>
+
+</div>
+
+</body>
+</html>

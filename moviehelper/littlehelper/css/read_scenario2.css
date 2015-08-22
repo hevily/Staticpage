@@ -1,0 +1,27 @@
+.version_old{
+    float:right;
+    margin-top: 5px;
+}.scenario_content li p{
+     line-height: 2.5;
+     padding-left: 25px;
+ }
+.tab-pane pre{
+    clear: both;
+    line-height: 2;
+    /*background-color:inherit;*/
+    /*border: none;*/
+    padding-left: 10px;
+    /*padding-left: 25px;*/
+}
+.tabs_number_content{
+    padding: 10px 15px 10px 15px;
+}
+.marked{
+    /*border: 2px solid #ff0000;*/
+}
+/*.list-group-item.click, .list-group-item.click:focus, .list-group-item.click:hover{*/
+    /*z-index: 2;*/
+    /*color: #fff;*/
+    /*background-color: #b75670;*/
+    /*border-color: #b74669;*/
+/*}*/

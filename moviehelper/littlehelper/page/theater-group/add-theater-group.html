@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../../../../Frame/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../css/div-select.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/theater-group.css"/>
+    <link rel="stylesheet" href="../../css/jquery.datetimepicker.css"/>
+
+    <script src="../../../../Frame/jQuery/jquery-2.1.3.min.js"></script>
+    <script src="../../../../Frame/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../js/div-select/div-select.js"></script>
+    <script src="../../js/jquery.datetimepicker.js"></script>
+
+    <title>新建剧组</title>
+</head>
+<body>
+<nav class="navbar  navbar-default navbar-static-top">
+    <div class="row">
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            <div class="header_menu">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-default  btn_menu" data-toggle="modal" style="outline: none;margin-left: -10px;">
+                    <a href="../index.html"><img src="../../img/add-theater/back.png"/></a>
+                    <!--<span class="glyphicon glyphicon-align-justify"></span>-->
+                </button>
+
+
+
+            </div>
+        </div>
+        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            <h3 class="my_theater_group">新建剧组</h3>
+        </div>
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            <div class="header_add">
+                <div>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn_search btn-default add-theater-group" data-toggle="modal" data-target="#myModal_search-disable" style="float: right">
+                        <!--<span class="glyphicon glyphicon-search"></span>-->
+                        <a href="../theater-group/add-theater-group.html"><img src="../../img/icon/menu.png"/></a>
+                    </button>
+                    <!-- Modal -->
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container add-content">
+    <div class="fst">
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6  noticec"><div class="noticeo">
+               <p>
+                   <span>1&nbsp;&nbsp;</span>
+                   剧组基本信息
+               </p>
+            </div></div>
+            <div class="col-xs-6 col-sm-6 col-md-6  creatorc"><div class="creater">
+                <span>创建人</span>刘妮丹
+            </div></div>
+        </div>
+    </div>
+    <div class="line dotted"></div>
+    <div class="photo-album"></div>
+    <div class="add-form">
+        <ul>
+            <li>
+                <div class="info-input photo-album">
+                    <div class="name"><mark>*</mark>剧组相册</div>
+                    <div class="in">
+                        <div class="photo-btn">
+                            <a type="button" class=" btn btn-orange local-photo" style="margin-left: 0;">上传照片</a>
+                            <!--<a type="button" class=" btn btn-orange take-photo" >拍摄</a>-->
+                            <!--<a type="button" class=" btn btn-black view-photo" style="margin-top: 5px;margin-right: 0;">查看相册</a>-->
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="info-input">
+                    <div class="tips name"><mark>*</mark>剧组名称</div>
+                    <div class="tips in"><input type="text"/></div>
+                </div>
+            </li>
+            <li>
+                <div class="info-input">
+                    <div class="tips name"><mark>*</mark>类型</div>
+                    <div class="tips in">
+                        <div class="model-select-box">
+                            <div class="model-select-text" data-value="">四川</div>
+                            <ul class="model-select-option">
+                                <li data-option="1">四川</li>
+                                <li data-option="2">北京</li>
+                                <li data-option="2">上海</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="info-input">
+                    <div class="tips name"><mark>*</mark>出品人</div>
+                    <div class="tips in">
+                        <div class="tips in"><input type="text"/></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="info-input">
+                    <div class="tips name"><mark>*</mark>集数(集)</div>
+                    <div class="tips in">
+                        <div class="tips in"><input type="text" placeholder="剧本导入集数，保存后不可修改" style="font-size: 12px;"/></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="info-input">
+                    <div class="tips name">&nbsp;&nbsp;&nbsp;出品单位</div>
+                    <div class="tips in">
+                        <div class="tips in"><input type="text" /></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="info-input">
+                    <div class="tips name">&nbsp;&nbsp;&nbsp;计划投资(元)</div>
+                    <div class="tips in">
+                        <div class="tips in"><input type="text" /></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="info-input">
+                    <div class="tips name"><mark>*</mark>开机日期</div>
+                    <div class="tips in">
+                        <div class="tips in"><input type="text" id="start-time"/></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="info-input">
+                    <div class="tips name">&nbsp;&nbsp;预算制作日期</div>
+                    <div class="tips in">
+                        <div class="tips in"><input type="text" id="budget-time" value=""/></div>
+                        <script>
+                            $(document).ready(function(){
+                                $("#start-time,#budget-time").datetimepicker({
+                                    mask:'9999/19/39 29:59'
+                                })
+                            })
+                        </script>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="info-input">
+                    <div class="tips name"><mark>*</mark>外地拍摄(天)</div>
+                    <div class="tips in">
+                        <div class="tips in"><input type="text" /></div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="info-input">
+                    <div class="tips name"><mark>*</mark>本地拍摄(天)</div>
+                    <div class="tips in">
+                        <div class="tips in"><input type="text" /></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="info-input">
+                    <div class="tips name">&nbsp;&nbsp;&nbsp;后期制作(天)</div>
+                    <div class="tips in">
+                        <div class="tips in"><input type="text" /></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="info-input">
+                    <div class="tips name">&nbsp;&nbsp;&nbsp;预算集数(集)</div>
+                    <div class="tips in">
+                        <div class="tips in"><input type="text" placeholder="成本集数可与剧本导入集数不同" style="font-size: 12px;"/></div>
+                    </div>
+                </div>
+            </li>
+        </ul>       
+    </div>
+    <div class="nextp">
+        <a type="button" class="btn btn-black cancel" href="../index.html">取消</a>
+        <a type="button" class="btn btn-orange nexts"  href="add-theaterSec.html">下一步</a>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        $(".in").width($(".add-form").width()-$(".name").width()-10);
+        $("input[type=date]").width($(".in").width());
+    })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../../Frame/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/menu.css"/>
+    <script src="../../Frame/jQuery/jquery-2.1.3.min.js"></script>
+    <script src="../../Frame/bootstrap/dist/js/bootstrap.min.js"></script>
+    <title>我的剧组</title>
+    <style>
+        .radius-badge{
+            top: -55px;
+            float: right;
+            width: 22px;
+            border: 1px solid #ff0000;
+            border-radius: 10px;
+            position: relative;
+            background-color: red;
+            color: #fff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body style="font-family:'Microsoft YaHei'">
+<div class="container-fluid">
+    <div class="header">
+        <nav class="navbar  navbar-default">
+            <div class="row">
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <div class="header_menu">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-default  btn_menu" data-toggle="modal" data-target="#myModal_menu">
+                            <a><img src="../img/icon/menu.png"/></a>
+                            <!--<span class="glyphicon glyphicon-align-justify"></span>-->
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal_menu" tabindex="10" role="dialog" aria-labelledby="myModalLabel_menu" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog_menu modal-dialog_menu-large">
+                                <div class="modal-content">
+                                    <div class="modal-content modal-content_left main-menu">
+                                        <!--<div class="modal-header">-->
+                                        <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+                                        <!--<h4 class="modal-title" id="myModalLabel_menu">导航</h4>-->
+                                        <!--</div>-->
+                                        <div class="modal-body">
+                                            <div class="menu-list">
+                                                <div class="index-page"><a href="index.html"><div>首页</div></a></div>
+                                                <div class="invest-page"><a href="invest/page/index.html"><div>投资人</div></a></div>
+                                                <div class="user-info">
+                                                    <div class="user-name">
+                                                        <a><img src="../../img/btn_content/film_making.png"/><div>用户名</div></a>
+                                                        <!--<img src="../../img/btn_content/film_making.png"><a href="#">用户名</a>-->
+                                                    </div>
+                                                    <div class="menu-line"></div>
+
+                                                </div>
+                                                <div class="user-setting">
+                                                    <a href="#"><div>账户设置</div></a>
+                                                    <!--< value="账户设置"/>-->
+                                                </div>
+                                                <div class="menu-line"></div>
+                                                <div class="user-setting">
+                                                    <a href="#"><div>账户设置</div></a>
+                                                    <!--< value="账户设置"/>-->
+                                                </div>
+                                                <div class="menu-line"></div>
+                                                <div class="user-setting">
+                                                    <a href="#"><div>账户设置</div></a>
+                                                    <!--< value="账户设置"/>-->
+                                                </div>
+                                                <div class="menu-line"></div>
+                                                <div class="user-setting">
+                                                    <a href="#"><div>账户设置</div></a>
+                                                    <!--< value="账户设置"/>-->
+                                                </div>
+                                                <div class="menu-line"></div>
+                                                </div>
+                                            </div>
+
+
+
+                                        <!--<div class="modal-footer">-->
+                                        <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+                                        <!--<button type="button" class="btn btn-primary">Save Changes</button>-->
+                                        <!--</div>-->
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                    <h3 class="my_theater_group">我的剧组</h3>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <div class="header_add">
+                        <div>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn_search btn-default  " data-toggle="modal" data-target="#myModal_search-disable" style="float: right">
+                                <!--<span class="glyphicon glyphicon-search"></span>-->
+                                <!--<a><img src="../img/icon/btn_new_scenario.png"/></a>-->
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal_search" tabindex="10" role="dialog" aria-labelledby="myModalLabel_search" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog_search" >
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title" id="myModalLabel">查找</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="search">
+                                                <input type="text" placeholder="查找你的所想"/>
+                                            </div>
+                                            ...<hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="content_body">
+        <div class="film_list">
+            <div class="list list_1">
+                <div class="row icon_list">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <div class="scenario">
+                            <div class="name"><h3>虎口拔牙</h3></div>
+                            <!--<div class="film_quantity"><p>38集电视剧</p></div>-->
+                        </div>
+                    </div>
+                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                        <div class="row">
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <div class="icon read_scenario">
+                                    <a type="button" href="#"><img src="../img/icon/read_scenario.png"/></a>
+                                    <!--<p>剧本阅读</p>-->
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <div class="icon film_making">
+                                    <a type="button" href="#"><img src="../img/icon/film_making.png"/></a>
+                                    <!--<p>制片</p>-->
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <div class="icon finance">
+                                    <a type="button" href="#"><img src="../img/icon/finance.png"/></a>
+                                    <!--<p>财务</p>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text_list">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 radius-span">
+                        <div class="">
+                            <!--<div class="name"><h4>虎口拔牙</h4></div>-->
+                            <div class="film_quantity"><p>38集电视剧</p></div>
+                        </div>
+                    </div>
+                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 radius-span">
+                        <div class="row">
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <div class="icon read_scenario">
+                                    <!--<a type="button" href="#"><img src="../img/icon/read_scenario.png"/></a>-->
+                                    <p>剧本阅读</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <div class="icon film_making">
+                                    <!--<a type="button" href="#"><img src="../img/icon/film_making.png"/></a>-->
+                                    <p>制片</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <div class="icon finance">
+                                    <!--<a type="button" href="#"><img src="../img/icon/finance.png"/></a>-->
+                                    <p>财务</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"></div>
+                </div>
+            </div>
+            <div class="list list_2">
+                <div class="row icon_list">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <div class="scenario">
+                            <div class="name"><h3>满仓进城</h3></div>
+                            <!--<div class="film_quantity"><p>38集电视剧</p></div>-->
+                        </div>
+                    </div>
+                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                        <div class="row">
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <div class="icon read_scenario">
+                                    <a type="button" href="read_scenario/read_scenario.html"><img src="../img/icon/read_scenario.png"/></a>
+                                    <!--<p>剧本阅读</p>-->
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <div class="icon film_making">
+                                    <a type="button" href="film_making/film_making_index.html"><img src="../img/icon/film_making.png"/></a>
+                                    <!--<p>制片</p>-->
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <div class="icon finance">
+                                    <a type="button" href="finance/finance_index.html"><img src="../img/icon/finance.png"/></a>
+                                    <div class="radius-badge">
+                                        <div class="span">
+                                            <span>12</span>
+                                        </div>
+                                    </div>
+
+                                    <!--<p>财务</p>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text_list">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 radius-span" >
+                        <div class="">
+                            <!--<div class="name"><h4>虎口拔牙</h4></div>-->
+                            <div class="film_quantity"><p>48集电视剧</p></div>
+                        </div>
+                    </div>
+                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 radius-span" >
+                        <div class="row">
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <div class="icon read_scenario">
+                                    <!--<a type="button" href="#"><img src="../img/icon/read_scenario.png"/></a>-->
+                                    <p>剧本阅读</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <div class="icon film_making">
+                                    <!--<a type="button" href="#"><img src="../img/icon/film_making.png"/></a>-->
+                                    <p>制片</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <div class="icon finance">
+                                    <!--<a type="button" href="#"><img src="../img/icon/finance.png"/></a>-->
+                                    <p>财务</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"></div>
+                </div>
+            </div>
+            <div class="list list_3">
+                <div class="row icon_list">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <div class="scenario">
+                            <div class="name"><h3>沉睡魔咒</h3></div>
+                        </div>
+                    </div>
+                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                        <div class="row">
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <div class="icon read_scenario">
+                                    <a type="button" href="read_scenario/read_scenario.html"><img src="../img/icon/read_scenario.png"/></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <div class="icon film_making">
+                                    <a type="button" href="#"><img src="../img/icon/film_making.png"/></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <div class="icon finance">
+                                    <a type="button" href="#"><img src="../img/icon/finance.png"/></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text_list">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 radius-span" >
+                        <div class="">
+                            <div class="film_quantity"><p>电影</p></div>
+                        </div>
+                    </div>
+                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 radius-span" >
+                        <div class="row">
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <div class="icon read_scenario">
+                                    <p>剧本阅读</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <div class="icon film_making">
+                                    <p>制片</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <div class="icon finance">
+                                    <p>财务</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"></div>
+                </div>
+            </div>
+            <div class="list list_more">
+                <!--<div class="row icon_list">-->
+                <!--<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">-->
+                <!--<div class="scenario">-->
+                <!--<div class="name"><h4>虎口拔牙</h4></div>-->
+                <!--&lt;!&ndash;<div class="film_quantity"><p>38集电视剧</p></div>&ndash;&gt;-->
+
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+</div>
+</body>
+</html>

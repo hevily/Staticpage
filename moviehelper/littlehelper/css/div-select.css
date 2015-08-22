@@ -1,0 +1,72 @@
+ul {
+
+    list-style: none;
+
+}
+
+.model-select-box {
+
+    width: 200px;
+
+    height: 27px;
+
+    line-height: 27px;
+
+    border: 1px solid #dddada;
+
+    margin-right: 20px;
+
+    float: left;
+
+    text-indent: 5px; //文本块首行文本的缩进,允许负值
+
+position: relative;
+
+}
+
+.model-select-text {
+
+    height: 27px;
+
+    text-align: left;
+
+    background: no-repeat right 0;
+
+    -moz-user-select: none;
+
+    -webkit-user-select: none;
+
+    user-select: none;
+
+    cursor: pointer;
+
+    background-image: url(http://sandbox.runjs.cn/uploads/rs/246/y2upyqdt/model-select.png);
+
+}
+
+.model-select-option {
+    display: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background: #fff;
+    width: 199px;
+    left: -1px;
+    margin-left:9px;
+    border: 1px solid #aaa;
+}
+.model-select-option li {
+    height: 22px;
+    text-align: left;
+    line-height: 22px;
+    color: #555;
+    cursor: pointer;
+}
+
+.model-select-option li.seleced {
+    background: #06C;
+    color: #fff;
+}
+.model-select-text:hover{
+    background: none;
+}

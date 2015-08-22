@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../../../Frame/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/scenario.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/menu.css"/>
+
+    <script src="../../../Frame/jQuery/jquery-2.1.3.min.js"></script>
+    <script src="../../../Frame/bootstrap/dist/js/bootstrap.min.js"></script>
+    <title>分集大纲</title>
+</head>
+<body style="font-family:'Microsoft YaHei'">
+    <div class="container-fluid">
+        <div class="header">
+            <nav class="navbar  navbar-default">
+                <div class="row">
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 left">
+                        <div class="header_menu">
+                            <button type="button" class="btn btn-default  btn_menu" data-toggle="modal" data-target="#myModal_menu">
+                                <a><img src="../../img/icon/menu.png"/></a></button>
+                            <div class="modal fade" id="myModal_menu" tabindex="10" role="dialog" aria-labelledby="myModalLabel_menu" aria-hidden="true">
+                                <!--<div class="modal-dialog_menu">-->
+                                <div class="modal-dialog dialog_left">
+                                    <div class="modal-content modal-content_left">
+                                        <div class="modal-body">
+                                            <div class="menu-list">
+                                                <div class="index-page"><a href="../index.html"><div>首页</div></a></div>
+                                                <div class="invest-page"><a href="../invest/page/index.html"><div>投资人</div></a></div>
+                                                <div class="user-info">
+                                                    <div class="user-name">
+                                                        <a><img src="../../img/btn_content/film_making.png"/><div>用户名</div></a>
+                                                        <!--<img src="../../img/btn_content/film_making.png"><a href="#">用户名</a>-->
+                                                    </div>
+                                                    <div class="menu-line"></div>
+
+                                                </div>
+                                                <div class="user-setting">
+                                                    <a href="#"><div>账户设置</div></a>
+                                                    <!--< value="账户设置"/>-->
+                                                </div>
+                                                <div class="menu-line"></div>
+                                                <div class="user-setting">
+                                                    <a href="#"><div>账户设置</div></a>
+                                                    <!--< value="账户设置"/>-->
+                                                </div>
+                                                <div class="menu-line"></div>
+                                                <div class="user-setting">
+                                                    <a href="#"><div>账户设置</div></a>
+                                                    <!--< value="账户设置"/>-->
+                                                </div>
+                                                <div class="menu-line"></div>
+                                                <div class="user-setting">
+                                                    <a href="#"><div>账户设置</div></a>
+                                                    <!--< value="账户设置"/>-->
+                                                </div>
+                                                <div class="menu-line"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!--</div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 middle">
+                        <h3 class="my_theater_group">满仓进城</h3>
+                    </div>
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 right">
+                        <div class="header_more">
+                            <div>
+                                <button type="button" class="btn btn_search btn-default  " data-toggle="modal" data-target="#myModal_search" style="float: right">
+                                    <a><img src="../../img/icon/btn_more.png"/></a>
+                                </button>
+                                <div class="modal fade" id="myModal_search" tabindex="10" role="dialog" aria-labelledby="myModalLabel_search" aria-hidden="true">
+                                    <!--<div class="modal-dialog_more">-->
+                                    <div class="modal-dialog dialog_right" >
+                                        <div class="modal-content modal-content-right">
+                                            <div class="modal-body">
+                                                <div class="title_scenario">
+                                                    <ul>
+                                                        <li><a id="right_0" class="btn btn_list" type="button" href="read_scenario.html"><p>剧本阅读</p><img id="right_0_1" src="../../img/btn/right_defalut.png"/><img id="right_0_2" style="display: none" src="../../img/btn/right_white.png"/></a></li>
+                                                        <li><a id="right_1" class="btn btn_list" type="button" href="scenario_synopsis.html"><p>剧本大纲</p><img id="right_1_1" src="../../img/btn/right_defalut.png"/><img id="right_1_2" style="display: none" src="../../img/btn/right_white.png"/></a></li>
+                                                        <!--<hr class="marked"/>-->
+                                                        <li><a id="right_2" class="btn btn_list" type="button" href="people_brief.html" ><p>人物小传</p><img id="right_2_1" src="../../img/btn/right_defalut.png"/><img id="right_2_2" style="display: none" src="../../img/btn/right_white.png"/></a></li>                                            </a></li>
+                                                        <!--<hr class="marked"/>-->
+                                                        <li><a id="right_3" class="btn btn_list" type="button" href="separate_episode.html" ><p>分集大纲</p><img id="right_3_1" src="../../img/btn/right_defalut.png"/><img id="right_3_2" style="display: none" src="../../img/btn/right_white.png"/></a></li>
+                                                        <!--<hr class="marked"/>-->
+                                                        <li><a id="pulled" class="btn btn_list" type="button" href="#" ><p>未发布</p><img id="down_1_1" src="../../img/btn/down.png"/><img id="down_1_2" src="../../img/btn/up.png" style="display: none"/></a></li>
+                                                        <div>
+                                                            <table  class="list"  id="pulled_1" border="0" cellpadding="5" cellspacing="0" style="display: none" >
+                                                                <tr>
+                                                                    <th>集</th>
+                                                                    <th>场</th>
+                                                                    <th style="min-width:80px;">修改方式</th>
+                                                                    <th>修改日期</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="td_middle">1</td>
+                                                                    <td>3</td>
+                                                                    <td>修改</td>
+                                                                    <td class="td_middle">2015-4-20</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="td_middle">1</td>
+                                                                    <td>3</td>
+                                                                    <td>修改</td>
+                                                                    <td class="td_middle">2015-4-20</td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                        <li><a id="unpulled" class="btn btn_list" type="button" href="#" ><p>已发布</p><img id="down_2_1" src="../../img/btn/down.png"/><img id="down_2_2" src="../../img/btn/up.png" style="display: none"/></a></li>
+                                                        <table  class="list"  id="unpulled_1" border="0" cellpadding="5" cellspacing="0" style="display: none" >
+                                                            <tr>
+                                                                <th>集</th>
+                                                                <th>场</th>
+                                                                <th style="min-width:80px;">修改方式</th>
+                                                                <th>修改日期</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="td_middle">1</td>
+                                                                <td>3</td>
+                                                                <td>修改</td>
+                                                                <td class="td_middle">2015-4-20</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="td_middle">1</td>
+                                                                <td>3</td>
+                                                                <td>修改</td>
+                                                                <td class="td_middle">2015-4-20</td>
+                                                            </tr>
+                                                        </table>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="content_body">
+            <div class="row" >
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="read_scenario">
+                        <h3>分集大纲</h3>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="btn-group">
+                        <form>
+                            <label class="sr-only" for="film_select" >film</label>
+                            <select name="film_select" id="film_select">
+                                <option>第1集</option>
+                                <option>第2集</option>
+                                <option>第3集</option>
+                                <option>第4集</option>
+                                <option>第5集</option>
+                                <option>第6集</option>
+                                <option>第7集</option>
+                                <option>第8集</option>
+                                <option>第9集</option>
+                                <option>第10集</option>
+                                <option>第11集</option>
+                                <option>第12集</option>
+                                <option>第13集</option>
+                                <option>第14集</option>
+                                <option>第15集</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="markeddiv"></div>
+
+            <div class="content">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><div>
+                        <p class="separate_episode_dialog">农村风景无限好，碧绿的江水清如镜，民兵排长
+                            满仓进城参加比赛夺得一只奖杯，同村村民改丫
+                            摇着小船来到江边等待满仓回村，满仓兴高采烈
+                            拿着奖杯上船过江，改丫忽然听到不远处传来“
+                            仆通”一声，扭头一看，原来是有个女人跳江自
+                            杀。
+                            满仓见有人在江边寻短见，二话不说一个猛子扎
+                            入江中救上了自杀女人，自杀女人姓景名梅是下
+                            放到农村的知青，景梅因为怀孕走投无路才跳江
+                            ，知青年代怀孕是一件天大的事情，严重的将会
+                            影响日后回城就业。满仓救上景梅回到村中的诊
+                            所，诊所医生成功救活了景梅，改丫心细发现满
+                            仓脖子上的吊坠不见了，满仓没有往深处去想，
+                            心中猜测吊坠可能是入江救人的时候遗失，</p>
+                    </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+
+    <SCRIPT language="JavaScript">
+        $(document).ready(function(){
+            $("#right_0").hover(function() {
+                $("#right_0_1").toggle();
+                $("#right_0_2").toggle();
+            });
+            $("#right_1").hover(function() {
+                $("#right_1_1").toggle();
+                $("#right_1_2").toggle();
+            });
+            $("#right_2").hover(function() {
+                $("#right_2_1").toggle();
+                $("#right_2_2").toggle();
+            });
+            $("#right_3").hover(function() {
+                $("#right_3_1").toggle();
+                $("#right_3_2").toggle();
+            });
+            $("#pulled").click(function(){
+                $("#pulled_1").fadeToggle("normal","linear");
+                $("#down_1_1").toggle();
+                $("#down_1_2").toggle();
+            });
+            $("#unpulled").click(function(){
+                $("#unpulled_1").fadeToggle("normal","linear");
+                $("#down_2_1").toggle();
+                $("#down_2_2").toggle();
+            });
+        });
+    </SCRIPT>
+</body>
+</html>

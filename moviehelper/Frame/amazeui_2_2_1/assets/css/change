@@ -1,0 +1,11 @@
+备注：
+amaze ui中
+    h4{
+    margin:0 0 0 0
+    }
+    p,*+p{
+        margin:0 0 0 0
+    }
+     a{
+     color:#black
+     }

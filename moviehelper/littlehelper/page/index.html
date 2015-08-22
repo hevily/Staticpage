@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/indexSec.css"/>
+
+
+	<script src="//cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="../js/indexSec.js"></script>
+    <title>小助手首页</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+<!--<div class="header">-->
+    <nav class="navbar  navbar-default navbar-static-top">
+        <div class="row">
+            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <div class="header_menu">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-default  btn_menu" data-toggle="modal" style="outline: none;">
+                        <a><img src="../img/icon/menu.png"/></a>
+                        <!--<span class="glyphicon glyphicon-align-justify"></span>-->
+                    </button>
+                </div>
+            </div>
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                <h3 class="my_theater_group">我的剧组</h3>
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <div class="header_add">
+                    <div>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn_search btn-default add-theater-group" data-toggle="modal" data-target="#myModal_search-disable" style="float: right">
+                            <!--<span class="glyphicon glyphicon-search"></span>-->
+                            <a href="theater-group/add-theater-group.html"><img src="../img/icon/btn_new_scenario.png"/></a>
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal_search" tabindex="10" role="dialog" aria-labelledby="myModalLabel_search" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog_search" >
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">查找</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="search">
+                                            <input type="text" placeholder="查找你的所想"/>
+                                        </div>
+                                        ...<hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+        <div class="none-group clearfix">
+            <img src="../img/theater-group.png" alt="无剧组"/>
+            <p>你目前还没有剧组，快来创建一个吧！</p>
+            <input class="add-new-group" type="button" value="创建剧组"/>
+        </div>
+
+    <div class="film-list">
+        <div class="container">
+            <ul>
+
+
+                <li><div class="film">
+                    <div class="film-title clearfix">
+                        <div class="film-name">
+                            <p>虎口拔牙</p>
+                        </div>
+                        <div class="film-num">
+                            <p>38集电视剧</p>
+                        </div>
+                    </div>
+                    <div class="film-aciton clearfix">
+                        <div class="action-point"><img src="../img/homepage/icon-read_scenario.png" alt="剧本"/>剧本</div>
+                        <div class="action-point"><img src="../img/homepage/icon-film_making.png" alt="制片"/>制片</div>
+                        <div class="action-point"><div class="status">
+                            <img src="../img/homepage/icon-finance.png" alt="财务"/>
+                            <div class="radius-badge">
+                                <div class="span">
+                                    <span>26</span>
+                                </div>
+                            </div>
+                        </div><p>财务</p></div>
+                        <div class="action-point"><img src="../img/homepage/icon-creator.png" alt="主创"/>主创</div>
+                        <div class="action-point"><img src="../img/homepage/icon-annunciate.png" alt="通告"/>通告</div>
+                        <div class="action-point"><img src="../img/homepage/icon-gauds.png" alt="排场"/>排场</div>
+                        <div class="action-point"><img src="../img/homepage/icon-cloth.png" alt="服装"/>服装</div>
+                        <div class="action-point"><img src="../img/homepage/icon-makeUp.png" alt="化妆"/>化妆</div>
+                        <div class="action-point"><img src="../img/homepage/icon-prop.png" alt="道具"/>道具</div>
+                        <div class="action-point"><img src="../img/homepage/icon-scene.png" alt="场景"/>场景</div>
+                    </div>
+                </div></li>
+                <li><div class="film">
+                    <div class="film-title clearfix">
+                        <div class="film-name">
+                            <p>虎口拔牙</p>
+                        </div>
+                        <div class="film-num">
+                            <p>38集电视剧</p>
+                        </div>
+                    </div>
+                    <div class="film-aciton clearfix">
+                        <div class="action-point"><img src="../img/homepage/icon-read_scenario.png" alt="剧本"/>剧本</div>
+                        <div class="action-point"><img src="../img/homepage/icon-film_making.png" alt="制片"/>制片</div>
+                        <div class="action-point"><div class="status">
+                            <img src="../img/homepage/icon-finance.png" alt="财务"/>
+                            <div class="radius-badge">
+                                <div class="span">
+                                    <span>2378</span>
+                                </div>
+                            </div>
+                        </div><p>财务</p></div>
+                        <div class="action-point"><img src="../img/homepage/icon-creator.png" alt="主创"/>主创</div>
+                        <div class="action-point"><img src="../img/homepage/icon-annunciate.png" alt="通告"/>通告</div>
+                    </div>
+                </div></li>
+                <li><div class="film">
+                    <div class="film-title clearfix">
+                        <div class="film-name">
+                            <p>虎口拔牙</p>
+                        </div>
+                        <div class="film-num">
+                            <p>38集电视剧</p>
+                        </div>
+                    </div>
+                    <div class="film-aciton clearfix">
+                        <div class="action-point"><img src="../img/homepage/icon-read_scenario.png" alt="剧本"/>剧本</div>
+                        <div class="action-point"><img src="../img/homepage/icon-film_making.png" alt="制片"/>制片</div>
+                        <div class="action-point"><div class="status">
+                            <img src="../img/homepage/icon-finance.png" alt="财务"/>
+                            <div class="radius-badge">
+                                <div class="span">
+                                    <span>2378</span>
+                                </div>
+                            </div>
+                        </div><p>财务</p></div>
+                        <div class="action-point"><img src="../img/homepage/icon-creator.png" alt="主创"/>主创</div>
+                        <div class="action-point"><img src="../img/homepage/icon-annunciate.png" alt="通告"/>通告</div>
+                    </div>
+                </div></li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="one-group clearfix">
+        <input class="add-new-group" type="button" value="创建剧组"/>
+    </div>
+    <div class="head-menu">
+        <div class="head-content">
+            <ul class="list-nav">
+                <li>
+                    <div class="nav-btn">
+                        <div class="nav-icon active">
+                            <a href="http://www.baidu.com"><img src="../img/navbar/homePage-gray.png" alt="首页"/><img src="../img/navbar/homePage.png" alt="首页"/>首页</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="nav-btn">
+                        <div class="nav-icon">
+                            <a href="#"><img src="../img/navbar/investor-gray.png" alt="投资人"/><img src="../img/navbar/investor.png" alt="投资人"/>投资人</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="nav-btn">
+                        <div class="nav-icon ">
+                            <a href="#"><img src="../img/navbar/readscenario-gray.png" alt="剧本阅读"/><img src="../img/navbar/readscenario.png" alt="剧本阅读"/>剧本阅读</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="nav-btn">
+                        <div class="nav-icon">
+                            <a href="#"><img src="../img/navbar/filmmaking-gray.png" alt="制片"/><img src="../img/navbar/filmmaking.png" alt="制片"/>制片</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="nav-btn">
+                        <div class="nav-icon">
+                            <a href="#"><img src="../img/navbar/finance-gray.png" alt="财务"/><img src="../img/navbar/finance.png" alt="财务"/>财务</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="nav-btn">
+                        <div class="nav-icon">
+                            <a href="#"><img src="../img/navbar/creator-gray.png" alt="主创"/><img src="../img/navbar/creator.png" alt="主创"/>主创</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="nav-btn">
+                        <div class="nav-icon">
+                            <a href="#"><img src="../img/navbar/budget-gray.png" alt="预算"/><img src="../img/navbar/budget.png" alt="预算"/>预算</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="nav-btn">
+                        <div class="nav-icon">
+                            <a href="#"><img src="../img/navbar/annunciate-gray.png" alt="通告"/><img src="../img/navbar/annunciate.png" alt="通告"/>通告</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="nav-btn">
+                        <div class="nav-icon">
+                            <a href="#"><img src="../img/navbar/help-gray.png" alt="帮助文档"/><img src="../img/navbar/help.png" alt="帮助文档"/>帮助文档</a>
+                        </div>
+                    </div>
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+<!--</div>-->
+</body>
+</html>

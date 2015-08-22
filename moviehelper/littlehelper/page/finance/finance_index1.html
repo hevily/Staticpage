@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../../../Frame/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/finance_index.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/finance_borrow-reimburse.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/menu.css">
+    <script src="../../../Frame/jQuery/jquery-2.1.3.min.js"></script>
+    <script src="../../../Frame/bootstrap/dist/js/bootstrap.min.js"></script>
+    <title>财务首页</title>
+
+</head>
+<body style="font-family:'Microsoft YaHei'">
+<div class="container-fluid">
+    <div class="header">
+        <nav class="navbar  navbar-default">
+            <div class="row">
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 left">
+                    <div class="header_menu">
+                        <button type="button" class="btn btn-default  btn_menu" data-toggle="modal" data-target="#myModal_menu">
+                            <a><img src="../../img/icon/menu.png"/></a></button>
+                        <div class="modal fade" id="myModal_menu" tabindex="10" role="dialog" aria-labelledby="myModalLabel_menu" aria-hidden="true">
+                            <!--<div class="modal-dialog_menu">-->
+                            <div class="modal-dialog dialog_left">
+                                <div class="modal-content modal-content_left">
+                                    <div class="menu-list">
+                                        <div class="index-page"><a href="../index.html"><div>首页</div></a></div>
+                                        <div class="invest-page"><a href="../invest/page/index.html"><div>投资人</div></a></div>
+                                        <div class="user-info">
+                                            <div class="user-name">
+                                                <a><img src="../../img/btn_content/film_making.png"/><div>用户名</div></a>
+                                                <!--<img src="../../img/btn_content/film_making.png"><a href="#">用户名</a>-->
+                                            </div>
+                                            <div class="menu-line"></div>
+
+                                        </div>
+                                        <div class="user-setting">
+                                            <a href="#"><div>账户设置</div></a>
+                                            <!--< value="账户设置"/>-->
+                                        </div>
+                                        <div class="menu-line"></div>
+                                        <div class="user-setting">
+                                            <a href="#"><div>账户设置</div></a>
+                                            <!--< value="账户设置"/>-->
+                                        </div>
+                                        <div class="menu-line"></div>
+                                        <div class="user-setting">
+                                            <a href="#"><div>账户设置</div></a>
+                                            <!--< value="账户设置"/>-->
+                                        </div>
+                                        <div class="menu-line"></div>
+                                        <div class="user-setting">
+                                            <a href="#"><div>账户设置</div></a>
+                                            <!--< value="账户设置"/>-->
+                                        </div>
+                                        <div class="menu-line"></div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <!--</div>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 middle">
+                    <h3 class="my_theater_group">满仓进城</h3>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 right">
+                    <div class="header_more">
+                        <div>
+                            <button type="button" class="btn btn_search btn-default  " style="float: right">
+                                <a href="../index.html"><img src="../../img/icon/back.png"/></a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="content_body">
+        <div class="finance_ul">
+            <div class="row finance_title">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    账户总额：<span>90,000.00</span>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    累计支出：<span>-5,562.33</span>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    欠剧组：<span>-13,434.00</span>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    账户余额：<span>71,003.67</span>
+                </div>
+
+                <div class="top-btn-list">
+                    <!--<button class="receive-list">收款列表</button>-->
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn receive-list" data-toggle="modal" data-target="#myModal_receive">
+                        收款列表
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal_receive" tabindex="-1" role="dialog"
+                         aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content"
+                                 content="width=device-width, initial-scale=auto, maximum-scale=auto, user-scalable=yes">
+                                <!--<div class="modal-header">-->
+                                <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+                                <!--<h4 class="modal-title" id="myModalLabel">Modal title</h4>-->
+                                <!--</div>-->
+                                <div class="modal-body">
+                                    <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+
+
+                                    <table class="list" border="0" cellpadding="5" cellspacing="0">
+                                        <caption>
+                                            <div>收款列表</div>
+                                            <div class="caption-btn">
+                                                <button id="add_td" type="button" onclick="">添加</button>
+                                                <button type="button" class=" btn-lg close-modal" data-dismiss="modal"
+                                                        aria-label="Close">关闭
+                                                    <!--<span aria-hidden="true">&times;</span>-->
+                                                </button>
+                                            </div>
+                                        </caption>
+                                        <tr>
+                                            <th>时间</th>
+                                            <th>资金来源</th>
+                                            <th style="max-width:100px;">金额(元)</th>
+                                            <th style="min-width:120px;">操作</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="td_middle">2015-4-14</td>
+                                            <td>和沐传媒有限公司和沐传媒有限媒有限公司和沐传媒有限公司</td>
+                                            <td>80000.00</td>
+                                            <td class="td_middle">
+                                                <div class="edit">
+                                                    <a type="button" class="a-edit">编辑</a>
+                                                    <a type="button" class="a-submit">提交</a>
+                                                    <a type="button" class="a-delete">删除</a>
+                                                </div>
+                                                <div class="save">
+                                                    <a type="button" class="a-cancle">取消</a>
+                                                    <a type="button" class="a-save">保存</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td_middle">2015-4-14</td>
+                                            <td>和沐传媒有限公司和沐传媒有限媒有限公司和沐传媒有限公司</td>
+                                            <td>80000.00</td>
+                                            <td class="td_middle">
+                                                <div class="edit">
+                                                    <a type="button" class="a-edit">编辑</a>
+                                                    <a type="button" class="a-submit">提交</a>
+                                                    <a type="button" class="a-delete">删除</a>
+                                                </div>
+                                                <div class="save">
+                                                    <a type="button" class="a-cancle">取消</a>
+                                                    <a type="button" class="a-save">保存</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td_middle">2015-4-14</td>
+                                            <td>和沐传媒有限公司和沐传媒有限媒有限公司和沐传媒有限公司</td>
+                                            <td>80000.00</td>
+                                            <td class="td_middle">
+                                                <div class="edit">
+                                                    <a type="button" class="a-edit">编辑</a>
+                                                    <a type="button" class="a-submit">提交</a>
+                                                    <a type="button" class="a-delete">删除</a>
+                                                </div>
+                                                <div class="save">
+                                                    <a type="button" class="a-cancle">取消</a>
+                                                    <a type="button" class="a-save">保存</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                    <br/><br/><br/><br/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn settle-accounts-list" data-toggle="modal"
+                            data-target="#myModal_accounts">
+                        结算欠款
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal_accounts" tabindex="-1" role="dialog"
+                         aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <!--<div class="modal-header">-->
+                                <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+                                <!--<h4 class="modal-title" id="myModalLabel">Modal title</h4>-->
+                                <!--</div>-->
+                                <div class="modal-body">
+                                    <div class="btn-close-modal">
+                                        <div class="finish-bills">结算欠款</div>
+
+                                        <button type="button" class=" btn-lg close-modal" data-dismiss="modal"
+                                                aria-label="Close">关闭
+                                        </button>
+                                        <div class="search-form">
+                                            <!--欠款人-->
+                                            <input id="search__username_text" placeholder="请输入欠款人名">
+                                            <input id="search_user_button" type="button" value="搜索">
+                                        </div>
+                                    </div>
+                                    <table class="list" border="0" cellpadding="5" cellspacing="0"
+                                           style="width:100%">
+                                        <tr>
+                                            <th>姓名</th>
+                                            <th> 职务</th>
+                                            <th style="min-width:90px;">总欠款（元）</th>
+                                            <th style="min-width:80px;">操作</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="td_middle">马琳</td>
+                                            <td>总导演</td>
+                                            <td>80000.00</td>
+                                            <td class="td_middle">
+                                                <div class="save close-an-account" style="display:block"><a
+                                                        type="button">结算</a></div>
+                                                <div class=" closed-an-account" style="display:none">
+                                                    <span>已结算</span></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td_middle">马琳</td>
+                                            <td>总导演</td>
+                                            <td>80000.00</td>
+                                            <td class="td_middle">
+                                                <div class="save close-an-account" style="display:block"><a
+                                                        type="button">结算</a></div>
+                                                <div class=" closed-an-account" style="display:none">
+                                                    <span>已结算</span></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td_middle">马琳</td>
+                                            <td>总导演</td>
+                                            <td>80000.00</td>
+                                            <td class="td_middle">
+                                                <div class="save close-an-account" style="display:block"><a
+                                                        type="button">结算</a></div>
+                                                <div class=" closed-an-account" style="display:none">
+                                                    <span>已结算</span></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td_middle">马琳</td>
+                                            <td>总导演</td>
+                                            <td>80000.00</td>
+                                            <td class="td_middle">
+                                                <div class="save close-an-account" style="display:block"><a
+                                                        type="button">结算</a></div>
+                                                <div class=" closed-an-account" style="display:none">
+                                                    <span>已结算</span></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td_middle">马琳</td>
+                                            <td>总导演</td>
+                                            <td>80000.00</td>
+                                            <td class="td_middle">
+                                                <div class="save close-an-account" style="display:block"><a
+                                                        type="button">结算</a></div>
+                                                <div class=" closed-an-account" style="display:none">
+                                                    <span>已结算</span></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td_middle">马琳</td>
+                                            <td>总导演</td>
+                                            <td>80000.00</td>
+                                            <td class="td_middle">
+                                                <div class="save close-an-account" style="display:block"><a
+                                                        type="button">结算</a></div>
+                                                <div class=" closed-an-account" style="display:none">
+                                                    <span>已结算</span></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td_middle">马琳</td>
+                                            <td>总导演</td>
+                                            <td>80000.00</td>
+                                            <td class="td_middle">
+                                                <div class="save close-an-account" style="display:block"><a
+                                                        type="button">结算</a></div>
+                                                <div class=" closed-an-account" style="display:none">
+                                                    <span>已结算</span></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td_middle">马琳</td>
+                                            <td>总导演</td>
+                                            <td>80000.00</td>
+                                            <td class="td_middle">
+                                                <div class="save close-an-account" style="display:block"><a
+                                                        type="button">结算</a></div>
+                                                <div class=" closed-an-account" style="display:none">
+                                                    <span>已结算</span></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td_middle">马琳</td>
+                                            <td>总导演</td>
+                                            <td>80000.00</td>
+                                            <td class="td_middle">
+                                                <div class="save close-an-account" style="display:block"><a
+                                                        type="button">结算</a></div>
+                                                <div class=" closed-an-account" style="display:none">
+                                                    <span>已结算</span></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td_middle">马琳</td>
+                                            <td>总导演</td>
+                                            <td>80000.00</td>
+                                            <td class="td_middle">
+                                                <div class="save close-an-account" style="display:block"><a
+                                                        type="button">结算</a></div>
+                                                <div class=" closed-an-account" style="display:none">
+                                                    <span>已结算</span></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td_middle">马琳</td>
+                                            <td>总导演</td>
+                                            <td>80000.00</td>
+                                            <td class="td_middle">
+                                                <div class="save close-an-account" style="display:block"><a
+                                                        type="button">结算</a></div>
+                                                <div class=" closed-an-account" style="display:none">
+                                                    <span>已结算</span></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td_middle">马琳</td>
+                                            <td>总导演</td>
+                                            <td>80000.00</td>
+                                            <td class="td_middle">
+                                                <div class="save close-an-account" style="display:block"><a
+                                                        type="button">结算</a></div>
+                                                <div class=" closed-an-account" style="display:none">
+                                                    <span>已结算</span></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td_middle">马琳</td>
+                                            <td>总导演</td>
+                                            <td>80000.00</td>
+                                            <td class="td_middle">
+                                                <div class="save close-an-account" style="display:block"><a
+                                                        type="button">结算</a></div>
+                                                <div class=" closed-an-account" style="display:none">
+                                                    <span>已结算</span></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td_middle">马琳</td>
+                                            <td>总导演</td>
+                                            <td>80000.00</td>
+                                            <td class="td_middle">
+                                                <div class="save close-an-account" style="display:block"><a
+                                                        type="button">结算</a></div>
+                                                <div class=" closed-an-account" style="display:none">
+                                                    <span>已结算</span></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td_middle">马琳</td>
+                                            <td>总导演</td>
+                                            <td>80000.00</td>
+                                            <td class="td_middle">
+                                                <div class="save close-an-account" style="display:block"><a
+                                                        type="button">结算</a></div>
+                                                <div class=" closed-an-account" style="display:none">
+                                                    <span>已结算</span></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td_middle">马琳</td>
+                                            <td>总导演</td>
+                                            <td>80000.00</td>
+                                            <td class="td_middle">
+                                                <div class="save close-an-account" style="display:block"><a
+                                                        type="button">结算</a></div>
+                                                <div class=" closed-an-account" style="display:none">
+                                                    <span>已结算</span></div>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td_middle">马琳</td>
+                                            <td>总导演</td>
+                                            <td>80000.00</td>
+                                            <td class="td_middle">
+                                                <div class="save close-an-account" style="display:block"><a
+                                                        type="button">结算</a></div>
+                                                <div class=" closed-an-account" style="display:none">
+                                                    <span>已结算</span></div>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                    <br/><br/><br/><br/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <div class="finance">
+                    <h3>财务</h3>
+
+                    <div>
+                        <p>个人欠剧组：<span>3434.00</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <div class="btn_bills">
+                    <a class=" btn_borrow_bill">借款单</a>
+                    <a class=" btn_reimburse_bill">报销单</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="markeddiv"></div>
+    <div class="none">
+        <div role="tabpanel">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs tabs_number" role="tablist">
+                <li class="number" role="presentation"><a class="number_300" type="button" href="#300"
+                                                          aria-controls="300" role="tab" data-toggle="tab">借款</a></li>
+                <!--<li class="number " role="presentation"><a  class="number_500" type="button" href="#500" aria-controls="500" role="tab" data-toggle="tab">500字</a></li>-->
+                <li class="number active" role="presentation"><a class="number_20000" type="button" href="#20000"
+                                                                 aria-controls="20000" role="tab"
+                                                                 data-toggle="tab">报销</a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content tabs_li_content">
+                <div role="tabpanel" class="tab-pane" id="300">
+                    <ul class="borrow_money">
+                        <li class="click_select wait_borrow">
+                            <a class="btn"><p>待审批借款</p>
+                                <img src="../../img/btn/down.png"/>
+                                <img src="../../img/btn/up.png" style="display: none"/></a>
+                        </li>
+                        <li class="name_list" style="display: none;">
+                            <!--class="wait_borrow_title" -->
+                            <ul>
+                                <li class="name">
+                                    <div>
+                                        满仓
+                                    </div>
+                                </li>
+                                <div class="wait_borrow_content" style="display: none;">
+                                    <div class="wait_borrow1">
+                                        <p>申请人</p>
+
+                                        <div class="minute">马琳</div>
+                                        <hr/>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>科目分类</p>
+
+                                        <div class="minute">特别效果费用</div>
+                                        <hr/>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>子科目分类</p>
+
+                                        <div class="minute">
+                                            <span>特效制作</span>
+                                        </div>
+                                        <hr/>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>提交时间</p>
+
+                                        <div class="minute">
+                                            <span>2015-4-28</span>
+                                        </div>
+                                        <hr/>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>状态</p>
+
+                                        <div class="minute">
+                                            <span>待提交</span>
+                                        </div>
+                                        <hr/>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>金额</p>
+
+                                        <div class="minute">
+                                            <span>20,000.00</span>
+                                        </div>
+                                        <hr/>
+                                    </div>
+                                    <div class="btn_agree_or_not">
+                                        <button class="btn agree">提交审批</button>
+                                        <hr/>
+                                    </div>
+                                </div>
+                                <li class="name">
+                                    <div>
+                                        盖亚
+                                    </div>
+                                </li>
+                                <div class="wait_borrow_content" style="display: none;">
+                                    <div class="wait_borrow1">
+                                        <p>申请人</p>
+
+                                        <div class="minute">马琳</div>
+                                        <hr/>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>科目分类</p>
+
+                                        <div class="minute">特别效果费用</div>
+                                        <hr/>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>子科目分类</p>
+
+                                        <div class="minute">
+                                            <span>特效制作</span>
+                                        </div>
+                                        <hr/>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>提交时间</p>
+
+                                        <div class="minute">
+                                            <span>2015-4-28</span>
+                                        </div>
+                                        <hr/>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>状态</p>
+
+                                        <div class="minute">
+                                            <span>待提交</span>
+                                        </div>
+                                        <hr/>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>金额</p>
+
+                                        <div class="minute">
+                                            <span>20,000.00</span>
+                                        </div>
+                                        <hr/>
+                                    </div>
+                                    <div class="btn_agree_or_not">
+                                        <button class="btn agree">提交审批</button>
+
+                                    </div>
+                                </div>
+
+                                <li class="name">
+                                    <div>
+                                        刘德华
+                                    </div>
+                                </li>
+                                <div class="wait_borrow_content" style="display: none;">
+                                    <div class="wait_borrow1">
+                                        <p>申请人</p>
+
+                                        <div class="minute">马琳</div>
+                                        <hr/>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>科目分类</p>
+
+                                        <div class="minute">特别效果费用</div>
+                                        <hr/>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>子科目分类</p>
+
+                                        <div class="minute">
+                                            <span>特效制作</span>
+                                        </div>
+                                        <hr/>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>提交时间</p>
+
+                                        <div class="minute">
+                                            <span>2015-4-28</span>
+                                        </div>
+                                        <hr/>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>状态</p>
+
+                                        <div class="minute">
+                                            <span>待提交</span>
+                                        </div>
+                                        <hr/>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>金额</p>
+
+                                        <div class="minute">
+                                            <span>20,000.00</span>
+                                        </div>
+                                        <hr/>
+                                    </div>
+                                    <div class="btn_agree_or_not">
+                                        <button class="btn agree">提交审批</button>
+                                    </div>
+                                </div>
+                            </ul>
+                            <div class="line"></div>
+                        </li>
+
+                        <li class="click_select wait_filmmaking">
+                            <a class="btn" href="#"><p>待制片主任审批</p>
+                                <img src="../../img/btn/down.png"/>
+                                <img src="../../img/btn/up.png" style="display: none"/></a>
+                        </li>
+                        <li class="name_list" style="display: none;">
+                            <!--class="wait_borrow_title" -->
+                            <ul>
+                                <li class="name">
+                                    <div>
+                                        满仓
+                                    </div>
+                                </li>
+                                <div class="wait_filmmaking_content">
+                                    <div class="wait_borrow1">
+                                        <p>申请人</p>
+
+                                        <div class="minute">马琳</div>
+                                        <hr/>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>科目分类</p>
+
+                                        <div class="minute">特别效果费用</div>
+                                        <hr/>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>子科目分类</p>
+
+                                        <div class="minute">
+                                            <span>特效制作</span>
+                                        </div>
+                                        <hr/>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>提交时间</p>
+
+                                        <div class="minute">
+                                            <span>2015-4-28</span>
+                                        </div>
+                                        <hr/>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>状态</p>
+
+                                        <div class="minute">
+                                            <span>待提交</span>
+                                        </div>
+                                        <hr/>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>金额</p>
+
+                                        <div class="minute">
+                                            <span>20,000.00</span>
+                                        </div>
+                                        <hr/>
+                                    </div>
+                                    <div class="btn_agree_or_not">
+                                        <button class="btn agree">同意</button>
+                                        <button class="btn disagree">不同意</button>
+                                    </div>
+                                </div>
+                                <li class="name">
+                                    <div> 盖亚</div>
+                                </li>
+                                <div class="wait_filmmaking_content">
+                                    <div class="wait_borrow1">
+                                        <p>申请人</p>
+
+                                        <div class="minute">马琳</div>
+                                        <hr/>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>科目分类</p>
+
+                                        <div class="minute">特别效果费用</div>
+                                        <hr/>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>子科目分类</p>
+
+                                        <div class="minute">
+                                            <span>特效制作</span>
+                                        </div>
+                                        <hr/>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>提交时间</p>
+
+                                        <div class="minute">
+                                            <span>2015-4-28</span>
+                                        </div>
+                                        <hr/>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>状态</p>
+
+                                        <div class="minute">
+                                            <span>待提交</span>
+                                        </div>
+                                        <hr/>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>金额</p>
+
+                                        <div class="minute">
+                                            <span>20,000.00</span>
+                                        </div>
+                                        <hr/>
+                                    </div>
+                                    <div class="btn_agree_or_not">
+                                        <button class="btn agree">同意</button>
+                                        <button class="btn disagree">不同意</button>
+                                    </div>
+                                </div>
+
+                                <li class="name">
+                                    <div>刘德华</div>
+                                    <div class="wait_filmmaking_content">
+                                        <div class="wait_borrow1">
+                                            <p>申请人</p>
+
+                                            <div class="minute">马琳</div>
+                                            <hr/>
+                                        </div>
+                                        <div class="wait_borrow1">
+                                            <p>科目分类</p>
+
+                                            <div class="minute">特别效果费用</div>
+                                            <hr/>
+                                        </div>
+                                        <div class="wait_borrow1">
+                                            <p>子科目分类</p>
+
+                                            <div class="minute">
+                                                <span>特效制作</span>
+                                            </div>
+                                            <hr/>
+                                        </div>
+                                        <div class="wait_borrow1">
+                                            <p>提交时间</p>
+
+                                            <div class="minute">
+                                                <span>2015-4-28</span>
+                                            </div>
+                                            <hr/>
+                                        </div>
+                                        <div class="wait_borrow1">
+                                            <p>状态</p>
+
+                                            <div class="minute">
+                                                <span>待提交</span>
+                                            </div>
+                                            <hr/>
+                                        </div>
+                                        <div class="wait_borrow1">
+                                            <p>金额</p>
+
+                                            <div class="minute">
+                                                <span>20,000.00</span>
+                                            </div>
+                                            <hr/>
+                                        </div>
+                                        <div class="btn_agree_or_not">
+                                            <button class="btn agree">同意</button>
+                                            <button class="btn disagree">不同意</button>
+                                        </div>
+                                    </div>
+                            </ul>
+                            <div class="line"></div>
+                        </li>
+
+                        <li class="click_select">
+                            <a class="btn" href="#"><p>待出纳审批</p>
+                                <img src="../../img/btn/down.png"/>
+                                <img src="../../img/btn/up.png" style="display: none"/></a>
+                        </li>
+                        <li class="click_select">
+                            <a class="btn" href="#"><p>待会计审批</p>
+                                <img src="../../img/btn/down.png"/>
+                                <img src="../../img/btn/up.png" style="display: none"/></a>
+                        </li>
+                        <li class="click_select">
+                            <a class="btn" href="#"><p>已完成借款</p>
+                                <img src="../../img/btn/down.png"/>
+                                <img src="../../img/btn/up.png" style="display: none"/></a>
+                        </li>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane active" id="20000">
+                    <ul class="borrow_money">
+                        <li class="click_select">
+                            <a class="btn" href="#"><p>待审批借款</p>
+                                <img src="../../img/btn/down.png"/>
+                                <img src="../../img/btn/up.png" style="display: none"/></a>
+                        </li>
+                        <li class="click_select">
+                            <a class="btn" href="#"><p>待制片主任审批</p>
+                                <img src="../../img/btn/down.png"/>
+                                <img src="../../img/btn/up.png" style="display: none"/></a>
+                        </li>
+                        <li class="click_select">
+                            <a class="btn" href="#"><p>待出纳审批</p>
+                                <img src="../../img/btn/down.png"/>
+                                <img src="../../img/btn/up.png" style="display: none"/></a>
+                        </li>
+
+
+                        <li class="name_list" style="display: none;">
+                            <!--class="wait_borrow_title" -->
+                            <ul>
+                                <li class="name">
+                                    <div>
+                                        满仓
+                                    </div>
+                                </li>
+                                <div class="wait_filmmaking_content" style="display: none;">
+                                    <div class="wait_borrow1">
+                                        <p>申请人</p>
+
+                                        <div class="minute">马琳</div>
+                                        <hr>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>科目分类</p>
+
+                                        <div class="minute">特别效果费用</div>
+                                        <hr>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>子科目分类</p>
+
+                                        <div class="minute">
+                                            <span>特效制作</span>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>提交时间</p>
+
+                                        <div class="minute">
+                                            <span>2015-4-28</span>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>状态</p>
+
+                                        <div class="minute">
+                                            <span>待出纳审批</span>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>金额</p>
+
+                                        <div class="minute">
+                                            <span>20,000.00</span>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                    <div class="btn_agree_or_not">
+                                        <button class="btn disagree-bill">不同意</button>
+                                        <button class="btn pay-for-bill" onclick="forbiddenSelect()">付款</button>
+                                    </div>
+
+
+                                    <div class="waitFor" style="display: none">
+                                        <table class="add_list">
+                                            <caption>ID:16&nbsp;报销项目申请人&nbsp;<span>刘刈润</span></caption>
+                                            <tr>
+                                                <th>科目分类</th>
+                                                <th>子科目分类</th>
+                                                <th>报销金额(元)</th>
+                                            </tr>
+                                            <tr>
+                                                <td>演员劳务费用</td>
+                                                <td>金巧巧金巧巧</td>
+                                                <td id="apply">10,000.00</td>
+                                            </tr>
+                                        </table>
+
+                                        <!---->
+                                        <table class="add_list">
+
+                                            <caption>出纳付款方式（请选择借款或者现金）&nbsp;欠款总额：<span>1000</span>元</caption>
+                                            <tr>
+                                                <!--<th>借款金额</th>-->
+                                                <th>方式</th>
+                                                <th>金额</th>
+                                                <th>付款金额</th>
+                                                <th>操作</th>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="3">借款冲抵&nbsp;</td>
+                                                <td >200.00</td>
+                                                <td class="input-money"><input type="text"/></td>
+                                                <td rowspan="3">借款&nbsp;<input type="radio" name="check-pay"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td >300.00</td>
+                                                <td class="input-money"><input type="text"/></td>
+                                                <!--<td>借款&nbsp;<input type="radio" name="check-pay" value="bill"/></td>-->
+                                            </tr><tr>
+                                                <td >500.00</td>
+                                                <td class="input-money"><input type="text"/></td>
+                                                <!--<td >借款&nbsp;<input type="radio" name="check-pay" value="bill"/></td>-->
+                                            </tr>
+                                            <tr>
+                                                <!--<td>1,000,000.00</td>-->
+                                                <td>现金付款</td>
+                                                <td>报销金额</td>
+                                                <td  class="input-money"><input  type="text"
+                                                                                         value=""/></td>
+                                                <td>现金&nbsp;<input type="radio" name="check-pay" value="cash"/></td>
+                                            </tr>
+                                        </table>
+
+
+                                        <div id="cashier_button">
+                                            <input class="cashier-abort" type="button" value="取消"/>
+                                            <input class="cash_save" type="button" value="保存" onclick="check()"/>
+                                        </div>
+                                        <!--<input type="button" value="字符转换" onclick="forbiddenSelect()"/>-->
+                                    </div>
+
+
+                                </div>
+                                <li class="name open2">
+                                    <div> 盖亚</div>
+                                </li>
+                                <div class="wait_filmmaking_content" style="display: none;">
+                                    <div class="wait_borrow1">
+                                        <p>申请人</p>
+
+                                        <div class="minute">马琳</div>
+                                        <hr>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>科目分类</p>
+
+                                        <div class="minute">特别效果费用</div>
+                                        <hr>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>子科目分类</p>
+
+                                        <div class="minute">
+                                            <span>特效制作</span>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>提交时间</p>
+
+                                        <div class="minute">
+                                            <span>2015-4-28</span>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>状态</p>
+
+                                        <div class="minute">
+                                            <span>待出纳审批</span>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                    <div class="wait_borrow1">
+                                        <p>金额</p>
+
+                                        <div class="minute">
+                                            <span>20,000.00</span>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                    <div class="btn_agree_or_not">
+                                        <button class="btn disagree-bill">不同意</button>
+                                        <button class="btn pay-for-bill" onclick="forbiddenSelect()">付款</button>
+                                    </div>
+
+                                </div>
+
+                                <li class="name">
+
+
+                                </li>
+                            </ul>
+                            <div class="line"></div>
+                        </li>
+                        <li class="click_select">
+                            <a class="btn" href="#"><p>待会计审批</p>
+                                <img src="../../img/btn/down.png"/></a>
+                        </li>
+                        <li class="click_select">
+                            <a class="btn" href="#"><p>已完成借款</p>
+                                <img src="../../img/btn/down.png"/>
+                                <img src="../../img/btn/up.png" style="display: none"/></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bills">
+        <div class="borrow_bills" style="display:none;">
+            <div class="borrow_bills_title">
+                <div class="time">
+                    日期：<span>2015-4-29</span>
+                </div>
+                <div class="borrower_name">
+                    申请人：<span>马琳</span>
+                </div>
+            </div>
+            <div class="detail">
+                <form>
+                    <div class="detail_subject">
+                        <p>科目分类</p>
+                        <input placeholder="请选择"/>
+                    </div>
+                    <div class="detail_child_subject">
+                        <p>子科目分类</p>
+                        <input placeholder="请选择"/>
+                    </div>
+                    <div class="detail_money">
+                        <p>金额（元）</p>
+                        <input type="text"/>
+                    </div>
+                    <div class="uperCase_money">
+                        <p>金额大写</p><span>NULl</span>
+                    </div>
+                    <div class="digest">
+                        <p>摘要</p>
+                        <input type="text"/>
+                    </div>
+                </form>
+                <div class="btn_borrow">
+                    <button type="button" class="btn btn_cancel">取消</button>
+                    <button type="button" class="btn btn_save">保存</button>
+                </div>
+            </div>
+        </div>
+        <div class="reimburse_bills" style="display: none">
+            <div class="borrow_bills_title">
+                <div class="time">
+                    日期：<span>2015-4-29</span>
+                </div>
+                <div class="borrower_name">
+                    申请人：<span>马琳</span>
+                </div>
+            </div>
+            <div class="detail">
+                <form>
+                    <div class="detail_subject">
+                        <p>科目分类</p>
+                        <input placeholder="请选择"/>
+                    </div>
+                    <div class="detail_child_subject">
+                        <p>子科目分类</p>
+                        <input placeholder="请选择"/>
+                    </div>
+                    <div class="detail_money">
+                        <p>金额（元）</p>
+                        <input type="text"/>
+                    </div>
+                    <div class="uperCase_money">
+                        <p>金额大写</p><span>NULl</span>
+                    </div>
+                    <div class="digest">
+                        <p>摘要</p>
+                        <input type="text"/>
+                    </div>
+                    <div class="bills_tickets">
+                        <p>发票</p>
+
+                        <div class="select_bills">
+                            <input type="radio" name="select" value="是"/>是
+                            <input type="radio" name="select" value="否"/>否
+                        </div>
+                    </div>
+                    <div class="bills_proof" style="display: none">
+                        <p>凭证</p>
+
+                        <div class="upload">
+                            <button type="button" class="upload_proof">上传凭证</button>
+                            <p>附件&nbsp;<span>1</span></p>
+                        </div>
+                    </div>
+                </form>
+                <div class="btn_borrow">
+                    <button type="button" class="btn btn_cancel">取消</button>
+                    <button type="button" class="btn btn_save">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="footer"></div>
+
+<!--//表格 滑过 选择 样式-->
+<SCRIPT language="JavaScript">
+    //[javascript] view plaincopy
+    $(document).ready(function () {
+        ///////datagrid选中行变色与鼠标经过行变色///////////////
+        var dtSelector = ".list";
+        var tbList = $(dtSelector);
+        tbList.each(function () {
+            var self = this;
+            // 鼠标经过的行变色
+            $("tr:not(:first)", $(self)).hover(
+                    function () {
+                        $(this).addClass('hoverTD');
+                    },
+                    function () {
+                        $(this).removeClass('hoverTD');
+                    }
+            );
+            // 选择行变色
+            $(".list").delegate("tr", 'click', function () {
+                var trThis = this;
+                var trS = $(self).find(".trSelected");
+                $(trS).find(".operate").removeClass("operate");
+
+                $(self).find(".trSelected").removeClass('trSelected');
+                if ($(trThis).get(0) == $("tr:first", $(self)).get(0)) {
+                    return;
+                }
+                $(trThis).addClass('trSelected');
+                $(trThis).find("td:last div").addClass("operate");
+            });
+        });
+//            $("tr", $(self)).click(function () {
+//                var trThis = this;
+//                var trS = $(self).find(".trSelected");
+//                $(trS).find(".operate").removeClass("operate");
+//
+//                $(self).find(".trSelected").removeClass('trSelected');
+//                if ($(trThis).get(0) == $("tr:first", $(self)).get(0)) {
+//                    return;
+//                }
+//                $(trThis).addClass('trSelected');
+//                $(trThis).find("td:last div").addClass("operate");
+//            });
+//        });
+        //添加表格新行
+        $("#add_td").click(function () {
+            $(".list").append(" <tr><td class='td_middle'>时间</td><td><input type='text' class='cash-input' style='width: 100%' placeholder='资金来源'/></td><td><input type='text' class='cash-input' style='width: 100%;'placeholder='输入金额'/></td>" +
+            "<td class='td_middle'>" +
+            " <div class='edit' style='display:none'>" +
+            "<a type='button' class='a-edit'>编辑</a>" +
+            " <a type='button' class='a-submit'>提交</a>" +
+            " <a type='button' class='a-delete'>删除</a></div>" +
+            "<div class='save' style='display:block '>" +
+            "<a type='button' class='a-cancle'>取消</a>" +
+            " <a type='button' class='a-save'>保存</a></div></td></tr>");
+        });
+        //保存 编辑切换
+        $("body").delegate(".edit a.a-edit", "click", function () {
+            $(this).parent("div").toggle();
+            $(this).parent("div").next(".save").toggle();
+            var wTr = $(this).parentsUntil("tr").prevAll(),
+                    wTrD0 = wTr.eq(0).text(),
+                    wTrD1 = wTr.eq(1).text();
+            wTr[0].innerHTML = "<td" + " class=''input-cash'''+ '' show-apply''>" + "<input" + " class=cash-input" + " type=text" + " value=" + wTrD0 + " >" + "</td>";
+            wTr[1].innerHTML = "<td" + " class=''input-cash'''+ '' show-apply''>" + "<input" + " class=cash-input" + " type=text" + " value=" + wTrD1 + " >" + "</td>";
+        });
+        $("body").delegate(".save a.a-save", "click", function () {
+            $(this).parent("div").toggle();
+            $(this).parent("div").prev(".edit").toggle();
+            var wTr = $(this).parentsUntil("tr").prevAll();
+            var nTr = $(this).parentsUntil("tr").prevAll().children(".cash-input");
+            var nTrD0 = nTr[0].value;
+            var nTrD1 = nTr[1].value;
+            wTr[1].innerHTML = "<td>" + nTrD0 + "</td>";
+            wTr[2].innerHTML = "<td>" + nTrD1 + "</td>";
+        });
+        //提交响应
+        $("body").delegate(".edit .a-submit", 'click', function () {
+            $(this).parent("div").parent("td").replaceWith("<td class='td_middle'><span class='submitted'>已提交</span></td>");
+            $(this).hide();
+            $(this).prev(".a-edit").hide();
+            $(this).next(".a-delete").hide();
+            $(this).next(".submitted").show();
+        });
+        //删除响应
+        $("body").delegate(".edit .a-delete", 'click', function () {
+            alert("小心-要删除了");
+            var wRm = $(this).parentsUntil("tr").parent("tr");
+            wRm.remove();
+        });
+        //取消响应
+        $("body").delegate(".save .a-cancle", 'click', function () {
+            $(this).parent("div").toggle();
+            $(this).parent("div").prev(".edit").toggle();
+            alert("取消编辑/添加");
+            var wTr = $(this).parentsUntil("tr").prevAll();
+            var nTr = $(this).parentsUntil("tr").prevAll().children(".cash-input");
+            var nTrD0 = nTr[0].value;
+            var nTrD1 = nTr[1].value;
+            if (nTrD0 != "") {
+                wTr[1].innerHTML = "<td>" + nTrD0 + "</td>";
+                wTr[2].innerHTML = "<td>" + nTrD1 + "</td>";
+            } else
+                $(this).parentsUntil("tr").parent("tr").remove();
+        });
+    });
+
+
+    //编辑、保存
+    //    function edit() {
+    //        //alert("edit0");
+    //        document.getElementById("save2").style.display = "none";
+    //        document.getElementById("edit2").style.display = "block";
+    //    }
+    //    function save() {
+    //        //alert("save");
+    //        document.getElementById("edit2").style.display = "none";
+    //        document.getElementById("save2").style.display = "block";
+    //    }
+</SCRIPT>
+
+
+<script>
+    function check() {
+        var borrowed = $("#borrowed").text(),
+                apply = $("#apply").text(),
+//                iBorrowed = Number(borrowed.replace(/,/g, "")),
+                iApply = Number(apply.replace(/,/g, "")),
+//                checked = document.getElementsByName("check-pay").value,
+                str = document.getElementById("cash_input").value,
+                td = document.getElementsByName("check-pay");
+        if (td[1].checked) {
+            console.log("现金");
+            if (str != "") {
+                console.log("金额" + str);
+                if (str != iApply) {
+                    alert("输入的金额和报销金额不相等");
+                } else if (str = iApply) {
+                    alert("正在进行现金报销");
+                }
+            }
+        } else if (td[0].checked) {
+            console.log("欠款冲抵");
+        }
+    }
+    function forbiddenSelect() {
+        var borrowed = $("#borrowed").text(),
+                apply = $("#apply").text(),
+                iBorrowed = Number(borrowed.replace(/,/g, "")),
+                iApply = Number(apply.replace(/,/g, "")),
+                show = document.getElementsByClassName("show-apply"),
+                td = document.getElementsByName("check-pay");
+        show[0].innerHTML = apply;
+        show[1].innerHTML = "<td" + " class=''input-cash'''+ '' show-apply''>" + "<input" + " id=cash_input" + " type=text" + " value=" + iApply + " />" + "</td>";
+        if (iBorrowed < iApply) {
+            console.log(iBorrowed - iApply + "借款金额不足以抵消报销金额");
+            td[0].disabled = true;
+            td[1].checked = "checked";
+        } else if (iBorrowed > iApply) {
+            console.log("借款金额足以抵消报销金额 抵销一部分后还欠" + (iBorrowed - iApply));
+            td[0].checked = "checked";
+        }
+    }
+    $(document).ready(function () {
+        $(".pay-for-bill").click(function () {
+            $(this).parent().next(".waitFor").toggle();
+        });
+        $(".cashier-abort").click(function () {
+            $(this).parent().parent(".waitFor").hide();
+        });
+    })
+</script>
+
+<SCRIPT language="JavaScript">
+    document.getElementsByName("select")[1].checked = "checked";
+    $(document).ready(function () {
+        $(".name").click(function () {
+            $(".open2").removeClass("open2");
+            $(this).addClass("open2");
+            $(this).next("div").toggle();
+        });
+        $(".wait_filmmaking").click(function () {
+            $(".wait_filmmaking_title").toggle();
+        });
+
+        $(".click_select").click(function () {
+            $(this).children("a").children("img").toggle();
+            $(this).next(".name_list").toggle();
+        });
+        $(".select_bills").bind("change", function () {
+            $(".bills_proof").toggle();
+        });
+        $(".btn_borrow_bill").click(function () {
+            $(".current").removeClass("current");
+            $(this).addClass("current");
+            $(".none").hide();
+            $(".reimburse_bills").hide();
+            $(".borrow_bills").show();
+        });
+        $(".btn_reimburse_bill").click(function () {
+            $(".current").removeClass("current");
+            $(this).addClass("current");
+            $(".none").hide();
+            $(".borrow_bills").hide();
+            $(".reimburse_bills").show();
+        });
+        $(".btn_borrow .btn_cancel").click(function () {
+            $(".borrow_bills").hide();
+            $(".reimburse_bills").hide();
+            $(".none").show()
+        });
+        $(".close-an-account").click(function () {
+            $(this).parent("td").prev("td").replaceWith("<td>" + "无" + "</td>");
+            $(this).hide();
+            $(this).next(".closed-an-account").show();
+        });
+    });
+</SCRIPT>
+</body>
+</html>

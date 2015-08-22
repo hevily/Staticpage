@@ -1,0 +1,174 @@
+/**{*/
+    /*margin: 0;padding: 0;*/
+/*}*/
+/*body{*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+/*}*/
+/*.navbar{*/
+    /*position: fixed;*/
+    /*width: 100%;*/
+    /*max-width: 640px;*/
+    /*z-index: 9999;*/
+    /*height: 50px;*/
+    /*padding: 10px;*/
+    /*border-radius: 0;*/
+    /*border: none;*/
+    /*text-align: center;*/
+    /*margin-bottom: 0;*/
+    /*background-color: #f27302;*/
+/*}*/
+/*.navbar>h3{*/
+    /*float: left;*/
+    /*color: #ffffff;*/
+/*}*/
+/*.container-fluid{*/
+    /*max-width:640px;*/
+    /*padding: 0;*/
+/*}*/
+/*.content_body{*/
+    /*margin-top: 50px;*/
+/*}*/
+/*.btn_menu{*/
+    /*margin-left: 6px;*/
+    /*float: left;*/
+    /*padding: 0;*/
+    /*border-radius: 0;*/
+/*}*/
+/*.my_theater_group{*/
+    /*display: block;*/
+    /*margin: 0;*/
+    /*color: #ffffff;*/
+    /*font-size: 20px;*/
+    /*padding: 5px;*/
+/*}*/
+/*.btn_search{*/
+    /*float: right;*/
+    /*margin-right: 6px;*/
+    /*padding: 0;*/
+/*}*/
+/*.btn-menu>a img,.btn-search>a img{*/
+    /*width: 30px;*/
+    /*height: 30px;*/
+/*}*/
+/*.row{*/
+    /*margin-left: 0;*/
+    /*margin-right: 0;*/
+/*}*/
+/*.col-xs-2 ,.col-sm-2 ,.col-md-2 ,.col-lg-2{*/
+    /*padding-left: 0;*/
+    /*height: 14px;*/
+/*}*/
+/*.left{*/
+    /*padding-left: 0;*/
+/*}*/
+/*.right{*/
+    /*padding-right:0;*/
+/*}*/
+/*.btn-default:hover{*/
+    /*background-color:#f27302;*/
+    /*color: inherit;*/
+/*}*/
+/*.btn-default:active{*/
+    /*border: 1px solid #999999;*/
+/*}*/
+/*.btn-default:focus{*/
+    /*background-color:inherit;*/
+/*}*/
+
+/*.btn-default{*/
+    /*background-color: inherit;*/
+    /*border: none;*/
+/*}*/
+/*.fade{*/
+    /*opacity:0;*/
+    /*-webkit-transition:opacity 0.55s linear;*/
+    /*-o-transition:opacity 0.55s linear;*/
+    /*transition:opacity 0.55s linear*/
+/*}*/
+/*.title_scenario ul li p{*/
+    /*margin-bottom: 5px;*/
+/*}*/
+/*.title_scenario ul li a img{*/
+    /*width:25px;*/
+    /*height: 20px;*/
+    /*margin-top: 8px;*/
+/*}*/
+/*ul li{*/
+    /*list-style: none;*/
+/*}*/
+/*.markedli{*/
+/*margin-top: 5px;*/
+/*}*/
+/*.marked{*/
+/*margin-top: 5px;*/
+/*margin-bottom: 5px;*/
+/*}*/
+/*.markeddiv{*/
+    /*margin-top: 8px;*/
+    /*margin-bottom: 10px;*/
+    /*border-bottom: 1px dotted #cfcfcf;*/
+/*}*/
+/*.btn_bills{*/
+    /*float: right;*/
+    /*padding-top: 27px;*/
+/*}*/
+/*.btn_bills button{*/
+    /*width: 60px;*/
+    /*padding: 5px 5px;*/
+    /*color: black;*/
+    /*background-color:#ffffff;*/
+    /*border: 1px solid #cfcfcf;*/
+/*}*/
+/*.reimburse_bill,.btn_back_finance{*/
+    /*margin-left: 5px;*/
+/*}*/
+/*.btn_bills button:hover,.btn_bills button:active,.btn_bills button:focus,.btn_back_finance:hover,.btn_back_finance:active,.btn_back_finance:focus{*/
+    /*color: #ffffff;*/
+    /*background-color: #f27302;*/
+    /*border-color: #f27302;*/
+/*}*/
+.time{
+    clear: both;
+    float: left;
+}
+.borrow_bills,.reimburse_bills{
+    padding: 10px 15px;
+}
+.borrower_name{
+    float: right;
+}
+.detail_subject,.detail_child_subject,.detail_money,.uperCase_money,.digest,.bills_tickets,.bills_proof{
+    clear: both;
+    line-height: 3;
+
+}
+.detail_subject p,.detail_child_subject p,.detail_money p,.uperCase_money p,.digest p,.bills_tickets p,.bills_proof p{
+    float: left;
+    color: #9a9a9a;
+}
+.detail_subject input,.detail_child_subject input,.detail_money input,.digest input{
+    float: right;
+    /*margin-left: 90px;*/
+    width: 70%;
+    border: 1px solid #cfcfcf;
+    border-radius: 5px;
+    line-height: 2;
+    margin-top: 7px;
+}
+.upload p{
+   margin-left: 4px;
+    margin-top: 7px;
+}
+.upload_proof{
+    float: left;
+}
+.uperCase_money span,.bills_proof div,.bills_tickets .select_bills{
+    float: right;
+    width: 70%;
+    line-height: 2;
+    margin-top: 7px;
+}
+.digest input{
+    line-height:4;
+}

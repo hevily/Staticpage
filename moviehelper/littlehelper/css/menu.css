@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    max-width: 640px;
+    margin-left: auto;margin-right: auto;
+}
+
+/*.modal-content_left{max-width:70%;float: left;}*/
+.modal-body{
+    padding: 0;
+}
+
+
+
+.main-menu{
+    /*padding-top: 20px;*/
+    /*padding-left: 15px;*/
+    /*width: 155px;*/
+}
+.main-menu a{
+    cursor: pointer;
+    color: #000000;
+    font-size: 16px;
+
+}
+.index-page{
+    float: left;
+    min-width: 100px;
+    padding: 13px 0 13px 0;
+    border-right: 1px solid#cfcfcf;
+    border-bottom: 1px solid #cfcfcf;
+
+}
+.invest-page{
+    float: right;
+    min-width: 100px;
+    padding: 13px 0 13px 0;
+    border-bottom: 1px solid #cfcfcf;
+
+}
+.user-info,.setting{
+    clear: both;
+    line-height:32px;
+    text-align:left;
+}
+.user-info .user-name,.setting{
+    cursor: pointer;
+    padding:4px 0 2px 15px;
+}
+.user-name a{
+    /*padding-left: 12px;*/
+    width: 100%;
+}
+.user-name a div{
+    padding-left: 40px;
+}
+.user-info .user-name img{
+    display: block;
+    height: 30px;
+    width: 30px;
+    float: left;
+}
+.user-setting{
+    height: 32px;
+    padding-top: 8px;
+}
+.user-setting a{
+    top: 50%;
+    width: 100%;
+}
+.user-setting a div{
+    padding-left: 55px;
+    width: 100%;
+    text-align: left;
+}
+.menu-line{
+    border-bottom: 1px solid #cfcfcf;
+    margin-left: 15px;
+}
+.main-menu a{
+    display: block;
+    color: #000000;
+}.main-menu a:hover,.main-menu a:active,.main-menu a:focus,
+.menu-list a:hover,.menu-list a:active,.menu-list a:focus {
+    text-decoration: none;
+    /*display: block;*/
+    color: #0e0e0e;
+    background-color:inherit;
+}
+a{
+    color: #000000;
+}
+@media (min-width: 768px){.modal-dialog_menu-large{
+    width: auto;
+    max-width:70%;
+}}

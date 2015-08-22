@@ -1,0 +1,194 @@
+.container{
+    max-width: 640px;
+    padding-top: 50px;
+    background-color: #ebeced;
+}
+.edit-photo,.edit-photo img{
+    width: 22px;
+    height: 22px;
+}
+.edit-photo{
+    position: relative;
+    float: right;
+    top: -20px;
+    right: 20px;
+}
+.top0{
+    top: 0;
+}
+.select-film{
+    position: relative;
+    padding-top: 10px;
+}
+select[name=select-film-num]{
+    /*position: absolute;*/
+    /*right: 20px;*/
+    /*top: 10px;*/
+}
+.Studios-record{
+    text-indent: 20px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.list-billing{
+    padding-top: 10px;
+    background-color: #ebeced;
+    padding-bottom: 30px;
+}
+.select-all{
+    display: none;
+}
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+.select-all,.select-one{
+    position: relative;
+    height: 25px;
+    width: 25px;
+}
+.select-one{
+     position: absolute;
+     height: 20px;
+     width: 20px;
+    bottom: 17px;
+    right: 0;
+ }
+.select-one img{
+    /*position: absolute;*/
+    /*right: 0;*/
+    /*top: 0;*/
+    height: 20px;
+    width: 20px;
+}
+.select-all img{
+    position: absolute;
+    left: 0;
+    height: 25px;
+    width: 25px;
+}
+.select-all img:nth-child(2){
+    display: none;
+}
+.select-one img{
+    display: none;
+}
+.select-one-picture img{
+     display: block;
+ }
+.select-picture img:nth-child(1){
+    display: none;
+}
+.select-picture img:nth-child(2){
+    display: block;
+}
+.list-billing ul li{
+    list-style: none;
+}
+.billing{
+    background-color: #fff;
+    margin: 10px 0 20px 0;
+}
+.billing-title{
+    position: relative;
+    padding: 10px;
+}
+.billing-title p{
+    margin-bottom: 0;
+}
+.billing-title img{
+    position: absolute;
+    float: right;
+    top: 8px;
+    right: 20px;
+    width: 25px;
+    height: 25px;
+}
+.billing-title img:nth-child(3){
+    position: absolute;
+    float: right;
+    top: 10px;
+    right: 20px;
+    width: 18px;
+    height: 18px;
+}
+.billing-title img:nth-child(2){
+    right: 60px;
+}
+.billing-details{
+    display: none;
+    position: relative;
+    background-color: #fff;
+    margin: 0 10px;
+    padding-bottom: 10px;
+}
+.billing-photo{
+    position: relative;
+}
+.billing-details img{
+    width: 100%;
+}
+.billing-details img:nth-child(2){
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 25px;
+    width: 25px;
+}
+.billing-details ul li{
+    width: 25%;
+    list-style: none;
+    float: left;
+    padding: 4px;
+}
+.billing-photo p{
+    font-size: 12px;
+    margin-bottom: 0;
+    display:block;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    /*ÎÄ±¾³¬ÓòÒþ²Ø*/
+}
+.openingBill img:nth-child(3){
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+
+
+/*µ×²¿É¾³ý*/
+footer{
+    max-width: 640px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.bg-orange{
+    height: 30px;
+    background-color: #f27302;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.bg-orange:hover,.bg-orange:focus{
+    background-color: #A15102;
+    color: #000000;
+}
+.bg-orange:active{
+    background-color: #A15102;
+}
+.del-select-photo{
+
+}

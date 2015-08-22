@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no"/>
+    <!--<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />-->
+
+    <!--<link rel="stylesheet" href="../../../../../Public/mobile/frame/bootstrap/dist/css/bootstrap.min.css"/>-->
+    <link rel="stylesheet" href="../../../../../Public/mobile/css/creator.css"/>
+    <script src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+    <script src="../../../../../Public/mobile/js/creator.js"></script>
+    <script>
+        $(document).ready(function(){
+            function setAuthorw(){
+                var authorW = $("body").width();
+                $(".author-show").css("width",authorW-130);
+                $(".author-setted").css("width",authorW-130);
+            };
+            setAuthorw();
+        })
+    </script>
+</head>
+<body style="max-width: 640px; margin: 0 auto;font-family:'Microsoft YaHei';">
+<div class="creator">
+    <div class="search">
+        <div class="bg-search">
+            <!--<form action="">-->
+            <div class="bg-input">
+                <!-- <span class="search-img"><img src="../../../../../Public/mobile/img/creator/search.png" alt="搜索"/></span> -->
+                <label for="search" hidden>for search</label>
+                <input id="search" type="text"/>
+                <span class="empty">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height='10' width='10'>
+                    <line x1="0" y1="0" x2="10" y2="10" style="stroke:#ffffff;stroke-width:2"/>
+                    <line x1="10" y1="0" x2="0" y2="10" style="stroke:#ffffff;stroke-width:2"/>
+
+                </svg>
+                </span>
+            <!--</form>-->
+            </div>
+            <a id="close-search" type="button" href="javascript:">取消</a>
+
+        </div>
+        <div id="searchRequest">
+            <div class="person-search-jobed">
+                <div class="base-info">
+                    <div class="name">
+                        马琳
+                    </div>
+                    <div class="create-time">
+                        <span>创建时间</span>2015-7-22
+                    </div>
+                    <div class="phone-num">
+                        <span>手机号码</span>18910318866
+                    </div>
+                    <div class="email-address">
+                        <span>邮箱地址</span>malin@Yshjie.com
+                    </div>
+                </div>
+                <div class="more-info">
+                    <div class="duty-show">
+                        <span>职　　务</span>美术,执行导演,场记,摄影
+                    </div>
+                    <div class="author clearfix">
+                        <span style="float: left;">权　　限</span><div class="author-setted" >剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册</div>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div class="duty-replace clearfix">
+                        <input class="replace-duty" type="button" value="分配职务"/>
+                        <input class="set-authority" type="button" value="设置权限"/>
+                        <input class="stop-someone" type="button" value="停用"/>
+                        <input class="re-Start" type="button" value="启用"/>
+                    </div>
+                </div>
+            </div>
+            <div class="person-search">
+                    <div class="msg">
+                        <div class="img">
+                            <img src="../../../../../Public/mobile/img/creator/123.jpg" height="100%" width="100%" alt="人物头像">
+                        </div>
+                         <div class="name">
+                            刘妮丹
+                        </div>
+                        <div class="phone">
+                            1311111111
+                        </div>
+                        <div class="email">
+                            刘111@yshjie.com
+
+                        </div>
+                    </div>
+                    <div class="duty-job">
+                        <input class="replace-duty" type="button" value="分配职务">
+                    </div>
+                </div>
+
+        </div>
+    </div>
+    <div class="main-creator">
+        <div class="creator-title">
+            主创
+        </div>
+        <div class="creator-details">
+            <div class="details-head">
+                <span class="total">职务列表(35)人</span>
+                <div class="add-group-person">
+                    <input class="add-group" type="button" value="添加分组"/>
+                    <input class="add-person" type="button" value="添加人员"/>
+                </div>
+            </div>
+        </div>
+        <div class="creator-body">
+            <ul>
+                <li>
+                    <div class="action-content">
+                        <div class="top-group clearfix">
+                            <div class="group-name"><div class="editable">导演组</div>(<span>12</span>)人</div>
+                            <div class="action">
+                                <a href="javascript:" class="toggle"><img src="../../../../../Public/mobile/img/creator/img-dropdown.png"
+                                                                              alt="下拉"/></a>
+                                <a href="javascript:" class="btn-delete"><img src="../../../../../Public/mobile/img/creator/img-delete.png"
+                                                                              alt="删除"/></a>
+                                <a href="javascript:" class="btn-add"><img src="../../../../../Public/mobile/img/creator/img-add.png"
+                                                                           alt="添加"/></a>
+                                <a href="javascript:" class="btn-edit"><img src="../../../../../Public/mobile/img/creator/img-edit.png"
+                                                                            alt="编辑"/></a>
+                            </div>
+                        </div>
+                        <div class="second-group">
+                                <ul>
+                                    <li>
+                                        <div class="sec-action-group clearfix">
+                                            <div class="sec-top-group clearfix">
+                                                <div class="in-group-name"><div class="editable">摄影组</div>(<span>1</span>)人</div>
+                                                <div class="in-action">
+                                                   <a href="javascript:" class="toggle"><img src="../../../../../Public/mobile/img/creator/img-dropdown.png"
+                                                                                                  alt="下拉"/></a>
+                                                    <a href="javascript:" class="btn-delete"><img src="../../../../../Public/mobile/img/creator/img-delete.png"
+                                                                                                  alt="删除"/></a>
+                                                    <a href="javascript:" class="btn-edit"><img src="../../../../../Public/mobile/img/creator/img-edit.png"
+                                                                                                  alt="编辑"/></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="third-group">
+                                            <div class="person-list">
+                                                <ul>
+                                                    <li>
+                                                        <div class="person-details">
+                                                            <div class="base-info">
+                                                                <div class="name">
+                                                                    马琳
+                                                                </div>
+                                                                <div class="create-time">
+                                                                    <span>创建时间</span>2015-7-22
+                                                                </div>
+                                                                <div class="phone-num">
+                                                                    <span>手机号码</span>18910318866
+                                                                </div>
+                                                                <div class="email-address">
+                                                                    <span>邮箱地址</span>malin@Yshjie.com
+                                                                </div>
+                                                            </div>
+                                                            <div class="more-info">
+
+                                                            </div>
+                                                            <div class="clearfix">
+                                                                <div class="duty-replace clearfix">
+                                                                    <input class="replace-duty" type="button" value="分配职务"/>
+                                                                    <input class="set-authority" type="button" value="设置权限"/>
+                                                                    <input class="stop-someone" type="button" value="停用"/>
+                                                                    <input class="re-Start" type="button" value="启用"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="person-details">
+                                                            <div class="base-info">
+                                                                <div class="name">
+                                                                    马琳
+                                                                </div>
+                                                                <div class="create-time">
+                                                                    <span>创建时间</span>2015-7-22
+                                                                </div>
+                                                                <div class="phone-num">
+                                                                    <span>手机号码</span>18910318866
+                                                                </div>
+                                                                <div class="email-address">
+                                                                    <span>邮箱地址</span>malin@Yshjie.com
+                                                                </div>
+                                                            </div>
+                                                            <div class="more-info">
+                                                                <div class="duty-show">
+                                                                    <span>职　　务</span>美术,执行导演,场记,摄影
+                                                                </div>
+                                                                <div class="author clearfix">
+                                                                    <span style="float: left;">权　　限</span><div class="author-show" style="float: left;">剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="clearfix">
+                                                                <div class="duty-replace clearfix">
+                                                                    <input class="replace-duty" type="button" value="分配职务"/>
+                                                                    <input class="set-authority" type="button" value="设置权限"/>
+                                                                    <input class="stop-someone" type="button" value="停用"/>
+                                                                    <input class="re-Start" type="button" value="启用"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                        </div>
+                    </div>
+                </li>
+                 <li>
+                    <div class="action-content">
+                        <div class="top-group clearfix">
+                            <div class="group-name"><div class="editable">导演组</div>(<span>12</span>)人</div>
+                            <div class="action">
+                                <a href="javascript:" class="toggle"><img src="../../../../../Public/mobile/img/creator/img-dropdown.png"
+                                                                              alt="下拉"/></a>
+                                <a href="javascript:" class="btn-delete"><img src="../../../../../Public/mobile/img/creator/img-delete.png"
+                                                                              alt="删除"/></a>
+                                <a href="javascript:" class="btn-add"><img src="../../../../../Public/mobile/img/creator/img-add.png"
+                                                                           alt="添加"/></a>
+                                <a href="javascript:" class="btn-edit"><img src="../../../../../Public/mobile/img/creator/img-edit.png"
+                                                                            alt="编辑"/></a>
+                            </div>
+                        </div>
+                        <div class="second-group">
+                                <ul>
+                                    <li>
+                                        <div class="sec-action-group clearfix">
+                                            <div class="sec-top-group clearfix">
+                                                <div class="in-group-name"><div class="editable">摄影组</div>(<span>1</span>)人</div>
+                                                <div class="in-action">
+                                                   <a href="javascript:" class="toggle"><img src="../../../../../Public/mobile/img/creator/img-dropdown.png"
+                                                                                                  alt="下拉"/></a>
+                                                    <a href="javascript:" class="btn-delete"><img src="../../../../../Public/mobile/img/creator/img-delete.png"
+                                                                                                  alt="删除"/></a>
+                                                    <a href="javascript:" class="btn-edit"><img src="../../../../../Public/mobile/img/creator/img-edit.png"
+                                                                                                  alt="编辑"/></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="third-group">
+                                            <div class="person-list">
+                                                <ul>
+                                                    <li>
+                                                        <div class="person-details">
+                                                            <div class="base-info">
+                                                                <div class="name">
+                                                                    马琳
+                                                                </div>
+                                                                <div class="create-time">
+                                                                    <span>创建时间</span>2015-7-22
+                                                                </div>
+                                                                <div class="phone-num">
+                                                                    <span>手机号码</span>18910318866
+                                                                </div>
+                                                                <div class="email-address">
+                                                                    <span>邮箱地址</span>malin@Yshjie.com
+                                                                </div>
+                                                            </div>
+                                                            <div class="more-info">
+
+                                                            </div>
+                                                            <div class="clearfix">
+                                                                <div class="duty-replace clearfix">
+                                                                    <input class="replace-duty" type="button" value="分配职务"/>
+                                                                    <input class="set-authority" type="button" value="设置权限"/>
+                                                                    <input class="stop-someone" type="button" value="停用"/>
+                                                                    <input class="re-Start" type="button" value="启用"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="person-details">
+                                                            <div class="base-info">
+                                                                <div class="name">
+                                                                    马琳
+                                                                </div>
+                                                                <div class="create-time">
+                                                                    <span>创建时间</span>2015-7-22
+                                                                </div>
+                                                                <div class="phone-num">
+                                                                    <span>手机号码</span>18910318866
+                                                                </div>
+                                                                <div class="email-address">
+                                                                    <span>邮箱地址</span>malin@Yshjie.com
+                                                                </div>
+                                                            </div>
+                                                            <div class="more-info">
+                                                                <div class="duty-show">
+                                                                    <span>职　　务</span>美术,执行导演,场记,摄影
+                                                                </div>
+                                                                <div class="author clearfix">
+                                                                    <span style="float: left;">权　　限</span><div class="author-show" style="float: left;">剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="clearfix">
+                                                                <div class="duty-replace clearfix">
+                                                                    <input class="replace-duty" type="button" value="分配职务"/>
+                                                                    <input class="set-authority" type="button" value="设置权限"/>
+                                                                    <input class="stop-someone" type="button" value="停用"/>
+                                                                    <input class="re-Start" type="button" value="启用"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="sec-action-group clearfix">
+                                            <div class="sec-top-group clearfix">
+                                                <div class="in-group-name"><div class="editable">摄影组</div>(<span>2</span>)人</div>
+                                                <div class="in-action">
+                                                    <a href="javascript:" class="toggle"><img src="../../../../../Public/mobile/img/creator/img-dropdown.png"
+                                                                                                  alt="下拉"/></a> 
+                                                    <a href="javascript:" class="btn-delete"><img src="../../../../../Public/mobile/img/creator/img-delete.png"
+                                                                                                  alt="删除"/></a>
+                                                    <a href="javascript:" class="btn-edit"><img src="../../../../../Public/mobile/img/creator/img-edit.png"
+                                                                                                  alt="编辑"/></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="third-group">
+                                            <div class="person-list">
+                                                <ul>
+                                                    <li>
+                                                        <div class="person-details">
+                                                            <div class="base-info">
+                                                                <div class="name">
+                                                                    马琳
+                                                                </div>
+                                                                <div class="create-time">
+                                                                    <span>创建时间</span>2015-7-22
+                                                                </div>
+                                                                <div class="phone-num">
+                                                                    <span>手机号码</span>18910318866
+                                                                </div>
+                                                                <div class="email-address">
+                                                                    <span>邮箱地址</span>malin@Yshjie.com
+                                                                </div>
+                                                            </div>
+                                                            <div class="more-info">
+                                                                <div class="duty-show">
+                                                                    <span>职　　务</span>美术,执行导演,场记,摄影
+                                                                </div>
+                                                                <div class="author clearfix">
+                                                                    <span style="float: left;">权　　限</span><div class="author-show" style="float: left;">剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="clearfix">
+                                                                <div class="duty-replace clearfix">
+                                                                    <input class="replace-duty" type="button" value="分配职务"/>
+                                                                    <input class="set-authority" type="button" value="设置权限"/>
+                                                                    <input class="stop-someone" type="button" value="停用"/>
+                                                                    <input class="re-Start" type="button" value="启用"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="person-details">
+                                                            <div class="base-info">
+                                                                <div class="name">
+                                                                    马琳
+                                                                </div>
+                                                                <div class="create-time">
+                                                                    <span>创建时间</span>2015-7-22
+                                                                </div>
+                                                                <div class="phone-num">
+                                                                    <span>手机号码</span>18910318866
+                                                                </div>
+                                                                <div class="email-address">
+                                                                    <span>邮箱地址</span>malin@Yshjie.com
+                                                                </div>
+                                                            </div>
+                                                            <div class="more-info">
+                                                                <div class="duty-show">
+                                                                    <span>职　　务</span>美术,执行导演,场记,摄影
+                                                                </div>
+                                                                <div class="author clearfix">
+                                                                    <span style="float: left;">权　　限</span><div class="author-show" style="float: left;">剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="clearfix">
+                                                                <div class="duty-replace clearfix">
+                                                                    <input class="replace-duty" type="button" value="分配职务"/>
+                                                                    <input class="set-authority" type="button" value="设置权限"/>
+                                                                    <input class="stop-someone" type="button" value="停用"/>
+                                                                    <input class="re-Start" type="button" value="启用"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="action-content">
+                        <div class="top-group clearfix">
+                            <div class="group-name"><div class="editable">导演组</div>(<span>12</span>)人</div>
+                            <div class="action">
+                                <a href="javascript:" class="toggle"><img src="../../../../../Public/mobile/img/creator/img-dropdown.png"
+                                                                              alt="下拉"/></a>
+                                <a href="javascript:" class="btn-delete"><img src="../../../../../Public/mobile/img/creator/img-delete.png"
+                                                                              alt="删除"/></a>
+                                <a href="javascript:" class="btn-add"><img src="../../../../../Public/mobile/img/creator/img-add.png"
+                                                                           alt="添加"/></a>
+                                <a href="javascript:" class="btn-edit"><img src="../../../../../Public/mobile/img/creator/img-edit.png"
+                                                                            alt="编辑"/></a>
+                            </div>
+                        </div>
+                        <div class="second-group">
+                                <ul>
+                                    <li>
+                                        <div class="sec-action-group clearfix">
+                                            <div class="sec-top-group clearfix">
+                                                <div class="in-group-name"><div class="editable">摄影组</div>(<span>1</span>)人</div>
+                                                <div class="in-action">
+                                                   <a href="javascript:" class="toggle"><img src="../../../../../Public/mobile/img/creator/img-dropdown.png"
+                                                                                                  alt="下拉"/></a>
+                                                    <a href="javascript:" class="btn-delete"><img src="../../../../../Public/mobile/img/creator/img-delete.png"
+                                                                                                  alt="删除"/></a>
+                                                    <a href="javascript:" class="btn-edit"><img src="../../../../../Public/mobile/img/creator/img-edit.png"
+                                                                                                  alt="编辑"/></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="third-group">
+                                            <div class="person-list">
+                                                <ul>
+                                                    <li>
+                                                        <div class="person-details">
+                                                            <div class="base-info">
+                                                                <div class="name">
+                                                                    马琳
+                                                                </div>
+                                                                <div class="create-time">
+                                                                    <span>创建时间</span>2015-7-22
+                                                                </div>
+                                                                <div class="phone-num">
+                                                                    <span>手机号码</span>18910318866
+                                                                </div>
+                                                                <div class="email-address">
+                                                                    <span>邮箱地址</span>malin@Yshjie.com
+                                                                </div>
+                                                            </div>
+                                                            <div class="more-info">
+
+                                                            </div>
+                                                            <div class="clearfix">
+                                                                <div class="duty-replace clearfix">
+                                                                    <input class="replace-duty" type="button" value="分配职务"/>
+                                                                    <input class="set-authority" type="button" value="设置权限"/>
+                                                                    <input class="stop-someone" type="button" value="停用"/>
+                                                                    <input class="re-Start" type="button" value="启用"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="person-details">
+                                                            <div class="base-info">
+                                                                <div class="name">
+                                                                    马琳
+                                                                </div>
+                                                                <div class="create-time">
+                                                                    <span>创建时间</span>2015-7-22
+                                                                </div>
+                                                                <div class="phone-num">
+                                                                    <span>手机号码</span>18910318866
+                                                                </div>
+                                                                <div class="email-address">
+                                                                    <span>邮箱地址</span>malin@Yshjie.com
+                                                                </div>
+                                                            </div>
+                                                            <div class="more-info">
+                                                                <div class="duty-show">
+                                                                    <span>职　　务</span>美术,执行导演,场记,摄影
+                                                                </div>
+                                                                <div class="author clearfix">
+                                                                    <span style="float: left;">权　　限</span><div class="author-show" style="float: left;">剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="clearfix">
+                                                                <div class="duty-replace clearfix">
+                                                                    <input class="replace-duty" type="button" value="分配职务"/>
+                                                                    <input class="set-authority" type="button" value="设置权限"/>
+                                                                    <input class="stop-someone" type="button" value="停用"/>
+                                                                    <input class="re-Start" type="button" value="启用"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="sec-action-group clearfix">
+                                            <div class="sec-top-group clearfix">
+                                                <div class="in-group-name"><div class="editable">摄影组</div>(<span>2</span>)人</div>
+                                                <div class="in-action">
+                                                    <a href="javascript:" class="toggle"><img src="../../../../../Public/mobile/img/creator/img-dropdown.png"
+                                                                                                  alt="下拉"/></a> 
+                                                    <a href="javascript:" class="btn-delete"><img src="../../../../../Public/mobile/img/creator/img-delete.png"
+                                                                                                  alt="删除"/></a>
+                                                    <a href="javascript:" class="btn-edit"><img src="../../../../../Public/mobile/img/creator/img-edit.png"
+                                                                                                  alt="编辑"/></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="third-group">
+                                            <div class="person-list">
+                                                <ul>
+                                                    <li>
+                                                        <div class="person-details">
+                                                            <div class="base-info">
+                                                                <div class="name">
+                                                                    马琳
+                                                                </div>
+                                                                <div class="create-time">
+                                                                    <span>创建时间</span>2015-7-22
+                                                                </div>
+                                                                <div class="phone-num">
+                                                                    <span>手机号码</span>18910318866
+                                                                </div>
+                                                                <div class="email-address">
+                                                                    <span>邮箱地址</span>malin@Yshjie.com
+                                                                </div>
+                                                            </div>
+                                                            <div class="more-info">
+                                                                <div class="duty-show">
+                                                                    <span>职　　务</span>美术,执行导演,场记,摄影
+                                                                </div>
+                                                                <div class="author clearfix">
+                                                                    <span style="float: left;">权　　限</span><div class="author-show" style="float: left;">剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="clearfix">
+                                                                <div class="duty-replace clearfix">
+                                                                    <input class="replace-duty" type="button" value="分配职务"/>
+                                                                    <input class="set-authority" type="button" value="设置权限"/>
+                                                                    <input class="stop-someone" type="button" value="停用"/>
+                                                                    <input class="re-Start" type="button" value="启用"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="person-details">
+                                                            <div class="base-info">
+                                                                <div class="name">
+                                                                    马琳
+                                                                </div>
+                                                                <div class="create-time">
+                                                                    <span>创建时间</span>2015-7-22
+                                                                </div>
+                                                                <div class="phone-num">
+                                                                    <span>手机号码</span>18910318866
+                                                                </div>
+                                                                <div class="email-address">
+                                                                    <span>邮箱地址</span>malin@Yshjie.com
+                                                                </div>
+                                                            </div>
+                                                            <div class="more-info">
+                                                                <div class="duty-show">
+                                                                    <span>职　　务</span>美术,执行导演,场记,摄影
+                                                                </div>
+                                                                <div class="author clearfix">
+                                                                    <span style="float: left;">权　　限</span><div class="author-show" style="float: left;">剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="clearfix">
+                                                                <div class="duty-replace clearfix">
+                                                                    <input class="replace-duty" type="button" value="分配职务"/>
+                                                                    <input class="set-authority" type="button" value="设置权限"/>
+                                                                    <input class="stop-someone" type="button" value="停用"/>
+                                                                    <input class="re-Start" type="button" value="启用"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>   <li>
+                                        <div class="sec-action-group clearfix">
+                                            <div class="sec-top-group clearfix">
+                                                <div class="in-group-name"><div class="editable">摄影组</div>(<span>2</span>)人</div>
+                                                <div class="in-action">
+                                                    <a href="javascript:" class="toggle"><img src="../../../../../Public/mobile/img/creator/img-dropdown.png"
+                                                                                                  alt="下拉"/></a> 
+                                                    <a href="javascript:" class="btn-delete"><img src="../../../../../Public/mobile/img/creator/img-delete.png"
+                                                                                                  alt="删除"/></a>
+                                                    <a href="javascript:" class="btn-edit"><img src="../../../../../Public/mobile/img/creator/img-edit.png"
+                                                                                                  alt="编辑"/></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="third-group">
+                                            <div class="person-list">
+                                                <ul>
+                                                    <li>
+                                                        <div class="person-details">
+                                                            <div class="base-info">
+                                                                <div class="name">
+                                                                    马琳
+                                                                </div>
+                                                                <div class="create-time">
+                                                                    <span>创建时间</span>2015-7-22
+                                                                </div>
+                                                                <div class="phone-num">
+                                                                    <span>手机号码</span>18910318866
+                                                                </div>
+                                                                <div class="email-address">
+                                                                    <span>邮箱地址</span>malin@Yshjie.com
+                                                                </div>
+                                                            </div>
+                                                            <div class="more-info">
+                                                                <div class="duty-show">
+                                                                    <span>职　　务</span>美术,执行导演,场记,摄影
+                                                                </div>
+                                                                <div class="author clearfix">
+                                                                    <span style="float: left;">权　　限</span><div class="author-show" style="float: left;">剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="clearfix">
+                                                                <div class="duty-replace clearfix">
+                                                                    <input class="replace-duty" type="button" value="分配职务"/>
+                                                                    <input class="set-authority" type="button" value="设置权限"/>
+                                                                    <input class="stop-someone" type="button" value="停用"/>
+                                                                    <input class="re-Start" type="button" value="启用"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="person-details">
+                                                            <div class="base-info">
+                                                                <div class="name">
+                                                                    马琳
+                                                                </div>
+                                                                <div class="create-time">
+                                                                    <span>创建时间</span>2015-7-22
+                                                                </div>
+                                                                <div class="phone-num">
+                                                                    <span>手机号码</span>18910318866
+                                                                </div>
+                                                                <div class="email-address">
+                                                                    <span>邮箱地址</span>malin@Yshjie.com
+                                                                </div>
+                                                            </div>
+                                                            <div class="more-info">
+                                                                <div class="duty-show">
+                                                                    <span>职　　务</span>美术,执行导演,场记,摄影
+                                                                </div>
+                                                                <div class="author clearfix">
+                                                                    <span style="float: left;">权　　限</span><div class="author-show" style="float: left;">剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="clearfix">
+                                                                <div class="duty-replace clearfix">
+                                                                    <input class="replace-duty" type="button" value="分配职务"/>
+                                                                    <input class="set-authority" type="button" value="设置权限"/>
+                                                                    <input class="stop-someone" type="button" value="停用"/>
+                                                                    <input class="re-Start" type="button" value="启用"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li> <li>
+                                        <div class="sec-action-group clearfix">
+                                            <div class="sec-top-group clearfix">
+                                                <div class="in-group-name"><div class="editable">摄影组</div>(<span>2</span>)人</div>
+                                                <div class="in-action">
+                                                    <a href="javascript:" class="toggle"><img src="../../../../../Public/mobile/img/creator/img-dropdown.png"
+                                                                                                  alt="下拉"/></a> 
+                                                    <a href="javascript:" class="btn-delete"><img src="../../../../../Public/mobile/img/creator/img-delete.png"
+                                                                                                  alt="删除"/></a>
+                                                    <a href="javascript:" class="btn-edit"><img src="../../../../../Public/mobile/img/creator/img-edit.png"
+                                                                                                  alt="编辑"/></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="third-group">
+                                            <div class="person-list">
+                                                <ul>
+                                                    <li>
+                                                        <div class="person-details">
+                                                            <div class="base-info">
+                                                                <div class="name">
+                                                                    马琳
+                                                                </div>
+                                                                <div class="create-time">
+                                                                    <span>创建时间</span>2015-7-22
+                                                                </div>
+                                                                <div class="phone-num">
+                                                                    <span>手机号码</span>18910318866
+                                                                </div>
+                                                                <div class="email-address">
+                                                                    <span>邮箱地址</span>malin@Yshjie.com
+                                                                </div>
+                                                            </div>
+                                                            <div class="more-info">
+                                                                <div class="duty-show">
+                                                                    <span>职　　务</span>美术,执行导演,场记,摄影
+                                                                </div>
+                                                                <div class="author clearfix">
+                                                                    <span style="float: left;">权　　限</span><div class="author-show" style="float: left;">剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="clearfix">
+                                                                <div class="duty-replace clearfix">
+                                                                    <input class="replace-duty" type="button" value="分配职务"/>
+                                                                    <input class="set-authority" type="button" value="设置权限"/>
+                                                                    <input class="stop-someone" type="button" value="停用"/>
+                                                                    <input class="re-Start" type="button" value="启用"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="person-details">
+                                                            <div class="base-info">
+                                                                <div class="name">
+                                                                    马琳
+                                                                </div>
+                                                                <div class="create-time">
+                                                                    <span>创建时间</span>2015-7-22
+                                                                </div>
+                                                                <div class="phone-num">
+                                                                    <span>手机号码</span>18910318866
+                                                                </div>
+                                                                <div class="email-address">
+                                                                    <span>邮箱地址</span>malin@Yshjie.com
+                                                                </div>
+                                                            </div>
+                                                            <div class="more-info">
+                                                                <div class="duty-show">
+                                                                    <span>职　　务</span>美术,执行导演,场记,摄影
+                                                                </div>
+                                                                <div class="author clearfix">
+                                                                    <span style="float: left;">权　　限</span><div class="author-show" style="float: left;">剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册剧本导入,制片主任,查看演员,查看主创,编辑主创,查看场景,编辑场景,查看美术图册</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="clearfix">
+                                                                <div class="duty-replace clearfix">
+                                                                    <input class="replace-duty" type="button" value="分配职务"/>
+                                                                    <input class="set-authority" type="button" value="设置权限"/>
+                                                                    <input class="stop-someone" type="button" value="停用"/>
+                                                                    <input class="re-Start" type="button" value="启用"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                        </div>
+                        <div style="border-top:1px solid #cfcfcf;"></div>
+                    </div>
+                </li> 
+                
+
+            </ul>
+
+        </div>
+    </div>
+
+
+</div>
+<div class="back-top">
+    <a href="javascript:" id="backTop" title="回到顶部"></a>
+</div>
+
+
+</body>
+</html>
