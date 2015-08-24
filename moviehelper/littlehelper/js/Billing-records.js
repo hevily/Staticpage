@@ -2,15 +2,30 @@
  * Created by pc on 2015/8/20.
  */
 $(document).ready(function(){
-    //Õ¹¿ªÊÕÆð³¡´Î
+    //å±•å¼€æ”¶èµ·åœºæ¬¡
     $(".billing-title").click(function(){
         if($(this).hasClass("openingBill")){
             $(this).removeClass("openingBill").next(".billing-details").hide();
         }else{
             $(this).addClass("openingBill").next(".billing-details").show();
+             var imgS = $(this).next(".billing-details img");
+            for(var i = 0;i<imgS.length;i++){
+                var imgSH = imgS.eq(i).height();
+                console.log(i+"+"+imgSH);
+            }
         }
     });
-    //±à¼­Ïà²á°´Å¥ ½øÈë±à¼­Ä£Ê½
+
+    //è®¾ç½®ç…§ç‰‡é«˜åº¦ä¸€è‡´
+    function checkHeight(_this){
+        var imgS = _this+" img";
+        alert(imgS.length);
+        for(var i = 0;i<imgS.length; i++){
+            var imgSH = imgS.eq(i).height();
+            console.log(i+"+"+imgSH);
+        }
+    }
+    //ç¼–è¾‘ç›¸å†ŒæŒ‰é’® è¿›å…¥ç¼–è¾‘æ¨¡å¼
     $(".edit-photo").click(function(){
         if($(this).hasClass("editing-photo")){
             $(this).removeClass("editing-photo");
@@ -28,7 +43,7 @@ $(document).ready(function(){
 
     });
 
-    //Ñ¡ÔñÈ«²¿ÕÕÆ¬
+    //é€‰æ‹©å…¨éƒ¨ç…§ç‰‡
     $(".select-all").click(function(e){
         if($(this).hasClass("select-picture")){
             $(this).removeClass("select-picture");
@@ -39,7 +54,7 @@ $(document).ready(function(){
         }
         e.stopPropagation();
     });
-    //µ¥ÕÅÕÕÆ¬Ñ¡Ôñ
+    //å•å¼ ç…§ç‰‡é€‰æ‹©
     $(".billing-photo img:nth-child(1)").click(function(){
         if($(".edit-photo").hasClass("editing-photo")){
             if($(this).next(".select-one").hasClass("select-one-picture")){
@@ -49,7 +64,7 @@ $(document).ready(function(){
             }
         }
     })
-    //É¾³ýÑ¡ÖÐÕÕÆ¬
+    //åˆ é™¤é€‰ä¸­ç…§ç‰‡
 
     $(".del-select-photo").click(function(){
         $(".select-one-picture").closest("li").remove();
