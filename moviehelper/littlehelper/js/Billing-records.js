@@ -6,25 +6,34 @@ $(document).ready(function(){
     $(".billing-title").click(function(){
         if($(this).hasClass("openingBill")){
             $(this).removeClass("openingBill").next(".billing-details").hide();
-        }else{
+        }else{            
             $(this).addClass("openingBill").next(".billing-details").show();
-             var imgS = $(this).next(".billing-details img");
-            for(var i = 0;i<imgS.length;i++){
+            var imgS = $(this).next(".billing-details").find("img"),
+                arrayHeight=new Array(),
+                imgSL = imgS.length,
+                lowest = 0,
+                maxest = 0;
+
+            for(var i = 0;i<imgSL;i++){
                 var imgSH = imgS.eq(i).height();
-                console.log(i+"+"+imgSH);
-            }
-        }
+                arrayHeight[i] = imgSH;
+            };
+          //比较数组最小值&&最小值
+           function numOfSmallest(a){
+                for(var i = 0;i<imgSL;i++){
+                    if (a[i]<a[lowest]) lowest = i;
+                    if (a[i]>a[maxest]) maxest = i;
+                };
+                return lowest;
+                return maxest;
+            };            
+            numOfSmallest(arrayHeight);
+                    alert(arrayHeight[lowest]);
+                    alert(arrayHeight[maxest]);
+            };
     });
 
-    //设置照片高度一致
-    function checkHeight(_this){
-        var imgS = _this+" img";
-        alert(imgS.length);
-        for(var i = 0;i<imgS.length; i++){
-            var imgSH = imgS.eq(i).height();
-            console.log(i+"+"+imgSH);
-        }
-    }
+   
     //编辑相册按钮 进入编辑模式
     $(".edit-photo").click(function(){
         if($(this).hasClass("editing-photo")){
