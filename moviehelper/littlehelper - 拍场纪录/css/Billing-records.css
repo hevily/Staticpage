@@ -1,0 +1,92 @@
+*{
+    margin: 0;padding: 0;
+    font-family:'Microsoft YaHei','Hiragino Sans GB',Helvetica,Arial,'Lucida Grande',sans-serif;
+}
+body{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 640px;
+}
+.btn_menu a img{
+    width: 100%;
+    height: 100%;
+}
+.navbar{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    max-width:640px;
+    height: 50px;
+    padding:10px 20px 10px 20px;
+    border-radius: 0;
+    border: none;
+    text-align: center;
+    margin-bottom: 0;
+    background-color: #f27302;
+}
+.container-fluid{
+    max-width:640px;
+}
+.content_body{
+    margin-top: 60px;
+}
+.btn_menu{
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    float: left;
+    border-radius: 0;
+}
+.my_theater_group{
+    display: block;
+    margin-top: 0;
+    padding: 5px;
+    color: #ffffff;
+    font-size: 20px;
+}
+.header_strings{
+    float: left;
+}
+.btn_search{
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    float: right;
+}
+.btn-menu>a img,.btn-search>a img{
+    width: 30px;
+    height: 30px;
+}
+.btn-default:hover{
+    background-color: inherit;
+    color: inherit;
+}
+.btn-default:focus{
+    background-color: #f27302;
+}
+.btn{
+    outline: none;
+}
+.glyphicon{
+    color: #ffffff;
+}
+.btn-default{
+    background-color: #f27302;
+    border: none;
+}
+/*clearfix*/
+.clearfix:before,
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.clearfix:after {clear: both;}
+.clearfix {zoom: 1;} /* IE < 8 */
+
+
+
+
+
+
