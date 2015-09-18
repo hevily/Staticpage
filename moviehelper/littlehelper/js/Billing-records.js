@@ -8,7 +8,8 @@ $(document).ready(function(){
             $(this).removeClass("openingBill").next(".billing-details").hide();
         }else{            
             $(this).addClass("openingBill").next(".billing-details").show();
-            var imgS = $(this).next(".billing-details").find("img"),arrayHeight = new Array(), imgSL = imgS.length, lowest = 0, maxest = 0;
+            var imgS = $(this).next(".billing-details").find("li"),arrayHeight = new Array(), imgSL = imgS.length, lowest = 0, maxest = 0;
+            var imgLi = $(this).next(".billing-details").find("img");
             for(var i = 0;i<imgSL;i++){
                 var imgSH = imgS.eq(i).height();
                 arrayHeight[i] = imgSH;
@@ -23,7 +24,7 @@ $(document).ready(function(){
            }
             numOfSmallest(arrayHeight);
             for(i = 0;i<imgSL;i++){
-                imgS.eq(i).css("height",arrayHeight[lowest]);
+                imgLi.eq(i).css("height",arrayHeight[lowest]);
             }
         }
     });

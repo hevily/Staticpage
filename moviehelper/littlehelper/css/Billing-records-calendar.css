@@ -31,7 +31,7 @@ select[name=select-film-num]{
     margin-bottom: 0;
 }
 .list-billing{
-    padding-top: 10px;
+    /*padding-top: 10px;*/
     background-color: #ebeced;
     padding-bottom: 30px;
 }

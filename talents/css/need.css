@@ -1,0 +1,559 @@
+*{
+	box-sizing:border-box;
+	margin: 0;
+	padding: 0;
+}
+body{
+	/*margin: 10px;*/
+	font-family: 'Microsoft YaHei';
+}
+.hidden{
+	display: none!important;
+    visibility: hidden!important;
+}
+/*clearfix*/
+.clearfix:before,
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.clearfix:after {clear: both;}
+.clearfix {zoom: 1;} /* IE < 8 */
+.container{	width: 100%;height: 100%;max-width: 640px;margin: 0 auto;}
+/*发布简历需求选择*/
+ul li{
+	list-style: none;
+}
+.tagSelect{
+	padding: 0 10px
+}
+.tagSelect ul li{
+	list-style-type: none;
+	float: left;
+	width: 33.33%;
+	padding: 1%;
+}
+.tagSelect a,.tagSelect a:active{
+	text-decoration: none;
+	outline: none;
+	color: #000;
+}
+.tag{
+	position: relative;
+	/*width: 30%;*/
+	height: 40px;
+	background-color: #f7f7f7;
+	border: 1px solid #f7f7f7;
+	border-radius: 5px;
+	text-align: center;
+	vertical-align: middle;
+	outline: none;
+}
+.tag img{
+	position: absolute;
+	right: -1px;
+	bottom: -1px;
+}
+.tag span{
+	line-height: 38px;
+	font-weight: bold;
+}
+.active-tag{
+	background-color: #FCC396;
+}
+.tagEdit ul li {
+	width: 33.33%;
+}
+
+/*简历发布输入、编辑简历*/
+.needs{
+	background-color: #DDDEE3;
+	padding: 10px;
+}
+.job-tag{
+	background-color: #fff;
+}
+.edit-resume{
+	background-color: #fff;
+	border-radius: 5px;
+}
+.tagEdit ul li{
+	float: left;
+	padding: 1%;
+}
+
+.item{
+	height: 50px;
+	border-bottom: 1px solid #cfcfcf;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.item-title{
+	height: 50px;
+	float: left;
+	line-height: 50px;
+}
+.item-details{
+	height: 50px;
+	float: right;
+	line-height: 50px;
+	text-align: right;
+}
+.item-details input{
+	border: none !important;
+	height: 88%;
+	width: 90%;
+	font-size: 16px;
+	text-align: right;
+}
+.item-details img{
+	width: 10px;
+	height: 10px;
+}
+.film-title{
+	padding-top: 6px;
+	padding-bottom: 10px;
+}
+.film-details textarea{
+	width: 100%;
+	max-width: 610px;
+	min-height: 80px;
+	-webkit-appearance:none;
+	font-size: 16px;
+	padding: 4px;
+}
+.next-step{
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 6px;
+}
+.next-step input{
+	width: 80%;
+	height: 35px;
+	border-radius: 5px;
+	border: 1px solid #f27302;
+	background-color: #f27302;
+	font-size: 16px;
+	color: #fff;
+	outline: none;
+}
+
+/*工作推送*/
+
+.pushed-job{
+	
+}
+.job-opportunity{
+	padding: 6px  10px 0 10px;
+}
+.job-opportunity a{
+	text-decoration: none;
+	color: #000;
+}
+.need-name{
+	font-size: 16px;
+	font-weight: bold;
+	text-align: justify;
+}
+.time{
+	color: #F57725;
+	margin: 5px 0;
+}
+.job-description{
+	height: 63px;
+	overflow: hidden;
+	line-height: 20px;
+	text-align: justify;
+	margin-bottom: 5px;
+}
+.job-description p{
+	width: 100%;
+	margin-bottom: 2px;
+	text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+    white-space: nowrap;
+}
+.job-tag{
+	color: #F57725;
+	margin-top: 5px;
+	/*padding: 10px;*/
+	line-height: 20px;
+	border-top: 1px solid #E4E4E4;
+}
+.money-demand{
+	height:30px;
+	border-top: 1px solid #cfcfcf;
+	line-height: 29px;
+}
+.money-demand .money{
+	color: #f57725;
+	float: left;
+	width: 50%;
+}
+.money-demand .demand{
+	width: 50%;
+	float: left;
+	text-align: right;
+}
+.send-resume,.send-msg{
+	width: 50%;
+	float: left;
+	border: 1px solid #D6D6D6;
+	text-align: center;
+	height: 35px;
+	line-height: 33px;
+	padding-top: 5px;
+}
+.action{
+	margin-left: -10px;
+	margin-right: -10px;
+}
+.action img{
+	width: 20px;
+	height: 20px;
+}
+
+.send-resume{
+	border-left: none;
+}
+.send-msg{
+	border-left: none;
+	border-right: none;
+}
+.waitSend,.sended,.send-msg{
+	position: relative;
+}
+.waitSend span,.sended span,.send-msg span{
+	padding-left: 8px;
+	position: relative;
+	top: -5px;
+}
+.gamp{
+	clear: both;
+	height: 15px;
+	background-color: #E6E6E6;
+	border-bottom: 1px solid #cfcfcf;
+}
+.gamp-details,.gamp-talents{
+	margin-top: -1px;
+	clear: both;
+	height: 15px;
+	background-color: #E6E6E6;
+	border-top: 1px solid #cfcfcf;
+	border-bottom: 1px solid #cfcfcf;
+}
+
+
+/*需求详情*/
+.job-title{
+	padding: 0 10px;
+}
+.job-title p:nth-child(1){
+	font-size: 18px;
+}
+.job-title p:nth-child(2){
+	color: #F27302;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+.job-title p:nth-child(3){
+	color: #353535;
+	margin-bottom: 6px;
+}
+.digest{
+	width: 33.33%;
+	float: left;
+	padding-left:10px;
+	border: 1px solid #DCDCDC;
+	font-size: 16px;
+	font-weight: bold;
+	height: 46px;
+	background: #F7F7F7;
+}
+.digest p{
+	font-weight: normal;
+}
+.experience{
+	border-left: none;
+	border-right: none;
+}
+.number{
+	
+}
+.postion-type{
+	border-left: none;
+	border-right: none;
+}
+.base-item{
+	clear: both;
+	height: 35px;
+	/*border-bottom: 1px solid #cfcfcf;*/
+	padding-left: 10px;
+	position: relative;
+}
+.base h4{
+	padding: 8px 0 5px 10px;
+	border-bottom: 1px solid #cfcfcf;
+}
+.base-item-title{
+	width: 65px;
+	float: left;
+	line-height: 35px;
+	text-align: right;
+	font-size: 16px;
+	font-weight: bold;
+	color: #5E5E5E;
+}
+.base-item-details{
+	float: left;
+	line-height: 35px;
+	padding-left: 10px;
+	color: #515151;
+	word-wrap:break-word;
+}
+.lineb{
+	padding-left: 100%;
+	position: absolute;
+	bottom: 0;
+	border-bottom: 1px solid #cfcfcf;
+}
+.base .base-item:nth-child(odd)
+,.language .base-item:nth-child(even)
+,.skill .base-item:nth-child(even)
+,.other-require .base-item:nth-child(even){
+	background-color: #F7F7F7;
+}
+.film-description{
+	padding: 10px;
+}
+.film-description p{
+	text-indent: 30px;
+	text-align: justify;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+.film-description input{
+	width: 200px;
+	height: 35px;
+	border: 1px solid #F36303;
+	border-bottom: 2px solid #F98C53;
+	background-color: #F36303;
+	color: #fff;
+	border-radius: 5px;
+	left: 50%;
+	position: relative;
+	transform:translateX(-50%);
+}
+.offer-require{
+	padding: 10px;
+}
+.offer-require h4{
+	padding: 8px 0 5px 10px;
+}
+.language h4,.skill h4,.other-require h4{
+    padding: 8px 0 5px 10px;
+    border-bottom: 1px solid #cfcfcf;
+}
+footer{
+	width: 100%;
+	max-width: 640px;
+	margin:0 auto;
+}
+.action-details{
+	padding-top: 12px;
+	height: 50px;
+}
+.action-details img{
+	width:15px;
+	height: 15px;
+}
+.send-msg-details{
+	width: 20%;
+	float: left;
+	color: #f27302;
+	font-size: 14px;
+	text-align: center;
+}
+.send-msg-details a,.send-msg-details a:focus{
+	text-decoration: none;
+	color: #f27302;
+	outline: none;
+}
+.send-resume-details{
+	line-height: 38px;
+	width: 70%;
+	margin-right: 10%;
+	float: left;
+	padding: 0 10%;
+	height: 38px;
+	background-color: #f27302;
+	color: #fff;
+	border: 1px solid #F27302;
+	border-radius: 5px;
+	text-align: center;
+}
+
+/*需求详情*/
+.tabpanle div{
+	position: relative;
+	width: 50%;
+	height: 42px;
+	line-height: 42px;
+	float: left;
+	background-color: #FEF9F5;
+	text-align: center;
+	border-top: 1px solid #cfcfcf;
+	border-bottom: 1px solid #cfcfcf;
+}
+
+.tabpanle div:nth-child(1){
+	border-right: 1px solid #cfcfcf;
+}
+.tabpanle span{
+	position: absolute;
+	width: 70px;
+	border-top: 3px solid #F36302;
+	height: 1px;
+	display: none;
+	left: 50%;
+	top: 36px;
+	transform:translateX(-50%);
+}
+.active{
+	color: #F36302;
+}
+.active span{
+	display: block;
+}
+.edit-needs div{
+	padding: 4px 0;
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+.edit-needs .edit input{
+	width: 50%;
+	height: 36px;
+	border-radius: 5px;
+	background-color: #F36303;
+	border: 1px solid #F36303;
+	color: #fff;
+	font-size: 16px;
+}
+.edit-needs .delete input{
+	width: 50%;
+	height: 36px;
+	border-radius: 5px;
+	background-color: #fff;
+	border: 1px solid #F36303;
+	color: #F36303;
+	font-size: 16px;
+}
+.received-title{
+	height: 35px;
+	border-bottom: 1px solid #cfcfcf;
+	line-height: 34px;
+	padding: 0 10px;
+}
+.received-title h4{
+	float: left;
+	font-size: 16px;
+}
+.received-title span{
+	float: right;
+}
+.received-title span img{
+	width: 15px;
+	height: 15px;
+}
+.received ul,.recommend ul{
+	clear:both;
+	padding: 0 10px;
+}
+.talents{
+	/*padding-bottom: 6px;*/
+}
+.talents-list  li{
+	border-bottom: 1px solid #cfcfcf;
+	padding: 6px 0;
+}
+.talents-list  li:last-child{
+	border: none;
+}
+.talents-list a{
+	text-decoration: none;
+	color: #000;
+}
+.talents-info{
+	float: left;
+}
+.talents-pic{
+	float: left;
+	width: 45px;
+	height: 45px;
+	overflow: hidden;
+	position: relative;
+	border-radius: 50%;
+	box-shadow: 0px 2px 4px 1px #cfcfcf;
+}
+.talents-pic img{
+	/*width: 100%;*/
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform:translate(-50%,-50%);
+	height: 100%;
+}
+.talents-base{
+	float: left;
+	padding-left: 10px;
+}
+.talents-name{
+	float: left;
+	height: 28px;
+	line-height: 34px;
+}
+.talents-sex-age{
+	border-radius: 5px;
+	padding: 3px;
+}
+.boy{
+	background-color: #7CBDFF;
+}
+.girl{
+	background-color: #FF7C93;
+}
+.boy-img,.girl-img{
+	display: none;
+}
+.boy .boy-img{
+	display: inline-block;
+}
+.girl .gril-img{
+	display: inline-block;
+}
+.talents-sex-age img{
+	width: 16px;
+	height: 16px;
+}
+.talents-sex-age,.talents-sex-age p{
+	float: left;
+	color: #fff;
+}
+.location{
+	float: left;
+}
+.talents-address-find{
+	clear: both;
+	padding-left: 10px;
+}
+.find-job p{
+	text-align: right;
+}
+.find-job p span{
+	font-weight: bold;
+	font-size: 16px;
+}
