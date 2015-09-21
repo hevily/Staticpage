@@ -40,4 +40,30 @@ $(document).ready(function(){
 	$(".talents a").click(function(){
 		alert("1");
 	})
-})
+
+	// 弹出浮层选择
+	$(".item-details input").click(function(){
+		var url="load/duty.htm";
+		$("body").append("<div class='backdrop'></div><div class='layout'></div>")
+		$(".layout").load(url);
+		removelayer();
+	})
+
+	function removelayer(){
+		$(".backdrop").click(function() {
+			$(".layout,.backdrop").remove();
+		});
+	}
+
+			
+
+
+});
+
+// 	myScroll = new IScroll('#wrapper', {
+// 					  snap:"li",
+//                       momentum:false,
+//                       hScrollbar:false,
+//                       vScrollbar:false});
+// }
+// document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);

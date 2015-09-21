@@ -7,8 +7,14 @@
     <!-- <link rel="stylesheet" href="../../css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="../../css/need.css">
     <script src="../../js/jquery-2.1.3.min.js"></script>
-    <script src="../../js/need.js"></script>
+    <script src="../../js/iscroll/mobiscroll.zepto.js"></script>
+    <script src="../../js/iscroll/iscroll.js"></script>
+        <script src="../../js/need.js"></script>
+
     <title>发布需求</title>
+
+    <style type="text/css">
+</style>
 </head>
 <body>
 	<header></header>
@@ -90,8 +96,9 @@
 						</div>
 						<div class="item-details">
 							<!-- <input type="text"> -->
-							<span>演员</span>
-							<img src="../../img/send-resume.png" alt="点击选择" />
+							<input type="text" value="演员" readonly="readonly">
+							<!-- <span style="position:absolute;right:16px;width:60px;">演员</span> -->
+							<img src="../../img/for-more.png" alt="点击选择" />
 						</div>
 					</div>
 					<div class="item clearfix">
@@ -101,7 +108,7 @@
 						<div class="item-details">
 							<input type="text" placeholder="请输入标题">
 							<span></span>
-							<img src="../../img/send-resume.png" alt="点击选择" />
+							<img src="../../img/for-more.png" alt="点击选择" />
 						</div>
 					</div>
 					<div class="item clearfix">
@@ -111,7 +118,7 @@
 						<div class="item-details">
 							<input type="text" placeholder="请输入剧名">
 							<span></span>
-							<img src="../../img/send-resume.png" alt="点击选择" />
+							<img src="../../img/for-more.png" alt="点击选择" />
 						</div>
 					</div>
 					<div class="item clearfix">
@@ -121,7 +128,7 @@
 						<div class="item-details">
 							<input type="text" placeholder="请输入导演姓名">
 							<span></span>
-							<img src="../../img/send-resume.png" alt="点击选择" />
+							<img src="../../img/for-more.png" alt="点击选择" />
 						</div>
 					</div>
 					<div class="item clearfix">
@@ -131,7 +138,7 @@
 						<div class="item-details">
 							<input type="text" placeholder="请输入编剧姓名">
 							<span></span>
-							<img src="../../img/send-resume.png" alt="点击选择" />
+							<img src="../../img/for-more.png" alt="点击选择" />
 						</div>
 					</div>
 					<div class="item clearfix">
@@ -141,7 +148,7 @@
 						<div class="item-details">
 							<input type="text" placeholder="请选择开机时间">
 							<span></span>
-							<img src="../../img/send-resume.png" alt="点击选择" />
+							<img src="../../img/for-more.png" alt="点击选择" />
 						</div>
 					</div>
 					<div class="item clearfix">
@@ -151,7 +158,7 @@
 						<div class="item-details">
 							<input type="text" placeholder="请选择拍摄地">
 							<span></span>
-							<img src="../../img/send-resume.png" alt="点击选择" />
+							<img src="../../img/for-more.png" alt="点击选择" />
 						</div>
 					</div>
 					<div class="item clearfix">
@@ -161,7 +168,7 @@
 						<div class="item-details">
 							<input type="text" placeholder="请输入负责人姓名">
 							<span></span>
-							<img src="../../img/send-resume.png" alt="点击选择" />
+							<img src="../../img/for-more.png" alt="点击选择" />
 						</div>
 					</div>
 					<div class="item clearfix">
@@ -171,7 +178,7 @@
 						<div class="item-details">
 							<input type="text" placeholder="请输入负责人联系电话">
 							<span></span>
-							<img src="../../img/send-resume.png" alt="点击选择" />
+							<img src="../../img/for-more.png" alt="点击选择" />
 						</div>
 					</div>
 					<div class="item clearfix">
@@ -181,7 +188,7 @@
 						<div class="item-details">
 							<input type="text" placeholder="请输入负责人邮箱">
 							<span></span>
-							<img src="../../img/send-resume.png" alt="点击选择" />
+							<img src="../../img/for-more.png" alt="点击选择" />
 						</div>
 					</div>
 					<div class="item clearfix">
@@ -191,7 +198,7 @@
 						<div class="item-details">
 							<input type="text" placeholder="请输入应聘地址">
 							<span></span>
-							<img src="../../img/send-resume.png" alt="点击选择" />
+							<img src="../../img/for-more.png" alt="点击选择" />
 						</div>
 					</div>
 					<div class="film-description clearfix">
@@ -203,13 +210,139 @@
 							<span></span>
 						</div>
 					</div>
-					<h1>等待后续UI</h1>
 				</div>
 			</div>
 		</div>
 		<div class="next-step">
 			<input type="button" value="下一步">
 		</div>
+		<div class="step-two">
+			<div class="item clearfix">
+				<div class="item-title">
+					工作经验
+				</div>
+				<div class="item-details">
+					<input type="text" placeholder="1年" hidden>
+
+					
+
+
+
+					<!-- <select name="work-experience" id="work-experience">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+					</select> -->
+					<span></span>
+					<img src="../../img/for-more.png" alt="点击选择" />
+				</div>
+			</div>
+			<div class="item clearfix">
+				<div class="item-title">
+					招聘人数
+				</div>
+				<div class="item-details">
+					<input type="text" placeholder="1人">
+					<span></span>
+					<img src="../../img/for-more.png" alt="点击选择" />
+				</div>
+			</div>
+			<div class="item clearfix">
+				<div class="item-title">
+					职位类型
+				</div>
+				<div class="item-details">
+					<input type="text" placeholder="选择框">
+					<span></span>
+					<img src="../../img/for-more.png" alt="点击选择" />
+				</div>
+			</div>
+			<div class="item clearfix">
+				<div class="item-title">
+					学历要求
+				</div>
+				<div class="item-details">
+					<input type="text" placeholder="请选择">
+					<span></span>
+					<img src="../../img/for-more.png" alt="点击选择" />
+				</div>
+			</div>
+			<div class="item clearfix">
+				<div class="item-title">
+					专业要求
+				</div>
+				<div class="item-details">
+					<input type="text" placeholder="请输入专业要求">
+					<span></span>
+					<img src="../../img/for-more.png" alt="点击选择" />
+				</div>
+			</div>
+			<div class="item clearfix">
+				<div class="item-title">
+					语言方言
+				</div>
+				<div class="item-details">
+					<input type="text" placeholder="请选择">
+					<span></span>
+					<img src="../../img/for-more.png" alt="点击选择" />
+				</div>
+			</div>
+			<div class="item clearfix">
+				<div class="item-title">
+					薪资待遇
+				</div>
+				<div class="item-details">
+					<select name="null" id="money" style="width:100%;-webkit-appearance:none;right:20px;position:relative;width:100%;border:none !important;text-align: center;height：98%;">
+						<option value="1">请选择薪资待遇</option>
+						<option value="1">1000-3000</option>
+						<option value="1">1</option>
+						<option value="1">1</option>
+						<option value="1">1</option>
+						<option value="1">1</option>
+						<option value="1">1</option>
+						<option value="1">1</option>
+						<option value="1">1</option>
+					</select>
+					<input type="text" hidden>
+					<span></span>
+					<img src="../../img/for-more.png" alt="点击选择" />
+				</div>
+			</div>
+			<div class="item clearfix">
+				<div class="item-title">
+					技能要求
+				</div>
+				<div class="item-details">
+					<input type="text" placeholder="请选择">
+					<span></span>
+					<img src="../../img/for-more.png" alt="点击选择" />
+				</div>
+			</div>
+			<div class="item clearfix">
+				<div class="item-title">
+					其他(选填)
+				</div>
+				<div class="item-details">
+					<input type="text" placeholder="">
+					<span></span>
+					<img src="../../img/for-more.png" alt="点击选择" />
+				</div>
+			</div>
+			<div class="item clearfix">
+				<div class="item-title">
+					招聘要求
+				</div>
+				<div class="item-details">
+					<input type="text" placeholder="可输入岗位职责，招聘要求。">
+					<span></span>
+					<img src="../../img/for-more.png" alt="点击选择" />
+				</div>
+			</div>
+		</div>
+
 	</div>
 	<footer></footer>
 </body>

@@ -1,0 +1,121 @@
+<div class="layer">
+	<div class="layer-title clearfix">
+		<div class="select-cancel">
+			<div class="cancel">
+				<input type="button" value="取消">
+			</div>
+			<div class="action-title">
+				操作名称
+			</div>
+			<div class="selecting">
+				<input type="button" value="确定">
+			</div>
+		</div>
+	</div>
+	<div class="layer-content">
+		<div class="select-area">
+			<div id="wrapper" class="f_half">
+				<div id="scroller">
+					<ul>
+						<li>&nbsp;</li>
+						<li>闪约</li>
+						<li>预约</li>
+						<li>包月</li>
+						<li>闪约</li>
+						<li>预约</li>
+						<li>包月</li>
+						<li>闪约</li>
+						<li>预约</li>
+						<li>包月</li>
+						<li>闪约</li>
+						<li>预约</li>
+						<li>包月</li>
+						<li>闪约</li>
+						<li>预约</li>
+						<li>包月</li>
+						<li>闪约</li>
+						<li>预约</li>
+						<li>包月</li>
+						<li>闪约</li>
+						<li>预约</li>
+						<li>包月</li>
+						<li>闪约</li>
+						<li>预约</li>
+						<li>包月</li>
+						<li>闪约</li>
+						<li>预约</li>
+						<li>包月</li>
+						<li>闪约</li>
+						<li>预约</li>
+						<li>包月</li>
+						<li>闪约</li>
+						<li>预约</li>
+						<li>包月</li>
+						<li>闪约</li>
+						<li>预约</li>
+						<li>包月</li>
+						<li>&nbsp;</li>
+					</ul>
+				</div>
+				<div class="middle_s"></div>
+			</div>
+			<script>
+				 var myscroll=new iScroll("wrapper",{
+				 	snap:"li"
+				 });
+			</script>
+		</div>
+	</div>
+	<div class="layer-footer"></div>
+</div>
+<script>
+	 //    var myScroll;
+		// 	    function loaded() {
+		// 	        myScroll = new iScroll('wrapper', {
+		// 					  // snap:"true",
+		//                       momentum:false,
+		//                       hScrollbar:true,
+		//                       vScrollbar:false});
+		// }
+		// document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+		// loaded();
+</script>
+<style>
+	.layer{
+		width: 100%;
+
+		position: absolute;
+		bottom: 0;
+		background-color: green;
+	}
+	.select-cancel .cancel{
+		float: left;
+	}
+	.select-cancel .action-title{
+		float: left;
+		position: absolute;
+		left: 50%;
+		transform:translateX(-50%);
+		-ms-transform:translateX(-50%); 	/* IE 9 */
+		-moz-transform:translateX(-50%); 	/* Firefox */
+		-webkit-transform:translateX(-50%); /* Safari 和 Chrome */
+		-o-transform:translateX(-50%)
+	}
+	.select-cancel .selecting{
+		float: right;
+	}
+	.layer-content{
+		clear: both;
+	}
+	.select-area{
+		height: 120px;
+		overflow: auto;
+	}
+	.layer-title{
+		height: 50px;
+		line-height: 50px;
+		background-color: #EAEAEA;
+		border-bottom: 1px solid #cfcfcf;
+	}
+</style>
