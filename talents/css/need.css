@@ -647,3 +647,64 @@ footer{
 	font-size: 14px;
 }
 .middle_s{ width:100%; position:absolute; height:40px; margin-top:40px; background-color:#ccc;}
+
+.layer{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	background-color: #fff;
+	/*height: 180px;*/
+}
+.select-cancel .cancel{
+	float: left;
+}
+.select-cancel .action-title{
+	float: left;
+	position: absolute;
+	left: 50%;
+	transform:translateX(-50%);
+	-ms-transform:translateX(-50%); 	/* IE 9 */
+	-moz-transform:translateX(-50%); 	/* Firefox */
+	-webkit-transform:translateX(-50%); /* Safari 和 Chrome */
+	-o-transform:translateX(-50%)
+}
+.select-cancel .selecting{
+	float: right;
+}
+.layer-content{
+	clear: both;
+}
+.select-area{
+	height: 120px;
+	overflow: auto;
+}
+.layer-title{
+	position: absolute;
+	width: 100%;
+	bottom: 59px;
+	height: 50px;
+	line-height: 50px;
+	background-color: #EAEAEA;
+	border-bottom: 1px solid #cfcfcf;
+}
+.select-cancel {
+			padding: 0 10px;
+		}
+		.select-cancel .cancel a{
+			width: 50px;
+			height: 35px;
+			border: none;
+			color: #a1a1a1;
+			font-size: 18px;
+			background-color: #EAEAEA;
+			text-decoration: none;
+		}
+		.select-cancel .selecting a{
+			width: 50px;
+			height: 35px;
+			border: none;
+			color: #f27302;
+			font-size: 18px;
+			background-color: #EAEAEA;
+			text-decoration: none;
+		}
