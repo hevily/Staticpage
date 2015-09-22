@@ -4,18 +4,7 @@ $(document).ready(function(){
 		console.log("标签被点击");
 		$(".active-tag").removeClass("active-tag");
 		$(this).addClass("active-tag");
-		$(".tagSelect").hide();
-				$(".selected-tag").show();
-
-		resiezInput();
-		// resizeTalentsinfo();
 	})
-	$(".next-step input").click(function() {
-		$(".step-one").hide();
-		$(".step-two").show();
-		resiezInput();
-		// resizeTalentsinfo();
-	});
 	// 工作推送
 	$(document).delegate(".waitSend","click",function(){
 		$(this).addClass('hidden');
@@ -30,13 +19,12 @@ $(document).ready(function(){
 		};
 	}
 	function resizeTalentsinfo(){
-		var talentsinfoArray = $(".talents-info");
-		for (var i = 0;i<=talentsinfoArray.length - 1; i++) {
-			var thisInfo = $(talentsinfoArray[i]).closest(".talents");
-			$(talentsinfoArray[i]).width($(".talents").width()-70);
-		};
-	}
-
+			var talentsinfoArray = $(".talents-info");
+			for (var i = 0;i<=talentsinfoArray.length - 1; i++) {
+				var thisInfo = $(talentsinfoArray[i]).closest(".talents");
+				$(talentsinfoArray[i]).width($(".talents").width()-70);
+			};
+		}
 	$(".job-needed").click(function() {
 		$(".active").removeClass('active');
 		$(this).addClass('active');
@@ -48,12 +36,27 @@ $(document).ready(function(){
 		$(this).addClass('active');
 		$(".needed").hide();
 		$(".talents").show();
+		resizeTalentsinfo();
 	});
 	$(".talents a").click(function(){
 		alert("1");
 	})
 
 	// 弹出浮层选择
+		// 工作经验
+		$(".duty-experance").click(function(){
+			var url="load/duty.htm",name="工作经验";
+			appendlayer(name);
+			$(".layer-content").load(url);
+			removelayer();
+		});
+		// 拍摄地址
+		$(".shoot-address").click(function(){
+			var url="load/duty.htm",name="拍摄地址";
+			appendlayer(name);
+			$(".layer-content").load(url);
+			removelayer();
+		});
 		// 职位类型
 		$(".duty-htm").click(function(){
 			var url="load/duty.htm",name="职位类别";
@@ -75,13 +78,7 @@ $(document).ready(function(){
 			$(".layer-content").load(url);
 			removelayer();
 		});
-		// 语言能力
-		$(".language").click(function(){
-			var url="load/language.htm",name="语言能力";
-			appendlayer(name);
-			$(".layer-content").load(url);
-			removelayer();
-		});
+
 
 		
 		function appendlayer(name){
@@ -97,17 +94,16 @@ $(document).ready(function(){
 					"</div>"+
 					"<div class='layer-content'></div>"+
 					"<div class='layer-footer'></div>"+
-				"</div>")		
+				"</div>")
 		}
 		function removelayer(){
-			$(document).delegate('.backdrop', 'click', function() {
+			$('.backdrop').click(function() {
 				$(".backdrop,.layer").remove();
 			});
 			$(document).delegate('.cancel a', 'click', function() {
 				$(".backdrop,.layer").remove();
 			});
 		}
-			
 
 
 });

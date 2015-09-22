@@ -8,6 +8,10 @@ body{
 	font-family: 'Microsoft YaHei';
 	position: relative;
 }
+html,body,.container,.selected-tag,.step-one1,.step-two{
+		height: 100%;
+
+}
 .hidden{
 	display: none!important;
     visibility: hidden!important;
@@ -90,13 +94,14 @@ ul li{
 .item{
 	height: 50px;
 	border-bottom: 1px solid #cfcfcf;
-	padding-left: 5px;
-	padding-right: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 .item-title{
 	height: 50px;
 	float: left;
 	line-height: 50px;
+	font-weight: bold;
 }
 .item-details{
 	height: 50px;
@@ -141,15 +146,20 @@ ul li{
 	padding-bottom: 6px;
 	background-color: #f8f8f8;
 }
-.next-step input{
+.next-step a{
+	display: block;
+	margin: 0 auto;
 	width: 80%;
 	height: 35px;
 	border-radius: 5px;
 	border: 1px solid #f27302;
 	background-color: #f27302;
+	border-bottom: 2px solid #f36303;
 	font-size: 16px;
 	color: #fff;
 	outline: none;
+	text-decoration: none;
+	line-height: 33px;
 }
 
 /*工作推送*/
@@ -338,8 +348,14 @@ ul li{
 ,.other-require .base-item:nth-child(even){
 	background-color: #F7F7F7;
 }
+.step-two-details .item:last-child{
+	border-bottom: none;
+}
 .film-description{
-	padding: 10px;
+	padding: 10px 5px;
+}
+.film-title{
+	font-weight: bold;
 }
 .film-description p{
 	text-indent: 30px;
@@ -359,6 +375,7 @@ ul li{
 	left: 50%;
 	position: relative;
 	transform:translateX(-50%);
+	-webkit-transform:translateX(-50%);
 	text-align: center;
 	line-height: 33px;
 	text-decoration: none;
@@ -372,6 +389,19 @@ ul li{
 .language h4,.skill h4,.other-require h4{
     padding: 8px 0 5px 10px;
     border-bottom: 1px solid #cfcfcf;
+}
+.selected-tag{
+	    /*background-color: #DDDEE3;*/
+}
+.step-two{
+	padding: 10px;
+    background-color: #DDDEE3;
+
+}
+.step-two-details{
+	border-radius: 5px;
+	box-shadow: 0px 2px 6px 0px #5d5050;
+	background-color: #fff;
 }
 footer{
 	width: 100%;
@@ -424,7 +454,6 @@ footer{
 	border-top: 1px solid #cfcfcf;
 	border-bottom: 1px solid #cfcfcf;
 }
-
 .tabpanle div:nth-child(1){
 	border-right: 1px solid #cfcfcf;
 }
@@ -437,6 +466,7 @@ footer{
 	left: 50%;
 	top: 36px;
 	transform:translateX(-50%);
+	-webkit-transform:translateX(-50%);
 }
 .active{
 	color: #F36302;
@@ -450,25 +480,42 @@ footer{
 	float: left;
 	text-align: center;
 }
-.edit-needs .edit input{
+.edit-needs .edit a{
 	width: 50%;
 	height: 36px;
-	border-radius: 5px;
 	background-color: #F36303;
 	border: 1px solid #F36303;
 	color: #fff;
 	font-size: 16px;
+	display: block;
+    border-radius: 5px;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    -webkit-transform:translateX(-50%);
+    text-align: center;
+    line-height: 33px;
+    text-decoration: none;
 }
-.edit-needs .delete input{
+.edit-needs .delete a{
 	width: 50%;
 	height: 36px;
-	border-radius: 5px;
 	background-color: #fff;
-	border: 1px solid #F36303;
-	color: #F36303;
+	border: 1px solid #f27302;
+	color: #f27302;
 	font-size: 16px;
+	display: block;
+    border-radius: 5px;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    -webkit-transform:translateX(-50%);
+    text-align: center;
+    line-height: 33px;
+    text-decoration: none;
 }
 .received-title{
+	position: relative;
 	height: 35px;
 	border-bottom: 1px solid #cfcfcf;
 	line-height: 34px;
@@ -480,10 +527,14 @@ footer{
 }
 .received-title span{
 	float: right;
+	padding-right: 10px;
 }
 .received-title span img{
-	width: 15px;
-	height: 15px;
+	position: absolute;
+	top: 7px;
+	right: 10px;
+	width: 10px;
+	height: 18px;
 }
 .received ul,.recommend ul{
 	clear:both;
@@ -521,6 +572,7 @@ footer{
 	left: 50%;
 	top: 50%;
 	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
 	height: 100%;
 }
 .talents-base{
@@ -548,12 +600,12 @@ footer{
 .boy .boy-img{
 	display: inline-block;
 }
-.girl .gril-img{
+.girl .girl-img{
 	display: inline-block;
 }
 .talents-sex-age img{
-	width: 16px;
-	height: 16px;
+	width: 15px;
+	height: 15px;
 }
 .talents-sex-age,.talents-sex-age p{
 	float: left;
@@ -573,138 +625,24 @@ footer{
 	font-weight: bold;
 	font-size: 16px;
 }
-.layout{
-	/*position: absolute;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background-color: rgba(0,0,0,0.5);*/
-}
-.backdrop{
-	position: absolute;
-	top: 0;
-	background-color: rgba(0,0,0,0.5);
-	height: 100%;
-	width: 100%;
-}
+
 .select-area{
 	position: relative;
 }
-/*滑动选择iscroll*/
-
-.f_half{
-	transform:translate(-50%, -50%);
-	-moz-transform:translate(-50%, -50%);
-	-webkit-transform:translate(-50%, -50%);}
-* {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-#wrapper {
-	position: absolute;
-	z-index: 1;
-	width:100%;
-	left:50%;
-	height:120px;
-	top:50%;
-	background: #fafafa;
-	overflow: hidden;
-}
-
-#scroller {
-	position: absolute;
-	z-index: 1;
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
+.publish{
 	width: 100%;
-	-webkit-transform: translateZ(0);
-	-moz-transform: translateZ(0);
-	-ms-transform: translateZ(0);
-	-o-transform: translateZ(0);
-	transform: translateZ(0);
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	-webkit-text-size-adjust: none;
-	-moz-text-size-adjust: none;
-	-ms-text-size-adjust: none;
-	-o-text-size-adjust: none;
-	text-size-adjust: none;
 }
-#scroller ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	width: 100%;
-	text-align:center;
+.publish a{
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	width: 80%;
+	margin: 10px auto;
+	height: 35px;
+	line-height: 35px;
+	color: #fff;
+	border-radius: 5px;
+	background-color: #f27302;
+	border-bottom: 2px solid #f36303;
+	text-decoration: none;	
 }
-#scroller li {
-	padding: 0 10px;
-	height: 40px;
-	line-height: 40px;
-	font-size: 14px;
-}
-.middle_s{ width:100%; position:absolute; height:40px; margin-top:40px; background-color:#ccc;}
-
-.layer{
-	width: 100%;
-	position: absolute;
-	bottom: 0;
-	background-color: #fff;
-	/*height: 180px;*/
-}
-.select-cancel .cancel{
-	float: left;
-}
-.select-cancel .action-title{
-	float: left;
-	position: absolute;
-	left: 50%;
-	transform:translateX(-50%);
-	-ms-transform:translateX(-50%); 	/* IE 9 */
-	-moz-transform:translateX(-50%); 	/* Firefox */
-	-webkit-transform:translateX(-50%); /* Safari 和 Chrome */
-	-o-transform:translateX(-50%)
-}
-.select-cancel .selecting{
-	float: right;
-}
-.layer-content{
-	clear: both;
-}
-.select-area{
-	height: 120px;
-	overflow: auto;
-}
-.layer-title{
-	position: absolute;
-	width: 100%;
-	bottom: 59px;
-	height: 50px;
-	line-height: 50px;
-	background-color: #EAEAEA;
-	border-bottom: 1px solid #cfcfcf;
-}
-.select-cancel {
-			padding: 0 10px;
-		}
-		.select-cancel .cancel a{
-			width: 50px;
-			height: 35px;
-			border: none;
-			color: #a1a1a1;
-			font-size: 18px;
-			background-color: #EAEAEA;
-			text-decoration: none;
-		}
-		.select-cancel .selecting a{
-			width: 50px;
-			height: 35px;
-			border: none;
-			color: #f27302;
-			font-size: 18px;
-			background-color: #EAEAEA;
-			text-decoration: none;
-		}
