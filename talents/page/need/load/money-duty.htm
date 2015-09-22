@@ -16,7 +16,13 @@
 				<div class="middle_s"></div>
 			</div>
 			<script>
-				 var myscroll=new iScroll("wrapper",{
-				 	snap:"li"
-				 });
+				$(document).ready(function(){
+					var myScroll=new IScroll("#wrapper",{
+				 		snap:"li"
+				 	});
+				 	myScroll.on('scrollEnd', function(){
+				 		console.log(this.y);
+				 	});
+				})
+				 
 			</script>
