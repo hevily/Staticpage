@@ -15,8 +15,7 @@
 				</div>
 				<div class="middle_s"></div>
 			</div>
-			<script src="../../js/myScroll.js"></script>
-			<!-- <script>
+			<script>
 				$(document).ready(function(){
 					var myScroll=new IScroll("#wrapper",{
 				 		snap:"li"
@@ -30,12 +29,12 @@
 				 		console.log(-index);
 				 		return ind = -index;
 				 	});
-				 	$(".select-cancel").delegate(".selecting","click",function(){
+				 	$(document).delegate(".selecting","click",function(){
 				 		var liIndex = (parseInt(ind+1));
 				 		console.log("当前滚动至："+liIndex);
-				 		alert($("#scroller li").eq(liIndex).text());
+				 		alert($("li").eq(liIndex).text());
 
 				 	})
 				})
 				 
-			</script> -->
+			</script>

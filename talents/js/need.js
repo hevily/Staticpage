@@ -5,12 +5,16 @@ $(document).ready(function(){
 		$(".active-tag").removeClass("active-tag");
 		$(this).addClass("active-tag");
 	})
-	// 工作推送
-	$(document).delegate(".waitSend","click",function(){
+	// 发送简历
+	$(".waitSend").click(function(){
 		$(this).addClass('hidden');
 		
 		$(this).next(".sended").removeClass('hidden');
 	})
+	// 发送信息
+	$(".send-msg").click(function() {
+		alert("发送信息");
+	});
 	function resiezInput(){
 		var inputArray = $(".item-details input");
 		for (var i = 0;i<=inputArray.length - 1; i++) {
@@ -52,10 +56,13 @@ $(document).ready(function(){
 		});
 		// 拍摄地址
 		$(".shoot-address").click(function(){
-			var url="load/duty.htm",name="拍摄地址";
-			appendlayer(name);
-			$(".layer-content").load(url);
-			removelayer();
+			var url="load/shoot-address.htm",name="拍摄地址";
+			$("body").append("<div class='backdrop'></div><div class='layer-address'></div>")
+			// appendlayer(name);
+			$(".layer-address").load(url);
+			$(".backdrop").click(function() {
+				$(".layer-address,.backdrop").remove();
+			});
 		});
 		// 职位类型
 		$(".duty-htm").click(function(){

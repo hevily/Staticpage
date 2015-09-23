@@ -1,0 +1,164 @@
+<style>
+	.layer-address{position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: #fff;}
+	.tags{
+		border: none;
+		float: left;
+		background: #cfcfcf;
+		width: 29%;
+		margin: 2%;
+		text-align: center;
+	}
+	.province{width: 30%;height: 300px;overflow: hidden;float: left;}
+	.city{width: 70%;height: 300px;overflow: hidden;}
+	.province{
+		background-color: #e6e6e6;
+		border-right: 1px solid red;
+		}
+	.city{
+		background-color: #fff;
+	}
+	.province ul,.city ul{
+		height: 100%;
+		overflow: scroll;
+	}
+	.province ul li{
+		border-bottom: 1px solid #cfcfcf;
+		text-align: center;
+		height: 2rem;
+		line-height: 2rem;
+	}
+	.city ul li{
+		border-bottom: 1px solid #cfcfcf;
+		text-align: center;
+		height: 2rem;
+		list-style: 2rem;
+	}
+	li.active-province{
+		background-color: #fff;
+	}
+	li.active-city{
+		background-color: #eee;
+	}
+	.province ul li a{
+		color: #000;
+		text-decoration: none;
+		font-size: 16px;
+
+	}
+	
+</style>
+<script>
+	$(document).ready(function(){
+		$(".province li").click(function() {
+			$(".active-province").removeClass('active-province');
+			$(this).addClass('active-province');
+		});
+		$(".city li").click(function() {
+			$(".active-city").removeClass('active-city');
+			$(this).addClass('active-city');
+		});
+		})
+</script>
+<div class="show-address clearfix">
+	<p>编辑已选择<span>5</span>/5</p>
+	<div class="address-tag">
+		<div class="tags">
+			上海<span>X</span>
+		</div>
+		<div class="tags">
+			上海<span>X</span>
+		</div>
+		<div class="tags">
+			上海<span>X</span>
+		</div>
+		<div class="tags">
+			上海<span>X</span>
+		</div>
+		<div class="tags">
+			上海<span>X</span>
+		</div>
+	</div>
+</div>
+<div class="select-address clearfix">
+	<div class="province">
+		<ul>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">省份</a></li>
+		</ul>
+	</div>
+	<div class="city">
+		<ul>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">城市</a></li>
+		</ul>
+	</div>
+</div>

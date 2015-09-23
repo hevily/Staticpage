@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="../../css/iscroll-talents.css">
     <script src="../../js/jquery-2.1.3.min.js"></script>
-	<title>语言方言</title>
+    <script src="../../js/iscroll/iscroll-probe.js"></script>
+	<title>技能要求</title>
 	<style>
 		*{
 			margin: 0;
@@ -114,7 +115,7 @@
 			position: relative;
 		}
 		.article-action .edit,.article-action .del{
-			height: 30px;
+
 			width: 65px;
 			float: left;
 			padding: 6px;
@@ -131,19 +132,19 @@
 	<header></header>
 	<div class="container">
 		<div class="content">
-			<div class="title">语言/方言</div>
+			<div class="title">技能要求</div>
 			<div class="skill">
 				<div class="add-new clearfix">
-					<a href="newlanguage.htm"><img src="../../img/add-new.png" alt="添加"></a>
-					<p>新增语言</p>
+					<a href="newskill.htm"><img src="../../img/add-new.png" alt="添加"></a>
+					<p>新增技能</p>
 				</div>
 				<div class="added clearfix">
 					<ul>
 						<li>
 							<div class="article clearfix">
 								<div class="article-msg">
-									<div class="article-name">英语</div>
-									<div class="article-skill">初级入门</div>
+									<div class="article-name">骑马</div>
+									<div class="article-skill">能够在马夫的帮助下行进</div>
 								</div>
 								<div class="article-action">
 									<div class="edit"><img src="../../img/edit-article.png" alt="编辑项目">编辑</div>
@@ -154,8 +155,8 @@
 						<li>
 							<div class="article clearfix">
 								<div class="article-msg">
-									<div class="article-name">普通话</div>
-									<div class="article-skill">母语</div>
+									<div class="article-name">骑马</div>
+									<div class="article-skill">能够在马夫的帮助下行进</div>
 								</div>
 								<div class="article-action">
 									<div class="edit"><img src="../../img/edit-article.png" alt="编辑项目">编辑</div>
@@ -173,13 +174,10 @@
 	$(document).ready(function(){
 		$(".article-msg").width($(".article").width()-$(".article-action").width());
 		$(".article-action .edit").click(function() {
-			var url="skill.htm",name = "技能熟练度";
+			var url="load/duty.htm",name = "技能熟练度";
 			appendlayer(name);
+			$(".layer-content").load(url);
 			removelayer();
-		});
-		$(".article-action .del").click(function() {
-			var q=confirm("确认删除？")
-		  	if (q==true){$(this).closest('li').remove();};
 		});
 		function appendlayer(name){
 			$("body").append(""+
@@ -204,7 +202,6 @@
 				$(".backdrop,.layer").remove();
 			});
 		}
-
 	});
 	</script>
 </body>

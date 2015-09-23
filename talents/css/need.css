@@ -8,7 +8,7 @@ body{
 	font-family: 'Microsoft YaHei';
 	position: relative;
 }
-html,body,.container,.selected-tag,.step-one1,.step-two{
+body,.container,.selected-tag,.step-one1,.step-two{
 		height: 100%;
 
 }
@@ -178,6 +178,7 @@ ul li{
 	font-size: 16px;
 	font-weight: bold;
 	text-align: justify;
+	color: #2c2c2c;
 }
 .time{
 	color: #F57725;
@@ -189,6 +190,7 @@ ul li{
 	line-height: 20px;
 	text-align: justify;
 	margin-bottom: 5px;
+	color: #2F2F2F;
 }
 .job-description p{
 	width: 100%;
@@ -251,7 +253,7 @@ ul li{
 .waitSend span,.sended span,.send-msg span{
 	padding-left: 8px;
 	position: relative;
-	top: -5px;
+	top: -4px;
 }
 .gamp{
 	clear: both;
@@ -270,6 +272,9 @@ ul li{
 
 
 /*需求详情*/
+.info{
+	padding-top: 10px;
+}
 .job-title{
 	padding: 0 10px;
 }
@@ -327,7 +332,7 @@ ul li{
 	text-align: right;
 	font-size: 16px;
 	font-weight: bold;
-	color: #5E5E5E;
+	color: #525252;
 }
 .base-item-details{
 	float: left;
@@ -362,6 +367,7 @@ ul li{
 	text-align: justify;
 	padding-top: 8px;
 	padding-bottom: 8px;
+	color: #2B2B2B;
 }
 .film-description a{
 	display: block;
@@ -384,7 +390,14 @@ ul li{
 	padding: 10px;
 }
 .offer-require h4{
-	padding: 8px 0 5px 10px;
+	padding: 8px 0 5px 0px;
+}
+.offer-require p{
+	color: #2b2b2b;
+}
+.connet h4{
+	padding-top: 10px;
+	padding-left:10px;
 }
 .language h4,.skill h4,.other-require h4{
     padding: 8px 0 5px 10px;
@@ -404,12 +417,13 @@ ul li{
 	background-color: #fff;
 }
 footer{
+	clear: both;
 	width: 100%;
 	max-width: 640px;
 	margin:0 auto;
 }
 .action-details{
-	padding-top: 12px;
+	padding-top: 30px;
 	height: 50px;
 }
 .action-details img{
@@ -429,12 +443,12 @@ footer{
 	outline: none;
 }
 .send-resume-details{
-	line-height: 38px;
+	line-height: 42px;
 	width: 70%;
 	margin-right: 10%;
 	float: left;
 	padding: 0 10%;
-	height: 38px;
+	height: 43px;
 	background-color: #f27302;
 	color: #fff;
 	border: 1px solid #F27302;
@@ -459,7 +473,7 @@ footer{
 }
 .tabpanle span{
 	position: absolute;
-	width: 70px;
+	width: 35px;
 	border-top: 3px solid #F36302;
 	height: 1px;
 	display: none;
@@ -514,24 +528,24 @@ footer{
     line-height: 33px;
     text-decoration: none;
 }
-.received-title{
+.received-title,.recommend-title{
 	position: relative;
-	height: 35px;
+	height: 42px;
 	border-bottom: 1px solid #cfcfcf;
 	line-height: 34px;
-	padding: 0 10px;
+	padding: 5px 10px;
 }
-.received-title h4{
+.received-title h4,.recommend-title h4{
 	float: left;
 	font-size: 16px;
 }
-.received-title span{
+.received-title span,.recommend-title span{
 	float: right;
-	padding-right: 10px;
+	padding-right: 18px;
 }
-.received-title span img{
+.received-title span img,.recommend-title span img{
 	position: absolute;
-	top: 7px;
+	top: 13px;
 	right: 10px;
 	width: 10px;
 	height: 18px;
@@ -541,7 +555,7 @@ footer{
 	padding: 0 10px;
 }
 .talents{
-	/*padding-bottom: 6px;*/
+	/*padding-top: 10px;*/
 }
 .talents-list  li{
 	border-bottom: 1px solid #cfcfcf;
@@ -604,8 +618,8 @@ footer{
 	display: inline-block;
 }
 .talents-sex-age img{
-	width: 15px;
-	height: 15px;
+	width: 16px;
+	height: 16px;
 }
 .talents-sex-age,.talents-sex-age p{
 	float: left;

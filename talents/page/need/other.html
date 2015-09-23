@@ -8,11 +8,10 @@
     <link rel="stylesheet" href="../../css/need.css" />
     <link rel="stylesheet" href="../../css/iscroll-talents.css" />
     <script src="../../js/jquery-2.1.3.min.js"></script>
-        <script src="../../js/iscroll/iscroll-probe.js"></script>
-        <script src="../../js/need.js"></script>
-
+    <!-- <script src="../../js/iscroll/mobiscroll.zepto.js"></script> -->
+    <script src="../../js/iscroll/iscroll-probe.js"></script>
+    <!-- <script src="../../js/need.js"></script> -->
     <title>发布需求</title>
-
     <style type="text/css">
 </style>
 </head>
@@ -24,105 +23,75 @@
 				<div class="step-two-details" >
 					<div class="item clearfix">
 						<div class="item-title">
-							工作经验
+							性别
 						</div>
 						<div class="item-details">
-							<input type="text" placeholder="1年" class="duty-experance">
+							<input type="text" placeholder="男" readonly="readonly" class="sex">
 							<span></span>
 							<img src="../../img/for-more.png" alt="点击选择" />
 						</div>
 					</div>
 					<div class="item clearfix">
 						<div class="item-title">
-							招聘人数
+							年龄
 						</div>
 						<div class="item-details">
-							<input type="text" placeholder="1人">
+							<input type="text" placeholder="请输入年龄要求">
 							<span></span>
 							<img src="../../img/for-more.png" alt="点击选择" />
 						</div>
 					</div>
 					<div class="item clearfix">
 						<div class="item-title">
-							职位类型
+							身高
 						</div>
 						<div class="item-details">
-							<input type="text" placeholder="选择框" class="duty-htm">
+							<input type="text" placeholder="请输入身高要求" class="duty-htm">
 							<span></span>
 							<img src="../../img/for-more.png" alt="点击选择" />
 						</div>
 					</div>
 					<div class="item clearfix">
 						<div class="item-title">
-							学历要求
+							体重
 						</div>
 						<div class="item-details">
-							<input type="text" placeholder="请选择" class="education-background">
+							<input type="text" placeholder="请输入体重要求" class="education-background">
 							<span></span>
 							<img src="../../img/for-more.png" alt="点击选择" />
 						</div>
 					</div>
 					<div class="item clearfix">
 						<div class="item-title">
-							专业要求
+							国籍
 						</div>
 						<div class="item-details">
-							<input type="text" placeholder="请输入专业要求">
+							<input type="text" placeholder="请选择" class="nationality">
 							<span></span>
 							<img src="../../img/for-more.png" alt="点击选择" />
 						</div>
 					</div>
 					<div class="item clearfix">
 						<div class="item-title">
-							语言方言
+							籍贯
 						</div>
 						<div class="item-details">
-							<a href="set-language.htm"><input type="text" placeholder="请选择" class="language"></a>
+							<input type="text" placeholder="请选择" class="native-place">
 							<span></span>
 							<img src="../../img/for-more.png" alt="点击选择" />
 						</div>
 					</div>
 					<div class="item clearfix">
 						<div class="item-title">
-							薪资待遇
+							民族
 						</div>
 						<div class="item-details">
-							<input type="text" placeholder="选择薪资范围" class="money-duty" >
+							<input type="text" placeholder="请输入民族要求" class="money-duty" >
 							<span></span>
 							<img src="../../img/for-more.png" alt="点击选择" />
-						</div>
-					</div>
-					<div class="item clearfix">
-						<div class="item-title">
-							技能要求
-						</div>
-						<div class="item-details">
-							<a href="skill.html"><input type="text" placeholder="请选择" class="skill"></a>
-							<span></span>
-							<img src="../../img/for-more.png" alt="点击选择" />
-						</div>
-					</div>
-					<div class="item clearfix">
-						<div class="item-title">
-							其他(选填)
-						</div>
-						<div class="item-details">
-							<a href="other.html"><input type="text" placeholder=""></a>
-							<span></span>
-							<img src="../../img/for-more.png" alt="点击选择" />
-						</div>
-					</div>
-					<div class="film-description clearfix">
-						<div class="film-title">
-							招聘要求
-						</div>
-						<div class="film-details">
-							<textarea name="film" id="null" cols="30" placeholder="请输入剧情简介"></textarea>
-							<span></span>
 						</div>
 					</div>
 			</div>
-			<div class="publish"><a href="javascript:;">发布</a></div>
 		</div>
 	</div>
 	<script>
@@ -132,8 +101,53 @@
 			var thisInputP = $(inputArray[i]).closest(".item-details");
 			thisInputP.width($(".container").width()-thisInputP.prev(".item-title").width()-50);
 		};
-	}
-	resiezInput();
+	}resiezInput();
+	// 籍贯选择
+		$(".native-place").click(function(){
+			var url="load/duty.htm",name="籍贯选择";
+			appendlayer(name);
+			$(".layer-content").load(url);
+			removelayer();
+		});
+	// 国籍选择
+		$(".nationality").click(function(){
+			var url="load/nationality.htm",name="国籍选择";
+			appendlayer(name);
+			$(".layer-content").load(url);
+			removelayer();
+		});
+
+	// 性别选择
+		$(".sex").click(function(){
+			var url="load/sex-select.htm",name="性别选择";
+			appendlayer(name);
+			$(".layer-content").load(url);
+			removelayer();
+		});
+
+		function appendlayer(name){
+			$("body").append(""+
+				"<div class='backdrop'></div>"+
+				"<div class='layer'>"+
+					"<div class='layer-title clearfix'>"+
+						"<div class='select-cancel clearfix'>"+
+							"<div class='cancel'><a type='button' href='javascript:;'>取消</a></div>"+
+							"<div class='action-title'>"+name+"</div>"+
+							"<div class='selecting'><a type='button' href='javascript:;'>确定</a></div>"+
+						"</div>"+
+					"</div>"+
+					"<div class='layer-content'></div>"+
+					"<div class='layer-footer'></div>"+
+				"</div>")
+		}
+		function removelayer(){
+			$('.backdrop').click(function() {
+				$(".backdrop,.layer").remove();
+			});
+			$(document).delegate('.cancel a', 'click', function() {
+				$(".backdrop,.layer").remove();
+			});
+		}
 	</script>
 	
 	<footer></footer>
