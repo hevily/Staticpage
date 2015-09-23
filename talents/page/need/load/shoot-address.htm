@@ -8,16 +8,31 @@
 		margin: 2%;
 		text-align: center;
 	}
-	.province{width: 30%;height: 300px;overflow: hidden;float: left;}
-	.city{width: 70%;height: 300px;overflow: hidden;}
+	.submit{
+		border: none;
+		float: left;
+		width: 29%;
+		margin: 2%;
+		text-align: center;
+		background-color: #f27302;
+	}
+	.show-address{
+		/*height: 100px;*/
+	}
+	.province{width: 33%;height: 100%;overflow: hidden;float: left;}
+	.city{width: 33%;height: 100%;overflow: hidden;float: left;}
+	.county{widows: 33%;height: 100%;overflow: hidden;}
 	.province{
 		background-color: #e6e6e6;
-		border-right: 1px solid red;
+		/*border-right: 1px solid red;*/
 		}
 	.city{
 		background-color: #fff;
 	}
-	.province ul,.city ul{
+	.county{
+		background-color: #e6e6e6;
+	}
+	.province ul,.city ul,.county ul{
 		height: 100%;
 		overflow: scroll;
 	}
@@ -26,12 +41,30 @@
 		text-align: center;
 		height: 2rem;
 		line-height: 2rem;
+		white-space:nowrap; 
+		text-overflow:ellipsis; 
+		-o-text-overflow:ellipsis; 
+		overflow: hidden;
 	}
 	.city ul li{
 		border-bottom: 1px solid #cfcfcf;
 		text-align: center;
 		height: 2rem;
 		list-style: 2rem;
+		white-space:nowrap; 
+		text-overflow:ellipsis; 
+		-o-text-overflow:ellipsis; 
+		overflow: hidden;
+	}
+	.county ul li{
+		border-bottom: 1px solid #cfcfcf;
+		text-align: center;
+		height: 2rem;
+		line-height: 2rem;
+		white-space:nowrap; 
+		text-overflow:ellipsis; 
+		-o-text-overflow:ellipsis; 
+		overflow: hidden;
 	}
 	li.active-province{
 		background-color: #fff;
@@ -39,11 +72,13 @@
 	li.active-city{
 		background-color: #eee;
 	}
-	.province ul li a{
+	li.active-county{
+		background-color: #fff;
+	}
+	.province ul li a,.city ul li a ,.county ul li a{
 		color: #000;
 		text-decoration: none;
 		font-size: 16px;
-
 	}
 	
 </style>
@@ -57,9 +92,23 @@
 			$(".active-city").removeClass('active-city');
 			$(this).addClass('active-city');
 		});
+		$(".county li").click(function() {
+			$(".active-county").removeClass('active-county');
+			$(this).addClass('active-county');
+		});
+
+		function resizeListHeight(){
+					var bodyHeight = $(window).outerHeight(), //浏览器当前窗口可视区域高度;
+						show_selectedHeight = $("#show_selected").height();
+					// alert(bodyHeight);
+					var goal = document.getElementById("address_area");
+					// alert(goal);
+					goal.style.height = bodyHeight-show_selectedHeight+"px";
+				}resizeListHeight();
+
 		})
 </script>
-<div class="show-address clearfix">
+<div class="show-address clearfix" id="show_selected">
 	<p>编辑已选择<span>5</span>/5</p>
 	<div class="address-tag">
 		<div class="tags">
@@ -77,88 +126,134 @@
 		<div class="tags">
 			上海<span>X</span>
 		</div>
+		<div class="submit">
+			确认
+		</div>
 	</div>
 </div>
-<div class="select-address clearfix">
+<div class="select-address clearfix" id="address_area">
 	<div class="province">
 		<ul>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
-			<li><a href="javascript:;">省份</a></li>
+			<li><a href="javascript:;">中华人民共和国钳制美利坚合众国</a></li>
+			<li><a href="javascript:;">省</a></li>
+			<li><a href="javascript:;">省</a></li>
+			<li><a href="javascript:;">省</a></li>
+			<li><a href="javascript:;">省</a></li>
+			<li><a href="javascript:;">省</a></li>
+			<li><a href="javascript:;">省</a></li>
+			<li><a href="javascript:;">省</a></li>
+			<li><a href="javascript:;">省</a></li>
+			<li><a href="javascript:;">省</a></li>
+			<li><a href="javascript:;">省</a></li>
+			<li><a href="javascript:;">省</a></li>
+			<li><a href="javascript:;">省</a></li>
+			<li><a href="javascript:;">省</a></li>
+			<li><a href="javascript:;">省</a></li>
+			<li><a href="javascript:;">省</a></li>
+			<li><a href="javascript:;">省</a></li>
+			<li><a href="javascript:;">省</a></li>
+			<li><a href="javascript:;">省</a></li>
+			<li><a href="javascript:;">省</a></li>
+			<li><a href="javascript:;">省</a></li>
+			<li><a href="javascript:;">省</a></li>
+			<li><a href="javascript:;">省</a></li>
+			<li><a href="javascript:;">省</a></li>
+			<li><a href="javascript:;">省</a></li>
+			<li><a href="javascript:;">省</a></li>
+			<li><a href="javascript:;">省</a></li>
+			<li><a href="javascript:;">省</a></li>
+			<li><a href="javascript:;">省</a></li>
+			<li><a href="javascript:;">省</a></li>
+			<li><a href="javascript:;">省</a></li>
+			<li><a href="javascript:;">省</a></li>
+			<li><a href="javascript:;">省</a></li>
+			<li><a href="javascript:;">2</a></li>
+			<li><a href="javascript:;">1</a></li>
 		</ul>
 	</div>
 	<div class="city">
 		<ul>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
-			<li><a href="javascript:;">城市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">市</a></li>
+			<li><a href="javascript:;">2</a></li>
+			<li><a href="javascript:;">1</a></li>
+		</ul>
+	</div>
+	<div class="county">
+		<ul>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">县</a></li>
+			<li><a href="javascript:;">2</a></li>
+			<li><a href="javascript:;">1</a></li>
+			
 		</ul>
 	</div>
 </div>
