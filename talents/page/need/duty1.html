@@ -1,4 +1,4 @@
-
+<!-- 
 	<div class="layer">
 	<div class="layer-title">
 		<div class="select-cancel">
@@ -18,3 +18,22 @@
 	</div>
 	<div class="layer-footer"></div>
 </div>
+ -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>test javascript change background</title>
+ 	<script>
+ 		var obj = document.getElementById('buttom');
+		var changeBackground = document.getElementById("body");
+		obj.onmouseover(function() {
+			changeBackground.style.background="#ff02";
+		}, function() {
+			changeBackground.style.background="#fff";
+		});
+ 	</script>
+ </head>
+ <body id="background">
+ <button id="buttom">按钮</button>
+ </body>
+ </html>

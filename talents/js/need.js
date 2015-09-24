@@ -46,37 +46,14 @@ $(document).ready(function(){
 	})
 
 
-	function myScroll(){
-			var myScroll=new IScroll("wrapper",{
-		 		snap:"li"
-		 	});
-		 	var ind = null;
-		 	myScroll.on('scrollEnd', function(){
-		 		var position,index=0;
-		 		// console.log(this.y);
-		 		position = this.y;
-		 		index = position/40;
-		 		console.log(-index);
-		 		return ind = -index;
-		 	});
-		 	$(".select-cancel").delegate(".selecting","click",function(e){
-		 		var liIndex=0;
-		 		liIndex = (parseInt(ind+1));
-		 		console.log("当前滚动至："+liIndex);
-		 		alert($("#scroller li").eq(liIndex).text());
-		 		obj.text($("#scroller li").eq(liIndex).text());
-		 	})
-		}
-
 	// 弹出浮层选择
 		// 工作经验
-		var selectIng;
 		$(".duty-experance").click(function(){
 			var url="load/duty.htm",name="工作经验";
 			appendlayer(name);
 			$(".layer-content").load(url);
 			removelayer();
-			selectIng = $(".duty-experance");
+			// selectIng = $(".duty-experance");
 		});
 		// 拍摄地址
 		$(".shoot-address").click(function(){
@@ -101,6 +78,7 @@ $(document).ready(function(){
 			appendlayer(name);
 			$(".layer-content").load(url);
 			removelayer();
+			myScroll();
 		});
 		// 薪资待遇
 		$(".money-duty").click(function(){
@@ -108,9 +86,11 @@ $(document).ready(function(){
 			appendlayer(name);
 			$(".layer-content").load(url);
 			removelayer();
-			setTimeout("console.log('2000')",100);
-			setTimeout("myScroll()",500);
+
 		});
+		function abc(){
+			console.log("abc");
+		}
 
 
 		
@@ -127,7 +107,7 @@ $(document).ready(function(){
 					"</div>"+
 					"<div class='layer-content'></div>"+
 					"<div class='layer-footer'></div>"+
-				"</div>")
+				"</div>");
 		}
 		function removelayer(){
 			$('.backdrop').click(function() {
@@ -139,25 +119,4 @@ $(document).ready(function(){
 		}
 
 		
-		function myScroll(obj){
-			var myScroll=new IScroll("wrapper",{
-		 		snap:"li"
-		 	});
-		 	var ind = null;
-		 	myScroll.on('scrollEnd', function(){
-		 		var position,index=0;
-		 		// console.log(this.y);
-		 		position = this.y;
-		 		index = position/40;
-		 		console.log(-index);
-		 		return ind = -index;
-		 	});
-		 	$(".select-cancel").delegate(".selecting","click",function(e){
-		 		var liIndex=0;
-		 		liIndex = (parseInt(ind+1));
-		 		console.log("当前滚动至："+liIndex);
-		 		alert($("#scroller li").eq(liIndex).text());
-		 		obj.text($("#scroller li").eq(liIndex).text());
-		 	})
-		}
 });

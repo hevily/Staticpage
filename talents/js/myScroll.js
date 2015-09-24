@@ -1,5 +1,5 @@
 				$(document).ready(function(){
-					function myScroll(obj){
+					function myScroll(){
 						var myScroll=new IScroll("#wrapper",{
 					 		snap:"li"
 					 	});
@@ -17,9 +17,9 @@
 					 		liIndex = (parseInt(ind+1));
 					 		console.log("当前滚动至："+liIndex);
 					 		alert($("#scroller li").eq(liIndex).text());
-					 		obj.text($("#scroller li").eq(liIndex).text());
-					 	})
-					}
+					 	});
+					}myScroll();
 				
 				})
 // <script src="../../js/myScroll.js"></script>
+
