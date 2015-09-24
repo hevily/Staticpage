@@ -8,6 +8,10 @@
 		margin: 2%;
 		text-align: center;
 	}
+	.tags span{
+		float: right;
+		padding-right: 5px;
+	}
 	.submit{
 		border: none;
 		float: left;
@@ -17,7 +21,10 @@
 		background-color: #f27302;
 	}
 	.show-address{
-		/*height: 100px;*/
+		padding-top: 10px;
+	}
+	.show-address p{
+		padding-left: 10px;
 	}
 	.province{width: 33%;height: 100%;overflow: hidden;float: left;}
 	.city{width: 33%;height: 100%;overflow: hidden;float: left;}
@@ -50,7 +57,7 @@
 		border-bottom: 1px solid #cfcfcf;
 		text-align: center;
 		height: 2rem;
-		list-style: 2rem;
+		line-height: 2rem;
 		white-space:nowrap; 
 		text-overflow:ellipsis; 
 		-o-text-overflow:ellipsis; 
@@ -80,55 +87,70 @@
 		text-decoration: none;
 		font-size: 16px;
 	}
-	
+	.bgdark{
+			background-color: #DDDEE3;
+			height: 15px;
+		}
 </style>
 <script>
 	$(document).ready(function(){
-		$(".province li").click(function() {
-			$(".active-province").removeClass('active-province');
-			$(this).addClass('active-province');
-		});
-		$(".city li").click(function() {
-			$(".active-city").removeClass('active-city');
-			$(this).addClass('active-city');
-		});
-		$(".county li").click(function() {
-			$(".active-county").removeClass('active-county');
-			$(this).addClass('active-county');
-		});
+		$(".submit").click(function() {
+			alert("正在保存");
+			$(".backdrop,.layer-address").remove();
 
+		});
+		addRemove("province li","active-province");
+		addRemove("city li","active-city");
+		addRemove("county li","active-county");
+		function addRemove(dom,ClassName){
+			var _this = $("."+dom+"");
+			$("."+dom+"").click(function() {
+				$("."+ClassName+"").removeClass(""+ClassName+"");
+				$(this).addClass(""+ClassName+"");
+			});
+		}
 		function resizeListHeight(){
-					var bodyHeight = $(window).outerHeight(), //浏览器当前窗口可视区域高度;
-						show_selectedHeight = $("#show_selected").height();
-					// alert(bodyHeight);
-					var goal = document.getElementById("address_area");
-					// alert(goal);
-					goal.style.height = bodyHeight-show_selectedHeight+"px";
-				}resizeListHeight();
-
-		})
+			var bodyHeight = $(window).outerHeight(), //浏览器当前窗口可视区域高度;
+				show_selectedHeight = $("#show_selected").height();
+			var goal = document.getElementById("address_area");
+			goal.style.height = bodyHeight-show_selectedHeight-26+"px";
+		}resizeListHeight();
+		$(".tags").click(function() {
+			console.log("1");
+			$(this).addClass('removeText');
+			var _confirm = confirm("确认移除？");
+			if (_confirm) {
+				$(this).remove();
+			};
+			// 更改地点条目数量
+			var num = $(".tags").length;
+			$(".num").text(num);
+		});
+	})
 </script>
+<div class="bgdark"></div>
 <div class="show-address clearfix" id="show_selected">
-	<p>编辑已选择<span>5</span>/5</p>
-	<div class="address-tag">
-		<div class="tags">
-			上海<span>X</span>
-		</div>
-		<div class="tags">
-			上海<span>X</span>
-		</div>
-		<div class="tags">
-			上海<span>X</span>
-		</div>
-		<div class="tags">
-			上海<span>X</span>
-		</div>
-		<div class="tags">
-			上海<span>X</span>
-		</div>
-		<div class="submit">
+	<p>点击可移除<span class="num">5</span>/5</p>
+	<div class="submit">
 			确认
 		</div>
+	<div class="address-tag">
+		<div class="tags">
+			上海
+		</div>
+		<div class="tags">
+			广州
+		</div>
+		<div class="tags">
+			深圳
+		</div>
+		<div class="tags">
+			重庆
+		</div>
+		<div class="tags">
+			福建
+		</div>
+		
 	</div>
 </div>
 <div class="select-address clearfix" id="address_area">
