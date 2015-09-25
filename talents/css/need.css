@@ -2,6 +2,7 @@
 	box-sizing:border-box;
 	margin: 0;
 	padding: 0;
+	font-family: 'Microsoft YaHei','Hiragino Sans GB',Helvetica,Arial,'Lucida Grande',sans-serif;
 }
 body{
 	/*margin: 10px;*/
@@ -32,7 +33,7 @@ ul li{
 	list-style: none;
 }
 .tagSelect{
-	padding: 0 10px
+	padding:10px
 }
 .tagSelect ul li{
 	list-style-type: none;
@@ -133,7 +134,7 @@ ul li{
 	padding-bottom: 10px;
 }
 .film-details textarea{
-	border: 1px solid #cfcfcf;
+	border: none;
 	width: 100%;
 	max-width: 610px;
 	min-height: 80px;
@@ -182,7 +183,7 @@ ul li{
 	color: #2c2c2c;
 }
 .time{
-	color: #F57725;
+	color: #686868;
 	margin: 5px 0;
 }
 .job-description{
@@ -256,6 +257,9 @@ ul li{
 	position: relative;
 	top: -4px;
 }
+.waitSend span{
+	color: #f26202;
+}
 .gamp{
 	clear: both;
 	height: 15px;
@@ -286,6 +290,7 @@ ul li{
 /*需求详情*/
 .info{
 	padding-top: 10px;
+	padding-bottom: 50px;
 }
 .job-title{
 	padding: 0 10px;
@@ -369,7 +374,7 @@ ul li{
 	border-bottom:2px solid #cfcfcf;
 }
 .film-description{
-	padding: 10px 5px;
+	padding:  5px 10px;
 }
 .film-title{
 	font-weight: bold;
@@ -429,13 +434,16 @@ ul li{
 	/*background-color: #fff;*/
 }
 footer{
+	position: fixed;
+	bottom: 0;
 	clear: both;
 	width: 100%;
 	max-width: 640px;
 	margin:0 auto;
+	background-color: #fff;
 }
 .action-details{
-	padding-top: 30px;
+	padding: 10px 0;
 	height: 50px;
 }
 .action-details img{
@@ -497,6 +505,9 @@ footer{
 .active{
 	color: #F36302;
 }
+.needed{
+	padding-bottom: 50px;
+}
 .active span{
 	display: block;
 }
@@ -505,6 +516,12 @@ footer{
 	width: 50%;
 	float: left;
 	text-align: center;
+}
+.edit-needs{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: #fff;
 }
 .edit-needs .edit a{
 	width: 50%;
@@ -547,6 +564,10 @@ footer{
 	line-height: 34px;
 	padding: 5px 10px;
 }
+.received-title a,.recommend-title a{
+	text-decoration: none;
+	color: #000;
+}
 .received-title h4,.recommend-title h4{
 	float: left;
 	font-size: 16px;
@@ -585,12 +606,13 @@ footer{
 }
 .talents-pic{
 	float: left;
-	width: 45px;
-	height: 45px;
+	width: 50px;
+	height: 50px;
 	overflow: hidden;
 	position: relative;
 	border-radius: 50%;
 	box-shadow: 0px 2px 4px 1px #cfcfcf;
+	border: 2px solid #fff;
 }
 .talents-pic img{
 	/*width: 100%;*/
@@ -606,13 +628,15 @@ footer{
 	padding-left: 10px;
 }
 .talents-name{
+	color: #F56202;
 	float: left;
 	height: 28px;
-	line-height: 34px;
+	line-height: 24px;
+	padding-right: 6px;
 }
 .talents-sex-age{
 	border-radius: 5px;
-	padding: 3px;
+	padding: 2px 4px;
 }
 .boy{
 	background-color: #7CBDFF;
@@ -629,16 +653,30 @@ footer{
 .girl .girl-img{
 	display: inline-block;
 }
+.talents-sex-age{
+	position: relative;
+	font-size: 12px;
+}
 .talents-sex-age img{
-	width: 16px;
-	height: 16px;
+	position: relative;
+	top: 1px;
+}
+.talents-sex-age .boy-img{
+	width: 12px;
+	height: 12px;
+}
+.talents-sex-age .girl-img{
+	width: 10px;
+	height: 12px;
 }
 .talents-sex-age,.talents-sex-age p{
 	float: left;
 	color: #fff;
+	top: 4px;
 }
 .location{
 	float: left;
+	color: #373737;
 }
 .talents-address-find{
 	clear: both;

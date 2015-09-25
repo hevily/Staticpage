@@ -41,9 +41,6 @@ $(document).ready(function(){
 		$(".talents").show();
 		resizeTalentsinfo();
 	});
-	$(".talents a").click(function(){
-		alert("1");
-	})
 
 
 	// 弹出浮层选择
@@ -68,14 +65,14 @@ $(document).ready(function(){
 		// 职位类型
 		$(".duty-htm").click(function(){
 			var url="load/duty.htm",name="职位类别";
-			appendlayer(name);
+			appendlayer(name,'duty-htm');
 			$(".layer-content").load(url);
 			removelayer();
 		});
 		// 学历要求
 		$(".education-background").click(function(){
 			var url="load/education-background.htm",name="学历要求";
-			appendlayer(name);
+			appendlayer(name,'education-background');
 			$(".layer-content").load(url);
 			removelayer();
 			myScroll();
@@ -83,7 +80,7 @@ $(document).ready(function(){
 		// 薪资待遇
 		$(".money-duty").click(function(){
 			var url="load/money-duty.htm",name="薪资待遇";
-			appendlayer(name);
+			appendlayer(name,'money-duty');
 			$(".layer-content").load(url);
 			removelayer();
 
@@ -94,7 +91,7 @@ $(document).ready(function(){
 
 
 		
-		function appendlayer(name){
+		function appendlayer(name,Classvalue){
 			$("body").append(""+
 				"<div class='backdrop'></div>"+
 				"<div class='layer'>"+
@@ -102,7 +99,7 @@ $(document).ready(function(){
 						"<div class='select-cancel clearfix'>"+
 							"<div class='cancel'><a type='button' href='javascript:;'>取消</a></div>"+
 							"<div class='action-title'>"+name+"</div>"+
-							"<div class='selecting'><a type='button' href='javascript:;'>确定</a></div>"+
+							"<div class='selecting' Classvalue='"+Classvalue+"'><a type='button' href='javascript:;'>确定</a></div>"+
 						"</div>"+
 					"</div>"+
 					"<div class='layer-content'></div>"+

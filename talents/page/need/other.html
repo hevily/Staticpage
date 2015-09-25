@@ -26,7 +26,7 @@
 							性别
 						</div>
 						<div class="item-details">
-							<input type="text" placeholder="男" readonly="readonly" class="sex">
+							<input type="text" placeholder="男" readonly="readonly" class="sex" readonly="readonly">
 							<span></span>
 							<img src="../../img/for-more.png" alt="点击选择" />
 						</div>
@@ -66,7 +66,7 @@
 							国籍
 						</div>
 						<div class="item-details">
-							<input type="text" placeholder="请选择" class="nationality">
+							<input type="text" placeholder="请选择" class="nationality" readonly="readonly">
 							<span></span>
 							<img src="../../img/for-more.png" alt="点击选择" />
 						</div>
@@ -76,7 +76,7 @@
 							籍贯
 						</div>
 						<div class="item-details">
-							<input type="text" placeholder="请选择" class="native-place">
+							<input type="text" placeholder="请选择" class="native-place" readonly="readonly">
 							<span></span>
 							<img src="../../img/for-more.png" alt="点击选择" />
 						</div>
@@ -105,14 +105,14 @@
 	// 籍贯选择
 		$(".native-place").click(function(){
 			var url="load/duty.htm",name="籍贯选择";
-			appendlayer(name);
+			appendlayer(name,"native-place");
 			$(".layer-content").load(url);
 			removelayer();
 		});
 	// 国籍选择
 		$(".nationality").click(function(){
 			var url="load/nationality.htm",name="国籍选择";
-			appendlayer(name);
+			appendlayer(name,"nationality");
 			$(".layer-content").load(url);
 			removelayer();
 		});
@@ -120,12 +120,12 @@
 	// 性别选择
 		$(".sex").click(function(){
 			var url="load/sex-select.htm",name="性别选择";
-			appendlayer(name);
+			appendlayer(name,"sex");
 			$(".layer-content").load(url);
 			removelayer();
 		});
 
-		function appendlayer(name){
+		function appendlayer(name,Classvalue){
 			$("body").append(""+
 				"<div class='backdrop'></div>"+
 				"<div class='layer'>"+
@@ -133,12 +133,12 @@
 						"<div class='select-cancel clearfix'>"+
 							"<div class='cancel'><a type='button' href='javascript:;'>取消</a></div>"+
 							"<div class='action-title'>"+name+"</div>"+
-							"<div class='selecting'><a type='button' href='javascript:;'>确定</a></div>"+
+							"<div class='selecting' Classvalue='"+Classvalue+"'><a type='button' href='javascript:;'>确定</a></div>"+
 						"</div>"+
 					"</div>"+
 					"<div class='layer-content'></div>"+
 					"<div class='layer-footer'></div>"+
-				"</div>")
+				"</div>");
 		}
 		function removelayer(){
 			$('.backdrop').click(function() {

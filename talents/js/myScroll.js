@@ -16,7 +16,10 @@
 					 		var liIndex=0;
 					 		liIndex = (parseInt(ind+1));
 					 		console.log("当前滚动至："+liIndex);
-					 		alert($("#scroller li").eq(liIndex).text());
+					 		//alert($("#scroller li").eq(liIndex).text());
+					 		var Classvalue = $(this).attr("Classvalue");
+					 		$("."+Classvalue).val($("#scroller li").eq(liIndex).text());
+					 		$(".backdrop,.layer").remove();
 					 	});
 					}myScroll();
 				
