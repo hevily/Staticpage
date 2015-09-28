@@ -119,7 +119,7 @@ ul li{
 	text-align: right;
 	position: absolute;
 	top: 0;
-	right: 16px;
+	right: 25px;
 
 }
 .item-details img{
@@ -431,7 +431,7 @@ ul li{
 .step-two-details{
 	/*border-radius: 5px;*/
 	/*box-shadow: 0px 2px 6px 0px #5d5050;*/
-	/*background-color: #fff;*/
+	background-color: #fff;
 }
 footer{
 	position: fixed;
