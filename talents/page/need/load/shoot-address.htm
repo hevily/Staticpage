@@ -250,7 +250,9 @@
 			-webkit-transform:rotate(180deg); /* Safari 和 Chrome */
 			-o-transform:rotate(180deg); 	/* Opera */
 		}
-
+		.selected{
+			display: none;
+		}
 </style>
 <script>
 	$(document).ready(function(){
@@ -321,28 +323,28 @@
 				"<ul>"+
 					"<li class='clearfix'>"+
 					"<a href='javascript:;' class='clearfix'>"+
-						"<img src='../../img/select-cycle.png' alt='待选择'>"+
+						"<img class='Wselect'src='../../img/select-cycle.png' alt='待选择'>"+
 						"<img class='selected' src='../../img/selected.png' alt='已选择'><p>重庆市</p>"+
 						"<img src='../../img/for-more.png' alt='下一级'>"+
 						"</a>"+
 					"</li>"+
 					"<li class='clearfix'>"+
 					"<a href='javascript:;' class='clearfix'>"+
-						"<img src='../../img/select-cycle.png' alt='待选择'>"+
+						"<img class='Wselect' src='../../img/select-cycle.png' alt='待选择'>"+
 						"<img class='selected' src='../../img/selected.png' alt='已选择'><p>重庆市</p>"+
 						"<img src='../../img/for-more.png' alt='下一级'>"+
 						"</a>"+
 					"</li>"+
 					"<li class='clearfix'>"+
 					"<a href='javascript:;' class='clearfix'>"+
-						"<img src='../../img/select-cycle.png' alt='待选择'>"+
+						"<img class='Wselect' src='../../img/select-cycle.png' alt='待选择'>"+
 						"<img class='selected' src='../../img/selected.png' alt='已选择'><p>重庆市</p>"+
 						"<img src='../../img/for-more.png' alt='下一级'>"+
 						"</a>"+
 					"</li>"+
 					"<li class='clearfix'>"+
 					"<a href='javascript:;' class='clearfix'>"+
-						"<img src='../../img/select-cycle.png' alt='待选择'>"+
+						"<img class='Wselect' src='../../img/select-cycle.png' alt='待选择'>"+
 						"<img class='selected' src='../../img/selected.png' alt='已选择'><p>重庆市</p>"+
 						"<img src='../../img/for-more.png' alt='下一级'>"+
 						"</a>"+
@@ -396,7 +398,7 @@
 	<div class="address auto-position">
 		<div class="p"><p>当前城市</p></div>
 		<div class="address-list auto-list clearfix">
-			<img class="select" src="../../img/select-cycle.png" alt="待选择">
+			<img class="Wselect" src="../../img/select-cycle.png" alt="待选择">
 			<img class="selected" src="../../img/selected.png" alt="已选择">
 			<p>北京市-朝阳区</p>
 			<a href="javascript:;"><img src="../../img/auto-position.png" alt="自动定位">重新定位</a>

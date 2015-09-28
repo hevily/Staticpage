@@ -22,7 +22,6 @@
 					 		$(".backdrop,.layer").remove();
 					 	});
 					}myScroll();
-				
 				})
 // <script src="../../js/myScroll.js"></script>
 
