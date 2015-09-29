@@ -2,6 +2,7 @@
 			margin: 0;
 			padding: 0;
 			box-sizing:border-box;
+			font-family: 'Microsoft YaHei','Hiragino Sans GB',Helvetica,Arial,'Lucida Grande',sans-serif;
 		}
 		html,body{
 			height: 100%;
@@ -38,6 +39,7 @@
 			border-bottom: 1px solid #cfcfcf;
 			border-top-left-radius: 5px;
 			border-top-right-radius: 5px;
+			color: #727785;
 		}
 		.skill{
 
@@ -55,7 +57,7 @@
 			line-height: 45px;
 			padding-left: 8px;
 			font-size: 16px;
-			color: #f27302;
+			color: #FFA567;
 			font-weight: bold;
 		}
 		.added ul li{
@@ -81,6 +83,7 @@
 		    overflow:hidden;
 			text-overflow:ellipsis;
 			white-space: nowrap;
+			color: #4E5663;
 		}
 		.article-msg{
 			float: left;
@@ -102,7 +105,7 @@
 		}
 		.article-action .del{
 			margin-left: 6px;
-			border: 1px solid #000;
+			border: 1px solid #525868;
 			border-radius: 15px;
 			position: relative;
 		}
@@ -113,6 +116,7 @@
 			padding: 2px;
 			padding-top: 4px;
 			font-size: 14px;
+			color: #525868;
 		}
 		.article-action .edit img,.article-action .del img{
 			height: 12px;
@@ -206,4 +210,28 @@
 			border-radius: 5px;
 			text-decoration: none;
 			border-bottom: 2px solid #F98C53;
+		}
+		.edit-skill,.newlanguage{
+			position: fixed;
+			height: 100%;
+			width: 100%;
+			top: 0;
+		}
+		.action-language,.action-skill{
+			width: 150px;
+			margin: 0 auto;
+		}
+		.submit-language,.cancel-language
+		,.submit-skill,.cancel-skill{
+			display: inline-block;
+			width: 60px;
+			background-color: #f27302;
+			border: 1px solid #f27302;
+			border-bottom: 2px solid red;
+			color: #fff;
+			height: 35px;
+			line-height: 32px;
+			margin:5px;
+			border-radius: 5px;
+			text-align: center;
 		}

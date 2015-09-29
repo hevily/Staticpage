@@ -17,7 +17,7 @@
 			<div class="title">语言/方言</div>
 			<div class="skill">
 				<div class="add-new clearfix">
-					<a href="newlanguage.htm"><img src="../../img/add-new.png" alt="添加"></a>
+					<a href="javascript:;"><img src="../../img/add-new.png" alt="添加"></a>
 					<p>新增语言</p>
 				</div>
 				<div class="added clearfix">
@@ -87,7 +87,10 @@
 				$(".backdrop,.layer").remove();
 			});
 		}
-
+		$(".add-new").click(function() {
+				$("body").append("<div class='newlanguage'></div>");
+			$(".newlanguage").load("newlanguage.htm");
+		});
 	});
 	</script>
 </body>

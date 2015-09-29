@@ -1,4 +1,13 @@
-<style>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../../../css/need.css">
+	<script src="../../../js/jquery-2.1.3.min.js"></script>
+	<title>选择拍摄地</title>
+	<style>
 	.layer-address{position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: #fff;overflow: scroll;}
 	.tags{
 		position: relative;
@@ -6,7 +15,7 @@
 		float: left;
 		background: #FCC396;
 		/*width: 29%;*/
-		margin: 2%;
+		margin: 0 2% 2%  2% ;
 		text-align: center;
 		padding: 0 15px;
 		height: 32px;
@@ -55,6 +64,7 @@
 	.show-address p{
 		padding-left: 10px;
 		padding-right: 10px;
+		margin-bottom: 6px;
 	}
 	.show-address p .number{
 		float: right;
@@ -234,7 +244,7 @@
 			height: auto;
 		}
 		.layer-address-select{
-			position: absolute;
+			position: fixed;
 		    top: 0;
 		    background-color: #fff;
 		    height: 100%;
@@ -253,7 +263,22 @@
 		.selected{
 			display: none;
 		}
+		.submit-address-li{
+			width: 30%;
+			background-color: #F36303;
+			margin: 0 auto;
+			border: 1px solid #F36303;
+			border-radius: 5px;
+			border-bottom:2px solid #F98C53;
+			color: #fff;
+			text-align: center;
+			height: 35px;
+			line-height: 33px;
+		}
 </style>
+</head>
+<body>
+
 <script>
 	$(document).ready(function(){
 		$(".submit").click(function() {
@@ -305,6 +330,8 @@
 		});
 		$(document).delegate(".layer-content .alphabet li","click",function(){
 			console.log("保存至已选择区域");
+			alert("1");
+			$(".layer-address-select").remove();
 		})
 		function appendlayer(name,Classvalue){
 			$("body").append(""+
@@ -323,44 +350,49 @@
 				"<ul>"+
 					"<li class='clearfix'>"+
 					"<a href='javascript:;' class='clearfix'>"+
-						"<img class='Wselect'src='../../img/select-cycle.png' alt='待选择'>"+
-						"<img class='selected' src='../../img/selected.png' alt='已选择'><p>重庆市</p>"+
-						"<img src='../../img/for-more.png' alt='下一级'>"+
+						"<img class='Wselect'src='../../../img/select-cycle.png' alt='待选择'>"+
+						"<img class='selected' src='../../../img/selected.png' alt='已选择'><p>重庆市</p>"+
+						"<img src='../../../img/for-more.png' alt='下一级'>"+
 						"</a>"+
 					"</li>"+
 					"<li class='clearfix'>"+
 					"<a href='javascript:;' class='clearfix'>"+
-						"<img class='Wselect' src='../../img/select-cycle.png' alt='待选择'>"+
-						"<img class='selected' src='../../img/selected.png' alt='已选择'><p>重庆市</p>"+
-						"<img src='../../img/for-more.png' alt='下一级'>"+
+						"<img class='Wselect' src='../../../img/select-cycle.png' alt='待选择'>"+
+						"<img class='selected' src='../../../img/selected.png' alt='已选择'><p>重庆市</p>"+
+						"<img src='../../../img/for-more.png' alt='下一级'>"+
 						"</a>"+
 					"</li>"+
 					"<li class='clearfix'>"+
 					"<a href='javascript:;' class='clearfix'>"+
-						"<img class='Wselect' src='../../img/select-cycle.png' alt='待选择'>"+
-						"<img class='selected' src='../../img/selected.png' alt='已选择'><p>重庆市</p>"+
-						"<img src='../../img/for-more.png' alt='下一级'>"+
+						"<img class='Wselect' src='../../../img/select-cycle.png' alt='待选择'>"+
+						"<img class='selected' src='../../../img/selected.png' alt='已选择'><p>重庆市</p>"+
+						"<img src='../../../img/for-more.png' alt='下一级'>"+
 						"</a>"+
 					"</li>"+
 					"<li class='clearfix'>"+
 					"<a href='javascript:;' class='clearfix'>"+
-						"<img class='Wselect' src='../../img/select-cycle.png' alt='待选择'>"+
-						"<img class='selected' src='../../img/selected.png' alt='已选择'><p>重庆市</p>"+
-						"<img src='../../img/for-more.png' alt='下一级'>"+
+						"<img class='Wselect' src='../../../img/select-cycle.png' alt='待选择'>"+
+						"<img class='selected' src='../../../img/selected.png' alt='已选择'><p>重庆市</p>"+
+						"<img src='../../../img/for-more.png' alt='下一级'>"+
 						"</a>"+
 					"</li>"+
 				"</ul>"+
 			"</div>"+
 		"</div>"+
+		// "<div class='submit-address-li'>确认地点</div>"+
 					"</div>"+
 					"<div class='layer-footer'></div>"+
 				"</div>");
 		}
+		$(".auto-list a").click(function() {
+			alert("功能待定...");
+		});
 	})
 </script>
-<div class="bgdark"></div>
+<div class="container">
+	<div class="bgdark"></div>
 <div class="show-address clearfix" id="show_selected">
-	<p>编辑已选地区<span class="number"><span class="num">5</span>/5<span><img src="../../img/toggle-num.png" alt="折叠已选地区"></span></span></p>
+	<p>编辑已选地区<span class="number"><span class="num">5</span>/5<span><img src="../../../img/toggle-num.png" alt="折叠已选地区" style="margin-left:5px;"></span></span></p>
 	<!-- <div class="submit">
 			确认
 		</div> -->
@@ -368,27 +400,27 @@
 		<div class="tags">
 			上海-东方明珠
 			<span>x</span>
-			<img src="../../img/right-bottom-radius.png" height="15" width="15" alt="">
+			<img src="../../../img/right-bottom-radius.png" height="15" width="15" alt="">
 		</div>
 		<div class="tags">
 			广州-深圳
 			<span>x</span>
-			<img src="../../img/right-bottom-radius.png" height="15" width="15" alt="">
+			<img src="../../../img/right-bottom-radius.png" height="15" width="15" alt="">
 		</div>
 		<div class="tags">
 			深圳-城市中心
 			<span>x</span>
-			<img src="../../img/right-bottom-radius.png" height="15" width="15" alt="">
+			<img src="../../../img/right-bottom-radius.png" height="15" width="15" alt="">
 		</div>
 		<div class="tags">
 			重庆-菜市口
 			<span>x</span>
-			<img src="../../img/right-bottom-radius.png" height="15" width="15" alt="">
+			<img src="../../../img/right-bottom-radius.png" height="15" width="15" alt="">
 		</div>
 		<div class="tags">
 			福建-厦门海岸
 			<span>x</span>
-			<img src="../../img/right-bottom-radius.png" height="15" width="15" alt="">
+			<img src="../../../img/right-bottom-radius.png" height="15" width="15" alt="">
 		</div>
 	</div>		<div class="gamp-address"></div>
 
@@ -398,10 +430,10 @@
 	<div class="address auto-position">
 		<div class="p"><p>当前城市</p></div>
 		<div class="address-list auto-list clearfix">
-			<img class="Wselect" src="../../img/select-cycle.png" alt="待选择">
-			<img class="selected" src="../../img/selected.png" alt="已选择">
+			<img class="Wselect" src="../../../img/select-cycle.png" alt="待选择">
+			<img class="selected" src="../../../img/selected.png" alt="已选择">
 			<p>北京市-朝阳区</p>
-			<a href="javascript:;"><img src="../../img/auto-position.png" alt="自动定位">重新定位</a>
+			<a href="javascript:;"><img src="../../../img/auto-position.png" alt="自动定位">重新定位</a>
 		</div>
 		<div class="gamp-address"></div>
 	</div>
@@ -415,11 +447,11 @@
 				<ul>
 					<li>
 					<a href="javascript:;" class="clearfix">
-						<img class="Wselect" src="../../img/select-cycle.png" alt="待选择">
-						<img class="selected" src="../../img/selected.png" alt="已选择">
+						<img class="Wselect" src="../../../img/select-cycle.png" alt="待选择">
+						<img class="selected" src="../../../img/selected.png" alt="已选择">
 
 						<p>安徽省</p>
-						<img src="../../img/for-more.png" alt="下一级">
+						<img src="../../../img/for-more.png" alt="下一级">
 						</a>
 					</li>
 				</ul>
@@ -431,9 +463,9 @@
 					<ul>
 						<li class="clearfix">
 						<a href="javascript:;" class="clearfix">
-							<img class="Wselect" src="../../img/select-cycle.png" alt="待选择">
-							<img class="selected" src="../../img/selected.png" alt="已选择"><p>北京市</p>
-							<img src="../../img/for-more.png" alt="下一级">
+							<img class="Wselect" src="../../../img/select-cycle.png" alt="待选择">
+							<img class="selected" src="../../../img/selected.png" alt="已选择"><p>北京市</p>
+							<img src="../../../img/for-more.png" alt="下一级">
 							</a>
 						</li>
 					</ul>
@@ -445,37 +477,23 @@
 				<ul>
 					<li class="clearfix">
 					<a href="javascript:;" class="clearfix">
-						<img class="Wselect" src="../../img/select-cycle.png" alt="待选择">
-						<img class="selected" src="../../img/selected.png" alt="已选择"><p>重庆市</p>
-						<img src="../../img/for-more.png" alt="下一级">
+						<img class="Wselect" src="../../../img/select-cycle.png" alt="待选择">
+						<img class="selected" src="../../../img/selected.png" alt="已选择"><p>重庆市</p>
+						<img src="../../../img/for-more.png" alt="下一级">
 						</a>
 					</li>
 					<li class="clearfix">
 					<a href="javascript:;" class="clearfix">
-						<img class="Wselect" src="../../img/select-cycle.png" alt="待选择">
-						<img class="selected" src="../../img/selected.png" alt="已选择"><p>重庆市</p>
-						<img src="../../img/for-more.png" alt="下一级">
+						<img class="Wselect" src="../../../img/select-cycle.png" alt="待选择">
+						<img class="selected" src="../../../img/selected.png" alt="已选择"><p>重庆市</p>
+						<img src="../../../img/for-more.png" alt="下一级">
 						</a>
 					</li>
 					<li class="clearfix">
 					<a href="javascript:;" class="clearfix">
-						<img class="Wselect" src="../../img/select-cycle.png" alt="待选择">
-						<img class="selected" src="../../img/selected.png" alt="已选择"><p>重庆市</p>
-						<img src="../../img/for-more.png" alt="下一级">
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="address-list choose-list cleaerfix">
-			<div class="alp">C</div>
-			<div class="alphabet">
-				<ul>
-					<li class="clearfix">
-					<a href="javascript:;" class="clearfix">
-						<img class="Wselect" src="../../img/select-cycle.png" alt="待选择">
-						<img class="selected" src="../../img/selected.png" alt="已选择"><p>重庆市</p>
-						<img src="../../img/for-more.png" alt="下一级">
+						<img class="Wselect" src="../../../img/select-cycle.png" alt="待选择">
+						<img class="selected" src="../../../img/selected.png" alt="已选择"><p>重庆市</p>
+						<img src="../../../img/for-more.png" alt="下一级">
 						</a>
 					</li>
 				</ul>
@@ -487,9 +505,9 @@
 				<ul>
 					<li class="clearfix">
 					<a href="javascript:;" class="clearfix">
-						<img class="Wselect" src="../../img/select-cycle.png" alt="待选择">
-						<img class="selected" src="../../img/selected.png" alt="已选择"><p>重庆市</p>
-						<img src="../../img/for-more.png" alt="下一级">
+						<img class="Wselect" src="../../../img/select-cycle.png" alt="待选择">
+						<img class="selected" src="../../../img/selected.png" alt="已选择"><p>重庆市</p>
+						<img src="../../../img/for-more.png" alt="下一级">
 						</a>
 					</li>
 				</ul>
@@ -501,9 +519,9 @@
 				<ul>
 					<li class="clearfix">
 					<a href="javascript:;" class="clearfix">
-						<img class="Wselect" src="../../img/select-cycle.png" alt="待选择">
-						<img class="selected" src="../../img/selected.png" alt="已选择"><p>重庆市</p>
-						<img src="../../img/for-more.png" alt="下一级">
+						<img class="Wselect" src="../../../img/select-cycle.png" alt="待选择">
+						<img class="selected" src="../../../img/selected.png" alt="已选择"><p>重庆市</p>
+						<img src="../../../img/for-more.png" alt="下一级">
 						</a>
 					</li>
 				</ul>
@@ -515,16 +533,29 @@
 				<ul>
 					<li class="clearfix">
 					<a href="javascript:;" class="clearfix">
-						<img class="Wselect" src="../../img/select-cycle.png" alt="待选择">
-						<img class="selected" src="../../img/selected.png" alt="已选择"><p>重庆市</p>
-						<img src="../../img/for-more.png" alt="下一级">
+						<img class="Wselect" src="../../../img/select-cycle.png" alt="待选择">
+						<img class="selected" src="../../../img/selected.png" alt="已选择"><p>重庆市</p>
+						<img src="../../../img/for-more.png" alt="下一级">
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="address-list choose-list cleaerfix">
+			<div class="alp">C</div>
+			<div class="alphabet">
+				<ul>
+					<li class="clearfix">
+					<a href="javascript:;" class="clearfix">
+						<img class="Wselect" src="../../../img/select-cycle.png" alt="待选择">
+						<img class="selected" src="../../../img/selected.png" alt="已选择"><p>重庆市</p>
+						<img src="../../../img/for-more.png" alt="下一级">
 						</a>
 					</li>
 				</ul>
 			</div>
 		</div>
 	</div>
-
 	<div class="province" hidden>
 		<ul>
 			<li><a href="javascript:;">中华人民共和国钳制美利坚合众国</a></li>
@@ -650,3 +681,7 @@
 		</ul>
 	</div>
 </div>
+</div>
+
+</body>
+</html>

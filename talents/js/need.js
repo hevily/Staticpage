@@ -46,8 +46,8 @@ $(document).ready(function(){
 	// 弹出浮层选择
 		// 工作经验
 		$(".duty-experance").click(function(){
-			var url="load/duty.htm",name="工作经验";
-			appendlayer(name);
+			var url="load/work-experience.htm",name="工作经验";
+			appendlayer(name,'duty-experance');
 			$(".layer-content").load(url);
 			removelayer();
 			// selectIng = $(".duty-experance");
@@ -85,10 +85,9 @@ $(document).ready(function(){
 			removelayer();
 
 		});
-		function abc(){
-			console.log("abc");
-		}
-
+		$(".send-resume-details").click(function() {
+			alert("请稍后，正在投递...")
+		});
 
 		
 		function appendlayer(name,Classvalue){

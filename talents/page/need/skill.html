@@ -17,7 +17,7 @@
 			<div class="title">技能要求</div>
 			<div class="skill">
 				<div class="add-new clearfix">
-					<a href="load/edit-skill-languagae.htm"><img src="../../img/add-new.png" alt="添加"></a>
+					<a href="javascript:;"><img src="../../img/add-new.png" alt="添加"></a>
 					<p>新增技能</p>
 				</div>
 				<div class="added clearfix">
@@ -29,7 +29,7 @@
 									<div class="article-skill">能够在马夫的帮助下行进</div>
 								</div>
 								<div class="article-action">
-									<div class="edit"><a href="load/edit-skill-languagae.htm"><img src="../../img/edit-article.png" alt="编辑项目">编辑</a></div>
+									<div class="edit"><a href="javascript:;"><img src="../../img/edit-article.png" alt="编辑项目">编辑</a></div>
 									<div class="del"><img src="../../img/del-article.png" alt="删除项目">删除</div>
 								</div>
 							</div>
@@ -41,7 +41,7 @@
 									<div class="article-skill">能够在马夫的帮助下行进</div>
 								</div>
 								<div class="article-action">
-									<div class="edit"><a href="load/edit-skill-languagae.htm"><img src="../../img/edit-article.png" alt="编辑项目">编辑</a></div>
+									<div class="edit"><a href="javascript:;"><img src="../../img/edit-article.png" alt="编辑项目">编辑</a></div>
 									<div class="del"><img src="../../img/del-article.png" alt="删除项目">删除</div>
 								</div>
 							</div>
@@ -61,6 +61,20 @@
 				$(this).closest('li').remove();
 			};
 		});
+		$(".edit,.add-new a").click(function() {
+			$("body").append("<div class='edit-skill'></div>")
+			$(".edit-skill").load("load/edit-skill.htm");
+		});
+		$("body").delegate(".submit","click",function() {
+			$(".edit-skill").remove();
+		});
+		$("body").delegate(".submit-skill","click",function(){
+			alert("正在保存，请稍后...");
+			$(".edit-skill").remove();
+		})
+		$("body").delegate(".cancel-skill","click",function(){
+			$(".edit-skill").remove();
+		})
 	});
 	</script>
 </body>
