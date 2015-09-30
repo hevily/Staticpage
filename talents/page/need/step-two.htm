@@ -129,14 +129,22 @@
 		</div>
 	</div>
 	<script>
+
+	
+	$(document).ready(function(){
 		function resiezInput(){
-		var inputArray = $(".item-details input");
-		for (var i = 0;i<=inputArray.length - 1; i++) {
-			var thisInputP = $(inputArray[i]).closest(".item-details");
-			thisInputP.width($(".container").width()-thisInputP.prev(".item-title").width()-50);
-		};
-	}
-	resiezInput();
+			var inputArray = $(".item-details input");
+			for (var i = 0;i<=inputArray.length - 1; i++) {
+				var thisInputP = $(inputArray[i]).closest(".item-details");
+				thisInputP.width($(".container").width()-thisInputP.prev(".item-title").width()-50);
+			};
+		}resiezInput();
+		$(".publish").click(function() {
+			alert("正在发布，请稍后....")
+		});
+	})
+	
+
 	</script>
 	
 	<footer></footer>
