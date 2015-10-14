@@ -128,6 +128,8 @@ body,.container,.selected-tag,.step-one1,.step-two{
 	clear: both;
 	padding: 0 10px;
 	border-bottom: 1px solid #cfcfcf;
+    padding-top: 5px;
+    overflow: hidden;
 }
 .own-name{
 	height: 25px;
@@ -288,4 +290,10 @@ body,.container,.selected-tag,.step-one1,.step-two{
 .resume-photo .item-title{
 	height: 70px;
 	line-height: 70px;
+}
+.own-right-pd45{
+	padding-top: 45px;
+}
+.own-right-pd20{
+	padding-top: 20px;
 }
