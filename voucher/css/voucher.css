@@ -1,0 +1,163 @@
+.nav ul{
+	width: 100%;
+	clear: both;
+	display:box;
+	display:-moz-box;
+    display:-webkit-box;
+    text-align: center;
+}
+.select-show-area{
+	background-color: #FEF9F5;
+}
+.select li{
+	border-bottom: 1px solid #cfcfcf;
+	position: relative;
+	padding-bottom: 5px;
+}
+.select li span{
+	position: absolute;
+	left: 50%;
+	transform:translateX(-50%);
+	-moz-transform:translateX(-50%);
+	-webkit-transform:translateX(-50%);
+	bottom: 0;
+	width: 50%;
+	height: 2px;
+	background-color: #f27302;
+}
+.average span{
+	display: none;
+}
+.nav-opening span{
+	display: inline-block;
+}
+.nav{
+	padding-bottom: 0;
+}
+.nav ul li:last{
+	border-right: 1px solid #cfcfcf;
+}
+.vertical{
+	float: left;
+}
+.factor{
+	/*padding-top: 8px;*/
+}
+.select li,.factor li{
+	width: 25%;
+}
+.factor a{
+	line-height: 30px;
+	display: block;
+	height: 30px;
+	text-decoration: none;
+	color: #000;
+	
+}
+.select-factor{
+	display: none;
+}
+.media-object{
+	width: 60px;
+	height: 60px;
+}
+.media-right img{
+	height: 18px;
+	width: 12px;
+}
+.media{
+	margin-top: 0;
+	padding: 4px 10px;
+	border-bottom: 1px solid #cfcfcf;
+}
+.combo-details li:last-child .media,.single-details li:last-child .media{
+	border-bottom: none;
+}
+.title{
+	padding:10px;
+	border-bottom: 1px solid #cfcfcf;
+	font-weight: bold;
+}
+.title a{
+	text-decoration: none;
+}
+.title a:first-child{
+	color: #000;
+}
+.title span{
+	padding-left: 8px;
+	font-weight: normal;
+}
+.title a:last-child{
+	float: right;
+	font-weight: normal;
+}
+.media:active{
+	background-color: #cfcfcf;
+}
+.combo-details,.single-details{
+	padding: 0 0 0 10px;
+	border-bottom: 1px solid red;
+}
+.used{
+	display: none;
+}
+.media-body p{
+	width: 100%;
+	height: 1.5em;
+	/*white-space:nowrap;*/
+	overflow:hidden;
+	text-overflow:ellipsis;
+	
+}
+.vochers-description p:first-child{
+	font-weight: bold;
+}
+.media .money{
+	color: #767676;
+}
+.qrcore{
+	position: relative;
+}
+.qrcore img{
+	/*width: 150px;
+	height: 150px;*/
+	position: relative;
+	left: 50%;
+	transform:translateX(-50%);
+	-moz-transform:translateX(-50%);
+	-webkit-transform:translateX(-50%);
+}
+.qrcore p{
+	text-align: center;
+}
+.rule{
+	padding: 0 10px;
+}
+.rule h3{
+	margin: 6px 0;
+}
+.rule .details ul{
+	padding-left: 25px;
+}
+.rule .details ul li{
+	list-style-type: disc;
+	font-size: 14px;
+}
+.chei{
+	color: #696969;
+}
+.vouchers-status{
+	text-align: center;
+	background-color: #F5834D;
+	height: 50px;
+
+}
+.posit{
+	position: relative;
+	top: -2px;
+}
+.position{
+	position: relative;
+	bottom: -1px;
+}
