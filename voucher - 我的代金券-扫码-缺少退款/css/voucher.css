@@ -20,7 +20,7 @@
 	transform:translateX(-50%);
 	-moz-transform:translateX(-50%);
 	-webkit-transform:translateX(-50%);
-	bottom: 3px;
+	bottom: 1px;
 	width: 50%;
 	height: 2px;
 	background-color: #f27302;
@@ -28,7 +28,7 @@
 .average span{
 	display: none;
 }
-.nav-open span{
+.nav-opening span{
 	display: inline-block;
 }
 .nav{
@@ -151,7 +151,7 @@
 	text-align: center;
 	background-color: #F5834D;
 	height: 50px;
-	color: #fff;
+
 }
 .posit{
 	position: relative;
@@ -168,9 +168,9 @@
 }
 .dark-foot img{
 	position: absolute;
-	top: -15px;
-	width: 15px;
-	height: 15px;
+	top: -20px;
+	width: 20px;
+	height: 20px;
 }
 .dark-foot img:nth-child(1){
 	/*left: -10px;*/
@@ -180,36 +180,4 @@
 }
 .dark-foot img:nth-child(2){
 	right: -0px;
-}
-.backdrop{
-	position: fixed;
-	top: 53px;
-	left: 0;
-	background-color: rgba(0,0,0,0.5);
-	height: 100%;
-	width: 100%;
-}
-.layer{
-	position: absolute;
-	top: 53px;
-	width: 100%;
-	background-color: #fff;
-}
-.layer-title{
-	display: none;
-}
-.voucher-specialty{
-	padding: 0 20px;
-	height: 40px;
-	line-height: 40px;
-}
-.voucher-specialty ul li{
-	float: left;
-	font-size: 16px;
-	font-weight: bold;
-	margin-right: 8px;
-}
-.voucher-specialty ul li img{
-	height: 20px;
-	width: 20px;
 }

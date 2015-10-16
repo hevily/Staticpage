@@ -10,10 +10,7 @@ input,ol,ul{margin: 0;padding: 0;}
 ul li{
 	list-style: none;
 }
-/*边距/布局*/
-.container{
-	margin: 0 auto;
-}
+
 /*nav*/
 .nav{
 	font-size: 18px;
