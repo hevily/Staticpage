@@ -10,6 +10,13 @@
     <script src="../js/voucher.js"></script>
     <title>代金券-详情</title>
 	<style>
+	.row-load-more{
+		text-align: center;
+		line-height: 42px;
+	}
+	.sk-spinner-rotating-plane{
+		text-align: center;
+	}
 	.sk-spinner-rotating-plane .sk-spinner {
 		display: inline-block;
 		vertical-align: middle;
@@ -21,35 +28,36 @@
 		-webkit-animation: sk-rotatePlane 1.2s infinite ease-in-out;
 		animation: sk-rotatePlane 1.2s infinite ease-in-out;
 	}
-	@-webkit-keyframes sk-rotatePlane {
-	0% {
-		-webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-		transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+		@-webkit-keyframes sk-rotatePlane {
+		0% {
+			-webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+			transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+		}
+		50% {
+			-webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+			transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+		}
+		100% {
+			-webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+			transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+		}
 	}
-	50% {
-		-webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-		transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+	@keyframes sk-rotatePlane {
+		0% {
+			-webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+			transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+		}
+		50% {
+			-webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+			transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+		}
+		100% {
+			-webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+			transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+		}
 	}
-	100% {
-		-webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-		transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-	}
-}
-@keyframes sk-rotatePlane {
-	0% {
-		-webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-		transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-	}
-	50% {
-		-webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-		transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-	}
-	100% {
-		-webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-		transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-	}
-}s
 	</style>
+
 
 </head>
 <body>
@@ -162,8 +170,16 @@
 	<script>
 		$(document).ready(function(){
 			$(".row-load-more").click(function(){
-			$(this).append("<div><div class='sk-spinner-rotating-plane'><div class='sk-spinner '></div></div>加载中</div>")
-		})
+				if($(this).hasClass('rotating')){
+					$(".rotating").removeClass('rotating');
+					$(".sk-spinner-rotating-plane").remove();
+					$(this).empty().append("点击加载更多");
+				}else{
+					var rotate = "<div class='sk-spinner-rotating-plane '><span class=' sk-spinner'></span>加载中...</div>";
+					$(this).empty().append(rotate);
+					$(this).addClass('rotating');
+				};
+			});
 		})
 		
 	</script>
