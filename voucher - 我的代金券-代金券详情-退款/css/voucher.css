@@ -60,7 +60,7 @@
 	display: none;
 }
 .media-object{
-	width: 72px;
+	width: 60px;
 	height: 60px;
 }
 .media-right img{
@@ -104,10 +104,11 @@
 
 .media-body p{
 	width: 100%;
-	height: 19px;
+	height: 1.5em;
 	/*white-space:nowrap;*/
 	overflow:hidden;
-	/*text-overflow:ellipsis;*/
+	text-overflow:ellipsis;
+	
 }
 .vochers-description p:first-child{
 	font-weight: bold;

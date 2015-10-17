@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <!-- <link rel="stylesheet" href="../css/voucher.css" /> -->
+    <!-- <script src="../js/jquery-2.1.3.min.js"></script> -->
+    <!-- <script src="../js/voucher.js"></script> -->
+    <title>代金券扫描结果</title>
+	<style>
+		.media-object{
+	width: 60px;
+	height: 60px;
+}
+.media-right img{
+	height: 18px;
+	width: 12px;
+}
+.media{
+	margin-top: 0;
+	padding: 4px 10px;
+	border-bottom: 1px solid #cfcfcf;
+}
+.combo-details li:last-child .media,.single-details li:last-child .media{
+	border-bottom: none;
+}
+.title{
+	padding:10px;
+	border-bottom: 1px solid #cfcfcf;
+	font-weight: bold;
+}
+.title a{
+	text-decoration: none;
+}
+.title a:first-child{
+	color: #000;
+}
+.title span{
+	padding-left: 8px;
+	font-weight: normal;
+}
+.title a:last-child{
+	float: right;
+	font-weight: normal;
+}
+.media:active{
+	background-color: #cfcfcf;
+}
+.combo-details,.single-details{
+	padding: 0 0 0 10px;
+	border-bottom: 1px solid #cfcfcf;
+}
+
+.media-body p{
+	width: 100%;
+	height: 1.5em;
+	/*white-space:nowrap;*/
+	overflow:hidden;
+	text-overflow:ellipsis;
+	
+}
+		.qr-result{
+			text-align: center;
+			line-height: 80px;
+			border-bottom: 1px solid #cfcfcf;
+		}
+
+		.voucher-specialty{
+			padding: 0 20px;
+			height: 40px;
+			line-height: 40px;
+		}
+		.voucher-specialty ul li{
+			float: left;
+			font-size: 14px;
+			/*font-weight: bold;*/
+			margin-right: 8px;
+		}
+		.voucher-specialty ul li img{
+			height: 15px;
+			width: 15px;
+			margin-right: 4px;
+		}
+		.shopping{
+			clear: both;
+			height: 30px;
+		}
+		.shopping{
+			padding: 12px 0;
+		}
+		.shopping div{
+			width: 30%;
+			background-color: #f27302;
+			color: #fff;
+			border: 1px solid #f27302;
+			border-radius: 8px;
+			text-align: center;
+			margin:0 9%;
+			padding: 6px 0;
+			float: left;
+			/*border-bottom: 2px solid  #BDA79C;*/
+		}
+		.shopping #no{
+			background-color: #fff;
+			border: 1px solid #cfcfcf;
+			color: #2F2F2F;
+		}
+		.money{
+			color: #f27302;
+			font-weight: bold;
+		}
+		.money s{
+			color: #cfcfcf;
+			font-weight: normal;
+
+		}
+	</style>
+	<style>
+		.head-title p img{
+			height: 30px;
+			width: 30px;
+		}
+		.head-title p:nth-child(2){
+			text-indent: 30px;
+		}
+	</style>
+</head>
+<body  onbeforeunload1211="return '真的要关闭此窗口吗?'">
+	<header></header>
+	<div class="bgdark"></div>
+	<div class="container">
+		<div class="qr-result">
+			<div class="voucher-right-authority green ">
+				密码正确，是否消费此代金券
+			</div>
+			<div class="voucher-right-noauthority red hidden">
+				代金券密码：<span>139979895632</span>
+			</div>
+			<div class="voucher-used darkgray hidden">
+				此券已使用
+			</div>
+		</div>
+
+		<div class="media" >
+			<div class="media-left media-middle">
+			    <a href="#"><img class="media-object" src="../img/vouchers.png"  alt="代金券图标"></a>
+			</div>
+			<div class="media-body">
+			    <div class="vochers-description">
+					<p>魔石泡泡鱼</p>
+					<p>50元代金券！可叠加使用！</p>
+					<p class="money">¥37.9 <s>¥50</s></p>
+				</div>
+			</div>
+			<!-- <div class="media-right media-middle">
+				<a href="javascript:;"><img class="media-object" src="../img/for-more.png"  alt="more"></a>
+			</div> -->
+			<div class="voucher-specialty">
+				<ul>
+					<li><img src="../img/duigou.png" alt="支持">随时退</li>
+					<li><img src="../img/duigou.png" alt="支持">可叠加</li>
+					<li><img src="../img/duigou.png" alt="支持">免预约</li>
+					<!-- <li><img src="../img/duigou.png" alt="支持">免预约</li>
+					<li><img src="../img/duigou.png" alt="支持">节假日通用</li>
+					<li><img src="../img/duigou.png" alt="支持">节假日通用</li>
+					<li><img src="../img/duigou.png" alt="支持">免通用</li>
+					<li><img src="../img/duigou.png" alt="支持">免预约</li>
+					<li><img src="../img/duigou.png" alt="支持">节假日通用</li> -->
+				</ul>
+			</div>
+		</div>
+		<div class="shopping">
+			<div id="yes" onclick="shoppingYes()">
+				确认消费
+			</div>
+			<div id="no" onclick="shoppingNo()">
+				取消
+			</div>
+		</div>
+	</div>
+	<script>
+		function shoppingYes(){
+			alert("消费成功");
+		}
+		function shoppingNo(){
+			if(confirm("确认离开此页?")){
+				alert("点击的是确定");
+				window.close();
+			}else{
+				alert("点击的是取消");
+			}
+			
+		}
+	</script>
+	<footer><br><br></footer>
+	<!-- <div class="head-title">
+			<p><span><img src="../img/duigou.png" height="80" width="80" alt="12"></span>文字部分文字部分</p>
+			<p>文字部分文字部分<span><img src="../img/duigou.png" height="80" width="80" alt="afa"></span></p>
+	</div> -->
+
+</body>
+</html>
