@@ -1,9 +1,11 @@
 $(document).ready(function(){
 	$(".select li").click(function() {
+
+
+
 		if ($(this).hasClass("nav-open")) {
 			$(".backdrop,.layer").remove();
 			if($(this).hasClass("nav-loading")){
-				// $(this).addClass('nav-open');
 				$(".nav-loading").removeClass('nav-loading');
 				console.log("当前需关闭")
 			}else{
@@ -21,12 +23,6 @@ $(document).ready(function(){
 		};
 		console.log($(this).index());
 		removelayer();
-		});
-	// $(".btn-reimburse").click(function() {
-	// 	var url="reimburse-reason.html";
-	// 	appendlayer();
-	// 	$(".layer-content").load(url);
-	// 	removelayer();
 	});
 	function appendlayer(name,Classvalue){
 		$("body").append(""+
