@@ -44,6 +44,7 @@
 			padding-left:  10px;
 		}
 		.media {
+			/*clear: both;*/
 		    margin-top: 0;
 		    padding: 4px 10px;
 		    border-bottom: 1px solid #cfcfcf;
@@ -172,17 +173,109 @@ a.tablecell:active{
 .contact{
 	clear: both;
 	border-bottom: 1px solid #cfcfcf;
+	padding: 8px 10px;
 }
+.contact a{
+	position: relative;
+	text-decoration: none;
+	/*line-height: 30px;*/
+}
+.contact img{
+	position: relative;
+	float: left;
+	top: 50%;
+	margin-right: 10px;
+	}
 .contact .name{
 	float: left;
 }
 .order-info{
+	/*width: 50px;*/
+}
+.order-money-num{
 	width: 50px;
+}
+.order-money-num p{
+	text-align: right;
+	font-weight: bold;
 }
 .order-totalinfo{
 	border-bottom: 1px solid #cfcfcf;
 	font-size: 14px;
+	padding: 6px 10px;
+	padding-top: 0;
+	padding-right: 0;
+	text-align: right;
 }
 .order-totalinfo .goods-num{
+	border-top: 1px solid #cfcfcf;
+	padding: 6px 10px;
+	padding-left: 0;
+	margin-top: -1px;
+}
+.order-totalinfo .payed-fororder{
+	padding: 6px 10px;
+	padding-left: 0;
+}
+.contact .name{
+	/*color: */
+}
+.contact .connectus{
 	float: left;
+	padding-left: 10px;
+}
+.order-action{
+	padding-top: 12px;
+	text-align: right;
+	height: 45px;
+	padding-right: 10px;
+}
+.order-btn{
+	/*display: block;*/
+	/*clear: both;*/
+	border-radius: 4px;
+	border: 1px solid #cfcfcf;
+	background-color: #fff;
+	padding: 3px 12px;
+	text-decoration: none;
+	color: #000;
+	margin-bottom: 6px;
+}
+.themecolor{
+	color: #fff;
+	background-color: #F36302;
+	border-left-color: #F36302;
+	border-right-color: #F36302;
+	border-top-color: #F36302;
+	border-bottom-color: #F36302;
+}
+.secthemecolor{
+	color: #000;
+	background-color: #fff;
+	border-left-color: #cfcfcf;
+	border-right-color: #cfcfcf;
+	border-top-color: #cfcfcf;
+	border-bottom-color: #cfcfcf;
+}
+
+.order-info-money{
+	padding: 6px 10px;
+}
+.order-info-status{
+	padding-top: 10px;
+}
+.status{
+	clear: both;
+}
+.buyer-msg{
+	background-color: rgba(207,207,207,0.2);
+}
+.buyer-msg .status{
+	line-height: 20px;
+}
+.buyer-msg .buy{
+	padding-top: 6px;
+}
+.live-msg{
+	padding-bottom: 6px;
 }
