@@ -33,7 +33,7 @@
 		.circle .step-name{color: #2B2B2B;font-size: 16px;	font-weight: bold;}
 		.circle span{position: absolute;border-radius: 50%;top: 17px;transform:translateY(-50%);-moz-transform:translateY(-50%);-webkit-transform:translateY(-50%);background-color: #Fff;display: inline-block;}
 		.circle span:nth-child(1){width: 20px;height: 20px;border-radius: 50%;background-color: #8C8C8C;}
-		.circle span:nth-child(2){width: 10px;height: 10px;border-radius: 50%;background-color: #fff;border: 1px solid rgba(0,0,0,0.5);left: 14px;}
+		.circle span:nth-child(2){width: 10px;height: 10px;border-radius: 50%;background-color: #fff;border: 1px solid rgba(0,0,0,0.5);left: 15px;}
 		.lline div{position: absolute;left: 19px;top: 24px;border-left: 1px solid #8C8C8C;height: 100%;}
 		/*控制类名passed实现状态切换*/
 		.passed span:nth-child(1){background-color: #F36303;}
@@ -192,12 +192,14 @@ a.tablecell:active{
 .order-info{
 	/*width: 50px;*/
 }
-.order-money-num{
-	width: 50px;
-}
-.order-money-num p{
+.money-num{
+	width: 60px;
 	text-align: right;
-	font-weight: bold;
+	font-size: 14px;
+}
+.money-num p{
+	text-align: right;
+	/*font-weight: bold;*/
 }
 .order-totalinfo{
 	border-bottom: 1px solid #cfcfcf;
@@ -291,10 +293,20 @@ a.tablecell:active{
 	font-size: 18px;
 	color: rgba(58,58,58,0.8);
 }
-.post-phone{
+.voucher .post-phone{
+	clear:both;
+	font-size: 16px;
+	padding-bottom: 6px;
+
+}
+.order .post-phone{
+	clear:both;
 	font-size: 16px;
 	font-weight: bold;
 }
 .post-address{
 	font-size: 16px;
+}
+.voucher-usertips{
+	padding: 0 10px;
 }

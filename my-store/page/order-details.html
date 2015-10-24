@@ -9,6 +9,7 @@
     <script src="../js/jquery-2.1.3.min.js"></script>
     <title>订单详情</title>
     <style>
+    	.media{border-bottom: none;}
     	.media-object {border-radius: 5px;padding: 2px;border: 1px solid #cfcfcf;}
 		.active{color: #fff;}
 		.vochers-description p:first-child {font-weight:normal;color: #fff;font-size: 16px;height: 100%;overflow: hidden;color: #2B2B2B;top: 0;}
@@ -16,15 +17,12 @@
 		.media-right{width: 150px;}
 		.media-right img {height: 18px;width: 120px;}
 		.status{line-height: 28px;}
-		.order-btn{
-			line-height: 20px;
-		}
+		.order-btn{line-height: 20px;}
     </style>
 </head>
 <body>
 	<header></header>
-	<!-- <div class="bgdark"></div> -->
-	<div class="container">
+	<div class="container order">
 		<div class="gamp"></div>
 		<div class="order-info-status">
 			<div class="pd10">
@@ -35,10 +33,9 @@
 			<!-- <div class="line0"></div> -->
 			<div class="gamp"></div>
 			<div class="pd10 buyer-msg">
-				<div class="status buy">买家: <span class="pd10">莫西西利</span><a href="javascript:;" type="button" class="al right orange order-btn themecolor">联系他/她</a></div>
+				<div class="status buy">买家: <span class="pd10 darkgray">莫西西利</span><a href="javascript:;" type="button" class="al right orange order-btn themecolor">联系Ta</a></div>
 				<div class="status live-msg">买家留言: <span > remember my goods remember my goods remember my goods remember my goods remember my goods remember my goods remember my goods</span></div>
 			</div>
-			<!-- <div class="line0"></div> -->
 			<div class="gamp"></div>
 			<ul>
 				<li>
@@ -52,6 +49,7 @@
 							</div>
 							<div class="media-right media-middle">
 							</div>
+							<div class="line"></div>
 						</div>
 					</div>
 				</li>
@@ -66,13 +64,14 @@
 							</div>
 							<div class="media-right media-middle">
 							</div>
+							<div class="line"></div>
 						</div>
 					</div>
 				</li>
 				<li>
 					<div class="goods">
 						<div class="media " onclick="window.location=">
-							<div class="media-left media-middle"><a href="#"><img class="media-object" src="../img/example3000×1987.jpg"   alt="store-logo"></a></div>
+							<div class="media-left media-middle"><a href="#"><img class="media-object" src="../img/example3000×1987.jpg"   alt="store-logo"/></a></div>
 							<div class="media-body">
 							    <div class="vochers-description clearfix">
 									<p>超级好吃好用好看新款手机超</p>
@@ -80,13 +79,14 @@
 							</div>
 							<div class="media-right media-middle">
 							</div>
+							<div class="line"></div>
 						</div>
 					</div>
 				</li>
 				<li>
 					<div class="goods">
 						<div class="media " onclick="window.location=">
-							<div class="media-left media-middle"><a href="#"><img class="media-object" src="../img/example3000×1987.jpg"   alt="store-logo"></a></div>
+							<div class="media-left media-middle"><a href="#"><img class="media-object" src="../img/example3000×1987.jpg"   alt="store-logo"/></a></div>
 							<div class="media-body">
 							    <div class="vochers-description clearfix">
 									<p>超级好吃好用好看新款手机超</p>
@@ -94,6 +94,22 @@
 							</div>
 							<div class="media-right media-middle">
 							</div>
+							<div class="line"></div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="goods">
+						<div class="media " onclick="window.location=">
+							<div class="media-left media-middle"><a href="#"><img class="media-object" src="../img/example3000×1987.jpg"   alt="store-logo"/></a></div>
+							<div class="media-body">
+							    <div class="vochers-description clearfix">
+									<p>超级好吃好用好看新款手机超</p>
+								</div>
+							</div>
+							<div class="media-right media-middle">
+							</div>
+							<div class="line"></div>
 						</div>
 					</div>
 				</li>
@@ -117,13 +133,5 @@
 		
 	</div>
 	<footer><br><br><br></footer>
-	<script>
-		$(document).ready(function(){
-			// $(".check").click(function() {
-			// 	$(".active").removeClass('active');
-			// 	$(this).addClass('active');
-			// });
-		})
-	</script>
 </body>
 </html>
