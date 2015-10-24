@@ -279,3 +279,22 @@ a.tablecell:active{
 .live-msg{
 	padding-bottom: 6px;
 }
+.live-msg span{
+	padding-left: 10px;
+}
+.way-post{
+	background-color: rgba(207,207,207,0.2);
+	line-height: 28px;
+	padding: 10px;
+}
+.way-post h4{
+	font-size: 18px;
+	color: rgba(58,58,58,0.8);
+}
+.post-phone{
+	font-size: 16px;
+	font-weight: bold;
+}
+.post-address{
+	font-size: 16px;
+}
