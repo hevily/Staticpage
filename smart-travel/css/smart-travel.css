@@ -1,0 +1,52 @@
+*{margin: 0;padding: 0;box-sizing:border-box;font-family: 'Microsoft YaHei','Hiragino Sans GB',Helvetica,Arial,'Lucida Grande',sans-serif;}
+/*初始化内外边距*/
+body,dl,dd,h1,h2,h3,h4,h5,h6,p,button{margin:0;}
+input,ol,ul{margin: 0;padding: 0;}
+html,body{height: 100%;}
+/*clearfix*/
+.clearfix:before,
+.clearfix:after {content: ".";display: block;height: 0;visibility: hidden;}
+.clearfix:after {clear: both;}
+.clearfix {zoom: 1;} /* IE < 8 */
+ul li{list-style: none;}
+/*边距/布局*/
+.container{margin: 0 auto;width: 100%;max-width: 640px;}
+.logo img{width: 100%;margin-bottom: -15px;}
+.column-num img{width: 100%;height: 100%;}
+body{background-image: url(../img/smart-travel/bg.png);}
+.column{padding: 10px;}
+
+.travel .column-tips{background-color: #F3F295;height: 30px;text-align: center;line-height: 30px;border-radius: 15px;font-size: 20px;font-weight: bold;}
+.food .column-tips{background-color: #F6CCA6;height: 30px;text-align: center;line-height: 30px;border-radius: 15px;font-size: 20px;font-weight: bold;}
+.stay .column-tips{background-color: #BDFFBD;height: 30px;text-align: center;line-height: 30px;border-radius: 15px;font-size: 20px;font-weight: bold;}
+.amusement .column-tips{background-color: #ECD5F2;height: 30px;text-align: center;line-height: 30px;border-radius: 15px;font-size: 20px;font-weight: bold;}
+ .column-tips{color:#384444;background-color: #ECD5F2;height: 30px;text-align: center;line-height: 30px;border-radius: 15px;font-size: 20px;font-weight: bold;}
+.shopping .column-tips{background-color: #F49A9A;height: 30px;text-align: center;line-height: 30px;border-radius: 15px;font-size: 20px;font-weight: bold;}
+.transportation .column-tips{background-color: #8FDCD2;height: 30px;text-align: center;line-height: 30px;border-radius: 15px;font-size: 20px;font-weight: bold;}
+
+
+.column-tips-left{float: left;position: relative;}
+.column-tips-left img{width: 33px;height: 22px;}
+.column-tips-right{float: right;position: relative;}
+.column-tips-right img{width: 33px;height: 22px;}
+.column-num{width: 100%;clear: both;}
+.column-num a{color:#27363B;}
+.column-num a h3{color: #293B3F;}
+.column-num-details{width: 50%;padding: 4px;float: left;}
+.shadow{border-radius: 5px;overflow: hidden;box-shadow: 3px 3px 0px #68A1AC;}
+.details-img{/*height: 100px;*/margin-bottom: -6px;}
+.details-description{background-color: #E9FBFF;padding: 6px;}
+
+.travel .column-tips-left img{position: absolute;top: -15px;left: 15px;}
+.travel .column-tips-right img{position: absolute;bottom: -30px;right: 15px;}
+.food .column-tips-left img{position: absolute;top: -15px;left: 15px;}
+.food .column-tips-right img{position: absolute;bottom: -30px;right: 15px;}
+.stay .column-tips-left img{position: absolute;top: -15px;left: 15px;}
+.stay .column-tips-right img{position: absolute;bottom: -30px;right: 15px;}
+.amusement .column-tips-left img{position: absolute;top: -15px;left: 15px;}
+.amusement .column-tips-right img{position: absolute;bottom: -30px;right: 15px;}
+ .column-tips-left img{position: absolute;top: -15px;left: 15px;}
+ .column-tips-right img{position: absolute;bottom: -30px;right: 15px;}
+
+
+.comming-soon img{width: 100%;}
