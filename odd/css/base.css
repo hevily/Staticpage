@@ -2,12 +2,11 @@
 	margin: 0;
 	padding: 0;
 	font-family: 'Microsoft YaHei','Hiragino Sans GB',Helvetica,Arial,'Lucida Grande',sans-serif;
-  box-sizing:border-box;
 }
 /*初始化内外边距*/
 body,dl,dd,h1,h2,h3,h4,h5,h6,p,button{margin:0;}
 input,ol,ul{margin: 0;padding: 0;}
-html,body{height: 100%;}
+
 /*clearfix*/
 .clearfix:before,
 .clearfix:after {
@@ -24,10 +23,6 @@ ul li{
 /*边距/布局*/
 .container{
 	margin: 0 auto;
-}
-.pd10{
-  padding-left: 10px;
-  padding-right: 10px;
 }
 /*nav*/
 .nav{
@@ -54,33 +49,10 @@ ul li{
 .darkred{
 	color: #D60000;
 }
-.reseda{
-  color: #66CC00;
-}
 /*class-font-weight*/
-.fbold{
-  font-weight: bold;
-}
 .fnormal{
 	font-weight: normal;
 }
-.pullright{
-  float: right;
-  text-align: right;
-}
-.left{
-  float: left;
-}
-.right{
-  float: right;
-}
-.al{
-  text-align: left;
-}
-.ar{
-  text-align: right;
-}
-
 /*class-display*/
 .hidden{
 	display: none;
@@ -88,28 +60,17 @@ ul li{
 .show{
 	display: block;
 }
-/*line*/
-.line{
-  height: 1px;
-  margin-top: 6px;
-  background-color: #cfcfcf;
-  width: 100%;
-}
-.line0{
-  height: 1px;
-  background-color: #cfcfcf;
-  width: 100%;
-}
+
 /*gamp*/
 .gamp{clear: both;height: 15px;background-color: #E6E6E6;}
-.gampt{clear: both;	height: 15px;	background-color: #E6E6E6;border-top: 1px solid #cfcfcf;}
-.gamptb{clear: both;height: 15px;background-color:  #F4F4F4;border-top: 1px solid #cfcfcf;border-bottom: 1px solid #cfcfcf;}
+.gampt{clear: both;
+	height: 15px;
+	background-color: #E6E6E6;
+	border-top: 1px solid #cfcfcf;
+}
 /*media(img-text-description)*/
 .media {
   margin-top: 15px;
-}
-.media:active {
-    background-color: #cfcfcf;
 }
 .media:first-child {
   margin-top: 0;
@@ -121,16 +82,9 @@ ul li{
 }
 .media-body {
   width: 10000px;
-  position: relative;
 }
 .media-object {
   display: block;
-  width: 75px;
-  height: 75px;
-}
-.media-right img {
-    height: 18px;
-    width: 12px;
 }
 .media-right,
 .media > .pull-right {
