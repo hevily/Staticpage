@@ -15,6 +15,20 @@
 		.vochers-description p:first-child {font-weight:normal;color: #fff;font-size: 16px;height: 100%;overflow: hidden;color: #2B2B2B;top: 0;}
 		.media-body p {position: relative;width: 100%;height: auto;overflow: visible;}
 		.vochers-description{font-size: 14px;}
+		.items {font-size: 16px;line-height: 35px;border-bottom: 1px solid #cfcfcf;color: #5D5D5D;word-break:break-all;}
+				.items-tip {height: 100%;float: left;width: 80px;text-align: right;font-weight: bold;color: #000;}
+				.items-details { height: 100%;padding-left: 85px;text-align: left;}
+				.voucher-order-details{padding-left:10px;border-bottom: 1px solid #C9C9C9;}
+				.voucher-order-details .items:last-child{border: none;}
+				.order-action img{
+					transform:rotate(90deg);
+					width: 12px;height: 18px;
+					margin-top: 6px;
+					margin-left: 8px;
+				}
+				img.rotate {
+					transform:rotate(270deg);
+				}
     </style>
 </head>
 <body>
@@ -113,7 +127,37 @@
 							</div>
 						</div>
 						<div class="order-action">
-							<a  href="voucher-details.html" class="order-btn themecolor" value="">订单详情</a>
+							<!-- <a  href="voucher-details.html" class="order-btn themecolor" value="">订单详情</a> -->
+							展开详细 <img src="../img/for-more.png"  alt="toggle">
+						</div>
+							
+						<div class="voucher-order-details">
+							<div class="items clearfix">
+								<div class="items-tip">代金券编号</div>
+								<div class="items-details">2657545125132184316265754512513218431626575451251321843162657545125132184316</div>
+							</div>
+							<div class="items clearfix">
+								<div class="items-tip">金额 ¥</div>
+								<div class="items-details">0.001X100 <span>=</span>0.1</div>
+							</div>
+							<div class="items clearfix">
+								<div class="items-tip">状态</div>
+								<div class="items-details">未使用</div>
+							</div>
+						</div>
+						<div class="voucher-order-details">
+							<div class="items clearfix">
+								<div class="items-tip">代金券编号</div>
+								<div class="items-details">2657545125132184316265754512513218431626575451251321843162657545125132184316</div>
+							</div>
+							<div class="items clearfix">
+								<div class="items-tip">金额 ¥</div>
+								<div class="items-details">0.001X100 <span>=</span>0.1</div>
+							</div>
+							<div class="items clearfix">
+								<div class="items-tip">状态</div>
+								<div class="items-details">未使用</div>
+							</div>
 						</div>
 						<div class="gamp"></div>
 					</div>
@@ -127,5 +171,13 @@
 		
 	</div>
 	<footer><br><br><br></footer>
+	<script>
+		$(document).ready(function(){
+			$(".order-action").click(function() {
+				$(this).find("img").toggleClass('rotate');
+				$(".voucher-order-details").toggle(600);
+			});
+		})
+	</script>
 </body>
 </html>
