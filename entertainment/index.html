@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="css/amazeui.min.css"/> -->
+    <link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.4.2/css/amazeui.min.css" />
+
+    <link rel="stylesheet" href="css/hemumarket.css"/>
+    <link rel="stylesheet" href="css/entertainment.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="https://staticcdn.yshjie.com/cdn/librarypath/amazeui/js/amazeui.min.js"></script>
+    <title>休闲娱乐</title>
+  <style>
+    /*收藏*/
+    .favouriteAble {
+      height: 60px;
+      width: 60px;
+      background: rgba(201,201,201,0.5);
+      border-radius: 3px;
+      overflow: hidden;
+      font-size: 0.8125em;
+      line-height: 18px;
+      text-align: center;
+      color: #fff;
+      z-index: 3;
+      min-height:5%;
+      min-width:5%;
+    }
+    .favouriteAble {
+      position: absolute;
+      right: 10px;
+      top: 15px;
+    }
+    .ico-favourite {
+      display: block;
+      background: url(../../../Public/css/home/img/orange/heart.svg) no-repeat;
+      background-size: contain;
+      background-origin:content-box;
+      width: 25px;
+      height: 25px;
+      margin: 5px auto 0 auto;
+      fill:#fff;
+    }
+    .ico-favourite.already {
+      /*background-image: url(img/orange/heat-white-shi.png);*/
+      background-image:url(../../../Public/css/home/img/orange/heart_solid.svg);
+    }
+    /* tb-b */
+
+
+        .am-slider-c2 .am-control-nav{bottom: 13px;}
+        .am-slider-c2 .am-control-nav li a{height: 10px;width: 10px;}
+        .am-slider-c2 .am-slider-desc {padding: 2px 80px 0px 10px;font-size: 1em;overflow: hidden;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;}
+        body{background-color: #F4F4F4;}
+        .container{background-color: #fff;}
+        .am-slider,.am-viewport,.am-slides,.am-slides li,.am-slides li img{height: 100%;}
+        .am-slider-desc{background-color: rgba(0,0,0,0.2) !important;}
+        .am-slider-c2 .am-control-nav li a{border-radius: 50%;}
+        .am-slider-c2 .am-control-nav li a{background-color: rgba(255,255,255,0.3);}
+        .am-slider-c2 .am-control-nav li a.am-active{background-color:#fff;}
+  </style>
+</head>
+<body>
+<form name="appiUrl">
+    <input type="hidden" name="urlStoresCategory"  value="/statichtml/bjmovie01/estores/Home/Store/contact/stores_id/52/action/product?beginappi&navbar=stores&endappi" />
+    <input type="hidden" name="urlStoresSearch" value="/statichtml/bjmovie01/estores/Home/Search/index/stores_id/52?beginappi&navbar=stores&endappi" />
+    <input type="hidden" name="urlSearch" value="/statichtml/bjmovie01/estores/Home/Search.html?beginappi&navbar=search&endappi" />
+		</form>	
+    <div class="container">
+        <div style="width: 100%; max-width: 640px; overflow: hidden; margin: 0 auto; position: relative;">
+                <div data-am-widget="slider" class="am-slider am-slider-c2" data-am-slider='{"directionNav":false}' >
+                  <ul class="am-slides">
+                      <li>
+                            <img src="http://s.amazeui.org/media/i/demos/bing-1.jpg">
+                          <div class="am-slider-desc">远方 有一个地方 那里种有我们的梦想</div>
+                      </li>
+                      <li>
+                            <img src="http://s.amazeui.org/media/i/demos/bing-2.jpg">
+                          <div class="am-slider-desc">某天 也许会相遇 相遇在这个好地方</div>
+                      </li>
+                      <li>
+                            <img src="http://s.amazeui.org/media/i/demos/bing-3.jpg">
+                          <div class="am-slider-desc">不要太担心 只因为我相信 终会走过这条遥远的道路</div>
+                      </li>
+                      <li>
+                            <img src="http://s.amazeui.org/media/i/demos/bing-4.jpg">
+                          <div class="am-slider-desc">OH PARA PARADISE 是否那么重要 你是否那么地遥远</div>
+                      </li>
+                  </ul>
+                </div>
+
+
+
+
+
+            <!-- <div class="am-slider am-slider-default"  id="imgSlider" style="position: relative">
+                <ul class="am-slides">
+                    <li><a href="/statichtml/bjmovie01/estores/Home/Cuxiao/product_list?stores_id=52&promotionid=36&beginappi&navbar=stores&endappi"><img src="img/slider-3.jpg" /></a></li>
+                    <li><a href="/statichtml/bjmovie01/estores/Home/Cuxiao/product_list?stores_id=52&promotionid=36&beginappi&navbar=stores&endappi"><img src="img/slider-3.jpg" /></a></li>
+                    <li><a href="/statichtml/bjmovie01/estores/Home/Cuxiao/product_list?stores_id=52&promotionid=36&beginappi&navbar=stores&endappi"><img src="img/slider-3.jpg" /></a></li>
+                </ul>
+                <div class="favouriteAble"   data-stores_id="52" type="store"  style="overflow: hidden; display:none ">
+                  <span class="ico ico-favourite"></span>
+                  <span class="text">收藏</span>
+                </div>
+            </div> -->
+        </div>
+        <div class="gap"></div>
+        <div class="tb">
+            <div class="tb-title clearfix">
+                <a href="javascript:;">热销商品区</a>
+                <a href="javascript:;" class="more">
+                    <img src="img/sanjiao.png" alt="更多"/>
+                </a>
+            </div>
+
+            <style>
+                .goods{
+                    border: none;
+                }
+                .goods .good-img{
+                    border: none;
+                }
+                .goods .good-description{
+                    border: none;
+                    font-weight: 100;
+                    font-size: 1.4rem;
+                    line-height: 20px;
+                    color: #000000;
+
+                }
+                .goods .good-price{
+                    border: none;
+                    font-size: 18px;
+                    margin-top: -4px;
+                    color: #D66C00;
+                    font-weight: 500;
+                    margin-left: -2px;
+                    margin-bottom: 5px;
+                }
+                .goods .good-price a{
+                    text-decoration: line-through;
+                    color: #9b9b9b; font-size: 12px;
+                    display: block;
+                    margin-top: -5px;
+                    margin-left: 6px;
+                }
+            </style>
+
+            <div class="tb-b">
+                <div class="am-slider am-slider-a4"  id="slider2">
+                    <ul class="am-slides">
+                        <li>  <!-- https://shop.yshjie.com -->
+                            <div class="goods">
+                                <div class="good-img">
+                                    <a href="javascript:;"><img src="img/pijiu.jpg" draggable="false" alt=""/></a>
+                                </div>
+                                <div class="good-description"  style="border: none;">
+                                    <a href="javascript:;">物品名称</a>
+                                </div>
+                                <div class="good-price">
+                                    <span style="">&#65509;</span>65.00
+                                    <!-- <a href="" style=""><span>&#65509;</span><span>16.90</span></a> -->
+                                </div>
+                            </div>
+                            <div class="goods">
+                                <div class="good-img">
+                                    <a href="/javascript:;"><img src="img/pijiu.jpg" draggable="false" alt=""/></a>
+                                </div>
+                                <div class="good-description">
+                                    <a href="javascript:;">物品名称</a>
+                                </div>
+                                <div class="good-price">
+                                    <span>&#65509;</span>9.80
+                                </div>
+                            </div>
+                            <div class="goods">
+                                <div class="good-img">
+                                    <a href="javascript:;"><img src="img/pijiu.jpg" draggable="false" alt=""/></a>
+                                </div>
+                                <div class="good-description">
+                                    <a href="/javascript:;">五湖一级大豆油</a>
+                                </div>
+                                <div class="good-price">
+                                    <span>&#65509;</span>42.00
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="goods">
+                                <div class="good-img">
+                                    <a href="javascript:;"><img src="img/pijiu.jpg" draggable="false" alt=""/></a>
+                                </div>
+                                <div class="good-description">
+                                    <a href="javascript:;">物品名称</a>
+                                </div>
+                                <div class="good-price">
+                                    <span>&#65509;</span>4.90
+                                    <a href="" style="color: #9b9b9b; font-size: 12px;text-decoration: line-through"><span>&#65509;</span><span>6.20</span></a>
+                                </div>
+                            </div>
+                            <div class="goods">
+                                <div class="good-img">
+                                    <a href="javascript:;"><img src="img/pijiu.jpg"  draggable="false" alt=""/></a>
+                                </div>
+                                <div class="good-description">
+                                    <a href="/javascript:;"> 洽洽怪味豆麻辣味60g</a>
+                                </div>
+                                <div class="good-price">
+                                    <span>&#65509;</span>1.50
+                                    <a href="" style="color: #9b9b9b; font-size: 12px;"><span>&#65509;</span><span style="text-decoration: line-through">2.00</span></a>
+                                </div>
+                            </div>
+                            <div class="goods">
+                                <div class="good-img">
+                                    <a href="javascript:;"><img src="img/pijiu.jpg"  draggable="false" alt=""/></a>
+                                </div>
+                                <div class="good-description">
+                                    <a href="javascript:;">物品名称</a>
+                                </div>
+                                <div class="good-price">
+                                    <span>&#65509;</span>3.00
+                                    <a href="javascript:;" style="color: #9b9b9b; font-size: 12px;"><span>&#65509;</span><span style="text-decoration: line-through">38.00</span></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        <div class="all-tips">
+            <div class="tips">
+                <div class="gap"></div>
+                <div class="timmy-activity">
+                    <div class="tb-title clearfix">
+                        <a href="javascript:;">智慧旅游</a>
+                        <a href="javascript:;" class="more">
+                            <img src="img/sanjiao.png" alt="更多"/>
+                        </a>
+                    </div>
+                    <div class="tb-b">
+                        <div class="hot-activity">
+                            <a href="javascript:;"><img src="img/smart-travel.jpg" alt="1折起秒杀"/></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tips">
+                <div class="gap"></div>
+                <div class="timmy-activity">
+                    <div class="tb-title clearfix">
+                        <a href="javascript:;">新用户1折畅享</a>
+                        <a href="javascript:;" class="more">
+                            <img src="img/sanjiao.png" alt="更多"/>
+                        </a>
+                    </div>
+                    <div class="tb-b">
+                        <div class="hot-activity">
+                            <a href="javascript:;"><img src="img/new-user.jpg" alt="新用户特惠"/></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tips">
+                <div class="gap"></div>
+                <div class="timmy-activity">
+                    <div class="tb-title clearfix">
+                        <a href="javascript:;">美体/美容 免费体验</a>
+                        <a href="javascript:;" class="more">
+                            <img src="img/sanjiao.png" alt="更多"/>
+                        </a>
+                    </div>
+                    <div class="tb-b">
+                        <div class="hot-activity">
+                            <a href="javascript:;"><img src="img/spa.jpg" alt="美体/美容免费体验"/></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tips">
+                <div class="gap"></div>
+                <div class="timmy-activity">
+                    <div class="tb-title clearfix">
+                        <a href="javascript:;">健身免费体验</a>
+                        <a href="javascript:;" class="more">
+                            <img src="img/sanjiao.png" alt="更多"/>
+                        </a>
+                    </div>
+                    <div class="tb-b">
+                        <div class="hot-activity">
+                            <a href="javascript:;"><img src="img/fitness.jpg" alt="健身"/></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tips">
+                <div class="gap"></div>
+                <div class="timmy-activity">
+                    <div class="tb-title clearfix">
+                        <a href="javascript:;">智慧旅游</a>
+                        <a href="javascript:;" class="more">
+                            <img src="img/sanjiao.png" alt="更多"/>
+                        </a>
+                    </div>
+                    <div class="tb-b">
+                        <div class="hot-activity">
+                            <a href="javascript:;"><img src="img/smart-travel.jpg" alt="1折起秒杀"/></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tips">
+                <div class="gap"></div>
+                <div class="timmy-activity">
+                    <div class="tb-title clearfix">
+                        <a href="javascript:;">智慧旅游</a>
+                        <a href="javascript:;" class="more">
+                            <img src="img/sanjiao.png" alt="更多"/>
+                        </a>
+                    </div>
+                    <div class="tb-b">
+                        <div class="hot-activity">
+                            <a href="javascript:;"><img src="img/smart-travel.jpg" alt="1折起秒杀"/></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+    
+
+    
+</div>
+<footer><br/><br/><br/><br/></footer>
+<script type="text/javascript">
+
+
+		//	//背景图片定位居中
+//			function resizing(){
+//			
+//				var ab=$("#slider .am-slides li").width();
+//				var abc=(ab*0.3*0.975*0.95).toFixed(0);
+//			
+//				$('#slider .am-slides img').css("height",(abc/1.33).toFixed(0)+"px");
+//				$('#slider2 .am-slides img').css("height",(abc/1.33).toFixed(0)+"px");
+//			}
+//			resizing();
+//			window.onresize= resizing;
+			
+			
+    $(document).ready(function(){
+		
+        $("#imgSlider").flexslider({
+            directionNav: false,
+            playAfterPaused: 8000,
+            before: function(slider) {
+                if (slider._pausedTimer) {
+                    window.clearTimeout(slider._pausedTimer);
+                    slider._pausedTimer = null;
+                }
+            },
+            after: function(slider) {
+                var pauseTime = slider.vars.playAfterPaused;
+                if (pauseTime && !isNaN(pauseTime) && !slider.playing) {
+                    if (!slider.manualPause && !slider.manualPlay && !slider.stopped) {
+                        slider._pausedTimer = window.setTimeout(function() {
+                            slider.play();
+                        }, pauseTime);
+                    }
+                }
+            },
+        })
+        $('#slider').flexslider({
+            directionNav: false,
+            playAfterPaused: 8000,
+            before: function(slider) {
+                if (slider._pausedTimer) {
+                    window.clearTimeout(slider._pausedTimer);
+                    slider._pausedTimer = null;
+                }
+            },
+            after: function(slider) {
+                var pauseTime = slider.vars.playAfterPaused;
+                if (pauseTime && !isNaN(pauseTime) && !slider.playing) {
+                    if (!slider.manualPause && !slider.manualPlay && !slider.stopped) {
+                        slider._pausedTimer = window.setTimeout(function() {
+                            slider.play();
+                        }, pauseTime);
+                    }
+                }
+            },
+            // 设置其他参数
+
+        });
+		 $('#slider2').flexslider({
+            directionNav: false,
+            playAfterPaused: 8000,
+            before: function(slider) {
+                if (slider._pausedTimer) {
+                    window.clearTimeout(slider._pausedTimer);
+                    slider._pausedTimer = null;
+                }
+            },
+            after: function(slider) {
+                var pauseTime = slider.vars.playAfterPaused;
+                if (pauseTime && !isNaN(pauseTime) && !slider.playing) {
+                    if (!slider.manualPause && !slider.manualPlay && !slider.stopped) {
+                        slider._pausedTimer = window.setTimeout(function() {
+                            slider.play();
+                        }, pauseTime);
+                    }
+                }
+            },
+            // 设置其他参数
+
+        });
+    });
+</script>
+</body>
+</html>

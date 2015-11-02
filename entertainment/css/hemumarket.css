@@ -1,0 +1,151 @@
+body{
+    max-width: 640px;
+    margin: 0 auto;
+}
+.container{
+    padding: 0 ;
+    border-top: 3px solid #c9c9c9;
+}
+.am-slider-default .am-control-nav{
+    bottom: 15px;
+}
+/*clearfix*/
+.clearfix:before,
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.clearfix:after {clear: both;}
+.clearfix {zoom: 1;} /* IE < 8 */
+.am-slider-default .am-control-nav li a{
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255,0.6);
+    -webkit-box-shadow:0 0 6px  rgba(0,0,0,.2);
+    -moz-box-shadow:0 0 6px  rgba(0,0,0,.2);
+    box-shadow: 0 0 6px  rgba(0,0,0,.2);
+}
+.am-slider-default .am-control-nav li a.am-active{
+    -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255,1);
+}
+.activity-link{
+    padding: 10px 20px;
+    clear: both;
+}
+.activity{
+    width: 25%;
+    float: left;
+    text-align: center;
+    /*font-size: 0.75em;*/
+}
+.activity a{
+    color: #000;
+
+}
+.activity a img{
+    width: 50%;
+    display: block;
+    margin: 0 25%;
+}
+.gap{
+    height: 18px;
+    background-color: #f4f4f4;
+    border-top: 1px solid #c9c9c9;
+    border-bottom: 1px solid #c9c9c9;
+}
+.tb-title{
+    padding: 10px 18px;
+}
+.tb-title p{
+    float: left;
+    font-size: 18px;
+    font-weight: bolder;
+    margin: 0;
+}
+.tb-title a{
+    float: right;
+}
+.am-viewport{
+    width: 100%;
+    max-width: 640px;
+}
+.goods{
+    border: 1px solid #d6d6d6;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    float: left;
+    width: 30%;
+    margin-left: 2.5%;
+}
+.good-img {
+    width: 100%;
+    padding: 2.5%;
+    border-bottom: 1px solid #d6d6d6;
+}
+.good-img a{
+	overflow:hidden;
+}
+.good-img img{
+   /* width: 100%;
+    height: 100%;*/
+}
+
+.good-description{
+    border-bottom: 1px solid #d6d6d6;
+    text-align: left;
+    padding: 0 3%;
+    /*font-weight: 600;*/
+    vertical-align: auto;
+    line-height: 22px;
+}
+.good-description a{
+    color: #000;
+}
+.good-price{
+    padding-left: 3% ;
+    color: #f27302;
+}
+.am-slider-a4{
+    -webkit-box-shadow:none;
+    box-shadow: none;
+}
+.hot-activity img{
+    width: 100%;
+}
+.tb-title a:nth-child(1){
+    float: left;
+    color: #000;
+    font-size: 18px;
+    font-weight: bolder;
+}
+.good-description{
+    display:block;/*内联对象需加*/
+    word-break:keep-all;/* 不换行 */
+    white-space:nowrap;/* 不换行 */
+    overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+    /*height: 45px;*/
+    /*overflow: hidden;;
+    text-overflow:ellipsis;*/
+}
+
+.am-slider-a4 .am-control-nav li a.am-active{
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+    background-color: rgba(255,255,255,1);
+}
+.am-slider-a4 .am-control-nav li a{
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255,0.6);
+}
