@@ -1,1 +1,100 @@
 .am-slider-c2{height: 100%;width: 100%;}
+.media {
+    margin-top: 0;
+    padding: 4px 10px;
+    border-bottom: 1px solid #C9C9C9;
+}
+.media-body {
+     display: table-cell;
+    vertical-align: top;
+    position: relative;
+}
+.media{
+    position: relative;
+    width: 100%;
+}
+.media-body{
+/*    position: absolute;
+    top: 5px;
+    left: 80px;
+*/
+
+}
+.a_right{
+    position: absolute;
+    top: 32px;
+    left: .9%;
+    font-size: 14px;
+    color: darkgray;
+
+}
+@media screen and (min-width: 321px){
+    .a_right{
+        position: absolute;
+        top: 34px;
+        left: 1.4%;
+        font-size: 14px;
+        color: darkgray;
+
+    }
+}
+.media-right img {
+    height: 18px;
+    width: 10px;
+    margin-bottom: 4px;
+}
+.media-object {
+    width: 60px;
+    height: 60px;
+}
+.star span img{
+    width: 16px;
+    height: 15px;
+}
+.media-right p{
+    clear: both;
+    font-size: 13px;
+    color: #686868;
+}
+.juan{
+    border-top: 1px dashed #CACACA;
+    color: #686868;
+    margin-left: 72px;
+    margin-top: 5px;
+}
+.juan p{
+    padding-top: 7px;
+}
+.hui{
+    padding: 3px 6px;
+    background: #E25452;
+    color: white;
+    border-radius: 5px;
+}
+.tuan{
+    padding: 3px 6px;
+    background: #A0D87F;
+    color: white;
+    border-radius: 5px;
+}
+.juan-1{
+    padding: 3px 6px;
+    background: #229DC9;
+    color: white;
+    border-radius: 5px;
+}
+.zhe{
+     padding: 3px 6px;
+    background: #FCEB1A;
+    color: white;
+    border-radius: 5px;
+}
+.xian{
+     padding: 3px 6px;
+    background: #A462FE;
+    color: white;
+    border-radius: 5px;
+}
+.tb-title{
+    padding-right: 10px;
+}

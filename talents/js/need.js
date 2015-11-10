@@ -67,6 +67,7 @@ $(document).ready(function(){
 			var url="load/duty.htm",name="职位类别";
 			appendlayer(name,'duty-htm');
 			$(".layer-content").load(url);
+			$(".layer-content").load(url);
 			removelayer();
 		});
 		// 学历要求

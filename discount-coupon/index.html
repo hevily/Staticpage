@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+	<title>使用优惠券</title>
+	<script src="../jquery-2.1.4.js"></script>
+	<style>
+		*{margin: 0;padding: 0;box-sizing:border-box;font-family: 'Microsoft YaHei','Hiragino Sans GB',Helvetica,Arial,'Lucida Grande',sans-serif;}
+  		html,body{height: 100%;}
+  		.container{height: 100%;background-color: #F4F4F4;}
+  		.gamp{height: 15px;/*border-bottom: 1px solid #cfcfcf;*/background-color: #F4F4F4;}
+		.tab-coupon{height: 50px;background-color: #FEF9F5;border-bottom: 1px solid #D4D3D8;color: #605E5D;}
+		.coupon{float: left;width: 50%;line-height: 50px;text-align: center;font-size: 16px;position: relative;}
+		.coupon span{width: 40px;height: 5px;position: absolute;bottom: 3px;left: 50%;transform:translateX(-50%);}
+		.select{color: #f36303; font-weight: bold;}
+		.select span{background-color: #f36303;}
+		.switch{display: none;}.show{display: block;}
+		.switch ul li{list-style: none;border-bottom: 1px solid #F1F1F1;border-top: 1px solid #F1F1F1;margin-bottom: 15px;background-color: #fff;}
+		.useable .coupon-list{height: 80px;padding:10px 0;}
+		.disable .coupon-list{padding: 10px}
+		.check{height: 100%;float: left;width: 50px;	}
+		.check span{height: 20px;width: 20px;border: 1px solid #cfcfcf;border-radius: 50%;display: block;left: 50%;top: 50%;transform:translate(-50%,-50%);position: relative;}
+		.checking span{background-image: url(https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/images/icon-svg/iconfont-check.svg);background-size: contain;background-color: #f36303;}
+		.coupon-list .text p{font-size: 14px;color: #A7A7A7;height: 17px;}
+		footer{position: fixed;bottom: 0;width: 100%;height: 50px;padding:5px;line-height: 40px;color: #fff;font-size: 18px;/*font-weight: bold;*/text-align: center;border-top: 1px solid #CCCCCC;}
+		.submit{width: 90%;background-color: #f36303;margin: 0 auto;border-radius: 8px;}
+	</style>
+</head>
+<body>
+<header></header>
+<div class="container">
+	<div class="tab-coupon">
+		<div class="coupon select">
+			可用优惠券(2)
+			<span></span>
+		</div>
+		<div class="coupon ">
+			不可用优惠券(2)
+			<span></span>
+		</div>
+	</div>
+	<div class="gamp"></div>
+	<div class="show-area">
+		<div class="switch useable show">
+			<ul >
+				<li>
+					<div class="coupon-list">
+						<div class="check">
+							<span></span>
+						</div>
+						<div class="text">
+							<h4>满100减50</h4>
+							<p>使用范围: <span>全品类(特殊商品除外)</span></p>
+							<p>有效期: <span>2015-11-10</span></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="coupon-list">
+						<div class="check">
+							<span></span>
+						</div>
+						<div class="text">
+							<h4>满100减50</h4>
+							<p>使用范围: <span>全品类(特殊商品除外)</span></p>
+							<p>有效期: <span>2015-11-10</span></p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="switch disable">
+			<ul >
+				<li>
+					<div class="coupon-list">
+						<div class="text">
+							<h4>满100减50</h4>
+							<p>使用范围: <span>全品类(特殊商品除外)</span></p>
+							<p>有效期: <span>2015-11-10</span></p><p>有效期: <span>2015-11-10</span></p><p>有效期: <span>2015-11-10</span></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="coupon-list">
+						<div class="text">
+							<h4>满100减50</h4>
+							<p>使用范围: <span>全品类(特殊商品除外)</span></p>
+							<p>有效期: <span>2015-11-10</span></p><p>有效期: <span>2015-11-10</span></p><p>有效期: <span>2015-11-10</span></p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<footer>
+	<div class="submit">
+		确&nbsp;&nbsp;定
+	</div>
+</footer>
+<script>
+	$(document).ready(function(){
+		// 切换优惠券类别
+		$(".coupon").click(function() {
+			if ($(this).hasClass('select')) {
+				console.log("已激活");
+			}else{
+				$(".select").removeClass('select');
+				$(this).addClass('select');
+				var index = $(this).index();
+				$(".show-area .switch").hide().eq(index).toggle();
+			}
+		});
+		// 选择代金券
+		$(".check").click(function() {
+			$(this).toggleClass('checking');
+		});
+		// 确定选择的优惠券
+		$(".submit").click(function() {
+			alert("确认优惠券选择");
+		});
+	})
+</script>
+</body>
+</html>

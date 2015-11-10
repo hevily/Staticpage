@@ -2,141 +2,447 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!--<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="format-detection" content="telephone=no">-->
+<meta name="format-detection" content="telephone=no">
 <title>河北省中医院美容科</title>
 <link type="text/css" rel="stylesheet" href="css/sjsy.css" media="screen" />
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/touchslide.1.1.js"></script>
+
+<script src="js/Mcommon.js"></script>
+<script src="js/iscroll.js"></script>
 </head>
 
 <body>
-<div class="box_div">
+<div class="box_div"> 
   <!--头部-->
-    <header>
-          <div class="hd_left"><a href=""><img src="images/left.png" ><em></em></a></div>
-          <div class="hd_mid"><a href=""><img src="images/logo.png" ></a></div>
-          <div class="hd_right"><a href=""><img src="images/phone.png"></a></div>
-          <div class="clearlist"></div>
-    </header>
-  <!--头部-->
+  <!--<header>
+    <div class="hd_left"><a href=""><img src="images/left.png" ><em></em></a></div>
+    <div class="hd_mid"><a href=""><img src="images/logo.png" ></a></div>
+    <div class="hd_right"><a href=""><img src="images/phone.png"></a></div>
+    <div class="clearlist"></div>
+  </header>-->
+  <script src="js/oldmmenu.js"></script>
+  <!--头部--> 
   
   <!--内容-->
   <div class="conetent">
-     <div id="slideBox" class="slideBox">
-        <div class="bd">
-            <ul>
-            <li><a href=""><img src="images/div1.jpg" width="100%" height="auto" /></a></li>
-            <li><a href=""><img src="images/div2.jpg" width="100%" height="auto" /></a></li>
-            <li><a href=""><img src="images/div3.jpg" width="100%" height="auto" /></a></li>
-            </ul>
-        </div>	
-        <div class="hd">
-            <ul></ul>
-        </div>
-<script type="text/javascript">
+    <div id="slideBox" class="slideBox">
+      <div class="bd">
+        <ul>
+          <li><a href=""><img src="images/div1.jpg" width="100%" height="auto" /></a></li>
+          <li><a href=""><img src="images/div2.jpg" width="100%" height="auto" /></a></li>
+          <li><a href=""><img src="images/div3.jpg" width="100%" height="auto" /></a></li>
+        </ul>
+      </div>
+      <div class="hd">
+        <ul>
+        </ul>
+      </div>
+      <script type="text/javascript">
 TouchSlide({ slideCell:"#slideBox",titCell:".hd ul", mainCell:".bd ul", effect:"leftLoop", delayTime:"500",interTime:"3000",autoPage:true,autoPlay:true 
 });
-</script>        	
+</script> 
     </div>
     
     <!--菜单-->
     
     <div class="navbar clearfix">
-			<ul>
-				<li class="active" id="tab1" onClick="switchTab('tab1','con1');this.blur();return false;">
-					<h3><a href="javascript(0);" >整形中心</a></h2>
-					<p>PlasticCenter</p>
-				</li>
-				<li id="tab2" onClick="switchTab('tab2','con2');this.blur();return false;">
-					<h3><a href="javascript(0);" >皮肤中心</a></h2>
-					<p>Skin center</p>
-				</li>
-				<li id="tab3" onClick="switchTab('tab3','con3');this.blur();return false;">
-					<h3><a href="javascript(0);" >注射中心</a></h2>
-					<p>Injection</p>
-				</li>
-				<li id="tab4" onClick="switchTab('tab4','con4');this.blur();return false;">
-					<h3><a href="javascript(0);" >毛发种植</a></h2>
-					<p>Hair growing</p>
-				</li>
-			</ul>
-            <div class="clearlist"></div>
-		</div>
-    <!--菜单-->
+     <!-- <ul>
+        <li class="active">
+          <h3> 整形中心
+          </h2>
+          <p>PlasticCenter</p>
+        </li>
+        <li>
+          <h3>
+          皮肤中心
+          </h2>
+          <p>Skin center</p>
+        </li>
+        <li>
+          <h3>
+          注射中心
+          </h2>
+          <p>Injection</p>
+        </li>
+        <li>
+          <h3>
+          毛发种植
+          </h2>
+          <p>Hair growing</p>
+        </li>
+      </ul>-->
+      <ul>
+         <li id="tab1"><a href="" class="onn" onClick="switchTab('tab1','con1');this.blur();return false;"><h3>整形中心</h3><p>PlasticCenter</p></a></li>
+         <li id="tab2"><a href="" onClick="switchTab('tab2','con3');this.blur();return false;"><h3>皮肤中心</h3><p>Skin center</p></a></li>
+         <li id="tab3"><a href="" onClick="switchTab('tab3','con3');this.blur();return false;"><h3>注射中心</h3><p>Injection</p></a></li>
+         <li id="tab4"><a href="" onClick="switchTab('tab4','con4');this.blur();return false;"><h3>毛发种植</h3><p>Hair growing</p></a></li>
+      </ul>
+      <div class="clearlist"></div>
+    </div>
+    <!--菜单--> 
     
     <!--整形中心-->
     <div class="anjiu" style="display:none;" id="con1">
-         <ul>
-             <li><a href="" ><img src="images/zx1.jpg"><p>隆胸</p></a></li>
-             <li><a href=""><img src="images/zx2.jpg"><p>隆鼻</p></a></li>
-             <li><a href=""><img src="images/zx3.jpg"><p>双眼皮</p></a></li>
-             <li><a href=""><img src="images/zx4.jpg"><p>磨骨</p></a></li>
-             <li><a href=""><img src="images/zx5.jpg"><p>眼部整形</p></a></li>
-             <li><a href=""><img src="images/zx6.jpg"><p>整形除皱</p></a></li>
-             <li><a href=""><img src="images/zx7.jpg"><p>吸脂减肥</p></a></li>
-             <li><a href=""><img src="images/zx8.jpg"><p>五官修复</p></a></li>             
-         </ul>
-         <div class="clearlist"></div>
+      <ul>
+        <li><a href="" ><img src="images/zx1.jpg">
+          <p>隆胸</p>
+          </a></li>
+        <li><a href=""><img src="images/zx2.jpg">
+          <p>隆鼻</p>
+          </a></li>
+        <li><a href=""><img src="images/zx3.jpg">
+          <p>双眼皮</p>
+          </a></li>
+        <li><a href=""><img src="images/zx4.jpg">
+          <p>磨骨</p>
+          </a></li>
+        <li><a href=""><img src="images/zx5.jpg">
+          <p>眼部整形</p>
+          </a></li>
+        <li><a href=""><img src="images/zx6.jpg">
+          <p>整形除皱</p>
+          </a></li>
+        <li><a href=""><img src="images/zx7.jpg">
+          <p>吸脂减肥</p>
+          </a></li>
+        <li><a href=""><img src="images/zx8.jpg">
+          <p>五官修复</p>
+          </a></li>
+      </ul>
+      <div class="clearlist"></div>
     </div>
-    <!--整形中心-->
+    <!--整形中心--> 
     <!--皮肤中心-->
-     <div class="anjiu1" style="display:none;" id="con2">
-         <ul>
-             <li><a href=""><img src="images/p1.jpg"><p>面部除皱</p></a></li>
-             <li><a href=""><img src="images/p2.jpg"><p>祛斑</p></a></li>
-             <li><a href=""><img src="images/p3.jpg"><p>祛痘祛痘印</p></a></li>
-             <li><a href=""><img src="images/p4.jpg"><p>永久脱毛</p></a></li>
-             <li><a href=""><img src="images/p5.jpg"><p>皮肤美白</p></a></li>
-             <li><a href=""><img src="images/p6.jpg"><p>皮肤纹绣</p></a></li>
-             <li><a href=""><img src="images/p7.jpg"><p>激光祛痣</p></a></li>
-             <li><a href=""><img src="images/p8.jpg"><p>激光祛胎记</p></a></li>             
-         </ul>
-         <div class="clearlist"></div>
+    <div class="anjiu1" style="display:none;" id="con2">
+      <ul>
+        <li><a href=""><img src="images/p1.jpg">
+          <p>面部除皱</p>
+          </a></li>
+        <li><a href=""><img src="images/p2.jpg">
+          <p>祛斑</p>
+          </a></li>
+        <li><a href=""><img src="images/p3.jpg">
+          <p>祛痘祛痘印</p>
+          </a></li>
+        <li><a href=""><img src="images/p4.jpg">
+          <p>永久脱毛</p>
+          </a></li>
+        <li><a href=""><img src="images/p5.jpg">
+          <p>皮肤美白</p>
+          </a></li>
+        <li><a href=""><img src="images/p6.jpg">
+          <p>皮肤纹绣</p>
+          </a></li>
+        <li><a href=""><img src="images/p7.jpg">
+          <p>激光祛痣</p>
+          </a></li>
+        <li><a href=""><img src="images/p8.jpg">
+          <p>激光祛胎记</p>
+          </a></li>
+      </ul>
+      <div class="clearlist"></div>
     </div>
-    <!--皮肤中心-->
+    <!--皮肤中心--> 
     
     <!--注射中心-->
     <div class="anjiu" style="display:none;" id="con3">
-         <ul>
-             <li><a href=""><img src="images/zs1.jpg"><p>注射除皱</p></a></li>
-             <li><a href=""><img src="images/zs2.jpg"><p>注射填充</p></a></li>
-             <li><a href=""><img src="images/zs3.jpg"><p>玻尿酸</p></a></li>
-             <li><a href=""><img src="images/zs4.jpg"><p>瘦脸针</p></a></li>
-             <li><a href=""><img src="images/zs5.jpg"><p>美白针</p></a></li>
-             <li><a href=""><img src="images/zs6.jpg"><p>注射修复</p></a></li>
-             <li><a href=""><img src="images/zs7.jpg"><p>瘦身瘦腿</p></a></li>             
-         </ul>
-         <div class="clearlist"></div>
+      <ul>
+        <li><a href=""><img src="images/zs1.jpg">
+          <p>注射除皱</p>
+          </a></li>
+        <li><a href=""><img src="images/zs2.jpg">
+          <p>注射填充</p>
+          </a></li>
+        <li><a href=""><img src="images/zs3.jpg">
+          <p>玻尿酸</p>
+          </a></li>
+        <li><a href=""><img src="images/zs4.jpg">
+          <p>瘦脸针</p>
+          </a></li>
+        <li><a href=""><img src="images/zs5.jpg">
+          <p>美白针</p>
+          </a></li>
+        <li><a href=""><img src="images/zs6.jpg">
+          <p>注射修复</p>
+          </a></li>
+        <li><a href=""><img src="images/zs7.jpg">
+          <p>瘦身瘦腿</p>
+          </a></li>
+      </ul>
+      <div class="clearlist"></div>
     </div>
-    <!--注射中心-->
+    <!--注射中心--> 
     
     <!--毛发种植-->
     <div class="anjiu1" style="display:block;" id="con4">
-         <ul>
-             <li><a href=""><img src="images/mf1.jpg"><p>发际线种植</p></a></li>
-             <li><a href=""><img src="images/mf2.jpg"><p>头发种植</p></a></li>
-             <li><a href=""><img src="images/mf3.jpg"><p>眉毛种植</p></a></li>
-             <li><a href=""><img src="images/mf4.jpg"><p>睫毛种植</p></a></li>
-             <li><a href=""><img src="images/mf5.jpg"><p>胡须种植</p></a></li>
-             <li><a href=""><img src="images/mf6.jpg"><p>私密种植</p></a></li>
-             <li><a href=""><img src="images/mf7.jpg"><p>洗纹身</p></a></li>             
-         </ul>
-         <div class="clearlist"></div>
+      <ul>
+        <li><a href=""><img src="images/mf1.jpg">
+          <p>发际线种植</p>
+          </a></li>
+        <li><a href=""><img src="images/mf2.jpg">
+          <p>头发种植</p>
+          </a></li>
+        <li><a href=""><img src="images/mf3.jpg">
+          <p>眉毛种植</p>
+          </a></li>
+        <li><a href=""><img src="images/mf4.jpg">
+          <p>睫毛种植</p>
+          </a></li>
+        <li><a href=""><img src="images/mf5.jpg">
+          <p>胡须种植</p>
+          </a></li>
+        <li><a href=""><img src="images/mf6.jpg">
+          <p>私密种植</p>
+          </a></li>
+        <li><a href=""><img src="images/mf7.jpg">
+          <p>洗纹身</p>
+          </a></li>
+      </ul>
+      <div class="clearlist"></div>
     </div>
-    <!--毛发种植-->
+    <!--毛发种植--> 
+    
+    <!--案例-->
+    <div class="anli">
+      <div class="anli1">河北省中医院经典案例<span><a href="">更多>></a></span></div>
+    </div>
+    <div class="total">
+      <div class="anli2">
+        <div id="slideBox1" class="slideBox">
+          <div class="bd">
+            <ul>
+              <li><a href=""><img src="images/a1.jpg" width="100%" height="auto" /></a></li>
+              <li><a href=""><img src="images/a2.jpg" width="100%" height="auto" /></a></li>
+              <li><a href=""><img src="images/a3.jpg" width="100%" height="auto" /></a></li>
+            </ul>
+          </div>
+          <div class="hd1">
+            <ul>
+            </ul>
+          </div>
+          <script type="text/javascript">
+TouchSlide({ slideCell:"#slideBox1",titCell:".hd1 ul", mainCell:".bd ul", effect:"leftLoop", delayTime:"500",interTime:"3000",autoPage:true,autoPlay:true 
+});
+</script> 
+        </div>
+      </div>
+    </div>
+    
+    <!--案例2-->
+    <div class="totals">
+      <div class="anli2">
+        <div id="slideBox2" class="slideBox">
+          <div class="bd1">
+            <ul>
+              <li><a href=""><!--<img src="images/a1.jpg" width="100%" height="auto" />-->
+                <p><img src="images/aa1.jpg"></p>
+                </a><a href="">
+                <p><img src="images/aa2.jpg"></p>
+                </a></li>
+              <li><a href=""><!--<img src="images/a1.jpg" width="100%" height="auto" />-->
+                <p><img src="images/aa3.jpg"></p>
+                </a><a href="">
+                <p><img src="images/aa4.jpg"></p>
+                </a></li>
+              <li><a href=""><!--<img src="images/a1.jpg" width="100%" height="auto" />-->
+                <p><img src="images/aa5.jpg"></p>
+                </a><a href="">
+                <p><img src="images/aa6.jpg"></p>
+                </a></li>
+            </ul>
+          </div>
+          <div class="hd2">
+            <ul>
+            </ul>
+          </div>
+          <script type="text/javascript">
+TouchSlide({ slideCell:"#slideBox2",titCell:".hd2 ul", mainCell:".bd1 ul", effect:"leftLoop", delayTime:"500",interTime:"3000",autoPage:true,autoPlay:true 
+});
+</script> 
+        </div>
+      </div>
+    </div>
+    <!--案例2--> 
+    <!--案例--> 
+    
+    <!--专家-->
+    <div class="anli">
+      <div class="anli1">河北省中医院专家团队<span><a href="">更多>></a></span></div>
+    </div>
+    <div class="total">
+      <div id="slideBox3" class="slideBox">
+        <div class="bd">
+          <ul>
+            <li><a href=""><img src="images/zj1.jpg" width="100%" height="auto" /></a></li>
+            <li><a href=""><img src="images/zj2.jpg" width="100%" height="auto" /></a></li>
+            <li><a href=""><img src="images/zj3.jpg" width="100%" height="auto" /></a></li>
+          </ul>
+        </div>
+        <div class="hd">
+          <ul>
+          </ul>
+        </div>
+        <script type="text/javascript">
+TouchSlide({ slideCell:"#slideBox3",titCell:".hd ul", mainCell:".bd ul", effect:"leftLoop", delayTime:"500",interTime:"3000",autoPage:true,autoPlay:true 
+});
+</script> 
+      </div>
+    </div>
+    
+    <!--专家2-->
+    <div class="total1">
+      <div id="slideBox4" class="slideBox">
+        <div class="bd6">
+          <ul>
+            <!-- <li><a href=""><img src="images/zj1.jpg" width="100%" height="auto" /></a></li>
+            <li><a href=""><img src="images/zj2.jpg" width="100%" height="auto" /></a></li>
+            <li><a href=""><img src="images/zj3.jpg" width="100%" height="auto" /></a></li>-->
+            <li>
+              <ul>
+                <li>
+                  <div><img src="images/mjt.png"></div>
+                  <p><b>毛俊涛</b>主任</p>
+                </li>
+                <li>
+                  <div><img src="images/zgx.png"></div>
+                  <p><b>张冠勋</b>主任</p>
+                </li>
+                <li>
+                  <div><img src="images/ll.png"></div>
+                  <p><b>罗磊</b>主任</p>
+                </li>
+              </ul>
+            </li>
+            
+                 <li>
+              <ul>
+                <li>
+                  <div><img src="images/lb.png"></div>
+                  <p><b>李波</b>教授</p>
+                </li>
+                <li>
+                  <div><img src="images/zrq.png"></div>
+                  <p><b>郑延清</b>教授</p>
+                </li>
+                <li>
+                  <div><img src="images/hxf.png"></div>
+                  <p><b>韩雪峰</b>教授</p>
+                </li>
+              </ul>
+            </li>
+            
+                 <li>
+              <ul>
+                <li>
+                  <div><img src="images/yxh.png"></div>
+                  <p><b>杨兴华</b>教授</p>
+                </li>
+                <li>
+                  <div><img src="images/hw.png"></div>
+                  <p><b>何伟</b>教授</p>
+                </li>
+                <li>
+                  <div><img src="images/wsh.png"></div>
+                  <p><b>王书闳</b>主任</p>
+                </li>
+              </ul>
+            </li>
+            
+                 <li>
+              <ul>
+                <li>
+                  <div><img src="images/wmz.png"></div>
+                  <p><b>吴美珍</b>教授</p>
+                </li>
+                <li>
+                  <div><img src="images/zhx.png"></div>
+                  <p><b>祝海新</b>主任</p>
+                </li>
+           <!--     <li>
+                  <div><img src="images/ll.png"></div>
+                  <p><b>罗磊</b>主任</p>
+                </li>-->
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="hd" style="display:none;">
+          <ul>
+          </ul>
+        </div>
+      </div>
+              <script type="text/javascript">
+TouchSlide({ slideCell:"#slideBox4",titCell:".hd ul", mainCell:".bd6 ul", effect:"leftLoop", delayTime:"500",interTime:"5000",autoPage:true,autoPlay:true 
+});
+</script> 
+    </div>
+    <!--专家2--> 
+    <!--专家--> 
+    
+    <!--专家预约-->
+    <div class="yuyue">
+         <div class="yuyue_top"><p>专家预约通道</p></div>
+         <div class="yuyue_mid">
+         <form action="/mail.php" method="post" name="mail_info">
+             <ul>
+                  <li>预约专家:<input type="text" value=""></li>
+                  <li>预约时间:<input type="text" value=""></li>
+                  <li>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名:<input type="text" value="" name="uswrname"></li>
+                  <li>手机号码:<input type="text" value="" name="tellphone"></li>
+                  <li>病情描述:<input type="text" value="" name="textbody"></li>
+             </ul>
+             <p class="btn"><a href=""><img src="images/btn.png"></a><span><Br/>我们在24小时内与您取得联系</span></p>
+         </form>
+         </div>
+    </div>
+    <!--专家愉悦-->
+    
+    <!--电话-->
+    <div class="total6">
+       <p class="phone"><a href=""><img src="images/phone.jpg"></a></p>
+       <p class="map"><img src="images/map.jpg">
+          <span class="map1"><a href=""><img src="images/map1.png"></a></span>
+       </p>
+    </div>
+    <!--电话-->
+    <!--信息-->
+    <div class="info">
+        <div class="info_qq">
+           <ul>
+               <li><a href=""><img src="images/qq.png"><span>电话咨询</span></a></li>
+                <li class="zxzx"><a href=""><img src="images/weixin.png"><span>在线咨询<em>26</em></span></a></li>
+                 <li><a href=""><img src="images/map3.png"><span>来院地图</span></a></li>
+           </ul>
+           <div class="clearlist"></div>
+        </div>
+        <div class="info_btm">
+            <ul>
+                <li><a href=""><img src="images/hbs.png"><span>关于医院</span></a></li>
+                <li><a href=""><img src="images/hbs1.png"><span>官方微信</span></a></li>
+                 <li><a href=""><img src="images/hbs2.png"><span>官方微博</span></a></li>
+            </ul>
+            <div class="clearlist"></div>
+        </div>
+    </div>
+    <!--信息-->
   </div>
   <!--内容-->
+  <footer>
+  
+    	<div class="footer_cler">
+            <p><strong>河北省中医院皮肤美容</strong><span><a href="javascript:;"><em>&nbsp;&nbsp; 触屏版</em></a> ｜ <a href="">电脑版</a> ｜ <a href="#top">返回顶部</a></span></p>
+         </div>
+  </footer>  
 </div>
-
-
 <script type="text/javascript">
  function switchTab(ProTag, ProBox) {
             for (i = 1; i < 5; i++) {
                 if ("tab" + i == ProTag) {
-                    document.getElementById(ProTag).getElementsByTagName("a")[0].className = "active";
+                    document.getElementById(ProTag).getElementsByTagName("a")[0].className = "onn";
                 } else {
                     document.getElementById("tab" + i).getElementsByTagName("a")[0].className = "";
                 }
