@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1"/> 
+<!-- <link rel="stylesheet" href="style/css.css" /> -->
+<title>H5手机宣传</title>
+<style>
+*{margin: 0;padding: 0;}
+html,body{height: 100%;width: 100%;max-width: 640px;}
+body{ background-image: url(imges/bj.jpg);  background-repeat: no-repeat;  background-position: center;  -webkit-background-size: 100% 100%;  background-size: 100% 100%;}
+.container{position: absolute;  height: 100%;  width: 100%;  }
+.static-area{position: fixed;width: 100%;height: 100%;}
+.static-area img{position: relative;width: 30%;top: 5%;left: 10%;}
+.animation-area {position: relative;width: 100%;height: 100%;}
+.animation-area img{position: fixed;}
+.text{position: relative;left: 50%;top: 50%;transform:translate(-50%, -100%);-webkit-transform:translate(-50%, -100%);-moz-transform:translate(-50%, -100%);-o-transform:translate(-50%, -100%);margin: 0 auto;text-align: center;color: #fff;}
+.text h2{font-size: 1em;}
+.two{top: 0;width: 30%;left: 30%;z-index: 0;}
+.four{left: 50%;top: 50%;width: 40%; transform:translateX(-50%);-moz-transform:translateX(-50%);-webkit-transform:translateX(-50%);-o-transform:translateX(-50%); width:30%;}
+.five{left: 0;bottom: 0;height: 25%;}
+.six{right: 0;bottom: 0;height: 35%;}
+.two{     animation:slideintwo 3s 0.5s infinite;
+  -webkit-animation:slideintwo 3s 0.5s infinite;
+      -moz-animation:slideintwo 3s 0.5s infinite;
+      -o-animation:slideintwo 3s 0.5s infinite;
+}
+.four{    animation:slideinfour 4s 3.3s infinite;
+  -webkit-animation:slideinfour 4s 3.3s infinite;
+      -moz-animation:slideinfour 4s 3.3s infinite;
+        -o-animation:slideinfour 4s 3.3s infinite;
+}
+.five{    animation:slideinfive 3s 0.5s infinite;
+  -webkit-animation:slideinfive 3s 0.5s infinite;
+      -moz-animation:slideinfive 3s 0.5s infinite;
+        -o-animation:slideinfive 3s 0.5s infinite;
+}
+.six{     animation:slideinsix 3s 0.5s infinite;
+  -webkit-animation:slideinsix 3s 0.5s infinite;
+      -moz-animation:slideinsix 3s 0.5s infinite;
+        -o-animation:slideinsix 3s 0.5s infinite;
+}
+/*animation two*/
+  @keyframes slideintwo{
+    0%    {left:100%;opacity: 0;}
+    100%  {left:30%;opacity: 1;}
+  }
+  @-webkit-keyframes slideintwo{
+    0%    {left:100%;opacity: 0;}
+    100%  {left:30%;opacity: 1;}
+  }
+  @-moz-keyframes slideintwo{
+    0%    {left:100%;opacity: 0;}
+    100%  {left:30%;opacity: 1;}
+  }
+  @-o-keyframes slideintwo{
+    0%    {left:100%;opacity: 0;}
+    100%  {left:30%;opacity: 1;}
+  }
+/*animation four*/
+  @keyframes slideinfour{
+    0%    {opacity: 0;}
+    100%  {opacity: 1;}
+  }
+  @-webkit-keyframes slideinfour{
+    0%    {opacity: 0;}
+    100%  {opacity: 1;}
+  }
+  @-moz-keyframes slideinfour{
+    0%    {opacity: 0;}
+    100%  {opacity: 1;}
+  }
+  @-o-keyframes slideinfour{
+    0%    {opacity: 0;}
+    100%  {opacity: 1;}
+  }
+  /*animation five*/
+  @keyframes slideinfive{
+    0%    {left:100%;opacity: 0;}
+    100%  {left:0%;opacity: 1;}
+  }
+  @-webkit-keyframes slideinfive{
+    0%    {left:100%;opacity: 0;}
+    100%  {left:0%;opacity: 1;}
+  }
+  @-moz-keyframes slideinfive{
+    0%    {left:100%;opacity: 0;}
+    100%  {left:0%;opacity: 1;}
+  }
+  @-o-keyframes slideinfive{
+    0%    {left:100%;opacity: 0;}
+    100%  {left:0%;opacity: 1;}
+  }
+  /*animation six*/
+  @keyframes slideinsix{
+    0%    {right: 100%;opacity: 0;}
+    100%  {right: 0;opacity: 1;}
+  }
+  @-webkit-keyframes slideinsix{
+    0%    {right: 100%;opacity: 0;}
+    100%  {right: 0;opacity: 1;}
+  }
+  @-moz-keyframes slideinsix{
+    0%    {right: 100%;opacity: 0;}
+    100%  {right: 0;opacity: 1;}
+  }
+  @-o-keyframes slideinsix{
+    0%    {right: 100%;opacity: 0;}
+    100%  {right: 0;opacity: 1;}
+  }
+
+</style>
+</head>
+<body>
+ <header></header>
+ <div class="container">
+    <div class="static-area">
+      <img src="imges/logo.png"  alt="logo">
+    </div>
+    <div class="text">
+        <h2 class="h2">五大专科 知名机构汇集<br>
+            下载APP一步就到
+        </h2>
+        <h5 class="h4">洗牙 医疗美容 中医推拿 免费惠赠<br>
+            医生机构 可以离你最近 也可以是你最<span>喜欢</span>
+        </h5>
+        <h5 class="p">注册送积分 积分很值钱<br>
+           就医下单能送钱 是现拿的
+        </h5>
+      </div>
+ </div>
+  <div class="animation-area">
+      <img class="two" src="imges/2.png" alt="顶部三角" />
+      <img class="four" src="imges/4.jpg" alt="qrcore" />
+      <img class="five" src="imges/5.png"  alt="左下角梯形" />
+      <img class="six" src="imges/6.png"  alt="右下角三角" />
+    </div>
+
+ <footer></footer>
+</body>
+  </html>

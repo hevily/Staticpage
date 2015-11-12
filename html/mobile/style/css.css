@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+<!--移动端h5首页-->
+html{margin:0; paddin:0; height:100%;}
+body{ margin:0px; padding:0px; width:100%; height:100%; overflow:hidden; }
+.main{ overflow:hidden; position:relative; height:100%;}
+.main-level{ width:100%;position: relative; margin-top:45%;}
+.main-h1{ font-family:"微软雅黑"; font-size:2.5em;  color:#FFFFFF; text-align:center;}
+.main-h2{ font-family:"微软雅黑"; font-size:1.5em; color:#FFFFFF;  text-align:center;}
+.main-h4{ font-family:"宋体"; color:#FFFFFF; font-size:1em;  text-align:center;}
+.main-imgz{ width:100%}
+.main-img1{ width:20%; position:relative; left:10%;}
+.main-img2{ width:40%; margin-left:4%;}
+.main-img3{ width:100%; position:absolute;}
+.main-img4{ width:20%; display:block; margin:0 auto;}
+.main-img5{ width:25%; position:relative; padding-top:21%;}
+.main-img6{ width:20%; position:absolute; left:80%; top:90%;}
