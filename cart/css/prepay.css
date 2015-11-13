@@ -1,0 +1,7 @@
+.receivemsg{position: relative;padding:5px 25px 5px 10px;background-color: #FFFAF4;}
+.receiver{float: left;font-size: 16px;}
+.receiver-phone{float: right;}
+.receiver-address{clear: both;padding-top: 8px;font-size: 14px;}
+.receivemsg img{position: absolute;width: 10px;height: 16px;right: 10px;top: 50%;transform:translateY(-50%);-webkit-transform:translateY(-50%);}
+.bgi{height: 5px;background-image: url(../img/U.png);-webkit-background-size: contain;background-size: contain;}
+.gampcart{background-color: #DDDEE3;height: 12px;border-bottom: 1px solid #c9c9c9;}
