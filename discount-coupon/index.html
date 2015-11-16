@@ -9,21 +9,55 @@
 	<style>
 		*{margin: 0;padding: 0;box-sizing:border-box;font-family: 'Microsoft YaHei','Hiragino Sans GB',Helvetica,Arial,'Lucida Grande',sans-serif;}
   		html,body{height: 100%;}
-  		.container{height: 100%;background-color: #F4F4F4;}
+  		.container{height: 100%;background-color: #f9f9f9;}
   		.gamp{height: 15px;/*border-bottom: 1px solid #cfcfcf;*/background-color: #F4F4F4;}
 		.tab-coupon{height: 50px;background-color: #FEF9F5;border-bottom: 1px solid #D4D3D8;color: #605E5D;}
-		.coupon{float: left;width: 50%;line-height: 50px;text-align: center;font-size: 16px;position: relative;}
+		.coupon{float: left;width: 33.33333%;line-height: 50px;text-align: center;font-size: 16px;position: relative;}
 		.coupon span{width: 40px;height: 5px;position: absolute;bottom: 3px;left: 50%;transform:translateX(-50%);}
 		.select{color: #f36303; font-weight: bold;}
 		.select span{background-color: #f36303;}
 		.switch{display: none;}.show{display: block;}
-		.switch ul li{list-style: none;border-bottom: 1px solid #F1F1F1;border-top: 1px solid #F1F1F1;margin-bottom: 15px;background-color: #fff;}
-		.useable .coupon-list{height: 80px;padding:10px 0;}
+
+
+		.switch ul{padding: 0 10px;}
+
+
+		.switch ul li{list-style: none;border-bottom: 1px solid #F1F1F1;margin-bottom: 15px;}
+		.useable .coupon-list{padding:10px 0;}
 		.disable .coupon-list{padding: 10px}
 		.check{height: 100%;float: left;width: 50px;	}
 		.check span{height: 20px;width: 20px;border: 1px solid #cfcfcf;border-radius: 50%;display: block;left: 50%;top: 50%;transform:translate(-50%,-50%);position: relative;}
 		.checking span{background-image: url(https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/images/icon-svg/iconfont-check.svg);background-size: contain;background-color: #f36303;}
 		.coupon-list .text p{font-size: 14px;color: #A7A7A7;height: 17px;}
+
+
+
+
+
+		.coupon-list{padding: 0 !important;border-radius: 5px;overflow: hidden;background-color: #fff;position: relative;}
+		.topcolor{position: relative;height: 20px;background-color: #FFD1B9;z-index: 99;}
+		.topcolor img{position: absolute;height: 8px;width: 15px;left: 50%;top: 0;transform:translateX(-50%);-webkit-transform:translateX(-50%);-moz-transform:translateX(-50%);}
+		.discount-desc{    height: 55px;  padding: 5px 10px 5px 25px;}
+		.discount-money{float: left;color:#f36303;font-size: 25px; font-weight: bold;position: relative;top: 50%;transform:translateY(-50%);-webkit-transform:translateY(-50%);-moz-transform:translateY(-50%);}
+		.discount-money span:nth-child(1){font-size: 16px;font-weight: normal;position: absolute;top: 0;width: 10px;}
+		.discount-info{text-align: right;color: #3f3f3f;}
+		.discount-info p:nth-child(1){color:#EE7641;}
+		.bottomcolor {position: relative;color: #818181;}
+		.bottomcolor .line-circle{position: absolute;height: 12px;top: -5px;width: 100%;}
+		.line-circle{background-image: url(circle.png);background-repeat: repeat-x;-webkit-background-size: 13px 5px;
+		background-size: 13px 5px;background-position: 4px 2px;}
+		.bottomcolor .line-circle img{position: absolute;height: 10px;width: 20px;}
+		.bottomcolor .line-circle img:nth-child(1){left: 0;transform:translateX(-25%) rotate(-90deg);}
+		.bottomcolor .line-circle img:nth-child(2){right: 0;transform:translateX(25%) rotate(90deg);}
+		.bottomcolor{ height: 35px; background-color: #CCCCCC;line-height: 35px;text-align: right;padding-right: 10px; }
+		.discountstatus{  display: none;   position: absolute;color: #fff;font-size: 12px;padding: 3px 0;  background-color: #FF4A4A; transform: rotate(-34deg); -webkit-transform: rotate(-34deg); -moz-transform: rotate(-34deg);  -o-transform: rotate(-34deg);  width: 100px;  left: -17px;   text-indent: 20px;   z-index: 100;  top: 7px;}
+		.expireing .discountstatus{display: block;}
+		.unuseable .topcolor{background-color: #CCCCCC;}
+		.unuseable .discount-money,.unuseable .discount-info p:nth-child(1){color: #CCCCCC;}
+		.unuseable .discount-info{color: #686868;}
+		.unuseable .bottomcolor{color: #A7A7A7;}
+		.unuseable 
+
 		footer{position: fixed;bottom: 0;width: 100%;height: 50px;padding:5px;line-height: 40px;color: #fff;font-size: 18px;/*font-weight: bold;*/text-align: center;border-top: 1px solid #CCCCCC;}
 		.submit{width: 90%;background-color: #f36303;margin: 0 auto;border-radius: 8px;}
 	</style>
@@ -33,61 +67,270 @@
 <div class="container">
 	<div class="tab-coupon">
 		<div class="coupon select">
-			可用优惠券(2)
+			未使用(2)
 			<span></span>
 		</div>
 		<div class="coupon ">
-			不可用优惠券(2)
+			已使用(2)
+			<span></span>
+		</div>
+		<div class="coupon ">
+			已过期(2)
 			<span></span>
 		</div>
 	</div>
 	<div class="gamp"></div>
 	<div class="show-area">
-		<div class="switch useable show">
+		<div class="switch show">
 			<ul >
-				<li>
+				<li class="expireing">
 					<div class="coupon-list">
-						<div class="check">
-							<span></span>
+						<div class="discountstatus">
+								即将过期
 						</div>
-						<div class="text">
-							<h4>满100减50</h4>
-							<p>使用范围: <span>全品类(特殊商品除外)</span></p>
-							<p>有效期: <span>2015-11-10</span></p>
+						<div class="topcolor">
+							<img src="half-circle.png" alt="bigcircle">
+						</div>
+						<div class="discount-desc">
+							<div class="discount-money">
+								<span>¥</span>
+								<span>&nbsp;&nbsp;30</span>
+							</div>
+							<div class="discount-info">
+								<p>用券范围</p>
+								<p>用券条件如，满100可用</p>
+							</div>
+						</div>
+						<div class="bottomcolor">
+							<div class="line-circle">
+								<img src="half-circle.png" alt="img-left" />
+								<img src="half-circle.png" alt="img-left" />
+							</div>
+							2015-11-16 过期
 						</div>
 					</div>
 				</li>
 				<li>
 					<div class="coupon-list">
-						<div class="check">
-							<span></span>
+						<div class="discountstatus">
+								即将过期
 						</div>
-						<div class="text">
-							<h4>满100减50</h4>
-							<p>使用范围: <span>全品类(特殊商品除外)</span></p>
-							<p>有效期: <span>2015-11-10</span></p>
+						<div class="topcolor">
+							<img src="half-circle.png" alt="bigcircle">
+						</div>
+						<div class="discount-desc">
+							<div class="discount-money">
+								<span>¥</span>
+								<span>&nbsp;&nbsp;30</span>
+							</div>
+							<div class="discount-info">
+								<p>用券范围</p>
+								<p>用券条件如，满100可用</p>
+							</div>
+						</div>
+						<div class="bottomcolor">
+							<div class="line-circle">
+								<img src="half-circle.png" alt="img-left" />
+								<img src="half-circle.png" alt="img-left" />
+							</div>
+							2015-11-16 过期
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="coupon-list">
+						<div class="discountstatus">
+								即将过期
+						</div>
+						<div class="topcolor">
+							<img src="half-circle.png" alt="bigcircle">
+						</div>
+						<div class="discount-desc">
+							<div class="discount-money">
+								<span>¥</span>
+								<span>&nbsp;&nbsp;30</span>
+							</div>
+							<div class="discount-info">
+								<p>用券范围</p>
+								<p>用券条件如，满100可用</p>
+							</div>
+						</div>
+						<div class="bottomcolor">
+							<div class="line-circle">
+								<img src="half-circle.png" alt="img-left" />
+								<img src="half-circle.png" alt="img-left" />
+							</div>
+							2015-11-16 过期
 						</div>
 					</div>
 				</li>
 			</ul>
 		</div>
-		<div class="switch disable">
+		<div class="switch">
 			<ul >
-				<li>
+				<li class="unuseable">
 					<div class="coupon-list">
-						<div class="text">
-							<h4>满100减50</h4>
-							<p>使用范围: <span>全品类(特殊商品除外)</span></p>
-							<p>有效期: <span>2015-11-10</span></p><p>有效期: <span>2015-11-10</span></p><p>有效期: <span>2015-11-10</span></p>
+						<div class="discountstatus">
+								即将过期
+						</div>
+						<div class="topcolor">
+							<img src="half-circle.png" alt="bigcircle">
+						</div>
+						<div class="discount-desc">
+							<div class="discount-money">
+								<span>¥</span>
+								<span>&nbsp;&nbsp;30</span>
+							</div>
+							<div class="discount-info">
+								<p>用券范围</p>
+								<p>用券条件如，满100可用</p>
+							</div>
+						</div>
+						<div class="bottomcolor">
+							<div class="line-circle">
+								<img src="half-circle.png" alt="img-left" />
+								<img src="half-circle.png" alt="img-left" />
+							</div>
+							2015-11-16 过期
 						</div>
 					</div>
 				</li>
-				<li>
+				<li class="unuseable">
 					<div class="coupon-list">
-						<div class="text">
-							<h4>满100减50</h4>
-							<p>使用范围: <span>全品类(特殊商品除外)</span></p>
-							<p>有效期: <span>2015-11-10</span></p><p>有效期: <span>2015-11-10</span></p><p>有效期: <span>2015-11-10</span></p>
+						<div class="discountstatus">
+								即将过期
+						</div>
+						<div class="topcolor">
+							<img src="half-circle.png" alt="bigcircle">
+						</div>
+						<div class="discount-desc">
+							<div class="discount-money">
+								<span>¥</span>
+								<span>&nbsp;&nbsp;30</span>
+							</div>
+							<div class="discount-info">
+								<p>用券范围</p>
+								<p>用券条件如，满100可用</p>
+							</div>
+						</div>
+						<div class="bottomcolor">
+							<div class="line-circle">
+								<img src="half-circle.png" alt="img-left" />
+								<img src="half-circle.png" alt="img-left" />
+							</div>
+							2015-11-16 过期
+						</div>
+					</div>
+				</li>
+				<li class="unuseable">
+					<div class="coupon-list">
+						<div class="discountstatus">
+								即将过期
+						</div>
+						<div class="topcolor">
+							<img src="half-circle.png" alt="bigcircle">
+						</div>
+						<div class="discount-desc">
+							<div class="discount-money">
+								<span>¥</span>
+								<span>&nbsp;&nbsp;30</span>
+							</div>
+							<div class="discount-info">
+								<p>用券范围</p>
+								<p>用券条件如，满100可用</p>
+							</div>
+						</div>
+						<div class="bottomcolor">
+							<div class="line-circle">
+								<img src="half-circle.png" alt="img-left" />
+								<img src="half-circle.png" alt="img-left" />
+							</div>
+							2015-11-16 过期
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="switch">
+			<ul >
+				<li class="unuseable">
+					<div class="coupon-list">
+						<div class="discountstatus">
+								即将过期
+						</div>
+						<div class="topcolor">
+							<img src="half-circle.png" alt="bigcircle">
+						</div>
+						<div class="discount-desc">
+							<div class="discount-money">
+								<span>¥</span>
+								<span>&nbsp;&nbsp;30</span>
+							</div>
+							<div class="discount-info">
+								<p>用券范围</p>
+								<p>用券条件如，满100可用</p>
+							</div>
+						</div>
+						<div class="bottomcolor">
+							<div class="line-circle">
+								<img src="half-circle.png" alt="img-left" />
+								<img src="half-circle.png" alt="img-left" />
+							</div>
+							2015-11-16 过期
+						</div>
+					</div>
+				</li>
+				<li class="unuseable">
+					<div class="coupon-list">
+						<div class="discountstatus">
+								即将过期
+						</div>
+						<div class="topcolor">
+							<img src="half-circle.png" alt="bigcircle">
+						</div>
+						<div class="discount-desc">
+							<div class="discount-money">
+								<span>¥</span>
+								<span>&nbsp;&nbsp;30</span>
+							</div>
+							<div class="discount-info">
+								<p>用券范围</p>
+								<p>用券条件如，满100可用</p>
+							</div>
+						</div>
+						<div class="bottomcolor">
+							<div class="line-circle">
+								<img src="half-circle.png" alt="img-left" />
+								<img src="half-circle.png" alt="img-left" />
+							</div>
+							2015-11-16 过期
+						</div>
+					</div>
+				</li>
+				<li class="unuseable">
+					<div class="coupon-list">
+						<div class="discountstatus">
+								即将过期
+						</div>
+						<div class="topcolor">
+							<img src="half-circle.png" alt="bigcircle">
+						</div>
+						<div class="discount-desc">
+							<div class="discount-money">
+								<span>¥</span>
+								<span>&nbsp;&nbsp;30</span>
+							</div>
+							<div class="discount-info">
+								<p>用券范围</p>
+								<p>用券条件如，满100可用</p>
+							</div>
+						</div>
+						<div class="bottomcolor">
+							<div class="line-circle">
+								<img src="half-circle.png" alt="img-left" />
+								<img src="half-circle.png" alt="img-left" />
+							</div>
+							2015-11-16 过期
 						</div>
 					</div>
 				</li>
