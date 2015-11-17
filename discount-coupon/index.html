@@ -9,7 +9,7 @@
 	<style>
 		*{margin: 0;padding: 0;box-sizing:border-box;font-family: 'Microsoft YaHei','Hiragino Sans GB',Helvetica,Arial,'Lucida Grande',sans-serif;}
   		html,body{height: 100%;}
-  		.container{height: 100%;background-color: #f9f9f9;}
+  		.container{height: 100%;background-color: #f9f9f9;padding-top: 20px;}
   		.gamp{height: 15px;/*border-bottom: 1px solid #cfcfcf;*/background-color: #F4F4F4;}
 		.tab-coupon{height: 50px;background-color: #FEF9F5;border-bottom: 1px solid #D4D3D8;color: #605E5D;}
 		.coupon{float: left;width: 33.33333%;line-height: 50px;text-align: center;font-size: 16px;position: relative;}
@@ -58,13 +58,24 @@
 		.unuseable .bottomcolor{color: #A7A7A7;}
 		.unuseable 
 
-		footer{position: fixed;bottom: 0;width: 100%;height: 50px;padding:5px;line-height: 40px;color: #fff;font-size: 18px;/*font-weight: bold;*/text-align: center;border-top: 1px solid #CCCCCC;}
+		footer{position: fixed;bottom: 0;width: 100%;height: 50px;padding:5px;line-height: 40px;color: #fff;font-size: 18px;text-align: center;border-top: 1px solid #CCCCCC;}
 		.submit{width: 90%;background-color: #f36303;margin: 0 auto;border-radius: 8px;}
+		.tab-coupon{clear:both;}
+
+		.tabchange{width: 202px;height: 35px;margin: 0 auto;font-size: 16px;margin-bottom: 10px;}
+		.tab{float: left;width: 100px;border: 1px solid #F5834D;line-height: 33px;text-align: center;}
+		.tab:nth-child(1){border-right: none;border-top-left-radius: 5px;border-bottom-left-radius: 5px;}
+		.tab:nth-child(2){border-left: none;border-top-right-radius: 5px;border-bottom-right-radius: 5px;}
+		.tab.active {background-color: #F5834D;color: #fff;}
 	</style>
 </head>
 <body>
 <header></header>
 <div class="container">
+	<div class="tabchange">
+		<div class="tab active" onclick="window.location='#'">优惠券</div>
+		<div class="tab" onclick="window.location='#'">代金券</div>
+	</div>
 	<div class="tab-coupon">
 		<div class="coupon select">
 			未使用(2)
@@ -339,9 +350,9 @@
 	</div>
 </div>
 <footer>
-	<div class="submit">
+	<!-- <div class="submit">
 		确&nbsp;&nbsp;定
-	</div>
+	</div> -->
 </footer>
 <script>
 	$(document).ready(function(){

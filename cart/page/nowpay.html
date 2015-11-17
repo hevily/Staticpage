@@ -6,24 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <meta keywords="和沐传媒 影视传媒 电影拍摄 拍摄管理 超市购物 购物车 结算中心 "/>
     <meta description="电影 影视 剧集 "/>
-    <link rel="stylesheet" href="../../Public/base.css" />
+    <!-- <link rel="stylesheet" href="../../Public/base.css" /> -->
+    <link rel="stylesheet" href="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/css/base.css" />
 	<title>店铺名称-付款对象</title>
 	<!-- <link rel="stylesheet" href="../css/prepay.css" /> -->
 	<style>
+		body{background-color: #DCDEE3;}
+		.container{background-color: #fff;}
 		.storemsg{padding: 0 10px;padding-top: 10px;}
 		.storemsg img{width: 80px;height: 80px;float: left;}
 		.storeinfo{vertical-align: middle;display: inline-block;padding: 15px 0;padding-left: 10px;line-height: 25px;}
-		.order-money{    border-radius: 5px;    border: 1px solid #cfcfcf;    padding: 6px 4px;    font-size: 16px;    height: 50px;    line-height: 36px;margin: 14px 0;}
-		.order-money span.no{font-size: 16px;color: #f36303;}
+		.storeinfo h3{font-weight: normal;}
+		.storeinfo p{color: #929292;}
+		.order-money{    border-radius: 5px;    border: 1px solid #909090;    padding: 6px 4px;    font-size: 16px;    height: 50px;    line-height: 36px;margin: 14px 0;}
+		.order-money span.no{font-size: 16px;color: #383838;}
 		.order-money span:nth-child(2){float: right;margin-right: 5px;font-size: 30px;color: #cccccc;}
-		.order-money span:nth-child(2) span{color: #f36303;}
-		.gamptb{background-color: #DCDEE3;}
-		.discount-voucher {padding: 10px 10px;padding-top: 15px;border-bottom: 1px solid #9c9c9c;}
-		.discount-voucher h3{font-weight: normal;}
-		.discount-voucher p{padding: 5px 0;color: #949494;}
+		
+		.order-money span:nth-child(2) input{border: none;height: 36px;top: -5px;position: relative;outline: none;font-size: 18px;color: #f36303;}
+		.gamptb{background-color: #DCDEE3;border-color: #c9c9c9;}
+		.discount-voucher {padding: 10px 10px;padding-top: 15px;border-bottom: 1px solid #c9c9c9;position: relative;padding-right: 30px;}
+		.discount-voucher:active{background-color: #cfcfcf;}
+		.discount-voucher h3{font-weight: normal;font-size: 18px;}
+		.discount-voucher p{padding: 5px 0;color: #949494;font-size: 14px;}
 		.discount-voucher p span{float: right;}
-		.actual-pay {padding: 6px 10px;}
-		.actual-pay h3{float: left;font-weight: normal;}
+		.discount-voucher img{position: absolute;right: 10px;top: 50%;transform:translateY(-50%);-webkit-transform:translateY(-50%);-moz-transform:translateY(-50%);}
+		.actual-pay {padding: 6px 10px;border-bottom: 1px solid #C9C9C9;}
+		.actual-pay h3{float: left;font-weight: normal;font-size: 18px;}
 		.actual-pay h3 span{font-size: 16px;color: #f36303;}
 		.actual-pay a{float: right;display: block;width: 80px;background-color: #0E90D2;text-decoration: none;font-size: 18px;color: #fff;padding:4px;line-height: 30px;text-align: center;vertical-align: middle;margin-top: 5px;}
 	</style>
@@ -39,13 +47,14 @@
 			</div>
 			<div class="order-money">
 				<span class="no">消费总额</span>
-				<span><span>5000.00</span>&nbsp;¥</span>
+				<span><input type="text">&nbsp;¥</span>
 			</div>
 		</div>
 		<div class="gamptb"></div>
 		<div class="discount-voucher">
 			<h3>优惠券/代金券</h3>
-			<p>满50减50 <span>2015.11.12-2015.11.16</span></p>
+			<p>满50减5元 <span>2015.11.12-2015.11.16</span></p>
+			<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/img/sanjiao.png" alt="for-more" />
 		</div>
 		<div class="actual-pay clearfix">
 			<h3>实付款:<br/>

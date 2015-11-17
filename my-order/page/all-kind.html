@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../../Public/base.css" />
+	<title>我的订单</title>
+	<style>
+		.container{padding-top: 20px;}
+		.tabchange{width: 202px;height: 35px;margin: 0 auto;font-size: 16px;margin-bottom: 10px;}
+		.tab{float: left;width: 100px;border: 1px solid #F5834D;line-height: 33px;text-align: center;}
+		.tab:nth-child(1){border-right: none;border-top-left-radius: 5px;border-bottom-left-radius: 5px;}
+		.tab:nth-child(2){border-left: none;border-top-right-radius: 5px;border-bottom-right-radius: 5px;}
+		.tab.active {background-color: #F5834D;color: #fff;}
+	</style>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="all-kind">
+			<div class="tabchange">
+				<div class="tab active" onclick="window.location='#'">全部</div>
+				<div class="tab" onclick="window.location='#'">分类</div>
+			</div>
+			<div class="showarea">
+				<div class="tabtoggle show">
+					1
+				</div>
+				<div class="tabtoggle">
+					2
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer></footer>
+	<script src="https://staticcdn.yshjie.com/cdn/librarypath/jquery/jquery-1.11.1.js"></script>
+	<script>
+	$(document).ready(function () {
+		function tabpanelToggle(controlparentBox,controlchildBox,showParentbox,showChildbox){
+			$("."+controlparentBox+" ."+controlparentBox).click(function(){
+				var index = $(this).index();
+				console.log(index);
+				$("."+showParentbox).find("."+showChildbox).eq(index).toggle();
+			})
+		}
+	})
+	</script>
+</body>
+</html>
