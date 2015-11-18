@@ -7,28 +7,36 @@
     <link rel="stylesheet" href="../../Public/base.css" />
 	<title>我的订单</title>
 	<style>
-		.container{padding-top: 20px;}
+		.container{padding-top: 20px;max-width:640px;}
 		.tabchange{width: 202px;height: 35px;margin: 0 auto;font-size: 16px;margin-bottom: 10px;}
 		.tab{float: left;width: 100px;border: 1px solid #F5834D;line-height: 33px;text-align: center;}
 		.tab:nth-child(1){border-right: none;border-top-left-radius: 5px;border-bottom-left-radius: 5px;}
 		.tab:nth-child(2){border-left: none;border-top-right-radius: 5px;border-bottom-right-radius: 5px;}
 		.tab.active {background-color: #F5834D;color: #fff;}
+		.tabtoggle{display: none;}
+		.show{display: block;}
+		.h100{height:100%;}
+		.h90{height: 90%;}
 	</style>
 </head>
 <body>
 	<header></header>
-	<div class="container">
-		<div class="all-kind">
+	<div class="container h100">
+		<div class="all-kind h100">
 			<div class="tabchange">
 				<div class="tab active" onclick="window.location='#'">全部</div>
 				<div class="tab" onclick="window.location='#'">分类</div>
 			</div>
-			<div class="showarea">
-				<div class="tabtoggle show">
-					1
+			<div class="showarea h90">
+				<div class="tabtoggle all show h100">
+					<iframe src="/statichtml/bjmovie01/estores/Cart/orderlist#All" frameborder="0" style="width:100%;height:100%;"></iframe>
 				</div>
-				<div class="tabtoggle">
-					2
+				<div class="tabtoggle kind h100">
+					<ul class="kinds">
+						<li class="item"><a href="/statichtml/bjmovie01/estores/Cart/orderlist#All" frameborder="0" style="width:100%;height:100%;"><img src="../img/icon.png" alt="商品购物">商品购物</a></li>
+						<li class="item"><a href="http://localhost/statichtml/bjmovie01/estores/Voucher/Index/"><img src="../img/icon.png" alt="代金券/团购">代金券/团购</a></li>
+						<li class="item"><a href="javascript:;"><img src="../img/icon.png" alt="立付">立付</a></li>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -37,11 +45,17 @@
 	<script src="https://staticcdn.yshjie.com/cdn/librarypath/jquery/jquery-1.11.1.js"></script>
 	<script>
 	$(document).ready(function () {
+		tabpanelToggle("tabchange","tab","showarea","tabtoggle");
 		function tabpanelToggle(controlparentBox,controlchildBox,showParentbox,showChildbox){
-			$("."+controlparentBox+" ."+controlparentBox).click(function(){
+			$("."+controlparentBox+" ."+controlchildBox).click(function(){
+				// console.log(this);// console.log(index);
 				var index = $(this).index();
-				console.log(index);
-				$("."+showParentbox).find("."+showChildbox).eq(index).toggle();
+				$("."+showParentbox).find("."+showChildbox).hide().eq(index).show();
+				if (index===0) {
+					$("."+showChildbox).eq(index).get("http://localhost/statichtml/bjmovie01/estores/Cart/orderlist#All");
+				} else if (index===1) {
+					console.log("分类");
+				};
 			})
 		}
 	})
