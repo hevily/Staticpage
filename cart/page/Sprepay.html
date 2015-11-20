@@ -46,15 +46,78 @@
 		 		畅美美妆
 		 	</div>
 		 	<div class="goodsmsg">
-		 		<div class="goodsimg">
-		 			<img src="../img/good.png" alt="物品图片">
-		 		</div>
-				<div class="goodsinfo">
-					<p class="goodsname">苹果，香蕉，荔枝。苹果，香蕉，荔枝。苹果，香蕉，荔枝。苹果，香蕉，荔枝。苹果，香蕉，荔枝。</p>
+				<div class="media" onclick="window.location.href=''">
+					<div class="media-left media-middle goodsimg">
+					    <a href="#"><img class="media-object" src="../img/good.png"  alt="商品图标"></a>
+					</div>
+					<div class="media-body goodsname">
+						<p>商品名称商品名称商品名称商品名称</p>
+						<p class="money">¥368.09</p>
+					</div>
+					<div class="media-right media-bottom">
+						<span class="Num">x999</span>
+					</div>
+				</div>
+				<div class="delgoods">
+					<p>该商品不支持港澳台地区购买<a href="javascript:;">删除</a></p>
 				</div>
 		 	</div>
 		 </div>
+		 <div class="gamptbcart"></div>
+		 <div class="payway">
+		 	<div class="title">
+		 		付款方式
+		 	</div>
+		 	<div class="payitems">
+		 		<ul>
+		 			<li class="paradiu selecting">
+		 				在线支付
+		 				<span></span>
+		 			</li>
+		 			<li class="paradiu ">
+			 			货到付款
+			 			<span></span>
+		 			</li>
+		 			<li class="arrivetime">
+		 				<div class="arrivetimetitle">
+		 					送达时间
+		 				</div>
+		 				<div class="arrivetimepicker">
+		 					<p><input type="datetime-local" /></p>
+		 				</div>
+		 			</li>
+		 		</ul>
+		 	</div>
+		 </div>
+		 <div class="gamptbcart"></div>
+	 	<div class="payitems">
+	 		<ul>
+	 			<li class="transport">
+	 				运送方式
+	 			</li>
+	 			<li class="leavemsg">
+		 			给卖家留言
+	 			</li>
+	 			<li class="">
+	 				优惠券
+		 			
+	 		</ul>
+	 	</div>
 	</div>
 	<footer></footer>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$(".paradiu").click(function(){
+			$(".selecting").removeClass("selecting");
+			$(this).addClass("selecting");
+		});
+		$(".arrivetime").click(function(){
+			alert($(this).find("input").val());
+			// alert("被点击");
+			// $(this).find("input").click();
+		})
+	})
+	</script>
 </body>
 </html>

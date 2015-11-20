@@ -5,9 +5,24 @@
 .receivemsg img{position: absolute;width: 10px;height: 16px;right: 10px;top: 50%;transform:translateY(-50%);-webkit-transform:translateY(-50%);}
 .bgi{height: 5px;background-image: url(../img/U.png);-webkit-background-size: contain;background-size: contain;}
 .gampcart{background-color: #DDDEE3;height: 12px;border-bottom: 1px solid #c9c9c9;}
+.gamptbcart{background-color: #DDDEE3;height: 12px;border-bottom: 1px solid #c9c9c9;border-top: 1px solid #c9c9c9;}
 .storeinfo{padding: 5px 10px;font-size: 16px;font-weight: bold;border-bottom: 1px solid #c9c9c9;}
 .storeinfo img{width: 20px;vertical-align: bottom;}
-.goodsmsg{overflow: hidden;}
-.goodsimg{width: 90px;height: 90px;background-color: #cfcfcf;}
-.goodsimg img{max-height: 100%;max-width: 100%;}
-.goodsimg{float: left;}
+.goodsmsg{padding: 10px 10px 4px 10px}
+.money{color: #f36303;}
+.Num{float: right;color: #909090}
+.goodsimg .media-object{border-radius: 5px;border: 1px solid #cfcfcf;}
+.media-bottom{padding-bottom: 10px;}
+.delgoods{color:#8f8f8f;font-size: 12px;height: 30px;padding-top: 16px; }
+.delgoods a{display: inline-block;float: right;background-color: #DD5152;color: #fff;border-radius: 3px;padding: 6px 8px; font-size: 14px;margin-top: -18px;text-decoration: none;}
+.payway{padding-left: 10px;font-size: 16px;}
+.payway .title{font-weight: bold;border-bottom: 1px solid #eaeaea;line-height: 40px;}
+.payitems ul li{border-bottom: 1px solid #EAEAEA;padding-right: 10px;line-height: 40px;}
+.payitems span{height: 20px;width: 20px;border-radius: 50%;float: right;top: 10px;position: relative;}
+.selecting span{border: 1px solid #f36303;background-color: #f36303;background-image:url(/statichtml/bjmovie01/estores/Public/images/icon-svg/iconfont-check.svg);
+	-webkit-background-size: contain;background-size: contain;}
+.arrivetime {height: 40px;}
+.arrivetime .arrivetimetitle{float: left;width: 80px;}
+.arrivetime .arrivetimepicker{padding-left: 80px;}
+.arrivetimepicker input{float: right; width: 100%;color: red;-webkit-appearance:none;height:38px;border: 0px solid #fff;top: 0;position: relative;font-size: 16px;
+	vertical-align: middle;text-align: right;outline: none;}
