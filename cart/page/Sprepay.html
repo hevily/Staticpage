@@ -68,7 +68,7 @@
 		 	<div class="title">
 		 		付款方式
 		 	</div>
-		 	<div class="payitems">
+		 	<div class="payitems ">
 		 		<ul>
 		 			<li class="paradiu selecting">
 		 				在线支付
@@ -90,22 +90,45 @@
 		 	</div>
 		 </div>
 		 <div class="gamptbcart"></div>
-	 	<div class="payitems">
-	 		<ul>
-	 			<li class="transport">
-	 				运送方式
-	 			</li>
-	 			<li class="leavemsg">
-		 			给卖家留言
-	 			</li>
-	 			<li class="">
-	 				优惠券
-		 			
-	 		</ul>
-	 	</div>
+		 <div class="pdl10">
+	 	 	<div class="payitems">
+	 	 		<ul>
+	 	 			<li class="transport">
+	 	 				运送方式
+	 	 				<span>快递&nbsp;免邮</span>
+	 	 				<!-- <img src="../img/for-more.png"  alt="更多选择"> -->
+	 	 			</li>
+	 	 			<li class="leavemsg" style="position:relative;">
+	 		 			给卖家留言
+	 		 			<div style="float:right;padding-left:80px;position:absolute;top:0;height:40px;width:100%;">
+	 		 				<textarea name="leavemsg" id="leavemsg" cols="30"  style="height:100%;width:100%;border:none;resize:none;font-size:14px;line-height:20px;">条优美的音源传输线可连接你的电脑或任何数位音源播放器至多媒体音响,家庭或汽车音响系统,这条传输线提供讯号传输并减低干扰,让连接变得更简单更无负担</textarea><p style="height:100%;width:100%;">
+	 		 				</p>
+	 		 			</div>
+	 	 			</li>
+	 	 			<li class="discount">
+	 	 				优惠券
+	 	 				<span>1张可用</span>
+	 	 				<span>已抵用5元</span>
+	 	 				<img src="../img/for-more.png"  alt="更多选择">
+ 	 				</li>
+	 	 		</ul>
+	 	 	</div>
+		 </div>
+		 <div class="gamptbcart"></div>
+		 <div class="moneyinfo">
+		 	<p>商品金额<span>¥9999.80</span></p>
+		 	<p>优惠券<span>-¥9999.80</span></p>
+		 	<p>快递<span>¥35.00</span></p>
+		 </div>
+		 <div class="gamptbcart" style="height:50px;"></div>
 	</div>
-	<footer></footer>
-	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<footer>
+		<div class="actuallypay">
+			实付款：<span>¥9999.00</span>
+			<a href="javascript:;">提交订单</a>
+		</div>
+	</footer>
+	<script src="../../Public/jQuery/jquery-2.1.4.min.js"></script>
 	<script>
 	$(document).ready(function(){
 		$(".paradiu").click(function(){
@@ -113,7 +136,7 @@
 			$(this).addClass("selecting");
 		});
 		$(".arrivetime").click(function(){
-			alert($(this).find("input").val());
+			console.log($(this).find("input").val());
 			// alert("被点击");
 			// $(this).find("input").click();
 		})
