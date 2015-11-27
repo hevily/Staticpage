@@ -6,21 +6,19 @@
 .bgi{height: 5px;background-image: url(../img/U.png);-webkit-background-size: contain;background-size: contain;}
 .gampcart{background-color: #DDDEE3;height: 12px;border-bottom: 1px solid #c9c9c9;}
 .gamptbcart{background-color: #DDDEE3;height: 12px;border-bottom: 1px solid #c9c9c9;border-top: 1px solid #c9c9c9;}
-.storeinfo{padding: 8px 10px;font-size: 16px;font-weight: bold;border-bottom: 1px solid #eaeaea;}
+.storeinfo{padding: 8px 10px;font-size: 16px;font-weight: bold;border-bottom: 1px solid #eaeaea;line-height: 16px;}
 .storeinfo img{width: 20px;vertical-align: bottom;}
-.goodsmsg{padding: 10px 10px 8px 10px}
+.goodsmsg{padding: 10px 10px 8px 10px;border-bottom: 1px solid #CCCCCC;}
 .money{color: #f36303;}
 .Num{float: right;color: #909090}
 .goodsimg .media-object{border-radius: 5px;border: 1px solid #cfcfcf;}
 .media-bottom{padding-bottom: 10px;}
 .delgoods{color:#8f8f8f;font-size: 12px;height: 30px;padding-top: 16px; }
-.delgoods a{display: inline-block;float: right;background-color: #DD5152;color: #fff;border-radius: 3px;padding: 6px 8px; font-size: 14px;margin-top: -18px;text-decoration: none;}
+.delgoods a{display: inline-block;float: right;background-color: #DD5152;color: #fff;border-radius: 3px;padding: 4px 10px; font-size: 14px;margin-top: -18px;text-decoration: none;}
 .payway{padding-left: 10px;font-size: 16px;}
 .payway .title{font-weight: bold;border-bottom: 1px solid #eaeaea;line-height: 40px;}
 .pdl10 .payitems ul li{border-bottom: 1px solid #EAEAEA;padding-right: 10px;line-height: 40px;font-size: 14px;}
-.pdl10 .payitems ul li:last-child{border: none;}
 .payway .payitems ul li{border-bottom: 1px solid #EAEAEA;padding-right: 10px;line-height: 40px;font-size: 14px;}
-.payway .payitems ul li:last-child{border: none;}
 /*.pdl10 .payitems span{height: 20px;width: 20px;border-radius: 50%;float: right;top: 10px;position: relative;}*/
 .payway .payitems span{height: 20px;width: 20px;border-radius: 50%;float: right;top: 10px;position: relative;}
 .selecting span{border: 1px solid #f36303;background-color: #f36303;background-image:url(/statichtml/bjmovie01/estores/Public/images/icon-svg/iconfont-check.svg);
@@ -28,7 +26,7 @@
 .arrivetime {height: 40px;}
 .arrivetime .arrivetimetitle{float: left;width: 80px;}
 .arrivetime .arrivetimepicker{padding-left: 80px;}
-.arrivetimepicker input{float: right; width: 100%;color: red;-webkit-appearance:true;height:38px;border: 0px solid #fff;top: 0;position: relative;font-size: 16px;
+.arrivetimepicker input{float: right; width: 100%;color: red;-webkit-appearance:none;height:38px;border: 0px solid #fff;top: 0;position: relative;font-size: 16px;
 	vertical-align: middle;text-align: right;outline: none;background: #fff;box-shadow: none;}
 .pdl10 .transport span{float: right;position: relative;top: 10px; text-align: right;width: auto;line-height: 20px;color: #3E3E3E;padding-right: 14px;}
 .transport{position: relative;}
@@ -37,8 +35,10 @@
 .discount span:nth-child(1){font-size: 12px;background-color: #f36303;padding: 2px 4px;color: #fff;border-radius: 3px;}
 .discount span:nth-child(2){float: right; position: relative; top: 10px;	 width: auto;text-align: right;line-height: 20px; color:#313131;padding-right: 14px;}
 .discount img{position: absolute;right: 10px;top: 12px;height: 14px;width: 10px;}
+.moneyinfo {padding-bottom: 100px;}
 .moneyinfo p{line-height: 25px;font-size: 16px;padding: 0 10px;}
 .moneyinfo p span{float: right;color: #f36303;}
 .actuallypay{height: 40px;line-height: 40px;padding-left: 10px;}
 .actuallypay span{color: #f36303;font-weight: bold;}
 .actuallypay a{display: inline-block;float: right;padding: 0px 8px;background-color: #f36303;color: #fff;text-decoration: none;}
+footer{    position: fixed;    bottom: 0;    width: 100%;    background: #fff; border-top: 1px solid #cccccc;}

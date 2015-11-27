@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../../Public/base.css" />
+	<title>加入会员</title>
+	<style>
+		body{background-color: #eaeaea;}
+		.container{background-color: #fff;width: 100%;max-width:640px;}
+		select{-webkit-appearance:none; border:1px solid #fff;min-width: 190px;height: 48px;padding-left: 10px;font-size: 16px;}
+		.items{clear: both;}
+		.items .items-title{width: 80px;float: left;text-align: center;font-size: 16px;font-weight: bold;}
+		.items .items-content{float: left;}
+		.country{position: relative;}
+		.country span{float: right;position: relative;top: 20px;height: 0;width: 0;border-left:10px solid #fff;border-top: 10px solid #000;border-right:10px solid #fff;}
+		.auth-code .items-title {width: 50px;}
+		.auth-code .items-content input {width: 140px;padding-left: 10px;color: #3F3F3F;}
+		.auth-code  p{float: right; color: #696969;font-size: 16px;font-weight: bold;}
+		.auth-code  p a{text-decoration: none; color: #696969;height: 48px;display: inline-block;color: #f36303;}
+		.h40 {height: 40px;}
+		.items {height: 50px;line-height: 50px;}
+		.items input{-webkit-appearance:none;height: 48px;border: 1px solid #fff;font-size: 18px;color: #3F3F3F;}
+		.addNew a,.nextStep {height: 50px;border-bottom: 1px solid #cfcfcf;}
+		.addNew a,.nextStep a{display: inline-block;width: 100%;height: 49px;line-height: 50px;text-align: center;text-decoration: none;color: #f36303;font-weight: bold;}
+		.clause{background-color: #E4E4E4;border-top: 1px solid #cfcfcf;border-bottom: 1px solid #cfcfcf;padding-top: 35px;padding-bottom: 20px; font-size: 14px;}
+		.clause a{color:#5EA6EC;}
+		.threeS {background-color: #eaeaea;}
+		.succese-title {position: relative;}
+		.succese-title img{width: 100%;height: auto;}
+		.succese-title span{position: relative;display: block;width: 50px;height: 50px;margin-bottom: 20px;}
+		.succese-title p{position: absolute;width: 100%;text-align: center; bottom: 10px;font-size: 20px;color:#fff;letter-spacing: 2px;    text-shadow: 3px 2px 3px rgba(243,99,3,0.7);font-weight: bold;}
+		.succese-notes {padding-left: 10px;}
+		.succese-notes h3{color: #3F3F41;border-bottom: 1px solid #E7E6EC;padding-top: 5px;padding-bottom: 5px;}
+		.succese-notes p {color: #48484A;line-height: 24px;}
+		.succese-notes p:nth-child(2){border-top: 1px solid #D3D2D7;padding-top: 8px;}
+		.succese-notes p span {width: 16px;height: 16px;background-color: #f36303;border-radius: 50%;-webkit-border-radius:50%;display: inline-block;position:relative;padding: 3px;margin-right: 10px;top: 3px;}
+		.succese-notes p span span{width: 8px;height: 8px;background-color: #fff;position:absolute;top: 50%;left: 50%;transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);}
+	</style>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		
+		<div class="addStep oneS" >
+		<div class="gapb h40" style="background-color:#e4e4e4;border-bottom:1px solid #cfcfcf;"></div>
+			<form action="post" id="newMemberone">
+				<div class="items pd10 country">
+					<lable>
+						<div class="items-title">国家或地区</div>
+						<div class="items-content">
+							<select name="select-country" id="select-country">
+								
+							</select>
+						</div>
+					</lable>
+					<span></span>
+				</div>
+				<div style="width:100%;padding-left: 10px;"><div style="width:100%;border-bottom:1px solid #cfcfcf;"></div></div>
+				<div class="items pd10">
+					<lable>
+						<div class="items-title">+86</div>
+						<div class="items-content">
+							<input type="text" maxlength="11" />
+						</div>
+					</lable>
+				</div>
+				<div class="gaptb h40" style="background-color:#e4e4e4;border-bottom:1px solid #cfcfcf;border-top:1px solid #cfcfcf;"></div>
+				<div class="items auth-code pd10">
+					<lable>
+						<div class="items-title">验证码</div>
+						<div class="items-content">
+							<input type="text" maxlength="6" />
+						</div>
+						<p><a href="javascript:;">获取验证码</a></p>
+					</lable>
+				</div>
+				<div class="gaptb h40" style="background-color:#e4e4e4;border-bottom:1px solid #cfcfcf;border-top:1px solid #cfcfcf;"></div>
+				<div class="nextStep">
+					<a href="JavaScript:;">下一步</a>
+				</div>
+				
+			</form>
+
+		</div>
+		<div class="addStep twoS hide" >
+		<div class="gapb h40" style="background-color:#e4e4e4;border-bottom:1px solid #cfcfcf;"></div>
+			<form action="post" id="newMemberone">
+				<div class="items pd10">
+					<lable>
+						<div class="items-title">姓名</div>
+						<div class="items-content">
+							<input type="text" maxlength="11" />
+						</div>
+					</lable>
+				</div>
+				<div class="gaptb h40" style="background-color:#e4e4e4;border-bottom:1px solid #cfcfcf;border-top:1px solid #cfcfcf;"></div>
+				<div class="items  pd10">
+					<lable>
+						<div class="items-title">身份证号</div>
+						<div class="items-content">
+							<input type="text" maxlength="18" />
+						</div>
+					</lable>
+				</div>
+				
+			</form>
+			<div class="clause pd10" >
+				点击确定按钮代表你同意影视界<a href="#">《使用协议》</a>
+			</div>
+			<div class="addNew">
+				<a href="JavaScript:;">确认并提交</a>
+			</div>
+		</div>
+		<div class="addStep threeS hide">
+			<div class="succese-title">
+				<img src="../img/bgimage.png" alt="背景图片" />
+				<!-- <span></span> -->
+				<p>恭喜，你的会员申请已提交</p>
+			</div>
+			<div class="succese-notes">
+				<h3>温馨提示：</h3>
+				<p><span><span></span></span>会员申请后，商家会进行审核，请您耐心等待。</p>
+				<p><span><span></span></span>成为商家会员后，你会享受多种优惠，具体福利请以商家活动为准。</p>
+			</div>
+		</div>
+	</div>
+	<footer></footer>
+	<script src="../../Public/jQuery/jquery-2.1.4.min.js"></script>
+	<script>
+	$(function(){
+		function resetSelect(){
+			var html = "<option value='1'>1</option>"+
+						"<option value='2'>2</option>"+
+						"<option value='3'>3</option>"+
+						"<option value='4'>4</option>"+
+						"<option value='5'>5</option>"+
+						"<option value='6'>6</option>"+
+						"<option value='7'>7</option>"+
+						"<option value='8'>8</option>"+
+						"<option value='9'>9</option>"+
+						"<option value='0'>0</option>"
+			$(".country select").append(html);
+			$(".country select").change(function(){
+				console.log($(this).val());
+			})
+		}resetSelect();
+		$(".country select").hover(function(){
+				$(this).closest(".country").find("span").css("border-top-color","#cfcfcf");
+			},function(){
+				$(this).closest(".country").find("span").css("border-top-color","#000");
+			},function(){
+		})
+
+
+		// 获取验证码
+		$(document).delegate(".auth-code a","click",function(){
+			console.log("请求验证码");
+			var _this = $(this).closest("p");
+			xunhuan(_this,1000,60);
+		});
+		function xunhuan (_this,delayed,time) {
+			var timer = setInterval(function(){
+				console.log(time,_this);
+				$(_this).html(time+"s后再次获取");time--;
+				if (time<0) {
+					$(_this).html("<a href='javascript:;'>获取验证码</a>");
+					clearInterval(timer);
+				}
+			},delayed);
+		}
+		//验证验证码输入会员身份
+		$(".nextStep").click(function  () {
+			var url = "../../addnew.php";
+			var data = $(".auth-code").find("input").val();
+			$.ajax(url,{
+				type: "post",
+				// async: false,
+				data: data,
+				statusCode: {
+					404:function(){
+						console.log("not fond but show stepTwo");
+						$(".oneS").hide();
+						$(".twoS").show();
+						console.log(data);
+					}
+				},
+				complete: function  () {
+					console.log("请求完成");
+				}
+			})
+		})
+		//提交用户身份信息并注册新会员至店铺
+		$(".addNew").click(function  () {
+			console.log("提交会员信息并等待新建会员完成");
+			var url = "../../addnew.php";
+			var data = $(".auth-code").find("input").val();
+			$.ajax(url,{
+				type: "post",
+				// async: false,
+				data: data,
+				statusCode: {
+					404:function(){
+						console.log("not fond but show finished");
+						$(".twoS").hide();
+						$(".threeS").show();
+						console.log(data);
+					}
+				},
+				complete: function  () {
+					console.log("请求完成");
+				}
+			})
+		})
+	})
+	</script>
+</body>
+</html>

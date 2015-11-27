@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../../Public/base.css" />
+	<title>测试json获取 解析</title>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<input type="button" value="获取数据" />
+		<div class="showarea">
+			资源为：
+			<p></p>
+		</div>
+	</div>
+	<footer></footer>
+	<script src="../../Public/jQuery/jquery-2.1.4.min.js"></script>
+	<script>
+	$(function(){
+		$("input").click(function(){
+			console.log("按钮被点击了");
+			var url = "peaple.json";
+			$.ajax(url,{
+				type:"post",
+				statusCode:{
+					200:function(data){
+						console.log(data);
+						// data = JSON.parse(data);
+						// console.log(data.name);
+						var jsStr = data.responseText;
+							jsObj = null;
+						console.log();
+						var html = jsStr;
+						$(".showarea").find("p").replaceWith(html);
+						console.log(JSON.stringify(jsStr));
+					}
+				}
+			});
+		})
+	})
+	</script>
+</body>
+</html>

@@ -89,6 +89,9 @@ ul li{
 .show{
 	display: block;
 }
+/*display*/
+.hide{display: none;}
+.show{display: block;}
 /*line*/
 .line{
   height: 1px;
@@ -103,8 +106,12 @@ ul li{
 }
 /*gamp*/
 .gamp{clear: both;height: 15px;background-color: #E6E6E6;}
-.gampt{clear: both;	height: 15px;	background-color: #E6E6E6;border-top: 1px solid #cfcfcf;}
-.gamptb{clear: both;height: 15px;background-color:  #F4F4F4;border-top: 1px solid #cfcfcf;border-bottom: 1px solid #cfcfcf;}
+.gampt{clear: both; height: 15px; background-color: #E6E6E6;border-top: 1px solid #cfcfcf;}
+.gamptb{clear: both;height: 15px;background-color:  #E6E6E6;border-top: 1px solid #cfcfcf;border-bottom: 1px solid #cfcfcf;}
+.gap{clear: both;height: 15px;background-color: #E6E6E6;}
+.gapt{clear: both;  height: 15px; background-color: #E6E6E6;border-top: 1px solid #cfcfcf;}
+.gapb{clear: both;	height: 15px;	background-color: #E6E6E6;border-bottom: 1px solid #cfcfcf;}
+.gaptb{clear: both;height: 15px;background-color:  #E6E6E6;border-top: 1px solid #cfcfcf;border-bottom: 1px solid #cfcfcf;}
 /*media(img-text-description)*/
 .media {
   margin-top: 15px;
