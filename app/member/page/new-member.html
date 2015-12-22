@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/my-member.css" />
+	<title>加入会员</title>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="addStep two" >
+		<div class="gapb h40" style="height:15px;background-color:#e4e4e4;border-bottom:1px solid #cfcfcf;"></div>
+			<form action="#" id="newMemberone">
+				<div class="items pd10  name">
+					<lable>
+						<div class="items-title">姓名</div>
+						<div class="items-content">
+							<input type="text"/>
+						</div>
+					</lable>
+				</div>
+				<div class="items  pd10 sex">
+					<lable>
+						<div class="items-title">性别</div>
+						<div class="items-content ">
+							<select name="ssex" id="sex" style="position:relative;right:10px;">
+								<option value="1">男</option>
+								<option value="0">女</option>
+							</select>
+						</div>
+					</lable>
+				</div>
+				
+				<div class="items  pd10 idCard">
+					<lable>
+						<div class="items-title">身份证号</div>
+						<div class="items-content ">
+							<input type="text" maxlength="18" />
+						</div>
+					</lable>
+				</div>
+				
+				<div class="items  pd10 birthDay">
+					<lable>
+						<div class="items-title">出生日期</div>
+						<div class="items-content ">
+							<input type="date" style="width:100%;direction:rtl;padding-top:0px;height:30px;line-height:30px;top:-5px;" />
+						</div>
+					</lable>
+				</div>
+				
+				<div class="items  pd10 email">
+					<lable>
+						<div class="items-title">邮箱</div>
+						<div class="items-content ">
+							<input type="email" />
+						</div>
+					</lable>
+				</div>
+			
+				<div class="items  pd10 phoneNum">
+					<lable>
+						<div class="items-title">手机号</div>
+						<div class="items-content ">
+							<input type="text" maxlength="11" />
+						</div>
+					</lable>
+				</div>
+
+				<div class="items  pd10 address">
+					<lable>
+						<div class="items-title">地址</div>
+						<div class="items-content ">
+							<input type="text" readonly onclick="address();" /><img src="../img/for-more.png" alt="选地址" />
+						</div>
+					</lable>
+				</div>
+				<div class="gampt h60"></div>
+			</form>
+			<div class="clause pd10 " >
+				<span></span>我同意并遵守会员协议<a href="#">查看<img src="../img/for-more.png" alt="查看协议" /></a>
+			</div>
+			<div class="gampb h35"></div>
+			<div class="addNew">
+				<a href="JavaScript:;">提交</a>
+			</div>
+			<div class="gap h35"></div>
+		</div>
+		<div class="addStep threeS hide">
+			<div class="succese-title">
+				<img src="../img/bgimage.png" alt="背景图片" />
+				<!-- <span></span> -->
+				<p>恭喜，你的会员申请已提交</p>
+			</div>
+			<div class="succese-notes">
+				<h3>温馨提示：</h3>
+				<p><span><span></span></span>会员申请后，商家会进行审核，请您耐心等待。</p>
+				<p><span><span></span></span>成为商家会员后，你会享受多种优惠，具体福利请以商家活动为准。</p>
+			</div>
+		</div>
+	</div>
+	<footer></footer>
+	<script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+	<script>
+	$(function(){
+		$(".items-content ").width($("body").width()-$(".items-title").width()-20);//初始化输入框宽度
+		$(".clause").click(function  (e) {
+			$(this).toggleClass("checking");
+			e.stoppropagation
+		});
+		$(".clause a").click(function(){
+			var content = "款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容款内容条款内容条款内容条款内容条款内容条款内容";
+							
+			appendlayer("1","2",content);
+		});
+		$(".addNew a").click(function  () {
+			if ($(".clause").hasClass("checking")) {//检查用户是否勾选同意使用协议
+				var name = $(".name input").val(),
+					sex = $(".sex #sex").val(),
+					idCard = $(".idCard input").val(),
+					birthDay = $(".birthDay input").val(),
+					email = $(".email input").val(),
+					phoneNum = $(".phoneNum input").val();
+				var data ={"name":name,
+					"sex":sex,
+					"idCard":idCard,
+					"birthDay":birthDay,
+					"email":email,
+					"phoneNum":phoneNum
+				};
+				console.log(data);
+				$.ajax({
+					url:"addnewmember.*",
+					type:"post",
+					dataType:"json",
+					data:data,
+					success:function(data){
+						console.log(data);
+						$(".two").hide();
+						$(".threeS").show();
+					},
+					complete:function(data){
+						alert("complete");
+						$(".two").hide();
+						$(".threeS").show();
+					}
+				});
+				console.log(data);
+
+			}else{
+				alert("请同意使用协议...");
+			};
+			
+
+		});
+		$(document).delegate(".removelayer","click",function  () {
+			$(".backdrop,.layer").remove();
+		});
+	})
+	function address(){
+		alert("address");
+	};
+	function appendlayer(name,Classvalue,content){
+		$("body").append(""+
+			"<div class='backdrop'></div>"+
+			"<div class='layer'>"+
+				"<div class='layer-title clearfix' hidden>"+
+					"<div class='select-cancel clearfix'>"+
+						"<div class='cancel'><a type='button' href='javascript:;'>取消</a></div>"+
+						"<div class='action-title'>"+name+"</div>"+
+						"<div class='selecting' Classvalue='"+Classvalue+"'><a type='button' href='javascript:;'>确定</a></div>"+
+					"</div>"+
+				"</div>"+
+				"<div class='layer-content'><div class='clause-details'>"+
+				content+
+				"</div><div class='clause-end'><a href='javascript:;' class='removelayer'>完成阅读</a></div>"+
+				"</div>"+
+				"<div class='layer-footer'></div>"+
+			"</div>"
+		);
+	};
+	</script>
+</body>
+</html>

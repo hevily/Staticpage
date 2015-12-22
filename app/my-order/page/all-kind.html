@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../../Public/base.css" />
+	<title>我的订单</title>
+	<style>
+		.container{padding-top: 0px;max-width:640px;}
+		.tabchange{width: 202px;height: 35px;margin: 0 auto;font-size: 16px;margin-bottom: 10px;z-index: 100;position: relative;top: 20px;}
+		.showarea{z-index: 90;}
+		.tab{float: left;width: 100px;border: 1px solid #F5834D;line-height: 33px;text-align: center;}
+		.tab:nth-child(1){border-right: none;border-top-left-radius: 5px;border-bottom-left-radius: 5px;}
+		.tab:nth-child(2){border-left: none;border-top-right-radius: 5px;border-bottom-right-radius: 5px;}
+		.tab.active {background-color: #F5834D;color: #fff;}
+		.tabtoggle{display: none;}
+		.show{display: block;}
+		.h100{height:100%;}
+		.h90{height: 90%;}
+		.ecNav{display: none !important;}
+		.wrap{margin-top: 0px;}
+		.bgfff{position: relative;width: 100%; height:76px;background-color: #fff;top: 0;}
+		.showarea .tabtoggle:nth-child(2){padding-top: 0px;}
+		ul.kinds li{clear: both;line-height: 30px;padding-left: 10px;}
+		ul.kinds li:active{background-color: #cfcfcf;}
+		ul.kinds .border-b{border-bottom: 1px solid #c9c9c9;height: 50px;padding-top: 10px;padding-right: 10px;}
+		ul.kinds li span{text-indent: 20px;display: inline-block;}
+		.item img{float: right;width: 8px;top: 10px;position: relative;}
+
+
+		.item img:nth-child(1){float: left;width: 30px;top: 0;}
+		.main{padding: 0;}
+	</style>
+</head>
+<body>
+	<header></header>
+	<div class="container h100">
+		<div class="all-kind h100">
+			<div class="bgfff">
+				<div class="tabchange">
+					<div class="tab active" onclick="window.location='#'">全部</div>
+					<div class="tab" onclick="window.location='#'">分类</div>
+				</div>
+			</div>
+			<div class="showarea h90">
+				<div class="tabtoggle all show h100" >
+					<div style="margin-top:0px;height:100%;">
+						<iframe src="" frameborder="0" style="width:100%;height:100%;"></iframe>
+					</div>
+				</div>
+				<div class="tabtoggle kind h100">
+					<ul class="kinds">
+						<li class="item" onclick="window.location='/statichtml/bjmovie01/estores/Cart/orderlist#All'">
+							<div class="border-b">
+								<img src="../img/1.png" alt="商品购物">
+								<span>商品购物</span>
+								<img src="../img/for-more.png"  alt="更多" />
+							</div>
+						</li>
+						<li class="item" onclick="window.location='/statichtml/bjmovie01/estores/Cart/orderlist#All'">
+							<div class="border-b">
+								<img src="../img/2.png" alt="代金券/团购">
+								<span>代金券/团购</span>
+								<img src="../img/for-more.png"  alt="更多" />
+							</div>
+						</li>
+						<li class="item" onclick="window.location='/statichtml/bjmovie01/estores/Cart/nowpaylist'">
+							<div class="border-b">
+								<img src="../img/3.png" alt="立付">
+								<span>立付</span>
+								<img src="../img/for-more.png"  alt="更多" />
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer></footer>
+	<script src="https://staticcdn.yshjie.com/cdn/librarypath/jquery/jquery-1.11.1.js"></script>
+	<script>
+	$(document).ready(function () {
+		tabpanelToggle("tabchange","tab","showarea","tabtoggle");
+		function tabpanelToggle(controlparentBox,controlchildBox,showParentbox,showChildbox){
+			$("."+controlparentBox+" ."+controlchildBox).click(function(){
+				// console.log(this);// console.log(index);
+				var index = $(this).index();
+				$("."+showParentbox).find("."+showChildbox).hide().eq(index).show();
+				if (index===0) {
+					$(".showarea").height($("body").height()-78);
+					var src = "/statichtml/bjmovie01/estores/Cart/orderlist#All"
+					$("."+showChildbox).eq(index).find('iframe').attr("src",src);
+					var iframe = $("iframe").contents();
+					var timer = setInterval(function(){
+						if(iframe.find(".wrap")){
+							console.log(iframe.find(".wrap"));
+							clearInterval(timer);
+							console.log("iframe 加载完成");
+							iframe.find(".wrap").css("padding-top","0").find(".ecNav").remove();
+							iframe.find(".main").find(".ecNavSub").remove();
+						}else console.log("加载中...")
+
+					},10);
+				} else if (index===1) {
+					console.log("分类");
+				};
+			})
+		}
+	})
+	</script>
+</body>
+</html>
