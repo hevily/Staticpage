@@ -39,7 +39,7 @@ body{	background-color: #DDDEE3;}
 
 .card-qr{padding: 15px 0 15px 0;text-align: center;}
 .card-qr img:last-child{padding: 50px 20% 0 20%;}
-.card-qr img{width: 100%;}
+.card-qr img{max-width: 100%;}
 .card-qr p{height: 30px;line-height: 30px;font-size: 14px;}
 .name-phone{padding: 10px;line-height: 22px;border-bottom: 1px solid #F1F1F1;}
 .name-phone p{font-size: 16px;color: #474747;}
