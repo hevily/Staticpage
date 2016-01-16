@@ -4,10 +4,8 @@ body{	background-color: #DDDEE3;}
 .nocard{border-bottom: 1px solid #EFEFF1;}
 .nocard img{width: 100%;padding: 10%;}
 .nocard h3{text-align: center;border-bottom: 1px solid #D4D4D4;color: #AFAFAF;padding-bottom: 1em;}
-.unpassed h3{border-bottom: none;padding-bottom: 0;color: #3F3F3F;}
-.unpassed p{color:#3E3E3C; border-bottom: 1px solid #D4D4D4; padding-top: 5px !important;text-align: center;padding-bottom: 1em;}
 .none p{	padding-top: 1em;	text-indent: 2px;	color: #414141;}
-.own{padding: 20px 10px 0 10px;background-color: #DDDEE3;}
+.own{padding: 20px 10px 10px 10px;}
 .card{border-radius: 5px;border:1px solid #C8C9CD;margin-bottom: 10px;}
 .media{padding:10px 10px 5px 10px;}
 .media .media-left img{border-radius: 5px;padding: 2px;background-color: #fff;border:1px solid #EFEFEF;}
@@ -50,8 +48,8 @@ body{	background-color: #DDDEE3;}
 .unpassed-reason p:nth-child(odd){color: #686868;padding-top: 10px;}
 .unpassed-reason p:nth-child(even){color: #3f3f3f;font-weight: bold;padding-top: 2px;}
 .unpassed-reason p:nth-child(3){padding-top: 18px;}
-.tryagain{position: fixed;bottom:0;width:100%;max-width:640px;background-color: #fff;height: 50px;line-height: 38px;padding: 5px 10px;}
-.tryagain a{text-decoration: none;text-align:center;width:100%;background-color: #f36303;display: inline-block;border-radius: 5px;color: #fff;font-size: 18px;}
+.tryagain,.connectstore{position: fixed;bottom:0;width:100%;max-width:640px;background-color: #fff;height: 50px;line-height: 38px;padding: 5px 10px;border-top:1px solid #ADADAD;}
+.tryagain a,.connectstore a{text-decoration: none;text-align:center;width:100%;background-color: #f36303;display: inline-block;border-radius: 5px;color: #fff;font-size: 18px;}
 
 .cardshade{position: fixed;width: 100%;height: 100%;background-color: rgba(0,0,0,0.5);top: 0;left: 0;z-index: 10;}
 .reapply {background-color: #FFF2BB;font-size: 14px;height: 40px;}
@@ -61,11 +59,29 @@ body{	background-color: #DDDEE3;}
 .reapply p a{text-decoration: none;color: #3F3F40;    text-indent: 1em;    display: inline-block;    height: 40px;    width: 100%;}
 .reapply p a img{height: 14px;width: 10px;position: relative;top: 2px;margin-left: 4px;}
 
+/*会员申请信息*/
 
+.checkingstatus  h3{border-bottom: none;padding-bottom: 0;color: #3F3F3F;}
+.checkingstatus  p{color:#3E3E3C; border-bottom: 1px solid #D4D4D4; padding-top: 5px !important;text-align: center;padding-bottom: 1em;}
+.applyinfo .storeinfo{background-color: #fff; height: 48px;padding: 4px 10px;position:relative;overflow: hidden;border-bottom: 1px solid #cfcfcf;}
+.applyinfo .storeinfo img{width: 40px;height: 40px;float: left;display: block;padding: 2px;border-radius: 3px;border:1px solid #efefef;}
+.applyinfo .storeinfo .storename{margin-right: 95px;padding-left: 44px;line-height: 40px;font-size: 16px;font-weight: bold;}
+.applyinfo .storeinfo a{position: absolute; top: 0; right: 10px;padding-left: 8px; text-decoration: none;color: #000;height: 100%;line-height: 48px;}
+.applyinfo .storeinfo a img{height: 18px;width: 12px;float: right;top: 15px;position: relative;margin-left: 6px;border:none;padding: 0;}
+.applyerinfo{border-top:1px solid #F0F0F0;}
+.applyerinfo ul li{height: 28px;line-height: 28px;}
+.applyerinfo ul li:nth-child(even){background-color: red;height: 35px;line-height: 35px;background-color: #fff;}
+.applyerinfo {background-color: #F7F7F7;}
+.applyerinfo span{display: inline-block;float: left;width: 75px;text-align: right;}
+.applyerinfo p{padding-left: 85px;padding-top: 0;color: #515151;}
+.checkingstatus .nocard{display: none;}
+.Statuspassed .passed,.Statuscheckinginfo .checkinginfo,.Statusunpassed .unpassed{display: block;}
+.tryagain{display: none;}.Statusunpassed .tryagain{display: block;}
+.connectstore {display:none;}.Statuspassed .connectstore,.Statuscheckinginfo .connectstore{display: block;}
 
 /*新建会员*/
-body{background-color: #eaeaea;}
-.container{background-color: #fff;width: 100%;max-width:640px;z-index: 1;}
+body{background-color: #DDDEE3;}
+.container{width: 100%;max-width:640px;z-index: 1;}
 select{-webkit-appearance:none; border:1px solid #fff;min-width: 190px;height: 46px;padding-left: 10px;font-size: 16px;direction: rtl;width: 100%;color: #4E5768;}
 .items{clear: both;}
 .items .items-title{width: 80px;float: left;text-align: left;font-size: 16px;font-weight: bold;color: #121212;}
@@ -86,6 +102,7 @@ select{-webkit-appearance:none; border:1px solid #fff;min-width: 190px;height: 4
 .clause{background-color: #fff;border-top: 1px solid #cfcfcf;border-bottom: 1px solid #cfcfcf;padding-top: 10px;padding-bottom: 15px; font-size: 14px;line-height: 16px;position: relative;}
 .clause a{color:#5EA6EC;float: right;position: relative;padding-right: 25px;line-height: 30px;text-decoration: none;color: #686868;}
 .clause a img{height: 18px;width: 12px;position: absolute;top: 5px;right: 10px;}
+.two{background-color: #fff;}
 .threeS {background-color: #eaeaea;}
 .succese-title {position: relative;}
 .succese-title img{width: 100%;height: auto;}
@@ -110,7 +127,7 @@ background-size: contain;}
 .h60{height: 60px;}
 .h35{height: 35px;}
 .backdrop{position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index: 9;background-color: rgba(0,0,0,0.5);}
-.layer{position: absolute;top: 0;left: 0;z-index: 11;background-color: #fff;padding: 10px;text-align: justify;}
+.layer{position: fixed;top: 50%;left: 50%;z-index: 11;background-color: #fff;padding: 10px;text-align: justify;max-height: 70%;width: 80%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);overflow: scroll;border-top:15px solid #fff;}
 .clause-end{text-align: center;padding-top: 20px;}
 .removelayer{text-decoration: none;color: #f36303;}
 .layer-footer{height: 35px;}

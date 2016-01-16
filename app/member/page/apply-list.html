@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <!-- <link rel="stylesheet" href="../../Public/base.css" /> -->
+    <!-- <link rel="stylesheet" href="../css/my-member.css" /> -->
+    <style>
+    *{margin: 0;padding: 0;font-family: 'Microsoft YaHei','Hiragino Sans GB',Helvetica,Arial,'Lucida Grande',sans-serif;}
+    html,body{height: 100%;width: 100%;background-color: #DDDEE3;}
+    .container{background-color: #fff;margin-top: 20px;}
+    ul li{list-style: none;}
+    .card{height: 52px;position: relative;padding: 12px 0;border-bottom: 1px solid #c9c9c9;margin-left: 10px;}
+    li:last-child .card{border:none;}
+    li:last-child{border-bottom: 1px solid #BFC0C5;}
+    .store{position: relative;height: 100%;}
+    .storename{float: left;margin-right: 80px;font-size: 18px;font-weight: bold;overflow: hidden;height: 23px;color: #2B2B2B;}
+    .store p{color: #8E8E8E;font-size: 14px;font-weight: normal;position: absolute;bottom: 0;}
+    .cardstatus{float: right;position: absolute;top: 0px;right: 10px;height: 100%;}
+    .cardstatus a{text-decoration:none;color: #818181;top: 25px;position: relative;}
+    .cardstatus img{position: relative;top: 4px;height: 18px;width: 12px;margin-left: 5px;}
+    .statuschecking a{color: #FE9E3E; }
+    .statuspassed a{ color: #686868;}
+    .statusunpassed a{color: #FF3032;}
+    
+    </style>
+	<title>申请记录</title>
+
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<ul>
+			<li onclick="window.location.href='status-detail.html'">
+				<div class="card statuschecking">
+					<div class="store">
+						<div class="storename">
+							魔石泡泡鱼魔石泡泡鱼魔石泡泡鱼魔石泡泡鱼魔石泡泡鱼魔石泡泡鱼魔石泡泡鱼魔石泡泡鱼魔石泡泡鱼
+						</div>
+						<p>2015-12-25</p>
+					</div>
+					<div class="cardstatus ">
+						<a href="javascript:;">审核中<img src="../img/for-more.png" alt="详情" /></a>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="card statuspassed">
+					<div class="store">
+						<div class="storename">
+							魔石泡泡鱼魔石泡泡鱼魔石泡泡鱼魔石泡泡鱼魔石泡泡鱼魔石泡泡鱼魔石泡泡鱼魔石泡泡鱼魔石泡泡鱼
+						</div>
+						<p>2015-12-25</p>
+					</div>
+					<div class="cardstatus ">
+						<a href="javascript:;">已通过<img src="../img/for-more.png" alt="详情" /></a>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="card statusunpassed">
+					<div class="store">
+						<div class="storename">
+							魔石泡泡鱼魔石泡泡鱼魔石泡泡鱼魔石泡泡鱼魔石泡泡鱼魔石泡泡鱼魔石泡泡鱼魔石泡泡鱼魔石泡泡鱼
+						</div>
+						<p>2015-12-25</p>
+					</div>
+					<div class="cardstatus ">
+						<a href="javascript:;">未通过<img src="../img/for-more.png" alt="详情" /></a>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<footer></footer>
+</body>
+</html>
