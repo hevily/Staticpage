@@ -4,21 +4,20 @@
 	<meta charset="utf-8" />
 	<meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <!-- <link rel="stylesheet" href="../../Public/base.css" /> -->
-    <script src="../../Public/clamp.min.js"></script>
+    <script src="../../Public/jQuery/jquery-2.1.4.min.js"></script>
     <link rel="stylesheet" href="../css/search-result.css" />
 	<title>附近的村</title>
 	<style>
 	.img{width: 80px;height: 80px;}
 	.ysj{padding-right: 15px;}
-	.description{height: 80px;padding-left: 90px;margin-bottom: 4px;}
+	.description{height: 80px;padding-left: 90px;margin-bottom: 0px;}
 	.pnum{left: 90px;}
 	.name{padding-right: 35px;position: relative;}
 	.description .name div{    overflow: hidden;    white-space: nowrap;    text-overflow: ellipsis;font-weight: bold;    font-size: 18px;line-height: 18px; }
-	.name span{position: absolute;right:10px;top:0;background-color: #A1D980;font-size: 14px;font-weight: normal;border-radius: 5px;padding: 4px;color: #fff;line-height: 14px;}
+	.name span{position: absolute;right:10px;top:0;background-color: #A1D980;font-size: 12px;font-weight: normal;border-radius: 5px;padding: 4px;color: #fff;line-height: 12px;}
 	.sell-one .attribute{padding-right: 0;}
 	.res .attribute p{    -webkit-line-clamp: 1;font-size: 16px;line-height: 25px;}
-	.for-more{position: absolute;right:7px;top: 50%;transform:translateY(-50%);height: 12px;width: 8px;}
+	.for-more{position: absolute;right:7px;top: 50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);height: 12px;width: 8px;}
 	.belong{right: 15px;}
 	.ysj{border-top:none;position: relative;}
 	.res-show ul li{padding-bottom: 10px;}
@@ -27,12 +26,164 @@
 	.price p{color: #686868;font-size: 16px;}
 	.none .name{padding-right: 0;}
 	.none .name span{display: none;}
+	.search-bar{height: 35px;background-color: #FFEEE2;text-align: center;padding: 5px;}
+	.search-btn{height: 25px;	width: 160px;background-color: #FF8D4E;margin: 0px auto;line-height: 25px;border-top-left-radius:35px;border-top-right-radius:35px;border-bottom-left-radius:35px;border-bottom-right-radius:35px;color: #fff;font-size: 14px;}
+	.search-btn img{height: 12px;width: 7px;top: 2px;position: relative;}
+	.belong,.pnum{bottom: 5px;}
+
+
+
+
+	.backdrop{
+		position: fixed;
+		top: 35px;
+		left: 0;
+		background-color: rgba(0,0,0,0.5);
+		height: 100%;
+		width: 100%;
+	}
+	.layer{
+		position: absolute;
+		top: 35px;
+		width: 100%;
+		max-width: 640px;
+		left: 50%;
+		-webkit-transform:translateX(-50%);
+		        transform:translateX(-50%);
+		background-color: #EAEAEA;
+		height: 70%;
+	}
+	.layer-title{
+		display: none;
+	}
+	.layer-content{
+		height:100%;
+		overflow:auto;	
+	}
+	.double{height: 100%;}
+	.half{overflow: auto;height: 100%;}
+	.first-li{background-color: #fff;}
+	.second-li li{border-bottom: 1px solid #EAEAEA !important;}
+	.on{background-color: #F6F7F9;color: #f36303;font-weight: bold;}
+	/*.second-li .on{color: #f36303;}*/
+	.belong img{height: 18px;width: 18px;position: relative;top: 3px;left: -3px;}
+	.pnum a{border:none;color: #828282;}
+	/*加载更多*/
+
+	.row-load-more {
+		clear: both;
+		text-align: center;
+		line-height: 42px;
+		height: 42px;
+		background: #fdfdfd;
+		border-top: 1px solid #e4e4e4;
+		border-bottom: 1px solid #e4e4e4;
+	}
+	/*
+	 *  Usage: 动画loading
+	 *
+	 *    <div class="sk-spinner sk-spinner-rotating-plane"></div>
+	 *
+	 */
+
+	.sk-spinner-rotating-plane.sk-spinner {
+		display: inline-block;
+		vertical-align: middle;
+		line-height: 42px;
+		width: 20px;
+		height: 20px;
+		background-color: #f36404;
+		margin: 0 auto;
+		-webkit-animation: sk-rotatePlane 1.2s infinite ease-in-out;
+		animation: sk-rotatePlane 1.2s infinite ease-in-out;
+	}
+	@-webkit-keyframes sk-rotatePlane {
+		0% {
+			-webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+			transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+		}
+		50% {
+			-webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+			transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+		}
+		100% {
+			-webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+			transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+		}
+	}
+	@keyframes sk-rotatePlane {
+		0% {
+			-webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+			transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+		}
+		50% {
+			-webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+			transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+		}
+		100% {
+			-webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+			transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+		}
+	}
 	</style>
+	<script>
+		$(function  () {
+			$(".row-load-more").click(function  () {
+				$(this).html("").append("<div class='sk-spinner sk-spinner-rotating-plane'></div>&nbsp;加载中")
+			})
+		})
+		function appendselect () {
+			if (!$(".backdrop")) {
+				alert("已添加")
+			}else{
+				alert("未添加");
+			};
+				appendlayer();
+				removelayer();
+				$(".layer-content").load("load-page2.html");
+		};
+		
+		function appendlayer(name,Classvalue){
+			$("body").append(""+
+				"<div class='backdrop'></div>"+
+				"<div class='layer'>"+
+					"<div class='layer-title clearfix'>"+
+						"<div class='select-cancel clearfix'>"+
+							"<div class='cancel'><a type='button' href='javascript:;'>取消</a></div>"+
+							"<div class='action-title'>"+name+"</div>"+
+							"<div class='selecting' Classvalue='"+Classvalue+"'><a type='button' href='javascript:;'>确定</a></div>"+
+						"</div>"+
+					"</div>"+
+					"<div class='layer-content'></div>"+
+					"<div class='layer-footer'></div>"+
+				"</div>");
+		};
+		function removelayer(){
+			$('.backdrop').click(function() {
+				$(".backdrop,.layer").remove();
+			});
+			$(document).delegate('.backdrop', 'click', function() {
+				$(".backdrop,.layer").remove();
+				// $("."+removeClass).removeClass(''+removeClass+'');
+				$(".nav-loading").removeClass('nav-loading');
+			});
+			$(document).delegate('.cancel a', 'click', function() {
+				$(".backdrop,.layer").remove();
+			});
+		};
+	</script>
 	<!-- rim 出租出售 store 店铺 资讯  -->
+
 </head>
 <body>
 	<header></header>
 	<div class="container">
+		<div class="search-bar">
+			<div class="search-btn" onclick="appendselect();">
+				所有美食
+				<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/img/tyt/for-more.png" alt="三角标" />
+			</div>
+		</div>
 		<div class="res-show">
 				<div class="goods-res">
 					<ul>
@@ -54,8 +205,8 @@
 										<p>属性属性属性属性‘属性属性属性属属性属性属性属性‘属性属性属性属属性属性属性属性‘属性属性属性属属性属性属性属性‘属性属性属性属属性属性属性属性‘属性属性属性属</p>
 									</div>
 									<div class="price">
-										<p class="pnum">135-2176-4587</p>
-										<p class="belong">1.2<span>km</span></p>
+										<p class="pnum"><a href="tel:135-2176-4587" type="phone">135-2176-4587</a></p>
+										<p class="belong"><img src="../img/location.png" alt="定位" />1.2<span>km</span></p>
 									</div>
 								</div>
 								<div class="ysj clearfix" >
@@ -89,8 +240,8 @@
 										<p>属性属性属性属性‘属性属性属性属属性属性属性属性‘属性属性属性属属性属性属性属性‘属性属性属性属属性属性属性属性‘属性属性属性属属性属性属性属性‘属性属性属性属</p>
 									</div>
 									<div class="price">
-										<p class="pnum">135-2176-4587</p>
-										<p class="belong">1.2<span>km</span></p>
+										<p class="pnum"><a href="tel:135-2176-4587" type="phone">135-2176-4587</a></p>
+										<p class="belong"><img src="../img/location.png" alt="定位" />1.2<span>km</span></p>
 									</div>
 								</div>
 								<div class="ysj clearfix" >
@@ -124,8 +275,8 @@
 										<p>属性属性属性属性‘属性属性属性属属性属性属性属性‘属性属性属性属属性属性属性属性‘属性属性属性属属性属性属性属性‘属性属性属性属属性属性属性属性‘属性属性属性属</p>
 									</div>
 									<div class="price">
-										<p class="pnum">135-2176-4587</p>
-										<p class="belong">1.2<span>km</span></p>
+										<p class="pnum"><a href="tel:135-2176-4587" type="phone">135-2176-4587</a></p>
+										<p class="belong"><img src="../img/location.png" alt="定位" />1.2<span>km</span></p>
 									</div>
 								</div>
 								<div class="ysj clearfix" >
@@ -159,8 +310,8 @@
 										<p>属性属性属性属性‘属性属性属性属属性属性属性属性‘属性属性属性属属性属性属性属性‘属性属性属性属属性属性属性属性‘属性属性属性属属性属性属性属性‘属性属性属性属</p>
 									</div>
 									<div class="price">
-										<p class="pnum">135-2176-4587</p>
-										<p class="belong">1.2<span>km</span></p>
+										<p class="pnum"><a href="tel:135-2176-4587" type="phone">135-2176-4587</a></p>
+										<p class="belong"><img src="../img/location.png" alt="定位" />1.2<span>km</span></p>
 									</div>
 								</div>
 								<div class="ysj clearfix" >
@@ -180,15 +331,17 @@
 					</ul>
 				</div>
 		</div>
-		
+		<div class="row-load-more" data-page="0" id="more1"> 点击加载更多 </div>
 	</div>
-	<footer></footer>
+	<footer>
+		
+	</footer>
 	<script>
-	window.onload=function(){
-		if($clamp){
-			console.log("cunzai");
-		}
-	}
+	$(function  () {
+		$(".belong").find("img").click(function  () {
+			alert("location");
+		})
+	})
 	</script>
 </body>
 </html>

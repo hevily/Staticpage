@@ -1,0 +1,104 @@
+<script>
+    function firstList (_this) {
+        if(!$(_this).hasClass('on')){
+            // console.log($(".first-li li"));
+            $(".first-li li").removeClass('on');
+            $(_this).addClass('on');
+        }
+    }
+    function secondList (_this) {
+        if(!$(_this).hasClass('on')){
+            $(".second-li li").removeClass('on');
+            $(_this).addClass('on');
+            // $(".backdrop,.layer").remove();
+            // $(".nav-loading").removeClass("nav-loading");
+        }
+    }
+</script>
+<div class="double">
+    <div class="half first-li">
+        <ul>
+            <li onclick="firstList (this);" class="on" >自助餐</li>
+            <li onclick="firstList (this);">火锅</li>
+            <li onclick="firstList (this);">烤肉</li>
+            <li onclick="firstList (this);">烧烤/烤串</li>
+            <li onclick="firstList (this);">蛋糕甜点</li>
+            <li onclick="firstList (this);">西餐</li>
+            <li onclick="firstList (this);">日韩料理</li>
+            <li onclick="firstList (this);">香锅烤鱼</li>
+            <li onclick="firstList (this);">聚餐宴请</li>
+            <li onclick="firstList (this);">川湘菜</li>
+            <li>小吃快餐</li>
+            <li>海鲜</li>
+        </ul>
+    </div>
+	<div class="half second-li">
+        <ul>
+            <li onclick="secondList (this);">二级一</li>
+            <li onclick="secondList (this);">火锅</li>
+            <li onclick="secondList (this);" class="on">烤肉</li>
+            <li onclick="secondList (this);">烧烤/烤串</li>
+            <li onclick="secondList (this);">烧烤/烤串</li>
+            <li onclick="secondList (this);">蛋糕甜点</li>
+            <li onclick="secondList (this);">西餐</li>
+            <li onclick="secondList (this);">日韩料理</li>
+            <li onclick="secondList (this);">香锅烤鱼</li>
+            <li onclick="secondList (this);">聚餐宴请</li>
+            <li onclick="secondList (this);">川湘菜</li>
+            <li>小吃快餐</li>
+            <li>海鲜</li>
+            <li>咖啡酒吧茶馆酒吧茶馆</li>
+            <li>食品饮料</li>
+            <li>汤/粥/炖菜</li>
+            <li>美酒佳酿美酒佳酿美酒</li>
+            <li>四季茗茶</li>
+            <li class="on">自助餐</li>
+            <li>火锅</li>
+            <li>烤肉</li>
+            <li>烧烤/烤串</li>
+            <li>蛋糕甜点</li>
+            <li>西餐</li>
+            <li>日韩料理</li>
+            <li>香锅烤鱼</li>
+            <li>聚餐宴请</li>
+            <li>川湘菜</li>
+            <li>小吃快餐</li>
+            <li>海鲜</li>
+            <li>咖啡酒吧茶馆</li>
+            <li>食品饮料</li>
+            <li>汤/粥/炖菜</li>
+            <li>美酒佳酿</li>
+            <li>四季茗茶</li>
+            <li class="on">自助餐</li>
+            <li>火锅</li>
+            <li>烤肉</li>
+            <li>烧烤/烤串</li>
+            <li>蛋糕甜点</li>
+            <li>西餐</li>
+            <li>日韩料理</li>
+            <li>香锅烤鱼</li>
+            <li>聚餐宴请</li>
+            <li>川湘菜</li>
+            <li>小吃快餐</li>
+            <li>海鲜</li>
+            <li>咖啡酒吧茶馆</li>
+            <li>食品饮料</li>
+            <li>汤/粥/炖菜</li>
+            <li>美酒佳酿</li>
+            <li>四季茗茶</li>
+        </ul>
+    </div>
+    <style>
+    .first-li{float: left;width: 30%;}
+    .second-li{float: left;width: 70%;background-color: #EAEAEA;}
+    .double ul li { padding: 10px; border-bottom: 1px solid #E9E9E9; }
+    </style>
+    <!-- // <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+     <script>
+    // $(function  () {
+    //     $(".first-li li").on("click",function  () {
+    //         alert("tap");
+    //     })
+    // })
+    // </script> -->
+</div>

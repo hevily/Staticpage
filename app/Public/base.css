@@ -25,6 +25,7 @@ ul li{
 .container{
 	margin: 0 auto;
 }
+.pd0{padding: 0;}
 .pd10{
   padding-left: 10px;
   padding-right: 10px;
@@ -74,6 +75,25 @@ ul li{
 }
 .right{
   float: right;
+}
+.fright{
+  float: right;
+}
+.fleft{
+  float: left;
+}
+.cf3{
+  color: #f36303;
+}
+.fwb{
+  font-weight: bold;
+}
+.fwn{
+  font-weight: normal;
+}
+.h35{
+  height: 35px;
+  line-height: 35px;
 }
 .al{
   text-align: left;

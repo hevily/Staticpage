@@ -1,0 +1,205 @@
+.container{width:100%;max-width:640px;}
+.goods {
+    width: 33.3333%;
+    float: left;
+}
+.am-slider{padding-bottom: 40px;box-shadow: none;}
+
+.am-slider-default .am-control-nav{
+    bottom: 15px;
+}
+/*clearfix*/
+.clearfix:before,
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.clearfix:after {clear: both;}
+.clearfix {zoom: 1;} /* IE < 8 */
+
+
+.am-slider-a1 .am-control-nav li a{
+	box-shadow: none;
+	border:1px solid #9A9A9A;
+}
+.am-slider-default .am-control-nav li a{
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255,0.6);
+}
+.am-slider-default .am-control-nav li a.am-active{
+    background-color: rgba(255, 255, 255,1);
+}
+.am-slider-a1 .am-control-nav li a{
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255,0.6);
+}
+.am-slider-a1 .am-control-nav li a.am-active{
+	background-color: #9A9A9A;
+}
+.good-description{
+overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 1;
+-webkit-box-orient: vertical;
+/*text-align: center;*/
+/*height: 42px;*/
+}
+.good-description a{
+	text-decoration: none;
+	color: #404040;
+	font-size: 14px;
+}
+.goods .good-price {
+	/*text-align: center;*/
+    border: none;
+    font-size: 18px;
+    margin-top: -4px;
+    font-weight: 500;
+    margin-left: -2px;
+    margin-bottom: 5px;
+    padding-left: 3%;
+    color: #f27302;
+    margin-top: 8px;
+}
+.season-select{padding-left: 10px;padding-right: 10px;}
+.season-select-title{padding: 0 10px;font-size: 18px;font-weight: normal;}
+.season-select-title a{text-decoration: none;font-size: 12px;}
+.season-select-title a img{height: 12px;width: 8px;margin-left: 8px;position: relative;top: 1px;}
+.features{width: 50%;float: left;}
+.features img{width: 100%;display: block;}
+.kinds{width: 50%;float: left;}
+.kinds-img{width: 30%;float: left;}
+.kinds-img img{width: 100%;}
+.kinds-desc{height: 100%;}
+.kinds-desc p{font-size: 18px;}
+.kinds-desc span{ font-size: 12px;}
+.bb{border-bottom:1px solid #F0F0F0;}
+.banner img{width: 100%;max-width: 640px;display: block;}
+
+
+
+.company-head {
+    position: relative;
+    /*min-height: 180px;*/
+}
+.jionVip {
+    position: absolute;
+    right: 80px;
+    top: 15px;
+}
+.jionVip {
+    height: 60px;
+    width: 60px;
+    background: rgba(201,201,201, 0.5);
+    border-radius: 3px;
+    overflow: hidden;
+    font-size: 0.8125em;
+    line-height: 18px;
+    text-align: center;
+    color: #fff;
+    z-index: 3;
+}
+.ico-jionVip {
+    display: block;
+    background: url(../img/add.png) no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    margin: 0px auto;
+    margin-top: 7px;
+}
+.favouriteGoods {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    height: 60px;
+    width: 60px;
+    background: rgba(201,201,201, 0.5);
+    border-radius: 3px;
+    overflow: hidden;
+    font-size: 0.8125em;
+    line-height: 18px;
+    text-align: center;
+    color: #fff;
+    z-index: 3;
+    min-height: 5%;
+    min-width: 5%;
+}
+.ico-favourite {
+    display: block;
+    background: url(../img/heart.svg) no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    margin: 7px auto 0 auto;
+}
+.company-bg {
+    width: 100%;
+    height: 100%;
+}
+.logo-info {
+    height: 60px;
+    color: #ffffff;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+}
+.logo-info .logo {
+	-webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    height: 64px;
+    width: 64px;
+    bottom: 20px;
+    left: 10px;
+    float: left;
+    padding: 2px;
+    /*background-color: #fff;*/
+    border-radius: 8px;
+}
+.logo img {
+    height: 60px;
+    width: 60px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.logo-info .info {
+    float: left;
+    height: 57px;
+    position: relative;
+    left: 15px;
+    bottom: 2px;
+    font-size: 24px;
+    line-height: 57px;
+}
+.info p{
+	text-shadow:2px 2px 3px rgba(0,0,0,0.5);
+}
+.media-body{
+	vertical-align: middle;
+}
+.media-left{padding-right: 5px;}
+.media-object{
+	width: 50px;
+	height: 60px;
+}
+.media-body p{
+	font-size: 18px;
+	/*font-weight: bold;*/
+}
+.media-body span{
+	color: #8C8C8C;
+	font-size: 12px;
+	margin-right: 2px;
+}
+.media-body div{line-height: 14px;}
+.icon{width: 20px;float: left;position: relative;top: 5px;margin-right:5px;}
+.am-slider{padding-left:10px;padding-right: 10px;}
+.pd0{padding: 0;}
+.am-slider-a1 .am-control-nav{bottom: 20px;}
