@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <script src="../../Public/jQuery/jquery-2.1.4.min.js"></script>
+    <link rel="stylesheet" href="../css/search-result.css" />
+	<title>voucher-list version 2.0</title>
+	<style>
+	.img{width: 100px;height: 100px;border-radius: 0;border:1px solid #fff;}
+	.img img{border-radius: 0;}
+	.ysj{padding-right: 15px;}
+	.description{height: 100px;padding-left: 110px;margin-bottom: 0px;}
+	.pnum{left: 110px;color: #f36303 !important;font-weight: bold;}
+	.pnum del{font-weight: normal;color: #686868;}
+	.name{padding-right: 35px;position: relative;}
+	.description .name div{    overflow: hidden;    white-space: nowrap;    text-overflow: ellipsis;font-weight: bold;    font-size: 18px;line-height: 22px; }
+	.name span{position: absolute;right:10px;top:0;background-color: #A1D980;font-size: 12px;font-weight: normal;border-radius: 5px;padding: 4px;color: #fff;line-height: 12px;}
+	.sell-one .attribute{padding-right: 0;}
+	.res .attribute p{    -webkit-line-clamp: 2;font-size: 16px;line-height: 20px;padding-top: 8px;padding-right: 5px;}
+	.for-more{position: absolute;right:7px;top: 50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);height: 12px;width: 8px;}
+	.belong{right: 15px;}
+	.ysj{border-top:none;position: relative;}
+	.res-show ul li{padding-bottom: 10px;}
+	.ysj .tags{position: relative; color: #f36303;background-color: #FAFAFA;border:1px solid #F4F4F4;margin-left:10px;border-radius:3px;padding: 0 13px;float: left;margin-top: 4px;}
+	.ysj .tags:before{position: absolute;right: -1px;bottom: -1px;height: 10px;width: 10px; background-image: url(../img/right-bottom.png);content: "";}
+	.price p{color: #686868;font-size: 16px;}
+	.none .name{padding-right: 0;}
+	.none .name span{display: none;}
+	.search-bar{height: 35px;background-color: #FFEEE2;text-align: center;padding: 5px;border-bottom: 1px solid #E5DCD5;}
+	.search-btn{height: 25px;	width: 160px;background-color: #FF8D4E;margin: 0px auto;line-height: 25px;border-top-left-radius:35px;border-top-right-radius:35px;border-bottom-left-radius:35px;border-bottom-right-radius:35px;color: #fff;font-size: 14px;}
+	.search-btn img{height: 4px;width: 7px;top: -2px;position: relative;}
+	.opening img{-webkit-transform:rotate(-180deg);transform:rotate(-180deg);}
+	.belong,.pnum{bottom: 1px;}
+
+
+
+
+	.backdrop{
+		position: fixed;
+		top: 35px;
+		left: 0;
+		background-color: rgba(0,0,0,0.5);
+		height: 100%;
+		width: 100%;
+	}
+	.layer{
+		position: absolute;
+		top: 35px;
+		width: 100%;
+		max-width: 640px;
+		left: 50%;
+		-webkit-transform:translateX(-50%);
+		        transform:translateX(-50%);
+		background-color: #EAEAEA;
+		height: 70%;
+	}
+	.layer-title{
+		display: none;
+	}
+	.layer-content{
+		height:100%;
+		overflow:auto;	
+	}
+	.double{height: 100%;}
+	.half{overflow: auto;height: 100%;}
+	.first-li{background-color: #fff;}
+	.second-li li{border-bottom: 1px solid #EAEAEA !important;}
+	.on{background-color: #F6F7F9;color: #f36303;font-weight: bold;}
+	/*.second-li .on{color: #f36303;}*/
+	.belong img{height: 18px;width: 18px;position: relative;top: 3px;left: -3px;}
+	.pnum a{border:none;color: #828282;}
+	/*加载更多*/
+
+	.row-load-more {
+		clear: both;
+		text-align: center;
+		line-height: 42px;
+		height: 42px;
+		background: #fdfdfd;
+		border-top: 1px solid #e4e4e4;
+		border-bottom: 1px solid #e4e4e4;
+	}
+	/*
+	 *  Usage: 动画loading
+	 *
+	 *    <div class="sk-spinner sk-spinner-rotating-plane"></div>
+	 *
+	 */
+
+	.sk-spinner-rotating-plane.sk-spinner {
+		display: inline-block;
+		vertical-align: middle;
+		line-height: 42px;
+		width: 20px;
+		height: 20px;
+		background-color: #f36404;
+		margin: 0 auto;
+		-webkit-animation: sk-rotatePlane 1.2s infinite ease-in-out;
+		animation: sk-rotatePlane 1.2s infinite ease-in-out;
+	}
+	@-webkit-keyframes sk-rotatePlane {
+		0% {
+			-webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+			transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+		}
+		50% {
+			-webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+			transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+		}
+		100% {
+			-webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+			transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+		}
+	}
+	@keyframes sk-rotatePlane {
+		0% {
+			-webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+			transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+		}
+		50% {
+			-webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+			transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+		}
+		100% {
+			-webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+			transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+		}
+	}
+	</style>
+	<script>
+	$(function  () {
+			$(".row-load-more").click(function  () {
+				$(this).html("").append("<div class='sk-spinner sk-spinner-rotating-plane'></div>&nbsp;加载中")
+			});
+				
+		$(".search-btn").click(function  () {
+			if ($(this).hasClass("opening")) {
+				$(".backdrop,.layer").remove();
+				$(".opening").removeClass('opening');
+			}else{
+				$(this).addClass("opening");
+				appendlayer();
+				removelayer();
+				$(".layer-content").load('load-page2.html');
+			};
+		})
+
+		function appendlayer(name,Classvalue){
+			$("body").append(""+
+				"<div class='backdrop'></div>"+
+				"<div class='layer'>"+
+					"<div class='layer-title clearfix'>"+
+						"<div class='select-cancel clearfix'>"+
+							"<div class='cancel'><a type='button' href='javascript:;'>取消</a></div>"+
+							"<div class='action-title'>"+name+"</div>"+
+							"<div class='selecting' Classvalue='"+Classvalue+"'><a type='button' href='javascript:;'>确定</a></div>"+
+						"</div>"+
+					"</div>"+
+					"<div class='layer-content'></div>"+
+					"<div class='layer-footer'></div>"+
+				"</div>");
+		};
+
+		function removelayer(){
+			$('.backdrop').click(function() {
+				$(".backdrop,.layer").remove();
+				$(".opening").removeClass('opening');
+			});
+			$(document).delegate('.backdrop', 'click', function() {
+				$(".backdrop,.layer").remove();
+				$(".nav-loading").removeClass('nav-loading');
+				$(".opening").removeClass('opening');
+			});
+			$(document).delegate('.cancel a', 'click', function() {
+				$(".backdrop,.layer").remove();
+				$(".opening").removeClass('opening');
+			});
+		};
+
+	})
+	</script>
+	<!-- rim 出租出售 store 店铺 资讯  -->
+
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="search-bar">
+			<div class="search-btn">
+				所有代金券
+				<img src="../img/trigger.png" alt="三角标" />
+			</div>
+		</div>
+		<div class="res-show">
+				<div class="goods-res">
+					<ul>
+						
+						<li>
+							<!-- default -->
+							<img class="for-more" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/img/tyt/for-more.png" alt="更多" />
+							<div class="res sell-two none">
+								<div class="img">
+									<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=90261&width=60&height=60&type=3" alt="logo" />
+								</div>
+								<div class="description">
+									<div class="name">
+										<div>
+											店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店
+										</div>
+										<span>券</span>
+									</div>
+									<div class="attribute">
+										<p>规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则</p>
+									</div>
+									<div class="price">
+										<p class="pnum">¥88 <del>100</del></p>
+										<p class="belong"><img src="../img/location.png" alt="定位" />1.2<span>km</span></p>
+									</div>
+								</div>
+								<div class="ysj clearfix" >
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+								</div>
+							</div>
+						</li>
+						
+						<li>
+							<!-- default -->
+							<img class="for-more" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/img/tyt/for-more.png" alt="更多" />
+							<div class="res sell-two none">
+								<div class="img">
+									<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=90261&width=60&height=60&type=3" alt="logo" />
+								</div>
+								<div class="description">
+									<div class="name">
+										<div>
+											店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店
+										</div>
+										<span>券</span>
+									</div>
+									<div class="attribute">
+										<p>规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则</p>
+									</div>
+									<div class="price">
+										<p class="pnum">¥88 <del>100</del></p>
+										<p class="belong"><img src="../img/location.png" alt="定位" />1.2<span>km</span></p>
+									</div>
+								</div>
+								<div class="ysj clearfix" >
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+								</div>
+							</div>
+						</li>
+						
+						<li>
+							<!-- default -->
+							<img class="for-more" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/img/tyt/for-more.png" alt="更多" />
+							<div class="res sell-two none">
+								<div class="img">
+									<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=90261&width=60&height=60&type=3" alt="logo" />
+								</div>
+								<div class="description">
+									<div class="name">
+										<div>
+											店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店
+										</div>
+										<span>券</span>
+									</div>
+									<div class="attribute">
+										<p>规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则</p>
+									</div>
+									<div class="price">
+										<p class="pnum">¥88 <del>100</del></p>
+										<p class="belong"><img src="../img/location.png" alt="定位" />1.2<span>km</span></p>
+									</div>
+								</div>
+								<div class="ysj clearfix" >
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+								</div>
+							</div>
+						</li>
+						
+						<li>
+							<!-- default -->
+							<img class="for-more" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/img/tyt/for-more.png" alt="更多" />
+							<div class="res sell-two none">
+								<div class="img">
+									<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=90261&width=60&height=60&type=3" alt="logo" />
+								</div>
+								<div class="description">
+									<div class="name">
+										<div>
+											店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店
+										</div>
+										<span>券</span>
+									</div>
+									<div class="attribute">
+										<p>规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则</p>
+									</div>
+									<div class="price">
+										<p class="pnum">¥88 <del>100</del></p>
+										<p class="belong"><img src="../img/location.png" alt="定位" />1.2<span>km</span></p>
+									</div>
+								</div>
+								<div class="ysj clearfix" >
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+								</div>
+							</div>
+						</li>
+						
+						<li>
+							<!-- default -->
+							<img class="for-more" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/img/tyt/for-more.png" alt="更多" />
+							<div class="res sell-two none">
+								<div class="img">
+									<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=90261&width=60&height=60&type=3" alt="logo" />
+								</div>
+								<div class="description">
+									<div class="name">
+										<div>
+											店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店
+										</div>
+										<span>券</span>
+									</div>
+									<div class="attribute">
+										<p>规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则</p>
+									</div>
+									<div class="price">
+										<p class="pnum">¥88 <del>100</del></p>
+										<p class="belong"><img src="../img/location.png" alt="定位" />1.2<span>km</span></p>
+									</div>
+								</div>
+								<div class="ysj clearfix" >
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+								</div>
+							</div>
+						</li>
+						
+						<li>
+							<!-- default -->
+							<img class="for-more" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/img/tyt/for-more.png" alt="更多" />
+							<div class="res sell-two none">
+								<div class="img">
+									<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=90261&width=60&height=60&type=3" alt="logo" />
+								</div>
+								<div class="description">
+									<div class="name">
+										<div>
+											店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店
+										</div>
+										<span>券</span>
+									</div>
+									<div class="attribute">
+										<p>规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则</p>
+									</div>
+									<div class="price">
+										<p class="pnum">¥88 <del>100</del></p>
+										<p class="belong"><img src="../img/location.png" alt="定位" />1.2<span>km</span></p>
+									</div>
+								</div>
+								<div class="ysj clearfix" >
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+								</div>
+							</div>
+						</li>
+						
+				
+
+					</ul>
+				</div>
+		</div>
+		<div class="row-load-more" data-page="0" id="more1"> 点击加载更多 </div>
+	</div>
+	<footer>
+		
+	</footer>
+	<script>
+	$(function  () {
+		$(".belong").find("img").click(function  () {
+			alert("location");
+		})
+	})
+	</script>
+</body>
+</html>
