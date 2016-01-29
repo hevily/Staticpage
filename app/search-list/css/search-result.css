@@ -43,3 +43,19 @@
 }
 .clearfix:after {clear: both;}
 .clearfix {zoom: 1;} /* IE < 8 */
+
+
+/*场地 field*/
+.field .pnum{bottom:30px;font-size: 18px;}
+.field .attribute{top: 55px;}
+.field .attribute p{color: #909090;}
+
+/*设备*/
+/*sell-two*/
+.sell-two .pnum{display: none;}
+/*sell-one*/
+.sell-one{}
+/*face-to-face*/
+	.face-to-face .pnum{display: none;}
+	.face-to-face .ysj p{display: none;}
+	.face-to-face p.face{display: block;}
