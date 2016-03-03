@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../../Public/base.css" />
+    <link rel="stylesheet" type="text/css" href="../css/manage.css" />
+	<title>提现订单</title>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="add-card n-d">
+			<div class="media">
+	             <div class="media-left media-middle">
+	               提现银行卡	
+	             </div>
+	             <div class="media-body media-middle">
+	               <input class="extract-card" type="text" readonly="readonly" value="建设银行 5236" />
+	             </div>
+	        </div>
+			<div class="media">
+	             <div class="media-left media-middle">
+	               提现金额
+	             </div>
+	             <div class="media-body media-middle">
+	               <input class='extract-money' type="text" readonly="readonly" value="567.00" />
+	             </div>
+	        </div>
+		</div>
+		<label class="accept"><input type="checkbox" />短信接收提示<span class="phone-num">13544446666</span></label>
+		<div class="extract">
+			<a href="javascript:;">确认</a>
+		</div>
+	</div>
+	<footer></footer>
+	<script src="../../Public/jQuery/jquery-2.1.4.min.js"></script>
+	<script>
+		$(function () {
+			$(".accept").click(function () {
+				if ($(this).find('input').is(':checked')) {
+					// console.log("choosed");
+					$(this).addClass('checked');
+				}else{
+					$(this).removeClass('checked');
+					// console.log('null');
+				}
+			})
+		})
+	</script>
+</body>
+</html>

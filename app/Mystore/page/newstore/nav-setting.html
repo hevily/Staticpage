@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../../css/base.css" />
+    <link rel="stylesheet" href="../../css/add-store.css" />
+    <title>导航设定</title>
+</head>
+<body>
+    <header></header>
+    <div class="container">
+        <div class="notice">
+            温馨提示：您可以选择需要展示的栏目，也可以更改栏目名称。
+        </div>
+        <div class="navset">
+            <div class="nav a0" draggable="true">
+                <div class="media ">
+                  <div class="media-left">
+                    <a href="javascript:;">
+                      <img class="media-object" src="../../img/sale.png" alt="...">
+                    </a>
+                  </div>
+                  <div class="media-body media-middle">
+                    <input type="text" placeholder="输入类别名称" value="0">
+                  </div>
+                  <div class="media-right media-middle nav-move">
+                    <a href="javascript:;" class="nav-up">
+                    <img  src="../../img/nav-upward.png" alt="上移" />
+                    </a>
+                    <a href="javascript:;" class="nav-remove">
+                    <img src="../../img/nav-remove.png" alt="移除" />
+                    </a>
+                    <a href="javascript:;" class="nav-down">
+                    <img src="../../img/nav-down.png" alt="下移" />
+                    </a>
+                  </div>
+                </div>
+
+            </div>
+            <div class="nav a1" draggable="true">
+                <div class="media ">
+                  <div class="media-left">
+                    <a href="javascript:;">
+                      <img class="media-object" src="../../img/sale.png" alt="...">
+                    </a>
+                  </div>
+                  <div class="media-body media-middle">
+                    <input type="text" placeholder="输入类别名称">
+                  </div>
+                  <div class="media-right media-middle nav-move">
+                    <a href="javascript:;" class="nav-up">
+                    <img  src="../../img/nav-upward.png" alt="上移" />
+                    </a>
+                    <a href="javascript:;" class="nav-remove">
+                    <img src="../../img/nav-remove.png" alt="移除" />
+                    </a>
+                    <a href="javascript:;" class="nav-down">
+                    <img src="../../img/nav-down.png" alt="下移" />
+                    </a>
+                  </div>
+                </div>
+
+            </div>
+            <div class="nav a2" draggable="true">
+                <div class="media ">
+                  <div class="media-left">
+                    <a href="javascript:;">
+                      <img class="media-object" src="../../img/sale.png" alt="...">
+                    </a>
+                  </div>
+                  <div class="media-body media-middle">
+                    <input type="text" placeholder="输入类别名称" value="2">
+                  </div>
+                  <div class="media-right media-middle nav-move">
+                    <a href="javascript:;" class="nav-up">
+                    <img  src="../../img/nav-upward.png" alt="上移" />
+                    </a>
+                    <a href="javascript:;" class="nav-remove">
+                    <img src="../../img/nav-remove.png" alt="移除" />
+                    </a>
+                    <a href="javascript:;" class="nav-down">
+                    <img src="../../img/nav-down.png" alt="下移" />
+                    </a>
+                  </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+    <script src="../../../Public/jQuery/jquery-2.1.4.min.js"></script>
+    <script>
+      $(function () {
+        // up
+        $(".navset").on('click','.nav-up',function () {
+            var _index = $(this).closest('.nav').index(),nav = $(this).closest('.nav').clone(),insert = $(".navset").find('.nav');
+            if (_index>0) {
+                $(this).closest('.nav').remove();
+                insert.eq(_index-1).before(nav);
+            }else{
+                console.log("first");
+            };
+        });
+        // remove
+        $(".nav-remove").click(function () {
+          console.log("remove");
+          $(this).closest(".nav").remove();
+        });
+        // down
+        $(".navset").on('click','.nav-down',function () {
+            var _index = $(this).closest('.nav').index(),nav = $(this).closest('.nav').clone(),insert = $(".navset").find('.nav');
+            if (_index<insert.length-1) {
+                $(this).closest('.nav').remove();
+                insert.eq(_index+1).after(nav);
+            }else if(_index=insert.length-1){
+                console.log('last');
+            };
+        });
+      })
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+body{-webkit-overflow-scrolling:touch;}
+.container {width:100%;padding-bottom: 46px;}
+.nav {width:33.3333%;float: left;text-align: center;}
+/*.icon{width: 80%;overflow:hidden;text-align: center;display:inline-block;}*/
+.nav img{width:80%;}
+.media-left,.media-body,.media-right{padding:10px 0;}
+.media{border-bottom:1px solid #9c9c9c;padding:0 10px;margin: 0;}
+.media-left input{height: 15px;width: 15px;}
+.order .media-body{padding-left: 10px;}
+.order-num{font-size: 14px;color: #000;line-height: 24px;}
+.payinfo{font-size: 12px;color: #cfcfcf;line-height: 16px;}
+.payinfo span{float: right;}
+.media-right{padding-left: 18px;}
+.media-right p{color: #f36303;font-size: 18px;font-weight: bold;}
+footer{position:fixed;left:0;bottom:0;width:100%;background-color: #fff;border-top: 1px solid #9c9c9c;}
+footer .media-left{min-width:60px;font-size: 16px;}
+footer .media-right{min-width: 100px;}
+footer .media-body{color: #f36303;font-size: 16px;padding-left: 10px;}
+footer .media-body span{font-size: 20px;font-weight: bold;}
+.order-num a{text-decoration: none;font-size: 18px;}
+.notice{padding: 10px;font-size: 16px;text-align: justify;border-bottom:1px solid #9c9c9c;}
+
+.cards{padding: 10px;}
+.card{border:1px solid #fff;color: #fff;border-radius:8px;background-color: #0196F3;margin-bottom: 10px;}
+.card p{line-height: 40px;}
+.card-name{border-top: 1px solid #fff;text-align:right;}
+.card .media-body{padding-left:10px;font-size: 16px;}
+.card .media-body .card-num {float: right;font-size: 20px;}
+.credit-card,.credit .save-card{display: none;}
+.credit .credit-card {display: inline-block;}
+.card .media-left {padding: 0;}
+.card .media-left img {width: 80px;}
+.default-card{background-color: #F1453D;}
+
+.add-card {text-align: center;}
+.add-card a {text-decoration:none;color: #f36303;padding: 5px 12px;border-radius:5px;border:1px solid #f36303;}
+.add-card .media-left,.add-card .media-body{padding: 0 !important;height: 45px;}
+.add-card .media-left{min-width: 80px;}
+.add-card .media-body input{text-align: left;height:100%;width: 100%;padding-left: 20px;font-size: 16px;}
+.add-finish{text-align: center;padding-top:20px;}
+.add-finish a{text-decoration:none;color: #f36303;padding: 5px 12px;border-radius:5px;border:1px solid #f36303;display: inline-block;}
+.accept{padding: 0 10px;margin-top: 10px;display: block;}
+.accept input[type='checkbox'] {height: 15px;width: 15px;}
+.phone-num{float: right;color: #A1A1A1;padding-right: 10px;}
+.accept span{ display:none;}
+.checked span{display: inline-block;}
+.extract-card,.extract-money{color: #333333;font-size: 16px !important;}
+.extract{text-align: center;margin-top: 20px;}
+.extract a {text-decoration:none;color: #f36303;padding: 5px 12px;border-radius:5px;border:1px solid #f36303;}

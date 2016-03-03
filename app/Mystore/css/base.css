@@ -18,7 +18,6 @@ html,body{height: 100%;}
 }
 .clearfix:after {clear: both;}
 .clearfix {zoom: 1;} /* IE < 8 */
-.n-d input{-webkit-appearance:none;border:none;border-radius:none;outline:none;box-shadow:none;}
 ul li{
 	list-style: none;
 }

@@ -28,13 +28,23 @@
 	.price p{color: #686868;font-size: 16px;}
 	.none .name{padding-right: 0;}
 	.none .name span{display: none;}
-	.search-bar{height: 35px;background-color: #FFEEE2;text-align: center;padding: 5px;border-bottom: 1px solid #E5DCD5;}
+	.search-bar{position: fixed;top: 0;width:100%;max-width: 640px;z-index: 9; height: 35px;background-color: #FFEEE2;text-align: center;padding: 5px;border-bottom: 1px solid #E5DCD5;}
 	.search-btn{height: 25px;	width: 160px;background-color: #FF8D4E;margin: 0px auto;line-height: 25px;border-top-left-radius:35px;border-top-right-radius:35px;border-bottom-left-radius:35px;border-bottom-right-radius:35px;color: #fff;font-size: 14px;}
 	.search-btn img{height: 4px;width: 7px;top: -2px;position: relative;}
 	.opening img{-webkit-transform:rotate(-180deg);transform:rotate(-180deg);}
 	.belong,.pnum{bottom: 1px;}
+	.res-show{position: relative;top:35px;}
 
+	.alpha {
+	    height: 100%;
+	    overflow: hidden;
+	    position: relative;
+	}
 
+	.alpha body {
+	    height: 100%;
+	    overflow: hidden;
+	}
 
 
 	.backdrop{
@@ -46,7 +56,8 @@
 		width: 100%;
 	}
 	.layer{
-		position: absolute;
+		position: fixed;
+		z-index: 10;
 		top: 35px;
 		width: 100%;
 		max-width: 640px;
@@ -64,7 +75,7 @@
 		overflow:auto;	
 	}
 	.double{height: 100%;}
-	.half{overflow: auto;height: 100%;}
+	.half{overflow: auto;height: 100%;-webkit-overflow-scrolling:touch;}
 	.first-li{background-color: #fff;}
 	.second-li li{border-bottom: 1px solid #EAEAEA !important;}
 	.on{background-color: #F6F7F9;color: #f36303;font-weight: bold;}
@@ -139,11 +150,13 @@
 			if ($(this).hasClass("opening")) {
 				$(".backdrop,.layer").remove();
 				$(".opening").removeClass('opening');
+				$('html').removeClass('alpha');
 			}else{
 				$(this).addClass("opening");
 				appendlayer();
 				removelayer();
 				$(".layer-content").load('load-page2.html');
+				$('html').addClass('alpha');
 			};
 		})
 
@@ -167,15 +180,18 @@
 			$('.backdrop').click(function() {
 				$(".backdrop,.layer").remove();
 				$(".opening").removeClass('opening');
+				$('html').removeClass('alpha');
 			});
 			$(document).delegate('.backdrop', 'click', function() {
 				$(".backdrop,.layer").remove();
 				$(".nav-loading").removeClass('nav-loading');
 				$(".opening").removeClass('opening');
+				$('html').removeClass('alpha');
 			});
 			$(document).delegate('.cancel a', 'click', function() {
 				$(".backdrop,.layer").remove();
 				$(".opening").removeClass('opening');
+				$('html').removeClass('alpha');
 			});
 		};
 
@@ -196,6 +212,531 @@
 		<div class="res-show">
 				<div class="goods-res">
 					<ul>
+						
+						<li>
+							<!-- default -->
+							<img class="for-more" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/img/tyt/for-more.png" alt="更多" />
+							<div class="res sell-two none">
+								<div class="img">
+									<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=90261&width=60&height=60&type=3" alt="logo" />
+								</div>
+								<div class="description">
+									<div class="name">
+										<div>
+											店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店
+										</div>
+										<span>券</span>
+									</div>
+									<div class="attribute">
+										<p>规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则</p>
+									</div>
+									<div class="price">
+										<p class="pnum">¥88 <del>100</del></p>
+										<p class="belong"><img src="../img/location.png" alt="定位" />1.2<span>km</span></p>
+									</div>
+								</div>
+								<div class="ysj clearfix" >
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+								</div>
+							</div>
+						</li>
+						
+						<li>
+							<!-- default -->
+							<img class="for-more" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/img/tyt/for-more.png" alt="更多" />
+							<div class="res sell-two none">
+								<div class="img">
+									<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=90261&width=60&height=60&type=3" alt="logo" />
+								</div>
+								<div class="description">
+									<div class="name">
+										<div>
+											店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店
+										</div>
+										<span>券</span>
+									</div>
+									<div class="attribute">
+										<p>规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则</p>
+									</div>
+									<div class="price">
+										<p class="pnum">¥88 <del>100</del></p>
+										<p class="belong"><img src="../img/location.png" alt="定位" />1.2<span>km</span></p>
+									</div>
+								</div>
+								<div class="ysj clearfix" >
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+								</div>
+							</div>
+						</li>
+						
+						<li>
+							<!-- default -->
+							<img class="for-more" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/img/tyt/for-more.png" alt="更多" />
+							<div class="res sell-two none">
+								<div class="img">
+									<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=90261&width=60&height=60&type=3" alt="logo" />
+								</div>
+								<div class="description">
+									<div class="name">
+										<div>
+											店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店
+										</div>
+										<span>券</span>
+									</div>
+									<div class="attribute">
+										<p>规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则</p>
+									</div>
+									<div class="price">
+										<p class="pnum">¥88 <del>100</del></p>
+										<p class="belong"><img src="../img/location.png" alt="定位" />1.2<span>km</span></p>
+									</div>
+								</div>
+								<div class="ysj clearfix" >
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+								</div>
+							</div>
+						</li>
+						
+						<li>
+							<!-- default -->
+							<img class="for-more" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/img/tyt/for-more.png" alt="更多" />
+							<div class="res sell-two none">
+								<div class="img">
+									<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=90261&width=60&height=60&type=3" alt="logo" />
+								</div>
+								<div class="description">
+									<div class="name">
+										<div>
+											店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店
+										</div>
+										<span>券</span>
+									</div>
+									<div class="attribute">
+										<p>规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则</p>
+									</div>
+									<div class="price">
+										<p class="pnum">¥88 <del>100</del></p>
+										<p class="belong"><img src="../img/location.png" alt="定位" />1.2<span>km</span></p>
+									</div>
+								</div>
+								<div class="ysj clearfix" >
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+								</div>
+							</div>
+						</li>
+						
+						<li>
+							<!-- default -->
+							<img class="for-more" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/img/tyt/for-more.png" alt="更多" />
+							<div class="res sell-two none">
+								<div class="img">
+									<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=90261&width=60&height=60&type=3" alt="logo" />
+								</div>
+								<div class="description">
+									<div class="name">
+										<div>
+											店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店
+										</div>
+										<span>券</span>
+									</div>
+									<div class="attribute">
+										<p>规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则</p>
+									</div>
+									<div class="price">
+										<p class="pnum">¥88 <del>100</del></p>
+										<p class="belong"><img src="../img/location.png" alt="定位" />1.2<span>km</span></p>
+									</div>
+								</div>
+								<div class="ysj clearfix" >
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+								</div>
+							</div>
+						</li>
+						
+						<li>
+							<!-- default -->
+							<img class="for-more" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/img/tyt/for-more.png" alt="更多" />
+							<div class="res sell-two none">
+								<div class="img">
+									<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=90261&width=60&height=60&type=3" alt="logo" />
+								</div>
+								<div class="description">
+									<div class="name">
+										<div>
+											店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店
+										</div>
+										<span>券</span>
+									</div>
+									<div class="attribute">
+										<p>规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则</p>
+									</div>
+									<div class="price">
+										<p class="pnum">¥88 <del>100</del></p>
+										<p class="belong"><img src="../img/location.png" alt="定位" />1.2<span>km</span></p>
+									</div>
+								</div>
+								<div class="ysj clearfix" >
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+								</div>
+							</div>
+						</li>
+						
+						<li>
+							<!-- default -->
+							<img class="for-more" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/img/tyt/for-more.png" alt="更多" />
+							<div class="res sell-two none">
+								<div class="img">
+									<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=90261&width=60&height=60&type=3" alt="logo" />
+								</div>
+								<div class="description">
+									<div class="name">
+										<div>
+											店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店
+										</div>
+										<span>券</span>
+									</div>
+									<div class="attribute">
+										<p>规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则</p>
+									</div>
+									<div class="price">
+										<p class="pnum">¥88 <del>100</del></p>
+										<p class="belong"><img src="../img/location.png" alt="定位" />1.2<span>km</span></p>
+									</div>
+								</div>
+								<div class="ysj clearfix" >
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+								</div>
+							</div>
+						</li>
+						
+						<li>
+							<!-- default -->
+							<img class="for-more" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/img/tyt/for-more.png" alt="更多" />
+							<div class="res sell-two none">
+								<div class="img">
+									<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=90261&width=60&height=60&type=3" alt="logo" />
+								</div>
+								<div class="description">
+									<div class="name">
+										<div>
+											店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店
+										</div>
+										<span>券</span>
+									</div>
+									<div class="attribute">
+										<p>规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则</p>
+									</div>
+									<div class="price">
+										<p class="pnum">¥88 <del>100</del></p>
+										<p class="belong"><img src="../img/location.png" alt="定位" />1.2<span>km</span></p>
+									</div>
+								</div>
+								<div class="ysj clearfix" >
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+								</div>
+							</div>
+						</li>
+						
+						<li>
+							<!-- default -->
+							<img class="for-more" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/img/tyt/for-more.png" alt="更多" />
+							<div class="res sell-two none">
+								<div class="img">
+									<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=90261&width=60&height=60&type=3" alt="logo" />
+								</div>
+								<div class="description">
+									<div class="name">
+										<div>
+											店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店
+										</div>
+										<span>券</span>
+									</div>
+									<div class="attribute">
+										<p>规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则</p>
+									</div>
+									<div class="price">
+										<p class="pnum">¥88 <del>100</del></p>
+										<p class="belong"><img src="../img/location.png" alt="定位" />1.2<span>km</span></p>
+									</div>
+								</div>
+								<div class="ysj clearfix" >
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+								</div>
+							</div>
+						</li>
+						
+						<li>
+							<!-- default -->
+							<img class="for-more" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/img/tyt/for-more.png" alt="更多" />
+							<div class="res sell-two none">
+								<div class="img">
+									<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=90261&width=60&height=60&type=3" alt="logo" />
+								</div>
+								<div class="description">
+									<div class="name">
+										<div>
+											店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店
+										</div>
+										<span>券</span>
+									</div>
+									<div class="attribute">
+										<p>规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则</p>
+									</div>
+									<div class="price">
+										<p class="pnum">¥88 <del>100</del></p>
+										<p class="belong"><img src="../img/location.png" alt="定位" />1.2<span>km</span></p>
+									</div>
+								</div>
+								<div class="ysj clearfix" >
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+								</div>
+							</div>
+						</li>
+						
+						<li>
+							<!-- default -->
+							<img class="for-more" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/img/tyt/for-more.png" alt="更多" />
+							<div class="res sell-two none">
+								<div class="img">
+									<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=90261&width=60&height=60&type=3" alt="logo" />
+								</div>
+								<div class="description">
+									<div class="name">
+										<div>
+											店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店
+										</div>
+										<span>券</span>
+									</div>
+									<div class="attribute">
+										<p>规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则</p>
+									</div>
+									<div class="price">
+										<p class="pnum">¥88 <del>100</del></p>
+										<p class="belong"><img src="../img/location.png" alt="定位" />1.2<span>km</span></p>
+									</div>
+								</div>
+								<div class="ysj clearfix" >
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+								</div>
+							</div>
+						</li>
+						
+						<li>
+							<!-- default -->
+							<img class="for-more" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/img/tyt/for-more.png" alt="更多" />
+							<div class="res sell-two none">
+								<div class="img">
+									<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=90261&width=60&height=60&type=3" alt="logo" />
+								</div>
+								<div class="description">
+									<div class="name">
+										<div>
+											店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店
+										</div>
+										<span>券</span>
+									</div>
+									<div class="attribute">
+										<p>规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则</p>
+									</div>
+									<div class="price">
+										<p class="pnum">¥88 <del>100</del></p>
+										<p class="belong"><img src="../img/location.png" alt="定位" />1.2<span>km</span></p>
+									</div>
+								</div>
+								<div class="ysj clearfix" >
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+								</div>
+							</div>
+						</li>
+						
+						<li>
+							<!-- default -->
+							<img class="for-more" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/img/tyt/for-more.png" alt="更多" />
+							<div class="res sell-two none">
+								<div class="img">
+									<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=90261&width=60&height=60&type=3" alt="logo" />
+								</div>
+								<div class="description">
+									<div class="name">
+										<div>
+											店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店
+										</div>
+										<span>券</span>
+									</div>
+									<div class="attribute">
+										<p>规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则</p>
+									</div>
+									<div class="price">
+										<p class="pnum">¥88 <del>100</del></p>
+										<p class="belong"><img src="../img/location.png" alt="定位" />1.2<span>km</span></p>
+									</div>
+								</div>
+								<div class="ysj clearfix" >
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+								</div>
+							</div>
+						</li>
+						
+						<li>
+							<!-- default -->
+							<img class="for-more" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/img/tyt/for-more.png" alt="更多" />
+							<div class="res sell-two none">
+								<div class="img">
+									<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=90261&width=60&height=60&type=3" alt="logo" />
+								</div>
+								<div class="description">
+									<div class="name">
+										<div>
+											店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店
+										</div>
+										<span>券</span>
+									</div>
+									<div class="attribute">
+										<p>规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则</p>
+									</div>
+									<div class="price">
+										<p class="pnum">¥88 <del>100</del></p>
+										<p class="belong"><img src="../img/location.png" alt="定位" />1.2<span>km</span></p>
+									</div>
+								</div>
+								<div class="ysj clearfix" >
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+								</div>
+							</div>
+						</li>
+						
+						<li>
+							<!-- default -->
+							<img class="for-more" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/img/tyt/for-more.png" alt="更多" />
+							<div class="res sell-two none">
+								<div class="img">
+									<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=90261&width=60&height=60&type=3" alt="logo" />
+								</div>
+								<div class="description">
+									<div class="name">
+										<div>
+											店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店
+										</div>
+										<span>券</span>
+									</div>
+									<div class="attribute">
+										<p>规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则</p>
+									</div>
+									<div class="price">
+										<p class="pnum">¥88 <del>100</del></p>
+										<p class="belong"><img src="../img/location.png" alt="定位" />1.2<span>km</span></p>
+									</div>
+								</div>
+								<div class="ysj clearfix" >
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+									<div class="tags">娱乐<span></span></div>
+									<div class="tags">饮料<span></span></div>
+									<div class="tags">美食<span></span></div>
+								</div>
+							</div>
+						</li>
 						
 						<li>
 							<!-- default -->

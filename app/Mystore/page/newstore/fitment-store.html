@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../../css/base.css" />
+    <link rel="stylesheet" href="../../css/add-store.css" />
+    <script src="../../../Public/jQuery/jquery-2.1.4.min.js"></script>
+
+	<title>店铺装修</title>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="company-head">
+		        
+            <img src="../../img/bg.jpg"  alt="店铺名" class="company-bg blur"/>
+        
+            <div class="logo-info">
+                <div class="logo"> <img src="../../img/company-description.png">
+                <img class="edit-logo" src="../../img/edit-photo.png" alt="edit-logo">
+                </div>
+                <div class="info">
+                <input type="text" placeholder='请输入店铺名称' />
+                	<div class="approving">
+                		<span class='not-approve'>未认证</span>
+                		<span class='approv'>已认证</span>
+                		<img src="../../img/approve.png" alt="approve">
+                	</div>
+                    <!-- <p>店铺名称</p> -->
+                </div>
+            </div>
+            <div class="edit-bg">
+            	<img class='edit-photo' src="../../img/edit-photo.png" alt="edit-btn" />
+            </div>
+        </div>
+        <div class="store-nav">
+        	<div class="bb pd10">
+        		店铺导航
+        		<div class="edit-store-nav">
+        			<a href="nav-setting.html" ><img src="../../img/edit-text.png" alt="edit-store-nav" />
+        			编辑</a>
+        		</div>
+        	</div>
+			<div class="store-navs clearfix">
+				<div class="navs">
+					<img src="../../img/sale.png" alt="促销" />
+					<span>促销</span>
+				</div>
+				<div class="navs">
+					<img src="../../img/products.png" alt="产品" />
+					<span>产品</span>
+				</div>
+				<div class="navs">
+					<img src="../../img/company-description.png" alt="店铺介绍" />
+					<span>店铺介绍</span>
+				</div>
+			</div>
+        </div>
+        <div class="end-add">
+        	<a href="javascript:;">完成创建</a>
+        </div>
+	</div>
+	<footer></footer>
+	<script>
+		function resizing(){
+			var wWidth = $("body").width();
+			//背景图片高度 占宽度3/8
+			$(".company-head").css("height",(wWidth/8*3).toFixed(0)); 
+			$(".logo img:first").css({"width":(wWidth/16*3).toFixed(0),"height":(wWidth/16*3).toFixed(0)}); 
+			$(".logo-info .logo").css("top",-((wWidth/16*3).toFixed(0)-38).toFixed(0)+"px");
+			$(".logo-info .info").css("top",-((wWidth/16*3).toFixed(0)-38).toFixed(0)+"px");
+			$(".edit-logo").css("top",((wWidth/16*3)-10)+"px");
+			$(".edit-logo").css("left",((wWidth/16*3)-15)+"px");
+		}
+		resizing();
+		window.onresize= resizing;
+	</script>
+</body>
+</html>
