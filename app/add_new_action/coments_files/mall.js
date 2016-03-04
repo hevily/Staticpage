@@ -1,0 +1,1702 @@
+/**
+ * 触摸屏滑动监听
+ * 初始化Touch 实例 , 向上滑动超过600毫秒并且滑动距离>=1/6才会触发
+ new Touch({
+ dom: window,
+ callback: function(){
+ if ($(window).scrollTop() == $(document).height() - $(window).height()){
+ loading();
+ loadMore(9);
+ }
+ }
+ });
+ */
+if (!(Touch && Touch.prototype.bindDOM)) {
+//构造函数
+    var Touch = function (opts) {
+        //构造函数需要的参数
+        this.wrap = opts.dom;
+        this.callback = opts.callback;
+        //构造三步奏
+        this.init();
+        this.bindDOM();
+    }
+
+//第一步 -- 初始化
+    Touch.prototype.init = function () {
+        //设定窗口比率
+        this.radio = window.innerHeight / window.innerWidth;
+        //设定一页的宽度
+        this.scaleW = window.innerWidth;
+        this.scaleH = window.innerHeight;
+    };
+
+//第三步 -- 绑定 DOM 事件
+    Touch.prototype.bindDOM = function () {
+        var self = this;
+        var scaleW = self.scaleW;
+        var scaleH = self.scaleH;
+        var outer = self.wrap;
+
+        //手指按下的处理事件
+        var startHandler = function (evt) {
+
+            //记录刚刚开始按下的时间
+            self.startTime = new Date() * 1;
+
+            //记录手指按下的坐标
+            self.startX = evt.touches[0].pageX;
+            self.startY = evt.touches[0].pageY;
+
+            //清除偏移量
+            self.offsetX = 0;
+            self.offsetY = 0;
+
+            //事件对象
+
+            var target = evt.target;
+            while (target && target.nodeName != 'LI' && target.nodeName != 'BODY') {
+                target = target.parentNode;
+            }
+
+            self.target = target;
+
+        };
+
+        //手指移动的处理事件
+        var moveHandler = function (evt) {
+            //兼容chrome android，阻止浏览器默认行为
+//		evt.preventDefault();
+
+            //计算手指的偏移量
+            self.offsetX = evt.targetTouches[0].pageX - self.startX;
+            self.offsetY = evt.targetTouches[0].pageY - self.startY;
+
+        };
+
+        //手指抬起的处理事件
+        var endHandler = function (evt) {
+//		evt.preventDefault();
+
+            //边界就翻页值
+            var boundaryW = scaleW / 6;
+            var boundaryH = scaleH / 6;
+            //手指抬起的时间值
+            var endTime = new Date() * 1;
+
+            //当手指移动时间超过300ms 的时候，按位移算
+            if (endTime - self.startTime > 300) {
+                if (self.offsetY <= -boundaryH) {
+                    self.callback();
+                }
+            }
+        };
+
+        //绑定事件
+        outer.addEventListener('touchstart', startHandler);
+        outer.addEventListener('touchmove', moveHandler);
+        outer.addEventListener('touchend', endHandler);
+    };
+}
+
+
+//获取商品评论
+function getFourmList($select) {
+    if ($select.length > 0) {
+        var tpl = document.getElementById('tplForum').innerHTML; //读取模版
+        var docid = $select.data("docid");
+        var url = urlRestapi + "getChatForum.php?session_id=" + cookieGet('PHPSESSID');
+        //var url = urlRoot+"Home/test/z/filename/getChatForum/sessionid/0jskbelak7k4cpk95dmfag0ti3";
+        $.ajax({
+            url: url,
+            data: '{"docId":' + docid + ',"itemsLimit":20}',
+            type: 'post',
+            cache: false,
+            success: function (response) {
+                if (response.isSuccess && response.isSuccess === true) {
+                    $.map(response.other.chatList, function (e, i) {
+                        laytpl(tpl).render(e, function (render) {
+                            $select.append(render);
+                        });
+                    });
+                }
+            }
+        });
+    } else {
+        console.log($select.length);
+    }
+}
+//打开超链接时，加载动画
+function ecLoadding(e, obj) {
+    var href = $(obj).attr('href');
+    if (!href || href.length < 2 || href.slice(0, 1) == '#' || href.slice(0, 10) == 'javascript' || href.slice(0, 4) == 'tel:' || href.slice(0, 4) == 'sms:') {
+        return;
+    }
+    var modal = $("#my-modal-loading").modal();
+    setTimeout(function () {
+        modal.modal('close');
+        amAlert('success', '刷新试试', 1200);
+    }, 10000);
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation();
+    setTimeout(function () {
+        location.href = href;
+    }, 1);
+}
+$(function () {
+    //$("body").append($('<div class="am-modal am-modal-loading am-modal-no-btn" tabindex="-1" id="my-modal-loading"><div class="am-modal-dialog"><div class="am-modal-hd">正在载入...</div> <div class="am-modal-bd"><span class="am-icon-spinner am-icon-spin"></span></div></div></div>'));
+    //$("body").delegate("a:not(.noLoadding)","click",function(e){
+    //	ecLoadding(e,this);
+    //});
+});
+
+
+
+function appiLxsj($obj, config__, fromflg) {
+    var isLocal = window.isLocal ? window.isLocal : false;
+    $.ajaxSetup({cache: false});
+    var config_ = {
+        error: function (response) {
+            return response;
+        },
+        success: function (response) {
+            return response;
+        }
+    };
+    var sessionid = cookieGet('PHPSESSID')
+    var config = $.extend({}, config_, config__);
+    var goods_id = $obj.data('goods_id');
+    var stores_id = $obj.data('stores_id');
+    var userid = $obj.data('userid');
+    var storesUrl = urlRoot + 'Home/Store.html?stid=' + stores_id;
+    var productUrl = urlRoot + 'Home/Goods/view/goods_id/' + goods_id;
+    if (!userid) {
+        if (!($("#login").length)) {
+            $("body").append($('<div class="am-modal am-modal-confirm" tabindex="-1" id="login"><div class="am-modal-dialog"><div class="am-modal-bd">您尚未登录 </div><div class="am-modal-footer"><span class="am-modal-btn" data-am-modal-cancel>取消</span><span class="am-modal-btn" data-am-modal-confirm id="login_ifr">登录</span></div></div></div>'));
+        }
+        $("#login").modal({
+            onConfirm: function (options) {
+                var url = encodeURIComponent(window.location.href);
+                url = urlInstall + 'site/public/?page=login&redirect=' + url;
+                location.href = url;
+            }
+        });
+        //return false;
+    }
+    var admin_userid = $obj.data('admin_userid');
+    var order_sn = $obj.data('order_sn');
+
+    if (!userid || !admin_userid) {
+        console.log('缺少参数：', 'creatorid:', admin_userid, 'userid', userid);
+        config.error({'message': '缺少参数'});
+        return false;
+    }
+    var temp = [6617, 5531, 13503, 3882, 12, 537,15436, 6698,5322];
+    if ($.inArray(admin_userid, temp) === -1) {
+        temp.push(admin_userid);
+    }
+    if ($.inArray(userid, temp) === -1) {
+        temp.push(userid);
+    }
+    //var userids = '['+admin_userid+','+userid+']';
+    var userids = '[' + temp.join(",") + ']';
+    var url = urlRestapi + 'addCustomerChat.php?session_id=' + sessionid + "&rand=" + Math.random();
+    if (fromflg == "order") {
+        var msubject = '联系订单客服';
+        var message_body = '这是一个联系订单客服对话';
+        var data = '{"appid":8,"stores_id":' + stores_id + ',"userids":' + userids + ',"item":{"msubject":"' + msubject + '","message_body":"' + message_body + '","UserIntField1":' + stores_id + '," UserIntField5":' + goods_id + '," UserIntField3":' + userid + ',"UserIntField4":' + admin_userid + ',"UserVarcharField1":"' + order_sn + '"}}';
+    } else {
+        var msubject = '联系商家客服';
+        var message_body = '这是一个联系商家客服对话';
+        var data = '{"appid":7,"stores_id":' + stores_id + ',"userids":' + userids + ',"item":{"msubject":"' + msubject + '","message_body":"' + message_body + '","UserIntField1":' + stores_id + '," UserIntField2":' + goods_id + '," UserIntField3":' + userid + ',"UserIntField4":' + admin_userid + ',"UserVarcharField1":"' + order_sn + '"}}';
+    }
+    $.post(url, data).fail(function (response) {  
+        //amAlert("warning", (response.message ? response.message : "") + ',' +data);
+        return config.error(response, 'addCustomerChat.php');
+    }).done(function (response) {
+        if (response.isSuccess) {            
+            //response.docId = docId;
+            //response.msubject = msubject;
+            config.success(response);
+        } else {
+            return config.error(response);
+        }
+    });
+    /*
+     //增加doc addDoc.php
+     var url = urlRestapi + 'addDoc.php?session_id=' + sessionid + "&rand=" + Math.random();
+     if (isLocal) {
+     url = '/statichtml/bjmovie01/estores/Home/Test/z/filename/addDoc';
+     }
+     if (fromflg == "order") {
+     var data = '{"appid":8,"create_new_workgroupid":true,"userids":' + userids + '}';
+     } else {
+     var data = '{"appid":7,"create_new_workgroupid":true,"userids":' + userids + '}';
+     }
+     
+     $.post(url, data).fail(function (response) {
+     return config.error(response, 'addDoc ajax error');
+     }).done(function (response) {
+     if (!response.isSuccess) {
+     return config.error(response, 'addDoc.php');
+     }
+     //保存doc docSaveV2
+     var actiontoken = response.actiontoken;
+     var docId = response.docId;
+     if (fromflg == "order") {
+     var msubject = '联系订单客服';
+     var message_body = '这是一个联系订单客服对话';
+     var data = '{"docId":' + docId + ',"data":{"msubject":"' + msubject + '","message_body":"' + message_body + '","UserIntField1":' + stores_id + '," UserIntField5":' + goods_id + '," UserIntField3":' + userid + ',"UserIntField4":' + admin_userid + ',"UserVarcharField1":"' + order_sn + '","actiontoken":"' + actiontoken + '"}}';
+     } else {
+     var msubject = '联系商家客服';
+     var message_body = '这是一个联系商家客服对话';
+     var data = '{"docId":' + docId + ',"data":{"msubject":"' + msubject + '","message_body":"' + message_body + '","UserIntField1":' + stores_id + '," UserIntField2":' + goods_id + '," UserIntField3":' + userid + ',"UserIntField4":' + admin_userid + ',"UserVarcharField1":"' + order_sn + '","actiontoken":"' + actiontoken + '"}}';
+     }
+     var url = urlRestapi + 'docSaveV2.php?session_id=' + sessionid + "&rand=" + Math.random();
+     if (isLocal) {
+     url = '/statichtml/bjmovie01/estores/Home/Test/z/filename/docSaveV2/sessionid/';
+     }
+     $.post(url, data).fail(function (response) {
+     return config.error(response, 'docSaveV2 ajax error');
+     }).done(function (response) {
+     if (!response.isSuccess) {
+     return  config.error(response, 'docSaveV2');
+     }
+     //加入聊天
+     var url = urlRestapi + 'addMembersToChatGroup.php?session_id=' + sessionid + "&rand=" + Math.random();
+     if (isLocal) {
+     url = '/statichtml/bjmovie01/estores/Home/Test/z/filename/addMembersToChatGroup/sessionid/';
+     }
+     //			544:liang
+     //			548:wangpeng
+     
+     var data = '{"docId":' + docId + ',"userids":' + userids + '}';
+     $.post(url, data).fail(function (response) {
+     return config.error(response, 'addMembersToChatGroup.php' + JSON.stringify(response) + url);
+     }).done(function (response) {
+     if (!response.isSuccess) {
+     return config.error(response, 'addMembersToChatGroup.php');
+     }
+     
+     //submitDoc.php
+     //addComment.php
+     var data = '';
+     var str = '客服开始对话';
+     //if(storesUrl){
+     //	str +='店铺地址：'+storesUrl;
+     //}
+     //if(productUrl){
+     //	str +='商品地址：'+productUrl;
+     //}
+     str = encodeURIComponent(str);
+     var url = urlRestapi + 'addComment.php?comment=' + str + '&docId=' + docId + '&session_id=' + sessionid;
+     if (isLocal) {
+     url = '/statichtml/bjmovie01/estores/Home/Test/z/filename/addComment?comment=' + str + '&docId=' + docId + "&rand=" + Math.random();
+     }
+     $.post(url, data).fail(function (response) {
+     return config.error(response, 'addComment.php');
+     }).done(function (response) {
+     if (response.isSuccess) {
+     response.docId = docId;
+     response.msubject = msubject;
+     config.success(response);
+     } else {
+     return config.error(response);
+     }
+     });
+     
+     });
+     
+     });
+     
+     });
+     */
+
+}
+;
+//联系商家
+/**
+ * $("button").on("click",function(){
+ var $obj = $(this);
+ $obj.prop("disable",true);
+ apiLxsj({
+ success:function(response){
+ var url = '?beginappi&action=chat&docId='+response.docId+'&endappi';
+ $obj.prop("disable",false);
+ //			location.href = url;
+ amAlert("success",response.message,1200);
+ 
+ },
+ error:function(){
+ $obj.prop("disable",false);
+ },
+ goods_id:233,
+ stores_id:8,
+ userid:544,
+ stores_creatorid:1,
+ order_sn:'EC_8EA608EE-0CAC-64D7-2C67-9FF5DE682335',
+ storesUrl:'https://shop.yshjie.com/statichtml/bjmovie01/estores/Home/Store.html?stid=8',
+ productUrl:'https://shop.yshjie.com/statichtml/bjmovie01/estores/Home/Goods/view/goods_id/233',
+ });
+ });
+ 
+ * @param {Object} config__
+ */
+//function apiLxsj(config__) {
+//	var isLocal = window.isLocal?window.isLocal:false;
+//	$.ajaxSetup({cache:false});
+//	var config_ = {
+//		error:function(response){
+//			return response;
+//		},
+//		success:function(response){
+//			return response;
+//		}
+//	};
+//	var sessionid = cookieGet('PHPSESSID')
+//	var config = $.extend({},config_, config__);
+//	var goods_id = config.goods_id;
+//	var stores_id = config.stores_id;
+//	var userid = config.userid;
+//	if(!userid){
+//		config.error({'message':'没有登录'});
+//		return false;
+//	}
+//	var stores_creatorid = config.stores_creatorid;
+//	var order_sn = config.order_sn;
+//	
+//	if(!userid || !stores_creatorid){
+//		console.log('缺少参数：','creatorid:',stores_creatorid,'userid',userid);
+//		config.error({'message':'缺少参数'});
+//		return false;
+//	}
+//	
+//	
+//	//增加doc addDoc.php
+//	var url = urlRestapi+'addDoc.php?session_id=' + sessionid+"&rand="+Math.random();
+//	if(isLocal){
+//		url = '/statichtml/bjmovie01/estores/Home/Test/z/filename/addDoc';
+//	}
+//	var data = '{"appid":7,"create_new_workgroupid":true}';
+//	$.post(url,data).fail(function(){
+//		amAlert("warning",'addDoc ajax error',1200);
+//	}).done(function(response){
+//		if(!response.isSuccess){
+//			console.log(config.error);
+//			return config.error(response,'addDoc.php');
+//		}
+//		//保存doc docSaveV2
+//		var actiontoken = response.actiontoken;
+//		var docId = response.docId;
+//		var msubject = '您好，要点什么';
+//		var message_body = '这是一个联系商家测试';
+//		var data = '{"docId":'+docId+',"data":{"msubject":"'+msubject+'","message_body":"'+message_body+'","UserIntField1":'+stores_id+'," UserIntField2":'+goods_id+'," UserIntField3":'+userid+',"UserIntField4":'+stores_creatorid+',"UserVarcharField1":"'+order_sn+'","actiontoken":"'+actiontoken+'"}}';
+//		var url = urlRestapi+'docSaveV2.php?session_id=' + sessionid+"&rand="+Math.random();
+//		if(isLocal){
+//			url = '/statichtml/bjmovie01/estores/Home/Test/z/filename/docSaveV2/sessionid/';			
+//		}
+//		$.post(url,data).fail(function(response){
+//			amAlert("warning",'docSaveV2 ajax error',1200);
+//			return config.error(response);
+//		}).done(function(response){
+//			if(!response.isSuccess){
+//				var ret = {'status':-1,'msg':response.message,'filename':'docSaveV2'};
+//				return  config.error(response,'docSaveV2');
+//			}
+//			
+//			//加入聊天
+//			var url = urlRestapi+'addMembersToChatGroup.php?session_id=' + sessionid+"&rand="+Math.random();
+//			if(isLocal){
+//				url = '/statichtml/bjmovie01/estores/Home/Test/z/filename/addMembersToChatGroup/sessionid/';
+//			}
+////			544:liang
+////			548:wangpeng
+//			var userids = '['+stores_creatorid+','+userid+']';
+//			var data = '{"docId":'+docId+',"userids":'+userids+'}';
+//			$.post(url,data).fail(function(response){
+//				amAlert("warning",'addMembersToChatGroup ajax error',1200);
+//				return config.error(response,'addMembersToChatGroup.php');
+//			}).done(function(response){
+//				if(!response.isSuccess){
+//					return config.error(response);
+//				}
+//				
+//				//submitDoc.php
+//				//addComment.php
+//				var data = '';
+//				var str = '';
+//				if(config.storesUrl){
+//					str +='店铺地址：'+config.storesUrl;
+//				}
+//				if(config.productUrl){
+//					str +='商品地址：'+config.productUrl;
+//				}
+//				str = encodeURIComponent(str);
+//				var url = urlRestapi+'addComment.php?comment='+str+'&docId='+docId+'&session_id='+sessionid;
+//				if(isLocal){
+//					url = '/statichtml/bjmovie01/estores/Home/Test/z/filename/addComment?comment='+str+'&docId='+docId+"&rand="+Math.random();
+//				}
+//				$.post(url,data).fail(function(response){
+//						amAlert("warning",'addComment ajax error',1200);
+//						return config.error(response,'addComment.php');
+//				}).done(function(response){
+//					if(response.isSuccess){
+//						response.docId=docId;
+//						response.msubject = msubject;
+//						
+//						config.success(response);
+//					}else{
+//						amAlert("warning",response.message,1200);
+//						return config.error(response);
+//					}
+//				});
+//			
+//			});
+//
+//		});
+//		
+//	});
+//
+//};
+
+
+//访问统计,统计登录用户访问当前页(商品和店铺)的记录
+//dom要求:页面必须有两个隐藏input name:stores_id,goods_id
+function ecTongji() {
+    var stores_id = $("#stores_id").val();
+    var goods_id = $("#goods_id").val();
+    var datetime = (new Date()).format("yyyy-MM-dd hh:mm:ss");
+    if (!stores_id && !goods_id) {
+        return;
+    }
+    var data = {};
+    if (stores_id) {
+        data.stores_id = stores_id;
+    }
+    if (goods_id) {
+        data.goods_id = goods_id;
+    }
+    data.local_log_datetime = datetime;
+    data = JSON.stringify(data);
+    var url = urlRestapi + "logInfo.php?session_id=" + cookieGet("PHPSESSID");
+    $.ajax({
+        type: "post",
+        url: url,
+        data: data,
+        async: true,
+        success: function (response) {
+            if (response.isSuccess) {
+                console.log('ok');
+            } else {
+                console.log('false');
+            }
+        }, error: function () {
+            console.log('error:ajax错误');
+        }
+    });
+}
+
+//商品 首屏flash加载图片
+function ecGoodsFlash(config) {
+    var $div = $(".ecGoodsFlash");
+    var collectid = $div.data("collectid");
+    var $ul = $div.find("ul");
+    var tpl = '<li data-src=""><img class="" src="" /></li>';
+    if (collectid) {
+        $.ajax({
+            type: "post",
+            url: urlRestapi + "getCollectElems_public.php",
+            data: '{"collect_id":"' + collectid + '","itemsIndexMin":0,  "itemsIndexMax":200,  "itemsLimit":5  }',
+            success: function (response) {
+                if (response.isSuccess) {
+                    $.map(response.items, function (item) {
+                        var src = imgSrcBase + item.wfemltableid + "&width=640&height=480&type=2";
+                        var $li = $(tpl);
+                        $li.find("img").attr("src", src);
+                        $li.attr("data-src", imgSrcBase + item.wfemltableid + "&width=640&height=480&type=2");
+                        $ul.append($li);
+                    });
+                }
+                if (!config) {
+                    config = {controlNav: false};
+                }
+
+                $('.am-slider').flexslider(config);
+
+                //<!--jQuery lightgallery 一款响应式触屏相册插件-->
+                $("#auto-loop").lightGallery({
+                    showAfterLoad: false,
+                    loop: true,
+                    auto: true,
+                    pause: 4000
+                })
+
+            }
+        });
+
+
+    }
+
+
+}
+//收藏按钮2 发布详情页
+// dom要求: id=favouriteGoods的收藏按钮
+function favouriteGoods2() {
+    var $objs = $("#favouriteGoods,#favouriteGoods2");
+    $("#favouriteGoods,#favouriteGoods2").each(function (i, e) {
+        check($(e));
+        listen($(e));
+    });
+    function check($obj) {
+        var goods_id = $obj.data("goodsid");
+        var url = urlRestapi + "favourite_check.php?session_id=" + cookieGet("PHPSESSID");
+        var data = '{"goods_id":' + goods_id + '}';
+        $.ajax({
+            type: "post",
+            url: url,
+            data: data,
+            async: true,
+            success: function (response) {
+                if (response.isSuccess) {
+                    $obj.show();
+                    if (response.isExist) {
+                        //已收藏
+                        $objs.each(function (i, obj) {
+                            var $obj = $(obj);
+                            $obj.data('a_usernewsfeed_id', response.a_usernewsfeed_id);
+                            $obj.find(".ico").addClass("already");
+                            $obj.find(".text").text("已收藏");
+                        })
+
+                    } else {
+                        //未收藏
+                        $objs.each(function (i, obj) {
+                            var $obj = $(obj);
+                            $obj.find(".text").text("收藏");
+                        })
+                    }
+                } else {
+
+
+                }
+            }
+        });
+    }
+    function listen($obj) {
+        var goods_id = $obj.data("goodsid");
+        $obj.on("click", function () {
+            var url;
+            if (!($obj.find(".ico").hasClass('already'))) {
+                url = urlRestapi + "favourite_add.php?session_id=" + cookieGet("PHPSESSID");
+                $.ajax({
+                    type: "post",
+                    url: url,
+                    data: '{"item":{"goods_id":' + goods_id + '}}',
+                    success: function (response) {
+                        if (response.isSuccess) {
+                            $objs.each(function (i, obj) {
+                                var $obj = $(obj);
+                                $obj.data('a_usernewsfeed_id', response.item.id);
+                                $obj.find(".ico").addClass("already");
+                                $obj.find(".text").text("已收藏");
+                                //amAlert("success",'收藏成功',1200);
+                            });
+                        } else {
+                            amAlert("warning", '收藏失败', 1200);
+                        }
+                    },
+                    error: function () {
+                        amAlert("danger", 'ajax错误', 1200);
+                    },
+                    async: true
+                });
+            } else {
+                url = urlRestapi + "favourite_delete.php?session_id=" + cookieGet("PHPSESSID");
+                $.ajax({
+                    type: "post",
+                    url: url,
+                    data: '{"id":' + $obj.data('a_usernewsfeed_id') + '}',
+//						data:'{"item":{"goods_id":'+goods_id+'}}',
+                    success: function (response) {
+                        if (response.isSuccess) {
+                            $objs.each(function (i, obj) {
+                                var $obj = $(obj);
+                                $obj.find(".ico").removeClass("already");
+                                $obj.find(".text").text("收藏");
+                            });
+                            //amAlert("success",'取消收藏成功',1200);
+                        } else {
+                            amAlert("warning", '取消收藏失败', 1200);
+                        }
+                    },
+                    error: function () {
+                        amAlert("danger", 'ajax错误', 1200);
+                    },
+                    async: true
+                });
+            }
+        });
+    }
+}
+//收藏按钮
+// dom要求: id=favouriteGoods的收藏按钮
+function favouriteGoods() {
+    var $obj = $("#favouriteGoods");
+    var goods_id = $obj.data("goodsid");
+    function check() {
+        var url = urlRestapi + "favourite_check.php?session_id=" + cookieGet("PHPSESSID");
+        var data = '{"goods_id":' + goods_id + '}';
+        $.ajax({
+            type: "post",
+            url: url,
+            data: data,
+            async: true,
+            success: function (response) {
+                if (response.isSuccess) {
+                    $obj.show();
+                    if (response.isExist) {
+                        //已收藏
+                        $obj.data('a_usernewsfeed_id', response.a_usernewsfeed_id);
+                        $obj.find(".ico").addClass("already");
+                        $obj.find(".text").text("已收藏");
+                    } else {
+                        //未收藏
+                        $obj.find(".text").text("收藏");
+                    }
+                } else {
+
+                }
+            }
+        });
+    }
+    check();
+    function listen() {
+        $obj.on("click", function () {
+            var url;
+            if (!($obj.find(".ico").hasClass('already'))) {
+                url = urlRestapi + "favourite_add.php?session_id=" + cookieGet("PHPSESSID");
+                $.ajax({
+                    type: "post",
+                    url: url,
+                    data: '{"item":{"goods_id":' + goods_id + '}}',
+                    success: function (response) {
+                        if (response.isSuccess) {
+                            $obj.data('a_usernewsfeed_id', response.item.id);
+                            $obj.find(".ico").addClass("already");
+                            $obj.find(".text").text("已收藏");
+                            amAlert("success", '收藏成功', 1200);
+                        } else {
+                            amAlert("warning", '收藏失败', 1200);
+                        }
+                    },
+                    error: function () {
+                        amAlert("danger", 'ajax错误', 1200);
+                    },
+                    async: true
+                });
+            } else {
+                url = urlRestapi + "favourite_delete.php?session_id=" + cookieGet("PHPSESSID");
+                $.ajax({
+                    type: "post",
+                    url: url,
+                    data: '{"id":' + $obj.data('a_usernewsfeed_id') + '}',
+//						data:'{"item":{"goods_id":'+goods_id+'}}',
+                    success: function (response) {
+                        if (response.isSuccess) {
+                            $obj.find(".ico").removeClass("already");
+                            $obj.find(".text").text("收藏");
+                            amAlert("success", '取消收藏成功', 1200);
+                        } else {
+                            amAlert("warning", '取消收藏失败', 1200);
+                        }
+                    },
+                    error: function () {
+                        amAlert("danger", 'ajax错误', 1200);
+                    },
+                    async: true
+                });
+            }
+        });
+    }
+    listen();
+}
+
+/**
+ * 异步加载相册图片,替代ajaxImg
+ * @param {Object} select 可以是选择器字符串,也可以是jquery对象. 相册容器
+ * @param {Object} thumb_ 可选 关于图片(width/height/type)的json对象.如果不填,必须在容器的data-thumb里填写
+ */
+function loadImgNew(select, thumb_) {
+    var imgSrcBase = urlRoot + "Store/Public/img?id=";
+    var $ul;
+
+    if (typeof select === "string") {
+        $ul = $(select);
+    } else if (typeof select === "object") {
+        $ul = select;
+    }
+    if ($ul.length == 0) {
+        return;
+    }
+    if (!($ul.length)) {
+        $ul = $('body');
+    }
+    var thumb = thumb_ ? thumb_ : $ul.data("thumb");
+    $ul.find("img[isnew='yes']").each(function () {
+        var collectId = $(this).data("collectid");
+        var $img = $(this);
+        if (collectId) {
+            $.ajax({
+                type: "post",
+                url: urlRestapi + "getCollect_public.php", //getCollectElems_public.php
+                data: '{"collect_id":"' + collectId + '","itemsIndexMin":0,  "itemsIndexMax":200,  "itemsLimit":1  }',
+                async: true,
+                success: function (response) {
+                    if (response.isSuccess) {
+                        if (response.item.wfemltableid) {
+                            $img.attr('src', imgSrcBase + response.item.wfemltableid + "&width=" + thumb.width + "&height=" + thumb.height + "&type=" + thumb.type);
+                        } else if (response.item.elems) {
+                            $.map(response.item.elems, function (item) {
+                                $img.attr('src', imgSrcBase + item.wfemltableid + "&width=" + thumb.width + "&height=" + thumb.height + "&type=" + thumb.type);
+                            });
+                        }
+                        $img.attr('isnew', 'no');
+                    }
+                }
+            });
+        }
+    });
+}
+
+//在指定容器加载商品列表,不支持more
+function ecGoodsList($select) {
+    var thumb = $select.data("thumb");
+    var url = $select.data("url");
+    var data = $select.data("data");
+    var tpl = $("<p></p>").append($select.find(".tpl").removeClass('tpl')).html();
+    $.ajax({
+        type: "post", url: url, data: data,
+        success: function (response) {
+            if (response.status && response.status == '1') {
+                $.each(response.data, function (i, e) {
+                    laytpl(tpl).render(e, function (render) {
+                        $select.append(render);
+                    });
+                });
+                loadImgNew($select, thumb);
+            }
+        }
+    });
+}
+
+/**
+ * 异步加载相册图片
+ * @param {Object} callback( $对象 , 数据 )
+ * 如果callback不是函数则 默认修改$对象的src
+ */
+function ajaxImg(callback) {
+    var imgSrcBase = urlRoot + "Store/Public/img?id=";
+    $("[isnew='yes']").each(function () {
+        var collectId = $(this).data("id") ? $(this).data("id") : ($(this).data("collectid") ? $(this).data("collectid") : 0);
+        var $img = $(this);
+        if (collectId) {
+            $.ajax({
+                type: "post",
+                url: urlRestapi + "getCollectElems_public.php?session_id=" + cookieGet("PHPSESSID"),
+                data: '{"collect_id":"' + collectId + '","itemsIndexMin":0,  "itemsIndexMax":200,  "itemsLimit":1  }',
+                async: true,
+                success: function (response) {
+                    if (response.isSuccess) {
+                        $.map(response.items, function (item) {
+                            if (typeof callback === 'function') {
+                                callback($img, item);
+                            } else {
+                                $img.attr('src', imgSrcBase + item.wfemltableid + "&width=120&height=120&type=3");
+                                //$img.parents(".img").css('background-image','url('+imgSrcBase+item.wfemltableid+"&width=120&height=120&type=3"+')');
+                            }
+                        });
+                        $img.attr('isnew', 'no');
+                    }
+                }
+            });
+        }
+    });
+}
+
+/**
+ * 显示剧照 , 单相册
+ */
+function ecGoodsJuzhao(select) {
+    var $ul = $(select);
+    var collectId = $ul.data('collectid');
+    var thumb = $ul.data("thumb");
+    var limit = $ul.data("limit") ? $ul.data("limit") : 9;
+    if (collectId) {
+        $.ajax({
+            type: "post",
+            url: urlRestapi + "getCollectElems_public.php",
+            data: '{"collect_id":"' + collectId + '","itemsIndexMin":0,  "itemsIndexMax":200,  "itemsLimit":' + limit + '  }',
+            async: true,
+            success: function (response) {
+                if (response.isSuccess) {
+                    $.map(response.items, function (item) {
+                        imgSrc = imgSrcBase + item.wfemltableid + "&width=" + thumb.width + "&height=" + thumb.height + "&type=" + thumb.type;
+                        imgSrc2 = imgSrcBase + item.wfemltableid;
+                        var $newItem = $('<li><div class="img"><img src="' + imgSrc + '" data-rel="' + imgSrc2 + '"></div></li>');
+                        $ul.append($newItem);
+                    });
+                }
+                $.AMUI.gallery.init();
+                $('[data-am-pureview]').pureview();
+
+            }
+        });
+    }
+}
+
+/**
+ * 显示片场档案 , 单相册
+ */
+function ecGoodsPcdan(select) {
+    var $ul = $(select);
+    var collectId = $ul.data('collectid');
+    if (collectId) {
+        $.ajax({
+            type: "post",
+            url: urlRestapi + "getCollectElems_public.php",
+            data: '{"collect_id":"' + collectId + '","itemsIndexMin":0,  "itemsIndexMax":240,  "itemsLimit":9  }',
+            async: true,
+            success: function (response) {
+                if (response.isSuccess) {
+                    $.map(response.items, function (item) {
+                        imgSrc = imgSrcBase + item.wfemltableid + "&width=240&height=180&type=3";
+                        var $newItem = $('<li data-src="' + imgSrc + '"><div class="img"><img  src="' + imgSrc + '"></div></li>');
+                        $ul.append($newItem);
+                    });
+                }
+            }
+        });
+    }
+}
+/**
+ * 动态为超链接设置触摸时显示边框
+ * @param {String} select 目标的选择器
+ * @param {String} className '触摸时的css样式'
+ */
+function ecTouchAble(select, className) {
+    className = className ? className : "ecTouchstart";
+    $("body").delegate(select, 'touchstart', function () {
+        $(this).addClass(className);
+    });
+    $("body").delegate(select, 'touchcancel', function () {
+        $(this).removeClass(className);
+    });
+    $("body").delegate(select, 'touchend', function () {
+        $(this).removeClass(className);
+    });
+}
+
+/**
+ * 显示片场档案 , 多相册
+ * @param {Object} select 容器选择器
+ * @param {Object} tpl	每个图片的模板
+ */
+function ecGoodsPianchang(select, tpl) {
+    var $ul = $(select);
+    var url = $ul.data("url");
+    if ($ul.length) {
+        $.ajax({
+            type: "post",
+            url: url,
+            success: function (response) {
+                if (response.status == 1) {
+                    $.each(response.data, function (i, e) {
+                        laytpl(tpl).render(e, function (render) {
+                            $(select).append(render);
+                        });
+                    });
+                    loadImgNew(select);
+                }
+
+            }
+        });
+    }
+}
+
+
+/**
+ * 通用加载更多 废弃
+ * @param {Object} config
+ * config.select : $选择器 .imgList
+ * config.pagesize : 每页加载商品数
+ * config.data : Ajax data 参数
+ * config.url : Ajax url 参数
+ * config.ajaxImg($item,data) : 加载图片回调函数 
+ * config.tpl : 每个商品的模板HTML
+ * 
+ */
+//var loadMore = function(config){
+//	loadMore.prototype.config = {pagesize:12,select:'.imgList'};
+//	
+//	loadMore.prototype.init = function(config){
+//		var plugin = this;
+//		this.config = $.extend({},loadMore.prototype.config,config);
+//		
+//		//点击 加载更多
+//		$(".row-load-more").on("click",function(){
+//			plugin.query();
+//		});
+//		
+//		//显示加载条即 加载更多
+//		$(window).scroll(function(){  
+//		    if ($(window).scrollTop() >= $(document).height() - $(window).height()){  
+//				//plugin.query();
+//		    }  
+//		}); 
+//		//滑动 加载更多向上滑动超过300毫秒并且滑动距离>=1/6才会触发
+//		new Touch({
+//			dom: window,
+//			callback: function(){
+//				if ($(window).scrollTop() >= $(document).height() - $(window).height()){  
+//					load.query();
+//			    }
+//			}
+//		}); 
+//		  
+//		
+//		
+//	}
+//	//显示loading动画
+//	loadMore.prototype.loading = function(){
+//		$(".row-load-more").html('<div class="sk-spinner sk-spinner-rotating-plane"></div> 加载中');
+//	}
+//	//加载
+//	loadMore.prototype.query = function(){
+//		var plugin = this;
+//		var config = plugin.config;
+//		plugin.loading();
+//		var $btnMore = $(".row-load-more");
+//		var page = $btnMore.data('page')?$btnMore.data('page'):0;
+//		page = +page + 1;
+//		var data = $.extend({},config.data);
+//		data.page = page;
+//		data.pagesize = config.pagesize?config.pagesize:12;
+//		
+//		$.ajax({
+//			cache:false,
+//			type:"post",
+//			data:data,
+//			url:config.url,
+//			async:true,
+//			success:function(response){
+//				if(response.status){
+//					switch(response.status){
+//						case 1:
+//							if(response.data){
+//								$btnMore.data('page',page);
+//								plugin.append(response.data,page);
+//								if(response.pageCount<=page){
+//									$btnMore.html('没有更多了');
+//								}else{
+//									$btnMore.html('点击加载更多'); 
+//								}
+//								
+//							}else{
+//								$btnMore.html('没有更多了');
+//							}
+//							break;
+//						default:
+//							$btnMore.html('加载失败');
+//					}	
+//				}else{
+//					$btnMore.html('加载失败');
+//				}
+//				
+//			},
+//			error:function(){
+//				$btnMore.html('加载失败,请重试');
+//			}
+//		});
+//	}
+//	
+//	//加载成功 dom插入
+//	loadMore.prototype.append = function(data,page){
+//		var tpl = this.config.tpl;
+//		var select = this.config.select;
+//		var ajaxImg_ = this.config.ajaxImg;
+//		if(data){
+//			if(page==1){
+//				$(select).html("");
+//			}
+//			$.each(data, function(i,e) {  
+//				laytpl(tpl).render(e, function(render){
+//				    $(select).append(render);
+//				});
+//			});
+//			if(ajaxImg_){
+//				ajaxImg(ajaxImg_);
+//			}
+//		}else{
+//			$(select).html("");
+//		}
+//	}
+//	this.init(config);
+//}
+
+
+/**
+ * 通用加载更多 版本2
+ * @param {Object} select 容器的选择器
+ * @param {Object} config 可选配制,如果不用容器的data配制,就用JS传入config配置
+ * 配制内容:
+ * 		data-url | config.url		'../../Mall/public/loadmore'
+ * 		data-tpl | config.tpl 		'#tpl'
+ * 		data-thumb | config.thumb 	{"width":110,"height":110,"type":3}
+ */
+var loadMore2 = function (select, config) {
+
+    loadMore2.prototype.config = {};
+
+    loadMore2.prototype.init = function (config_) {
+        var plugin = this;
+        this.$ul = $(select);
+        this.config = config = $.extend({}, loadMore2.prototype.config, config_);
+        this.url = (config && config.url) ? config.url : $(select).data("url");
+        this.tpl = (config && config.tpl) ? $(config.tpl).html() : $($(select).data("tpl")).html();
+        this.thumb = (config && config.thumb) ? config.thumb : $(select).data("thumb");
+        this.$btnMore = this.$ul.parent().find(".row-load-more");
+        //点击 加载更多
+        $(".row-load-more").on("click", function () {
+            plugin.query();
+        });
+
+        //显示加载条即 加载更多
+        $(window).scroll(function () {
+            if ($(window).scrollTop() >= $(document).height() - $(window).height()) {
+                //plugin.query();
+            }
+        });
+        //滑动 加载更多向上滑动超过300毫秒并且滑动距离>=1/6才会触发
+        new Touch({
+            dom: window,
+            callback: function () {
+                if ($(window).scrollTop() >= $(document).height() - $(window).height()) {
+                    plugin.query();
+                }
+            }
+        });
+
+
+
+    }
+    //显示loading动画
+    loadMore2.prototype.loading = function () {
+        this.$btnMore.html('<div class="sk-spinner sk-spinner-rotating-plane"></div> 加载中');
+    }
+    //加载
+    loadMore2.prototype.query = function () {
+        var plugin = this;
+        var $btnMore = this.$btnMore;
+        var page = $btnMore.data('page') ? $btnMore.data('page') : 0;
+        page = +page + 1;
+        var data = plugin.$ul.data("data");
+        data.page = page;
+        data.pagesize = data.pagesize ? data.pagesize : 12;
+
+        plugin.loading();
+        //debugger;
+        $.ajax({
+            type: "post",
+            data: data,
+            url: plugin.url,
+            success: function (response) {
+                if (response.status) {
+                    switch (response.status) {
+                        case 1:
+                            if (page <= 1) {
+                                plugin.$ul.html("");
+                            }
+                            console.log(page);
+                            if (response.data) {
+                                $btnMore.data('page', page);
+                                plugin.append(response.data, page);
+                                if (response.pageCount <= page) {
+                                    $btnMore.html('没有更多了');
+                                } else {
+                                    $btnMore.html('点击加载更多');
+                                }
+
+                            } else {
+                                $btnMore.html('没有更多了');
+                            }
+                            break;
+                        default:
+                            $btnMore.html('加载失败');
+                    }
+                } else {
+                    $btnMore.html('加载失败');
+                }
+
+            },
+            error: function () {
+                $btnMore.html('加载失败,请重试');
+            }
+        });
+        //debugger;
+    }
+
+    //加载成功 dom插入
+    loadMore2.prototype.append = function (data, page) {
+        var plugin = this;
+        if (data) {
+            $.each(data, function (i, e) {
+                laytpl(plugin.tpl).render(e, function (render) {
+                    plugin.$ul.append(render);
+                });
+            });
+            loadImgNew(plugin.$ul, plugin.thumb);
+        }
+    }
+
+    //对外接口,设置和获取data,data是ajax的data,也就是搜索页的筛选条件
+    //查 data
+    loadMore2.prototype.dataGet = function (key) {
+        var val = null;
+        if (val = this.$ul.data("data")[key]) {
+            return val;
+        } else {
+            return null;
+        }
+    }
+    //增改 data
+    loadMore2.prototype.dataSet = function (key, val) {
+        var data;
+        data = this.$ul.data("data");
+        data[key] = val;
+        this.$ul.data("data", data);
+        //console.dir(this.$ul.data("data"));
+    }
+    //删 data
+    loadMore2.prototype.dataDelete = function (key) {
+        var data;
+        data = this.$ul.data("data");
+        delete data[key];
+        this.$ul.data("data", data);
+    }
+    //清零page,目的是当再次执行query()时,把页面先清空再加载
+    loadMore2.prototype.pageClear = function () {
+        this.$btnMore.data("page", 0);
+    }
+
+    this.init(config);
+}
+
+
+/**
+ * 通用加载更多  搜索版本
+ * @param {Object} select 容器的选择器
+ * @param {Object} config 可选配制,如果不用容器的data配制,就用JS传入config配置
+ * 配制内容:
+ * 		data-url | config.url		'../../Mall/public/loadmore'
+ * 		data-tpl | config.tpl 		'#tpl'
+ * 		data-thumb | config.thumb 	{"width":110,"height":110,"type":3}
+ */
+var loadMore3 = function (select, config) {
+
+    loadMore3.prototype.config = {};
+
+    loadMore3.prototype.init = function (config_) {
+        var plugin = this;
+        this.$ul = $(select);
+        this.config = config = $.extend({}, loadMore3.prototype.config, config_);
+        this.url = (config && config.url) ? config.url : $(select).data("url");
+        this.tpl = (config && config.tpl) ? $(config.tpl).html() : $($(select).data("tpl")).html();
+        this.thumb = (config && config.thumb) ? config.thumb : $(select).data("thumb");
+        this.$btnMore = $(".row-load-more");
+        //点击 加载更多
+        $(".row-load-more").on("click", function () {
+            if ($(this).html() != '暂无数据' && $(this).html() != '没有更多了') {
+                plugin.query();
+            }
+
+        });
+
+        //显示加载条即 加载更多
+        $(window).scroll(function () {
+            if ($(window).scrollTop() >= $(document).height() - $(window).height()) {
+                //plugin.query();
+            }
+        });
+        //滑动 加载更多向上滑动超过300毫秒并且滑动距离>=1/6才会触发
+        new Touch({
+            dom: window,
+            callback: function () {
+                if ($(window).scrollTop() >= $(document).height() - $(window).height()) {
+                    plugin.query();
+                }
+            }
+        });
+
+
+
+    }
+    //显示loading动画
+    loadMore3.prototype.loading = function () {
+        this.$btnMore.html('<div class="sk-spinner sk-spinner-rotating-plane"></div> 加载中');
+        $('#sub').attr("data-status", 1);
+    }
+    //加载
+    loadMore3.prototype.query = function () {
+        var plugin = this;
+        var $btnMore = this.$btnMore;
+        var page = $btnMore.data('page') ? $btnMore.data('page') : 0;
+        page = +page + 1;
+        var data = plugin.$ul.data("data");
+        data.page = page;
+        data.pagesize = data.pagesize ? data.pagesize : 12;
+
+        plugin.loading();
+        //debugger;
+        $.ajax({
+            type: "post",
+            data: data,
+            url: plugin.url,
+            success: function (response) {
+                if (response.status) {
+                    switch (response.status) {
+                        case 1:
+                            if (page <= 1) {
+                                plugin.$ul.html("");
+                            }
+                            if (response.data != null && response.data != '') {
+                                $btnMore.data('page', page);
+                                plugin.append(response.data, page);
+                                if (response.pageCount <= page) {
+
+                                    $btnMore.html('没有更多了');
+                                    $('#sub').attr("data-status", 0);
+                                } else {
+                                    $btnMore.html('点击加载更多');
+                                    $('#sub').attr("data-status", 0);
+                                }
+
+                            } else {
+                                if (page == 1) {
+                                    $btnMore.html('暂无数据');
+                                    $('#sub').attr("data-status", 0);
+                                } else {
+                                    $btnMore.html('没有更多了');
+                                    $('#sub').attr("data-status", 0);
+                                }
+
+                            }
+                            break;
+                        default:
+
+                            $btnMore.html('加载失败');
+                    }
+                } else {
+                    $btnMore.html('加载失败');
+                }
+
+            },
+            error: function () {
+                $btnMore.html('加载失败,请重试');
+                //$btnMore.html('加载失败,请重试');
+            }
+        });
+        //debugger;
+    }
+
+    loadMore3.prototype.tplSet = function (newtpl) {
+        var plugin = this;
+        plugin.tpl = newtpl;
+    }
+
+
+
+
+    //加载成功 dom插入
+    loadMore3.prototype.append = function (data, page) {
+        var plugin = this;
+        if (data) {
+            $.each(data, function (i, e) {
+                laytpl(plugin.tpl).render(e, function (render) {
+                    plugin.$ul.append(render);
+                });
+            });
+            loadImgNew(plugin.$ul, plugin.thumb);
+        }
+    }
+
+
+
+    //对外接口,设置和获取data,data是ajax的data,也就是搜索页的筛选条件
+    //查 data
+    loadMore3.prototype.dataGet = function (key) {
+        var val = null;
+        if (val = this.$ul.data("data")[key]) {
+            return val;
+        } else {
+            return null;
+        }
+    }
+    //增改 data
+    loadMore3.prototype.dataSet = function (key, val) {
+        var data;
+        data = this.$ul.data("data");
+        data[key] = val;
+        this.$ul.data("data", data);
+        //console.dir(this.$ul.data("data"));
+    }
+    //删 data
+    loadMore3.prototype.dataDelete = function (key) {
+        var data;
+        data = this.$ul.data("data");
+        delete data[key];
+        this.$ul.data("data", data);
+    }
+    //清零page,目的是当再次执行query()时,把页面先清空再加载
+    loadMore3.prototype.pageClear = function () {
+        this.$btnMore.data("page", 0);
+    }
+
+    this.init(config);
+}
+
+
+/**
+ *  我的订单，订单列表  加载更多
+ * @param {Object} select 容器的选择器
+ * @param {Object} config 可选配制,如果不用容器的data配制,就用JS传入config配置
+ * 配制内容:
+ * 		data-url | config.url		'../../Mall/public/loadmore'
+ * 		data-tpl | config.tpl 		'#tpl'
+ * 		data-thumb | config.thumb 	{"width":110,"height":110,"type":3}
+ */
+var loadMore4 = function (select, config) {
+
+    loadMore4.prototype.config = {};
+
+    loadMore4.prototype.init = function (config_) {
+        var plugin = this;
+        this.$ul = $(select);
+        this.config = config = $.extend({}, loadMore4.prototype.config, config_);
+        this.url = (config && config.url) ? config.url : $(select).data("url");
+        this.tpl = (config && config.tpl) ? $(config.tpl).html() : $($(select).data("tpl")).html();
+        this.thumb = (config && config.thumb) ? config.thumb : $(select).data("thumb");
+        this.$btnMore = $(".row-load-more");
+        //点击 加载更多
+        $(".row-load-more").on("click", function () {
+            if ($(this).html() != '无订单' && $(this).html() != '') {
+                plugin.query();
+            }
+
+        });
+
+        //显示加载条即 加载更多
+        $(window).scroll(function () {
+            if ($(window).scrollTop() >= $(document).height() - $(window).height()) {
+                //plugin.query();
+            }
+        });
+        //滑动 加载更多向上滑动超过300毫秒并且滑动距离>=1/6才会触发
+        new Touch({
+            dom: window,
+            callback: function () {
+                if ($(window).scrollTop() >= $(document).height() - $(window).height()) {
+                    plugin.query();
+                }
+            }
+        })
+
+
+    }
+    //显示loading动画
+    loadMore4.prototype.loading = function () {
+        this.$btnMore.html('<div class="sk-spinner sk-spinner-rotating-plane"></div> 加载中');
+    }
+    //加载
+    loadMore4.prototype.query = function () {
+        var plugin = this;
+        var $btnMore = this.$btnMore;
+        var page = $btnMore.data('page') ? $btnMore.data('page') : 0;
+        page = +page + 1;
+        var data = plugin.$ul.data("data");
+        data.page = page;
+        data.pagesize = data.pagesize ? data.pagesize : 12;
+
+        plugin.loading();
+        //debugger;
+        $.ajax({
+            type: "post",
+            data: data,
+            url: plugin.url,
+            success: function (response) {
+                if (response.status) {
+                    switch (response.status) {
+                        case 1:
+                            if (page <= 1) {
+                                plugin.$ul.html("");
+                            }
+                            if (response.data != null) {
+                                $btnMore.data('page', page);
+                                plugin.append(response.data, page);
+                                if (response.pageCount <= page) {
+                                    $btnMore.css({"line-height": "", "padding-bottom": "", "background": "#e6e6e6"});
+                                    $btnMore.html('');//没有更多了
+                                } else {
+                                    $btnMore.css({"line-height": "", "padding-bottom": "", "background": "#fff"});
+                                    $btnMore.html('点击加载更多');
+                                }
+
+                            } else {
+                                if (page == 1) {
+                                    $btnMore.css({"line-height": "100px", "padding-bottom": "500px", "background": "#e6e6e6"});
+                                    $btnMore.html('无订单');
+
+                                } else {
+                                    $btnMore.css({"line-height": "", "padding-bottom": "", "background": "#e6e6e6"});
+                                    $btnMore.html('');//没有更多了
+                                }
+
+                            }
+                            break;
+                        default:
+                            $btnMore.css({"line-height": "", "padding-bottom": "", "background": "#fff"});
+                            $btnMore.html('加载失败');
+                    }
+                } else {
+                    $btnMore.css({"line-height": "", "padding-bottom": "", "background": "#fff"});
+                    $btnMore.html('加载失败');
+                }
+
+            },
+            error: function () {
+                $btnMore.css({"line-height": "", "padding-bottom": "", "background": "#fff"});
+                $btnMore.html('加载失败,请重试');
+            }
+        });
+        //debugger;
+    }
+
+    loadMore4.prototype.tplSet = function (newtpl) {
+        var plugin = this;
+        plugin.tpl = newtpl;
+    }
+
+
+
+
+    //加载成功 dom插入
+    loadMore4.prototype.append = function (data, page) {
+        var plugin = this;
+        if (data) {
+            $.each(data, function (i, e) {
+                laytpl(plugin.tpl).render(e, function (render) {
+                    plugin.$ul.append(render);
+                });
+            });
+            loadImgNew(plugin.$ul, plugin.thumb);
+        }
+    }
+
+
+
+    //对外接口,设置和获取data,data是ajax的data,也就是搜索页的筛选条件
+    //查 data
+    loadMore4.prototype.dataGet = function (key) {
+        var val = null;
+        if (val = this.$ul.data("data")[key]) {
+            return val;
+        } else {
+            return null;
+        }
+    }
+    //增改 data
+    loadMore4.prototype.dataSet = function (key, val) {
+        var data;
+        data = this.$ul.data("data");
+        data[key] = val;
+        this.$ul.data("data", data);
+        //console.dir(this.$ul.data("data"));
+    }
+    //删 data
+    loadMore4.prototype.dataDelete = function (key) {
+        var data;
+        data = this.$ul.data("data");
+        delete data[key];
+        this.$ul.data("data", data);
+    }
+    //清零page,目的是当再次执行query()时,把页面先清空再加载
+    loadMore4.prototype.pageClear = function () {
+        this.$btnMore.data("page", 0);
+    }
+    this.init(config);
+}
+
+
+
+
+function qiangzhishuaxin() {
+    var href = location.href;
+    if (href.search(/#\?/)) {
+        var rand = href.match(/rand=.*/);
+        href = href.replace(rand, '');
+    }
+    href = href + 'rand=' + Math.random();
+    history.replaceState({}, document.title, href);
+    location.reload();
+}
+
+$(function () {
+    //tab 切换
+    $(".block-switch-nav a").on("click", function () {
+        var $that = $(this);
+        $that.addClass("active").siblings().removeClass("active");
+        $that.parents(".fx-block").find(".block-switch-content").hide();
+        $that.parents(".fx-block").find(".block-switch-content").eq($that.index()).show();
+    });
+
+    //导航条更多菜单
+    (function ecNav() {
+        var $navBtn = $(".ecNav .navBtn");
+        var $navMoreUl = $('<ul class="nav-more-div">' +
+                '<li><a href="' + urlRoot + 'mall">回到首页</a></li>' +
+                '<li><a onclick="location.reload(true)">刷新</a></li>' +
+                '<li><a onclick="qiangzhishuaxin()">强制刷新</a></li>' +
+                '<li><a onclick="amAlert(\'success\',location.href)">当前页</a></li>' +
+                '</ul>');
+        $navMoreUl.on("click", function (e) {
+            e.stopPropagation();//冒泡
+            //		e.preventDefault();
+        });
+
+        $navBtn.append($navMoreUl);
+        //导航条 更多按钮
+        $navBtn.find(".nav-more").on("click", function () {
+            $navMoreUl.slideToggle("fast");
+            return false;
+        });
+        //导航条 分类按钮
+        $navBtn.find(".nav-cate").on("click", function () {
+            $("body").toggleClass("show");
+            $(".ecSwitchDiv").toggleClass("show");
+        });
+
+        //导航条 购物车按钮
+        $navBtn.find(".nav-cart").on("click", function () {
+            location.href = urlRoot + "Home/Cart/Cartlist";
+        });
+        $("body").on("click", function () {
+            $navMoreUl.hide();
+        });
+    })();
+
+    //联系商家按钮(这个是商品)
+    $(".appiLxsj").on("click", function () {
+        var $obj = $(this);
+        $obj.prop("disabled", true);
+        appiLxsj($obj, {
+            success: function (response) {
+                var urlNew = location.href.replace(/beginappi&.*&endappi/, '').replace(/[\?#]+$/, "");
+                var urlCommand = location.href.slice(location.href.indexOf('beginappi&') + 10, location.href.indexOf('&endappi'));
+                var url = urlNew + '?beginappi&' + encodeURIComponent('action=chat&docId=' + response.docId + '&stores_id=' + $obj.data("stores_id") + '&admin_userid=' + $obj.data("admin_userid") + '&appid=7' + '&stores_name=' + $obj.data("stores_name") + '&msubject=' + response.msubject) + '&endappi';
+                $obj.prop("disabled", false);
+                location.href = url;
+                amAlert("success", response.message, 1200);
+            },
+            error: function (response, filename) {
+                $obj.prop("disabled", false);
+                amAlert("warning", (response.message ? response.message : "") + ',' + filename);
+            }
+        }, "goods");
+    });
+    //联系商家按钮(这个是订单)
+    $(document).delegate(".appiLxsj1", "click", function () {
+        var $obj = $(this);
+        $obj.prop("disabled", true);
+        $obj.attr("src", $obj.data("dissrc"));
+        appiLxsj($obj, {
+            success: function (response) {
+                var urlNew = location.href.replace(/beginappi&.*&endappi/, '').replace(/[\?#]+$/, "");
+                var urlCommand = location.href.slice(location.href.indexOf('beginappi&') + 10, location.href.indexOf('&endappi'));
+                var url = urlNew + '?beginappi&' + encodeURIComponent('action=chat&docId=' + response.docId + '&stores_id=' + $obj.data("stores_id") + '&admin_userid=' + $obj.data("admin_userid") + '&appid=8' + '&stores_name=' + $obj.data("stores_name") + '&msubject=' + response.msubject) + '&endappi';
+                $obj.prop("disabled", false);
+                $obj.attr("src", $obj.data("src"));
+                location.href = url;
+                amAlert("success", response.message, 1200);
+            },
+            error: function (response, filename) {
+                $obj.prop("disabled", false);
+                $obj.attr("src", $obj.data("src"));
+                amAlert("warning", (response.message ? response.message : "") + ',' + filename);
+            }
+        }, "order");
+    });
+	
+	//author:gening time:2016-1-27
+	//点击重新设置xy并存储至cookie
+			$("body").on("click",".map_zb_gn",function(){
+				var xylocation = getloc();
+				var xloc=0,yloc=0;
+				if(xylocation.isSuccess == '1'){
+					xloc = xylocation.locX;
+					yloc = xylocation.locY;
+				}		
+				var timestamp = new Date().getTime();
+				$.post("/statichtml/bjmovie01/estores/Mall/Public/setCookieZb?time=" + timestamp + "&" + Math.random(), {xloc: xloc, yloc: yloc});
+				
+			})
+
+	
+});
+
+//获取手机app的x和y坐标
+//返回值是json对象 isSuccess,locX,locY
+function getloc() {
+    try {
+        var xylocation;
+       
+        if (window.showLocation) {
+            //安卓的
+            xylocation = window.showLocation.getLocation();
+           
+        } else {
+            //ios的
+            xylocation = getLocationIos();
+		//	alert(xylocation);
+        }
+		
+        return JSON.parse(xylocation);
+    } catch (e) {
+        return JSON.parse('{ "isSuccess": 0 }');
+    }
+}
+//主动停止ios和andride的loading动画
+function stopLoading(){
+	try {
+        if(window.stopProgressDialog){
+            window.stopProgressDialog.gotoStopProgressDialog();
+        } else {
+            //ios的
+        	gotoStopProgressDialog();
+        }
+    } catch (e) {
+        
+    }
+}
+//主动调用app的分享组件
+function showShare(title){
+	try {
+        if(window.showLocation ){
+            window.showLocation.getAppShare(title);
+        } else {
+            //ios的
+        	getAppShare({'shareTitle':title});
+        }
+    } catch (e) {
+        
+    }
+}
