@@ -3,22 +3,28 @@
 						var myScroll=new IScroll("#wrapper",{
 					 		snap:"li"
 					 	});
-					 	var ind = null;
+					 	var currentLi = null;
 					 	myScroll.on('scrollEnd', function(){
 					 		var position,index=0;
 					 		// console.log(this.y);
 					 		position = this.y;
 					 		index = position/40;
 					 		console.log(-index);
-					 		return ind = -index;
+					 		liIndex = parseInt(-index+1)
+					 		currentLi = $("#scroller li").eq(liIndex);
+					 		console.log(currentLi);
+					 		currentLi.addClass('current');
+					 		return currentLi ;
 					 	});
 					 	$(".select-cancel").delegate(".selecting","click",function(e){
 					 		var liIndex=0;
-					 		liIndex = (parseInt(ind+1));
-					 		console.log("当前滚动至："+liIndex);
+					 		// liIndex = (parseInt(ind+1));
+					 		// currentLi = $("#scroller li").eq(liIndex);
+					 		currentLi.addClass('current');
+					 		// console.log("当前滚动至："+liIndex);
 					 		//alert($("#scroller li").eq(liIndex).text());
 					 		var Classvalue = $(this).attr("Classvalue");
-					 		$("."+Classvalue).val($("#scroller li").eq(liIndex).text());
+					 		$("."+Classvalue).val(currentLi.text());
 					 		$(".backdrop,.layer").remove();
 					 	});
 					}myScroll();

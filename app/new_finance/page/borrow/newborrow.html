@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" />
+    <link rel="stylesheet" href="../../css/iscroll-talents.css">
+    <link rel="stylesheet" type="text/css" href="../../css/finance.css" />
+	<title>新建借款</title>
+	<style>
+	body{background-color: #EFEFF4;}
+	.gampb{border-color: #EFEFF4 !important;}
+
+	.w50{width: 40%;margin: 5%;margin-bottom: 10px;padding:10px 0;text-align: center;font-size: 1.6rem;}
+	</style>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="gampt"></div>
+		<div class="group">
+			<div class="item clearfix">
+				<div class="item-title">
+					借款人
+				</div>
+				<div class="item-details" style="">
+					<input type="text" placeholder="请输入">
+					<span></span>
+					<!-- <img src="../../img/for-more.svg" alt="点击选择"> -->
+				</div>
+			</div>
+			<div class="item clearfix">
+				<div class="item-title">
+					申请日期
+				</div>
+				<div class="item-details" style="">
+					<input type="text" placeholder="请输入" readonly="readonly" class="date-local">
+					<span></span>
+					<!-- <img src="../../img/for-more.svg" alt="点击选择"> -->
+				</div>
+			</div>
+		</div>
+		<div class="gampb"></div>
+		<div class="group">
+			<div class="item clearfix">
+				<div class="item-title">
+					科目分类
+				</div>
+				<div class="item-details" style="">
+					<input type="text" placeholder="请选择" class="subject" readonly="readonly">
+					<span></span>
+					<img src="../../img/for-more.svg" alt="点击选择">
+				</div>
+			</div>
+			<div class="item clearfix">
+				<div class="item-title">
+					子科目分类
+				</div>
+				<div class="item-details" style="">
+					<input type="text" placeholder="请选择" class="son-subject" readonly="readonly">
+					<span></span>
+					<img src="../../img/for-more.svg" alt="点击选择">
+				</div>
+			</div>
+		</div>
+		<div class="gampb"></div>
+		<div class="group">
+			<div class="item clearfix">
+				<div class="item-title">
+					金额
+				</div>
+				<div class="item-details" style="">
+					<input type="tel" placeholder="请输入金额" class="" />
+					<span></span>
+					<!-- <img src="../../img/for-more.svg" alt="点击选择"> -->
+				</div>
+			</div>
+			<div class="item clearfix">
+				<div class="item-title">
+					金额大写
+				</div>
+				<div class="item-details" style="">
+					<input type="text" placeholder="" class="" readonly="readonly" value="壹贰叁肆伍陆">
+					<span>元</span>
+					<!-- <img src="../../img/for-more.svg" alt="点击选择"> -->
+				</div>
+			</div>
+		</div>
+		<div class="gampb"></div>
+		<div class="group">
+			<label for="borrow-digest">
+				<div class="item clearfix" style="border:none;">
+					<div class="item-title">
+						借款摘要
+					</div>
+					<div class="item-details" style="">
+						<!-- <input type="tel" placeholder="请输入金额" class="" /> -->
+						<!-- <span></span> -->
+						<!-- <img src="../../img/for-more.svg" alt="点击选择"> -->
+					</div>
+				</div>
+				<textarea name="borrow-digest" id="borrow-digest" placeholder="请输入借款简要信息"></textarea>
+			</label>
+		</div>
+		<div class="save-push clearfix">
+			<a href="javascript:;" class="btn border pd10 w50 save-draft">保存草稿</a>
+			<a href="javascript:;" class="btn border pd10 w50 push-up">提交</a>
+		</div>
+	</div>
+	<footer></footer>
+	<script src="/statichtml/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+	<script src="../../js/iscroll/iscroll-probe.js"></script>
+	<script src="../../js/finance.js"></script>
+	<script>
+		$(document).ready(function(){
+			function resiezInput(){
+				var inputArray = $(".item-details input");
+				for (var i = 0;i<=inputArray.length - 1; i++) {
+					var thisInputP = $(inputArray[i]).closest(".item-details");
+					thisInputP.width($(".container").width()-thisInputP.prev(".item-title").width()-50);
+					// console.log(thisInputP);
+				};
+			}resiezInput();
+			$(".publish").click(function() {
+				alert("正在发布，请稍后....")
+			});
+		})
+		window.onload = function () {
+			var d = new Date(),day = d.getDate(),month = d.getMonth() + 1,year = d.getFullYear(),date;
+			date = year + "-" + month + "-" + day ;
+			$('.date-local').val(date);
+		}
+	</script>
+
+
+	
+
+
+</body>
+</html>
