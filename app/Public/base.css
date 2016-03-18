@@ -125,7 +125,9 @@ a{text-decoration: none;color: inherit;}
 .border{border:1px solid ;}
 /*border 1px div*/
 div{border-width:0.5px;}
+.w100{width: 80%;}
 .w50{width: 50%;}
+.w30{width: 33.3333%;}
 /*text-align center*/
 .tc{text-align: center;}
 /*media(img-text-description)*/
@@ -190,15 +192,50 @@ div{border-width:0.5px;}
 /*用户自定义滑动开关*/
 
 /*.swc_user { float: left; min-width: 150px; width: 33.33%; padding: 25px 0; min-height: 100px;}*/
-.swc_user .checkbox input {position: absolute;left: 0;top: 0;width: 100%;height: 100%;z-index: 5;opacity: 0;cursor: pointer;}
+/*.swc_user{position: relative;}*/
+.swc_user .checkbox{width: 55px;height: 30px;top:8px;}
+.swc_user .checkbox input {position: absolute;left: 0;top: 0;width: 55px;height: 30px;z-index: 5;opacity: 0;cursor: pointer;}
 .swc_user input[type="checkbox"], .swc_user input[type="radio"] {box-sizing: border-box;padding: 0;}
 .swc_user .checkbox input:checked + label { background: #ff980f;}
 .swc_user .checkbox input:checked + label:after {left: 27px;}
-.swc_user .checkbox label {width: 60px;height: 35px;background: #ccc;position: relative;display: inline-block;border-radius: 46px;transition: 0.4s;}
-.swc_user .checkbox label:after {content: '';position: absolute;width: 50px;height: 50px;border-radius: 100%;left: 2px;top: -5px;z-index: 2;background: #fff;box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);transition: 0.4s;}
+.swc_user .checkbox label {width: 55px;height: 29px;background: #ccc;position: relative;display: inline-block;border-radius: 46px;transition: 0.4s;}
+.swc_user .checkbox label:after {content: '';position: absolute;width: 50px;height: 50px;border-radius: 100%;left: 2px;top: -5px;z-index: 2;
+background: #fff;box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);transition: 0.4s;}
 .swc_user .checkbox {    position: relative;    display: inline-block;}
-.swc_user .checkbox label:after {    top: 2px;    width: 31px;    height: 31px;}
+.swc_user .checkbox label:after {    top: 2px;    width: 25px;    height: 25px;}
+.swc_info {color: #A9A9A9;padding-right: 10px;transition: all 1s linear;}
+/*临时层*/
+.load-area{position: fixed;top: 0;left: 0;width:100%;height:100%;overflow: auto;background-color: #fff;z-index: 200;}
+
 
 /*user-alert 用户自定义弹窗*/
+.backdrop,.mask{background-color: rgba(0,0,0,0.5);position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index: 100;}
+.fixlayer{position: fixed;top: 0;left: 0;width: 100%;height: 100%;overflow: auto;z-index: 101;background-color: #fff;-webkit-overflow-scrolling:touch;}
+#user_alert_parent{display: none;}
 .user-alert{position: fixed;height: 100%;width:100%;top:0;left:0;background: inherit;background-color: rgba(0,0,0,0.5);z-index: 999;}
-.user-alert-content{position: fixed;top: 50%;left: 50%;transform:translate(-50%,-50%);background-color: #fff;z-index: 1000;border: 0.5px solid rgba(0,0,0,0.3);padding:20px;border-radius: 8px; }
+.user-alert-content{position: fixed;top: 50%;left: 50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);background-color: #fff;
+  z-index: 1000;border: 0.5px solid rgba(0,0,0,0.3);border-radius: 8px; min-width: 250px;min-height: 60px;text-align: center;}
+.user-alert-content p{padding: 20px 20px 10px 20px;line-height: 20px;border-bottom: 1px solid #cfcfcf;font-size: 16px;}
+#user_btn_cancel,#user_btn_ensure{display: inline-block;text-align: center;line-height: 40px;font-size: 16px;}
+#user_btn_cancel{display: none;border-right: 1px solid #cfcfcf;}
+.user-ensure #user_btn_cancel{display: inline-block;}
+.user-alert-btn a{width: 100%;color: #007AFF}
+.user-ensure a{width: 50%;float: left;display: inline-block;}
+/*.trans-opacity.user-alert{-webkit-animation: transopacity 0.2s linear;animation: transopacity 0.2s linear;}*/
+/*.trans-opacity .user-alert-content{-webkit-animation: transopacity 0.3s linear;animation: transopacity 0.3s linear;}*/
+@-webkit-keyframes transopacity{
+    from {opacity: 0;}
+    to {opacity: 0.5;}
+}
+@keyframes transopacity{
+    from {opacity: 0;}
+    to {opacity: 0.5;}
+}
+
+/*@keyframes all{
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-delay: initial
+}
+*/

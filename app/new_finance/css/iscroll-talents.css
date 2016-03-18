@@ -40,6 +40,7 @@
 					-ms-text-size-adjust: none;
 					-o-text-size-adjust: none;
 					text-size-adjust: none;
+					-webkit-overflow-scrolling:touch;
 				}
 				#scroller ul {
 					list-style: none;
@@ -69,6 +70,7 @@
 					background-color: rgba(0,0,0,0.5);
 					height: 100%;
 					width: 100%;
+					z-index: 300;
 				}
 				.layer{
 					width: 100%;
@@ -76,6 +78,7 @@
 					bottom: 0;
 					background-color: #fff;
 					height: 180px;
+					z-index: 400;
 				}
 				.select-cancel .cancel{
 					float: left;

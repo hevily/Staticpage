@@ -5,10 +5,16 @@
 	<meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" />
+    <link rel="stylesheet" href="../../css/iscroll-talents.css">
+
     <link rel="stylesheet" type="text/css" href="../../css/finance.css" />
 	<title>我的借款</title>
+	<style>
+	.link a{font-size: 1.6rem;color: green;padding: 0 10px;line-height: 2;}
+	.container{overflow: auto;}
+	</style>
 </head>
-<body>
+<body id="body">
 	<header></header>
 	<div class="container">
 		<div class="tabs one clearfix">
@@ -107,7 +113,11 @@
 							</div>
 						</div>
 
-						<a href="newborrow.html">新建借款/报销</a>
+						<div class="link">
+							<a href="newborrow.html">新建借款/报销</a>
+							<a href="load/borrow-draft.html">我的借款草稿</a>
+							<a href="load/borrow-details.html">我的借款详情</a>
+						</div>
 					</div>
 					<div class="tabpanel">
 						
@@ -156,8 +166,7 @@
 					</div>
 				</div>
 			</div>
-
-
+	
 <div class="swc_user">
 	<div class="checkbox">
 		<input type="checkbox">
@@ -167,19 +176,13 @@
 
 		</div>
 
-		<div class="user-alert">
-			<div class="uer-alert-backdrop"></div>
-			<div class="user-alert-content">
-				<p>确认？</p>
-				<div class="user-alert-btn">
-					<a href="javascript:;">取消</a>
-					<a href="javascript:;">确认</a>
-				</div>
-			</div>
-		</div>
+		
+		<div class="load-area"style="display:none;"></div>
 	</div>
+	<div id="user_alert_parent" class="trans-opacity"></div>
 	<footer></footer>
 	<script src="/statichtml/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+	<script src="../../js/iscroll/iscroll-probe.js"></script>
 	<script src="../../js/finance.js"></script>
 	<script>
 		$(function () {
@@ -192,7 +195,29 @@
 				thistab.addClass('showing');
 				// console.log(thistab.addClass('showing'));
 			})
+			// 弹出借款草稿
+			$('.load-area').on('click','.push-up',function () {
+				var text = '确定发布？';
+				userAlert.append("user_alert_parent",text,'two');
+
+				$('#user_alert_parent').on('click','#user_alert_btn a', function (e) {
+					console.log(userAlert.result());
+					if (userAlert.result()) {
+						$('.load-area').html('');
+					}
+					return;
+				})
+			})
 		})
+
+	</script>
+	<script>
+
+		$('.draft .bill').click(function () {
+			$('.load-area').toggle();
+			$('.load-area').load('load/borrow-draft.html');
+		});
+
 	</script>
 </body>
 </html>

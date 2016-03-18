@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" />
+    <link rel="stylesheet" type="text/css" href="../css/" />
+	<title>二维码扫描</title>
+	<style>
+	.backdrop{position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(0,0,0,0.5);}
+	.layer-out{position: fixed;left: 50%;top: 50%;transform:translate(-50%,-50%);padding: 20px;background-color: #fff;border-radius: 5px;}
+	.layer-out img{width: 260px;height: 260px;}
+	.layer-out p{text-align: center;margin-top: 10px;}
+	.layer-out span{padding: 4px 12px;background-color: #FBBE81;color:#6B6158;border-top-left-radius: 20px;
+																				border-top-right-radius: 20px;
+																				border-bottom-left-radius: 20px;
+																				border-bottom-right-radius: 20px;
+	}
+	</style>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="backdrop"></div>
+		<div class="layer-content">
+			<div class="layer-out">
+				<img src="http://img02.tooopen.com/images/20160216/tooopen_sy_156324542564.jpg" alt="qr-core">
+				<p><span>打印此二维码</span></p>
+			</div>
+		</div>
+
+	</div>
+	<footer></footer>
+	<script src="/statichtml/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+</body>
+</html>

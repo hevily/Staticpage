@@ -21,31 +21,29 @@
 		<div class="gampt"></div>
 		<div class="group">
 			<div class="item clearfix">
-				<div class="item-title">
-					借款人
+				<div class="item-title justify">
+					借 款 人<span></span>
 				</div>
 				<div class="item-details" style="">
 					<input type="text" placeholder="请输入">
 					<span></span>
-					<!-- <img src="../../img/for-more.svg" alt="点击选择"> -->
 				</div>
 			</div>
 			<div class="item clearfix">
-				<div class="item-title">
-					申请日期
+				<div class="item-title justify">
+					申 请 日 期<span></span>
 				</div>
 				<div class="item-details" style="">
 					<input type="text" placeholder="请输入" readonly="readonly" class="date-local">
 					<span></span>
-					<!-- <img src="../../img/for-more.svg" alt="点击选择"> -->
 				</div>
 			</div>
 		</div>
 		<div class="gampb"></div>
 		<div class="group">
 			<div class="item clearfix">
-				<div class="item-title">
-					科目分类
+				<div class="item-title justify">
+					科 目 分 类<span></span>
 				</div>
 				<div class="item-details" style="">
 					<input type="text" placeholder="请选择" class="subject" readonly="readonly">
@@ -54,8 +52,8 @@
 				</div>
 			</div>
 			<div class="item clearfix">
-				<div class="item-title">
-					子科目分类
+				<div class="item-title justify">
+					子 科 目 分 类<span></span>
 				</div>
 				<div class="item-details" style="">
 					<input type="text" placeholder="请选择" class="son-subject" readonly="readonly">
@@ -67,23 +65,21 @@
 		<div class="gampb"></div>
 		<div class="group">
 			<div class="item clearfix">
-				<div class="item-title">
-					金额
+				<div class="item-title justify">
+					金 额<span></span>
 				</div>
 				<div class="item-details" style="">
 					<input type="tel" placeholder="请输入金额" class="" />
 					<span></span>
-					<!-- <img src="../../img/for-more.svg" alt="点击选择"> -->
 				</div>
 			</div>
 			<div class="item clearfix">
-				<div class="item-title">
-					金额大写
+				<div class="item-title justify">
+					金 额 大 写<span></span>
 				</div>
 				<div class="item-details" style="">
 					<input type="text" placeholder="" class="" readonly="readonly" value="壹贰叁肆伍陆">
 					<span>元</span>
-					<!-- <img src="../../img/for-more.svg" alt="点击选择"> -->
 				</div>
 			</div>
 		</div>
@@ -91,14 +87,10 @@
 		<div class="group">
 			<label for="borrow-digest">
 				<div class="item clearfix" style="border:none;">
-					<div class="item-title">
-						借款摘要
+					<div class="item-title justify">
+						借 款 摘 要<span></span>
 					</div>
-					<div class="item-details" style="">
-						<!-- <input type="tel" placeholder="请输入金额" class="" /> -->
-						<!-- <span></span> -->
-						<!-- <img src="../../img/for-more.svg" alt="点击选择"> -->
-					</div>
+					<div class="item-details" style=""></div>
 				</div>
 				<textarea name="borrow-digest" id="borrow-digest" placeholder="请输入借款简要信息"></textarea>
 			</label>
@@ -108,6 +100,7 @@
 			<a href="javascript:;" class="btn border pd10 w50 push-up">提交</a>
 		</div>
 	</div>
+	<div id="user_alert_parent"></div>
 	<footer></footer>
 	<script src="/statichtml/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
 	<script src="../../js/iscroll/iscroll-probe.js"></script>
@@ -125,6 +118,17 @@
 			$(".publish").click(function() {
 				alert("正在发布，请稍后....")
 			});
+			$('.push-up').click(function () {
+				userAlert.append('user_alert_parent','123123123123','two');
+			})
+			$('#user_alert_parent').on('click','#user_alert_btn a', function () {
+				var checkClass = 'clicked';
+				$(this).addClass(checkClass);
+				userAlert.result(checkClass) ?console.log(userAlert.result(checkClass)):console.log(userAlert.result(checkClass));
+				userAlert.remove();
+			})
+
+			
 		})
 		window.onload = function () {
 			var d = new Date(),day = d.getDate(),month = d.getMonth() + 1,year = d.getFullYear(),date;

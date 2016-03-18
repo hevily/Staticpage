@@ -2,8 +2,8 @@
 // 弹出浮层选择
 		// 科目分类
 		$(".subject").click(function(){
-			var name="科目分类";
-			appendlayer(name,'subject');
+			var name="科目分类",where = 'subject';
+			appendlayer(name,where);
 			var url = '../../js/data.json?type=subject';
 			$.ajax(url).done(function (data) {
 				initsnap(data);
@@ -12,8 +12,8 @@
 		});
 		// 子科目分类
 		$(".son-subject").click(function(){
-			var name="子科目分类";
-			appendlayer(name,'son-subject');
+			var name="子科目分类",where = 'son-subject';
+			appendlayer(name,where);
 			var url = '../../js/data.json?type=son-subject&';
 			$.ajax(url).done(function (data) {
 				initsnap(data);
@@ -26,11 +26,11 @@
 
 			// }
 			if (_thisTab.hasClass('draft')) {
-				alert('draft');
+				// alert('draft');
 			}else if (_thisTab.parent().parent().hasClass('examine')) {
-				alert('examine');
+				// alert('examine');
 			}else if (_thisTab.hasClass('done')) {
-				alert('done');
+				// alert('done');
 			}
 		})
 
@@ -107,3 +107,49 @@ function initsnap(data) {
 		});
 		myScroll();
 }
+
+var userAlert = {
+	// @program userAlert
+	// @program append id，text，type
+	// return userAlert Dom into the id
+
+	append:function (id,text,type) {
+		var alertArea = document.getElementById(id),
+			btn_cancel = '',user_ensure = '';
+			alertArea.style.display = 'block';
+		if (type === 'two') {
+			user_ensure = 'user-ensure';
+			btn_cancel = '<a href="javascript:;" id="user_btn_cancel" onclick="this.isclick=2" >取消</a>';
+		};
+		var text =	'<div class="user-alert trans-opacity" id="user_alert">'+
+					'<div class="uer-alert-backdrop"></div>'+
+						'<div class="user-alert-content">'+
+							'<p>'+text+'</p>'+
+							'<div class="user-alert-btn '+user_ensure+'" id="user_alert_btn">'+
+								btn_cancel+
+								'<a href="javascript:;" id="user_btn_ensure" onclick="this.isclick=1" >确认</a>'+
+							'</div>'+
+						'</div>'+
+					'</div>';
+		alertArea.innerHTML = text;
+	},
+	// @program result checkClass
+	// return false or true
+
+	result:function () {
+		// var _this = _this;
+		// _this.attributes.clasName ='clicked12';
+			var oldnode = document.getElementById('user_alert');
+			var btn_ensure = document.getElementById('user_btn_ensure');
+			if (oldnode) {
+				oldnode.parentNode.removeChild(oldnode)
+				console.log(oldnode);
+				if(btn_ensure.isclick == 1){
+					return  true;
+				}else{
+					return  false;
+				};
+				return false;
+			}
+	}
+};
