@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" />
+    <link rel="stylesheet" type="text/css" href="../css/goodsmanage.css" />
+	<title>编辑/新增商品</title>
+	<style>
+	.container{overflow: scroll;}
+	</style>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="add-photo">
+			
+		</div>
+		<div class="new-info">
+			<div class="title">
+				<textarea name="goods_title_tickets" id="goods_title_tickets" placeholder="请输入商品标题限30字" maxlength="30"></textarea>
+			</div>
+
+
+
+			<div class="item clearfix">
+				<div class="item-title justify">
+					分 类<span></span>
+				</div>
+				<div class="item-details" >
+					<input type="text" placeholder="请选择"  readonly="readonly" class="classes">
+					<span></span>
+					<img src="../img/for-more.svg" alt="more">
+				</div>
+			</div>
+			<div class="item clearfix">
+				<div class="item-title justify">
+					属 性<span></span>
+				</div>
+				<div class="item-details" >
+					<span id="storeInfo_attr" class="swc_info">暂不启用</span>
+					<div class="swc_user">
+						<div class="checkbox">
+							<input type="checkbox" id="control_attr">
+							<label></label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="item clearfix">
+				<div class="item-title justify">
+					价 格: ¥<span></span>
+				</div>
+				<div class="item-details" >
+					<input type="number" placeholder="请输入" class="money" >
+					<select name="money-class" id="money-class">
+						<option value="1">/人/间</option>
+						<option value="2">/单位</option>
+						<option value="3">/立方米</option>
+					</select>
+					<span></span>
+					<!-- <img src="../img/for-more.svg" alt="more"> -->
+				</div>
+			</div>
+			<div class="item clearfix">
+				<div class="item-title justify">
+					库 存<span></span>
+				</div>
+				<div class="item-details" >
+					<input type="text" placeholder="请输入"  >
+					<span></span>
+					<!-- <img src="../img/for-more.svg" alt="more"> -->
+				</div>
+			</div>
+			<div class="item clearfix">
+				<div class="item-title justify">
+					快 递 费<span></span>
+				</div>
+				<div class="item-details" >
+					<input type="text" placeholder="请输入"  >
+					<span></span>
+					<!-- <img src="../img/for-more.svg" alt="more"> -->
+				</div>
+			</div>
+			<div class="item clearfix">
+				<div class="item-title justify">
+					商 品 描 述<span></span>
+				</div>
+				<div class="item-details" >
+					<input type="text" placeholder="请输入" >
+					<span></span>
+					<img src="../img/for-more.svg" alt="more">
+				</div>
+			</div>
+			<div class="item clearfix">
+				<div class="item-title justify">
+					发 货 地<span></span>
+				</div>
+				<div class="item-details" >
+					<input type="text" placeholder="请输入"  >
+					<span></span>
+					<img src="../img/for-more.svg" alt="more">
+				</div>
+			</div>
+			<div class="item clearfix">
+				<div class="item-title justify">
+					是 否 上 架<span></span>
+				</div>
+				<div class="item-details" >
+
+					<span id="storeInfo_sale" class="swc_info">暂不上架</span>
+					<div class="swc_user">
+						<div class="checkbox">
+							<input type="checkbox" id="control_sale">
+							<label></label>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+		</div>
+		<div class="finish">
+			<a href="javascript:;">完成</a>
+		</div>
+	</div>
+	<footer></footer>
+	<script>document.body.addEventListener('touchstart', function () { })</script>
+
+	<script src="/statichtml/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+	<script>
+		// 上架
+		var btn_sale = document.getElementById('control_sale'),
+			txt_sale = document.getElementById('storeInfo_sale');
+		btn_sale.addEventListener("click",function(){
+			if (btn_sale.checked) {
+				txt_sale.innerHTML="上架";
+				txt_sale.style.color='#f36303';
+			}else{
+				txt_sale.innerHTML="暂不上架";
+				txt_sale.style.color='#A9A9A9';
+			}
+		});
+		// 属性 attribute
+		var btn_attr = document.getElementById('control_attr'),
+			txt_attr = document.getElementById('storeInfo_attr');
+		btn_attr.addEventListener("click",function(){
+			if (btn_attr.checked) {
+				txt_attr.innerHTML="启用属性";
+				txt_attr.style.color='#f36303';
+			}else{
+				txt_attr.innerHTML="暂不启用";
+				txt_attr.style.color='#A9A9A9';
+			}
+		});
+
+	</script>
+	<script>
+		$(function () {
+			function resiezInput(){
+				var inputArray = $(".item-details input");
+				for (var i = 0;i<=inputArray.length - 1; i++) {
+					var thisInputP = $(inputArray[i]).closest(".item-details");
+					thisInputP.width($(".container").width()-thisInputP.prev(".item-title").width()-50);
+					// console.log(thisInputP); <span></span>
+				};
+				// setTimeout(function () {
+					$('.money').width($('.money').closest('.item-details').width()-80).css('right','100px');
+				// },10);
+			}resiezInput();
+			$('.add-photo').click(function () {
+				selectchoice();
+			})
+			function selectchoice(page) {
+				$('body').append('<div id="load_select"></div>');
+				$('#load_select').load(page);
+			}
+			$('.classes').click(function () {
+				selectchoice('select-classes.html');
+			})
+			$('body').on('click','#load_select a',function () {
+				$('#load_select').remove();
+			})
+				// selectchoice('select-classes.html');
+		})
+	</script>
+</body>
+</html>

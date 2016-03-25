@@ -1,3 +1,15 @@
+// 添加对：active的支持
+document.body.addEventListener('touchstart', function () { })
+// 选项卡切换 无限极
+$('.tabs .tab').click(function () {
+	var _this = $(this);
+	_this.siblings('.tab').removeClass('active');
+	_this.addClass('active');
+	var thistab = _this.closest('.tabs').next('.tab-content').children('.tabpanel').eq(_this.index());
+	thistab.siblings('.tabpanel').removeClass('showing');
+	thistab.addClass('showing');
+})
+
 
 // 弹出浮层选择
 		// 科目分类
@@ -33,6 +45,12 @@
 				// alert('done');
 			}
 		})
+	// 审批按姓名 展开收起 show hide
+	$('.media.person-nanme').click(function () {
+		$(this).toggleClass('deg270');
+		$(this).siblings('.name-bills').toggle();
+	})
+
 
 		function userAlert(text) {
 			function userAlertInsert() {
@@ -100,12 +118,35 @@ function myScroll(){
  	});
 }
 function initsnap(data) {
-	var fillarea = $('#scroller').find('ul');
-		console.log(data,fillarea);
-		$.each(data,function (item,key) {
-			fillarea.append('<li>'+data[item]+'</li>')
-		});
-		myScroll();
+	var point = $('#scroller').find('ul');
+	$.each(data,function (i,item) {
+		point.append('<li>'+item+'</li>')
+	});
+	myScroll();	
+}
+
+var userAlert = function () {
+	var alertArea = document.getElementById(userAlert),
+				btn_cancel = '',user_ensure = '';
+				alertArea.style.display = 'block';
+
+	if (type === 'two') {
+			user_ensure = 'user-ensure';
+			btn_cancel = '<a href="javascript:;" id="user_btn_cancel" onclick="this.isclick=2" >取消</a>';
+		};
+	var text = '<div class="user-alert trans-opacity" id="user_alert">'+
+					'<div class="uer-alert-backdrop"></div>'+
+						'<div class="user-alert-content">'+
+							'<p>'+text+'</p>'+
+							'<div class="user-alert-btn '+user_ensure+'" id="user_alert_btn">'+
+								btn_cancel+
+								'<a href="javascript:;" id="user_btn_ensure" onclick="this.isclick=1" >确认</a>'+
+							'</div>'+
+						'</div>'+
+					'</div>';
+	this.protetype.alert = function () {
+		// body...
+	}
 }
 
 var userAlert = {
@@ -113,8 +154,8 @@ var userAlert = {
 	// @program append id，text，type
 	// return userAlert Dom into the id
 
-	append:function (id,text,type) {
-		var alertArea = document.getElementById(id),
+	append:function (text,type) {
+		var alertArea = document.getElementById(userAlert),
 			btn_cancel = '',user_ensure = '';
 			alertArea.style.display = 'block';
 		if (type === 'two') {

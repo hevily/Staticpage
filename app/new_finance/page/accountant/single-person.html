@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/finance.css" />
+    <title>按姓名-借款</title>
+	<style>
+		.container,.wait-check-bills{height: 100%;}
+	</style>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="agree-all">
+			<div class="media name-detail">
+				<div class="media-left"><img src="../../img/index/borrow.png" alt="款项类型"></div>
+				<div class="media-body media-middle"><span class="name">邓飞</span><span class="money-class" >¥<span class="money-num" >200</span></span></div>
+			</div>
+			<div class="select-agree clearfix">
+				<label>
+					<span></span>
+					全选
+				</label>
+				<div class="agree-btn">
+					<!-- <span class="disagree">不同意</span> -->
+					<span class="agree">完成</span>
+				</div>
+			</div>
+		</div>
+		<div class="wait-check-bills">
+			<p class="notice">共<span class="wait-num">-</span>条<span class="wait-class">报销</span>单待审核
+			当前选中<span class="checked-num">0</span>条</p>
+			<div class="person-bill">
+				<div class="media">
+					<div class="media-body media-middle">
+						<p class="person-bill-name"><span class="person-bill-num">590</span>布景费用<img src="../../img/index/check-icon.png" alt=""></p>
+						<p class="person-bill-money"><label><span></span></label>¥<span class="bill-money">200.00</span></p>
+					</div>
+					<div class="media-right media-middle">
+						<p>2016-3-24<img src="../../img/for-more.svg" alt=""></p>
+						
+					</div>
+				</div>
+				<div class="media">
+					<div class="media-body media-middle">
+						<p class="person-bill-name"><span class="person-bill-num">590</span>布景费用<img src="../../img/index/check-icon.png" alt=""></p>
+						<p class="person-bill-money"><label><span></span></label>¥<span class="bill-money">200.00</span></p>
+					</div>
+					<div class="media-right media-middle">
+						<p>2016-3-24<img src="../../img/for-more.svg" alt=""></p>
+						
+					</div>
+				</div>
+				<div class="media">
+					<div class="media-body media-middle">
+						<p class="person-bill-name"><span class="person-bill-num">590</span>布景费用<img src="../../img/index/check-icon.png" alt=""></p>
+						<p class="person-bill-money"><label><span></span></label>¥<span class="bill-money">200.00</span></p>
+					</div>
+					<div class="media-right media-middle">
+						<p>2016-3-24<img src="../../img/for-more.svg" alt=""></p>
+						
+					</div>
+				</div>
+				<div class="media">
+					<div class="media-body media-middle">
+						<p class="person-bill-name"><span class="person-bill-num">590</span>布景费用<img src="../../img/index/check-icon.png" alt=""></p>
+						<p class="person-bill-money"><label><span></span></label>¥<span class="bill-money">200.00</span></p>
+					</div>
+					<div class="media-right media-middle">
+						<p>2016-3-24<img src="../../img/for-more.svg" alt=""></p>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer></footer>
+	<script src="/statichtml/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+	<script src="../../js/finance.js"></script>
+	<script>
+		$(function () {
+			var totalnum = $('.person-bill-money').find('label');
+			var w_select = $('.person-bill-money').find('label.checked')
+			getchecknum(totalnum,w_select);
+
+			$('.select-agree label').click(function () {
+				$(this).hasClass('checked')?$(this).removeClass('checked'):$(this).addClass('checked')
+				$(this).hasClass('checked')?$('.person-bill-money').find('label').addClass('checked'):$('.person-bill-money').find('label').removeClass('checked');
+				w_select = $('.person-bill-money').find('label.checked')
+				getchecknum(totalnum,w_select);
+
+			})
+			$('.person-bill-money span').click(function (e) {
+				$(this).closest('label').toggleClass('checked');
+				e.stopPropagation();
+				checkAll()
+				w_select = $('.person-bill-money').find('label.checked')
+				getchecknum(totalnum,w_select);
+
+			})
+			function getchecknum(obj,sleobj) {
+				var total = obj.length;
+				var selecting = sleobj.length;
+				$('.wait-num').text(total);
+				$('.checked-num').text(selecting);
+			}
+
+
+			function checkAll() {
+				var allCheck = $('.person-bill-money').find('label');
+				var checking = $('.person-bill-money').find('.checked');
+				// console.log(allCheck,checking);
+				if (allCheck.length==checking.length) {
+					// console.log('slect All');
+					$('.select-agree label').addClass('checked');
+				}else{
+					$('.select-agree label').removeClass('checked');
+				}
+			}checkAll();
+		})
+	</script>
+</body>
+</html>

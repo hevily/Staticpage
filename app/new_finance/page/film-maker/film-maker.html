@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/finance.css" />
+	<title>制片主任审批</title>
+	<style>
+	.container{height: 100%;background-color: #EFEFF4;}
+	.load-area .container{height: auto;}
+	.two.tabs{background-color: #fff;border-bottom: 1px solid #CCCCCC;position: fixed;top:0;left:0;z-index: 10; width: 100%;}
+	.tab-content{background-color: #EFEFF4;padding: 10px;padding-top: 60px;}
+	.tabs.two .tab{width:50%;}
+	.two.tabs .tab:nth-child(1){border-top-left-radius: 5px;border-bottom-left-radius: 5px;}
+	.two.tabs .tab:nth-child(2){border-right: 1px solid #f36303;border-top-right-radius: 5px;border-bottom-right-radius: 5px;}
+	.tab .bl:after{content: '';height:0;}
+	.media{border-bottom: 1px solid #cccccc;padding: 10px;margin: 0;}
+	.media-right img{width: 10px;}
+
+	</style>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="tabs two clearfix">
+			<div class="film-tab">
+				<div class="tab active">
+					<div class="bl">
+						按日期(<span>3</span>)
+					</div>
+				</div>
+				<div class="tab">
+					<div class="bl">
+						按姓名(<span>3</span>)
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tab-content">
+			<div class="tabpanel showing">
+				<div class="check-bill borrow">
+					<div class="check-bill-left">
+						<img src="../../img/index/borrow.png" alt="borrow">
+					</div>
+					<div class="check-bill-body">
+						<h3>姓名<span>2016-3-23</span></h3>
+						<p class="check-bill-name"><span>591</span>费用名称费用名称费用名称费用名称费用名称费用名称费用名称费用名称费用名称费用名称</p>
+						<p class="check-bill-money orange"><span>
+						<!-- <img src="../../img/index/check-icon.png" alt="payment-icon"> -->
+						</span>
+						¥1234123412341234¥1234123412341234¥1234123412341234</p>
+					</div>
+					<div class="check-bill-right">
+						<img src="../../img/for-more.svg" alt="more">
+					</div>
+					<div class="check-bill-btn">
+						<span class="disagree bb1 dark">不同意</span><span class="agree bb1 orange">同意</span>
+					</div>
+				</div>
+				<div class="check-bill payment">
+					<div class="check-bill-left">
+						<img src="../../img/index/payment.png" alt="payment">
+					</div>
+					<div class="check-bill-body">
+						<h3>姓名<span>2016-3-23</span></h3>
+						<p class="check-bill-name"><span>591</span>费用名称</p>
+						<p class="check-bill-money orange"><span>
+						<img src="../../img/index/check-icon.png" alt="payment-icon">
+						</span>¥1234123412341234</p>
+					</div>
+					<div class="check-bill-right">
+						<img src="../../img/for-more.svg" alt="more">
+					</div>
+					<div class="check-bill-btn">
+						<span class="disagree bb1 dark">不同意</span><span class="agree bb1 orange">同意</span>
+					</div>
+				</div>
+				<div class="check-bill borrow">
+					<div class="check-bill-left">
+						<img src="../../img/index/borrow.png" alt="borrow">
+					</div>
+					<div class="check-bill-body">
+						<h3>姓名<span>2016-3-23</span></h3>
+						<p class="check-bill-name"><span>591</span>费用名称费用名称费用名称费用名称费用名称费用名称费用名称费用名称费用名称费用名称</p>
+						<p class="check-bill-money orange"><span>
+						<!-- <img src="../../img/index/check-icon.png" alt="payment-icon"> -->
+						</span>
+						¥1234123412341234¥1234123412341234¥1234123412341234</p>
+					</div>
+					<div class="check-bill-right">
+						<img src="../../img/for-more.svg" alt="more">
+					</div>
+					<div class="check-bill-btn">
+						<span class="disagree bb1 dark">不同意</span><span class="agree bb1 orange">同意</span>
+					</div>
+				</div>
+				<div class="check-bill payment">
+					<div class="check-bill-left">
+						<img src="../../img/index/payment.png" alt="payment">
+					</div>
+					<div class="check-bill-body">
+						<h3>姓名<span>2016-3-23</span></h3>
+						<p class="check-bill-name"><span>591</span>费用名称</p>
+						<p class="check-bill-money orange"><span>
+						<img src="../../img/index/check-icon.png" alt="payment-icon">
+						</span>¥1234123412341234</p>
+					</div>
+					<div class="check-bill-right">
+						<img src="../../img/for-more.svg" alt="more">
+					</div>
+					<div class="check-bill-btn">
+						<span class="disagree bb1 dark">不同意</span><span class="agree bb1 orange">同意</span>
+					</div>
+				</div>
+				<div class="check-bill borrow">
+					<div class="check-bill-left">
+						<img src="../../img/index/borrow.png" alt="borrow">
+					</div>
+					<div class="check-bill-body">
+						<h3>姓名<span>2016-3-23</span></h3>
+						<p class="check-bill-name"><span>591</span>费用名称费用名称费用名称费用名称费用名称费用名称费用名称费用名称费用名称费用名称</p>
+						<p class="check-bill-money orange"><span>
+						<!-- <img src="../../img/index/check-icon.png" alt="payment-icon"> -->
+						</span>
+						¥1234123412341234¥1234123412341234¥1234123412341234</p>
+					</div>
+					<div class="check-bill-right">
+						<img src="../../img/for-more.svg" alt="more">
+					</div>
+					<div class="check-bill-btn">
+						<span class="disagree bb1 dark">不同意</span><span class="agree bb1 orange">同意</span>
+					</div>
+				</div>
+				<div class="check-bill payment">
+					<div class="check-bill-left">
+						<img src="../../img/index/payment.png" alt="payment">
+					</div>
+					<div class="check-bill-body">
+						<h3>姓名<span>2016-3-23</span></h3>
+						<p class="check-bill-name"><span>591</span>费用名称</p>
+						<p class="check-bill-money orange"><span>
+						<img src="../../img/index/check-icon.png" alt="payment-icon">
+						</span>¥1234123412341234</p>
+					</div>
+					<div class="check-bill-right">
+						<img src="../../img/for-more.svg" alt="more">
+					</div>
+					<div class="check-bill-btn">
+						<span class="disagree bb1 dark">不同意</span><span class="agree bb1 orange">同意</span>
+					</div>
+				</div>
+			</div>
+			<div class="tabpanel ">
+				<div class="name-list">
+					<div class="person-num">
+						<div class="media person-nanme">
+							<div class="media-body">申请人：邓飞<span>5</span></div>
+							<div class="media-right"><img src="../../img/for-more.svg" alt=""></div>
+						</div>
+						<div class="name-bills">
+							<div class="media" onclick="window.location.href='single-person.html'">
+								<div class="media-left media-middle">
+									<img src="../../img/index/borrow.png" alt="borrow" class="media-object">
+								</div>
+								<div class="media-body media-middle">
+									¥:<span>500</span>
+									<span class="name-time">
+										2016-3-23<span class="name-num">4</span>
+									</span>
+								</div>
+								<div class="media-right media-middle">
+									<img src="../../img/for-more.svg" alt="more">
+								</div>
+							</div>
+							<div class="media" onclick="window.location.href='single-person-2.html'">
+								<div class="media-left media-middle">
+									<img src="../../img/index/payment.png" alt="borrow" class="media-object">
+								</div>
+								<div class="media-body media-middle">
+									¥:<span>500</span>
+									<span class="name-time">
+										2016-3-23<span class="name-num">4</span>
+									</span>
+								</div>
+								<div class="media-right media-middle">
+									<img src="../../img/for-more.svg" alt="more">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="person-num">
+						<div class="media person-nanme">
+							<div class="media-body">申请人：邓飞<span>5</span></div>
+							<div class="media-right"><img src="../../img/for-more.svg" alt=""></div>
+						</div>
+						<div class="name-bills hidden">
+							<div class="media" >
+								<div class="media-left media-middle">
+									<img src="../../img/index/borrow.png" alt="borrow" class="media-object">
+								</div>
+								<div class="media-body media-middle">
+									¥:<span>500</span>
+									<span class="name-time">
+										2016-3-23<span class="name-num">4</span>
+									</span>
+								</div>
+								<div class="media-right media-middle">
+									<img src="../../img/for-more.svg" alt="more">
+								</div>
+							</div>
+							<div class="media">
+								<div class="media-left media-middle">
+									<img src="../../img/index/payment.png" alt="borrow" class="media-object">
+								</div>
+								<div class="media-body media-middle">
+									¥:<span>500</span>
+									<span class="name-time">
+										2016-3-23<span class="name-num">4</span>
+									</span>
+								</div>
+								<div class="media-right media-middle">
+									<img src="../../img/for-more.svg" alt="more">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+
+
+	</div>
+	<footer></footer>
+	<script src="/statichtml/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+	<script src="../../js/finance.js"></script>
+	<script>
+		$(function () {
+			// 弹出借款单
+			$('.check-bill.borrow .check-bill-body').click(function () {
+				// $('html').addClass('keep')
+				$('body').append('<div class="load-area"></div>');
+				$('.load-area').load('load/borrow-details-film.html')
+			})
+			// 弹出报销单
+			$('.check-bill.payment .check-bill-body').click(function () {
+				// $('html').addClass('keep')
+				$('body').append('<div class="load-area"></div>');
+				$('.load-area').load('load/payment-details-film.html')
+			})
+		})
+	</script>
+</body>
+</html>

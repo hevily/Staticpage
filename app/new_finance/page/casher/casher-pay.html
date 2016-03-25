@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" />
+    <link rel="stylesheet" href="../../css/iscroll-talents.css">
+    <link rel="stylesheet" type="text/css" href="../../css/finance.css" />
+	<title>财务付款-报销</title>
+	<style>
+		body{background-color: #EFEFF4;}
+		.group{padding-left: 0;}
+		.casher-tip{background-color: #DBDBDB;border-bottom: 1px solid #cfcfcf;padding-left: 10px;}
+		.casher-detail{padding-left: 10px;}
+	</style>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="section">
+			<div class="group">
+				<div class="casher-tip">
+					<div class="item clearfix casher-topicinfo">
+						<div class="item-title justify">
+							借 款 人<span></span>
+						</div>
+						<div class="item-details" >
+							<input type="text"  value="鲁滨逊" readonly="readonly">
+							<span></span>
+						</div>
+					</div>
+					<div class="item clearfix casher-topicinfo">
+						<div class="item-title justify">
+							编 号<span></span>
+						</div>
+						<div class="item-details" >
+							<input type="text"  value="368" readonly="readonly">
+							<span></span>
+						</div>
+					</div>
+					<div class="item clearfix casher-topicinfo">
+						<div class="item-title justify">
+							报 销 金 额<span></span>
+						</div>
+						<div class="item-details" >
+							<input type="text"  value="¥55.00" readonly="readonly">
+							<span></span>
+						</div>
+					</div>
+				</div>
+				<div class="casher-detail">
+					<div class="item clearfix">
+						<div class="item-title justify">
+							科 目 分 类<span></span>
+						</div>
+						<div class="item-details" >
+							<input type="text" class="subject" readonly="readonly" value="科目分类">
+							<span></span>
+							<img src="../../img/for-more.svg" alt="more">
+
+						</div>
+					</div>
+					<div class="item clearfix">
+						<div class="item-title  justify">
+							子 科 目 分 类<span></span>
+						</div>
+						<div class="item-details" >
+							<input type="text"  class="son-subject" readonly="readonly" value="科目分类">
+							<span></span>
+							<img src="../../img/for-more.svg" alt="more">
+						</div>
+					</div>
+					<div class="item clearfix">
+						<div class="item-title justify">
+							图 片<span></span>
+						</div>
+						<div class="item-details" >
+							<input type="text" value=""  readonly="readonly" >
+							<span class="photo-check">查看</span>
+							<span class="photo-num">2</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section pay-way ">
+			<h2 class="pay-way-tips">付款方式<span class="pay-way-notice">(欠款金额:¥<span>3223002.00</span>)</span></h2>
+			<div class="pay-way-sort pay-borrow-box">
+				<h2 class="choose-payway payborrow "><span class="wcheck"></span>借款冲抵<span class="pay-way-notice">(摘要可点击查看详情)</span></h2>
+				<div class="payway-item clearfix payway-title">
+					<div class="payway-left ">借款金额</div>
+					<div class="payway-middle ">余额</div>
+					<div class="payway-right ">冲抵</div>
+				</div>
+				<div class="payway-item clearfix">
+					<div class="payway-left borrow-money">
+						<h3>930069.00</h3>
+						<p class="paywaymoney">服装费:¥15687.00 劳务费:¥89545.00</p>
+						
+					</div>
+					<div class="payway-middle">898484.00</div>
+					<div class="payway-right"><input type="number" /></div>
+				</div>
+				<div class="payway-item clearfix">
+					<div class="payway-left borrow-money">
+						<h3>930069.00</h3>
+						<p class="paywaymoney">服装费:¥15687.00 劳务费:¥89545.00</p>
+					</div>
+					<div class="payway-middle">898484.00</div>
+					<div class="payway-right"><input type="number" /></div>
+				</div>
+				<div class="reduce-borrow">
+					<p>已冲金额：<span>55.00</span></p>
+					<p>差额：<span>500012312312305.00</span></p>
+				</div>
+			</div>
+			<div class="gamp pay-way-gamp"></div>
+			<div class="pay-way-sort paycash">
+				<h2 class="choose-payway"><span class="wcheck"></span>现金付款</h2>
+				<div class="payway-item pay-cash">
+					<p>报销金额<span>¥55.00</span></p>
+				</div>
+			</div>
+		</div>
+		<div class="pay-way-action">
+			<a href="javascript:;" class="w50 dark-white">取消</a>
+			<a href="javascript:;" class="w50 white-orange">保存</a>
+		</div>
+	</div>
+	<footer></footer>
+	<script src="/statichtml/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+	<script src="../../js/iscroll/iscroll-probe.js"></script>
+	<script src="../../js/finance.js"></script>
+	<script>
+		$(function () {
+			function resiezInput(){
+				var inputArray = $(".item-details input");
+				for (var i = 0;i<=inputArray.length - 1; i++) {
+					var thisInputP = $(inputArray[i]).closest(".item-details");
+					thisInputP.width($(".container").width()-thisInputP.prev(".item-title").width()-50);
+					// console.log(thisInputP); <span></span>
+				};
+			}resiezInput();
+			// 选择报销方式
+			$('.choose-payway').click(function () {
+				$('.wcheck').removeClass('checked');
+				if ($(this).hasClass('payborrow')) {
+					if (!$(this).hasClass('select-borrow')) {
+						$(this).addClass('select-borrow').find('.wcheck').addClass('checked');
+						$(this).siblings('.payway-item,.reduce-borrow').show(100);
+					}else{
+						$(this).removeClass('select-borrow').find('.wcheck').removeClass('checked');
+						$(this).siblings('.payway-item,.reduce-borrow').hide(200);
+					}
+				}else{
+					$(this).find('.wcheck').toggleClass('checked');
+					$('.payborrow').removeClass('select-borrow');
+					$('.payborrow').siblings('.payway-item,.reduce-borrow').hide(200);
+				}
+			})
+			// 点击查看摘要详情
+			$('.borrow-money').click(function (e) {
+				$('.borrow-money-details').remove();
+				var txt = '<p>服装费：¥1000.00</p><p>服装费：¥1000.00</p><p>服装费：¥1000.00</p><p>服装费服装费服装费服装费服装费：¥1000.00</p><p>服装费服装费服装费服装费服装费：¥10001000100010001000100010001000.00</p>';
+				$(this).append('<div class="borrow-money-details">'+txt+'</div>');
+				e.stopPropagation();
+			})
+			// 移除摘要详情
+			$('.container').click(function (e) {
+				console.log(1);	
+				$('.borrow-money-details').remove();
+				e.stopPropagation();
+				// e.stopPreventdefault();
+			})
+
+		})
+	</script>
+</body>
+</html>

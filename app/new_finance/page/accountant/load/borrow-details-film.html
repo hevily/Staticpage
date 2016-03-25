@@ -1,33 +1,43 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8" />
 	<meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <!-- <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" /> -->
-    <!-- <link rel="stylesheet" href="css/iscroll-talents.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="css/finance.css" /> -->
-	<title>我的借款</title>
+    <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" />
+    <link rel="stylesheet" href="css/iscroll-talents.css">
+    <link rel="stylesheet" type="text/css" href="css/finance.css" />
+	<title>出纳审批详情-借款</title>-->
 	<style>
 	body{background-color: #EFEFF4;}
 	.gampb{border-color: #EFEFF4 !important;}
+	.w50{width: 40%;margin: 5%;margin-bottom: 10px;padding:10px 0;text-align: center;font-size: 1.6rem;float: left;	}
 	.back-oldpage{border-radius: 3px;border: 1px solid #C8C8C8;     color: #3F3F3F;}
 	.push-back{    border-radius: 3px;    background-color: #f36303;    color: #fff;    border: 1px solid #f36303;}	
 	.item-details input{right: 0px;}
 	.w100{width:80%;margin: 10%;margin-bottom: 10px;padding:10px 0;text-align: center;font-size: 1.6rem;}
 	</style>
-</head>
-<body>
+<!-- </head> -->
+<!-- <body> -->
 	<header></header>
 	<div class="container">
 		<div class="gampt"></div>
 		<div class="group">
 			<div class="item clearfix">
 				<div class="item-title justify">
+					类 型<span></span>
+				</div>
+				<div class="item-details" >
+					<input type="text"  value="借款" readonly="readonly">
+					<span></span>
+				</div>
+			</div>
+			<div class="item clearfix">
+				<div class="item-title justify">
 					借 款 人<span></span>
 				</div>
 				<div class="item-details" >
-					<input type="text" placeholder="请输入" value="姓名" readonly="readonly">
+					<input type="text"  value="鲁滨逊" readonly="readonly">
 					<span></span>
 				</div>
 			</div>
@@ -36,7 +46,7 @@
 					编 号<span></span>
 				</div>
 				<div class="item-details" >
-					<input type="text" placeholder="请输入" value="368" readonly="readonly">
+					<input type="text"  value="368" readonly="readonly">
 					<span></span>
 				</div>
 			</div>
@@ -45,7 +55,7 @@
 					科 目 分 类<span></span>
 				</div>
 				<div class="item-details" >
-					<input type="text" placeholder="请选择"  readonly="readonly" value="科目分类">
+					<input type="text"  readonly="readonly" value="科目分类">
 					<span></span>
 				</div>
 			</div>
@@ -54,7 +64,7 @@
 					子 科 目 分 类<span></span>
 				</div>
 				<div class="item-details" >
-					<input type="text" placeholder="请选择"  readonly="readonly" value="科目分类">
+					<input type="text"  readonly="readonly" value="科目分类">
 					<span></span>
 				</div>
 			</div>
@@ -63,7 +73,7 @@
 					提 交 日 期<span></span>
 				</div>
 				<div class="item-details" >
-					<input type="text" readonly="readonly" value="2016-3-15 09:33" readonly="readonly">
+					<input type="text" readonly="readonly" value="2016-3-15" readonly="readonly">
 					<span></span>
 				</div>
 			</div>
@@ -72,7 +82,7 @@
 					状 态<span></span>
 				</div>
 				<div class="item-details" >
-					<input type="text" readonly="readonly" value="待提交/待审批/已完成" readonly="readonly">
+					<input type="text" readonly="readonly" value="待XXX审批" readonly="readonly">
 					<span></span>
 				</div>
 			</div>
@@ -82,10 +92,11 @@
 					金 额<span></span>
 				</div>
 				<div class="item-details" >
-					<input type="text" placeholder="请输入" value="300" readonly="readonly">
+					<input type="text"  value="300" readonly="readonly">
 					<span></span>
 				</div>
 			</div>
+			
 			<label for="borrow-digest">
 				<div class="item clearfix" style="border:none;">
 					<div class="item-title justify">
@@ -103,10 +114,54 @@
 			</div>
 		</div>
 		
+		<div class="gampt"></div>
+		<div class="group">
+			<div class="item clearfix">
+				<div class="item-title justify">
+					制 片 主 任<span></span>
+				</div>
+				<div class="item-details" >
+					<input type="text"  value="姓名" readonly="readonly">
+					<span></span>
+				</div>
+			</div>
+			<div class="item clearfix">
+				<div class="item-title justify">
+					审 批 日 期<span></span>
+				</div>
+				<div class="item-details" >
+					<input type="text"  value="2016-3-24" readonly="readonly">
+					<span></span>
+				</div>
+			</div>
+		</div>
+		<div class="gampt"></div>
+		<div class="group">
+			<div class="item clearfix">
+				<div class="item-title justify">
+					会 计<span></span>
+				</div>
+				<div class="item-details" >
+					<input type="text"  value="姓名" readonly="readonly">
+					<span></span>
+				</div>
+			</div>
+			<div class="item clearfix">
+				<div class="item-title justify">
+					审 批 日 期<span></span>
+				</div>
+				<div class="item-details" >
+					<input type="text"  value="2016-3-24" readonly="readonly">
+					<span></span>
+				</div>
+			</div>
+		</div>
+
+
 		<div class="save-push ">
-			<a href="javascript:;" class="btn border pd10 w50 back-oldpage white-dark">返回</a>
-			<!-- <a href="javascript:;" class="btn border pd10 w30 save-draft">保存</a> -->
-			<a href="javascript:;" class="btn border pd10 w50 push-back">撤回</a>
+
+			<a href="javascript:;" class="w50 back-oldpage dark-white">返回</a>
+			<a href="javascript:;" class="w50 account-finish white-orange">完成</a>
 		</div>
 	</div>
 	<footer></footer>
@@ -145,5 +200,5 @@
 	
 
 
-</body>
-</html>
+<!-- </body> -->
+<!-- </html>
