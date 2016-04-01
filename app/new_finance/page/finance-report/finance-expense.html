@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" />
+	<title>报销明细</title>
+	<style>
+		html,body{font-size: 10px;background-color: #EFEFF4;}
+		.container{font-size: 1.6rem;}
+		.expense-tip{padding: 10px;}
+		.expense-tip .group{border: 1px solid #cccccc;border-radius: 5px;padding-bottom: 20px;background-color: #fff;}
+
+		.expense-tip .lrs{padding: 0 10px;border-bottom: 1px solid #cccccc;height: 45px;}
+		.expense-tip .lrsm{text-align: right;}
+		.expense-tip .lrsm p{    min-width: 40px;    height: 45px;    float: right;}
+		.expense-tip .lrsm input{width: 0;height: 0;-webkit-appearance:none;border:1px solid #fff;position: absolute;top: 0;right: 0;
+			outline: none;}
+
+		.select-m a{width: 40%;margin: 5%;display:inline-block;text-align: center;height: 35px;line-height: 35px;}
+		.white-orange {width: 65%;margin: 0 auto;height: 35px;line-height: 35px;display: block;text-align: center;}
+
+		.sec-group .lrs{border-bottom: 1px solid #ccc;}
+		.sec-group .lrsl{color: #CCCCCC;}
+		.expense-group {}
+		.expense-group .group{background-color: #fff;padding-top: 10px;border-radius: 5px;}
+		.expense-group .group h4{border-left: 4px solid #FF8A44;text-indent: 8px;}
+		
+		.sec-group{padding: 0 10px;border-top: 1px solid #ccc;margin-top: 10px;padding-bottom: 10px;}
+		.sec-group h5{border-bottom: 1px solid #ccc;line-height: 45px;color: #F36303;font-size: 1.4rem;font-weight: normal;}
+		.sec-group .lrs:last-child{border:none;margin-bottom: -11px;}
+	</style>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="section expense-tip">
+			<div class="group">
+				<div class="lrs">
+					<div class="lrsl">开始日期</div>
+					
+						<div class="lrsm">
+							<label><span class="lrsi"><img src="../../img/for-more.svg" alt=""></span><p>--</p><input type="date">
+						</label>
+						</div>
+					
+				</div>
+				<div class="lrs">
+					<div class="lrsl">结束日期</div>
+					<div class="lrsm"><span class="lrsi"><img src="../../img/for-more.svg" alt=""></span><label><p>--</p><input type="date"></label></div>
+				</div>
+				<div class="search-expense">
+					<div class="select-m">
+						<a href="javascript:;" class="dark-white">最近3个月</a><a href="javascript:;" class="dark-white">最近半年</a>
+					</div>
+					<a href="javascript:;" class="white-orange">查询</a>
+				</div>
+			</div>
+		</div>
+		<div class="section expense-group ">
+			<div class="group">
+				<h4>拍摄费用、器材设备</h4>
+				<div class="sec-group">
+					
+					<h5>导演组</h5>
+					<div class="lrs">
+						<div class="lrsl">2016-3</div>
+						<div class="lrsm">¥50,878,874,654,146.00</div>
+					</div>
+					<div class="lrs">
+						<div class="lrsl">2016-3</div>
+						<div class="lrsm">¥50,878,874,654,146.00</div>
+					</div>
+					<div class="lrs">
+						<div class="lrsl">2016-3</div>
+						<div class="lrsm">¥50,878,874,654,146.00</div>
+					</div>
+				</div>
+			</div>
+			<div class="gamp"></div>
+			<div class="group">
+				<h4>拍摄费用、器材设备</h4>
+				<div class="sec-group">
+					
+					<h5>导演组</h5>
+					<div class="lrs">
+						<div class="lrsl">2016-3</div>
+						<div class="lrsm">¥50,878,874,654,146.00</div>
+					</div>
+					<div class="lrs">
+						<div class="lrsl">2016-3</div>
+						<div class="lrsm">¥50,878,874,654,146.00</div>
+					</div>
+					<div class="lrs">
+						<div class="lrsl">2016-3</div>
+						<div class="lrsm">¥50,878,874,654,146.00</div>
+					</div>
+				</div>
+				<div class="sec-group">
+					
+					<h5>导演组</h5>
+					<div class="lrs">
+						<div class="lrsl">2016-3</div>
+						<div class="lrsm">¥50,878,874,654,146.00</div>
+					</div>
+					<div class="lrs">
+						<div class="lrsl">2016-3</div>
+						<div class="lrsm">¥50,878,874,654,146.00</div>
+					</div>
+					<div class="lrs">
+						<div class="lrsl">2016-3</div>
+						<div class="lrsm">¥50,878,874,654,146.00</div>
+					</div>
+				</div>
+			</div>
+			<div class="gamp"></div>
+		</div>
+	</div>
+	<footer></footer>
+	<script src="/statichtml/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+	<script>
+		$(function () {
+			// 初始化日期
+			function initdate(ponit) {
+				var myDate = new Date();
+				var Y = myDate.getFullYear(),
+					M = myDate.getMonth()+1,
+					D = myDate.getDate();
+				console.log(Y+'-'+M+'-'+D);
+				myDate = Y+'-'+M+'-'+D;
+				point.text(myDate);
+			}
+			var point = $('.lrsm').find('p');
+			console.log(point);
+			initdate(point);
+			// 改变日期
+			$('.lrsm input').click(function () {
+				$(this).bind('input propertychange',function () {
+					$(this).closest('label').find('p').text($(this).val());
+				})
+			})
+		})
+	</script>
+</body>
+</html>

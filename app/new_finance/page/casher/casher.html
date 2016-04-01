@@ -90,7 +90,6 @@
 
 
 
-				<a href="casher-pay.html">会计付款-报销</a>
 			</div>
 			<div class="tabpanel ">
 				<div class="name-list">
@@ -100,7 +99,7 @@
 							<div class="media-right"><img src="../../img/for-more.svg" alt=""></div>
 						</div>
 						<div class="name-bills">
-							<div class="media" onclick="window.location.href='single-person.html'">
+							<div class="media" onclick="window.location.href='person-borrow.html'">
 								<div class="media-left media-middle">
 									<img src="../../img/index/borrow.png" alt="borrow" class="media-object">
 								</div>
@@ -114,11 +113,11 @@
 									<img src="../../img/for-more.svg" alt="more">
 								</div>
 							</div>
-							<div class="media" onclick="window.location.href='single-person-2.html'">
+							<div class="media" onclick="window.location.href='person-payment.html'">
 								<div class="media-left media-middle">
 									<img src="../../img/index/payment.png" alt="borrow" class="media-object">
 								</div>
-								<div class="media-body media-middle">;
+								<div class="media-body media-middle">
 									¥:<span>500</span>
 									<span class="name-time">
 										2016-3-23<span class="name-num">4</span>
@@ -185,13 +184,13 @@
 			$('.check-bill.borrow .check-bill-body').click(function () {
 				// $('html').addClass('keep')
 				$('body').append('<div class="load-area"></div>');
-				$('.load-area').load('load/borrow-details-film.html')
+				$('.load-area').load('load/borrow-details.html')
 			})
 			// 弹出报销单
 			$('.check-bill.payment .check-bill-body').click(function () {
 				// $('html').addClass('keep')
 				$('body').append('<div class="load-area"></div>');
-				$('.load-area').load('load/payment-details-film.html')
+				$('.load-area').load('load/payment-details.html')
 			})
 		})
 	</script>

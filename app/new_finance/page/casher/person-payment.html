@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" />
     <link rel="stylesheet" type="text/css" href="../../css/finance.css" />
-    <title>按姓名-借款</title>
+    <title>按姓名-报销</title>
+
 	<style>
 		.container,.wait-check-bills{height: 100%;}
 	</style>
 </head>
 <body>
 	<header></header>
-	<div class="container">
+	<div class="container person-payment">
 		<div class="agree-all">
 			<div class="media name-detail">
-				<div class="media-left"><img src="../../img/index/borrow.png" alt="款项类型"></div>
+				<div class="media-left"><img src="../../img/index/payment.png" alt="款项类型"></div>
 				<div class="media-body media-middle"><span class="name">邓飞</span><span class="money-class" >¥<span class="money-num" >200</span></span></div>
 			</div>
 			<div class="select-agree clearfix">
@@ -25,8 +26,8 @@
 					全选
 				</label>
 				<div class="agree-btn">
-					<!-- <span class="disagree">不同意</span> -->
-					<span class="agree">完成</span>
+					<span class="disagree">不同意</span>
+					<span class="agree">付款</span>
 				</div>
 			</div>
 		</div>
@@ -39,7 +40,7 @@
 						<p class="person-bill-name"><span class="person-bill-num">590</span>布景费用<img src="../../img/index/check-icon.png" alt=""></p>
 						<p class="person-bill-money"><label><span></span></label>¥<span class="bill-money">200.00</span></p>
 					</div>
-					<div class="media-right media-middle">
+					<div class="media-right media-middle payment-right">
 						<p>2016-3-24<img src="../../img/for-more.svg" alt=""></p>
 						
 					</div>
@@ -49,7 +50,7 @@
 						<p class="person-bill-name"><span class="person-bill-num">590</span>布景费用<img src="../../img/index/check-icon.png" alt=""></p>
 						<p class="person-bill-money"><label><span></span></label>¥<span class="bill-money">200.00</span></p>
 					</div>
-					<div class="media-right media-middle">
+					<div class="media-right media-middle payment-right">
 						<p>2016-3-24<img src="../../img/for-more.svg" alt=""></p>
 						
 					</div>
@@ -59,7 +60,7 @@
 						<p class="person-bill-name"><span class="person-bill-num">590</span>布景费用<img src="../../img/index/check-icon.png" alt=""></p>
 						<p class="person-bill-money"><label><span></span></label>¥<span class="bill-money">200.00</span></p>
 					</div>
-					<div class="media-right media-middle">
+					<div class="media-right media-middle payment-right">
 						<p>2016-3-24<img src="../../img/for-more.svg" alt=""></p>
 						
 					</div>
@@ -69,7 +70,7 @@
 						<p class="person-bill-name"><span class="person-bill-num">590</span>布景费用<img src="../../img/index/check-icon.png" alt=""></p>
 						<p class="person-bill-money"><label><span></span></label>¥<span class="bill-money">200.00</span></p>
 					</div>
-					<div class="media-right media-middle">
+					<div class="media-right media-middle payment-right">
 						<p>2016-3-24<img src="../../img/for-more.svg" alt=""></p>
 						
 					</div>
@@ -77,6 +78,8 @@
 			</div>
 		</div>
 	</div>
+	<div id="load-area"></div>
+
 	<footer></footer>
 	<script src="/statichtml/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
 	<script src="../../js/finance.js"></script>

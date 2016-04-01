@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="../css/" /> -->
+	<title>结算借款</title>
+	<style>
+		html,body{background-color: #EFEFF4;width:100%;max-width: 640px;margin: 0 auto;font-size: 10px;}
+		.search-area.section{position: fixed;top: 0;left: 0;width: 100%;max-width:640px;background-color: #fff;height: 50px;z-index: 1;}
+		.search-input{width: 80%;background-color: #E3E4E6;margin: 10px auto;height: 60%;border-radius: 5px;position: relative;}
+
+		.search-area input{width: 100%;height: 100%;background-color: inherit;-webkit-appearance:none;outline: none;padding-left: 35px;border: none;font-size: 1.4rem;z-index: 10;border-radius: 5px;padding-right: 30px;}
+		.search-input img{width:22px;}
+		.search-tip{position: absolute;top: 4px;left: 5px;}
+		.search-input a{position: absolute;top: 4px;right: 5px;}
+		.search-icon a{float: right;right: 10px;}
+
+
+		.search-res.section{padding:50px 10px 10px 10px;}
+		.result{border-radius: 5px;background-color: #fff;margin-top: 10px;}
+		.result .lrs:last-child{border:none;}
+		.lrs{font-size: 1.6rem;color: #323232;border-bottom: 1px solid #ccc;padding: 0 10px;}
+		.lrsm{text-align: right;}
+		.lrs:active{background-color: inherit;}
+		.search-input a{display: none;}
+		a.clean{display: block;}
+		.lrsm a{padding: 4px 8px;}
+		.job.lrs .lrsm{line-height: 25px;padding:10px 0; }
+	</style>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="section search-area">
+			<div class="search-input">
+				<input type="text" placeholder="请输入欠款人名">
+				<img class='search-tip' src="../../img/search-tip.png" alt="">
+				<a href="javascript:;"><img src="../../img/clean.png" alt=""></a>
+				</div>
+			</div>
+		</div>
+		<div class="section search-res">
+			<div class="result">
+				<div class="lrs">
+					<div class="lrsl">姓名</div>
+					<div class="lrsm">雷春华</div>
+				</div>
+				<div class="lrs job">
+					<div class="lrsl">职务</div>
+					<div class="lrsm"><p>演员</p></div>
+				</div>
+				<div class="lrs">
+					<div class="lrsl">总欠款</div>
+					<div class="lrsm">¥58,235,152.00</div>
+				</div>
+				<div class="lrs">
+					<div class="lrsl">操作</div>
+					<div class="lrsm"><a href="javascript:;" class="white-orange">结算</a></div>
+				</div>
+			</div>
+			<div class="result">
+				
+				<div class="lrs">
+					<div class="lrsl">姓名</div>
+					<div class="lrsm">雷春华</div>
+				</div>
+				<div class="lrs job">
+					<div class="lrsl">职务</div>
+					<div class="lrsm"><p>四部门联合发文:医疗纠纷责任未认定前不得赔钱-演员</p><p>演员</p><p>演员</p></div>
+				</div>
+				<div class="lrs">
+					<div class="lrsl">总欠款</div>
+					<div class="lrsm">¥:888,854,658,235,152.00</div>
+				</div>
+				<div class="lrs">
+					<div class="lrsl">操作</div>
+					<div class="lrsm"><a href="javascript:;" class="white-orange">结算</a></div>
+				</div>
+			</div>
+			<div class="result">
+				
+				<div class="lrs">
+					<div class="lrsl">姓名</div>
+					<div class="lrsm">雷春华</div>
+				</div>
+				<div class="lrs job">
+					<div class="lrsl">职务</div>
+					<div class="lrsm"><p>演员</p></div>
+				</div>
+				<div class="lrs">
+					<div class="lrsl">总欠款</div>
+					<div class="lrsm">¥:888,854,658,235,152.00</div>
+				</div>
+				<div class="lrs">
+					<div class="lrsl">操作</div>
+					<div class="lrsm">已结算</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer></footer>
+	<script src="/statichtml/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+	<script>
+		$(function () {
+			$(".search-input input").bind('input propertychange',function () {
+				if(!$(this).val()==''){
+					$(".search-input").find('a').addClass('clean');
+					console.log('查找的是：'+$(this).val())
+					var btn = $('.clean');
+					btn.click(function () {
+						$('.search-input input').val('');
+						btn.removeClass('clean');
+					})
+				}
+			})
+		})
+	</script>
+</body>
+</html>

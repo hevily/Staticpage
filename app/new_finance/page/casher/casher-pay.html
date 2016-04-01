@@ -39,12 +39,12 @@
 							<span></span>
 						</div>
 					</div>
-					<div class="item clearfix casher-topicinfo">
+					<div class="item clearfix casher-topicinfo account-money">
 						<div class="item-title justify">
 							报 销 金 额<span></span>
 						</div>
 						<div class="item-details" >
-							<input type="text"  value="¥55.00" readonly="readonly">
+							<input type="text"  value="¥55.00" readonly="readonly" data-value='55'>
 							<span></span>
 						</div>
 					</div>
@@ -87,7 +87,7 @@
 		<div class="section pay-way ">
 			<h2 class="pay-way-tips">付款方式<span class="pay-way-notice">(欠款金额:¥<span>3223002.00</span>)</span></h2>
 			<div class="pay-way-sort pay-borrow-box">
-				<h2 class="choose-payway payborrow "><span class="wcheck"></span>借款冲抵<span class="pay-way-notice">(摘要可点击查看详情)</span></h2>
+				<h2 class="choose-payway payborrow select-borrow"><span class="wcheck checked"></span>借款冲抵<span class="pay-way-notice">(摘要可点击查看详情)</span></h2>
 				<div class="payway-item clearfix payway-title">
 					<div class="payway-left ">借款金额</div>
 					<div class="payway-middle ">余额</div>
@@ -95,24 +95,32 @@
 				</div>
 				<div class="payway-item clearfix">
 					<div class="payway-left borrow-money">
-						<h3>930069.00</h3>
+						<h3>50.00</h3>
 						<p class="paywaymoney">服装费:¥15687.00 劳务费:¥89545.00</p>
 						
 					</div>
-					<div class="payway-middle">898484.00</div>
-					<div class="payway-right"><input type="number" /></div>
+					<div class="payway-middle">30.00</div>
+					<div class="payway-right"><input type="number" value="0" /></div>
 				</div>
 				<div class="payway-item clearfix">
 					<div class="payway-left borrow-money">
-						<h3>930069.00</h3>
+						<h3>60.00</h3>
 						<p class="paywaymoney">服装费:¥15687.00 劳务费:¥89545.00</p>
 					</div>
-					<div class="payway-middle">898484.00</div>
-					<div class="payway-right"><input type="number" /></div>
+					<div class="payway-middle">25.00</div>
+					<div class="payway-right"><input type="number" value="0" /></div>
+				</div>
+				<div class="payway-item clearfix">
+					<div class="payway-left borrow-money">
+						<h3>60.00</h3>
+						<p class="paywaymoney">服装费:¥15687.00 劳务费:¥89545.00</p>
+					</div>
+					<div class="payway-middle">25.00</div>
+					<div class="payway-right"><input type="number"  value="0" /></div>
 				</div>
 				<div class="reduce-borrow">
-					<p>已冲金额：<span>55.00</span></p>
-					<p>差额：<span>500012312312305.00</span></p>
+					<p class="done">已冲金额：<span>--</span></p>
+					<p class="gap">差额：<span>--</span></p>
 				</div>
 			</div>
 			<div class="gamp pay-way-gamp"></div>
@@ -123,7 +131,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="pay-way-action">
+		<div class="pay-way-action casher-pay-action">
 			<a href="javascript:;" class="w50 dark-white">取消</a>
 			<a href="javascript:;" class="w50 white-orange">保存</a>
 		</div>
@@ -168,10 +176,41 @@
 			})
 			// 移除摘要详情
 			$('.container').click(function (e) {
-				console.log(1);	
+				// console.log(1);	
 				$('.borrow-money-details').remove();
 				e.stopPropagation();
 				// e.stopPreventdefault();
+			})
+
+			$('.payway-right input').bind('input propertychange',function () {
+				if ($('.select-borrow').find('.checked')) {
+					// alert('选择冲抵');
+				
+					var this_val = parseInt($(this).val()),
+						this_max = parseInt($(this).closest('.payway-item').find('.payway-middle').text()),
+						total_input = $('.payway-right').find('input'),
+						total_val = 0;
+						// console.log(this_max)
+						$.each(total_input,function (i,item) {
+							var thisVal = total_input.eq(i).val();
+							if (!thisVal) {	thisVal = 0;}
+							// console.log(thisVal);
+							total_val += parseInt(thisVal);
+						})
+					console.log(total_val);
+					var amoney = parseInt($('.account-money input').attr('data-value'));
+					$('.reduce-borrow .gap').find('span').text(amoney - total_val);
+					if (total_val>amoney || this_val>this_max  ) {
+						console.log('金额超限');
+						alert('超出最大金额');
+						$('.casher-pay-action .white-orange').addClass('disabled-btn');
+						$('.reduce-borrow .done').find('span').text(total_val).addClass('warning');
+					}else{
+						$('.casher-pay-action .white-orange').removeClass('disabled-btn');
+						$('.reduce-borrow .done').find('span').text(total_val).removeClass('warning');
+						console.log('待定')
+					}
+				}
 			})
 
 		})

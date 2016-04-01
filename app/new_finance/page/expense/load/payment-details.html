@@ -5,16 +5,13 @@
 	<meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <!-- <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" /> -->
-    <!-- <link rel="stylesheet" href="css/iscroll-talents.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="css/finance.css" /> -->
-	<title>我的借款</title>
+    <!-- <link rel="stylesheet" href="../../../css/iscroll-talents.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../../../css/finance.css" /> -->
+	<title>新建报销</title>
 	<style>
 	body{background-color: #EFEFF4;}
 	.gampb{border-color: #EFEFF4 !important;}
-	.back-oldpage{border-radius: 3px;border: 1px solid #C8C8C8;     color: #3F3F3F;}
-	.push-back{    border-radius: 3px;    background-color: #f36303;    color: #fff;    border: 1px solid #f36303;}	
 	.item-details input{right: 0px;}
-	.w100{width:80%;margin: 10%;margin-bottom: 10px;padding:10px 0;text-align: center;font-size: 1.6rem;}
 	</style>
 </head>
 <body>
@@ -24,7 +21,7 @@
 		<div class="group">
 			<div class="item clearfix">
 				<div class="item-title justify">
-					借 款 人<span></span>
+					报 销 人<span></span>
 				</div>
 				<div class="item-details" >
 					<input type="text" placeholder="请输入" value="姓名" readonly="readonly">
@@ -45,16 +42,16 @@
 					科 目 分 类<span></span>
 				</div>
 				<div class="item-details" >
-					<input type="text" placeholder="请选择"  readonly="readonly" value="科目分类">
+					<input type="text" placeholder="请选择" class="subject-draft" readonly="readonly">
 					<span></span>
 				</div>
 			</div>
 			<div class="item clearfix">
-				<div class="item-title  justify">
+				<div class="item-title justify">
 					子 科 目 分 类<span></span>
 				</div>
 				<div class="item-details" >
-					<input type="text" placeholder="请选择"  readonly="readonly" value="科目分类">
+					<input type="text" placeholder="请选择" class="son-subject-draft" readonly="readonly">
 					<span></span>
 				</div>
 			</div>
@@ -63,7 +60,7 @@
 					提 交 日 期<span></span>
 				</div>
 				<div class="item-details" >
-					<input type="text" readonly="readonly" value="2016-3-15 09:33" readonly="readonly">
+					<input type="text" readonly="readonly" value="2016-3-15 09:33">
 					<span></span>
 				</div>
 			</div>
@@ -72,7 +69,7 @@
 					状 态<span></span>
 				</div>
 				<div class="item-details" >
-					<input type="text" readonly="readonly" value="待提交/待审批/已完成" readonly="readonly">
+					<input type="text" readonly="readonly" value="待提交">
 					<span></span>
 				</div>
 			</div>
@@ -82,31 +79,53 @@
 					金 额<span></span>
 				</div>
 				<div class="item-details" >
-					<input type="text" placeholder="请输入" value="300" readonly="readonly">
+					<input type="text" placeholder="请输入" value="300">
 					<span></span>
+				</div>
+			</div>
+			<div class="item clearfix">
+				<div class="item-title justify">
+					凭 证<span></span>
+				</div>
+				<div class="item-details" style="width: 160px;">
+					<div class="swc_user">
+						<div class="checkbox">
+							<input type="checkbox" id="control_sale">
+							<label></label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="item clearfix">
+				<div class="item-title justify">
+					图 片<span></span>
+				</div>
+				<div class="item-details" style="width: 160px;">
+					<input type="text" value="" readonly="readonly">
+					<!-- <a href="javascript:;" style="border: 1px solid #CCCBD0;z-index: 110;">查看<span></span></a> -->
+					<span class="photo-check photo-push">上传</span>
+					<span class="photo-check">查看</span>
+					<span class="photo-num">2</span>
 				</div>
 			</div>
 			<label for="borrow-digest">
 				<div class="item clearfix" style="border:none;">
 					<div class="item-title justify">
-						备 注<span></span>
+						借 款 摘 要<span></span>
 					</div>
 					<div class="item-details" >
 					</div>
 				</div>
-				<p>怎么解决这个问题那？主要的焦点问题就是解决火狐的问题。
-
-请出我们的NB的 CSS 属性：pointer-events: none;来解决这个问题。网上有这个属性的介绍，懒人建站在这里就摘抄一段想看的看下面的扩展阅读。
-
-注意：如果你铺了背景颜</p>
+				<textarea name="borrow-digest" id="borrow-digest" placeholder="请输入借款简要信息"></textarea>
 			</label>
-			</div>
+
+				
 		</div>
 		
 		<div class="save-push ">
-			<a href="javascript:;" class="w50 back-oldpage dark-white">返回</a>
-			<!-- <a href="javascript:;" class="btn border pd10 w30 save-draft">保存</a> -->
-			<a href="javascript:;" class="w50 push-back">撤回</a>
+			<a href="javascript:;" class="w30 del-draft dark-white">删除</a>
+			<a href="javascript:;" class="w30 save-draft dark-white">保存</a>
+			<a href="javascript:;" class="w30 push-up">提交</a>
 		</div>
 	</div>
 	<footer></footer>
@@ -120,26 +139,41 @@
 				for (var i = 0;i<=inputArray.length - 1; i++) {
 					var thisInputP = $(inputArray[i]).closest(".item-details");
 					thisInputP.width($(".container").width()-thisInputP.prev(".item-title").width()-50);
-					// console.log(thisInputP); <span></span>
+					// console.log(thisInputP);
 				};
 			}resiezInput();
-			// 撤回
-			$('.load-area').on('click','.push-back',function (e) {
-				var confir = confirm('确定撤回？');
-				if (confir) {
-					$('.load-area').html('').hide();
-				}
-				e.stopPropagation();
-				e.destory();
-			})
-			// 返回
-			$('.load-area').on('click','.back-oldpage',function () {
-				$('.load-area').html('').hide();
-			})
-		})
-	</script>
+			$(".publish").click(function() {
+				alert("正在发布，请稍后....")
+			});
+			// 科目分类
+					$(".subject-draft").click(function(){
 
-	
+						var name="科目分类",where = 'subject-draft';
+						appendlayer(name,where);
+						var url = '../../js/data.json?type=subject';
+						$.ajax(url).done(function (data) {
+							initsnap(data);
+						})
+						removelayer();
+					});
+					// 子科目分类
+					$(".son-subject-draft").click(function(){
+						var name="子科目分类",where = 'son-subject-draft';
+						appendlayer(name,where);
+						var url = '../../js/data.json?type=son-subject&';
+						$.ajax(url).done(function (data) {
+							initsnap(data);
+						})
+						removelayer();
+					});
+		})
+		
+		window.onload = function () {
+			var d = new Date(),day = d.getDate(),month = d.getMonth() + 1,year = d.getFullYear(),date;
+			date = year + "-" + month + "-" + day ;
+			$('.date-local').val(date);
+		}
+	</script>
 
 
 	

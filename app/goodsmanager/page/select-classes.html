@@ -110,14 +110,15 @@
 <style>
 	.classes-select{padding: 0 10px;}
 	.classes-title{padding: 10px;}
-	.classes-title h2{}
+	.classes-title h2{background-color: #E3E4E6;}
 	.classes-name{}
 	.classes-name span{display: inline-block;padding: 5px 8px;margin:0 8px 6px 0;background-color: #cfcfcf;font-size: 1.4rem;}
 	span.selecting{background: #f36303;color: #fff;float: left;}
+	h2.selecting{color: #f36303;}
 </style>
 <script>
 	$(function () {
-		$('.classes-name span').click(function () {
+		$('.classes-name span,.classes-title h2').click(function () {
 			$(this).toggleClass('selecting');
 		})
 		

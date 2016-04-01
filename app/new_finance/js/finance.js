@@ -45,12 +45,26 @@ $('.tabs .tab').click(function () {
 				// alert('done');
 			}
 		})
-	// 审批按姓名 展开收起 show hide
-	$('.media.person-nanme').click(function () {
-		$(this).toggleClass('deg270');
-		$(this).siblings('.name-bills').toggle();
-	})
 
+
+	// 审批按姓名 展开收起 show hide
+		$('.media.person-nanme').click(function () {
+			$(this).toggleClass('deg270');
+			$(this).siblings('.name-bills').toggle();
+		})
+		// 按姓名排序 弹出详情借款
+		$('.person-bill .borrow-right').click(function () {
+			console.log('borrow');
+			$('body').append('<div class="load-area"></div>');
+			$('.load-area').load('load/borrow-details.html');
+		});
+		// 按姓名排序 弹出详情报销
+		$('.person-bill .payment-right').click(function () {
+			console.log('payment');
+			$('body').append('<div class="load-area"></div>');
+
+			$('.load-area').load('load/payment-details.html');
+		})
 
 		function userAlert(text) {
 			function userAlertInsert() {
