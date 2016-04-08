@@ -5,11 +5,10 @@
 	<meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="../css/" /> -->
 	<title>结算借款</title>
 	<style>
 		html,body{background-color: #EFEFF4;width:100%;max-width: 640px;margin: 0 auto;font-size: 10px;}
-		.search-area.section{position: fixed;top: 0;left: 0;width: 100%;max-width:640px;background-color: #fff;height: 50px;z-index: 1;}
+		.search-area.section{position: fixed;top: 50px;left: 0;width: 100%;max-width:640px;background-color: #fff;height: 50px;z-index: 1;}
 		.search-input{width: 80%;background-color: #E3E4E6;margin: 10px auto;height: 60%;border-radius: 5px;position: relative;}
 
 		.search-area input{width: 100%;height: 100%;background-color: inherit;-webkit-appearance:none;outline: none;padding-left: 35px;border: none;font-size: 1.4rem;z-index: 10;border-radius: 5px;padding-right: 30px;}
@@ -32,7 +31,24 @@
 	</style>
 </head>
 <body>
-	<header></header>
+	<header>
+					<nav class='wing'>
+						<div class="wing-wrap two">
+							<div class="wing-main">
+								剧本名称-剧本名称-剧本名称-剧本名称-剧本名称-剧本名称-剧本名称-剧本名称-
+							</div>
+						</div>
+						<div class="wing-left backicon">
+							<img src="../../img/nav/back/back@2x.png" alt="back">
+						</div>
+						<div class="wing-right jumpnav">
+							
+							<div class="nav-menu right-one">
+								<img src="../../img/nav/menu/menu@2x.png" alt="back">
+							</div>
+						</div>
+					</nav>
+				</header>
 	<div class="container">
 		<div class="section search-area">
 			<div class="search-input">
@@ -102,7 +118,8 @@
 		</div>
 	</div>
 	<footer></footer>
-	<script src="/statichtml/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+		<script src="/statichtml/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+	<script src="/statichtml/moviehelper/app/Public/base.js"></script>
 	<script>
 		$(function () {
 			$(".search-input input").bind('input propertychange',function () {

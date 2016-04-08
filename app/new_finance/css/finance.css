@@ -1,4 +1,29 @@
 html,body{font-size: 10px;}
+
+/*navbar*/
+header{width: 100%;height: 50px;max-width: 640px;margin: 0 auto;}
+nav{height: 50px;width: 100%;position: fixed;top:0;max-width:640px;background-color: #EFEFF4;border-bottom: 1px solid #B2B2B2;z-index: 1000;}
+.wing-wrap{width: 100%;height: 100%;float: left;}
+.wing-main{height: 100%;line-height: 50px;font-size: 1.6rem;font-weight: bold; overflow: hidden;text-overflow: ellipsis;white-space: nowrap;padding: 0  6px;}
+.wing-left{float: left;height:100%;position: relative;margin-left: -100%;}
+.wing-left:after{content: '';position: absolute;right: 0;top: 10px;height: 30px;width: 1px;background-color: #D8D8D8;}
+.wing-right{height:100%;float: left;position: relative;}
+.wing-left img{width: 15px;height: 30px;position: relative;top: 10px;left:17px;}
+.nav-jump {width: 50px;height: 100%;float: left;}
+.nav-jump img{width: 24px;height: 24px;position: relative;top: 13px;left:13px;}
+.nav-add {width: 50px;height: 100%;float: left;}
+.nav-add img{width: 24px;height: 24px;position: relative;top: 13px;left:13px;}
+.wing-left:active,.wing-right .right-one:active,.wing-right .right-two:active{background-color: #cfcfcf;}
+
+.wing .wing-main{margin: 0 50px 0 50px;}
+.wing .wing-left{width:50px;margin-left: -100%;}
+.wing .wing-right{width:50px;margin-left: -50px;}
+
+.two.wing .wing-main{margin: 0 100px 0 50px;}
+.two.wing .wing-left{margin-left: -100%;}
+.two.wing .wing-right{width: 100px;margin-left: -100px;}
+
+
 /*移动端财务首页*/
 	.container{width:100%;max-width:640px;}
 	.one-top-entrance{padding: 10px 0;}
@@ -162,7 +187,7 @@ span.photo-num{top: 2px;right:-5px;border: 1px solid #f36303;color: #f36303;bord
 }
 /*待审核  制片*/
 .agree-all{background-color: #fff; padding: 10px 0px 0 20px;border-bottom: 1px solid #CCCCCC;
-	position: fixed;top: 0;left: 0;width: 100%;}
+	position: fixed;top: 50px;left: 0;width: 100%;z-index: 900;}
 .media{padding-right: 10px; border-bottom:1px solid #CCCCCC;}
 .name-detail .media-left img{width: 45px;}
 .money-class{font-size: 1.2rem;color: #f36303;float: right;line-height: 30px;}

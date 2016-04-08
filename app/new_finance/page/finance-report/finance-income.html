@@ -9,7 +9,26 @@
 	<title>收款列表</title>
 </head>
 <body>
-	<header></header>
+	<header>
+						<nav class='wing two'>
+							<div class="wing-wrap two">
+								<div class="wing-main">
+									剧本名称-剧本名称-剧本名称-剧本名称-剧本名称-剧本名称-剧本名称-剧本名称-
+								</div>
+							</div>
+							<div class="wing-left backicon" onclick="pageBack();">
+								<img src="../../img/nav/back/back@2x.png" alt="back">
+							</div>
+							<div class="wing-right jumpnav">
+								<div class="nav-add right-two">
+									<img src="../../img/nav/add/add@2x.png" alt="back">
+								</div>
+								<div class="nav-menu right-one">
+									<img src="../../img/nav/menu/menu@2x.png" alt="back">
+								</div>
+							</div>
+						</nav>
+					</header>
 	<div class="container income">
 		<div class="section">
 			<div class="media">
@@ -38,7 +57,34 @@
 		</div>
 	</div>
 	<footer></footer>
-	<script src="/statichtml/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
-	<script>document.body.addEventListener('touchstart',function(){});</script>
+		<script src="/statichtml/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+	<script src="/statichtml/moviehelper/app/Public/base.js"></script>
+	<script src="/statichtml/moviehelper/app/Public/base.js"></script>
+	<script>document.body.addEventListener('touchstart',function(){});
+
+	function linkTo(url) {
+		console.log('linkTo'+url);
+		window.location.href = url;
+	}
+	
+	window.onload = function () {
+		var addnew = document.getElementsByClassName('nav-add');
+		console.log(addnew);
+		addnew.onclick = function (argument) {
+			console.log('addnew');
+			var url = 'http://www.baidu.com';
+			linkTo(url);
+		}
+	}
+
+	$(function () {
+		// $('.nav-add').click(function (url) {
+		// 	linkTo("http://www.baidu.com");
+		// })
+		$('.backicon').click(function () {
+			pageBack();
+		})
+	})
+	</script>
 </body>
 </html>
