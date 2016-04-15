@@ -1,0 +1,21 @@
+html{height: 100%;}
+body{padding-top: 50px;height: 100%;}
+.carousel{height: 400px;}
+.carousel .item{height: 400px;}
+.carousel .item img{width: 100%;}
+/*.row{border-right: 1px solid black;}*/
+.col-sm-4{background-color: #cfcfcf;}
+.col-sm-4{border-bottom: 1px solid red;border-left: 1px solid green;}
+.row.main{height: 100%;margin-right: 0;}
+.col-sm-3,.col-sm-9{padding-top: 20px;height: 100%;}
+.col-sm-3{background-color: rgb(211,211,211);padding-right: 0;}
+.row.main .col-sm-9{overflow: auto;}
+.row.main .col-sm-9 .nav-pills>li>a{border-radius: 4px;background-color: #d9edf7;}
+/*.row.main .col-sm-9 .nav-pills .presentation a{ }*/
+.nav-pills>li>a{border-radius: 0;}
+.nav-pills .badge{float: right;}
+.manager-name{margin: 0;}
+
+.panel-row{padding-top: 20px;}
+.seemore-table{margin: 10px;}
+@

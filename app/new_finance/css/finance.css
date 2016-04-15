@@ -187,7 +187,7 @@ span.photo-num{top: 2px;right:-5px;border: 1px solid #f36303;color: #f36303;bord
 }
 /*待审核  制片*/
 .agree-all{background-color: #fff; padding: 10px 0px 0 20px;border-bottom: 1px solid #CCCCCC;
-	position: fixed;top: 50px;left: 0;width: 100%;z-index: 900;}
+	position: fixed;top: 50px;left: 0;width: 100%;z-index: 100;}
 .media{padding-right: 10px; border-bottom:1px solid #CCCCCC;}
 .name-detail .media-left img{width: 45px;}
 .money-class{font-size: 1.2rem;color: #f36303;float: right;line-height: 30px;}

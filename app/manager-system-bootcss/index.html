@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>某管理系统</title>
+
+    <!-- Bootstrap -->
+	<link rel="stylesheet" href="../Public/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">某管理系统</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">功能 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+          <li class=""><a href="#">帮助<span class="sr-only">(current)</span></a></li>
+
+        </ul>
+        <form class="navbar-form navbar-right" role="login">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Username">
+                  <input type="text" class="form-control" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-default">登录</button>
+              </form>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+	<div class="row main">
+		<div class="col-sm-3">
+			<ul class="nav nav-pills nav-stacked">
+				<li role="presentation" class="active"><a href="#">首页</a></li>
+				<hr>
+			    <li role="presentation"><a href="#">信息建立</a></li>
+			    <li role="presentation"><a href="#">信息查询</a></li>
+			    <li role="presentation"><a href="#">信息管理</a></li>
+			    <hr>
+			    <li role="presentation"><a href="#">设置</a></li>
+			    <li role="presentation"><a href="#">帮助</a></li>
+			</ul>
+		</div>
+		<div class="col-sm-9">
+			<h2 class="manager-name">管理控制台</h2>
+
+			<div class="btn-group1">
+				<button type="button" class="btn btn-default">操作1</button>
+				<button type="button" class="btn btn-info">操作2</button>
+				<button type="button" class="btn btn-success">操作3</button>
+				<button type="button" class="btn btn-primary">操作4</button>
+				<button type="button" class="btn btn-warning">操作5</button>
+				<button type="button" class="btn btn-danger">操作6</button>
+			</div>
+			<div class="row panel-row">
+				<div class="col-sm-6">
+					<div class="panel panel-primary">
+					  <div class="panel-heading">
+					    <h3 class="panel-title">最新提醒</h3>
+					  </div>
+					  <div class="panel-body">
+					    <div class="alert alert-success" role="alert">提示：你的订单已通过审批</div>
+					    <div class="alert alert-success" role="alert">提示：你的订单已通过审批</div>
+					    <div class="alert alert-success" role="alert">提示：你的订单已通过审批</div>
+
+					  </div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					
+					<div class="panel panel-primary">
+					  <div class="panel-heading">
+					    <h3 class="panel-title">我的任务</h3>
+					  </div>
+					  <div class="panel-body">
+					  <ul class="nav nav-pills nav-stacked ">
+					    <li role="presentation" class=""><a href="#"><span class="badge">4</span>订单审批</a></li>
+					    <li role="presentation"><a href="#"><span class="badge">4</span>付款确认</a></li>
+					    <li role="presentation"><a href="#"><span class="badge">4</span>收款确认</a></li>
+					  </ul>
+					  </div>					</div>
+				</div>
+			</div>
+				<div class="row">
+					
+				<div class="col-sm-6">
+					
+					<div class="panel panel-primary">
+					  <div class="panel-heading">
+					    <h3 class="panel-title">最新订单</h3>
+					  </div>
+					  <!-- Table -->
+					    <table class="table">
+					    <thead>
+					    	<td>#</td>
+					    	<td>产品</td>
+					    	<td>数量</td>
+					    	<td>总金额</td>
+					    	<td>业务员</td>
+					    </thead>
+					    <tbody>
+					    	<tr>
+						      	<td>1</td>
+						      	<td>Apple Macbok Air</td>
+						      	<td>10</td>
+						      	<td>8000</td>
+						      	<td>万晓燕</td>
+					    	</tr><tr>
+						      	<td>1</td>
+						      	<td>Apple Macbok Air</td>
+						      	<td>10</td>
+						      	<td>8000</td>
+						      	<td>万晓燕</td>
+					    	</tr><tr>
+						      	<td>1</td>
+						      	<td>Apple Macbok Air</td>
+						      	<td>10</td>
+						      	<td>8000</td>
+						      	<td>万晓燕</td>
+					    	</tr>
+					    </tbody>
+					    </table>
+					    <button class="btn btn-primary seemore-table" type="button">查看详细<span class="glyphicon glyphicon-menu-right"></span></button>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					
+					<div class="panel panel-primary">
+					  <div class="panel-heading">
+					    <h3 class="panel-title">工程进度</h3>
+					  </div>
+					  <div class="panel-body">
+					    <div class="project-box">
+					    	<div class="project-name">
+					    		<span class="bg-primary">水井挖掘工程</span>
+					    	</div>
+					    	<div class="progress active">
+					    	  <div class="progress-bar progress-bar-primary progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">80%
+					    	    <span class="sr-only">80% Complete (success)</span>
+					    	  </div>
+					    	</div>
+	
+					    </div>
+
+					  </div>
+					</div>
+				</div>
+
+			</div>
+			  
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" hidden>
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="http://img.mukewang.com/5412ad400001e52014280484.jpg" alt="example1">
+        <div class="carousel-caption">
+          11 英寸 MacBook Air 充电一次可运行长达 9 小时，而 13 英寸机型则可运行长达 12 小时。
+        </div>
+      </div>
+      <div class="item ">
+        <img src="http://img.mukewang.com/5412ad7c0001d2eb10880541.jpg" alt="example2">
+        <div class="carousel-caption">
+		无论是什么任务，配备 Intel HD Graphics 5000 图形处理器的第四代 Intel Core 处理器都能应对自如。
+		</div>
+      </div>
+      <div class="item ">
+        <img src="http://img.mukewang.com/5412ae5c0001653b12800644.jpg" alt="example3">
+        <div class="carousel-caption">
+		有了新一代 802.11ac 技术，MacBook Air 令 Wi-Fi 速度超越极限。
+		</div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+  </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+
+  <div class="container" hidden>
+  	<div class="row">
+  		<div class="col-sm-4">
+  		慕课网是一家从事互联网免费教学的网络教育公司。秉承"开拓、创新、公平、分享"的精神，将互联网特性全面的应用在教育领域，致力于为教育机构及求学者打造一站式互动在线教育品牌
+  		</div>
+  		<div class="col-sm-4">
+  		慕课网是一家从事互联网免费教学的网络教育公司。秉承"开拓、创新、公平、分享"的精神，将互联网特性全面的应用在教育领域，致力于为教育机构及求学者打造一站式互动在线教育品牌
+  		</div>
+  		<div class="col-sm-4">
+  		慕课网是一家从事互联网免费教学的网络教育公司。秉承"开拓、创新、公平、分享"的精神，将互联网特性全面的应用在教育领域，致力于为教育机构及求学者打造一站式互动在线教育品牌
+  		</div>
+  	</div>
+  	<div class="row">
+  		<div class="col-sm-4">
+  		慕课网是一家从事互联网免费教学的网络教育公司。秉承"开拓、创新、公平、分享"的精神，将互联网特性全面的应用在教育领域，致力于为教育机构及求学者打造一站式互动在线教育品牌
+  		</div>
+  		<div class="col-sm-4 col-sm-offset-4">
+  		慕课网是一家从事互联网免费教学的网络教育公司。秉承"开拓、创新、公平、分享"的精神，将互联网特性全面的应用在教育领域，致力于为教育机构及求学者打造一站式互动在线教育品牌
+  		</div>
+  	</div>
+  	<div class="row">
+  		<div class="col-sm-3 col-sm-offset-3">
+  		慕课网是一家从事互联网免费教学的网络教育公司。秉承"开拓、创新、公平、分享"的精神，将互联网特性全面的应用在教育领域，致力于为教育机构及求学者打造一站式互动在线教育品牌
+  		</div>
+  		<div class="col-sm-3 col-sm-offset-3">
+  		慕课网是一家从事互联网免费教学的网络教育公司。秉承"开拓、创新、公平、分享"的精神，将互联网特性全面的应用在教育领域，致力于为教育机构及求学者打造一站式互动在线教育品牌
+  		</div>
+  	</div>
+  	<div class="row">
+  		<div class="col-sm-6 col-sm-offset-3">
+  		慕课网是一家从事互联网免费教学的网络教育公司。秉承"开拓、创新、公平、分享"的精神，将互联网特性全面的应用在教育领域，致力于为教育机构及求学者打造一站式互动在线教育品牌
+  		</div>
+  	</div>
+  </div>
+
+  <div hidden>
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist" >
+    <li role="presentation" class=""><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+    <li role="presentation" class="active"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home">...</div>
+    <div role="tabpanel" class="tab-pane" id="profile">...</div>
+    <div role="tabpanel" class="tab-pane" id="messages">...</div>
+    <div role="tabpanel" class="tab-pane" id="settings">...</div>
+  </div>
+
+</div>
+    <!-- <h1>你好，世界！</h1> -->
+
+	<ul class="media-list" hidden>
+		<li class="media">
+			<a href="javascrpt:;" class="pull-left">
+				<img src="http://a.disquscdn.com/uploads/users/3740/2069/avatar92.jpg?1406972031" alt="">
+			</a>
+			<div class="media-body">
+				<h2>慕课网</h2>
+				<p>大漠写的《玩转Bootstrap》系列教程即将会在慕课网上发布
+				...</p>
+				div.meida
+			</div>
+		</li>
+	</ul>
+
+<ul class="list-group" hidden>
+	<a href="javascript:;" class="list-group-item"><span class="badge">123</span>揭开CSS3的面纱</a>
+	<a href="javascript:;" class="list-group-item"><span class="badge">123</span>CSS3选择器</a>
+	<a href="javascript:;" class="list-group-item"><span class="badge">123</span>CSS3边框</a>
+	<a href="javascript:;" class="list-group-item"><span class="badge">123</span>CSS3背景</a>
+	<a href="javascript:;" class="list-group-item"><span class="badge">123</span>CSS3文本</a>
+</ul>
+<div class="list-group" hidden>
+	<a href="javascript:;" class="list-group-item">
+		<h4 class="list-group-item-heading">Canvas绘图详解：</h4>
+		<p class="list-group-item-text"> 本课程为Canvas系列课程第二课。通过对《绚丽的倒计时效果的学习》，在大家对Canvas绘图有一定了解的基础上......
+		</p>
+	</a>
+	<a href="javascript:;" class="list-group-item">
+		<h4 class="list-group-item-heading">玩转Bootstrap：</h4>
+		<p class="list-group-item-text">  Bootstrap框架是一个非常受欢迎的前端开发框架，他能让后端程序员和不懂设计的前端人员制作出优美的Web页面或Web应用程序。
+......
+		</p>
+	</a>
+	<a href="javascript:;" class="list-group-item">
+		<h4 class="list-group-item-heading">基于bootstrap的网页开发：</h4>
+		<p class="list-group-item-text">  Bootstrap是用于前端开发的工具包，提供了优雅的HTML和CSS规范，并基于jQuery开发了丰富的Web组件。课程介绍了Bootstrap框架的基本知识，并基于Bootstrap框架...
+......
+		</p>
+	</a>
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../Public/jquery/jquery-2.2.3.min.js"></script>
+    <!-- <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../Public/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <!-- <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+
+
+    <script>
+    	$(function () {
+    		$('a[href="#messages"]').tab('show');
+    	})
+    </script>
+  </body>
+  <!-- <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+</html>
