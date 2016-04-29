@@ -5,23 +5,102 @@
 	<meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" />
-    <link rel="stylesheet" type="text/css" href="../css/" />
-	<title>sublime git 使用测试中 </title>
+    <!-- <link rel="stylesheet" type="text/css" href="../css/" /> -->
+	<title>滚动加载更多</title>
+	<style>
+		.img{overflow-x:scroll;overflow-y:hidden;height: 200px;}
+		.img img{width: 100px;float: left;display: block;}
+	</style>
 </head>
 <body>
 	<header></header>
 	<div class="container">
 		<div class="section">
-			查看不同-第一次单文件
-			edit onemore time
-			three times
-			four
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
 		</div>
 		<div class="section">
-
+			<div class="img">
+				<ul>
+					<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+					<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+					<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+					<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+					<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 	<footer></footer>
 	<script src="/statichtml/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+	<script>
+		$(function () {
+			var stop=true; var i = 0;
+			$(window).scroll(function(){ 
+					    totalheight = parseFloat($(window).height()) + parseFloat($(window).scrollTop()); 
+					    if($(document).height() <= totalheight){ 
+					        if(stop==true){ 
+					            stop=false;
+					            i++;
+					            $('body').append('<div style="height:calc(100%)">'+i+'</div>')
+					            stop =true;
+
+					            // $.post("ajax.php", {start:1, n:50},function(txt){ 
+					            //     $("#Loading").before(txt); 
+					            //     stop=true; 
+					            // },"text"); 
+					        } 
+					    } 
+					});
+		})
+	</script>
 </body>
 </html>

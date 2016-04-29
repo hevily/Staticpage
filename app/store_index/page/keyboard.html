@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" />
+    <link rel="stylesheet" type="text/css" href="../css/" />
+	<title>键盘监测</title>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="section">
+			<input type="text">
+		</div>
+		<div class="section">
+			<p></p>
+		</div>
+	</div>
+	<footer></footer>
+	<script src="/statichtml/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+	<script>
+		$(function () {
+			$('input').keyup(function () {
+				console.log(event.keyCode)
+				var kCode = event.keyCode
+					kStr = String.fromCharCode(kCode)
+					console.log(kCode+'-------'+kStr)
+				if (kCode == 8) {
+					kStr = 'backspace'
+				}else if(kCode == 13){
+					kStr = 'enter'
+				}else{
+					kStr = kStr
+				}
+				console.log(kStr)
+				$('p').append('<span>'+kStr+'</span>')
+			})
+		})
+	</script>
+</body>
+</html>
