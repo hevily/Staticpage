@@ -8,8 +8,11 @@
     <!-- <link rel="stylesheet" type="text/css" href="../css/" /> -->
 	<title>滚动加载更多</title>
 	<style>
-		.img{overflow-x:scroll;overflow-y:hidden;height: 200px;}
-		.img img{width: 100px;float: left;display: block;}
+		.img{overflow:hidden;height: 200px;}
+		.img ul li{width: 100px;position: relative;display: inline-block;}
+		.img ul{overflow-x:scroll;overflow-y:hidden;white-space: nowrap;-webkit-overflow-scrolling:touch;}
+		img{width:100%;}
+		.content{height: calc(100%);position: relative;}
 	</style>
 </head>
 <body>
@@ -75,31 +78,90 @@
 					<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
 					<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
 					<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+					<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+					<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+					<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+					<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
 				</ul>
 			</div>
 		</div>
+		<div class="load-box"></div>
+		<div class="load-content" data-load='load/load1.htm'></div>
 	</div>
 	<footer></footer>
 	<script src="/statichtml/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
 	<script>
 		$(function () {
-			var stop=true; var i = 0;
-			$(window).scroll(function(){ 
-					    totalheight = parseFloat($(window).height()) + parseFloat($(window).scrollTop()); 
-					    if($(document).height() <= totalheight){ 
-					        if(stop==true){ 
-					            stop=false;
-					            i++;
-					            $('body').append('<div style="height:calc(100%)">'+i+'</div>')
-					            stop =true;
+			var stop=true; var i = 0,timeoffset = 500 ,timeout
+			$(window).scroll(function(){
+				clearInterval(timeout);
+				//should occur with a delay
+				timeout = setTimeout(function(){
 
-					            // $.post("ajax.php", {start:1, n:50},function(txt){ 
-					            //     $("#Loading").before(txt); 
-					            //     stop=true; 
-					            // },"text"); 
-					        } 
-					    } 
-					});
+					totalheight = parseFloat($(window).height()) + parseFloat($(window).scrollTop()); 
+					if($(document).height() <= totalheight){ 
+						var load_box = $('.load-content')
+						url = load_box.attr('data-load');
+						load_box.remove()
+						if (url == '' || url == undefined) {
+							console.log('没有更多可加载')
+						}else{
+							if(stop==true){ 
+						        stop=false;
+						        i++;
+						        $.get(url,function (data) {
+						        	$('.load-box').append(data)
+						        })
+						        stop =true;
+						        // $.post("ajax.php", {start:1, n:50},function(txt){ 
+						        //     $("#Loading").before(txt); 
+						        //     stop=true; 
+						        // },"text"); 
+						    }
+						}
+					    
+					}
+
+					checkBox('.content')
+
+				// 检查box是否进入 以及 还在显示区域内
+					function checkBox(obj) {
+						_obj = $(obj)
+						if (_obj) {
+							// console.log(_obj)
+							var offsetHeight = document.body.offsetHeight
+								offsetWidth = document.body.offsetWidth
+								scrollTop = $(document).scrollTop()
+								objHeight = _obj.height()
+								// objoffsetTop = {},objoffsetTop.top = 0
+								// console.log(objoffsetTop.top)
+								objoffsetTop = _obj.offset();
+								// console.log(objoffsetTop)
+								// console.log('浏览器窗口可视offsetHeight----'+offsetHeight+'----\n'+
+								// 			'浏览器窗口可视offsetWidth----'+offsetWidth+'-----\n'+
+								// 			'滚动条距离顶部距离scrollTop----'+scrollTop+'-----\n'+
+								// 			'元素距离顶部距离------'+objoffsetTop.top+'-----\n'+
+								// 			'元素总高度------'+objHeight+'-----\n'+
+								// 			'')
+								if (objoffsetTop == undefined || objoffsetTop == '') {
+
+								}else{
+									if (offsetHeight+scrollTop >= objoffsetTop.top) {
+										if (scrollTop < objoffsetTop.top + objHeight) {
+											console.log('进入后 显示区域内')
+										}else{
+											console.log('已离开显示区域外')
+										}
+									}
+								}
+							
+						}
+					}
+
+
+				},timeoffset);
+			
+			});
 		})
 	</script>
 </body>
