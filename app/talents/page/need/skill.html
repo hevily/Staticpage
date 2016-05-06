@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../../css/iscroll-talents.css" />
+    <link rel="stylesheet" href="../../css/load.css">
+    <script src="../../js/jquery-2.1.3.min.js"></script>
+    <script src="../../js/iscroll/iscroll-probe.js"></script>
+	<title>技能要求</title>
+<body>
+	<header></header>
+	<div class="container">
+	<div class="bgdark"></div>
+		<div class="content">
+			<div class="title">技能要求</div>
+			<div class="skill">
+				<div class="add-new clearfix">
+					<a href="javascript:;"><img src="../../img/add-new.png" alt="添加"></a>
+					<p>新增技能</p>
+				</div>
+				<div class="added clearfix">
+					<ul>
+						<li>
+							<div class="article clearfix">
+								<div class="article-msg">
+									<div class="article-name">骑马</div>
+									<div class="article-skill">能够在马夫的帮助下行进</div>
+								</div>
+								<div class="article-action">
+									<div class="edit"><a href="javascript:;"><img src="../../img/edit-article.png" alt="编辑项目">编辑</a></div>
+									<div class="del"><img src="../../img/del-article.png" alt="删除项目">删除</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="article clearfix">
+								<div class="article-msg">
+									<div class="article-name">骑马</div>
+									<div class="article-skill">能够在马夫的帮助下行进</div>
+								</div>
+								<div class="article-action">
+									<div class="edit"><a href="javascript:;"><img src="../../img/edit-article.png" alt="编辑项目">编辑</a></div>
+									<div class="del"><img src="../../img/del-article.png" alt="删除项目">删除</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer></footer>
+	<script>
+	$(document).ready(function(){
+		$(".article-msg").width($(".article").width()-$(".article-action").width());
+		$(".article .del").click(function() {
+			var _confirm = confirm("确认删除？");
+			if (_confirm) {
+				$(this).closest('li').remove();
+			};
+		});
+		$(".edit,.add-new a").click(function() {
+			$("body").append("<div class='edit-skill'></div>")
+			$(".edit-skill").load("load/edit-skill.htm");
+		});
+		$("body").delegate(".submit","click",function() {
+			$(".edit-skill").remove();
+		});
+		$("body").delegate(".submit-skill","click",function(){
+			alert("正在保存，请稍后...");
+			$(".edit-skill").remove();
+		})
+		$("body").delegate(".cancel-skill","click",function(){
+			$(".edit-skill").remove();
+		})
+	});
+	</script>
+</body>
+</html>
