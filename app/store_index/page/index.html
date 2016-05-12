@@ -8,15 +8,22 @@
     <!-- <link rel="stylesheet" type="text/css" href="../css/" /> -->
 	<title>滚动加载更多</title>
 	<style>
+		body{height: auto;}
 		.img{overflow:hidden;height: 200px;}
 		.img ul li{width: 100px;position: relative;display: inline-block;}
 		.img ul{overflow-x:scroll;overflow-y:hidden;white-space: nowrap;-webkit-overflow-scrolling:touch;}
 		img{width:100%;}
 		.content{height: calc(100%);position: relative;}
+		#scroll_nav{position: relative;top: 0;left: 0;width: 100%;z-index: 101;}
+		#scroll_nav ul li{float: left;width: 25%;}
+		#scroll_nav ul li a{display: inline-block; width: 100%;text-align: center;}
+		.floatNav{position: fixed !important;}
+		.actived{background-color: red;}
 	</style>
+
 </head>
 <body>
-	<header></header>
+	
 	<div class="container">
 		<div class="section">
 			<p>1</p>
@@ -42,33 +49,16 @@
 			<p>1</p>
 			<p>1</p>
 			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
+		</div>
+		<div class="section">
+			<div id="scroll_nav">
+				<ul>
+					<li data-content='content1'><a href="javascript:;">导航_1</a></li>
+					<li data-content='content2'><a href="javascript:;">导航_2</a></li>
+					<li data-content='content3'><a href="javascript:;">导航_3</a></li>
+					<li data-content='content4'><a href="javascript:;">导航_4</a></li>
+				</ul>
+			</div>
 		</div>
 		<div class="section">
 			<div class="img">
@@ -85,79 +75,498 @@
 				</ul>
 			</div>
 		</div>
-		<div class="load-box"></div>
-		<div class="load-content" data-load='load/load1.htm'></div>
+		<div class="load-box">
+			<div class="content content1">
+				<h1>壹</h1>
+					<div class="img">
+						<ul>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						</ul>
+					</div><div class="img">
+					<ul>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+					</ul>
+				</div><div class="img">
+					<ul>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+					</ul>
+				</div><div class="img">
+					<ul>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="content content2">
+				<h1>贰</h1>
+					<div class="img">
+						<ul>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						</ul>
+					</div><div class="img">
+					<ul>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+					</ul>
+				</div><div class="img">
+					<ul>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+					</ul>
+				</div><div class="img">
+					<ul>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="content content3">
+				<h1>叁</h1>
+					<div class="img">
+						<ul>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						</ul>
+					</div><div class="img">
+					<ul>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+					</ul>
+				</div><div class="img">
+					<ul>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+					</ul>
+				</div><div class="img">
+					<ul>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="content content4">
+				<h1>肆</h1>
+					<div class="img">
+						<ul>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+							<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						</ul>
+					</div><div class="img">
+					<ul>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+					</ul>
+				</div><div class="img">
+					<ul>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+					</ul>
+				</div><div class="img">
+					<ul>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+					</ul>
+				</div><div class="img">
+					<ul>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+					</ul>
+				</div><div class="img">
+					<ul>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+					</ul>
+				</div><div class="img">
+					<ul>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+					</ul>
+				</div><div class="img">
+					<ul>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+						<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		<div class="load-content" data-load='load/content1.htm'></div>
 	</div>
+
 	<footer></footer>
 	<script src="/statichtml/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="/statichtml/moviehelper/app/Public/jq-plugin/scrollTo/jquery.scrollTo.min.js"></script>
+	<script type="text/javascript" src="/statichtml/moviehelper/app/Public/jq-plugin/jquery.easing.1.3.js"></script>
 	<script>
 		$(function () {
-			var stop=true; var i = 0,timeoffset = 500 ,timeout
+			var nav = $('#scroll_nav'),offTop = 60,navTop = $('#scroll_nav').offset().top
+			$('#scroll_nav li').click(function () {
+					var liIndex = $(this).closest('li').index()
+						content = $(this).closest('li').data('content')
+					console.log(liIndex)
+					console.log('将要滚动到'+content)
+						
+					function goTo(goal) {
+						//判断前一个是否存在
+						var canScroll = false;
+
+						function currentTrue(ind) {
+							var content = nav.find('li')
+							var result = []
+							for (var i = 0; i <= ind; i++) {
+								console.log('------'+i)
+								currentContent = $('.'+content.eq(i).data('content'))
+								console.log(currentContent)
+								if (currentContent.length == 0) {
+									console.log('当前不存在'+content.eq(i).data('content'))
+
+									result[i] = (loadCurrent(i,result));
+									// goTo(content)
+									console.log(i)
+									console.log(result)
+									canScroll = false
+								}else{
+									canScroll = true
+								}
+							}
+
+
+									// preContent = nav.find('li').eq(ind -1).data('content')
+									
+									// if ($('.'+preContent).length == 0) {
+									// 	console.log('上一个不存在')
+									// }else{
+									// 	console.log('上一个存在')
+									// }
+								
+							
+
+						}
+						function loadCurrent(ind,result) {
+							var	content = nav.find('li').eq(ind).data('content')
+							var data = ''
+							console.log(content+"加载当前")
+							var url = 'load/'+content+'.htm'
+							$.ajax({
+								url: url,
+								type: 'get',
+								// dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
+								// data: {param1: 'value1'},
+							})
+							.done(function(data) {
+								console.log("success");
+								$('.load-content').remove()
+								var result = data
+								// console.log(dataCurrent)
+								$('.load-box').append(data)
+								return result
+
+							})
+							.fail(function() {
+								console.log("error");
+							})
+							.always(function() {
+								console.log("complete");
+							});
+							console.log(data)
+							return data
+						}
+						
+							// 文档总高度
+						// var documentHeight = document.body.scrollHeight
+						// 	//浏览器可视高度
+						// 	browserHeight = window.screen.height
+						// 	console.log(documentHeight+'---'+browserHeight)
+						// if (documentHeight < 2050+browserHeight ) {
+						// 	console.log('不足滚动')
+						// }else{
+						// 	console.log('足够滚动')
+						// 	console.log(goal)
+						//
+						currentTrue(liIndex)
+						if (canScroll) {
+							console.log('存在滚动')
+							var pixel = $('.'+goal).offset().top
+							$.scrollTo((pixel - offTop + 1)+'px',800)
+							// $.scrollTo('+='+offTop+'px', 10)
+						}
+
+						// }
+					}
+
+					goTo(content)
+
+			})
+
+			var stop=true; var i = 0,timeoffset = 500 ,timeout,currentDocOld = -100
 			$(window).scroll(function(){
 				clearInterval(timeout);
 				//should occur with a delay
 				timeout = setTimeout(function(){
+					scrollTop = $(document).scrollTop()
 
-					totalheight = parseFloat($(window).height()) + parseFloat($(window).scrollTop()); 
-					if($(document).height() <= totalheight){ 
-						var load_box = $('.load-content')
-						url = load_box.attr('data-load');
-						load_box.remove()
-						if (url == '' || url == undefined) {
-							console.log('没有更多可加载')
-						}else{
-							if(stop==true){ 
-						        stop=false;
-						        i++;
-						        $.get(url,function (data) {
-						        	$('.load-box').append(data)
-						        })
-						        stop =true;
-						        // $.post("ajax.php", {start:1, n:50},function(txt){ 
-						        //     $("#Loading").before(txt); 
-						        //     stop=true; 
-						        // },"text"); 
-						    }
+					//load-more
+					
+						totalheight = parseFloat($(window).height()) + parseFloat($(window).scrollTop()); 
+						if($(document).height() <= totalheight){ 
+							var load_box = $('.load-content')
+							url = load_box.attr('data-load');
+							load_box.remove()
+							// 加载更多
+							if (url == '' || url == undefined) {
+								console.log('没有更多可加载')
+							}else{
+								if(stop==true){ 
+							        stop=false;
+							        i++;
+							        console.log('load-more'+url)
+							        alert(url)
+							        $.get(url,function (data) {
+							        	$('.load-box').append(data)
+							        })
+							        stop =true;
+							        // $.post("ajax.php", {start:1, n:50},function(txt){ 
+							        //     $("#Loading").before(txt); 
+							        //     stop=true; 
+							        // },"text"); 
+							    }
+							}
+						    
 						}
-					    
-					}
 
-					checkBox('.content')
-
-				// 检查box是否进入 以及 还在显示区域内
-					function checkBox(obj) {
-						_obj = $(obj)
-						if (_obj) {
-							// console.log(_obj)
-							var offsetHeight = document.body.offsetHeight
-								offsetWidth = document.body.offsetWidth
-								scrollTop = $(document).scrollTop()
-								objHeight = _obj.height()
-								// objoffsetTop = {},objoffsetTop.top = 0
-								// console.log(objoffsetTop.top)
-								objoffsetTop = _obj.offset();
-								// console.log(objoffsetTop)
-								// console.log('浏览器窗口可视offsetHeight----'+offsetHeight+'----\n'+
-								// 			'浏览器窗口可视offsetWidth----'+offsetWidth+'-----\n'+
-								// 			'滚动条距离顶部距离scrollTop----'+scrollTop+'-----\n'+
-								// 			'元素距离顶部距离------'+objoffsetTop.top+'-----\n'+
-								// 			'元素总高度------'+objHeight+'-----\n'+
-								// 			'')
-								if (objoffsetTop == undefined || objoffsetTop == '') {
-
-								}else{
-									if (offsetHeight+scrollTop >= objoffsetTop.top) {
-										if (scrollTop < objoffsetTop.top + objHeight) {
-											console.log('进入后 显示区域内')
-										}else{
-											console.log('已离开显示区域外')
-										}
-									}
+					// 激活导航
+						function checkBox(obj,class_name) {
+							var contents = $(obj).find('li')
+								scrollDocs = []
+								scrollDocsP = []
+								offsetHeight = document.body.offsetHeight
+							$.each(contents,function (i,item) {
+								var content = $(item).data('content')
+								scrollDocs.push(content)
+							})
+							// console.log(scrollDocs)
+							// position all docs
+							$.each(scrollDocs,function (i,item) {
+								var itemP = $('.'+item).offset().top
+								scrollDocsP.push(itemP)
+							})
+							console.log(scrollDocsP)
+							var scrolledDocs = []
+							$.each(scrollDocsP, function (i,itemP) {
+								if (scrollTop > itemP -offTop) {
+									scrolledDocs.push(i)
+									return scrolledDocs;
 								}
+							})
+							if (scrolledDocs.length != 0 ) {
+								var currentDoc = Math.max.apply(null, scrolledDocs)
+								console.log(currentDoc)
+							}
 							
-						}
+
+							function hasChange(currentDoc) {
+								if (currentDocOld != currentDoc) {
+									$('.'+class_name).removeClass(class_name)
+									contents.eq(currentDoc).addClass(class_name)
+									currentDocOld = currentDoc
+								}
+							}
+							hasChange(currentDoc)
+						
+						// if (_obj.length != 0) {
+						// 	// console.log(_obj)
+						// 	var offsetHeight = document.body.offsetHeight
+						// 		offsetWidth = document.body.offsetWidth
+						// 		scrollTop = $(document).scrollTop()
+						// 		objHeight = _obj.height()
+						// 		// objoffsetTop = {},objoffsetTop.top = 0
+						// 		// console.log(objoffsetTop.top)
+						// 		objoffsetTop = _obj.offset();
+						// 		// console.log(objoffsetTop)
+						// 		console.log(
+						// 			// '浏览器窗口可视offsetHeight----'+offsetHeight+'----\n'+
+						// 		// 			'浏览器窗口可视offsetWidth----'+offsetWidth+'-----\n'+
+						// 		// 			'滚动条距离顶部距离scrollTop----'+scrollTop+'-----\n'+
+						// 					'元素距离顶部距离------'+objoffsetTop.top+'-----\n'+
+						// 					'元素总高度------'+objHeight+'-----\n'+
+						// 					'')
+						// 		if (objoffsetTop == undefined || objoffsetTop == '') {
+
+						// 		}else{
+						// 			if (offsetHeight+scrollTop >= objoffsetTop.top) {
+						// 				if (scrollTop < objoffsetTop.top + objHeight) {
+						// 					console.log('进入后 显示区域内')
+						// 				}else{
+						// 					console.log('已离开显示区域外')
+						// 				}
+						// 			}
+						// 		}
+							
+						// }
 					}
 
+					checkBox("#scroll_nav",'actived')
+
+					// float navbar
+					function floatNav(goal,class_name) {
+						if (scrollTop > navTop) {
+							// alert('已超过')
+							if (!$(goal).hasClass(class_name)) {
+								// alert('已修改')
+								$(goal).addClass(class_name)
+							}
+						}else{
+							$(goal).removeClass(class_name)
+						}
+					}
+					floatNav('#scroll_nav',"floatNav")
 
 				},timeoffset);
 			

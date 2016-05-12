@@ -6,3 +6,10 @@
     margin: 0;
 
 }
+aaa{
+	border-radius: 10px;
+	@keyframes left-right{
+		from{opacity: 0;};
+		to{opacity: 1;}
+	}
+}
