@@ -434,10 +434,9 @@
 						if (canScroll) {
 							console.log('存在滚动')
 							var pixel = $('.'+goal).offset().top
-							$.scrollTo((pixel - offTop + 1)+'px',800)
+							$.scrollTo((pixel - offTop + 1)+'px',800,{easing: 'easeOutBounce'})
 							// $.scrollTo('+='+offTop+'px', 10)
 						}
-
 						// }
 					}
 
@@ -445,7 +444,7 @@
 
 			})
 
-			var stop=true; var i = 0,timeoffset = 500 ,timeout,currentDocOld = -100
+			var stop=true; var i = 0,timeoffset = 10 ,timeout,currentDocOld = -100
 			$(window).scroll(function(){
 				clearInterval(timeout);
 				//should occur with a delay
