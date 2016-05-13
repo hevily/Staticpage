@@ -5,6 +5,7 @@
 	<meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" />
+    <link rel="stylesheet" type="text/css" href="../css/store.css">
     <!-- <link rel="stylesheet" type="text/css" href="../css/" /> -->
 	<title>滚动加载更多</title>
 	<style>
@@ -17,7 +18,7 @@
 		#scroll_nav{position: relative;top: 0;left: 0;width: 100%;z-index: 101;}
 		#scroll_nav ul li{float: left;width: 25%;}
 		#scroll_nav ul li a{display: inline-block; width: 100%;text-align: center;}
-		.floatNav{position: fixed !important;}
+		.floatNav{position: fixed !important;transition: all;}
 		.actived{background-color: red;}
 	</style>
 
@@ -25,32 +26,24 @@
 <body>
 	
 	<div class="container">
-		<div class="section">
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
+		
+		<div class="section store-header clearfix" >
+			<div class="store-info clearfix">
+				<div class="store-img">
+					<img src="/statichtml/bjmovie01/estores/Public/images/home/4/bg.jpg">
+				</div>
+				<div class="store-name">
+					店铺名称店铺名称店铺名称
+				</div>
+			</div>
+	        <div class="company-tags">
+	        	<div class="roll-corner">
+	        		asd
+	        	</div>
+	        </div>
 		</div>
-		<div class="section">
+
+		<div class="section" style="height: 50px;">
 			<div id="scroll_nav">
 				<ul>
 					<li data-content='content1'><a href="javascript:;">导航_1</a></li>
@@ -60,21 +53,8 @@
 				</ul>
 			</div>
 		</div>
-		<div class="section">
-			<div class="img">
-				<ul>
-					<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
-					<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
-					<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
-					<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
-					<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
-					<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
-					<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
-					<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
-					<li><img src="http://t1.mmonly.cc/uploads/allimg/150415/24527-95RhOG.jpg" alt=""></li>
-				</ul>
-			</div>
-		</div>
+
+
 		<div class="load-box">
 			<div class="content content1">
 				<h1>壹</h1>
@@ -344,9 +324,20 @@
 	<script src="/statichtml/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="/statichtml/moviehelper/app/Public/jq-plugin/scrollTo/jquery.scrollTo.min.js"></script>
 	<script type="text/javascript" src="/statichtml/moviehelper/app/Public/jq-plugin/jquery.easing.1.3.js"></script>
+	<script type="text/javascript">
+		function resizing(){
+			var wWidth = $("body").width();
+			//背景图片高度 占宽度3/8
+			$(".company-head").css("height",(wWidth/8*3).toFixed(0)); 
+			$(".logo img").css({"width":(wWidth/16*3).toFixed(0),"height":(wWidth/16*3).toFixed(0)}); 
+			// $(".logo-info .logo").css("top",-((wWidth/16*3).toFixed(0)-0).toFixed(0)+"px");
+		}
+		resizing();
+		window.onresize= resizing;
+	</script>
 	<script>
 		$(function () {
-			var nav = $('#scroll_nav'),offTop = 60,navTop = $('#scroll_nav').offset().top
+			var nav = $('#scroll_nav'),offTop = 30,navTop = $('#scroll_nav').offset().top
 			$('#scroll_nav li').click(function () {
 					var liIndex = $(this).closest('li').index()
 						content = $(this).closest('li').data('content')
@@ -376,18 +367,12 @@
 									canScroll = true
 								}
 							}
-
-
-									// preContent = nav.find('li').eq(ind -1).data('content')
-									
-									// if ($('.'+preContent).length == 0) {
-									// 	console.log('上一个不存在')
-									// }else{
-									// 	console.log('上一个存在')
-									// }
-								
-							
-
+								// preContent = nav.find('li').eq(ind -1).data('content')
+								// if ($('.'+preContent).length == 0) {
+								// 	console.log('上一个不存在')
+								// }else{
+								// 	console.log('上一个存在')
+								// }
 						}
 						function loadCurrent(ind,result) {
 							var	content = nav.find('li').eq(ind).data('content')
@@ -418,18 +403,6 @@
 							console.log(data)
 							return data
 						}
-						
-							// 文档总高度
-						// var documentHeight = document.body.scrollHeight
-						// 	//浏览器可视高度
-						// 	browserHeight = window.screen.height
-						// 	console.log(documentHeight+'---'+browserHeight)
-						// if (documentHeight < 2050+browserHeight ) {
-						// 	console.log('不足滚动')
-						// }else{
-						// 	console.log('足够滚动')
-						// 	console.log(goal)
-						//
 						currentTrue(liIndex)
 						if (canScroll) {
 							console.log('存在滚动')
@@ -437,11 +410,8 @@
 							$.scrollTo((pixel - offTop + 1)+'px',800,{easing: 'easeOutBounce'})
 							// $.scrollTo('+='+offTop+'px', 10)
 						}
-						// }
 					}
-
 					goTo(content)
-
 			})
 
 			var stop=true; var i = 0,timeoffset = 10 ,timeout,currentDocOld = -100
@@ -452,9 +422,8 @@
 					scrollTop = $(document).scrollTop()
 
 					//load-more
-					
 						totalheight = parseFloat($(window).height()) + parseFloat($(window).scrollTop()); 
-						if($(document).height() <= totalheight){ 
+						if($(document).height() <= totalheight+100){ 
 							var load_box = $('.load-content')
 							url = load_box.attr('data-load');
 							load_box.remove()
@@ -477,11 +446,10 @@
 							        // },"text"); 
 							    }
 							}
-						    
 						}
 
-					// 激活导航
-						function checkBox(obj,class_name) {
+					// active nav
+						function activeNav(obj,class_name) {
 							var contents = $(obj).find('li')
 								scrollDocs = []
 								scrollDocsP = []
@@ -496,7 +464,7 @@
 								var itemP = $('.'+item).offset().top
 								scrollDocsP.push(itemP)
 							})
-							console.log(scrollDocsP)
+							// console.log(scrollDocsP)
 							var scrolledDocs = []
 							$.each(scrollDocsP, function (i,itemP) {
 								if (scrollTop > itemP -offTop) {
@@ -506,10 +474,8 @@
 							})
 							if (scrolledDocs.length != 0 ) {
 								var currentDoc = Math.max.apply(null, scrolledDocs)
-								console.log(currentDoc)
+								// console.log(currentDoc)
 							}
-							
-
 							function hasChange(currentDoc) {
 								if (currentDocOld != currentDoc) {
 									$('.'+class_name).removeClass(class_name)
@@ -518,40 +484,8 @@
 								}
 							}
 							hasChange(currentDoc)
-						
-						// if (_obj.length != 0) {
-						// 	// console.log(_obj)
-						// 	var offsetHeight = document.body.offsetHeight
-						// 		offsetWidth = document.body.offsetWidth
-						// 		scrollTop = $(document).scrollTop()
-						// 		objHeight = _obj.height()
-						// 		// objoffsetTop = {},objoffsetTop.top = 0
-						// 		// console.log(objoffsetTop.top)
-						// 		objoffsetTop = _obj.offset();
-						// 		// console.log(objoffsetTop)
-						// 		console.log(
-						// 			// '浏览器窗口可视offsetHeight----'+offsetHeight+'----\n'+
-						// 		// 			'浏览器窗口可视offsetWidth----'+offsetWidth+'-----\n'+
-						// 		// 			'滚动条距离顶部距离scrollTop----'+scrollTop+'-----\n'+
-						// 					'元素距离顶部距离------'+objoffsetTop.top+'-----\n'+
-						// 					'元素总高度------'+objHeight+'-----\n'+
-						// 					'')
-						// 		if (objoffsetTop == undefined || objoffsetTop == '') {
-
-						// 		}else{
-						// 			if (offsetHeight+scrollTop >= objoffsetTop.top) {
-						// 				if (scrollTop < objoffsetTop.top + objHeight) {
-						// 					console.log('进入后 显示区域内')
-						// 				}else{
-						// 					console.log('已离开显示区域外')
-						// 				}
-						// 			}
-						// 		}
-							
-						// }
-					}
-
-					checkBox("#scroll_nav",'actived')
+						}
+					activeNav("#scroll_nav",'actived')
 
 					// float navbar
 					function floatNav(goal,class_name) {
@@ -566,7 +500,7 @@
 						}
 					}
 					floatNav('#scroll_nav',"floatNav")
-
+					// $('#scroll_nav').animate({"top":60})
 				},timeoffset);
 			
 			});

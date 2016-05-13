@@ -1,0 +1,20 @@
+@import "base.scss";
+
+$store_img_width: 80;
+$store_img_height: 80;
+$store_img_scale:100%;
+$store_bgcolor: rgba(255,255,255,0.6);
+
+
+.store-header{background-image: url("/statichtml/bjmovie01/estores/Public/images/home/4/bg.jpg");-moz-background-size: $whole $whole;background-size: $store_img_scale $store_img_scale; }
+/*store-info */
+.store-info{
+	margin: 25px 0 20px 20px; background-color: $store_bgcolor;
+	@include left-radius(3px);
+	.store-name{float: left;line-height: $store_img_height+px; @include font-header(18px,$color-text-theme);}
+	.store-img{
+		float: left;width: $store_img_width+px;height: $store_img_height+px;padding:2px;
+		img{width: $store_img_scale;height: $store_img_scale;@include border-radius(3px);
+		}
+	}
+}
