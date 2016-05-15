@@ -32,8 +32,33 @@
 // color end
 // font-size
 	$font-header:20px;
-
 // font-size end
+// position absolute
+	@mixin poa() {
+		position: absolute;
+	}
+	@mixin top($px) {
+		top:$px;
+	}
+	@mixin right($px) {
+		right:$px;
+	}
+	@mixin bottom($px) {
+		bottom:$px;
+	}
+	@mixin left($px) {
+		left:$px;
+	}
+// position absolute
+//border
+	@mixin border-style-width($style,$width) {
+		border-style: $style;
+		border-width:$width;
+	}
+	@mixin border-color($color) {
+		border-color:$color;
+	}
+//border end
 // radius
 	@mixin left-radius($R) {
 		-webkit-border-top-left-radius:$R;
@@ -47,6 +72,26 @@
 		-webkit-border-top-right-radius:$R;
 		   -moz-border-radius-topright:$R;
 		        border-top-right-radius:$R;
+		-webkit-border-bottom-right-radius:$R;
+		   -moz-border-radius-bottomright:$R;
+		        border-bottom-right-radius:$R;
+	}
+	@mixin top-left-radius($R) {
+		-webkit-border-top-left-radius:$R;
+		   -moz-border-radius-topleft:$R;
+		        border-top-left-radius:$R;
+	}
+	@mixin top-right-radius($R) {
+		-webkit-border-top-right-radius:$R;
+		   -moz-border-radius-topright:$R;
+		        border-top-right-radius:$R;
+	}
+	@mixin bottom-left-radius($R) {
+		-webkit-border-bottom-left-radius:$R;
+		   -moz-border-radius-bottomleft:$R;
+		        border-bottom-left-radius:$R;
+	}
+	@mixin bottom-right-radius($R) {
 		-webkit-border-bottom-right-radius:$R;
 		   -moz-border-radius-bottomright:$R;
 		        border-bottom-right-radius:$R;

@@ -9,7 +9,7 @@ $store_bgcolor: rgba(255,255,255,0.6);
 .store-header{background-image: url("/statichtml/bjmovie01/estores/Public/images/home/4/bg.jpg");-moz-background-size: $whole $whole;background-size: $store_img_scale $store_img_scale; }
 /*store-info */
 .store-info{
-	margin: 25px 0 20px 20px; background-color: $store_bgcolor;
+	margin: 25px 0 20px 10px; background-color: $store_bgcolor;
 	@include left-radius(3px);
 	.store-name{float: left;line-height: $store_img_height+px; @include font-header(18px,$color-text-theme);}
 	.store-img{
