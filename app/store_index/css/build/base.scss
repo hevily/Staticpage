@@ -10,7 +10,7 @@
 		$color-theme-block: #FF8D4D;	// 浅橙色
 
 	//text color 文字颜色
-		$color-text-theme: #3F3F3F;	// 浅灰 一般字体
+		$color-text-normal: #3F3F3F;	// 浅灰 一般字体
 		$color-text-light: #686868;	// 浅灰 比一般字体低
 		$color-text-lighten: #C9C9C9;	// 不可用状态色
 
@@ -102,11 +102,18 @@
 		        border-radius:$R;
 	}
 //left-radius end
-// 标题文字大小颜色
-	@mixin font-header($headerfz,$color) {
+//text
+	// 标题文字大小颜色
+		@mixin font-header($headerfz,$color) {
 
-		font-size: $headerfz;
-		color: $color;
-		.smaller{ font-size: 75%;}
-	}
-// 标题文字大小颜色
+			font-size: $headerfz;
+			color: $color;
+			.smaller{ font-size: 75%;}
+		}
+	// 标题文字大小颜色
+	// normal text
+		.normal-text{
+			color: $color-text-normal;
+		}
+	// normal text end
+// text end

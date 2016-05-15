@@ -11,7 +11,7 @@ $store_bgcolor: rgba(255,255,255,0.6);
 .store-info{
 	margin: 25px 0 20px 10px; background-color: $store_bgcolor;
 	@include left-radius(3px);
-	.store-name{float: left;line-height: $store_img_height+px; @include font-header(18px,$color-text-theme);}
+	.store-name{float: left;line-height: $store_img_height+px; @include font-header(18px,$color-text-normal);}
 	.store-img{
 		float: left;width: $store_img_width+px;height: $store_img_height+px;padding:2px;
 		img{width: $store_img_scale;height: $store_img_scale;@include border-radius(3px);
