@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/amazeui/css/amazeui.css"/>
+    <link rel="stylesheet" href="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/css/home/mobile.css"/>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/voucher.css" />
+
+    <link href="../css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+    <link href="../css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+    <script src="../js/zepto.js"></script>
+    <script type="text/javascript" src="../js/jquery.js"></script>
+
+    <title>吃货有礼</title>
+
+    <style type="text/css">
+        body{background: #cfcfcf;}
+        .show-area{ margin: 0 auto;width: 100%;max-width: 640px; background: white; }
+        header{
+            line-height: 30px;
+            background: #FFF2BB;
+            border-bottom: 1px solid #D0CDC8;
+            border-top: 1px solid #D0CDC8;
+            height: auto;
+            padding: 0 10px 0 10px;
+        }
+        header p img{
+            width: 27px;
+            height: 20px;
+        }
+        /*.select li {
+            border-bottom: 1px solid #cfcfcf;
+
+            position: relative;
+            padding-bottom: 5px;
+            width: 33.33333333%;
+        }*/
+        .media-body {
+            display: table-cell;
+            vertical-align: top;
+            position: relative;
+        }
+        .media{
+            position: relative;
+            width: 100%;
+            padding: 10px 10px;
+        }
+        .media-body{
+            position: absolute;
+            top: 5px;
+            left: 70px;
+        }
+        .a_right{
+            position: absolute;
+            top: 32px;
+            left: .9%;
+            font-size: 14px;
+            color: darkgray;
+        }
+        @media screen and (min-width: 321px){
+            .a_right{
+                position: absolute;
+                top: 34px;
+                left: 1.4%;
+                font-size: 14px;
+                color: darkgray;
+            }
+        }
+        .media-right img {
+            height: 14px;
+            width: 8px;
+            margin-bottom: 4px;
+        }
+        .media-object {
+            width: 60px;
+            height: 60px;
+        }
+        .star span img{
+            width: 16px;
+            height: 15px;
+        }
+        .media-right p{
+            clear: both;
+            font-size: 13px;
+            color: #686868;
+        }
+        .li img{
+            width: 25px;
+        }
+        .hui{
+            padding: 3px 6px;
+            background: #E25452;
+            color: white;
+            border-radius: 5px;
+        }
+        .tuan{
+            padding: 3px 6px;
+            background: #A0D87F;
+            color: white;
+            border-radius: 5px;
+        }
+        .juan-1{
+            padding: 3px 6px;
+            background: #229DC9;
+            color: white;
+            border-radius: 5px;
+        }
+        .yueshou {
+            position: absolute;
+            top: 21px;
+            margin-left: 5px;
+        }
+        /*切换*/
+        .box_163css{ width:100%; overflow:hidden;/* margin-bottom:10px;*/}
+        .top_box{ width:100%; position:relative; height:100%;}
+
+        .nav_top{ float:left; width:100%; height:40px; line-height:40px; background:#FEF9F5;/* box-shadow:0 1px solid #d0b95a inset; border-bottom:2px solid #aca082;*/ text-align:center;}
+        .nav_top li{ width:50%; float:left; font-size:14px;}
+        .nav_top li.on{ color:#F36303;}
+        .nav_mid{ width:400%; /*height:390px; padding-top:10px;*/ float:left;}
+
+        .box01{ width: 25%; float:left; font-size:14px;}
+
+        .line{ width: 50%; height:4px; background:#F36303; position:absolute; left:0; top:36px;
+            /*margin-left: -30px;*/ display:block;}
+        .line::before{ display:block; position:absolute; left:50%; bottom:2px; content:'';}
+        .xian{ font-weight: bold; position:absolute; left:50%; top:9px;
+            margin-left: -2.5px;}
+
+        .newlist{ width:100%; float:left; margin-bottom:10px;}
+        .newlist li{ height:36px; line-height:36px; position:relative; background:#f8f8f8; border-bottom:1px solid #e8e8e9;border-top:1px solid #fff;}
+        .newlist li:nth-child(1){ border-top:none;}
+        .newlist li a{ float:left;text-align:left; text-indent:7px;}
+        .em_arrow{ display:block; width:0; height:0; position:absolute; right:5px; top:10px; border:5px solid #ccc; border-color:transparent transparent transparent #ccc;}
+        .btn_href{ display:inline-block; color:#000; font-size:14px; float:left; margin-left:2%; height:30px; line-height:30px; border-radius:5px;box-shadow:0 1px 1px #dedede inset,0 1px 1px #fff; background:-webkit-gradient(linear,0 0,0 100%,from(#eee),to(#e4e4e4)); width:96%;}
+        /**/
+        .media {
+            /*display: table-cell;
+            vertical-align: top;*/
+            position: relative;
+            padding-left: 0;
+
+        }
+        .media-1{
+            width: 510px;
+            margin-left: 10px;
+        }
+        .media-right {
+            padding-right: 10px;
+        }
+        .yueshou {
+            position: absolute;
+            top: 24px;
+            /*margin-left: 5px;*/
+        }
+        .media-body p {
+            width: 100%;
+            height: auto;
+        }
+        .gouwuche img {
+            width: 21px;
+            height: 21px;
+            margin-bottom: 4px;
+        }
+        .main-1{
+            background: white;
+        }
+        /* footer */
+        #cartSubmitBar {
+            height: 45px;
+            max-width: 640px;
+            width: 100%;
+            border-top: 1px solid #adadad;
+            background: #f8f8f8;
+            position: fixed;
+            bottom: 0px;
+            margin: 0 auto;
+            z-index: 99999;
+        }
+        #cartSubmitBar .padding {
+            margin: 5px 5px;
+            line-height: 35px;
+            height: 35px;
+            text-align: left;
+            overflow: hidden;
+        }
+        #cartSubmitBar .padding .td2 {
+            width: 30%;
+            float: left;
+            height: 35px;
+            font-weight: bold;
+        }
+        #cartSubmitBar .padding .td3 {
+            width: 40%;
+            float: right;
+            height: 35px;
+            overflow: hidden;
+            text-align: right;
+        }
+        .cartBtn {
+            vertical-align: top;
+            display: inline-block;
+            text-align: center;
+            background: #F36303;
+            border: 1px;
+            line-height: 33px;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #fff;
+            overflow: hidden;
+            padding: 0 10px;
+        }
+
+        .padding .td1{
+            vertical-align: middle;
+            position: relative;
+            float: left;
+            padding-right: 5px;
+        }
+        .padding .td1 a{
+            float: left;
+            margin-right: 10px;
+        }
+        .padding .td1 a img{
+            width: 24px;
+            height: 17px;
+
+        }
+        .padding .td1 .td1_p{
+            width: 17px;
+            height: 17px;
+            background: url(../img/yuan.png) no-repeat;
+            background-size: 17px 17px;
+            color: white;
+            line-height: 15px;
+            position: absolute;
+            top: 1px;
+            left: 15px;
+            text-indent: 5px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+<header></header>
+<div class="bgdark"></div>
+<div class="show-area" style="">
+    <header>
+        <p><span class="hui">减</span> 在线支付满20减10，满30减12</p>
+    </header>
+    <div class="combo-voucher">
+        <div class="combo-details">
+            <ul>
+                <li>
+                    <div class="media">
+                        <div class="media-left media-middle">
+                            <a href="#"><img class="media-object" src="../img/duixianma-1.jpg"  alt="代金券图标"></a>
+                        </div>
+                        <div class="media-body" style="">
+                            <div class="vochers-description">
+                                <p>微粥园</p>
+                                <p class="star"><span class="pitch" style=""><img src="../img/xing_on.png" alt=""/></span><span><img src="../img/xing_on.png" alt=""/></span><span><img src="../img/xing_on.png" alt=""/></span><span><img src="../img/xing_on.png" alt=""/></span><span class="Space"><img src="../img/xing_non.png" alt=""/></span><span class="yueshou">月售120单</span></p>
+                                <p style="color: #686868; font-size: 13px; margin-top: 9px;">免配送费</p>
+                            </div>
+                        </div>
+
+                        <div class="media-right media-middle" style="position: absolute; top: 9px; right: 10px;">
+                            <a href="javascript:;"><img class="media-object" src="../img/for-more.png"  alt="more" style=" float: right;"></a>
+                            <p style="float: right; margin-top: -4px;"><span class="orange" style="font-weight: 600; font-size: 16px;">￥20</span>起送</p>
+                            <p style="float: right; margin-top: 4px;">20分钟 &nbsp;&nbsp;<span>520</span>m</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="box_163css">
+        <div class="top_box">
+            <ul class="nav_top">
+                <li class="on">菜单</li>
+                <li>评价</li>
+            </ul>
+            <span class="line"></span>
+            <span class="xian">|</span>
+        </div>
+        <div class="nav_mid">
+            <div id="box" class="box01" style=" max-width: 640px;">
+                <div class="tabshow" style="">
+                   <!-- <a href="javascript:void(0);" class="udbtn uPrev">上一个</a>-->
+                    <div class="tabTagBox">
+                        <ul class="tabTagList" style="">
+                            <li id="tag01"><img src="../img/huo.png" alt="" style="width: 13px; height: 15px;"/> 热销榜</li>
+                            <li id="tag02" class="current">精品盖饭</li>
+                            <li id="tag03">家常小炒</li>
+                            <li id="tag04">家常小炒</li>
+                            <li id="tag05">家常小炒</li>
+                            <li id="tag06">家常小炒</li>
+                        </ul>
+                    </div>
+                    <!--<a href="javascript:void(0);" class="udbtn dNext">下一个</a>-->
+                    <!-- 1 -->
+                    <div class="tabcon">
+                        <p class="nav-1">热销榜</p>
+                        <ul>
+                            <li>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 2 -->
+                    <div class="tabcon hide">
+                        <p class="nav-1">精品盖饭（2）</p>
+                        <ul>
+                            <li>
+                                <div class="media media-1">
+                                    <div class="media-left media-middle">
+                                        <a href="#"><img class="media-object" src="../img/duixianma-1.jpg"  alt="代金券图标"></a>
+                                    </div>
+                                    <div class="media-body" style="">
+                                        <div class="vochers-description">
+                                            <p>大盘鸡盖饭</p>
+                                            <p class="star" style="float:left;"><span class="pitch" style=""><img src="../img/xing_on.png" alt=""/></span><span><img src="../img/xing_on.png" alt=""/></span><span><img src="../img/xing_on.png" alt=""/></span><span><img src="../img/xing_on.png" alt=""/></span><span class="Space"><img src="../img/xing_non.png" alt=""/></span> <span class="yueshou">月售120单</span></p>
+                                            <p class="orange" style="font-weight: 600; font-size: 16px; margin-top: 10px;">￥20</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="media-right media-middle" style="position: absolute; bottom: 10px; right: 10px;">
+                                        <a href=""> <img src="../img/gouwuche.png" alt="" style="width: 24px; height: 17px;"/></a>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li>
+                                <div class="media media-1">
+                                    <div class="media-left media-middle">
+                                        <a href="#"><img class="media-object" src="../img/duixianma-1.jpg"  alt="代金券图标"></a>
+                                    </div>
+                                    <div class="media-body" style="">
+                                        <div class="vochers-description">
+                                            <p>大盘鸡盖饭</p>
+                                            <p class="star" style="float:left;"><span class="pitch" style=""><img src="../img/xing_on.png" alt=""/></span><span><img src="../img/xing_on.png" alt=""/></span><span><img src="../img/xing_on.png" alt=""/></span><span><img src="../img/xing_on.png" alt=""/></span><span class="Space"><img src="../img/xing_non.png" alt=""/></span> <span class="yueshou">月售120单</span></p>
+                                            <p class="orange" style="font-weight: 600; font-size: 16px; margin-top: 10px;">￥20</p>
+                                        </div>
+                                    </div>
+                                    <div class="media-right media-middle gouwuche" style="position: absolute; bottom: 10px; right: 10px;">
+                                        <a href=""><img src="../img/jian.png" alt=""/> <span>1</span> <img src="../img/jia.png" alt=""/></a>
+                                    </div>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="tabcon hide">
+                        <p class="nav-1">家常小炒</p>
+                        <ul>
+                            <li>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 4 -->
+                    <div class="tabcon">
+                        <p class="nav-1">家常小炒</p>
+                        <ul>
+                            <li>
+
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <!-- 5 -->
+                    <div class="tabcon hide">
+                        <p class="nav-1">家常小炒</p>
+                        <ul>
+                            <li>
+
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <!-- 6 -->
+                    <div class="tabcon hide">
+                        <p class="nav-1">家常小炒</p>
+                        <ul>
+                            <li>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 2 -->
+                    <div class="tabcon hide">
+                        <p class="nav-1">精品盖饭（2）</p>
+                        <ul>
+                            <li>
+                                <div class="media media-1">
+                                    <div class="media-left media-middle">
+                                        <a href="#"><img class="media-object" src="../img/duixianma-1.jpg"  alt="代金券图标"></a>
+                                    </div>
+                                    <div class="media-body" style="">
+                                        <div class="vochers-description">
+                                            <p>大盘鸡盖饭</p>
+                                            <p class="star" style="float:left;"><span class="pitch" style=""><img src="../img/xing_on.png" alt=""/></span><span><img src="../img/xing_on.png" alt=""/></span><span><img src="../img/xing_on.png" alt=""/></span><span><img src="../img/xing_on.png" alt=""/></span><span class="Space"><img src="../img/xing_non.png" alt=""/></span> <span class="yueshou">月售120单</span></p>
+                                            <p class="orange" style="font-weight: 600; font-size: 16px; margin-top: 10px;">￥20</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="media-right media-middle" style="position: absolute; bottom: 10px; right: 10px;">
+                                        <a href=""> <img src="../img/gouwuche.png" alt="" style="width: 24px; height: 17px;"/></a>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li>
+                                <div class="media media-1">
+                                    <div class="media-left media-middle">
+                                        <a href="#"><img class="media-object" src="../img/duixianma-1.jpg"  alt="代金券图标"></a>
+                                    </div>
+                                    <div class="media-body" style="">
+                                        <div class="vochers-description">
+                                            <p>大盘鸡盖饭</p>
+                                            <p class="star" style="float:left;"><span class="pitch" style=""><img src="../img/xing_on.png" alt=""/></span><span><img src="../img/xing_on.png" alt=""/></span><span><img src="../img/xing_on.png" alt=""/></span><span><img src="../img/xing_on.png" alt=""/></span><span class="Space"><img src="../img/xing_non.png" alt=""/></span> <span class="yueshou">月售120单</span></p>
+                                            <p class="orange" style="font-weight: 600; font-size: 16px; margin-top: 10px;">￥20</p>
+                                        </div>
+                                    </div>
+                                    <div class="media-right media-middle gouwuche" style="position: absolute; bottom: 10px; right: 10px;">
+                                        <a href=""><img src="../img/jian.png" alt=""/> <span>1</span> <img src="../img/jia.png" alt=""/></a>
+                                    </div>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!--tabshow end-->
+            </div>
+
+            <div id="box" class="box01" style=" max-width: 640px; width: 640px;">
+                <ul class="newlist">
+                    <li></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer-1">
+        <div id="cartSubmitBar" class="clearfix">
+            <div class="padding">
+                <div class="td1">
+                    <a href=""><img src="../img/gouwuche-1.png" alt=""/></a>
+                    <div class="td1_p">1</div>
+                </div>
+                <div class="td2 orange">
+                    总计 :￥<span id="cartPrice">20</span> <!--span class=""></span-->
+                </div>
+                <div class="td3">
+                    <button class="cartBtn cartBtn-auto" type="submit" id="cartSubmit">去结算</button>
+                    <div class=" clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer></footer>
+<!--<footer><br><br><br></footer>-->
+<script type="text/javascript" src="../js/lazyload.js"></script>
+<script type="text/javascript" src="../js/lanrenzhijia.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var len=0;
+        var f=0;
+        var cq=0;
+        //
+        $('.nav_top li').click(function(){
+            var t=$(this).index();
+            var wh=$('.line').width();
+            f=-25*t+"%";
+            cq=100*t+"%";
+            $(this).parents('.box_163css').find('.nav_mid').css({'-webkit-transform':'translate('+f+')','-webkit-transition':'500ms linear'} );
+            $(this).parents('.box_163css').find('.line').css({'-webkit-transform':'translate('+cq+')','-webkit-transition':'300ms linear'} );
+            $(this).siblings().removeClass('on');
+            $(this).addClass('on');
+        })
+        //
+        $('.box01').swipeLeft(function(){
+            var i=$(this).index()+1;
+            len=-25*i+"%";
+            cq=100*i+"%";
+            if(i==4){return false}
+            else{
+
+                $(this).parent('.nav_mid').css({'-webkit-transform':'translate('+len+')','-webkit-transition':'500ms linear'} );
+                // kongzhi xian de
+                $(this).parents('.box_163css').find('.line').css({'-webkit-transform':'translate('+cq+')','-webkit-transition':'500ms linear'} );
+                //
+                $(this).parents('.box_163css').find('.nav_top li').eq(i).siblings().removeClass('on');
+                $(this).parents('.box_163css').find('.nav_top li').eq(i).addClass('on');
+            }
+        })
+        $('.box01').swipeRight(function(){
+            var i=$(this).index();
+            if(i==0){return false}
+            else{
+                var n=i-1;
+                len=-25*n+"%";
+                cq=100*n+"%";
+                $(this).parents('.box_163css').find('.nav_mid').css({'-webkit-transform':'translate('+len+')','-webkit-transition':'500ms linear'} );
+                $(this).parents('.box_163css').find('.line').css({'-webkit-transform':'translate('+cq+')','-webkit-transition':'500ms linear'} );
+                $(this).parents('.box_163css').find('.nav_top li').eq(i-1).siblings().removeClass('on');
+                $(this).parents('.box_163css').find('.nav_top li').eq(i-1).addClass('on');
+            }
+        })
+    })
+
+
+</script>
+
+</body>
+</html>

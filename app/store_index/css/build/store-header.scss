@@ -5,6 +5,7 @@ $store_img_height: 80;
 $store_img_scale:100%;
 $store_bgcolor: rgba(255,255,255,0.6);
 
+$i-t-b-color: red;
 
 .store-header{background-image: url("/statichtml/bjmovie01/estores/Public/images/home/4/bg.jpg");-moz-background-size: $whole $whole;background-size: $store_img_scale $store_img_scale; }
 /*store-info */
@@ -15,6 +16,29 @@ $store_bgcolor: rgba(255,255,255,0.6);
 	.store-img{
 		float: left;width: $store_img_width+px;height: $store_img_height+px;padding:2px;
 		img{width: $store_img_scale;height: $store_img_scale;@include border-radius(3px);
+		}
+	}
+}
+.store-action{
+	.new-page{
+		.media{
+			border-bottom:1px solid $normal-gapline;margin: 0;padding:$pd;
+			&:first-child{}
+			.media-object{height: 20px;width: 20px;}
+		}
+	}
+
+	.img-text-borders{
+		padding:$ptd $zero $pbd $zero; border-bottom:1px solid $normal-gapline;
+		.img-text-border{
+			float: left;text-align:center;border-left:1px solid $normal-gapline;
+			.media-object{height: 18px;width: 18px;display:inline-block;}
+			&:first-child{border-left:none;}
+		}
+	}
+	.two{
+		.img-text-border{
+			width:$half;
 		}
 	}
 }

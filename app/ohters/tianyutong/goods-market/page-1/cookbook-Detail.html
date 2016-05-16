@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/amazeui/css/amazeui.css"/>
+	<link rel="stylesheet" href="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/css/home/mobile.css"/>
+
+	<link rel="stylesheet" href="../css/base.css" />
+	<link rel="stylesheet" href="../css/voucher.css" />
+	<script type="text/javascript" language="javascript" src="../js/zepto.js"></script>
+
+	<title>Document</title>
+	<extend name="Base:baseMobile" />
+	<block name="head">
+		<title>{$rs.goods_name}</title></block>
+	<style>
+		@media only screen and (max-width:321px ){
+		}
+		body{ background-color:#e6e6e6;
+			font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial,
+			"Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei",
+			"Hiragino Sans GB", "Hiragino Sans GB W3", FontAwesome, sans-serif; max-width: 640px; margin: 0 auto;}
+		.main{ background: #e6e6e6; padding:0px 0px 50px 0px;}
+		.fx-block{border-top: 1px solid #d7d7d7; border-bottom: 1px solid #d7d7d7; margin-bottom: 0.5rem;}
+		.fx-block-single{ border-top: 1px solid #d7d7d7; border-bottom: 1px solid #d7d7d7;margin-bottom: 0.5rem; padding:3px 0px}
+
+		/*进入店铺*/
+		.fxBlockGoStore{ line-height: 40px; overflow: hidden; clear: both;}
+		.fxBlockGoStore .storeName{ font-size: 18px; text-indent: 10px; font-weight:bold }
+		.fxBlockGoStore .goStore{ font-size: 16px; padding-right: 0px; color: #666; text-decoration: none;}
+
+		/*猜你喜欢*/
+		.fxBlockCainixihuan .imgList{
+		}
+		.fxBlockCainixihuan .imgList li{
+			width: 33.33%;
+			border: 1px solid #fff;
+		}
+
+		/**
+         * 详情页页脚
+         */
+		.ecGoodsFoot{ overflow: hidden;}
+		.ecBtn_lxkf{height: 35px;}
+		.ecBtn{ width: 40%; height: 50px; line-height: 50px; background: #F36303; border: 1px solid #F36303; color: white;
+			border-radius: 5px; text-align: center; font-size: 18px;}
+
+		/**
+         * 设备详情页
+         */
+		.goods-sb-baseinfo{ background: #fff;}
+		.goods-sb-baseinfo .hang{ position: relative; line-height: 1.8em; padding: 10px 10px; font-size: 16px; }
+		.goods-sb-baseinfo .hang .more{ position: absolute; right: 0px; top: 10px;}
+		.goods-sb-baseinfo .goodsName{ color: #333;  }
+		.goods-sb-baseinfo .goodsTag{color: #9b9b9b; }
+
+		.goods-sb-baseinfo .goodsbrief{color: #f00;  }
+		.goods-sb-baseinfo .goodsPrice{color: #d86e00;}
+		.goods-sb-baseinfo .goodsLocal{color: #9b9b9b; width:100%; overflow:hidden}
+		.goods-sb-baseinfo .goodsLocal span{ display:block; width:45%; float:left;}
+		a{ text-decoration:none; color: #000000;}
+		.ecGoodsFoot{ max-width: 640px; margin: 0 auto;}
+		/*内容*/
+		.gap{
+			height: 18px;
+			background-color: #f4f4f4;
+			border-top: 1px solid #c9c9c9;
+			border-bottom: 1px solid #c9c9c9;
+		}
+		.hui{ color: #686868; font-weight: normal;}
+		.store-address-phone { padding-right: 10px;}
+		.rule-1{ width: 100%; text-indent: 20px;}
+		.rule-1 .details{ float: left; width: 50%;}
+		.rule-1 .details ul{ width: 100%; color: #2B2B2B; font-weight: 600; }
+		.rule-1 .details ul li span{ padding-left: 15px;}
+		.Graystripe{ background: #F7F7F7;}
+		.s_1{ border-bottom: 1px solid #C9C9C9; margin-left: 10px;}
+		.number{ color: #FFA942; float: left; margin-top: -8px;}
+		.number_img img{ width: 49%;}
+		.number_p{ margin-left: 33px; padding-top: 5px;}
+		.rule-2 .details-1{ display: table-cell; width: 33.33333333%; padding-left: 6px;}
+	</style>
+</head>
+<body>
+
+<script src="__PUBLIC__/plugin/ueditor1_4_3/ueditor.parse.js"></script>
+
+<link rel="stylesheet"  href="__PUBLIC__/js/home/lightGallery.css"/><!--jQuery lightgallery 一款响应式触屏相册插件-->
+<script src="__PUBLIC__/js/home/lightGallery.js"></script><!--jQuery lightgallery 一款响应式触屏相册插件-->
+
+<script>
+	$(function(){
+
+		//统计
+		ecTongji();
+
+		//收藏
+		favouriteGoods();
+
+		//商品flash
+		ecGoodsFlash();
+
+		//加载猜你喜欢图
+		loadImgNew("#cainixihuan");
+		loadImgNew("#thumbImg");
+
+		//触摸时样式
+		ecTouchAble(".imgList li");
+
+	});
+</script>
+<div class="wrap">
+	<input type="hidden" name="goods_id" value="{$rs.goods_id}" id="goods_id" />
+	<input type="hidden" name="stores_id" value="{$rs.stores_id}" id="stores_id" />
+	<input type="hidden" name="goods_gallery_id" value="{$rs.goods_gallery_id}" />
+	<input type="hidden" name="spec_gallery_id" value="{$rs.spec_gallery_id}" />
+
+	<div class="ecNav">
+		<div class="nav-padding">
+			<a class="nav-ico nav-goback" onclick="history.back()"></a>
+			<span class="nav-tit">{$rs.goods_name}</span>
+			<div class="navBtn">
+				<a class="nav-ico nav-more"></a>
+				<a class="nav-ico nav-cart"></a>
+			</div>
+		</div>
+	</div>
+
+	<div class="main main-sb">
+		<!--
+			相册 start
+		-->
+
+		<div style="width: 100%; max-width: 640px; overflow: hidden; margin: 0 auto; height: 0; padding-bottom: 75.5%; position: relative;">
+			<div class="am-slider am-slider-a1 ecGoodsFlash" data-collectid="{$rs.goods_gallery_id}" style=" margin-bottom: 0px; overflow: hidden;"  data-am-widget="slider" data-am-slider='{&quot;directionNav&quot;:false}'>
+				<ul class="am-slides" id="auto-loop">
+					<!-- <li data-src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=9446&amp;width=640&amp;height=480&amp;type=2" class="am-active-slide" style="width: 640px; float: left; display: block;"><img class="" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=9446&amp;width=640&amp;height=480&amp;type=2" draggable="false"></li>-->
+				</ul>
+
+				<div class="favouriteGoods" id="favouriteGoods" data-goodsid="{$rs.goods_id}" style="overflow: hidden; display: none;">
+					<span class="ico ico-favourite"></span>
+					<span class="text">收藏</span>
+				</div>
+			</div>
+		</div>
+
+		<!--内容-->
+		<div class="fx-block-single goods-sb-baseinfo" style="border-top: 0;">
+			<div class="store-details clearfix">
+				<div class="store-name-distance">
+					<p class="orange">大盘鸡<span class="hui">第01期</span></p>
+				</div>
+				<div class="store-address-phone clearfix hui">
+					<p>新疆的大盘鸡是饭菜合一的食品，红烧鸡中加入土豆、青红椒，最后与皮带面拌在一
+						起，相当实惠的一大盘。我用鸡腿代替了整鸡，满盘满口全是肉，吃着就是过瘾啊。</p>
+				</div>
+				<div class="more-store pngmore " style="border-bottom: none; font-size: 16px;">
+					<a href="" class="orange">制作材料</a>
+				</div>
+				<div class="rule-1">
+					<div class="details">
+						<ul>
+							<li class="Graystripe">鸡腿 <span class="hui">4只</span></li>
+							<li>土豆 <span class="hui">2个</span></li>
+							<li class="Graystripe">青椒 <span class="hui">一个</span></li>
+							<li>红椒 <span class="hui">一个</span></li>
+							<li class="Graystripe">&nbsp;&nbsp;&nbsp;油 <span class="hui">2勺</span></li>
+							<li>食盐 <span class="hui">1勺</span></li>
+							<li class="Graystripe">生抽 <span class="hui">1勺</span></li>
+							<li>老抽 <span class="hui">1勺</span></li>
+						</ul>
+					</div>
+					<div class="details">
+						<ul>
+							<li class="Graystripe">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;姜 <span class="hui">10克</span></li>
+							<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;蒜 <span class="hui">4瓣</span></li>
+							<li class="Graystripe">&nbsp;&nbsp;&nbsp;花椒 <span class="hui">10克</span></li>
+							<li>&nbsp;&nbsp;&nbsp;八角 <span class="hui">2个</span></li>
+							<li class="Graystripe">&nbsp;&nbsp;&nbsp;桂皮 <span class="hui">1片</span></li>
+							<li>&nbsp;&nbsp;&nbsp;香油 <span class="hui">1勺</span></li>
+							<li class="Graystripe">干辣椒 <span class="hui">5个</span></li>
+							<li>&nbsp;&nbsp;&nbsp;鸡精 <span class="hui">1勺</span></li>
+							<li class="Graystripe"></li>
+						</ul>
+					</div>
+					<div class="details" style="width: 100%;">
+						<ul>
+							<li class="Graystripe">料酒 <span class="hui">1勺</span></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="more-store pngmore " style="border-bottom: none; font-size: 16px;">
+					<a href="" class="orange" style="line-height: 35px;">制作材料</a>
+				</div>
+				<div class="more-store s_1" style=" padding-left: 0;">
+					<div class="number">
+						<h1 class="" style="">1、</h1>
+					</div>
+					<div class="number_img">
+						<a href=""><img src="../img/xiangqing-1.jpg" alt=""/></a>
+					</div>
+					<div class="number_p">
+						<p>面粉加人盐和水揉成稍硬的面团</p>
+					</div>
+				</div>
+				<div class="more-store s_1" style=" padding-left: 0;">
+					<div class="number">
+						<h1 class="" style="">2、</h1>
+					</div>
+					<div class="number_img">
+						<a href=""><img src="../img/xiangqing-2.jpg" alt=""/></a>
+					</div>
+					<div class="number_p">
+						<p>饧好的面团擀成大薄片后切成宽条</p>
+					</div>
+				</div>
+				<div class="more-store pngmore " style="border-bottom: none; font-size: 16px;">
+					<a href="" class="orange" style="line-height: 35px;">小技巧</a>
+
+				</div>
+				<div class="more-store" style=" border-bottom: none; margin-top: -10px;">
+					<p>水量要大一些，一次加够，汤汁留下拌面</p>
+				</div>
+				<div class="gap"></div>
+				<div class="more-store pngmore " style="border-bottom: none; font-size: 16px;">
+					<a href="" class="orange" style="line-height: 35px;">往期菜谱</a>
+				</div>
+				<div class="rule-2" style="padding-right: 6px;">
+					<div class="details-1">
+						<img src="../img/xiangqing-3.png" alt=""/>
+						<p>荷叶营养粥</p>
+					</div>
+					<div class="details-1">
+						<img src="../img/shipu_1.png" alt=""/>
+						<p>银耳花生粥</p>
+					</div>
+					<div class="details-1" style="">
+						<img src="../img/shipu_2.png" alt=""/>
+						<p>芒果奶油蛋糕</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--<div class="ecGoodsFoot" style="background-color:#f8f8f8; position: fixed; bottom: 0; width: 100%;">
+			<div class="padding" style="text-align: center; height: 60px; margin-top: 10px;">
+				<button type="button" class="ecBtn" id="btnBuynow" style=" width: 80%;">立即购买</button>
+				&lt;!&ndash;<if condition="($rs['可购买'])">
+                <button type="button" class="ecBtn" id="btnBuynow">立即购买</button>
+                </if>&ndash;&gt;
+			</div>
+		</div>-->
+
+	</div>
+	<!--<include file="Goods:modalBuy" />-->
+
+	<!--<script src="../js/qiehua.js"></script>-->
+	<script>
+		$(function(){
+		var len=0;
+		var f=0;
+		var cq=0;
+		// ¸øµ¼º½°ó¶¨Ê±¼ä
+		$('.nav_top li').click(function(){
+		var t=$(this).index();
+		var wh=$('.line').width();
+		f=-25*t+"%";
+		cq=100*t+"%";
+		$(this).parents('.box_163css').find('.nav_mid').css({'-webkit-transform':'translate('+f+')','-webkit-transition':'500ms linear'} );
+		$(this).parents('.box_163css').find('.line').css({'-webkit-transform':'translate('+cq+')','-webkit-transition':'300ms linear'} );
+		$(this).siblings().removeClass('on');
+		$(this).addClass('on');
+		})
+		//
+		$('.box01').swipeLeft(function(){
+		var i=$(this).index()+1;
+		len=-25*i+"%";
+		cq=100*i+"%";
+		if(i==4){return false}
+		else{
+
+		$(this).parent('.nav_mid').css({'-webkit-transform':'translate('+len+')','-webkit-transition':'500ms linear'} );
+		// kongzhi xian de
+		$(this).parents('.box_163css').find('.line').css({'-webkit-transform':'translate('+cq+')','-webkit-transition':'500ms linear'} );
+		//
+		$(this).parents('.box_163css').find('.nav_top li').eq(i).siblings().removeClass('on');
+		$(this).parents('.box_163css').find('.nav_top li').eq(i).addClass('on');
+		}
+		})
+		$('.box01').swipeRight(function(){
+		var i=$(this).index();
+		if(i==0){return false}
+		else{
+		var n=i-1;
+		len=-25*n+"%";
+		cq=100*n+"%";
+		$(this).parents('.box_163css').find('.nav_mid').css({'-webkit-transform':'translate('+len+')','-webkit-transition':'500ms linear'} );
+		$(this).parents('.box_163css').find('.line').css({'-webkit-transform':'translate('+cq+')','-webkit-transition':'500ms linear'} );
+		$(this).parents('.box_163css').find('.nav_top li').eq(i-1).siblings().removeClass('on');
+		$(this).parents('.box_163css').find('.nav_top li').eq(i-1).addClass('on');
+		}
+		})
+		})
+	</script>
+</body>
+</html>

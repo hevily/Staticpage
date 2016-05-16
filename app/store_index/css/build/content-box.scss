@@ -1,0 +1,21 @@
+@import "base";
+/* content-box */
+.content-boxs{
+	.content{
+		border-top:1px solid $normal-gapline;padding-top:$ptd;background-color: $normal-bg;
+		.content-action{
+			background-color: $white;border-top:1px solid $normal-gapline;padding: $pd;
+			.content-btn{
+				display:inline-block;
+				border:1px solid $lightGray;
+				@include border-radius(5px);
+				.content-btn-img{ height: 20px;width: 20px;}
+			}
+		}
+		.content-box{min-height:500px; background-color: $white;padding-left:$pd;}
+	}
+	.item-goods{
+		&:last-child{border-bottom:none;}
+	}
+	
+}

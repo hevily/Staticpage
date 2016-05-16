@@ -1,10 +1,12 @@
 @charset "utf-8";
-
+	$zero:0;
 // percent
-	$half:25%;
+	$half:50%;
 	$whole:100%;
 // percent end
 // color setting
+	// normal bg
+		$normal-bg: #F2F2F2;
 	// usually color 常用颜色
 		$color-theme: #f36303;	// 橙色
 		$color-theme-block: #FF8D4D;	// 浅橙色
@@ -30,6 +32,19 @@
 	// mask 蒙层
 		$mask:rgba(0,0,0,0.75);	// 蒙版颜色 弹层颜色
 // color end
+// margin padding
+	$pd: 10px;
+	$ptd:$pd;
+	$prd:$pd;
+	$pbd:$pd;
+	$pld:$pd;
+
+	$md: 10px;
+	$mtd: $md;
+	$mrd: $md;
+	$mbd: $md;
+	$mld: $md;
+// margin padding end
 // font-size
 	$font-header:20px;
 // font-size end

@@ -1,4 +1,9 @@
+html,body{font-size: 10px;}
+body{height: auto}
 @import "/statichtml/moviehelper/app/Public/base.css";
 @import "store-header";
 @import "roll-corner";
 @import "media";
+@import "auto-srcoll-nav";
+@import "content-box";
+@import "good-item";
