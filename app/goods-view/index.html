@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <!-- <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../css/" /> -->
+	<title>商品详情</title>
+	<style type="text/css">
+		/*.tabs:active{background-color: red;}*/
+		.tabs{text-align: center;height: 45px;}
+		.tab{height: 45px;line-height: 45px;color: #3F3F3F;font-size: 1.6rem;float: left;width:50%;
+			/*display: inline-block;*/
+		}
+		.one.tabs{border-bottom:1px solid #cfcfcf;}
+		.one .active.tab{color: #f36303;}
+		.bl{display:inline-block;position: relative;}
+		.active .bl::after{position: absolute;content:'';bottom: 0;height: 2px;background-color: #f36303;width:100%;left:0;}
+		.two.tabs{padding:9px;background-color: #EFEFF4;height: 50px;}
+		.two.tabs .tab{font-size: 1.4rem; border:1px solid #f36303;height: 30px;line-height: 30px;color: #f36303;background-color: #fff;}
+		.two.tabs .tab:nth-child(2){border-left:none;border-right:none;}
+		.two .active.tab{color:#fff;background-color: #f36303;}
+		.money-name{min-width:180px;color: #656565;font-size: 1.6rem;}
+		.money-name span{color: #353535;padding-left: 6px;}
+		.money-num{color: #f36303;font-size: 1.8rem;padding-top: 8px;font-weight: bold;}
+		.tabpanel{display: none;}
+		.showing{display: block;}
+		
+		.img-box{padding-top: 14px;}
+		.img-box img{ width:100%;display: block; }
+		.text-box p{text-indent: calc(2em + 2px);text-align: justify;line-height: 28px; letter-spacing: 2px; color: #454545;	}
+
+
+		/* media */
+		.media {
+		  margin-top: 15px; }
+		  .media:first-child {
+		    margin-top: 0; }
+
+		.media,
+		.media-body {
+		  zoom: 1;
+		  overflow: hidden; }
+
+		.media-body {
+		  width: 10000px; }
+
+		.media-object {
+		  display: block; 
+		  width: 60px;
+		  height: 60px;
+		}
+		  .media-object.img-thumbnail {
+		    max-width: none; }
+
+		.media-right,
+		.media > .pull-right {
+		  padding-left: 10px; }
+
+		.media-left,
+		.media > .pull-left {
+		  padding-right: 10px; }
+
+		.media-left,
+		.media-right,
+		.media-body {
+		  display: table-cell;
+		  vertical-align: top; }
+
+		.media-middle {
+		  vertical-align: middle; }
+
+		.media-bottom {
+		  vertical-align: bottom; }
+
+		.media-heading {
+		  margin-top: 0;
+		  margin-bottom: 5px; }
+
+		.media-list {
+		  padding-left: 0;
+		  list-style: none; }
+		  .replay-user-logo{border-radius: 50%;border:2px solid #fff;}
+		  .replay-time{font-size: 12px;}
+		  .replay-action p{width: 100px;}
+		.replay-praise,.replay-comment{display: inline-block;}
+		.replay-praise img,.replay-comment img,.replay-praise span,.replay-comment span{}
+		.replay-praise img{width: 24px;height: 22px;}
+		.replay-comment img{width: 26px;height: 24px;}
+	</style>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="section">
+			
+		</div>
+		<div class="section">
+			<div class="tabs one clearfix">
+						<div class="tab active" style="width:100%;">
+							<div class="bl">
+								图文详情<span></span>
+							</div>
+						</div>
+						<div class="tab" hidden>
+							<div class="bl">
+								客户点评(<span>3</span>)
+							</div>
+						</div>
+			</div>
+			<div class="tab-content">
+				<div class="tabpanel draft showing">
+					<!-- <div class="gamptb"></div> -->
+						<div class="img-box">
+							<img src="img/1.jpg" alt="图片展示">
+							<img src="img/1.jpg" alt="图片展示">
+							<img src="img/1.jpg" alt="图片展示">
+						</div>
+						<div class="text-box">
+							<p>文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述</p>
+						</div>
+				</div>
+				<div class="tabpanel client-replay ">
+					<div class="replays">
+						<div class="replay media">
+							<div class="media-left ">
+								<img src="img/1.jpg" alt="user-logo" class="media-object replay-user-logo">
+							</div>
+							<div class="media-body media-middle">
+								<div class="replay-user-name">张毕</div>
+								<p class="replay-time">
+									2016-5-25 11:30
+								</p>
+							</div>
+							<div class="media-right media-bottom replay-action">
+								<p><span class="replay-praise"><img src="img/praise.png" alt="赞"><span>152</span></span><span class="replay-comment"><img src="img/comment.png" alt="评论"><span>132</span></span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer></footer>
+	<script src="/statichtml/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('.tabs .tab').click(function () {
+				var _this = $(this);
+				_this.siblings('.tab').removeClass('active');
+				_this.addClass('active');
+				var thistab = _this.closest('.tabs').next('.tab-content').children('.tabpanel').eq(_this.index());
+				thistab.siblings('.tabpanel').removeClass('showing');
+				thistab.addClass('showing');
+			})
+
+		})
+	</script>
+</body>
+</html>
