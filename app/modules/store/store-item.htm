@@ -6,27 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <!-- <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" /> -->
     <!-- <link rel="stylesheet" type="text/css" href="../css/" /> -->
-	<title>代金券</title>
+	<title>店铺</title>
 
-	<!-- 在原基础控件上添加voucher类名前缀 .voucher-XX -->
+	<!-- 在原基础控件上添加voucher类名前缀 .store-XX -->
 
 	<style type="text/css">
 	*{margin: 0;padding: 0;box-sizing: border-box;  font-family: 'Microsoft YaHei','Hiragino Sans GB',Helvetica,Arial,'Lucida Grande',sans-serif;}
 	/*clearfix*/
-	.voucher-clearfix:before,.voucher-clearfix:after {content: ".";display: block;height: 0;visibility: hidden;}
-	.voucher-clearfix:after {clear: both;}
-	.voucher-clearfix {zoom: 1;} /* IE < 8 */
+	.store-clearfix:before,.store-clearfix:after {content: ".";display: block;height: 0;visibility: hidden;}
+	.store-clearfix:after {clear: both;}
+	.store-clearfix {zoom: 1;} /* IE < 8 */
 
 
 
-			.voucher-res-show li {
+			.store-res-show li {
 			    border-bottom: 1px solid #C9C9C9;
 			    position: relative;
 			    clear: both;
 			    padding: 10px;
 			    padding-bottom: 10px;
 			}
-			.voucher-for-more {
+			.store-for-more {
 			    position: absolute;
 			    right: 7px;
 			    top: 50%;
@@ -35,29 +35,31 @@
 			    height: 12px;
 			    width: 8px;
 			}
-			.voucher-res {
+			.store-res {
 			    position: relative;
 			}
-			.voucher-img {
+			.store-img {
 			    position: absolute;
 			    padding: 1px;
 			    top: 0;
 			    left: 0;
-			    width: 100px;
-			    height: 100px;
+			    width: 80px;
+			    height: 80px;
+			    padding: 1px;
 			    border-radius: 0;
-			    border: 1px solid #fff;
+			    border: 1px solid #909090;;
+			    border-radius: 3px;
 			}
-			.voucher-description {
+			.store-description {
 			    position: relative;
-			    height: 100px;
-			    margin-left: 110px;
+			    height: 80px;
+			    margin-left: 90px;
 			    margin-bottom: 0px;
 			}
-			.voucher-sell-two .voucher-ysj {
+			.store-sell-two .store-ysj {
 			    display: block;
 			}
-			.voucher-ysj {
+			.store-ysj {
 			    border-top: none;
 			    position: relative;
 			    padding-right: 15px;
@@ -67,27 +69,27 @@
 			    margin: 0 -10px;
 			}
 
-			.voucher-img img {
+			.store-img img {
 			    width: 100%;
 			    height: 100%;
-			    border-radius: 0;
+			    border-radius: 3px;
 			}
-			.voucher-none .voucher-name {
+			.store-none .store-name {
 			    padding-right: 0;
 			}
 
-			.voucher-description .voucher-name {
+			.store-description .store-name {
 			    overflow: hidden;
 			    white-space: nowrap;
 			    text-overflow: ellipsis;
 			    font-weight: bold;
 			    font-size: 18px;
 			}
-			.voucher-name {
+			.store-name {
 			    padding-right: 35px;
 			    position: relative;
 			}
-			.voucher-description .voucher-name div {
+			.store-description .store-name div {
 			    overflow: hidden;
 			    white-space: nowrap;
 			    text-overflow: ellipsis;
@@ -95,11 +97,11 @@
 			    font-size: 18px;
 			    line-height: 22px;
 			}
-			.voucher-none .voucher-name span {
+			.store-none .store-name span {
 			    display: none;
 			}
 
-			.voucher-name span {
+			.store-name span {
 			    position: absolute;
 			    right: 10px;
 			    top: 0;
@@ -110,49 +112,49 @@
 			    padding: 4px;
 			    color: #fff;
 			    line-height: 12px;
-			}.voucher-res .voucher-attribute p {
+			}.store-res .store-attribute p {
 			    -webkit-line-clamp: 2;
 			    font-size: 16px;
 			    line-height: 20px;
 			    padding-top: 8px;
 			    padding-right: 5px;
 			}
-			.voucher-res .voucher-attribute p {
+			.store-res .store-attribute p {
 			    overflow: hidden;
 			    text-overflow: ellipsis;
 			    display: -webkit-box;
-			    -webkit-line-clamp: 2;
+			    -webkit-line-clamp: 1;
 			    -webkit-box-orient: vertical;
 			    font-size: 16px;
 			    font-weight: normal;
 			    color: #727272;
 			}
-			.voucher-price p {
+			.store-price p {
 			    color: #686868;
 			    font-size: 16px;
 			}
-			.voucher-belong, .voucher-pnum {
+			.store-belong, .store-pnum {
 				position: absolute;
 			    bottom: 1px;
 			}
-			.voucher-belong {
+			.store-belong {
 			    bottom: 0;
 			    right: 15px;
 			    color: #909090 !important;
 			    font-size: 12px;
 			}
-			.voucher-belong img {
+			.store-belong img {
 			    height: 18px;
 			    width: 18px;
 			    position: relative;
 			    top: 3px;
 			    left: -3px;
 			}
-			.voucher-price span {
+			.store-price span {
 			    color: #909090;
 			    font-size: 12px;
 			}
-			.voucher-ysj .voucher-tags {
+			.store-ysj .store-tags {
 			    position: relative;
 			    color: #f36303;
 			    background-color: #FAFAFA;
@@ -163,7 +165,7 @@
 			    float: left;
 			    margin-top: 4px;
 			}
-			.voucher-ysj .voucher-tags:before {
+			.store-ysj .store-tags:before {
 			    position: absolute;
 			    right: -1px;
 			    bottom: -1px;
@@ -172,80 +174,96 @@
 			    background-image: url(right-bottom.png);
 			    content: "";
 			}
+
+			.store-res a {
+				text-decoration: none;
+			    margin-top: 2px;
+			    color: #f36303;
+			    text-decoration: none;
+			    border: 1px solid #f36303;
+			    border-radius: 3px;
+			    padding: 2px 4px;
+			    padding-left: 0;
+			    font-size: 14px;
+			}
+			.store-pnum a {
+			    border: none;
+			    color: #828282;
+			}
 	</style>
 </head>
 <body>
 	<header></header>
 	<div class="container">
 		<div class="section">
-			<ul class="voucher-res-show">
+			<ul class="store-res-show">
 				
 				<li>
 					<!-- default -->
-					<img class="voucher-for-more" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/img/tyt/for-more.png" alt="更多">
-					<div class="voucher-res voucher-sell-two voucher-none">
-						<div class="voucher-img">
+					<img class="store-for-more" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/img/tyt/for-more.png" alt="更多">
+					<div class="store-res store-sell-two">
+						<div class="store-img">
 							<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=90261&amp;width=60&amp;height=60&amp;type=3" alt="logo">
 						</div>
-						<div class="voucher-description">
-							<div class="voucher-name">
+						<div class="store-description">
+							<div class="store-name">
 								<div>
 									店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店
 								</div>
 								<span>券</span>
 							</div>
-							<div class="voucher-attribute">
+							<div class="store-attribute">
 								<p>规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则</p>
 							</div>
-							<div class="voucher-price">
-								<p class="voucher-pnum">¥88 <del>100</del></p>
-								<p class="voucher-belong"><img src="location.png" alt="定位">1.2<span>km</span></p>
+							<div class="store-price">
+								<p class="store-pnum"><a href="tel:135-2176-4587" type="phone">135-2176-4587</a></p>
+								<p class="store-belong"><img src="location.png" alt="定位">1.2<span>km</span></p>
 							</div>
 						</div>
-						<div class="voucher-ysj voucher-clearfix">
-							<div class="voucher-tags">饮料<span></span></div>
-							<div class="voucher-tags">美食<span></span></div>
-							<div class="voucher-tags">娱乐<span></span></div>
-							<div class="voucher-tags">饮料<span></span></div>
-							<div class="voucher-tags">美食<span></span></div>
-							<div class="voucher-tags">娱乐<span></span></div>
-							<div class="voucher-tags">饮料<span></span></div>
-							<div class="voucher-tags">美食<span></span></div>
+						<div class="store-ysj store-clearfix">
+							<div class="store-tags">饮料<span></span></div>
+							<div class="store-tags">美食<span></span></div>
+							<div class="store-tags">娱乐<span></span></div>
+							<div class="store-tags">饮料<span></span></div>
+							<div class="store-tags">美食<span></span></div>
+							<div class="store-tags">娱乐<span></span></div>
+							<div class="store-tags">饮料<span></span></div>
+							<div class="store-tags">美食<span></span></div>
 						</div>
 					</div>
 				</li>
 				
 				<li>
 					<!-- default -->
-					<img class="voucher-for-more" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/img/tyt/for-more.png" alt="更多">
-					<div class="voucher-res voucher-sell-two voucher-none">
-						<div class="voucher-img">
+					<img class="store-for-more" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/img/tyt/for-more.png" alt="更多">
+					<div class="store-res store-sell-two store-none">
+						<div class="store-img">
 							<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=90261&amp;width=60&amp;height=60&amp;type=3" alt="logo">
 						</div>
-						<div class="voucher-description">
-							<div class="voucher-name">
+						<div class="store-description">
+							<div class="store-name">
 								<div>
 									店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店
 								</div>
 								<span>券</span>
 							</div>
-							<div class="voucher-attribute">
+							<div class="store-attribute">
 								<p>规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则</p>
 							</div>
-							<div class="voucher-price">
-								<p class="voucher-pnum">¥88 <del>100</del></p>
-								<p class="voucher-belong"><img src="location.png" alt="定位">1.2<span>km</span></p>
+							<div class="store-price">
+								<p class="store-pnum"><a href="tel:135-2176-4587" type="phone">135-2176-4587</a></p>
+								<p class="store-belong"><img src="location.png" alt="定位">1.2<span>km</span></p>
 							</div>
 						</div>
-						<div class="voucher-ysj voucher-clearfix">
-							<div class="voucher-tags">饮料<span></span></div>
-							<div class="voucher-tags">美食<span></span></div>
-							<div class="voucher-tags">娱乐<span></span></div>
-							<div class="voucher-tags">饮料<span></span></div>
-							<div class="voucher-tags">美食<span></span></div>
-							<div class="voucher-tags">娱乐<span></span></div>
-							<div class="voucher-tags">饮料<span></span></div>
-							<div class="voucher-tags">美食<span></span></div>
+						<div class="store-ysj store-clearfix">
+							<div class="store-tags">饮料<span></span></div>
+							<div class="store-tags">美食<span></span></div>
+							<div class="store-tags">娱乐<span></span></div>
+							<div class="store-tags">饮料<span></span></div>
+							<div class="store-tags">美食<span></span></div>
+							<div class="store-tags">娱乐<span></span></div>
+							<div class="store-tags">饮料<span></span></div>
+							<div class="store-tags">美食<span></span></div>
 						</div>
 					</div>
 				</li>

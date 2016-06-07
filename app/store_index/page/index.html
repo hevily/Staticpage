@@ -7,13 +7,12 @@
 <!--     <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" />
  -->    <link rel="stylesheet" type="text/css" href="../css/store.css">
     <!-- <link rel="stylesheet" type="text/css" href="../css/" /> -->
-	<title>滚动加载更多</title>
+	<title>店铺</title>
 	<style>
 		body{height: auto;}
 		.img{overflow:hidden;height: 200px;}
 		.img ul li{width: 100px;position: relative;display: inline-block;}
 		.img ul{overflow-x:scroll;overflow-y:hidden;white-space: nowrap;-webkit-overflow-scrolling:touch;}
-		img{width:100%;}
 		.content{height: calc(100%);position: relative;}
 		
 	</style>
@@ -27,12 +26,23 @@
 			
 		<div class="store-header clearfix">
 			<div class="store-info clearfix">
-				<div class="store-img">
-					<img src="/statichtml/bjmovie01/estores/Public/images/home/4/bg.jpg">
+				<div class="media">
+					<div class="media-left">
+						<a href="javascript:;">
+							<img src="/statichtml/bjmovie01/estores/Public/images/home/4/bg.jpg" alt="store-logo" class="media-object">
+						</a>
+					</div>
+					<div class="media-body media-middle">
+						店铺名称店铺名称店铺名称
+					</div>
+					<div class="media-right media-middle">
+						<p>
+							简介
+							<a href="javascript:;"><img src="../img/for-more-orange.png" alt="store-simple" class="media-object"></a>
+						</p>
+					</div>
 				</div>
-				<div class="store-name">
-					店铺名称店铺名称店铺名称
-				</div>
+				
 			</div>
 	        <div class="company-tags clearfix">
 	        	<div class="roll-corner">
@@ -78,52 +88,47 @@
 					<li class="media">
 					  <div class="media-left media-middle">
 					    <a href="#">
-					      <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTRiNDAyODFjZSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NGI0MDI4MWNlIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxNC41IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true" >
+					      <img class="media-object" alt="64x64" src="../img/store-header/store-addres@2x.png" >
 					    </a>
 					  </div>
 					  <div class="media-body media-middle">
 					    <h4 class="media-heading ">地址栏</h4>
 					  </div>
-					  <div class="media-right">
+					  <div class="media-right media-middle">
 					          <a href="#">
-					            <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTRiNDAyODFjZSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NGI0MDI4MWNlIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxNC41IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true" >
+					            <img class="media-object" alt="64x64" src="../img/store-header/more@2x.png" data-holder-rendered="true" >
 					          </a>
 					        </div>
 					</li>
 					<li class="media">
 					  <div class="media-left media-middle">
 					    <a href="#">
-					      <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTRiNDAyODFjZSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NGI0MDI4MWNlIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxNC41IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true" >
+					      <img class="media-object" alt="64x64" src="../img/store-header/phone@2x.png" >
 					    </a>
 					  </div>
 					  <div class="media-body media-middle">
-					    <h4 class="media-heading ">地址栏</h4>
+					    <h4 class="media-heading">010-89767897,12345678901</h4>
 					  </div>
-					  <div class="media-right">
-					          <a href="#">
-					            <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTRiNDAyODFjZSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NGI0MDI4MWNlIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxNC41IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true" >
-					          </a>
-					        </div>
 					</li>
 				</ul>
 				<div class="img-text-borders clearfix two">
 					<div class="img-text-border">
-						 <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTRiNDAyODFjZSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NGI0MDI4MWNlIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxNC41IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true">
-						 加入会员
+						 <img class="media-object" alt="64x64" src="../img/store-header/attention@2x.png">
+						 <span>关注</span>
 					</div>
 					<div class="img-text-border">
-						 <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTRiNDAyODFjZSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NGI0MDI4MWNlIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxNC41IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true">
-						 加入会员
+						 <img class="media-object" alt="64x64" src="../img/store-header/trace-newsfeed@2x.png">
+						 <span>追踪动态</span>
 					</div>
 				</div>
 				<div class="img-text-borders clearfix two">
 					<div class="img-text-border">
-						 <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTRiNDAyODFjZSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NGI0MDI4MWNlIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxNC41IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true">
-						 加入会员
+						 <img class="media-object" alt="64x64" src="../img/store-header/server-online@2x.png">
+						 <span>在线客服</span>
 					</div>
 					<div class="img-text-border">
-						 <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTRiNDAyODFjZSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NGI0MDI4MWNlIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxNC41IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true">
-						 加入会员
+						 <img class="media-object" alt="64x64" src="../img/store-header/insert-member@2x.png">
+						 <span>加入会员</span>
 					</div>
 				</div>
 		</div>
@@ -135,50 +140,52 @@
 					<ul class="img-text-borders">
 						<li data-content='content1'>
 							<div class="img-text-border">
-								 <span>
-								 	<img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTRiNDAyODFjZSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NGI0MDI4MWNlIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxNC41IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true">
-								 </span>
-								 推荐
+								 <!-- <span> -->
+								 	<img class="media-object" alt="64x64" src="../img/store-nav/content1@2x.png">
+								 <!-- </span> -->
+								 <span>推荐</span>
 							</div>
 						</li>
 						<li data-content='content2'>
 							<div class="img-text-border">
-								 <span>
-								 	<img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTRiNDAyODFjZSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NGI0MDI4MWNlIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxNC41IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true">
-								 </span>
-								 系列
+								 <!-- <span> -->
+								 	<img class="media-object" alt="64x64" src="../img/store-nav/content2@2x.png">
+								 <!-- </span> -->
+								 <span>系列</span>
 							</div>
 						</li>
 						<li data-content='content3'>
 							<div class="img-text-border">
-								 <span>
- 								 	<img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTRiNDAyODFjZSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NGI0MDI4MWNlIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxNC41IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true">
- 								 </span>
-								 简介
+								 <!-- <span> -->
+ 								 	<img class="media-object" alt="64x64" src="../img/store-nav/content3@2x.png">
+ 								 <!-- </span> -->
+								 <span>代金券</span>
 							</div>
 						</li>
 						<li data-content='content4'>
 							<div class="img-text-border">
-								 <span>
- 								 	<img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTRiNDAyODFjZSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NGI0MDI4MWNlIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxNC41IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true">
- 								 </span>
-								 附近
+								 <!-- <span> -->
+ 								 	<img class="media-object" alt="64x64" src="../img/store-nav/content4@2x.png">
+ 								 <!-- </span> -->
+								 <span>附近</span>
 							</div>
 						</li>
-						<li data-content='content5'>
+						<!-- <li data-content='content5'>
 							<div class="img-text-border">
 								 <span>
- 								 	<img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTRiNDAyODFjZSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NGI0MDI4MWNlIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxNC41IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true">
+ 								 	<img class="media-object" alt="64x64" src="">
  								 </span>
 								 点评
 							</div>
-						</li>
+						</li> -->
 						<li data-content='content6'>
 							<div class="img-text-border">
+								 <!-- <span> -->
+								 	<img class="media-object" alt="64x64" src="../img/store-nav/content5@2x.png">
+ 								 <!-- </span> -->
 								 <span>
- 								 	<img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTRiNDAyODFjZSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NGI0MDI4MWNlIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxNC41IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true">
- 								 </span>
-								 动态
+								 	动态
+								 </span>
 							</div>
 						</li>
 					</ul>
@@ -189,7 +196,8 @@
 			<div class="content content1">
 				<div class="content-action">
 					<a class="content-btn" href="javascript:;">
-						<img class="content-btn-img" src="">推荐
+						<img class="content-btn-img" src="../img/store-nav/content1@2x.png">
+						<span>推荐</span>
 					</a>
 				</div>
 				<div class="content-box">
@@ -323,7 +331,8 @@
 			<div class="content content2">
 				<div class="content-action">
 					<a class="content-btn" href="javascript:;">
-						<img class="content-btn-img" src="">系列
+						<img class="content-btn-img" src="">
+						<span>系列</span>
 					</a>
 				</div>
 				<div class="content-box">
@@ -333,11 +342,152 @@
 			<div class="content content3">
 				<div class="content-action">
 					<a class="content-btn" href="javascript:;">
-						<img class="content-btn-img" src="">简介
+						<img class="content-btn-img" src="">
+						<span>代金券</span>
 					</a>
 				</div>
 				<div class="content-box">
 					
+					<ul class="voucher-res-show">
+						
+						<li>
+							<!-- default -->
+							<img class="voucher-for-more" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/img/tyt/for-more.png" alt="更多">
+							<div class="voucher-res voucher-sell-two voucher-none">
+								<div class="voucher-img">
+									<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=90261&amp;width=60&amp;height=60&amp;type=3" alt="logo">
+								</div>
+								<div class="voucher-description">
+									<div class="voucher-name">
+										<div>
+											店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店
+										</div>
+										<span>券</span>
+									</div>
+									<div class="voucher-attribute">
+										<p>规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则</p>
+									</div>
+									<div class="voucher-price">
+										<p class="voucher-pnum">¥88 <del>100</del></p>
+										<p class="voucher-belong"><img src="../img/location.png" alt="定位">1.2<span>km</span></p>
+									</div>
+								</div>
+								<div class="voucher-ysj voucher-clearfix">
+									<div class="voucher-tags">饮料<span></span></div>
+									<div class="voucher-tags">美食<span></span></div>
+									<div class="voucher-tags">娱乐<span></span></div>
+									<div class="voucher-tags">饮料<span></span></div>
+									<div class="voucher-tags">美食<span></span></div>
+									<div class="voucher-tags">娱乐<span></span></div>
+									<div class="voucher-tags">饮料<span></span></div>
+									<div class="voucher-tags">美食<span></span></div>
+								</div>
+							</div>
+						</li>
+						
+						<li>
+							<!-- default -->
+							<img class="voucher-for-more" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/img/tyt/for-more.png" alt="更多">
+							<div class="voucher-res voucher-sell-two voucher-none">
+								<div class="voucher-img">
+									<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=90261&amp;width=60&amp;height=60&amp;type=3" alt="logo">
+								</div>
+								<div class="voucher-description">
+									<div class="voucher-name">
+										<div>
+											店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店
+										</div>
+										<span>券</span>
+									</div>
+									<div class="voucher-attribute">
+										<p>规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则</p>
+									</div>
+									<div class="voucher-price">
+										<p class="voucher-pnum">¥88 <del>100</del></p>
+										<p class="voucher-belong"><img src="../img/location.png" alt="定位">1.2<span>km</span></p>
+									</div>
+								</div>
+								<div class="voucher-ysj voucher-clearfix">
+									<div class="voucher-tags">饮料<span></span></div>
+									<div class="voucher-tags">美食<span></span></div>
+									<div class="voucher-tags">娱乐<span></span></div>
+									<div class="voucher-tags">饮料<span></span></div>
+									<div class="voucher-tags">美食<span></span></div>
+									<div class="voucher-tags">娱乐<span></span></div>
+									<div class="voucher-tags">饮料<span></span></div>
+									<div class="voucher-tags">美食<span></span></div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<!-- default -->
+							<img class="voucher-for-more" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/img/tyt/for-more.png" alt="更多">
+							<div class="voucher-res voucher-sell-two voucher-none">
+								<div class="voucher-img">
+									<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=90261&amp;width=60&amp;height=60&amp;type=3" alt="logo">
+								</div>
+								<div class="voucher-description">
+									<div class="voucher-name">
+										<div>
+											店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店
+										</div>
+										<span>券</span>
+									</div>
+									<div class="voucher-attribute">
+										<p>规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则</p>
+									</div>
+									<div class="voucher-price">
+										<p class="voucher-pnum">¥88 <del>100</del></p>
+										<p class="voucher-belong"><img src="../img/location.png" alt="定位">1.2<span>km</span></p>
+									</div>
+								</div>
+								<div class="voucher-ysj voucher-clearfix">
+									<div class="voucher-tags">饮料<span></span></div>
+									<div class="voucher-tags">美食<span></span></div>
+									<div class="voucher-tags">娱乐<span></span></div>
+									<div class="voucher-tags">饮料<span></span></div>
+									<div class="voucher-tags">美食<span></span></div>
+									<div class="voucher-tags">娱乐<span></span></div>
+									<div class="voucher-tags">饮料<span></span></div>
+									<div class="voucher-tags">美食<span></span></div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<!-- default -->
+							<img class="voucher-for-more" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/img/tyt/for-more.png" alt="更多">
+							<div class="voucher-res voucher-sell-two voucher-none">
+								<div class="voucher-img">
+									<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=90261&amp;width=60&amp;height=60&amp;type=3" alt="logo">
+								</div>
+								<div class="voucher-description">
+									<div class="voucher-name">
+										<div>
+											店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店
+										</div>
+										<span>券</span>
+									</div>
+									<div class="voucher-attribute">
+										<p>规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则</p>
+									</div>
+									<div class="voucher-price">
+										<p class="voucher-pnum">¥88 <del>100</del></p>
+										<p class="voucher-belong"><img src="../img/location.png" alt="定位">1.2<span>km</span></p>
+									</div>
+								</div>
+								<div class="voucher-ysj voucher-clearfix">
+									<div class="voucher-tags">饮料<span></span></div>
+									<div class="voucher-tags">美食<span></span></div>
+									<div class="voucher-tags">娱乐<span></span></div>
+									<div class="voucher-tags">饮料<span></span></div>
+									<div class="voucher-tags">美食<span></span></div>
+									<div class="voucher-tags">娱乐<span></span></div>
+									<div class="voucher-tags">饮料<span></span></div>
+									<div class="voucher-tags">美食<span></span></div>
+								</div>
+							</div>
+						</li>
+					</ul>
 				</div>
 			</div>
 			<div class="content content4">
@@ -346,38 +496,73 @@
 						<img class="content-btn-img" src="">附近
 					</a>
 				</div>
+				
 				<div class="content-box">
 					<ul class="similar-stores">
 						<li class="similar-store">
-							<div class="media">
-	                            <div class="media-left media-middle">
-	                                <a href="#"><img class="media-object" src="../img/duixianma-1.jpg" alt="代金券图标"></a>
+							<div class="similar-media">
+	                            <div class="similar-media-left similar-media-middle">
+	                                <a href="#"><img class="similar-media-object" src="../img/duixianma-1.jpg" alt="代金券图标"></a>
 	                            </div>
-	                            <div class="media-body" style="">
-	                                <div class="vochers-description">
+	                            <div class="similar-media-body" style="">
+	                                <div class="similar-vochers-description">
 	                                    <p>微粥园</p>
-	                                    <p class="star" style="float:left;">
-		                                    <span class="pitch" style=""><img src="../img/xing_on.png" alt=""></span>
+	                                    <p class="similar-star">
+		                                    <span class="similar-pitch" style=""><img src="../img/xing_on.png" alt=""></span>
 		                                    <span><img src="../img/xing_on.png" alt=""></span>
 		                                    <span><img src="../img/xing_on.png" alt=""></span>
 		                                    <span><img src="../img/xing_on.png" alt=""></span>
-		                                    <span class="Space"><img src="../img/xing_non.png" alt=""></span>
-		                                    <span class="yueshou">月售120单</span>
+		                                    <span class="similar-Space"><img src="../img/xing_non.png" alt=""></span>
+		                                    <span class="similar-yueshou">月售120单</span>
 	                                    </p>
 	                                    <!--<span style="padding-top: 0;"></span>-->
-	                                    <p style="color: #686868; font-size: 13px; margin-top: 28px; clear: both;">免配送费</p>
+	                                    <p  class="similar-take-rull">免配送费</p>
 	                                    <!--<p class="status"><span class="unused fnormal orange ">未消费</span><span class="used fnormal darkgray hidden">已消费</span></p>-->
 	                                </div>
 	                            </div>
 
-	                            <div class="media-right media-middle" style="position: absolute; top: 5px; right: 10px;">
-	                                <a href="javascript:;"><img class="media-object" src="../img/for-more.png" alt="more" style=" float: right;"></a>
-	                                <p style="float: right; margin-top: 1px;"><span class="orange" style="font-weight: 600; font-size: 16px;">￥20</span>起送</p>
-	                                <p style="float: right; margin-top: 3px;">20分钟 &nbsp;&nbsp;<span>520</span>m</p>
+	                            <div class="similar-media-right similar-media-middle similar-poa" >
+	                                <a href="javascript:;"><img class="similar-media-object" src="../img/for-more.png" alt="more" style=" float: right;"></a>
+	                                <p class="similar-take-base"><span class="orange" style="font-weight: 600; font-size: 16px;">￥20</span>起送</p>
+	                                <p class="similar-take-time">20分钟 &nbsp;&nbsp;<span>520</span>m</p>
 	                            </div>
-	                            <div class="juan">
-	                                <p><span class="hui">减</span> 在线支付满20减8,满30减10</p>
-	                                <p style="margin-bottom: 2px;"><span class="juan-1">新</span> 首单立减10元</p>
+	                            <div class="similar-juan">
+	                                <p><span class="similar-hui">减</span> 在线支付满20减8,满30减10</p>
+	                                <p><span class="similar-juan-1">新</span> 首单立减10元</p>
+	                            </div>
+
+	                        </div>
+						</li>
+						<li class="similar-store">
+							<div class="similar-media">
+	                            <div class="similar-media-left similar-media-middle">
+	                                <a href="#"><img class="similar-media-object" src="../img/duixianma-1.jpg" alt="代金券图标"></a>
+	                            </div>
+	                            <div class="similar-media-body" style="">
+	                                <div class="similar-vochers-description">
+	                                    <p>微粥园</p>
+	                                    <p class="similar-star">
+		                                    <span class="similar-pitch" style=""><img src="../img/xing_on.png" alt=""></span>
+		                                    <span><img src="../img/xing_on.png" alt=""></span>
+		                                    <span><img src="../img/xing_on.png" alt=""></span>
+		                                    <span><img src="../img/xing_on.png" alt=""></span>
+		                                    <span class="similar-Space"><img src="../img/xing_non.png" alt=""></span>
+		                                    <span class="similar-yueshou">月售120单</span>
+	                                    </p>
+	                                    <!--<span style="padding-top: 0;"></span>-->
+	                                    <p  class="similar-take-rull">免配送费</p>
+	                                    <!--<p class="status"><span class="unused fnormal orange ">未消费</span><span class="used fnormal darkgray hidden">已消费</span></p>-->
+	                                </div>
+	                            </div>
+
+	                            <div class="similar-media-right similar-media-middle similar-poa" >
+	                                <a href="javascript:;"><img class="similar-media-object" src="../img/for-more.png" alt="more" style=" float: right;"></a>
+	                                <p class="similar-take-base"><span class="orange" style="font-weight: 600; font-size: 16px;">￥20</span>起送</p>
+	                                <p class="similar-take-time">20分钟 &nbsp;&nbsp;<span>520</span>m</p>
+	                            </div>
+	                            <div class="similar-juan">
+	                                <p><span class="similar-tuan">赠</span> 在线支付满20减8,满30减10</p>
+	                                <p><span class="similar-juan-1">新</span> 首单立减10元</p>
 	                            </div>
 
 	                        </div>
@@ -385,6 +570,131 @@
 					</ul>
 				</div>
 			</div>
+			<div class="content content5">
+				<div class="content-action">
+					<a class="content-btn" href="javascript:;">
+						<img class="content-btn-img" src="">评论
+					</a>
+				</div>
+				<div class="content-box">
+					<div class="store-replay">
+						<div class="replayer">
+							<div class="media">
+								<div class="media-left"><a href="javascript:;" ><img src="" alt="" class="media-object"></a></div>
+								<div class="media-body">
+									<div class="replayer-name">用户名用户名用户名用户名用户名用户名</div>
+									<div class="replayer-star xing-star-four">
+										<span class="xing-control">
+											<img src="../img/xing_on.png" alt="">
+											<img src="../img/xing_non.png" alt="">
+										</span>
+										<span class="xing-control">
+											<img src="../img/xing_on.png" alt="">
+											<img src="../img/xing_non.png" alt="">
+										</span>
+										<span class="xing-control">
+											<img src="../img/xing_on.png" alt="">
+											<img src="../img/xing_non.png" alt="">
+										</span>
+										<span class="xing-control">
+											<img src="../img/xing_on.png" alt="">
+											<img src="../img/xing_non.png" alt="">
+										</span>
+										<span class="xing-control">
+											<img src="../img/xing_on.png" alt="">
+											<img src="../img/xing_non.png" alt="">
+										</span>
+									</div>
+								</div>
+								<div class="media-right media-middle">
+									<p class="replayer-time">2016-5-30 16:08</p>
+								</div>
+							</div>
+							<div class="replayer-text">
+								评价内容内容评价内容内容评价内容内容评价内容内容评价内容内容评价内容内容评价内容内容评价内容内容评价内容内容评价内容内容评价内容内容评价内容内容评价内容内容
+							</div>
+						</div>
+						<div class="replayer">
+							<div class="media">
+								<div class="media-left"><a href="javascript:;" ><img src="" alt="" class="media-object"></a></div>
+								<div class="media-body">
+									<div class="replayer-name">用户名用户名用户名用户名用户名用户名</div>
+									<div class="replayer-star xing-star-four">
+										<span class="xing-control">
+											<img src="../img/xing_on.png" alt="">
+											<img src="../img/xing_non.png" alt="">
+										</span>
+										<span class="xing-control">
+											<img src="../img/xing_on.png" alt="">
+											<img src="../img/xing_non.png" alt="">
+										</span>
+										<span class="xing-control">
+											<img src="../img/xing_on.png" alt="">
+											<img src="../img/xing_non.png" alt="">
+										</span>
+										<span class="xing-control">
+											<img src="../img/xing_on.png" alt="">
+											<img src="../img/xing_non.png" alt="">
+										</span>
+										<span class="xing-control">
+											<img src="../img/xing_on.png" alt="">
+											<img src="../img/xing_non.png" alt="">
+										</span>
+									</div>
+								</div>
+								<div class="media-right media-middle">
+									<p class="replayer-time">2016-5-30 16:08</p>
+								</div>
+							</div>
+							<div class="replayer-text">
+								评价内容内容评价内容内容评价内容内容评价内容内容评价内容内容评价内容内容评价内容内容评价内容内容评价内容内容评价内容内容评价内容内容评价内容内容评价内容内容
+							</div>
+							<div class="replayer-goods">
+								<span>点评</span>物品名称
+							</div>
+						</div>
+						<div class="replayer">
+							<div class="media">
+								<div class="media-left"><a href="javascript:;" ><img src="" alt="" class="media-object"></a></div>
+								<div class="media-body">
+									<div class="replayer-name">用户名用户名用户名用户名用户名用户名</div>
+									<div class="replayer-star xing-star-four">
+										<span class="xing-control">
+											<img src="../img/xing_on.png" alt="">
+											<img src="../img/xing_non.png" alt="">
+										</span>
+										<span class="xing-control">
+											<img src="../img/xing_on.png" alt="">
+											<img src="../img/xing_non.png" alt="">
+										</span>
+										<span class="xing-control">
+											<img src="../img/xing_on.png" alt="">
+											<img src="../img/xing_non.png" alt="">
+										</span>
+										<span class="xing-control">
+											<img src="../img/xing_on.png" alt="">
+											<img src="../img/xing_non.png" alt="">
+										</span>
+										<span class="xing-control">
+											<img src="../img/xing_on.png" alt="">
+											<img src="../img/xing_non.png" alt="">
+										</span>
+									</div>
+								</div>
+								<div class="media-right media-middle">
+									<p class="replayer-time">2016-5-30 16:08</p>
+								</div>
+							</div>
+							<div class="replayer-text">
+								评价内容内容评价内容内容评价内容内容评价内容内容评价内容内容评价内容内容评价内容内容评价内容内容评价内容内容评价内容内容评价内容内容评价内容内容评价内容内容
+							</div>
+						</div>
+					</div>
+
+					
+				</div>
+			</div>
+			
 			<div class="content content6">
 				<div class="content-action">
 					<a class="content-btn" href="javascript:;">
@@ -392,7 +702,58 @@
 					</a>
 				</div>
 				<div class="content-box newsfeeds load-box" data-load='load/content1.htm'>
-					
+					<div class="newsfeed">
+						<div class="newsfeed-creator">
+							<div class="media">
+								<div class="media-left media-middle">
+									<a href="javascript:;">
+										<img src="" alt="" class="media-object">
+									</a>
+								</div>
+								<div class="media-body">
+									<div class="newsfeed-creator-name">店铺名称</div>
+									<div class="newsfeed-creator-time">
+										2016-5-31 13:20
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="newsfeed-body">
+							<div class="newsfeed-body-title">
+								动态标题动态标题动态标题动态标题动态标题动态标题动态标题
+							</div>
+							<div class="newsfeed-body-text">
+								动态内容动态内容动态内容动态内容动态内容动态内容动态内容动态内容动态内容动态内容动态内容动态内容动态内容动态内容动态内容动态内容动态内容动态内容动态内容动态内容动态内容动态内容动态内容动态内容动态内容动态内容动态内容动态内容动态内容动态内容
+							</div>
+							<div class="newsfeed-body-tag clearfix">
+								<div class="roll-corner">
+					        		标签1
+					        	</div>
+							</div>
+							<div class="newsfeed-body-img">
+								<img src="../img/train.jpg">
+								<img src="../img/train.jpg">
+								<img src="../img/train.jpg">
+								<img src="../img/train.jpg">
+								<img src="../img/train.jpg">
+								<img src="../img/train.jpg">
+								<img src="../img/train.jpg">
+								<img src="../img/train.jpg">
+							</div>
+						</div>
+						<div class="newsfeed-action">
+							<hr />
+							<div class="praise-share">
+								<a href="javascript:;">赞</a>
+								<a href="javascript:;">share</a>
+							</div>
+							<div class="comment-more">
+								<a href="javascript:;">评</a>
+								<a href="javascript:;">more</a>
+							</div>
+						</div>
+
+					</div>
 
 					<div class="load-content" data-load='load/content1.htm'></div>
 				</div>
@@ -591,6 +952,15 @@
 				},timeoffset);
 			
 			});
+			function getImgSrc(obj) {
+				var _obj = $(obj),imgSrc = [];
+				$.each(_obj,function (i,item) {
+					imgSrc += $(item).attr('src');
+					console.log(imgSrc+"<br/>")
+				})
+				console.log(imgSrc)
+
+			};getImgSrc('img');
 		})
 	</script>
 </body>

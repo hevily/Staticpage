@@ -7,17 +7,21 @@
 		
 		.img-text-borders{
 			li{
-				float: left;width: 16.6667%;overflow:hidden;
+				float: left;width: 20%;overflow:hidden;
 				a{display: inline-block; width: 100%;text-align: center;}
 				&:first-child{
 					.img-text-border{border-left:none;}
 				}
 				.img-text-border{
-
+					overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 					text-align:center;font-size: 1.2em;border-left:1px solid #E5E5E5;height: 100%;line-height: 15px;
-					span{ height: 18px;width: 18px;overflow:hidden;display:inline-block; @include border-radius(50%);}
+					span{position: relative; height: 18px;width: 18px;overflow:hidden;display:inline-block; @include border-radius(50%);
+						&:last-child{min-width:38px;}
+					}
 					// &:first-child{border-left:none;}
-					.media-object{height: 10px;width: 10px;display:inline-block;}
+					.media-object{height: 18px;width: 18px;display:inline-block;}
 				}
 			}
 		}

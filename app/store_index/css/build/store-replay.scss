@@ -1,0 +1,130 @@
+@charset "utf-8";
+/* 用户评论模块 */
+/* 星级评价类名 xing-star-one（two,three,four,five) */
+.store-replay{
+	.replayer{
+		border-top:1px solid #C9C9C9;
+		padding-top: 10px;
+		&:nth-child(1){
+			border-top:none;
+			padding-top: 0;
+		}
+		.media{
+			.media-left{
+				.media-object{
+					width: 35px;
+					height: 35px;
+					border-radius:50%;
+				}
+			}
+			.media-body{
+				.replayer-name{
+					width:100%;
+					// white-space:nowrap;
+					height:22px;
+					font-size: 16px;
+					font-weight: bold;
+					overflow:hidden;
+				}
+				// 评价星级
+				.replayer-star{
+					.xing-control{
+						img{
+							height: 15px;
+							width: 15px;
+							float: left;
+							&:nth-child(1){
+								display:none;
+							}
+						}
+					}
+					&.xing-star-one{
+						.xing-control{
+							&:nth-child(1){
+								display:block;
+								img:nth-child(1){display:block;}
+								img:nth-child(2){display:none;}
+							}
+						}
+					}
+					&.xing-star-two{
+						.xing-control{
+							&:nth-child(1){
+								display:block;
+								img:nth-child(1){display:block;}
+								img:nth-child(2){display:none;}
+							}
+							&:nth-child(2){
+								display:block;
+								img:nth-child(1){display:block;}
+								img:nth-child(2){display:none;}
+							}
+						}
+					}
+					&.xing-star-three{
+						.xing-control{
+							&:nth-child(1){
+								display:block;
+								img:nth-child(1){display:block;}
+								img:nth-child(2){display:none;}
+							}
+							&:nth-child(2){
+								display:block;
+								img:nth-child(1){display:block;}
+								img:nth-child(2){display:none;}
+							}
+							&:nth-child(3){
+								display:block;
+								img:nth-child(1){display:block;}
+								img:nth-child(2){display:none;}
+							}
+						}
+					}
+					&.xing-star-four{
+
+						.xing-control{
+							& img:nth-child(1){display:block;}
+							& img:nth-child(2){display:none;}
+							&:nth-child(5){
+								img{
+									&:nth-child(1){
+										display:none;
+									}
+									&:nth-child(2){
+										display:block;
+									}
+								}
+							}
+						}
+					}
+					&.xing-star-five{
+						.xing-control{
+							& img:nth-child(1){display:block;}
+							& img:nth-child(2){display:none;}
+						}
+					}
+				}
+			}
+			.media-right{
+				.replayer-time{
+					white-space:nowrap;
+					padding-right: 10px;
+				}
+
+			}
+		}
+		.replayer-text{
+			margin-top: 10px;
+			font-size: 14px;
+			padding-right: 10px;
+			padding-bottom:7px;
+		}
+		.replayer-goods{
+			color:#000;
+			text-align:right;
+			padding-right: 10px;
+			padding-bottom: 4px;
+			span{color:#9B9B9B;padding-right: 10px;}
+		}
+	}
+}

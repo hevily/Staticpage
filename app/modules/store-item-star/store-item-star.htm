@@ -1,90 +1,223 @@
-<meta charset="utf-8">
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <!-- <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../css/" /> -->
+  <title>星标代金券 外卖</title>
+  <style type="text/css">
+    /* 外卖模块 */
+    *{margin: 0;padding: 0;box-sizing: border-box;    font-family: 'Microsoft YaHei','Hiragino Sans GB',Helvetica,Arial,'Lucida Grande',sans-serif;}
+    .orange {
+        color: #F36303;
+        border-color: #f36303;
+    }
+.similar-media {
+  margin-top: 15px; font-size: 12px;}
 
-<style type="text/css">
-    body{margin: 0;}
-</style>
-<style type="text/css">
-    /* media */
-    *{-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
-    .media {
-      margin-top: 15px; }
-      .media:first-child {
-        margin-top: 0; }
+.similar-media:first-child {
+  margin-top: 0; }
 
-    .media,
-    .media-body {
-      zoom: 1;
-      overflow: hidden; }
+.similar-media,
+.similar-media-body {
+  zoom: 1;
+  overflow: hidden; }
 
-    .media-body {
-      width: 10000px; }
+.similar-media-body {
+  width: 10000px; }
 
-    .media-object {
-      display: block; }
-      .media-object.img-thumbnail {
-        max-width: none; }
+.similar-media-object {
+  display: block; }
 
-    .media-right,
-    .media > .pull-right {
-      padding-left: 10px; }
+.similar-media-object.similar-img-thumbnail {
+  max-width: none; }
 
-    .media-left,
-    .media > .pull-left {
-      padding-right: 10px; }
+.similar-media-right,
+.similar-media > .similar-pull-right {
+  padding-left: 10px; }
 
-    .media-left,
-    .media-right,
-    .media-body {
-      display: table-cell;
-      vertical-align: top; }
+.similar-media-left,
+.similar-media > .similar-pull-left {
+  padding-right: 10px; }
 
-    .media-middle {
-      vertical-align: middle; }
+.similar-media-left,
+.similar-media-right,
+.similar-media-body {
+  display: table-cell;
+  vertical-align: top; }
 
-    .media-bottom {
-      vertical-align: bottom; }
+.similar-media-middle {
+  vertical-align: middle; }
 
-    .media-heading {
-      margin-top: 0;
-      margin-bottom: 5px; }
+.similar-media-bottom {
+  vertical-align: bottom; }
 
-    .media-list {
-      padding-left: 0;
-      list-style: none; }
+.similar-media-heading {
+  margin-top: 0;
+  margin-bottom: 5px; }
 
-</style>
-<style type="text/css">
-    
-</style>
-<div class="media">
-    <div class="media-left media-middle">
-        <a href="#"><img class="media-object" src="duixianma-1.jpg" alt="代金券图标"></a>
+.similar-media-list {
+  padding-left: 0;
+  list-style: none; }
+
+.similar-media {
+  margin-top: 15px;
+  position: relative;
+  width: 100%;
+  padding: 10px 10px;
+  border-bottom: 1px solid #C9C9C9; }
+  .similar-media, .similar-media .similar-media-body {
+    overflow: hidden;
+    zoom: 1; }
+  .similar-media:first-child {
+    margin-top: 0; }
+  .similar-media .similar-media-object {
+    width: 60px;
+    height: 60px; }
+  .similar-media .similar-media-body p {
+    width: 100%;
+    height: 19px; }
+  .similar-media .similar-media-body .similar-vochers-description p:first-child {
+    font-weight: bold; }
+  .similar-media .similar-media-body .similar-vochers-description P:nth-child(2) {
+    color: #7B7B7B; }
+  .similar-media .similar-media-body .similar-star {
+    float: left; }
+    .similar-media .similar-media-body .similar-star span img {
+      width: 16px;
+      height: 15px; }
+  .similar-media .similar-media-right.similar-poa {
+    position: absolute;
+    top: 10px;
+    right: 10px; }
+    .similar-media .similar-media-right.similar-poa p {
+      clear: both;
+      font-size: 13px;
+      color: #686868;
+      /* margin-top: 28px; */ }
+    .similar-media .similar-media-right.similar-poa p.similar-take-base {
+      float: right;
+      margin-top: 1px; }
+    .similar-media .similar-media-right.similar-poa p.similar-take-time {
+      float: right;
+      margin-top: 8px; }
+  .similar-media .similar-media-right img {
+    height: 14px;
+    width: 8px;
+    margin-bottom: 4px; }
+  .similar-media .similar-juan {
+    border-top: 1px dashed #C9C9C9;
+    color: #686868;
+    margin-left: 72px;
+    margin-top: 5px; }
+    .similar-media .similar-juan p {
+      height: 27px;
+      padding-top: 7px;
+      clear: both; }
+    .similar-media .similar-juan .similar-tuan {
+      padding: 3px 6px;
+      background: #A0D87F;
+      color: white;
+      border-radius: 5px; }
+    .similar-media .similar-juan .similar-hui {
+      padding: 3px 6px;
+      background: #E25452;
+      color: white;
+      border-radius: 5px; }
+    .similar-media .similar-juan .similar-juan-1 {
+      padding: 3px 6px;
+      background: #229DC9;
+      color: white;
+      border-radius: 5px; }
+  .similar-media .similar-take-rull {
+    color: #686868;
+    font-size: 13px;
+    margin-top: 28px;
+    clear: both; }
+  </style>
+</head>
+<body>
+  <header></header>
+  <div class="container">
+    <div class="section">
+
+        <ul class="similar-stores">
+            <li class="similar-store">
+                <div class="similar-media">
+                    <div class="similar-media-left similar-media-middle">
+                        <a href="#"><img class="similar-media-object" src="duixianma-1.jpg" alt="代金券图标"></a>
+                    </div>
+                    <div class="similar-media-body" style="">
+                        <div class="similar-vochers-description">
+                            <p>微粥园</p>
+                            <p class="similar-star">
+                                <span class="similar-pitch" style=""><img src="xing_on.png" alt=""></span>
+                                <span><img src="xing_on.png" alt=""></span>
+                                <span><img src="xing_on.png" alt=""></span>
+                                <span><img src="xing_on.png" alt=""></span>
+                                <span class="similar-Space"><img src="xing_non.png" alt=""></span>
+                                <span class="similar-yueshou">月售120单</span>
+                            </p>
+                            <!--<span style="padding-top: 0;"></span>-->
+                            <p  class="similar-take-rull">免配送费</p>
+                            <!--<p class="status"><span class="unused fnormal orange ">未消费</span><span class="used fnormal darkgray hidden">已消费</span></p>-->
+                        </div>
+                    </div>
+
+                    <div class="similar-media-right similar-media-middle similar-poa" >
+                        <a href="javascript:;"><img class="similar-media-object" src="for-more.png" alt="more" style=" float: right;"></a>
+                        <p class="similar-take-base"><span class="orange" style="font-weight: 600; font-size: 16px;">￥20</span>起送</p>
+                        <p class="similar-take-time">20分钟 &nbsp;&nbsp;<span>520</span>m</p>
+                    </div>
+                    <div class="similar-juan">
+                        <p><span class="similar-hui">减</span> 在线支付满20减8,满30减10</p>
+                        <p><span class="similar-juan-1">新</span> 首单立减10元</p>
+                    </div>
+
+                </div>
+            </li>
+            <li class="similar-store">
+                <div class="similar-media">
+                    <div class="similar-media-left similar-media-middle">
+                        <a href="#"><img class="similar-media-object" src="duixianma-1.jpg" alt="代金券图标"></a>
+                    </div>
+                    <div class="similar-media-body" style="">
+                        <div class="similar-vochers-description">
+                            <p>微粥园</p>
+                            <p class="similar-star">
+                                <span class="similar-pitch" style=""><img src="xing_on.png" alt=""></span>
+                                <span><img src="xing_on.png" alt=""></span>
+                                <span><img src="xing_on.png" alt=""></span>
+                                <span><img src="xing_on.png" alt=""></span>
+                                <span class="similar-Space"><img src="xing_non.png" alt=""></span>
+                                <span class="similar-yueshou">月售120单</span>
+                            </p>
+                            <!--<span style="padding-top: 0;"></span>-->
+                            <p  class="similar-take-rull">免配送费</p>
+                            <!--<p class="status"><span class="unused fnormal orange ">未消费</span><span class="used fnormal darkgray hidden">已消费</span></p>-->
+                        </div>
+                    </div>
+
+                    <div class="similar-media-right similar-media-middle similar-poa" >
+                        <a href="javascript:;"><img class="similar-media-object" src="for-more.png" alt="more" style=" float: right;"></a>
+                        <p class="similar-take-base"><span class="orange" style="font-weight: 600; font-size: 16px;">￥20</span>起送</p>
+                        <p class="similar-take-time">20分钟 &nbsp;&nbsp;<span>520</span>m</p>
+                    </div>
+                    <div class="similar-juan">
+                        <p><span class="similar-tuan">赠</span> 在线支付满20减8,满30减10</p>
+                        <p><span class="similar-juan-1">新</span> 首单立减10元</p>
+                    </div>
+
+                </div>
+            </li>
+        </ul>
     </div>
-    <div class="media-body" style="">
-        <div class="vochers-description">
-            <p>微粥园</p>
-            <p class="star">
-                <span class="pitch" style=""><img src="xing_on.png" alt=""></span>
-                <span><img src="xing_on.png" alt=""></span>
-                <span><img src="xing_on.png" alt=""></span>
-                <span><img src="xing_on.png" alt=""></span>
-                <span class="Space"><img src="xing_non.png" alt=""></span>
-                <span class="yueshou">月售120单</span>
-            </p>
-            <!--<span style="padding-top: 0;"></span>-->
-            <p style="color: #686868; font-size: 13px; margin-top: 28px; clear: both;">免配送费</p>
-            <!--<p class="status"><span class="unused fnormal orange ">未消费</span><span class="used fnormal darkgray hidden">已消费</span></p>-->
-        </div>
-    </div>
+    <div class="section">
 
-    <div class="media-right media-middle" style="position: absolute; top: 5px; right: 10px;">
-        <a href="javascript:;"><img class="media-object" src="for-more.png" alt="more" style=" float: right;"></a>
-        <p style="float: right; margin-top: 1px;"><span class="orange" style="font-weight: 600; font-size: 16px;">￥20</span>起送</p>
-        <p style="float: right; margin-top: 3px;">20分钟 &nbsp;&nbsp;<span>520</span>m</p>
     </div>
-    <div class="juan">
-        <p><span class="hui">减</span> 在线支付满20减8,满30减10</p>
-        <p style="margin-bottom: 2px;"><span class="juan-1">新</span> 首单立减10元</p>
-    </div>
-
-</div>
+  </div>
+  <footer></footer>
+</body>
+</html>

@@ -12,28 +12,70 @@ $i-t-b-color: red;
 .store-info{
 	margin: 25px 0 20px 10px; background-color: $store_bgcolor;
 	@include left-radius(3px);
-	.store-name{float: left;line-height: $store_img_height+px; @include font-header(18px,$color-text-normal);}
+	.store-name{float: left;line-height: $store_img_height+px; @include font-header(18px,$color-text-normal);padding-right: 30px;}
 	.store-img{
 		float: left;width: $store_img_width+px;height: $store_img_height+px;padding:2px;
 		img{width: $store_img_scale;height: $store_img_scale;@include border-radius(3px);
 		}
 	}
+	.store-simple{
+		float: right;
+		img{
+			width: 8px;
+			height: 12px;
+		}
+	}
+	.media{
+		@include left-radius(3px);
+		.media-left{
+		    width: 80px;
+		    height: 80px;padding: 2px;background-color: #fff;
+		    @include right-radius(3px);
+		    .media-object{border-radius:3px;}
+		}
+		.media-body{
+		font-size: 18px;color:#3F3F3F;padding-left: 8px;
+		}
+		.media-right{
+			overflow: hidden;
+		    white-space: nowrap;
+		    text-overflow: ellipsis;
+		    color:#f36303;
+		    font-size: 16px;
+		    padding-right: 10px;
+		    p{width: 45px;}
+		    .media-object{float: right;display:inline-block;}
+		}
+	}
+
+
 }
 .store-action{
 	.new-page{
 		.media{
 			border-bottom:1px solid $normal-gapline;margin: 0;padding:$pd;
 			&:first-child{}
-			.media-object{height: 20px;width: 20px;}
+			.media-object{height: 20px;width: auto;}
+			.media-body{
+				.media-heading{
+					margin-bottom: 0;
+					font-size: 16px;
+					font-weight: normal;
+				}
+			}
+			.media-right{
+				.media-object{height: 11px;}
+			}
 		}
 	}
 
 	.img-text-borders{
 		padding:$ptd $zero $pbd $zero; border-bottom:1px solid $normal-gapline;
 		.img-text-border{
-			float: left;text-align:center;border-left:1px solid $normal-gapline;
-			.media-object{height: 18px;width: 18px;display:inline-block;}
+			float: left;text-align:center;border-left:1px solid $normal-gapline;padding-top: 5px;height: 25px;
+			.media-object{height: 18px;width: auto;display:inline-block;}
 			&:first-child{border-left:none;}
+			span{height: 21px;display:inline-block;top:-5px;position: relative;}
 		}
 	}
 	.two{

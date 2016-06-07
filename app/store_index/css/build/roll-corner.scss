@@ -7,6 +7,6 @@ $roll_bg: #F1F2F4;
 $corner-width:4px;
 $corner-color: #fff;
 .company-tags{padding:0 10px;}
-.roll-corner{ position:relative; height:$roll-height; background-color: $roll_bg; float:left;border:1px solid $roll-color;padding-right:$corner-width;margin-right:3*$corner-width;margin-bottom: $corner-width; @include left-radius(3px);padding-left: 4px;}
+.roll-corner{ position:relative; height:$roll-height; line-height:($roll-height - 2px); background-color: $roll_bg; float:left;border:1px solid $roll-color;padding-right:$corner-width;margin-right:3*$corner-width;margin-bottom: $corner-width; @include left-radius(3px);padding-left: 4px;}
 .roll-corner:before{content:"";@include poa;@include right(-2*$corner-width - 1);@include top(-1px); width:(($corner-width *2));height:(($roll-height - 2*$corner-width)-2); background-color: $roll-bg;border-right:1px solid $roll-color;border-top:1px solid $roll-color;border-bottom:1px solid $roll-color;@include top-right-radius(3px);}
 .roll-corner:after{content:"";@include poa;@include right(-2*$corner-width - 1);@include bottom(-1px);border-top:$corner-width solid $corner-color;border-left:$corner-width solid $corner-color;border-right:4px solid rgba(0,0,0,0);border-bottom:4px solid rgba(0,0,0,0);}
