@@ -268,18 +268,30 @@ body {
         .scoll_nav_box .float-box-nav #scroll_nav .img-text-borders li .img-text-border .media-object {
           height: 18px;
           width: 18px;
-          display: inline-block; }
+          display: inline-block;
+          vertical-align: top; }
+          .scoll_nav_box .float-box-nav #scroll_nav .img-text-borders li .img-text-border .media-object:nth-child(2) {
+            display: none; }
 
 .floatNav {
   position: fixed !important;
   transition: all;
   border-bottom: 1px solid #C9C9C9; }
+  .floatNav.float-box-nav {
+    animation: scroll_nav 0.8s ease 1; }
 
 .actived {
   color: #f36303; }
-  .actived span {
-    background-color: #f36303; }
+  .actived .media-object:nth-child(1) {
+    display: none !important; }
+  .actived .media-object:nth-child(2) {
+    display: inline-block !important; }
 
+@keyframes scroll_nav {
+  from {
+    top: -35px; }
+  to {
+    top: 0; } }
 /* 模块容器 */
 .normal-text {
   color: #3F3F3F; }
@@ -295,13 +307,18 @@ body {
     padding: 10px; }
     .content-boxs .content .content-action .content-btn {
       display: inline-block;
+      height: 31px;
+      padding: 4px 8px;
       border: 1px solid #EFEFF4;
       -webkit-border-radius: 5px;
       -moz-border-radius: 5px;
       border-radius: 5px; }
       .content-boxs .content .content-action .content-btn .content-btn-img {
         height: 20px;
-        width: 20px; }
+        width: auto;
+        vertical-align: top; }
+      .content-boxs .content .content-action .content-btn span {
+        line-height: 22px; }
   .content-boxs .content .content-box {
     min-height: 500px;
     background-color: #FFF;

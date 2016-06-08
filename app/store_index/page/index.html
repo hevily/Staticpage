@@ -140,52 +140,37 @@
 					<ul class="img-text-borders">
 						<li data-content='content1'>
 							<div class="img-text-border">
-								 <!-- <span> -->
 								 	<img class="media-object" alt="64x64" src="../img/store-nav/content1@2x.png">
-								 <!-- </span> -->
-								 <span>推荐</span>
+								 	<img class="media-object" alt="64x64" src="../img/store-nav/content1d@2x.png">
+								 推荐
 							</div>
 						</li>
 						<li data-content='content2'>
 							<div class="img-text-border">
-								 <!-- <span> -->
 								 	<img class="media-object" alt="64x64" src="../img/store-nav/content2@2x.png">
-								 <!-- </span> -->
-								 <span>系列</span>
+								 	<img class="media-object" alt="64x64" src="../img/store-nav/content2d@2x.png">
+								 系列
 							</div>
 						</li>
 						<li data-content='content3'>
 							<div class="img-text-border">
-								 <!-- <span> -->
  								 	<img class="media-object" alt="64x64" src="../img/store-nav/content3@2x.png">
- 								 <!-- </span> -->
-								 <span>代金券</span>
+ 								 	<img class="media-object" alt="64x64" src="../img/store-nav/content3d@2x.png">
+								 代金券
 							</div>
 						</li>
 						<li data-content='content4'>
 							<div class="img-text-border">
-								 <!-- <span> -->
- 								 	<img class="media-object" alt="64x64" src="../img/store-nav/content4@2x.png">
- 								 <!-- </span> -->
-								 <span>附近</span>
+ 								 	<img class="media-object" alt="64x64" src="../img/store-nav/content3@2x.png">
+ 								 	<img class="media-object" alt="64x64" src="../img/store-nav/content3d@2x.png">
+								 附近
 							</div>
 						</li>
-						<!-- <li data-content='content5'>
-							<div class="img-text-border">
-								 <span>
- 								 	<img class="media-object" alt="64x64" src="">
- 								 </span>
-								 点评
-							</div>
-						</li> -->
 						<li data-content='content6'>
 							<div class="img-text-border">
-								 <!-- <span> -->
 								 	<img class="media-object" alt="64x64" src="../img/store-nav/content5@2x.png">
- 								 <!-- </span> -->
-								 <span>
+								 	<img class="media-object" alt="64x64" src="../img/store-nav/content5d@2x.png">
 								 	动态
-								 </span>
 							</div>
 						</li>
 					</ul>
@@ -196,7 +181,7 @@
 			<div class="content content1">
 				<div class="content-action">
 					<a class="content-btn" href="javascript:;">
-						<img class="content-btn-img" src="../img/store-nav/content1@2x.png">
+						<img class="content-btn-img" src="../img/store-nav/content1c@2x.png">
 						<span>推荐</span>
 					</a>
 				</div>
@@ -331,7 +316,7 @@
 			<div class="content content2">
 				<div class="content-action">
 					<a class="content-btn" href="javascript:;">
-						<img class="content-btn-img" src="">
+						<img class="content-btn-img" src="../img/store-nav/content2c@2x.png">
 						<span>系列</span>
 					</a>
 				</div>
@@ -342,7 +327,7 @@
 			<div class="content content3">
 				<div class="content-action">
 					<a class="content-btn" href="javascript:;">
-						<img class="content-btn-img" src="">
+						<img class="content-btn-img" src="../img/store-nav/content3c@2x.png">
 						<span>代金券</span>
 					</a>
 				</div>
@@ -493,7 +478,8 @@
 			<div class="content content4">
 				<div class="content-action">
 					<a class="content-btn" href="javascript:;">
-						<img class="content-btn-img" src="">附近
+						<img class="content-btn-img" src="../img/store-nav/content3c@2x.png">
+						<span>附近</span>
 					</a>
 				</div>
 				
@@ -570,10 +556,10 @@
 					</ul>
 				</div>
 			</div>
-			<div class="content content5">
+			<div class="content content5" hidden>
 				<div class="content-action">
 					<a class="content-btn" href="javascript:;">
-						<img class="content-btn-img" src="">评论
+						<img class="content-btn-img" src="../img/store-nav/content4c@2x.png">评论
 					</a>
 				</div>
 				<div class="content-box">
@@ -698,7 +684,8 @@
 			<div class="content content6">
 				<div class="content-action">
 					<a class="content-btn" href="javascript:;">
-						<img class="content-btn-img" src="">动态
+						<img class="content-btn-img" src="../img/store-nav/content5c@2x.png">
+						<span>动态</span>
 					</a>
 				</div>
 				<div class="content-box newsfeeds load-box" data-load='load/content1.htm'>
@@ -781,7 +768,7 @@
 	</script>
 	<script>
 		$(function () {
-			var nav = $('#scroll_nav'),offTop = 30,navTop = $('#scroll_nav').offset().top
+			var nav = $('#scroll_nav'),offTop = 35,navTop = $('#scroll_nav').offset().top
 			$('#scroll_nav li').click(function () {
 					var liIndex = $(this).closest('li').index()
 						content = $(this).closest('li').data('content')
@@ -937,7 +924,8 @@
 
 					// float navbar
 					function floatNav(goal,class_name) {
-						if (scrollTop > navTop) {
+						console.log(navTop)
+						if (scrollTop > (navTop-10)) {
 							// alert('已超过')
 							if (!$(goal).hasClass(class_name)) {
 								// alert('已修改')
@@ -948,7 +936,6 @@
 						}
 					}
 					floatNav('.float-box-nav',"floatNav")
-					// $('#scroll_nav').animate({"top":60})
 				},timeoffset);
 			
 			});
@@ -956,9 +943,9 @@
 				var _obj = $(obj),imgSrc = [];
 				$.each(_obj,function (i,item) {
 					imgSrc += $(item).attr('src');
-					console.log(imgSrc+"<br/>")
+					// console.log(imgSrc+"<br/>")
 				})
-				console.log(imgSrc)
+				// console.log(imgSrc)
 
 			};getImgSrc('img');
 		})

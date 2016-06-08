@@ -7,9 +7,11 @@
 			background-color: $white;border-top:1px solid $normal-gapline;padding: $pd;
 			.content-btn{
 				display:inline-block;
+				height: 31px;padding: 4px 8px;
 				border:1px solid $lightGray;
 				@include border-radius(5px);
-				.content-btn-img{ height: 20px;width: 20px;}
+				.content-btn-img{ height: 20px;width: auto;vertical-align:top;}
+				span{line-height: 22px;}
 			}
 		}
 		.content-box{min-height:500px; background-color: $white;padding-left:$pd;}
