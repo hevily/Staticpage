@@ -1,0 +1,19 @@
+.newsfeed-action{
+	clear:both;
+	ul.newsfeed-action-msg{
+		li{
+			width: 50%;float: left;display:inline-block;
+			img{
+				width: 14px;height:auto;
+			}
+		}
+	}
+	ul.newsfeed-action-btn{
+		li{
+			width: 33%;float: left;display:inline-block;text-align:center;
+			img{
+				width: 14px;height:auto;
+			}
+		}
+	}
+}

@@ -622,7 +622,28 @@ body {
   margin-top: 5px;
   margin-bottom: 5px; }
 
+.newsfeed-action {
+  clear: both; }
+  .newsfeed-action ul.newsfeed-action-msg li {
+    width: 50%;
+    float: left;
+    display: inline-block; }
+    .newsfeed-action ul.newsfeed-action-msg li img {
+      width: 14px;
+      height: auto; }
+  .newsfeed-action ul.newsfeed-action-btn li {
+    width: 33%;
+    float: left;
+    display: inline-block;
+    text-align: center; }
+    .newsfeed-action ul.newsfeed-action-btn li img {
+      width: 14px;
+      height: auto; }
+
 /* 代金券模块 */
+.normal-text {
+  color: #3F3F3F; }
+
 /*clearfix*/
 .voucher-clearfix:before, .voucher-clearfix:after {
   content: ".";
@@ -664,15 +685,15 @@ body {
   padding: 1px;
   top: 0;
   left: 0;
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   border-radius: 0;
   border: 1px solid #fff; }
 
 .voucher-description {
   position: relative;
-  height: 100px;
-  margin-left: 110px;
+  height: 75px;
+  margin-left: 85px;
   margin-bottom: 0px; }
 
 .voucher-sell-two .voucher-ysj {
@@ -740,7 +761,7 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   font-size: 16px;
   font-weight: normal;
@@ -780,7 +801,8 @@ body {
   border-radius: 3px;
   padding: 0 13px;
   float: left;
-  margin-top: 4px; }
+  margin-top: 4px;
+  font-size: 14px; }
 
 .voucher-ysj .voucher-tags:before {
   position: absolute;
@@ -790,5 +812,38 @@ body {
   width: 10px;
   background-image: url(right-bottom.png);
   content: ""; }
+
+.voucher-yh {
+  margin-top: 5px;
+  font-size: 14px;
+  position: relative; }
+  .voucher-yh span {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    text-align: center;
+    line-height: 16px;
+    margin-right: 5px;
+    color: #fff; }
+  .voucher-yh .yh {
+    background-color: #E35353; }
+  .voucher-yh .pq {
+    background-color: #239CC7; }
+  .voucher-yh .qnum {
+    position: absolute;
+    text-align: center;
+    line-height: 20px;
+    height: 20px;
+    width: 20px;
+    bottom: 0;
+    right: 0px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #ff0022;
+    color: #fff; }
 
 /*# sourceMappingURL=store.css.map */

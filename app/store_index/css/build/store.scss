@@ -20,5 +20,7 @@ body{height: auto;-webkit-overflow-scrolling:touch;}
 @import "store-replay";
 /* 动态模块 */
 @import "newsfeed";
+@import "newsfeed-action";
+
 /* 代金券模块 */
 @import "voucher";
