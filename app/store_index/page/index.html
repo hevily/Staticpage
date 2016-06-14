@@ -15,6 +15,10 @@
 		.img ul{overflow-x:scroll;overflow-y:hidden;white-space: nowrap;-webkit-overflow-scrolling:touch;}
 		.content{height: calc(100%);position: relative;}
 		
+
+
+		
+
 	</style>
 
 </head>
@@ -28,17 +32,17 @@
 			<div class="store-info clearfix">
 				<div class="media">
 					<div class="media-left">
-						<a href="javascript:;">
+						<!-- <a href="javascript:;"> -->
 							<img src="/statichtml/bjmovie01/estores/Public/images/home/4/bg.jpg" alt="store-logo" class="media-object">
-						</a>
+						<!-- </a> -->
 					</div>
 					<div class="media-body media-middle">
 						店铺名称店铺名称店铺名称
 					</div>
 					<div class="media-right media-middle">
 						<p>
-							简介
-							<a href="javascript:;"><img src="../img/for-more-orange.png" alt="store-simple" class="media-object"></a>
+							<a href="javascript:;">简介
+							<img src="../img/for-more-orange.png" alt="store-simple" class="media-object"></a>
 						</p>
 					</div>
 				</div>
@@ -107,28 +111,35 @@
 					    </a>
 					  </div>
 					  <div class="media-body media-middle">
-					    <h4 class="media-heading">010-89767897,12345678901</h4>
+					    <h4 class="media-heading">
+					    	<a href="tel:010-89767897">010-89767897</a>
+					    	<a href="tel:12345678901">12345678901</a>
+					    </h4>
 					  </div>
 					</li>
 				</ul>
 				<div class="img-text-borders clearfix two">
 					<div class="img-text-border">
+						 <img class="media-object" alt="64x64" src="../img/store-header/attentioned@2x.png">
 						 <img class="media-object" alt="64x64" src="../img/store-header/attention@2x.png">
-						 <span>关注</span>
+						 <span class="uneye">关注</span>
+						 <span class="oneye">已关注</span>
 					</div>
 					<div class="img-text-border">
-						 <img class="media-object" alt="64x64" src="../img/store-header/trace-newsfeed@2x.png">
-						 <span>追踪动态</span>
+						 <img class="media-object" alt="64x64" src="../img/store-header/trace-newsfeed@2x.png"><img class="media-object" alt="64x64" src="../img/store-header/traced-newsfeed@2x.png">
+						 <span class="uneye">追踪动态</span>
+						 <span class="oneye">已追踪动态</span>
 					</div>
 				</div>
 				<div class="img-text-borders clearfix two">
-					<div class="img-text-border">
+					<div class="img-text-border undo">
 						 <img class="media-object" alt="64x64" src="../img/store-header/server-online@2x.png">
 						 <span>在线客服</span>
 					</div>
 					<div class="img-text-border">
-						 <img class="media-object" alt="64x64" src="../img/store-header/insert-member@2x.png">
-						 <span>加入会员</span>
+						 <img class="media-object" alt="64x64" src="../img/store-header/insert-member@2x.png"><img class="media-object" alt="64x64" src="../img/store-header/insert-member@2x.png">
+						 <span class="uneye">加入会员</span>
+						 <span class="oneye">已加入会员</span>
 					</div>
 				</div>
 		</div>
@@ -156,14 +167,14 @@
 							<div class="img-text-border">
  								 	<img class="media-object" alt="64x64" src="../img/store-nav/content3@2x.png">
  								 	<img class="media-object" alt="64x64" src="../img/store-nav/content3d@2x.png">
-								 代金券
+								 附近
 							</div>
 						</li>
 						<li data-content='content4'>
 							<div class="img-text-border">
  								 	<img class="media-object" alt="64x64" src="../img/store-nav/content3@2x.png">
  								 	<img class="media-object" alt="64x64" src="../img/store-nav/content3d@2x.png">
-								 附近
+								 外送
 							</div>
 						</li>
 						<li data-content='content6'>
@@ -184,17 +195,23 @@
 						<img class="content-btn-img" src="../img/store-nav/content1c@2x.png">
 						<span>推荐</span>
 					</a>
+					<a href="javascript:;" class="see-more">更多<img src="../img/for-more.png" alt=""></a>
 				</div>
-				<div class="content-box">
-					<div class="item-goods" data-isuseattributes="0" data-url="/statichtml/bjmovie01/estores/Home/Goods/view?goods_id=20256&amp;beginappi&amp;action=newView&amp;navbar=goods&amp;endappi" data-gwc_flag="gwc_1" data-id="20256">
+				<div class="content-box clearfix">
+					<div class="item-goods " data-isuseattributes="0" data-url="/statichtml/bjmovie01/estores/Home/Goods/view?goods_id=20256&amp;beginappi&amp;action=newView&amp;navbar=goods&amp;endappi" data-gwc_flag="gwc_1" data-id="20256">
+						<img class="item-isOnsale" src="../img/hmstore/onsale@2x.png">
 						<div class="item-goodslogo item-thumb" data-id="20256">
 							<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=83858&amp;width=70&amp;height=70&amp;type=3" data-collectid="41589" alt="本地苋菜" isnew="no">
+							<span style="background-image: url(../img/hmstore/fund@2x.png);"></span>
 						</div>
-						<div class="item-name-attribute">
+						<div class="item-name-attribute clearfix">
 							<div class="item-goodsname item-clamp1" data-id="20256">本地苋菜</div>
-							<div class="item-goodsattribute item-clamp1">475-525g/份</div>
+							<div class="item-goodsattribute item-clamp1">特价促销进行中</div>
 							<div class="item-price-obj">
-								<div class="item-goodsprice">¥<span>3.58</span><font>/ 份</font></div>
+								<p class="item-single-price">¥<span>3.58</span><font>/ 份</font></p>
+								<div class="item-fan-hebi"><span>返</span>3和币</div>
+
+								<!-- <div class="item-goodsprice">123</div> -->
 								<div class="item-goodsobj">
 									<div class="item-add-cart add_cart_20256" style="display:block;">
 										<img class="item-addcart" data-category_id1="1635" data-category_id2="0" data-goods_id="20256" gwc_flag="gwc_1" data-isuseattributes="0" src="/statichtml/bjmovie01/estores/Public/images/home/gwc_1.jpg" alt="添到购物车">
@@ -210,16 +227,22 @@
 								</div>
 							</div>
 						</div>
+						<p class="hebi-exchange"><span>兑</span>6000和币 <del>6500和币</del></p>
 					</div>
-					<div class="item-goods" data-isuseattributes="0" data-url="/statichtml/bjmovie01/estores/Home/Goods/view?goods_id=20256&amp;beginappi&amp;action=newView&amp;navbar=goods&amp;endappi" data-gwc_flag="gwc_1" data-id="20256">
+					<div class="item-goods " data-isuseattributes="0" data-url="/statichtml/bjmovie01/estores/Home/Goods/view?goods_id=20256&amp;beginappi&amp;action=newView&amp;navbar=goods&amp;endappi" data-gwc_flag="gwc_1" data-id="20256">
+						<img class="item-isOnsale" src="../img/hmstore/onsale@2x.png">
 						<div class="item-goodslogo item-thumb" data-id="20256">
 							<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=83858&amp;width=70&amp;height=70&amp;type=3" data-collectid="41589" alt="本地苋菜" isnew="no">
+							<span style="background-image: url(../img/hmstore/fund@2x.png);"></span>
 						</div>
-						<div class="item-name-attribute">
+						<div class="item-name-attribute clearfix">
 							<div class="item-goodsname item-clamp1" data-id="20256">本地苋菜</div>
-							<div class="item-goodsattribute item-clamp1">475-525g/份</div>
+							<div class="item-goodsattribute item-clamp1">特价促销进行中</div>
 							<div class="item-price-obj">
-								<div class="item-goodsprice">¥<span>3.58</span><font>/ 份</font></div>
+								<p class="item-single-price">¥<span>3.58</span><font>/ 份</font></p>
+								<div class="item-fan-hebi"><span>返</span>3和币</div>
+
+								<!-- <div class="item-goodsprice">123</div> -->
 								<div class="item-goodsobj">
 									<div class="item-add-cart add_cart_20256" style="display:block;">
 										<img class="item-addcart" data-category_id1="1635" data-category_id2="0" data-goods_id="20256" gwc_flag="gwc_1" data-isuseattributes="0" src="/statichtml/bjmovie01/estores/Public/images/home/gwc_1.jpg" alt="添到购物车">
@@ -235,16 +258,22 @@
 								</div>
 							</div>
 						</div>
+						<p class="hebi-exchange"><span>兑</span>6000和币 <del>6500和币</del></p>
 					</div>
-					<div class="item-goods" data-isuseattributes="0" data-url="/statichtml/bjmovie01/estores/Home/Goods/view?goods_id=20256&amp;beginappi&amp;action=newView&amp;navbar=goods&amp;endappi" data-gwc_flag="gwc_1" data-id="20256">
+					<div class="item-goods " data-isuseattributes="0" data-url="/statichtml/bjmovie01/estores/Home/Goods/view?goods_id=20256&amp;beginappi&amp;action=newView&amp;navbar=goods&amp;endappi" data-gwc_flag="gwc_1" data-id="20256">
+						<img class="item-isOnsale" src="../img/hmstore/onsale@2x.png">
 						<div class="item-goodslogo item-thumb" data-id="20256">
 							<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=83858&amp;width=70&amp;height=70&amp;type=3" data-collectid="41589" alt="本地苋菜" isnew="no">
+							<span style="background-image: url(../img/hmstore/fund@2x.png);"></span>
 						</div>
-						<div class="item-name-attribute">
+						<div class="item-name-attribute clearfix">
 							<div class="item-goodsname item-clamp1" data-id="20256">本地苋菜</div>
-							<div class="item-goodsattribute item-clamp1">475-525g/份</div>
+							<div class="item-goodsattribute item-clamp1">特价促销进行中</div>
 							<div class="item-price-obj">
-								<div class="item-goodsprice">¥<span>3.58</span><font>/ 份</font></div>
+								<p class="item-single-price">¥<span>3.58</span><font>/ 份</font></p>
+								<div class="item-fan-hebi"><span>返</span>3和币</div>
+
+								<!-- <div class="item-goodsprice">123</div> -->
 								<div class="item-goodsobj">
 									<div class="item-add-cart add_cart_20256" style="display:block;">
 										<img class="item-addcart" data-category_id1="1635" data-category_id2="0" data-goods_id="20256" gwc_flag="gwc_1" data-isuseattributes="0" src="/statichtml/bjmovie01/estores/Public/images/home/gwc_1.jpg" alt="添到购物车">
@@ -260,56 +289,7 @@
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="item-goods" data-isuseattributes="0" data-url="/statichtml/bjmovie01/estores/Home/Goods/view?goods_id=20256&amp;beginappi&amp;action=newView&amp;navbar=goods&amp;endappi" data-gwc_flag="gwc_1" data-id="20256">
-						<div class="item-goodslogo item-thumb" data-id="20256">
-							<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=83858&amp;width=70&amp;height=70&amp;type=3" data-collectid="41589" alt="本地苋菜" isnew="no">
-						</div>
-						<div class="item-name-attribute">
-							<div class="item-goodsname item-clamp1" data-id="20256">本地苋菜</div>
-							<div class="item-goodsattribute item-clamp1">475-525g/份</div>
-							<div class="item-price-obj">
-								<div class="item-goodsprice">¥<span>3.58</span><font>/ 份</font></div>
-								<div class="item-goodsobj">
-									<div class="item-add-cart add_cart_20256" style="display:block;">
-										<img class="item-addcart" data-category_id1="1635" data-category_id2="0" data-goods_id="20256" gwc_flag="gwc_1" data-isuseattributes="0" src="/statichtml/bjmovie01/estores/Public/images/home/gwc_1.jpg" alt="添到购物车">
-									</div>
-									<div class="item-reduce-add reduce_add_20256" style="display:none;">
-										<a class="item-reduceless reduceless_1635_0_20256" href="javascript:;">－</a>
-										<span class="gwcnumid_20256" data-status="0" data-shop_price="3.58" data-goods_itemid="17302" data-goods_stock="0" data-goods_isstockcount="0" data-limit_buy_also="undefined" data-limit_buy_num="undefined" data-limit_buy="0">0</span>
-										<a class="item-addmore addmore_1635_0_20256" href="javascript:;">＋</a>
-									</div>
-									<!-- limit_buy_also  如果开启限购，已经购买多少件-->
-									<!-- limit_buy_num  如果开启限购，还可以购买多少-->
-									<!-- limit_buy  如果开启限购，限购多少-->
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="item-goods" data-isuseattributes="0" data-url="/statichtml/bjmovie01/estores/Home/Goods/view?goods_id=20256&amp;beginappi&amp;action=newView&amp;navbar=goods&amp;endappi" data-gwc_flag="gwc_1" data-id="20256">
-						<div class="item-goodslogo item-thumb" data-id="20256">
-							<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=83858&amp;width=70&amp;height=70&amp;type=3" data-collectid="41589" alt="本地苋菜" isnew="no">
-						</div>
-						<div class="item-name-attribute">
-							<div class="item-goodsname item-clamp1" data-id="20256">本地苋菜</div>
-							<div class="item-goodsattribute item-clamp1">475-525g/份</div>
-							<div class="item-price-obj">
-								<div class="item-goodsprice">¥<span>3.58</span><font>/ 份</font></div>
-								<div class="item-goodsobj">
-									<div class="item-add-cart add_cart_20256" style="display:block;">
-										<img class="item-addcart" data-category_id1="1635" data-category_id2="0" data-goods_id="20256" gwc_flag="gwc_1" data-isuseattributes="0" src="/statichtml/bjmovie01/estores/Public/images/home/gwc_1.jpg" alt="添到购物车">
-									</div>
-									<div class="item-reduce-add reduce_add_20256" style="display:none;">
-										<a class="item-reduceless reduceless_1635_0_20256" href="javascript:;">－</a>
-										<span class="gwcnumid_20256" data-status="0" data-shop_price="3.58" data-goods_itemid="17302" data-goods_stock="0" data-goods_isstockcount="0" data-limit_buy_also="undefined" data-limit_buy_num="undefined" data-limit_buy="0">0</span>
-										<a class="item-addmore addmore_1635_0_20256" href="javascript:;">＋</a>
-									</div>
-									<!-- limit_buy_also  如果开启限购，已经购买多少件-->
-									<!-- limit_buy_num  如果开启限购，还可以购买多少-->
-									<!-- limit_buy  如果开启限购，限购多少-->
-								</div>
-							</div>
-						</div>
+						<p class="hebi-exchange"><span>兑</span>6000和币 <del>6500和币</del></p>
 					</div>
 				</div>
 			</div>
@@ -319,20 +299,30 @@
 						<img class="content-btn-img" src="../img/store-nav/content2c@2x.png">
 						<span>系列</span>
 					</a>
+
 				</div>
-				<div class="content-box">
-					
+				<div class="content-box clearfix">
+					<div class="entrance">
+						<ul>
+							<li><img src="../img/products@2x.png" alt="">产品</li>
+							<li><img src="../img/voucher@2x.png" alt="">代金券</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 			<div class="content content3">
 				<div class="content-action">
 					<a class="content-btn" href="javascript:;">
 						<img class="content-btn-img" src="../img/store-nav/content3c@2x.png">
-						<span>代金券</span>
+						<span>附近</span>
 					</a>
-				</div>
-				<div class="content-box">
 					
+				</div>
+				<div class="content-box clearfix">
+					<div class="nearby-store">
+						附近商家
+						<a href="javascript:;" class="see-more">更多<img src="../img/for-more.png" alt=""></a>
+					</div>
 					<ul class="voucher-res-show">
 						
 						<li>
@@ -350,10 +340,10 @@
 										<span>券</span>
 									</div>
 									<div class="voucher-attribute">
-										<p>规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则</p>
+										<p>地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址</p>
 									</div>
 									<div class="voucher-price">
-										<p class="voucher-pnum">¥88 <del>100</del></p>
+										<p class="voucher-pnum">135-9087-5623</del></p>
 										<p class="voucher-belong"><img src="../img/location.png" alt="定位">1.2<span>km</span></p>
 									</div>
 								</div>
@@ -391,10 +381,10 @@
 										<span>券</span>
 									</div>
 									<div class="voucher-attribute">
-										<p>规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则</p>
+										<p>地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址</p>
 									</div>
 									<div class="voucher-price">
-										<p class="voucher-pnum">¥88 <del>100</del></p>
+										<p class="voucher-pnum">135-9087-5623</del></p>
 										<p class="voucher-belong"><img src="../img/location.png" alt="定位">1.2<span>km</span></p>
 									</div>
 								</div>
@@ -416,6 +406,14 @@
 								</div>
 							</div>
 						</li>
+						
+					</ul>
+					<div class="nearby-store replace">
+						替代商家
+						<a href="javascript:;" class="see-more">更多<img src="../img/for-more.png" alt=""></a>
+					</div>
+					<ul class="voucher-res-show">
+						
 						<li>
 							<!-- default -->
 							<img class="voucher-for-more" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/img/tyt/for-more.png" alt="更多">
@@ -431,10 +429,51 @@
 										<span>券</span>
 									</div>
 									<div class="voucher-attribute">
-										<p>规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则规则</p>
+										<p>地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址</p>
 									</div>
 									<div class="voucher-price">
-										<p class="voucher-pnum">¥88 <del>100</del></p>
+										<p class="voucher-pnum">135-9087-5623</del></p>
+										<p class="voucher-belong"><img src="../img/location.png" alt="定位">1.2<span>km</span></p>
+									</div>
+								</div>
+								<div class="voucher-ysj voucher-clearfix">
+									<div class="voucher-tags">饮料<span></span></div>
+									<div class="voucher-tags">美食<span></span></div>
+									<div class="voucher-tags">娱乐<span></span></div>
+									<div class="voucher-tags">饮料<span></span></div>
+									<div class="voucher-tags">美食<span></span></div>
+									<div class="voucher-tags">娱乐<span></span></div>
+									<div class="voucher-tags">饮料<span></span></div>
+									<div class="voucher-tags">美食<span></span></div>
+								</div>
+								<div class="voucher-yh">
+									<p><span class="yh">惠</span>优惠详情</p>
+									<p><span class="pq">券</span>券详情</p>
+									<p><span class="pq">券</span>券详情</p>
+									<span class="qnum">10</span>
+								</div>
+							</div>
+						</li>
+						
+						<li>
+							<!-- default -->
+							<img class="voucher-for-more" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/msgc/img/tyt/for-more.png" alt="更多">
+							<div class="voucher-res voucher-sell-two voucher-none">
+								<div class="voucher-img">
+									<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=90261&amp;width=60&amp;height=60&amp;type=3" alt="logo">
+								</div>
+								<div class="voucher-description">
+									<div class="voucher-name">
+										<div>
+											店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店店铺店铺店铺店
+										</div>
+										<span>券</span>
+									</div>
+									<div class="voucher-attribute">
+										<p>地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址</p>
+									</div>
+									<div class="voucher-price">
+										<p class="voucher-pnum">135-9087-5623</del></p>
 										<p class="voucher-belong"><img src="../img/location.png" alt="定位">1.2<span>km</span></p>
 									</div>
 								</div>
@@ -464,11 +503,11 @@
 				<div class="content-action">
 					<a class="content-btn" href="javascript:;">
 						<img class="content-btn-img" src="../img/store-nav/content3c@2x.png">
-						<span>附近</span>
+						<span>外送</span>
 					</a>
 				</div>
 				
-				<div class="content-box">
+				<div class="content-box clearfix">
 					<ul class="similar-stores">
 						<li class="similar-store">
 							<div class="similar-media">
@@ -547,7 +586,7 @@
 						<img class="content-btn-img" src="../img/store-nav/content4c@2x.png">评论
 					</a>
 				</div>
-				<div class="content-box">
+				<div class="content-box clearfix">
 					<div class="store-replay">
 						<div class="replayer">
 							<div class="media">
@@ -704,28 +743,72 @@
 							</div>
 							<div class="newsfeed-body-img">
 								<img src="../img/train.jpg">
+								<!-- <img src="../img/train.jpg">
 								<img src="../img/train.jpg">
 								<img src="../img/train.jpg">
 								<img src="../img/train.jpg">
 								<img src="../img/train.jpg">
 								<img src="../img/train.jpg">
-								<img src="../img/train.jpg">
-								<img src="../img/train.jpg">
+								<img src="../img/train.jpg"> -->
 							</div>
 						</div>
 						<div class="newsfeed-action clearfix">
-							<ul class="newsfeed-action-msg">
+							<ul class="newsfeed-action-msg clearfix">
 								<li><img src="../img/newsfeed/praised@2x.png" alt=""><span>范帅+9999</span></li>
 								<li><span>9999</span>条评论</li>
 							</ul>
-							<hr />
-							<ul class="newsfeed-action-btn">
-								<li><img src="../img/newsfeed/praise@2x.png" alt=""><span>赞</span></li>
-								<li><img src="../img/newsfeed/discuss@2x.png" alt=""><span>评论</span></li>
+							<div class="line"></div>
+							<ul class="newsfeed-action-btn clearfix">
+								<li class="newsfeed-praise">
+									<img src="../img/newsfeed/praise@2x.png" alt="">
+									<img src="../img/newsfeed/praised@2x.png" alt="">
+									<span>赞</span>
+								</li>
+								<li class="newsfeed-replay-btn"><img src="../img/newsfeed/discuss@2x.png" alt=""><span>评论</span></li>
 								<li><img src="../img/newsfeed/share@2x.png" alt=""><span>分享</span></li>
 							</ul>
-						</div>
+							<div class="newsfeed-replay">
+								<div class="text">
+						            <textarea name="coment-area" id="usermessage" rows="3"></textarea>
+						        </div>
+								<a href="javascript:;" class="commentnow">评论</a>
 
+								<div class="comment-single comment_101893">
+									<div class="media">
+										<div class="media-left">
+											<img class="media-object" src="https://shop.yshjie.com/statichtml/bjmovie01/site/public/image.php?sn=84ecc6f71e761eab2d4b172c9940892a&amp;width=100&amp;height=100" alt="李纪丁">
+										</div>
+										<div class="media-body media-middle">
+											<p class="user-nanme">李纪丁</p>
+											<p class="comment-time">2016-06-13 10:58:36</p>
+										</div>
+										<div class="media-right media-middle del_comment" data-userid="5534" data-id="101893">
+											<a href="javascript:;"><button>删除</button></a>
+										</div>
+									</div>
+									<div class="comment-content">one more time</div>
+									<div class="line-gap"></div>
+								</div>
+								<div class="comment-single comment_101893">
+									<div class="media">
+										<div class="media-left">
+											<img class="media-object" src="https://shop.yshjie.com/statichtml/bjmovie01/site/public/image.php?sn=84ecc6f71e761eab2d4b172c9940892a&amp;width=100&amp;height=100" alt="李纪丁">
+										</div>
+										<div class="media-body media-middle">
+											<p class="user-nanme">李纪丁</p>
+											<p class="comment-time">2016-06-13 10:58:36</p>
+										</div>
+										<div class="media-right media-middle del_comment" data-userid="5534" data-id="101893">
+											<a href="javascript:;"><button>删除</button></a>
+										</div>
+									</div>
+									<div class="comment-content">one more time</div>
+									<div class="line-gap"></div>
+								</div>
+							</div>
+
+						</div>
+						<div class="gampt"></div>
 					</div>
 
 					<div class="load-content" data-load='load/content1.htm'></div>
@@ -934,6 +1017,26 @@
 				// console.log(imgSrc)
 
 			};getImgSrc('img');
+
+			//展开评论框
+			$('.newsfeed-replay-btn').click(function () {
+				$(this).closest('.newsfeed-action-btn').next('.newsfeed-replay').toggle()
+			})
+			//点赞
+			$('.newsfeed-praise').click(function () {
+				$(this).toggleClass('praising');
+			})
+			//店铺关注 动态追踪 加入会员
+			$('.img-text-border').click(function () {
+				if (!$(this).hasClass('undo')) {
+					$(this).toggleClass('done');
+				}
+			})
+		})
+	</script>
+	<script type="text/javascript">
+		document.body.addEventListener('touchstart',function () {
+			
 		})
 	</script>
 </body>

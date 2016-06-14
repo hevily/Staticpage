@@ -1,3 +1,4 @@
+@charset "utf-8";
 .item-goods {
     position: relative; border-bottom: 1px solid #C9C9C9;  padding-right: 10px;padding-top: 10px;
 	.item-goodslogo {
@@ -5,7 +6,8 @@
 		img { width: 70px;    height: 70px;}
 	}
 	.item-name-attribute {
-	    height: 90px; padding-left: 80px;
+	    // height: 90px; 
+	    padding-left: 80px;
 		.item-goodsname {
 		    font-weight: bold;
 		    font-size: 16px;
@@ -14,31 +16,41 @@
 		.item-clamp1 {
 		    overflow: hidden;
 		    text-overflow: ellipsis;
-		    display: -webkit-box;
 		    -webkit-line-clamp: 1;
 		    -webkit-box-orient: vertical;
 		    font-weight: normal;
 		}
 		.item-goodsattribute {
 		    font-size: 12px;
-		    line-height: 20px;
+		    line-height: 14px;
 		    color: #FF6969;
 		}
 		.item-price-obj {
 		    height: 30px;
 		    position: absolute;
 		    right: 0;
-		    bottom: 9px;
+		    top: 47px;
 		    width: 100%;
 		    line-height: 18px;
-		    .item-goodsprice {
+		    .item-single-price{
+		    	color:#F16305;
+		    	font-size: 16px;
+		    	padding-left: 80px;
+		    }
+		    .item-goodsprice,.item-fan-hebi {
+		    	font-size: 12px;
 		        float: left;
 		        left: 75px;
 		        position: relative;
-		        color: #D86C00;
-		        font-size: 18px;
+		        color: #FB9952;
 		        span {
-		            line-height: 18px;
+		            padding: 1px;
+		            background-color: #fb9925;
+		            color:#fff;
+		            font-size: 10px;
+		            border-radius:50%;
+		            width: 12px;height: 12px;
+		            display:inline-block;text-align:center;line-height: 11px;
 		        }
 		        font{color: #696969; font-size: 14px;}
 		    }
@@ -63,7 +75,9 @@
 		                height: 20px;
 		                width: 20px;
 		                display: inline-block;
-		                border-radius: 50%;
+		                -webkit-border-radius: 50%;
+		                   -moz-border-radius: 50%;
+		                        border-radius: 50%;
 		                text-align: center;
 		                font-size: 18px;
 		                line-height: 20px;
@@ -91,5 +105,33 @@
 		    }
 		}
 	}
+	.hebi-exchange{
+		font-size: 14px;color:#FEC02E;
+		span{
+			padding: 1px;
+			background-color: #FEC02E;
+			color: #fff;
+			font-size: 10px;
+			border-radius: 50%;
+			width: 12px;
+			height: 12px;
+			display: inline-block;
+			text-align: center;
+			line-height: 11px;
+			margin-right: 5px;
+		}
+		del{
+			color:#676869;
+		}
+	}
 }
+/*新添加商品特性标签*/
+.item-goodslogo{position: relative;}
+.item-goodslogo span{position: absolute;top:0;right: 0;-webkit-transform: translate(5px,-6px);-moz-transform: translate(5px,-6px);-ms-transform: translate(5px,-6px);transform: translate(5px,-6px);
+	display: inline-block;width: 25px;height: 25px;opacity: 1;	-moz-background-size: 100% 100%;	background-size: 100% 100%;}
+.item-isOnsale{position: absolute;right: 10px;top: 10px;height: 40px;width: 40px;}
+
+.item-noborderright{border-right: none !important;}
+
+
 

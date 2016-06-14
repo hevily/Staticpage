@@ -1,19 +1,106 @@
 .newsfeed-action{
-	clear:both;
+	padding-right:0px;user-select:none;-webkit-user-select:none;
+	clear:both;color:#9096A2;
+	li:active{
+		background-color: #f2f2f2;
+	}
 	ul.newsfeed-action-msg{
-		li{
+		font-size: 14px;
+		li{padding:8px 0;
 			width: 50%;float: left;display:inline-block;
+			&:nth-child(2){text-align:right;padding-right: 10px;}
 			img{
-				width: 14px;height:auto;
+				width: 14px;height:auto;vertical-align:middle;margin-right: 8px;
 			}
 		}
 	}
+	.line{margin: 0;}
 	ul.newsfeed-action-btn{
-		li{
+		font-size: 14px;
+		li{padding:8px 0;
 			width: 33%;float: left;display:inline-block;text-align:center;
 			img{
-				width: 14px;height:auto;
+				width: 14px;height:auto;vertical-align:middle;margin-right: 8px;
 			}
+		}
+		.newsfeed-praise{
+			& img:nth-child(2){display:none;}
+			&.praising{
+				img:nth-child(1){display:none;}
+				img:nth-child(2){display:inline-block;}
+			}
+		}
+	}
+	.newsfeed-replay{
+		position: relative;
+		.text {
+			width: 100%;
+			padding-right: 80px;
+			padding-left: 10px;
+			textarea {
+			    width: 100%;
+			}
+		}
+		.commentnow {
+		    position: absolute;
+		    top: 15px;
+		    right: 10px;
+		    padding: 4px 8px;
+		    border: 1px solid #f36303;
+		    border-radius: 3px;
+		    color:#000;
+		}
+		.comment-single {
+		    padding: 10px 0 0px 10px;
+			color:#333;
+			.media{
+				.media-left{
+					    border-radius: 50%;
+					    overflow: hidden;
+					    padding-right: 0;
+					.media-object{
+						width: 60px;height: 60px;
+					}
+				}
+				.media-body{
+					padding-left: 10px;
+					.user-nanme {
+					    font-size: 18px;
+					    font-weight: bold;
+					}
+					.comment-time {
+					    font-size: 14px;
+					    color: #9B9B9B;
+					}
+				}
+				.media-right{
+					button {
+					    width: 50px;
+					    margin: 20px 10px 0 0;
+					    color: #333;
+					    border: 1px solid #f36303;
+					    background-color: #fff;
+					    padding: 4px 8px;
+					    border-radius: 3px;
+					}
+				}
+			}
+		    .comment-content {
+		        padding-left: 70px;
+		        padding-bottom: 10px;
+		        padding-right: 10px;
+		    }
+		    .line-gap {
+		        height: 1px;
+		        margin-left: 10px;
+		        background-color: #CFCFCF;
+		        
+		    }
+		    &:last-child{
+		    	.line-gap{
+		        	display: none;
+		    	}
+		    }
 		}
 	}
 }

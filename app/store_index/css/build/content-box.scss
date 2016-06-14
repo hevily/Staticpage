@@ -13,11 +13,25 @@
 				.content-btn-img{ height: 20px;width: auto;vertical-align:top;}
 				span{line-height: 22px;}
 			}
+			
 		}
-		.content-box{min-height:500px; background-color: $white;padding-left:$pd;}
+		.content-box{
+			// min-height:500px; 
+			background-color: $white;padding-left:$pd;
+		
+		}
+	&.content3,&.content2,&.content6{
+		.content-box{padding-left: 0;}
+	}
 	}
 	.item-goods{
 		&:last-child{border-bottom:none;}
+	}
+	.see-more{
+		font-size: 12px;float: right;top:4px;position: relative;color:#515151;
+		img{
+			width: auto;height: 12px;margin-left: 4px;position: relative;top:1px;
+		}
 	}
 	
 }
