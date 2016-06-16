@@ -414,6 +414,10 @@ body {
         color: #F16305;
         font-size: 16px;
         padding-left: 80px; }
+        .item-goods .item-name-attribute .item-price-obj .item-single-price del {
+          color: #676869;
+          margin-left: 5px;
+          display: inline-block; }
       .item-goods .item-name-attribute .item-price-obj .item-goodsprice, .item-goods .item-name-attribute .item-price-obj .item-fan-hebi {
         font-size: 12px;
         float: left;
