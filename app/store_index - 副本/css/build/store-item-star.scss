@@ -1,0 +1,93 @@
+.similar-media{
+	margin-top: 15px;
+    position: relative;
+    width: 100%;
+    padding: 10px 10px;
+        border-bottom: 1px solid #C9C9C9;
+    &, .similar-media-body {
+	    overflow: hidden;
+	    zoom: 1;
+	}
+	&:first-child {
+    	margin-top: 0;
+	}
+	.similar-media-object {
+	    width: 60px;
+	    height: 60px;
+	}
+	.similar-media-body {
+		    position: absolute;
+    top: 5px;
+    left: 80px;
+
+		 & p {
+		    width: 100%;
+		    height: 19px;
+		}
+		.similar-vochers-description p:first-child {
+		    font-weight: bold;
+		}
+		.similar-vochers-description P:nth-child(2) {
+		    color: #7B7B7B;
+		}
+		.similar-star {
+			float:left;
+			span img {
+			    width: 16px;
+			    height: 15px;
+			}
+		}
+	}
+
+
+	.similar-media-right {
+		&.similar-poa{
+			position: absolute; top: 5px; right: 10px;
+		& p {
+		    clear: both;
+		    font-size: 13px;
+		    color: #686868;
+		    /* margin-top: 28px; */
+		}
+		p.similar-take-base{float: right;margin-top: 1px}
+		p.similar-take-time{float: right;margin-top: 8px}
+		}
+		& img {
+		    height: 14px;
+		    width: 8px;
+		    margin-bottom: 4px;
+		}
+	}
+	.similar-juan {
+	    border-top: 1px dashed #C9C9C9;
+	    color: #686868;
+	    margin-left: 72px;
+	    margin-top: 5px;
+	    & p {
+	    		height: 27px;
+		        padding-top: 7px;
+		        clear:both;
+		    }
+		.similar-tuan {
+		    padding: 3px 6px;
+		    background: #A0D87F;
+		    color: white;
+		    border-radius: 5px;
+		}
+		.similar-hui {
+		    padding: 3px 6px;
+		    background: #E25452;
+		    color: white;
+		    border-radius: 5px;
+		}
+		.similar-juan-1 {
+		    padding: 3px 6px;
+		    background: #229DC9;
+		    color: white;
+		    border-radius: 5px;
+		}
+	}
+	.similar-take-rull{
+		color: #686868; font-size: 13px; margin-top: 28px; clear: both;
+	}
+}
