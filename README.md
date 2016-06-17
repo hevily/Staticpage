@@ -1,1 +1,1 @@
-﻿# HMC
+﻿# HMC staticpage
