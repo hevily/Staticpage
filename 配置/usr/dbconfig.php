@@ -1,0 +1,19 @@
+<?php
+chdir(dirname(__FILE__));
+//db
+define('dbHost','localhost');
+define('dbName','bjmaildb');
+define('dbUser','root');
+define('dbPass','');
+//emldb
+define('EmldbHost','localhost');
+define('EmldbName','bjfiledb');
+define('EmldbUser','root');
+define('EmldbPass','');
+//include_once 'dbconfig.php';
+//ecommerce
+define('ec_dbHost','localhost');
+define('ec_dbName','bjmaildb');
+define('ec_dbUser','root');
+define('ec_dbPass','');  
+?>
