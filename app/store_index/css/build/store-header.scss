@@ -91,6 +91,12 @@ $i-t-b-color: red;
 	.two{
 		.img-text-border{
 			width:$half;
+			// &:nth-child(1){
+			// 	background-color: #ffba46;
+			// }
+			// &:nth-child(2){
+			// 	background-color: lighten(#ffba46, 20%);
+			// 	}
 		}
 	}
 	.img-text-border.done{
