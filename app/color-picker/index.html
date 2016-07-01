@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../css/" /> -->
+    <link rel="stylesheet" type="text/css" href="plugin/spectrum.css">
+
+	<title>颜色拾取</title>
+	<style type="text/css">
+		html,body,.container{height: 100%;}
+		body{margin: 0;}
+		p{background-color: #cfcfcf;left:50px;position: relative;margin-top:0;}
+	</style>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="scroll" style="height: 100%;overflow-y: scroll; overflow-x:hidden;	position: relative;">
+			<div class="section color-pick" >
+				<p>颜色拾取1</p>
+				<p>颜色拾取2</p>
+				<p>颜色拾取3</p>
+				<p>颜色拾取4</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p style="background-color:red" class="current">颜色拾取</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+				<p>颜色拾取5</p>
+			</div>
+		</div>
+		<div class="section">
+			<a href="javascript:;">点击触发</a>
+		</div>
+	</div>
+	<footer></footer>
+	<script src="/statichtml/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src='plugin/spectrum.js'></script>
+	<script type="text/javascript" src="colorPicker.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('.color-pick p').click(function (e) {
+				var $this = $(this)
+				userColorPick($this,function (t) {
+					$this.text(t)
+					// alert(typeof($this))
+					$this.css('background-color', '#'+t)
+				});
+
+			})
+			$('a').click(function () {
+				userColorPick($(this),function (color) {
+					alert(color)
+				})
+			})
+		})
+	</script>
+	<script type="text/javascript">
+		$('.color-pick p1').spectrum({
+				preferredFormat: "hex",
+				showPaletteOnly: true,
+			    showPalette:true,
+			    // color: 'blanchedalmond',
+			    palette: [
+			        ['#FE7E7D', '#FFFE85', '#82FD7E','#0BF782','#7EFEFC'],
+			        ['#097DEC', '#A64D79', '#FC80F7','#FE0009','#FCFE07'],
+			        ['#7BFD01', '#05FB41', '#0DF7F8','#0A7ABB','#807DC1'],
+			        // ['#0C343D', '#073763', '#20124D','#4C1130','#'],
+			    ],
+			    change:function (color ) {
+			    	// alert(color)
+			    	// console.log($(this))
+			    	// alert($(this).text())
+			    	$(this).text(color)
+			    }
+			})
+	</script>
+</body>
+</html>

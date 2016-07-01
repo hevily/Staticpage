@@ -1,0 +1,77 @@
+body {
+  background-color: #F0EFF5;
+  margin: 0;
+  font-family: 'Microsoft YaHei','Hiragino Sans GB',Helvetica,Arial,'Lucida Grande',sans-serif; }
+
+.container {
+  padding: 0 10px;
+  -webkit-overflow-scrolling: touch; }
+
+.classes-title {
+  margin-bottom: 15px;
+  margin-top: 10px; }
+  .classes-title .classes-word {
+    position: relative;
+    height: 30px; }
+    .classes-title .classes-word div {
+      position: relative;
+      float: left;
+      z-index: 10;
+      padding-right: 15px;
+      background-color: #F0EFF5; }
+      .classes-title .classes-word div img {
+        width: 32px;
+        height: auto;
+        margin-right: 10px;
+        display: inline-block;
+        vertical-align: middle; }
+    .classes-title .classes-word span {
+      z-index: 1;
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      display: inline-block;
+      background-color: #E8E8E8;
+      right: -10px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
+
+.classes-single {
+  clear: both;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  .classes-single .classes-single-group {
+    height: 35px;
+    margin-bottom: -1px;
+    border-right: 1px solid #E5E5E5;
+    border-bottom: 1px solid #E5E5E5; }
+    .classes-single .classes-single-group .class-single {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      float: left;
+      width: 25%;
+      font-size: 16px;
+      text-align: center;
+      line-height: 34px;
+      height: 35px;
+      overflow: hidden;
+      border-top: 1px solid #E5E5E5;
+      border-left: 1px solid #E5E5E5;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      background-color: #FFF; }
+      .classes-single .classes-single-group .class-single:active {
+        background-color: #cfcfcf; }
+
+@media screen and (max-width: 320px) {
+  .class-single {
+    font-size: 12px !important; } }
+
+/*# sourceMappingURL=store_classes.css.map */
