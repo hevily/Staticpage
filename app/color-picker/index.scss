@@ -9,26 +9,28 @@
 	z-index:101;
 	position: absolute;
 	box-sizing: border-box;
-	width: 131px;
-	background-color: #EFEFF0;
-	border:1px solid #000;
-	
+	width: 140px;
+	background-color: #fff;
+	border:1px solid #CFCDCD;
+	box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.3);
+	border-radius: 3px;
+	font-size: 12px;
 	.userColorPick-title{
 		z-index:210;
-		color: #cfcfcf;
+		color: #606061;
 		background-color: #FFF;
-		padding: 8px 10px;
-		font-size: 14px;
-
+		padding: 7px 10px;
+		border-bottom:1px solid #E6E6E6;
+		font-weight: bold;
 	}
 	.userColorPick-color{
 		z-index:210;
 		color: #0F1418;
 	}
 	table{
-		left: 3px;
 		position: relative;
-		padding: 5px 10px;
+		padding: 0 5px;
+		margin: 0 auto;
 		thead{
 			tr{
 				th{
@@ -42,19 +44,24 @@
 			tr{
 				td{
 					background-color: #FFF;
-					width:20px;
-					height: 15px;
+					width:14px;height: 14px;
+					margin: 1px;
 					text-align:center;
 					color: red;
-					border:1px solid #EFEFF0;
-					box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.5)  inset;
+					border:1px solid rgba(0,0,0,0.05);
+					// box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.1) inset;
+
 					-webkit-user-select:none;
 					   -moz-user-select:none;
 					    -ms-user-select:none;
 					        user-select:none;
 					cursor:default;
+					&:hover{border:1px solid rgba(0,0,0,0.3)}
 					&.select-this-color{
-						outline:1px solid rgba(0,0,0,0.8)
+						// outline:1px solid #f36303;
+						border:1px solid #fff;
+						box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.2);
+						// box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.1) inset,1px 1px 2px 1px rgba(0,0,0,0.4);
 					}
 				}
 			}
@@ -70,11 +77,12 @@
 			text-decoration:none;
 			width: 48px;
 			/* height: 30px;*/
-			border: 1px solid #C4C4C4;
+			border: 1px solid #E3E3E3;
 			color: #14161C;
 			padding: 3px;
-			font-size: 14px;
-
+			&:nth-child(2){
+				margin-left: 8px;
+			}
 			&:hover{
 				color: #f36303;
 				background-color: #fff;

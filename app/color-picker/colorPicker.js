@@ -1,5 +1,8 @@
+		// 定义颜色选择器样式
+		var style = "<style>.userColorPick-mask{z-index:100;position:fixed;width:100%;height:100%;background-color:transparent;top:0;left:0}.userColorPick{z-index:101;position:absolute;box-sizing:border-box;width:140px;background-color:#fff;border:1px solid #CFCDCD;box-shadow:1px 1px 3px 1px rgba(0,0,0,.3);border-radius:3px;font-size:12px}.userColorPick .userColorPick-title{z-index:210;color:#606061;background-color:#FFF;padding:7px 10px;border-bottom:1px solid #E6E6E6;font-weight:700}.userColorPick .userColorPick-color{z-index:210;color:#0F1418}.userColorPick table{position:relative;padding:0 5px;margin:0 auto}.userColorPick table thead tr th{text-align:left;font-size:14px;padding-bottom:4px}.userColorPick table tbody tr td{background-color:#FFF;width:14px;height:14px;margin:1px;text-align:center;color:red;border:1px solid rgba(0,0,0,.05);-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default}.userColorPick table tbody tr td:hover{border:1px solid rgba(0,0,0,.3)}.userColorPick table tbody tr td.select-this-color{border:1px solid #fff;box-shadow:1px 1px 2px 1px rgba(0,0,0,.2)}.userColorPick .userColorPick-decision{width:100%;padding-bottom:10px;padding-left:10px}.userColorPick .userColorPick-decision a{display:inline-block;text-align:center;text-decoration:none;width:48px;border:1px solid #E3E3E3;color:#14161C;padding:3px}.userColorPick .userColorPick-decision a:nth-child(2){margin-left:8px}.userColorPick .userColorPick-decision a:hover{color:#f36303;background-color:#fff}.userColorPick .userColorPick-decision a:active{color:#000;background-color:#EFEFF0}</style>";
+		$('body').append(style)
 	var userColorPick =  function  (goal,callback) {
-
+		// 定义颜色选择器dom结构
 		var ColorPick = ""+
 		"<div class='userColor'>"+
 			"<div class='userColorPick-mask'></div>"+
@@ -7,35 +10,37 @@
 				// "<div class='userColorPick-title'>"+
 				// 	"编辑颜色"+
 				// "</div>"+
-				"<div class='userColorPick-color'>"+
-					"<table>"+
-						"<thead>"+
-							"<th colspan='8'>基本颜色</th>"+
-						"</thead>"+
-						"<tbody>"+
+				
+				"<div class='userColorPick-color' >"+
+				"<div class='userColorPick-title' style='background-color:#EEEEEF;'>背景色板拾取器</div>"+
+					"<table style='background-color:#fff;' cellspacing='8'>"+
+						// "<thead>"+
+						// 	"<th colspan='8'>基本颜色</th>"+
+						// "</thead>"+
+						"<tbody >"+
 							"<tr>"+
 								"<td style='background-color: #FFFFFF;'>&nbsp;</td>"+
-								"<td style='background-color: #FFFE85;'>&nbsp;</td>"+
-								"<td style='background-color: #82FD7E;'>&nbsp;</td>"+
-								"<td style='background-color: #0BF782;'>&nbsp;</td>"+
+								"<td style='background-color: #27FF95;'>&nbsp;</td>"+
+								"<td style='background-color: #FFCC45;'>&nbsp;</td>"+
+								"<td style='background-color: #FFA076;'>&nbsp;</td>"+
 								""+
 							"</tr> "+
 							"<tr> "+
-								"<td style='background-color: #097DEC;'>&nbsp;</td>"+
-								"<td style='background-color: #FE7AC1;'>&nbsp;</td>"+
-								"<td style='background-color: #FC80F7;'>&nbsp;</td>"+
-								"<td style='background-color: #FE0009;'>&nbsp;</td>"+
+								"<td style='background-color: #C66DFF;'>&nbsp;</td>"+
+								"<td style='background-color: #6CDB73;'>&nbsp;</td>"+
+								"<td style='background-color: #6DAEFF;'>&nbsp;</td>"+
+								"<td style='background-color: #C6A086;'>&nbsp;</td>"+
 							"<tr>"+
-								"<td style='background-color: #7BFD01;'>&nbsp;</td>"+
-								"<td style='background-color: #05FB41;'>&nbsp;</td>"+
-								"<td style='background-color: #0DF7F8;'>&nbsp;</td>"+
-								"<td style='background-color: #0A7ABB;'>&nbsp;</td>"+
+								"<td style='background-color: #5CC6FF;'>&nbsp;</td>"+
+								"<td style='background-color: #FFB1AF;'>&nbsp;</td>"+
+								"<td style='background-color: #5DFFE3;'>&nbsp;</td>"+
+								"<td style='background-color: #FF90FB;'>&nbsp;</td>"+
 							"</tr>"+
 							"<tr>"+
-								"<td style='background-color: #7BFD01;'>&nbsp;</td>"+
-								"<td style='background-color: #05FB41;'>&nbsp;</td>"+
-								"<td style='background-color: #0DF7F8;'>&nbsp;</td>"+
-								"<td style='background-color: #0A7ABB;'>&nbsp;</td>"+
+								"<td style='background-color: #9797C6;'>&nbsp;</td>"+
+								"<td style='background-color: #D0C4AF;'>&nbsp;</td>"+
+								"<td style='background-color: #FDFF4D;'>&nbsp;</td>"+
+								"<td style='background-color: #AFC7D0;'>&nbsp;</td>"+
 							"</tr>"+
 						"</tbody>"+
 					"</table>"+
@@ -53,6 +58,7 @@
 		$('.userColor').remove()
 		initpicker();
 	}
+	// 初始化控件
 	function initpicker() {
 		$('body').append(ColorPick)
 				var pos = calculatePosition(goal);
@@ -98,7 +104,7 @@
 					}
 				})
 	}
-
+	// 定位
 	function getOffset(picker, input) {
 	    var extraY = 0;
 	    var dpWidth = picker.outerWidth();

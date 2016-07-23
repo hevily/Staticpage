@@ -7,13 +7,13 @@
     <link rel="stylesheet" type="text/css" href="index.css">
     <!-- <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" /> -->
     <!-- <link rel="stylesheet" type="text/css" href="../css/" /> -->
-    <link rel="stylesheet" type="text/css" href="plugin/spectrum.css">
+    <!-- <link rel="stylesheet" type="text/css" href="plugin/spectrum.css"> -->
 
 	<title>颜色拾取</title>
 	<style type="text/css">
-		html,body,.container{height: 100%;}
+		/*html,body,.container{height: 100%;}
 		body{margin: 0;}
-		p{background-color: #cfcfcf;left:50px;position: relative;margin-top:0;}
+		p{background-color: red;left:50px;position: relative;margin-top:0;}*/
 	</style>
 </head>
 <body>
@@ -76,6 +76,7 @@
 				<p>颜色拾取5</p>
 				<p>颜色拾取5</p>
 			</div>
+			<input type="color" name="color">
 		</div>
 		<div class="section">
 			<a href="javascript:;">点击触发</a>
@@ -108,12 +109,12 @@
 				preferredFormat: "hex",
 				showPaletteOnly: true,
 			    showPalette:true,
-			    // color: 'blanchedalmond',
+			    color: 'blanchedalmond',
 			    palette: [
 			        ['#FE7E7D', '#FFFE85', '#82FD7E','#0BF782','#7EFEFC'],
 			        ['#097DEC', '#A64D79', '#FC80F7','#FE0009','#FCFE07'],
 			        ['#7BFD01', '#05FB41', '#0DF7F8','#0A7ABB','#807DC1'],
-			        // ['#0C343D', '#073763', '#20124D','#4C1130','#'],
+			        ['#0C343D', '#073763', '#20124D','#4C1130','#'],
 			    ],
 			    change:function (color ) {
 			    	// alert(color)

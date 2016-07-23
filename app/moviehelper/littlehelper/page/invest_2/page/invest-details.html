@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../../../../../Frame/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../css/menu.css"/>
+
+    <script src="../../../../../Frame/jQuery/jquery-2.1.3.min.js"></script>
+    <script src="../../../../../Frame/bootstrap/dist/js/bootstrap.min.js"></script>
+    <style type="text/css">
+    html,body{height: 100%;background-color: #EFEFF4;}
+    	.container{padding: 0;user-select:none;-webkit-user-select:none;-moz-user-select:none;-o-user-select:none;background-color: #fff;}
+    	.gamptb{
+    		background-color: #EFEFF4;
+    		border-top:1px solid #CCCCCC;
+    		border-bottom:1px solid #CCCCCC;
+    		height: 15px;
+    	}.gampt{
+    		background-color: #EFEFF4;
+    		border-top:1px solid #CCCCCC;
+    		height: 15px;
+    	}.gampb{
+    		background-color: #EFEFF4;
+    		border-bottom:1px solid #CCCCCC;
+    		height: 15px;
+    	}
+    	.schedule{ height: 70px; position: relative;padding:10px;}
+    	.schedule:active{background-color: rgba(0,0,0,0.1);}
+    	.schedule .name{font-size: 16px;font-weight: bold;}
+    	.schedule .name span{font-size: 16px;float: right;}
+    	.fund .name span{color: #f36303;}
+    	.film-shoot .name span{color: #2EB3E8;}
+    	.progress,.progress .progress-bar{
+    		border-radius:15px;
+    	}
+    	.progress {background-color: #F0F0F0;box-shadow:none;margin:10px 0 0 0 ;height: 15px;}
+		.fund .progress .progress-bar{
+			background-color: #F36303;
+		}.film-shoot .progress .progress-bar{
+			background-color: #2EB3E8;
+		}
+		.section{border-bottom: 1px solid #CCCCCC;}
+		.section .name{width:calc(100% - 30px);float: left;}
+		img.more-progress{transform: translateY(-50%);top:50%;position: absolute;right:15px;}
+		
+		.line{width:calc(100% - 10px);margin-left: 10px;height: 1px;background-color: #E6E6E6;display: none;}
+		/*柱图*/
+
+
+		.schedule-details{height: 300px;width: 70%;margin:45px auto;background-color: #fff;border-left:2px solid #DBDBDB;border-bottom:2px solid #DBDBDB;position: relative;transform:translateX(10%);}
+		.total-line	{border-top:1px dashed #CCCCCC;}
+		.project-name {position: absolute;bottom: -30px;right: -47px;width:73px;text-align: center;}
+		.project-name-all{position: absolute;top:-25px;left:-30px;width:60px;text-align: center;display: inline-block;color: #323232;}
+		.schedule-half span,.schedule-total span,.schedule-per span{color: #646464;}
+
+
+		.schedule-half{width:55%;  position: absolute;background-color: rgba(0,0,0,0);height: 50%;bottom:0;left:-20%;z-index: 0;
+
+			border-right:20px solid #F0F0F0;
+		}
+
+		.schedule-total{width:55%;  position: absolute;background-color: rgba(0,0,0,0);height: 100%;bottom:0;left:-20%;z-index: 0;
+
+			border-right:20px solid #F0F0F0;
+		}
+		.schedule-per{width:95%;  position: absolute;background-color: rgba(0,0,0,0);left:-20%;z-index: 0;bottom: 0;
+
+			
+			height: 70%;
+		}
+		.schedule-per .per-number{top:-20px;right:-30px;position: absolute;width:40px;display: inline-block;text-align: center;}
+		.fund .schedule-per{border-right:20px solid #F36303;}
+
+
+		.film-shoot .schedule-per{border-right:20px solid #2EB3E8;height:40%;}
+		.seeing.section .more-progress{transform: rotate(-90deg) translateX(10px); animation: all 2s;}
+		.schedule-details{display: none;}
+		.seeing .line{display: block;}
+    </style>
+	<title>投资人</title>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="gampb"></div>
+		<!-- 资金 -->
+		<div class="section fund clearfix">
+			<div class="schedule">
+				<div class="name">
+					资金进度 <span>70%</span>
+					<div class="progress">
+					  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+					    <span class="sr-only">50% Complete (success)</span>
+					  </div>
+					</div>
+				</div>
+				<img class="more-progress" src="../../../img/btn/right_defalut.png">
+			</div>
+			<div class="line"></div>
+			<div class="schedule-details">
+				<span class="project-name-all">万元</span>
+				<!-- half 不做处理 -->
+				<div class="schedule-half">
+					<div class="total-line"></div>
+					<span class="per-number">50%</span>
+				</div>
+				<!-- total 不做处理 -->
+				<div class="schedule-total">
+					<div class="total-line"></div>
+					<span class="per-number">100%</span>
+					<div class="project-name">预算</div>
+				</div>
+
+				<!-- per 需要更改高度百分比 -->
+				<div class="schedule-per" >
+					<div class="total-line"></div>
+					<span class="per-number">70%</span>
+					<div class="project-name">实际</div>
+				</div>
+				<!-- 高度更改结束 -->
+			</div>
+		</div>
+
+		<div class="gampb"></div>
+		<!-- 拍摄 -->
+		<div class="section film-shoot clearfix">
+			<div class="schedule">
+				<div class="name">
+					拍摄进度 <span>40%</span>
+					<div class="progress">
+					  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+					    <span class="sr-only">40% Complete (success)</span>
+					  </div>
+					</div>
+				</div>
+				<img class="more-progress" src="../../../img/btn/right_defalut.png">
+			</div>
+			<div class="line"></div>
+			<div class="schedule-details">
+				<span class="project-name-all">页</span>
+				<!-- half 不做处理 -->
+				<div class="schedule-half">
+					<div class="total-line"></div>
+					<span class="per-number">50%</span>
+				</div>
+				<!-- total 不做处理 -->
+				<div class="schedule-total">
+					<div class="total-line"></div>
+					<span class="per-number">100%</span>
+					<div class="project-name">总页数</div>
+				</div>
+
+				<!-- per 需要更改高度百分比 -->
+				<div class="schedule-per" >
+					<div class="total-line"></div>
+					<span class="per-number">40%</span>
+					<div class="project-name">已拍页数</div>
+				</div>
+				<!-- 高度更改结束 -->
+			</div>
+		</div>
+	</div>
+	<footer></footer>
+	<script src="/statichtml/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript">document.body.addEventListener('touchstart',function(){})</script>
+	<script type="text/javascript">
+		$(function () {
+			$('.schedule').click(function () {
+				console.log(1)
+				$(this).closest('.section').toggleClass('seeing').find('.schedule-details').slideToggle('fast')
+
+			})
+
+		})
+	</script>
+</body>
+</html>
