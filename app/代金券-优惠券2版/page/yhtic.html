@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<!--     <link rel="stylesheet" href="__PUBLIC__/voucher/css/base.css" /> -->
+    <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" />
+	<link rel="stylesheet" type="text/css" href="../css/yhtic.css">
+<!--     <script src="__PUBLIC__/voucher/js/jquery-2.1.3.min.js"></script>s -->
+ <!-- <script src="__PUBLIC__/voucher/js/voucher.js"></script> -->
+    <title>我的代金券</title>
+    <style type="text/css">
+		.select li{
+			width: 25%;font-size: 16px;
+		}
+		.container{padding-top: 20px;}
+		.tabchange{width: 202px;height: 35px;margin: 0 auto;font-size: 16px;margin-bottom: 10px;}
+		.tab{float: left;width: 100px;border: 1px solid #F5834D;line-height: 33px;text-align: center;}
+		.tab:nth-child(1){border-right: none;border-radius: 5px 0 0 5px;}
+		.tab:nth-child(2){border-left: none;border-top-right-radius: 5px;border-bottom-right-radius: 5px;}
+		.tab.active {background-color: #F5834D;color: #000;}
+		.gamp{height: 10px;}
+
+	</style>
+</head>
+<body >
+	<header></header>
+	<div class="container">
+		<div class="tabchange">
+			<div class="tab active" onclick="window.location='__URL__/index'">代金券</div>
+			<div class="tab" onclick="window.location='__URL__/ywlist'">优惠1券</div>
+		</div>
+		<div class="tickets">
+			<div class="tickets-title">
+				已使用
+			</div>
+			<div class="ticket clearfix">
+				<div class="ticket-left">
+					<div class="ticket-face ">
+						<div class="mask"></div>
+						<div class="ticket-use   ">
+							<!-- used timeout 控制过期或者已使用-->
+							<img class="used" src="../img/used.png" alt="已使用">
+							<img class="timeout" src="../img/timeout.png" alt="已过期">
+						</div>
+						<div class="ticket-name">
+							100元代金券!节假日通用！
+						</div>
+						<div class="ticket-info clearfix">
+							<div class="ticket-money three-part">
+								面额
+								<p>¥<span>100</span></p>
+							</div>
+							<div class="ticket-sale three-part">
+								售价
+								<p>¥<span>80</span></p>
+							</div>
+							<div class="ticket-scale three-part">
+								折扣
+								<p>¥<span>8折</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ticket-right">
+					<div class="ticket-status">
+						<p class="use-or-not">已消费</p>
+						<p class="back-money">退款中</p>
+					</div>
+					<div class="ticket-store">
+						<img src="../img/store-logo.png" alt="" class="store-logo">
+						<span>店铺名称</span>
+					</div>
+					<div class="ticket-validity">
+						<p>有效期</p>
+						<span class="from">2016-08-26</span>~
+						<span class="to">2016-08-29</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer></footer>
+	<script src="/statichtml/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script><!-- 
+<script type="text/javascript" src="__PUBLIC__/js/laytpl.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/stores/base.js"></script>
+<script type="text/javascript" src="__ROOT__/mall/img/touch.js"></script>
+<script type="text/javascript" src="__ROOT__/mall/img/mall.js"></script> -->
+<script>
+$(function(){
+	
+})
+
+</script>
+</body>
+</html>

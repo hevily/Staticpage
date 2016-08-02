@@ -1,0 +1,173 @@
+@charset "utf-8";
+
+$bgc:rgba(0,0,0,0.3);
+$ticheight:154px;
+body{
+
+	background-color:#383A47;
+
+
+// 	background: -moz-linear-gradient(225deg, #E17B55 0, #694290 100%);/* FF3.6+ */
+// 	background: -webkit-gradient(linear, 225deg, color-stop(0, E17B55), color-stop(100%, 694290));/* Chrome,Safari4+ */
+// 	background: -webkit-linear-gradient(225deg, #E17B55 0, #694290 100%);/* Chrome10+,Safari5.1+ */
+// 	background: -o-linear-gradient(225deg, #E17B55 0, #694290 100%);/* Opera 11.10+ */
+// 	background: -ms-linear-gradient(225deg, #E17B55 0, #694290 100%);/* IE10+ */
+// 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1'); /* for IE */
+// 	background: linear-gradient(225deg, #E17B55 0, #694290 100%);/* W3C */
+}
+.tickets{
+	max-width: 640px;
+
+		margin: 0 auto;
+	padding:10px;
+	.tickets-title{
+		color: #f36303;
+		margin-bottom: 20px;
+	}
+	.ticket{
+		width: 100%;
+		position: relative;
+
+		background-color: $bgc;
+		.ticket-left{
+			width: 100%;
+			padding-right: 120px;
+			color: #fff;
+			float: left;
+			position: relative;
+
+			&:before,&:after{
+				content:"";
+				width: 40px;
+				height: 40px;
+				display:block;
+				position: absolute;
+				left: -20px;
+				bottom:-20px;
+				background-color: rgb(56, 58, 71);
+				border-radius:50%;
+				z-index:2;
+			}
+			&:before{
+				top:-20px;
+				z-index:2;
+			}
+
+			.ticket-use{
+				position: absolute;
+				bottom: 10px;right: -30px;
+				
+				z-index:5;
+				img{
+					width: 100px;
+					height: 100px;
+					display:none;
+				}
+				&.used{
+					img.used{
+						display:block;
+					}
+				}
+				&.timeout{
+					img.timeout{
+						display:block;
+					}
+				}
+			}
+			.ticket-bg{
+				position: absolute;
+				top: 0;left: 0;
+				width: 100%;
+				height: 100%;
+			}
+			.ticket-face{
+				position: relative;
+				height: $ticheight;
+				padding: 20px;
+
+				background-image: url("../img/ticket-bg.png");
+				background-repeat: no-repeat;
+				background-size: calc(100% + 45px) ($ticheight+40px);
+				background-position: -20px -20px;
+				.mask{
+					width: 100%;
+					height:$ticheight;
+					position: absolute;
+					top: 0;left: 0;
+					z-index:1;
+				}
+				.ticket-name{
+					position: relative;
+					z-index:2;
+				}
+				.ticket-info{
+					z-index:2;
+					position: absolute;
+					bottom: 10px;
+					left:0px;
+					width: 100%;
+					padding:0 20px;
+					.three-part{
+						width: 33.3333%;
+						float: left;
+						text-align:center;
+					}
+					.ticket-money{
+						text-align:left;
+					}
+					.ticket-sale{
+
+					}
+					.ticket-scale{
+						text-align:right;
+					}
+				}
+			}
+		}
+		.ticket-right{
+			font-size: 14px;
+			height: 100%;
+			    float: left;
+			    position: relative;
+
+			padding: 20px 20px 20px 0;
+			background-color: #fff;
+
+			float: left;
+			width: 120px;
+			margin-left: -120px;
+			&:before,&:after{
+				content:"";
+				width: 40px;
+				height: 40px;
+				display:block;
+				position: absolute;
+				right: -20px;
+				bottom:-20px;
+				background-color: rgb(56, 58, 71);
+				border-radius:50%;
+				z-index:2;
+			}
+			&:before{
+				top:-20px;
+				z-index:2;
+			}
+			.ticket-status{
+				.use-or-not{
+					color:#D86C00;
+				}
+				.back-money{
+					color:#D60000;
+				}
+				
+			}
+			.ticket-store{
+				.store-logo{
+					width: 30px;
+					height: 30px;
+					vertical-align:middle;
+				}
+			}
+		}
+	}
+}
