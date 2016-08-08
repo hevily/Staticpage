@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" />
+    <link rel="stylesheet" type="text/css" href="../css/" />
+	<title>图片旋转</title>
+	<style>
+		/*给需要转动的图片添加类名rootate-img  其父级添加类名rotating 控制父级类名实现转动效果*/
+.rotating .rotate-img{
+			-webkit-animation: rotatimg ease-in-out 1s infinite;
+			   -moz-animation: rotatimg ease-in-out 1s infinite;
+			        animation: rotatimg ease-in-out 1s infinite;
+		}
+		@-webkit-keyframes rotatimg{
+			0%{-webkit-transform:rotate(0);transform:rotate(0);}
+			100%{-webkit-transform:rotate(359deg);transform:rotate(359deg);}
+		}
+		@-moz-keyframes rotatimg{
+			0%{-moz-transform:rotate(0);transform:rotate(0);}
+			100%{-moz-transform:rotate(359deg);transform:rotate(359deg);}
+		}
+		@keyframes rotatimg{
+			0%{-webkit-transform:rotate(0);-moz-transform:rotate(0);transform:rotate(0);}
+			100%{-webkit-transform:rotate(359deg);-moz-transform:rotate(359deg);transform:rotate(359deg);}
+		}
+	</style>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="section rotating">
+			<img src="http://img2.imgtn.bdimg.com/it/u=1057389859,800585935&fm=11&gp=0.jpg" alt="" class="rotate-img">
+		</div>
+		<div class="section">
+
+		</div>
+	</div>
+	<footer></footer>
+	<script src="/statichtml/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+</body>
+</html>

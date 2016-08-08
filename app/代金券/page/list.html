@@ -28,8 +28,35 @@
 	.price p{color: #686868;font-size: 16px;}
 	.none .name{padding-right: 0;}
 	.none .name span{display: none;}
-	.search-bar{position: fixed;top: 0;width:100%;max-width: 640px;z-index: 9; height: 35px;background-color: #FFEEE2;text-align: center;padding: 5px;border-bottom: 1px solid #E5DCD5;}
-	.search-btn{height: 25px;	width: 160px;background-color: #FF8D4E;margin: 0px auto;line-height: 25px;border-top-left-radius:35px;border-top-right-radius:35px;border-bottom-left-radius:35px;border-bottom-right-radius:35px;color: #fff;font-size: 14px;}
+	.search-bar{position: fixed;top: 0;width:100%;max-width: 640px;z-index: 9; height: 35px;background-color: #F4F4F4;text-align: center;padding: 5px;border-bottom: 1px solid #E5DCD5;color: #3F3F3F;}
+	.search-bar .location-btn img,.search-bar .map img{
+		height: 14px;
+		vertical-align:super;
+		
+	}
+	.search-bar .location-btn{
+		float: left;
+		padding-left: 10px;
+		width: calc(100% - 190px);
+	}
+	.search-bar .search-btn{
+		float: right;
+		border-left:1px solid #C9C9C9;
+		border-right:1px solid #C9C9C9;
+		overflow: hidden;
+	}
+	.search-bar .location-btn span{
+		margin:0 3px;
+		width: calc(100% - 45px);
+		    display: inline-block;
+		    overflow: hidden;
+		    height: 18px;
+	}
+	.search-bar .map{
+		float: right;
+		width:50px;
+	}
+	.search-btn{height: 25px;	width: 120px;margin: 0px auto;line-height: 25px;font-size: 14px;}
 	.search-btn img{height: 4px;width: 7px;top: -2px;position: relative;}
 	.opening img{-webkit-transform:rotate(-180deg);transform:rotate(-180deg);}
 	.belong,.pnum{bottom: 1px;}
@@ -204,10 +231,19 @@
 	<header></header>
 	<div class="container">
 		<div class="search-bar">
+			<div class="location-btn">
+				<img src="../img/location-top.png" alt="">
+				<span>定位信息定位信息</span>
+				<img src="../img/refresh.png">
+			</div>
+			<div class="map">
+				<img src="../img/map.png" alt="">
+			</div>
 			<div class="search-btn">
 				所有代金券
 				<img src="../img/trigger.png" alt="三角标" />
 			</div>
+
 		</div>
 		<div class="res-show">
 				<div class="goods-res">

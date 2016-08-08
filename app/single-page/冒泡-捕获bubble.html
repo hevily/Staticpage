@@ -1,0 +1,84 @@
+<html>
+    <head>
+    <meta charset="utf-8">
+
+        <title>
+        </title>
+    <style type="text/css">
+            *{margin:0px;padding:0px;}
+            h1{text-align:center;color:#666;margin-top:18px;}
+            #content{width:700px;height:250px;border:5px solid green;margin:20px auto;position:relative;}
+            #obj1{height:100px;background:#d5d5d5;}
+            #obj2{background:#777;}
+            #obj3{position:absolute;top:200px;left:150px;width:200px;background:#555;}
+            #obj4{height:100px;background:#999;margin-top:50px;}
+            .active{color:#f00}
+        </style>
+   
+
+    </head>
+    <body>
+    <form></form>
+    <h1>悟透事件的捕获和冒泡</h1>
+        <div id="content">
+           <div id="obj1">
+              <h2>元素a</h2>   
+                <div id="obj2">
+                     <h2>元素b</h2>
+                     <div id="obj3">
+                       <h2>元素c</h2>
+                    </div>
+               </div>
+            </div>
+           <div id="obj4">
+               <h2>元素d</h2>
+          </div>
+    </div>
+   <script type="text/javascript">
+         var divs=document.getElementById("content").getElementsByTagName("div");
+         var count=1;
+         for(var i=0;i<divs.length;i++){
+             bindEvent(divs[i],"click",function(){
+                     var obj=document.createTextNode("->"+count++);
+                     this.getElementsByTagName("h2")[0].insertBefore(obj,null);
+                     this.className="active";
+                     });
+         }
+       //取消冒泡事件
+function stopBubble(e){
+               e=e||window.event;  //firefox,chrome,etc.||IE,opera
+if(e.stopPropagation){
+                   e.stopPropagation();
+                 }
+                 else{
+                  e.cancelBubble=true;
+                 }
+             }
+           
+             //绑定事件
+function bindEvent(elem,type,fn){
+               if(elem.attachEvent){
+                   var typedRef="_"+type;
+                     if(!elem[typedRef]){
+                         elem[typedRef]=[];
+                     }
+                         for(var i in elem[typedRef]){
+                           if(elem[typedRef][i]==fn){
+                               return;
+                             }
+                         }
+                         elem[typedRef].push(fn);
+                         elem["on"+type]=function(){
+                             for(var i inthis[typedRef]){
+                             this[typedRef][i].apply(this,arguments);
+                             }
+                         }
+                    }
+                     else{
+                       elem.addEventListener(type,fn,false);//改为true 就是捕获事件了
+                     }
+             }
+     </script>
+     </body>
+
+</html>

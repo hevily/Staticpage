@@ -1,0 +1,142 @@
+html, body {
+  height: auto;
+  min-height: 100%; }
+
+body {
+  background: -moz-linear-gradient(225deg, #E17B55 0, #694290 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, 225deg, color-stop(0, E17B55), color-stop(100%, 694290));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(225deg, #E17B55 0, #694290 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(225deg, #E17B55 0, #694290 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(225deg, #E17B55 0, #694290 100%);
+  /* IE10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1');
+  /* for IE */
+  background: linear-gradient(225deg, #E17B55 0, #694290 100%);
+  /* W3C */ }
+
+.container {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 20px 10px; }
+  .container .bg-radius img {
+    width: 100%;
+    display: block; }
+  .container .bgwhite {
+    background-color: #FFF;
+    padding: 0 15px; }
+  .container .bgqr {
+    background-color: #E8E8E8;
+    padding: 0 15px; }
+  .container .ticket-title {
+    padding: 10px 15px;
+    position: relative; }
+    .container .ticket-title .ticket-store {
+      font-size: 14px; }
+      .container .ticket-title .ticket-store img {
+        vertical-align: middle;
+        width: 30px;
+        height: 30px; }
+    .container .ticket-title .ticket-name {
+      padding-top: 3px;
+      font-size: 20px;
+      color: #3F3F3F;
+      font-weight: bold; }
+  .container .ticket-bg {
+    margin-bottom: -1px; }
+    .container .ticket-bg img {
+      position: relative;
+      left: 0;
+      width: 100%;
+      display: block; }
+  .container .ticket-use {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    z-index: 2; }
+    .container .ticket-use img {
+      display: none;
+      width: 100px;
+      height: 100px; }
+  .container .used img.used {
+    display: block; }
+  .container .timeout img.timeout {
+    display: block; }
+  .container .ticket-info {
+    padding-top: 10px;
+    border-top: 1px dashed #B4B4B4; }
+    .container .ticket-info .three-part {
+      float: left;
+      color: #3F3F3F;
+      font-size: 12px; }
+      .container .ticket-info .three-part p {
+        font-weight: bold;
+        font-size: 20px; }
+    .container .ticket-info .part-one, .container .ticket-info .part-two {
+      width: 40%; }
+    .container .ticket-info .part-three {
+      width: 20%; }
+    .container .ticket-info .text-align-center {
+      text-align: center; }
+    .container .ticket-info .text-align-right {
+      text-align: right; }
+  .container .ticket-validity {
+    padding-top: 10px; }
+    .container .ticket-validity p {
+      font-size: 12px; }
+    .container .ticket-validity .time-form-to {
+      font-size: 20px; }
+  .container .ticket-qr {
+    border-bottom: 1px dashed #B4B4B4; }
+    .container .ticket-qr .pbox {
+      float: left; }
+      .container .ticket-qr .pbox img {
+        width: 120px;
+        height: 120px; }
+    .container .ticket-qr .qr-psw {
+      position: relative;
+      top: 20px;
+      float: left;
+      line-height: 25px;
+      color: #2B2B2B; }
+      .container .ticket-qr .qr-psw .notice {
+        color: #686868; }
+  .container .ticket-use-guid {
+    padding-top: 10px;
+    border-top: 1px dashed #FFFFFF; }
+    .container .ticket-use-guid .use-title {
+      font-size: 16px;
+      font-weight: bold; }
+    .container .ticket-use-guid .guid {
+      margin-top: 10px;
+      font-size: 12px; }
+      .container .ticket-use-guid .guid .guid-title {
+        color: #F36303; }
+      .container .ticket-use-guid .guid ul {
+        padding-left: 10px; }
+        .container .ticket-use-guid .guid ul li {
+          list-style: inside;
+          color: #2B2B2B; }
+  .container .used .ticket-bg img, .container .timeout .ticket-bg img {
+    -ms-filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(1);
+    -o-filter: grayscale(1);
+    filter: grayscale(1); }
+  .container .used .guid .guid-title, .container .timeout .guid .guid-title {
+    color: #848484; }
+
+@media screen and (max-width: 320px) {
+  .qr-psw {
+    width: 150px;
+    font-size: 14px; } }
+@media screen and (min-width: 321px) and (max-width: 414px) {
+  .qr-psw {
+    width: 195px;
+    font-size: 18px; } }
+
+/*# sourceMappingURL=ticdetails.css.map */
