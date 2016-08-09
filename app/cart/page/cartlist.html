@@ -4,58 +4,171 @@
 	<meta charset="utf-8" />
 	<meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" />
-    <link rel="stylesheet" type="text/css" href="../css/" />
+    <!-- <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" /> -->
+    <link rel="stylesheet" type="text/css" href="../css/popover.min.css" />
 	<title>我的订单</title>
 	<style type="text/css">
+	*{margin: 0;padding: 0;}
+	.container{
+		width:100%;
+		max-width:640px;
+		margin:0 auto;
+	}
 		.my-order-navbar{z-index: 1;}
-		.my-order-navbar .order-list{overflow-x: auto;overflow-y:visible;white-space: nowrap;padding:8px 0;-webkit-overflow-scrolling:touch;}
-		.my-order-navbar .order-list li{display: inline-block;position: relative;text-align: center;}
-		.my-order-navbar .order-list li:nth-child(n){margin-left: 50px;}
-		.my-order-navbar .order-list li:nth-child(n)::before{content:"";display:block;width: 50px;height: 50px;position: absolute;top: 0;left: -50px;background-image: url(../img/step-step.png);background-repeat: no-repeat;-webkit-background-size: 21px 25px;
-		background-size: 21px 25px;background-position: center 0px;}
-		.my-order-navbar .order-list li:first-child{margin-left: 30px;}
-		.my-order-navbar .order-list li:last-child{margin-right: 30px;}
-		.my-order-navbar .order-list li:first-child::before{content: "";display: none;}
-		/*.my-order-navbar .order-list li:last-child{margin-left: 0px;}*/
-		.my-order-navbar .order-list li img{width: 22px;}
-		.my-order-navbar .order-list li span{}
-		.pay-list .pay-list-menu{display:block;
-			position: absolute;left:50%;bottom: -50px;z-index: 10;}
-		.pay-list.toggle-menu .pay-list-menu{display: block;}
+		.popover{
+			background-color: rgba(0,0,0,0.65);
+			border:none;
+		}
+		.popover-content{
+			padding:10px;
+			color:#fff;
+		}
 
+		.my-order-navbar{}
+		.order-lists{
+			white-space: nowrap;
+			overflow-x:auto;
+			overflow-y: hidden;
+			padding:12px 0;
+			-webkit-overflow-scrolling:touch;
+			
+		}
+		.order-list{
+			display: inline-block;
+			position: relative;
+			margin-left: 17px;
+			z-index: 1;
+			text-align: center;
+		}
+		.order-list p{
+			padding-top: 5px;
+		}
+		.list-logo{
+			width: 30px;
+			z-index: 1;
+		}
+		.order-list:active{
+			background-color: rgba(0,0,0,0.1)
+		}
+		.order-list::before{
+			content: "";
+			width: 17px;
+			height: 15px;
+			display: block;
+			position: absolute;top: 7px;left: -20px;z-index: 1;
+			background-image: url(../img/step-step.png);background-repeat: no-repeat;-webkit-background-size: 11px 12px;
+			background-size: 11px 12px;background-position: center bottom;
+		}
+		.last-of-type{
+			margin-right: 16px;
+		}
+		.order-list:first-child{
+			margin-left: 16px;
+		}
+		.order-list:first-child::before{
+			display: none;
+		}
+		.list-logo-content{
+			display: inline-block;
+			position: relative;
+		}
+		.list-logo-content span{
+			width: 20px;
+			height: 20px;
+			display: block;
+			position: absolute;right: -10px;top: -5px;
+			background-color: #fff;border-radius: 50%;
+			border:1px solid #f36303;
+			color: #F36303;
+			font-weight: bold;
+		}
+		.order-list.other p,.order-list.wait-pay p{
+			padding-right: 10px;
+		}
+		.order-list.other p::before,.order-list.wait-pay p::before{
+			content: "";
+			width: 20px;
+			height: 20px;
+			display: block;
+			position: absolute;
+			bottom: 0;right: 0;
+			background-image: url(../img/right-bottom.png);
+			background-repeat: no-repeat;
+			background-position: right bottom;
+		}
+		.secend-list{
+			line-height: 30px;
+			text-align: center;
+			cursor: pointer;
+		}
+
+		.secend-list:active,.secend-list:hover{
+			background-color: rgba(255,255,255,0.3);
+			opacity: 0.3;
+		}
+		
 	</style>
 </head>
 <body>
-	<div class="my-order-navbar">
-		<ul class="order-list">
-			<li>
-				<img src="../img/cart-logo.png">
-				<p>购物车</p>
-			</li>
-			<li class="pay-list">
-				<img src="../img/wait-pay-list.png">
-				<p class="wait-pay">购物车</p>
-				<div class="pay-list-menu">
-					<div class="cart-pay-list">商品待付</div>
-					<div class="ticket-pay-list">代金券待付</div>
+	<div class="container">
+		<div class="my-order-navbar">
+			<div class="order-lists">
+				<div class="order-list">
+					<img class="list-logo" src="../img/cart-logo.png" alt="购物车">
+					<p>购物车</p>
 				</div>
-			</li>
-			<li>
-				<img src="../img/wait-shipping.png">
-				<p>购物车</p>
-			</li>
-			<li>
-				<img src="../img/unreach.png">
-				<p>购物车</p>
-			</li>
-			<li>
-				<img src="../img/cart-other.png">
-				<p>购物车</p>
-			</li>
-		</ul>
+
+				<div class="order-list wait-pay" title="" data-content="<div class='secend-lists-menu wait-pay'><div class='secend-list'>商品待付款</div><div class='secend-list'>代金券待付</div></div>">
+					<div class="list-logo-content">
+						<span>1</span>
+						<img class="list-logo" src="../img/wait-pay-list.png" alt="购物车">
+					</div>
+					<p>商品待付款</p>
+				</div>
+
+				<div class="order-list">
+					<img class="list-logo" src="../img/wait-shipping.png" alt="购物车">
+					<p>待发货</p>
+				</div>
+
+				<div class="order-list">
+					<img class="list-logo" src="../img/unreach.png" alt="购物车">
+					<p>待收货</p>
+				</div>
+
+				<div class="order-list last-of-type other" data-content="<div class='secend-lists-menu other'><div class='secend-list'>已完成</div><div class='secend-list'>已取消</div><div class='secend-list' >退款</div></div>">
+					<img class="list-logo" src="../img/cart-other.png" alt="购物车">
+					<p>已完成</p>
+				</div>
+			</div>
+		</div>
 	</div>
-	<footer></footer>
+	<div style="background-color:#DCDEE3;height:200px;"></div>
+	<script type="text/javascript">document.body.addEventListener('touchstart', function () { })</script>
 	<script src="/statichtml/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="../js/popover.min.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('.order-list').popover({
+				animation:true,
+				placement:'bottom',
+				html:true,
+				container:'body'
+			});
+			$(document).on('click','.secend-list',function () {
+				var _this = $(this),text = _this.text()
+				console.log(text)
+				if(_this.closest('.secend-lists-menu').hasClass('wait-pay')) {
+					console.log('待付款')
+					textArea = $('.order-list.wait-pay').find('p')
+				}else{
+					console.log('其他')
+					textArea = $('.order-list.other').find('p')
+				}
+				textArea.text(text);
+				$('.order-list').popover('hide');
+			})
+		})
+	</script>
 </body>
 </html>
