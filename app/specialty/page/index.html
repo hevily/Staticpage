@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <!-- <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" /> -->
+    <link rel="stylesheet" type="text/css" href="../css/am-slider.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../css/" /> -->
+	<title>地方特产</title>
+	<!-- // loading image -->
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background-color: #F0FFE2;
+		}
+		.spinner {
+		    width: 40px;
+		    height: 40px;
+		    position: relative;
+		    margin:0;
+		    top: 50%;left: 50%;
+		    -webkit-transform:translate(-50%,-50%);
+		            transform:translate(-50%,-50%);
+		}
+		 .Allnews .spinner{
+		    left: 50px;
+		    top: 50px;
+		 }
+		.double-bounce1, .double-bounce2 {
+		  width: 100%;
+		  height: 100%;
+		  border-radius: 50%;
+		  background-color: #d7d7d7;
+		  opacity: 0.6;
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		   
+		  -webkit-animation: bounce 2.0s infinite ease-in-out;
+		  animation: bounce 2.0s infinite ease-in-out;
+		}
+		 
+		.double-bounce2 {
+		  -webkit-animation-delay: -1.0s;
+		  animation-delay: -1.0s;
+		}
+		 
+		@-webkit-keyframes bounce {
+		  0%, 100% { -webkit-transform: scale(0.0) }
+		  50% { -webkit-transform: scale(1.0) }
+		}
+		 
+		@keyframes bounce {
+		  0%, 100% {
+		    transform: scale(0.0);
+		    -webkit-transform: scale(0.0);
+		  } 50% {
+		    transform: scale(1.0);
+		    -webkit-transform: scale(1.0);
+		  }
+		}
+		.onscroll{display: block; -webkit-animation:h100 2.0s infinite ease-in-out; animation:h100 2.0s infinite ease-in-out;}
+		@-webkit-keyframes h100{
+		    0% {top: 0;}
+		    100%{top: -100%;}
+		}
+		@keyframes h100{
+		    0% {top: 0;}
+		    100%{top: -100%;}
+		}
+	</style>
+	<!-- // slider -->
+	<style type="text/css">
+		.am-slider-default{
+			margin: 0;
+		}
+
+		.am-slider-a1{
+			box-shadow: none;
+		}
+		.am-slider-a1 .am-control-nav li a{
+			width: 10px;height: 10px;
+			background-color: rgba(0,0,0,0);
+			box-shadow: none;
+			-webkit-box-shadow:none;
+			-moz-box-shadow:none;
+			-o-box-shadow:none;
+			-ms-box-shadow:none;
+			border:1px solid #4F4A36;
+		}
+		.am-slider-a1 .am-control-nav li a.am-active{
+			background-color: #4F4A36;
+		}
+	</style>
+	<!-- // 资讯 -->
+	<style type="text/css">
+		ul.newsfeed-list {
+		  padding: 0;
+		  list-style: none;
+		  font-size: 12px;
+		  padding-left: 10px;
+		  border-width: 1px 0 1px 0;
+		  border-style: solid;
+		  border-color: #808F72; }
+		  ul.newsfeed-list li {
+		    padding: 10px 10px 10px 0;
+		    border-bottom: 1px solid #808F72; }
+		    ul.newsfeed-list li:last-child {
+		      border: none; }
+		    ul.newsfeed-list li .newsfeed .newsfeed-img {
+		      float: left;
+		      width: 75px;
+		      height: 75px; }
+		      ul.newsfeed-list li .newsfeed .newsfeed-img .news-img {
+		        width: 100%; }
+		    ul.newsfeed-list li .newsfeed .newsfeed-info {
+		      width: 100%; }
+		      ul.newsfeed-list li .newsfeed .newsfeed-info .info-title {
+		        margin-left: 85px;
+		        overflow: hidden;
+		        text-overflow: ellipsis;
+		        -webkit-box-orient: vertical;
+		        display: -webkit-box;
+		        -webkit-line-clamp: 1;
+		        font-size: 16px;
+		        font-weight: bold;
+		        color: #2B2B2B; }
+		      ul.newsfeed-list li .newsfeed .newsfeed-info .info-date {
+		        margin-left: 85px;
+		        color: #9B9B9B;
+		        padding: 4px 0 4px 0; }
+		      ul.newsfeed-list li .newsfeed .newsfeed-info .info-des {
+		        margin-left: 85px;
+		        overflow: hidden;
+		        text-overflow: ellipsis;
+		        -webkit-box-orient: vertical;
+		        display: -webkit-box;
+		        -webkit-line-clamp: 2;
+		        color: #515151; }
+		
+		.specialty-news h3{
+			height: 40px;
+			line-height: 43px;
+			text-indent: 10px;
+		}
+		.all-news{
+			float: right;
+		}
+		.all-news img{
+			height: 18px;
+			position: relative;
+			top: 4px;
+			right: 10px;
+		}
+		.buy-goods{
+			/*width: 30%;*/
+		}
+		.buy-goods img{
+			width: 50%;
+			display: block;
+			margin: 20px auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="section">
+			<div class="am-slider am-slider-default am-slider-a1" imgW="750" imgH="280" style="min-height: 120px;">
+	           <div class='spinner'><div class='double-bounce1'></div><div class='double-bounce2'></div></div>
+	           <ul class="am-slides">
+	           
+	           </ul>
+	       </div>
+		</div>
+		<div class="section">
+			<div class="specialty-news">
+				<h3>特产资讯<a class="all-news" href="https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/zixun/#type=0"><img src="../img/all-news.png"></a></h3>
+			
+				<ul class="newsfeed-list">
+					<li >
+						<div class="newsfeed">
+							<div class="newsfeed-img">
+								<img class="news-img" src="../../modules/store-item-star/duixianma.jpg" alt="新闻图片" onerror="this.src='https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/search/img/blank-10x10.gif'">
+							</div>
+							<div class="newsfeed-info">
+								<div class="info-title">
+									资讯标题资讯标题资讯标题资讯标题资讯标题资讯标题
+								</div>
+								<div class="info-date">
+									2016-8-12
+								</div>
+								<div class="info-des">
+									资讯概要资讯概要资讯概要资讯概要资讯概要资讯概要资讯概要资讯概要资讯概要资讯概要资讯概要资讯概要资讯概要资讯概要资讯概要资讯概要资讯概要资讯概要资讯概要资讯概要资讯概要资讯概要资讯概要资讯概要资讯概要资讯概要资讯概要
+								</div>
+							</div>
+						</div>
+					</li><li >
+						<div class="newsfeed">
+							<div class="newsfeed-img">
+								<img class="news-img" src="../../modules/store-item-star/duixianma.jpg" alt="新闻图片" onerror="this.src='https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/search/img/blank-10x10.gif'">
+							</div>
+							<div class="newsfeed-info">
+								<div class="info-title">
+									资讯标题资讯标题资讯标题资讯标题资讯标题资讯标题
+								</div>
+								<div class="info-date">
+									2016-8-12
+								</div>
+								<div class="info-des">
+									资讯概要资讯概要资讯概要资讯概要资讯概要资讯概要资讯概要资讯概要资讯概要资讯概要资讯概要
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<a class="buy-goods" href="https://shop.yshjie.com/statichtml/bjmovie01/estores/Home/Tags/tag_2751"><img src="../img/buy-goods.png"></a>
+			</div>
+		</div>
+	</div>
+	<footer></footer>
+	<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			// resizeFrame
+			function resizeFrame (goal) {
+			    var goal = goal;
+			    //获取比例
+			    var goalW = $(goal).attr("imgW"),
+			        goalH = $(goal).attr("imgH"),
+			        scale = goalW/goalH;
+			   if (goal == ".entrance") {
+			        // console.log("此处是icon图标");
+			        $(goal).css("height",$(goal).width()/scale+22);
+			    }else{
+			        // console.log(scale);
+			        $(goal).css("height",$(goal).width()/scale);
+			    };
+			    $(goal).addClass("resized");
+			};
+
+			resizeFrame(".am-slider");
+			$(window).resize(function () {
+			    console.log("window-resize!!!");
+			    resizeFrame(".am-slider");
+			});
+
+			// init slider
+			function setSlider (goal,sliders) {
+                var title,link,imgSrc,imgAlt;
+                $.each(sliders,function  (key,value) {
+                        title  = this.title;
+                        link   = this.link;
+                        imgSrc = this.img.src;
+                        imgAlt = this.img.title;
+                var slider = "<li><a href='"+link+"'><img src ='"+imgSrc+"' alt='"+imgAlt+"' datalink=''/></a></li>";
+                    $(goal).append(slider);
+                });
+                $.ajax({
+                    url:"https://staticcdn.yshjie.com/cdn/librarypath/amazeui/AmazeUI-2.4.2/js/amazeui.min.js",
+                    type:"get",
+                    cache:true,
+                    success: function () {
+                    // console.log("轮播组件加载完毕")
+                    if ($.flexslider) {
+                        $(".am-slider").find(".spinner").remove();
+                        $('.am-slider').flexslider({
+                            // 设置用户操作后延时自动播放
+                          playAfterPaused: 3000,
+                          before: function(slider) {
+                            if (slider._pausedTimer) {
+                              window.clearTimeout(slider._pausedTimer);
+                              slider._pausedTimer = null;
+                            }
+                          },
+                          after: function(slider) {
+                            var pauseTime = slider.vars.playAfterPaused;
+                            if (pauseTime && !isNaN(pauseTime) && !slider.playing) {
+                              if (!slider.manualPause && !slider.manualPlay && !slider.stopped) {
+                                slider._pausedTimer = window.setTimeout(function() {
+                                  slider.play();
+                                }, pauseTime);
+                              }
+                            }
+                          }
+                              // 设置其他参数
+                        });
+                    }else{
+                            console.log("aborted");
+                        };
+                    }
+                });
+        	}
+
+        	//init data
+        	$.ajax({
+        		url:'../js/data.json',
+
+        	}).done(function (data) {
+        		console.log(data)
+        		var sliders = data.sliders
+        		initPage(sliders)
+        		console.log('done');
+        	}).fail(function () {
+        		console.log('fail')
+        	})
+
+        	// init page
+        	function initPage(sliders) {
+        		setSlider(".am-slides",sliders)
+        	}
+		})
+	</script>
+</body>
+</html>

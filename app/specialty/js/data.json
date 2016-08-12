@@ -1,0 +1,54 @@
+{
+"sliders":[
+    {
+        "title":"清凉一夏",
+        "store":"false",
+        "index":"0",
+        "link":"https://shop.yshjie.com/statichtml/bjmovie01/estores/mall/hmsq/150824/activity/20160730/page/tianxiangcai.html",
+        "img":{
+            "src":"https://staticcdn.yshjie.com/cdn/estores/mall/hmsq/150824/img/index/flash/43.png",
+            "title":"清凉一夏"
+        }
+    },
+    {
+        "title":"艾比克汉堡炸鸡",
+        "store":"false",
+         "index":"0",
+         "link":"https://shop.yshjie.com/statichtml/bjmovie01/estores/Home/Cuxiao/product_list?stores_id=7926&promotionid=354&beginappi&navbar=stores&endappi",
+        "img":{
+            "src":"https://staticcdn.yshjie.com/cdn/estores/mall/hmsq/150824/img/index/flash/48.png",
+            "title":"艾比克汉堡炸鸡"
+        }
+    },
+    {
+        "title":"七夕缘",
+        "store":"false",
+        "index":"0",
+        "link":"/statichtml/bjmovie01/estores/mall/hmsq/150824/abl/page/qxy.html",
+        "img":{
+            "src":"https://staticcdn.yshjie.com/cdn/estores/mall/hmsq/150824/img/index/10.png",
+            "title":"七夕缘"
+        }
+    },
+    {
+        "title":"和沐超市七夕购物送好礼",
+        "store":"false",
+        "index":"0",
+        "link":"https://shop.yshjie.com/statichtml/bjmovie01/estores/Home/Cuxiao/product_list?stores_id=52&promotionid=328&beginappi&navbar=stores&endappi",
+        "img":{
+            "src":"https://staticcdn.yshjie.com/cdn/estores/mall/hmsq/150824/img/index/flash/47.png",
+            "title":"和沐超市七夕购物送好礼"
+        }
+    },
+    {
+        "title":"南昌煨汤",
+        "store":"false",
+        "index":"0",
+        "link":"https://shop.yshjie.com/statichtml/bjmovie01/estores/Home/Cuxiao/product_list?stores_id=5019&promotionid=357&beginappi&navbar=stores&endappi",
+        "img":{
+            "src":"https://staticcdn.yshjie.com/cdn/estores/mall/hmsq/150824/img/index/flash/49.png",
+            "title":"南昌煨汤"
+        }
+    }
+]
+}

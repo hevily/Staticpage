@@ -4,7 +4,8 @@
 	<meta charset="utf-8" />
 	<meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <link rel="stylesheet" type="text/css" href="../css/webui-popover.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" /> -->
+    <link rel="stylesheet" type="text/css" href="../css/popover.min.css" />
 	<title>我的订单</title>
 	<style type="text/css">
 	*{margin: 0;padding: 0;}
@@ -12,22 +13,17 @@
 		width:100%;
 		max-width:640px;
 		margin:0 auto;
-		font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-		font-size: 14px;
-		line-height: 20px;
 	}
 		.my-order-navbar{z-index: 1;}
-		.webui-popover{
-			width:auto;
+		.popover{
 			background-color: rgba(0,0,0,0.65);
+			border:none;
 		}
-		.webui-popover.bottom>.arrow:after, .webui-popover.bottom-right>.arrow:after, .webui-popover.bottom-left>.arrow:after{
-			border-bottom-color: rgba(0,0,0,0.5);
+		.popover-content{
+			padding:10px;
+			color:#fff;
 		}
 
-		.secend-lists-menu{
-			color: #fff;
-		}
 		.my-order-navbar{}
 		.order-lists{
 			white-space: nowrap;
@@ -103,11 +99,7 @@
 		}
 		.secend-list{
 			line-height: 30px;
-			display: block;
-			margin: 0 auto;
 			text-align: center;
-			color:#fff;
-			text-decoration:none;
 			cursor: pointer;
 		}
 
@@ -136,7 +128,7 @@
 	              <p>购物车</p>
 	            </div>
 
-	            <div class="order-list wait-pay" data-content="<div class='secend-lists-menu wait-pay'><a href='javascript:;' class='secend-list'>商品待付款</a><a href='javascript:;' class='secend-list'>代金券待付</a></div>">
+	            <div class="order-list wait-pay" title="" data-content="<div class='secend-lists-menu wait-pay'><div class='secend-list'>商品待付款</div><div class='secend-list'>代金券待付</div></div>">
 	              <div class="list-logo-content">
 	                <span>1</span>
 	                <img class="list-logo" src="../img/wait-pay-list.png" alt="待付款">
@@ -157,7 +149,7 @@
 	              <p>待收货</p>
 	            </div>
 
-	            <div class="order-list last-of-type other" data-content="<div class='secend-lists-menu other'><a href='javascript:;' class='secend-list'>已完成</a><a href='javascript:;' class='secend-list'>已取消</a><a href='javascript:;' class='secend-list' >退款</a></div>">
+	            <div class="order-list last-of-type other" data-content="<div class='secend-lists-menu other'><div class='secend-list'>已完成</div><div class='secend-list'>已取消</div><div class='secend-list' >退款</div></div>">
 	              <img class="list-logo" src="../img/cart-other.png" alt="其他订单">
 	              <img class="list-logo" src="../img/cart-other-a.png" alt="其他订单">
 	              <p>已完成</p>
@@ -168,29 +160,22 @@
 	<div style="background-color:#DCDEE3;height:200px;"></div>
 	<script type="text/javascript">document.body.addEventListener('touchstart', function () { })</script>
 	<script src="/statichtml/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
-	<!-- <script type="text/javascript" src="../js/popover.min.js"></script> -->
-	<script type="text/javascript" src="../js/webui-popover.min.js"></script>
+	<script type="text/javascript" src="../js/popover.min.js"></script>
 	<script type="text/javascript">
 		$(function () {
-
 			// 配置popover 弹层动画 出现位置 添加内容 弹层父容器
-			var settings = {
-					trigger:'click',
-					padding:true,
-					placement:"auto"
-			};
-			$('.order-list.wait-pay,.order-list.other').webuiPopover('destroy').webuiPopover(settings);
-
+			$('.order-list').popover({
+				animation:true,
+				placement:'bottom',
+				html:true,
+				container:'body'
+			});
 			// 购物车 待发货 待收货 状态切换
-			$('.order-list').click(function (e) {
-				e.stopPropagation()
-				// console.log($(this).index())
-			  if ($(this).hasClass('wait-pay')||$(this).hasClass('other')) {
-			  	console.log('wait-pay other')
-			  }else{
+			$('.order-list').click(function () {
+			  if (!($(this).hasClass('wait-pay')||$(this).hasClass('other'))) {
+			  	$('.order-list').popover('hide');
 			  	$('.active').removeClass('active');
 			  	$(this).addClass('active');
-			  	$('.order-list.wait-pay,.order-list.other').webuiPopover('hide')
 			  }
 			})
 			// 待付款 已完成 全部 已退款 已取消 状态切换
@@ -211,7 +196,7 @@
 					goal.addClass('active');
 				}
 				textArea.text(text);
-				$('.order-list.wait-pay,.order-list.other').webuiPopover('hide')
+				$('.order-list').popover('hide');
 			})
 		})
 	</script>
