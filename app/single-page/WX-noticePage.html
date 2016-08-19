@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<title>提示打开App</title>
+	<style type="text/css">
+		.section{
+			display:none;
+		}
+		img{width: 100%;}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="section IOS" id="IOS">
+		ios终端
+	</div>
+	<div class="section Android" id="Android">
+		android终端
+	</div>
+	<div class="section Normal" id="Normal">
+		一般终端
+	</div>
+</div>
+	<script type="text/javascript">
+	function checkBrowser(argument) {
+	// return the browser object
+		var browser={
+				versions:function(){
+					var u = navigator.userAgent, app = navigator.appVersion;
+					return { //移动终端浏览器版本信息
+					trident: u.indexOf('Trident') > -1, //IE内核
+					presto: u.indexOf('Presto') > -1, //opera内核
+					webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+					gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+					mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+					ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+					android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+					iPhone: u.indexOf('iPhone') > -1 , //是否为iPhone或者QQHD浏览器
+					iPad: u.indexOf('iPad') > -1, //是否iPad
+					webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+					};
+				}(),
+				language:(navigator.browserLanguage || navigator.language).toLowerCase()
+			}
+			result = {}
+
+			if (browser.versions.iPhone || browser.versions.iPad || browser.versions.ios) {
+				// IOS
+				if (browser.versions.iPhone){
+					result.ios = 'iphone'
+				}else if(browser.versions.iPad){
+					result.ios = 'ipad'
+				}else{
+					result.ios = 'ios'
+				}
+			}else if (browser.versions.android) {
+				// Android
+				result.android = 'android'
+			}else{
+				result.msg = 'unKnown'
+			}
+			return result 
+	}
+
+	window.onload = function () {
+		function controllBlock(ios,Android,Normal) {
+			var IOS = document.getElementById(ios);
+			var Android = document.getElementById(Android);
+			var Normal = document.getElementById(Normal)
+			device = checkBrowser()
+			if (device.ios == 'iphone' || device.ios == 'ipad' || device.ios == 'ios') {
+				IOS.style.display = 'block';
+				console.log('ios')
+			}else if( device.android == 'android'){
+				Android.style.display ='block';
+				console.log('android')
+			}else{
+				Normal.style.display = 'block';
+			}
+		}
+		controllBlock('IOS','Android','Normal')
+	}
+	</script>
+</body>
+</html>
