@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <!-- <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../css/" /> -->
+	<title>浏览器标示对象navigator</title>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="section">
+			正文
+		</div>
+		<div class="section nav">
+
+		</div>
+	</div>
+	<footer></footer>
+	<script type="text/javascript">
+		
+		// var nav = window.navigator;
+		// var navBox = document.querySelectorAll('.nav')[0]
+		// console.log(nav)
+		// navBox.innerHTML = nav
+
+		function loop(times,separ,min) {
+			var i = 0;
+			setInterval(function () {
+				if (i < times) {
+					i++;
+					console.log(i+"s")
+					if(i ==times ){
+						min++;
+						if(min ==times){
+							console.log(i*min)
+							return;
+						}
+						loop(times,separ,min)
+						console.log(min)
+						
+					}
+				}
+			},separ)
+		}
+
+		var min= 0;
+		(function clock () {
+			loop(60,1000)
+		})()
+		
+
+	</script>
+</body>
+</html>

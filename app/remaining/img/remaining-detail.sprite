@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SpriteFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" CssFileName="../img" ImageName="remaining-detail" IsPhone="true" SpriteImgFileType="Png" xmlns="CssSprite">
+  <SpriteList>
+    <Sprite Path="select.png" LocationX="473" LocationY="24" />
+    <Sprite Path="all.png" LocationX="20" LocationY="0" />
+    <Sprite Path="recharge.png" LocationX="169" LocationY="3" />
+    <Sprite Path="consume.png" LocationX="332" LocationY="0" />
+  </SpriteList>
+</SpriteFile>

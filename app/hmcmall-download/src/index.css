@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-overflow-scrolling: touch;
+  font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", "FreeSans, Arimo", "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif; }
+
+.container {
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto; }
+  .container .topic img {
+    width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    display: block; }
+  .container .download .download-half {
+    width: 35%;
+    float: left;
+    text-align: center;
+    margin-top: 10px;
+    padding-bottom: 30px; }
+    .container .download .download-half .download-box {
+      list-style: none; }
+    .container .download .download-half.android {
+      margin-left: 10%;
+      margin-right: 5%; }
+      .container .download .download-half.android .link-box {
+        background-color: #19C241;
+        margin: 10px 0 5px 0; }
+        .container .download .download-half.android .link-box:first-child {
+          margin: 0;
+          background-color: #fff;
+          border-width: 3px 0 3px 0;
+          border-style: solid;
+          border-color: #19C241;
+          height: 30px;
+          line-height: 24px;
+          color: #000;
+          cursor: default; }
+    .container .download .download-half.ios {
+      margin-left: 5%;
+      margin-right: 10%; }
+      .container .download .download-half.ios .link-box {
+        background-color: #FFCC33;
+        margin: 10px 0 5px 0; }
+        .container .download .download-half.ios .link-box:first-child {
+          margin: 0;
+          background-color: #fff;
+          border-width: 3px 0 3px 0;
+          border-style: solid;
+          border-color: #FFCC33;
+          height: 30px;
+          line-height: 24px;
+          color: #000;
+          cursor: default; }
+    .container .download .download-half .link-box {
+      position: relative;
+      height: 30;
+      line-height: 30px;
+      color: #fff;
+      cursor: pointer; }
+      .container .download .download-half .link-box::before {
+        content: "";
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        height: 0;
+        width: 0;
+        border-style: solid;
+        border-width: 4px;
+        border-left-color: #fff;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent; }
+
+@media screen and (min-width: 749px) and (max-width: 828px) {
+  .download-half {
+    background-color: red; } }
+
+/*# sourceMappingURL=index.css.map */

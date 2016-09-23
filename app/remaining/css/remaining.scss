@@ -1,0 +1,206 @@
+@charset 'utf-8';
+@import "../../Public/base";
+/* 店铺余额列表 */
+.store-remaining {
+	.stores-list{
+		.media{
+			padding:10px;
+			border-bottom:1px solid #CCCCCC;
+			&:active{
+				background-color: transparent;
+			}
+			.media-left{
+				.media-object{
+					-moz-border-radius:5px;
+					     border-radius:5px;
+				}
+			}
+			.media-body{
+				position: relative;
+				.store-name{
+					overflow:hidden;
+					text-overflow:ellipsis;
+					display: -webkit-box;
+					-webkit-line-clamp:1;
+					-webkit-box-orient:vertical;
+				}
+				.store-remaining{
+					position: absolute;
+					bottom: 0;left: 0;
+					color:#f36303;font-weight: bold;
+				}
+			}
+			.media-right{
+				-webkit-user-select:none;
+				   -moz-user-select:none;
+				    -ms-user-select:none;
+				        user-select:none;
+				&::active{
+					background-color: transparent;
+				}
+				min-width:60px;
+				.media-object{
+					width:100%;
+					height:auto;
+				}
+				.store-remaining-detail{
+					float: left;margin-right: 4px;
+				}
+				.store-remain-btn{
+					position: relative;
+					top:3px;
+					line-height: 20px;
+					vertical-align:middle;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+.store-remaining-detail{
+	width:18px;height: 20px;overflow: hidden;background-color: #fff;
+	border:1px solid #f36303;-moz-border-radius:3px;border-radius:3px;
+
+	display:inline-block;
+	.three-line{
+		position: relative;
+		-moz-background-clip: content-box;
+		     background-clip: content-box;
+		background-color: #f36303;
+		padding: 4px 0 4px 0;
+		margin: 4px 2px;
+		height: 11px;
+		width: 12px;
+		border-style:solid ;
+		border-width:1px 0 1px 0;
+		border-top-color:#f36303;
+		border-bottom-color:#f36303;
+		&::before{
+			content:"";
+			display:block;
+			height:13px;
+			width:1px;
+			position: absolute;
+			background-color: #FFF;
+			left:2px;
+			top: -1px;
+		}
+	}
+}
+
+/* 余额详情*/
+.remaining-details-lists{
+	.nav-mask{
+		display: none;
+		position: fixed;
+		top: 0;left: 0;
+		width: 100%;height: 100%;
+		z-index:1000;
+		background-color: rgba(0,0,0,0.5)
+	}
+	.remaining-bar{
+		position: fixed;
+		width:100%;
+		top: 0;left: 0;
+		z-index:1002;
+		background-color: #FFF;
+		.remaining-box{
+			font-size: 16px;
+			font-weight: 500;
+			color:#000;
+			.current-remaining{
+				border-bottom:1px solid #ccc;
+				line-height: 50px;
+				text-align:center;
+				span{
+
+				}
+				img{
+					width: 12px;
+					vertical-align:middle;
+					position: relative;
+					top: -1px;
+					-webkit-transform: rotate(180deg);
+					   -moz-transform: rotate(180deg);
+					    -ms-transform: rotate(180deg);
+					        transform: rotate(180deg);
+				}
+			}
+			.remaining-options{
+				display: none;
+				.remaining-option{
+					padding-left:10px;
+					height: 41px;
+					line-height: 40px;
+					position: relative;
+					
+					.remaining-tag{
+						width:25px;
+						vertical-align:middle;
+						margin-right: 10px;
+					}
+					.select{
+						position: absolute;
+						display: none;
+						right: 10px;
+						top: 14px;
+						width: 18px;
+					}
+
+					span{
+						vertical-align:middle;
+						display:inline-block;
+						float: right;
+						width:-webkit-calc(100% - 45px);
+						width:-moz-calc(100% - 45px);
+						width:calc(100% - 45px);
+						border-bottom:1px solid #CCCCCC;
+
+					}
+					&:last-child{
+						:nth-child(2){
+							border-bottom:none;
+						}
+					}
+				}
+			}
+			&.wait-select {
+				.current-remaining img{
+						-webkit-transform: rotate(0);
+						   -moz-transform: rotate(0);
+						    -ms-transform: rotate(0);
+						        transform: rotate(0);
+					}
+				.selecting .select{
+						display: block;
+					}
+			}
+		}
+	}
+	.remaining-list{
+		padding-top: 50px;
+		.media{
+			padding: 4px 10px;
+			line-height: 25px;
+			border-bottom:1px solid #ccc;
+			.media-left{
+				min-width:115px;
+				.using-name{
+					font-weight: 600;
+				}
+			}
+			.media-right{
+				min-width:100px;
+				text-align:right;
+				.using-time{
+					color:#626262;
+				}
+				.using-num{
+					font-weight: 600;
+				}
+			}
+		}
+
+	}
+}

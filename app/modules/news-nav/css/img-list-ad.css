@@ -1,0 +1,71 @@
+.ad-tag{
+	background-color: #cfc;
+	color: #fff;
+	padding:2px;
+	line-height: 20px;
+}
+
+.imgListShebei {
+    width: 100%;
+    overflow: hidden;
+}
+.content .imgList li {
+    padding: 10px 0;
+}
+.imgListShebei li {
+    padding: 10px 5px 10px 5px;
+    margin: 0%;
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.priture {
+    width: 100px;
+    height: 100px;
+    float: left;
+    border: 1px solid #eee;
+    overflow: hidden;
+}
+.matter {
+    height: 100px;
+    overflow: hidden;
+    padding-left: 10px;
+    position: relative;
+}
+.priture img {
+    width: 100%;
+    height: auto;
+}
+.title {
+    font-size: 15px;
+    line-height: 20px;
+    max-height: 20px;
+    overflow: hidden;
+    color: #1e1e1e;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.content .datetime {
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 0px;
+    color: #9b9b9b;
+    padding-top: 4px;
+}
+.referral {
+    font-size: 13px;
+    line-height: 20px;
+    max-height: 40px;
+    overflow: hidden;
+    color: #454545;
+    position: absolute;
+    bottom: 0;
+}
+.title .zz {
+    color: #226fb7;
+}
+
+
+
