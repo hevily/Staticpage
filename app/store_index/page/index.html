@@ -1052,13 +1052,13 @@
 					goTo(content)
 			})
 
-			var stop=true; var i = 0,timeoffset = 10 ,timeout,currentDocOld = -100
+			var stop=true; var i = 0,timeoffset = 0 ,timeout,currentDocOld = -100
 			$(window).scroll(function(){
 				clearInterval(timeout);
 				//should occur with a delay
 				timeout = setTimeout(function(){
 					scrollTop = $(document).scrollTop()
-
+ 
 					//load-more
 						totalheight = parseFloat($(window).height()) + parseFloat($(window).scrollTop()); 
 						if($(document).height() <= totalheight+100){ 

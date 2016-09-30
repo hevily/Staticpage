@@ -1,34 +1,30 @@
-// 用户自定变量
-var httpReceivedTimes = 0;
-
-/*
-	引入模块 http url
- */
+// import
 var http = require('http');
 var url  = require('url');
 
-function start (route,handle) {
-	// 每次请求时处理
-	function onRequest (req,res){
-		// 路径
-		var pathname = url.parse(req.url).pathname;
-		console.log(pathname);
-		// 响应内容
-			// 响应头部
-			// res.writeHead(200,{'Content-Type':'text/plain'});
-			// 响应内容
-		var content = route(handle,pathname,res);
-			// res.write(content);
-			// 响应结束
-			// res.end();
+function start(route,handle) {
+	function onRequest(request,response) {
+		var postData = '';
+		var pathname = url.parse(request.url).pathname;
+		console.log('Request for '+ pathname +'received.');
 
-		// 统计请求次数
-		httpReceivedTimes++;
-		// console.log('第-'+httpReceivedTimes+'-次请求')
+
+		request.setEncoding('utf-8');
+		request.addListener('data',function (postDataChunk) {
+			postData += postDataChunk ;
+			console.log('Recived POST data chunk '+ postDataChunk);
+
+		})
+		request.addListener('end',function () {
+			route(handle,pathname,response);
+		})
+		// response.writeHead(200,{'Content-Type':'text/plain'});
+		// var content = route(handle,pathname,response);
+		// response.write(content);
+		// response.end();
 	}
-	// 创建请求处理 监听端口
-	http.createServer(onRequest).listen(80);
-	console.log('http is runing');
+	http.createServer(onRequest).listen(8888);
+	
 }
-// 暴露外部访问 exports.funName = funName
+
 exports.start = start;

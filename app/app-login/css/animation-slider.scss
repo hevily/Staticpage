@@ -1,0 +1,136 @@
+
+/* Animaation classes and animations */
+.hmcmall-img{position: relative;}
+/* Slide in from the right*/
+	.hmcmall-slide-fromright .trans-one .trans-left{
+			animation: fromRightAnima1-1 0.6s ease-in 0.6s both;
+	}
+	.hmcmall-slide-fromright .trans-one .trans-right{
+			animation: fromRightAnima1-2 0.8s ease-in 0.8s both;
+	}
+	.hmcmall-slide-fromright .trans-two .trans-left{
+		animation: fromRightAnima2-1 0.6s ease-in 0.8s both;
+	}.hmcmall-slide-fromright .trans-two .trans-right{
+		animation: fromRightAnima2-2 0.8s ease-in 0.6s both;
+	}
+	// fromrightanima
+		@keyframes fromRightAnima1-1{
+			0%{ right: -50%; opacity: 0; }
+			100%{ right: 0%; opacity: 1; }
+		}
+		@keyframes fromRightAnima1-2{
+			0%{ right: -110%; opacity: 0; }
+			100%{ right: 0%; opacity: 1; }
+		}
+		@keyframes fromRightAnima2-1{
+			0%{ right: -50%; opacity: 0.3; }
+			100%{ right: 100%; opacity: 1; }
+		}
+		@keyframes fromRightAnima2-2{
+			0%{ right: -110%; opacity: 0; }
+			100%{ right: 0%; opacity: 1; }
+		}
+
+
+/* Slide in from the left*/
+	.hmcmall-slide-fromleft .trans-one .trans-left{
+		-webkit-animation: fromLeftAnima1-1 0.6s ease-in 0.8s both;
+		-moz-animation: fromLeftAnima1-1 0.6s ease-in 0.8s both;
+		-o-animation: fromLeftAnima1-1 0.6s ease-in 0.8s both;
+		-ms-animation: fromLeftAnima1-1 0.6s ease-in 0.8s both;
+		animation: fromLeftAnima1-1 0.6s ease-in 0.8s both;
+	}.hmcmall-slide-fromleft .trans-one .trans-right{
+		-webkit-animation: fromLeftAnima1-2 0.6s ease-in 0.6s both;
+		-moz-animation: fromLeftAnima1-2 0.6s ease-in 0.6s both;
+		-o-animation: fromLeftAnima1-2 0.6s ease-in 0.6s both;
+		-ms-animation: fromLeftAnima1-2 0.6s ease-in 0.6s both;
+		animation: fromLeftAnima1-2 0.6s ease-in 0.6s both;
+	}
+	.hmcmall-slide-fromleft .trans-two .trans-left{
+		animation:fromLeftAnima2-1 0.6s ease-in 0.8s both;
+	}
+	.hmcmall-slide-fromleft .trans-two .trans-right{
+		animation:fromLeftAnima2-2 0.6s ease-in 0.6s both;
+
+	}
+	// fromleftanima
+		@keyframes fromLeftAnima1-1{
+			0%{ left: -110%; opacity: 0; }
+			100%{ left: 0%; opacity: 1; }
+		}
+		@keyframes fromLeftAnima1-2{
+			0%{ right: 110%; opacity: 0; }
+			100%{ right: 0%; opacity: 1; }
+		}
+		@keyframes fromLeftAnima2-1 {
+			0% { left:-110% ;opacity:0;}
+			100%{left:0; opacity:1;}
+		}
+		@keyframes fromLeftAnima2-2 {
+			0% { left:-110% ;opacity:0;}
+			100%{left:0; opacity:1;}
+		}
+
+/* Slide out to the right */
+.hmcmall-slide-toright .hmcmall-img{
+	-webkit-animation: toRightAnima4 0.6s ease-in both;
+	-moz-animation: toRightAnima4 0.6s ease-in both;
+	-o-animation: toRightAnima4 0.6s ease-in both;
+	-ms-animation: toRightAnima4 0.6s ease-in both;
+	animation: toRightAnima4 0.6s ease-in both;
+}
+// torightanima
+	
+
+	@keyframes toRightAnima1{
+		0%{ left: 10%;  opacity: 1; }
+		100%{ left: 100%; opacity: 0; }
+	}
+	@keyframes toRightAnima2{
+		0%{ left: 10%;  opacity: 1; }
+		100%{ left: 100%; opacity: 0; }
+	}
+	@keyframes toRightAnima3{
+		0%{ left: 10%;  opacity: 1; }
+		99%{ left: 10%; opacity: 0; }
+		100%{ left: 100%; opacity: 0; }
+	}
+	@keyframes toRightAnima4{
+		0%{ left: 60%;  opacity: 1; }
+		30%{ left: 55%;  opacity: 1; }
+		100%{ left: 100%; opacity: 0; }
+	}
+
+/* Slide out to the left*/
+.hmcmall-slide-toleft .trans-one .trans-left{
+	
+	animation: toLeftAnima1-1 0.3s ease-in 0.6s both;
+}
+.hmcmall-slide-toleft .trans-one .trans-right{
+	
+	animation: toLeftAnima1-2 0.6s ease-in 0.6s both;
+}
+// toleftanima
+	
+
+	@keyframes toLeftAnima1-1{
+		0%{ left: 0%;  opacity: 1; }
+		30%{ left: 15%;  opacity: 1; }
+		100%{ left: -100%; opacity: 0; }
+	}
+	@keyframes toLeftAnima1-2{
+		0%{ left: 10%;  opacity: 1; }
+		30%{ left: 15%;  opacity: 1; }
+		100%{ left: -50%; opacity: 0; }
+	}
+	@keyframes toLeftAnima3{
+		0%{ left: 10%;  opacity: 1; }
+		99%{ left: 10%; opacity: 0; }
+		100%{ left: -50%; opacity: 0; }
+	}
+	@keyframes toLeftAnima4{
+		0%{ left: 60%;  opacity: 1; }
+		40%{ left: 70%;  opacity: 1; }
+		90%{ left: 0%;  opacity: 0; }
+		100%{ left: -50%; opacity: 0; }
+	}
