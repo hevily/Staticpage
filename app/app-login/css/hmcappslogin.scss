@@ -10,6 +10,7 @@
 	.app-box{
 		text-align:center;
 		.app{
+			padding:0 10px;
 			&:hover{
 				box-shadow:1px 1px 2px 1px rgba(0,0,0,0.1);
 				.applogo{
@@ -48,6 +49,7 @@
 			}
 			.appbaseon{
 				width: 101px;
+				margin-bottom: 20px;
 			}
 		}
 	}
@@ -56,6 +58,7 @@
 @media screen and(max-width:739px){
 	.app-box{
 		margin: 30px 0;
+		margin-bottom: 10px;
 		padding:0px;
 		.app{
 			padding:0 10px;
@@ -67,25 +70,28 @@
 	.app-box{
 		padding:0 30px;
 		margin:40px 0;
+		margin-bottom: 10px;
 	}
 }
 @media screen and(min-width:1000px) {
 	.app-box{
 		padding:0 60px;
 		margin:40px 0;
+		margin-bottom: 10px;
 	}
 }
 @media screen and(min-width:1200px) {
 	.app-box{
 		padding:0 70px;
 		margin:40px 0;
+		margin-bottom: 10px;
 	}
 }
 // footer
 .footer{
 	background-color: #333333;
 	color:#fff;
-	padding-top:40px;
+	padding-top:15px;
 	.footer-navs{
 		text-align:center;
 		.footer-nav{

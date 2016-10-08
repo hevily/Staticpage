@@ -8,14 +8,16 @@
   text-align: center; }
 .appshow .app-box {
   text-align: center; }
-  .appshow .app-box .app:hover {
-    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.1); }
-    .appshow .app-box .app:hover .applogo {
-      animation: apphoverlogo 0.2s ease-in both;
-      display: none; }
-    .appshow .app-box .app:hover .applogo-hover {
-      animation: apphoverlogohover 0.4s ease-in both;
-      display: inline-block; }
+  .appshow .app-box .app {
+    padding: 0 10px; }
+    .appshow .app-box .app:hover {
+      box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.1); }
+      .appshow .app-box .app:hover .applogo {
+        animation: apphoverlogo 0.2s ease-in both;
+        display: none; }
+      .appshow .app-box .app:hover .applogo-hover {
+        animation: apphoverlogohover 0.4s ease-in both;
+        display: inline-block; }
 @keyframes apphoverlogolhover {
   from {
     opacity: 0; }
@@ -26,44 +28,49 @@
     opacity: 1; }
   to {
     opacity: 0; } }
-  .appshow .app-box .app .appname {
-    font-weight: bolder;
-    font-size: 16px;
-    padding: 10px 0; }
-  .appshow .app-box .app .applogo {
-    margin: 17px 0;
-    width: 62px; }
-  .appshow .app-box .app .applogo-hover {
-    margin: 17px 0;
-    width: 62px;
-    display: none; }
-  .appshow .app-box .app .appdesc {
-    margin: 17px 0; }
-  .appshow .app-box .app .appbaseon {
-    width: 101px; }
+    .appshow .app-box .app .appname {
+      font-weight: bolder;
+      font-size: 16px;
+      padding: 10px 0; }
+    .appshow .app-box .app .applogo {
+      margin: 17px 0;
+      width: 62px; }
+    .appshow .app-box .app .applogo-hover {
+      margin: 17px 0;
+      width: 62px;
+      display: none; }
+    .appshow .app-box .app .appdesc {
+      margin: 17px 0; }
+    .appshow .app-box .app .appbaseon {
+      width: 101px;
+      margin-bottom: 20px; }
 
 @media screen and (max-width: 739px) {
   .app-box {
     margin: 30px 0;
+    margin-bottom: 10px;
     padding: 0px; }
     .app-box .app {
       padding: 0 10px; } }
 @media screen and (min-width: 740px) {
   .app-box {
     padding: 0 30px;
-    margin: 40px 0; } }
+    margin: 40px 0;
+    margin-bottom: 10px; } }
 @media screen and (min-width: 1000px) {
   .app-box {
     padding: 0 60px;
-    margin: 40px 0; } }
+    margin: 40px 0;
+    margin-bottom: 10px; } }
 @media screen and (min-width: 1200px) {
   .app-box {
     padding: 0 70px;
-    margin: 40px 0; } }
+    margin: 40px 0;
+    margin-bottom: 10px; } }
 .footer {
   background-color: #333333;
   color: #fff;
-  padding-top: 40px; }
+  padding-top: 15px; }
   .footer .footer-navs {
     text-align: center; }
     .footer .footer-navs .footer-nav {

@@ -1,9 +1,13 @@
 $(function () {
-	function changeBg(_this,goal) {
-		var goal = $(goal),
-		right = false,
-		times = goal.attr('times')?goal.attr('times'):0;
-		if (_this.hasClass('da-arrows-next')) {right = true;}
+	function changeBg(_this,goal,dir) {
+			var goal = $(goal),
+			right = false,
+			times = goal.attr('times')?goal.attr('times'):0;
+		if (_this.hasClass('da-arrows')) {
+			if (_this.hasClass('da-arrows-next')) {right = true;}
+		}else{
+			right = dir;
+		}
 		right?
 		goal.attr({'times':++times}):
 		goal.attr({'times':--times});
@@ -17,8 +21,8 @@ $(function () {
 		// changeBg(_this,goal);
 		right = changeBg(_this,goal);
 		slide('.da-slider',right,userdir)
+		changeNav(curIndex)
 	});
-
 
 	function slide(elem,right,userdir) {
 		var leftin = 'da-slide-fromleft',
@@ -31,43 +35,24 @@ $(function () {
 			dClass = 'slider-anima'
 			curIndex = curItem.index()+1,
 			pre = curIndex -1 ,next = curIndex +1
-
 		if(right){
-				if (curIndex == 1) {
-					pre = 0;
-				}else if(curIndex == items.length - 1){
-					next = 0;
-				}else if(curIndex == items.length){
-					curIndex = 0;
-					pre = items.length -1;
-					next = 1;
-				}
-				
-			// user direction is right
-			// if (right == userdir) {
-
-				items.eq(pre).removeClass(rightin+' '+rightOut+' '+leftin).addClass(leftOut)
-				setTimeout(function () {
-					items.eq(curIndex).addClass(rightin+" "+leftOut)
-					$('.da-current').removeClass('da-current')
-					items.eq(curIndex).addClass('da-current')
-				},1600)
-
-			// }else{
-			// left before 
-				// items.eq(pre).removeClass(leftin+' '+rightOut).addClass(leftOut)
-				// setTimeout(function () {
-				// 	items.eq(curIndex).addClass(rightin+" "+leftOut)
-				// 	$('.da-current').removeClass('da-current')
-				// 	items.eq(curIndex).addClass('da-current')
-				// },1600)
-
-			// }
-			
-
+			if (curIndex == 1) {
+				pre = 0;
+			}else if(curIndex == items.length - 1){
+				next = 0;
+			}else if(curIndex == items.length){
+				curIndex = 0;
+				pre = items.length -1;
+				next = 1;
+			}
+			items.eq(pre).removeClass(rightin+' '+rightOut+' '+leftin).addClass(leftOut)
+			setTimeout(function () {
+				items.eq(curIndex).addClass(rightin+" "+leftOut)
+				$('.da-current').removeClass('da-current')
+				items.eq(curIndex).addClass('da-current')
+			},1600)
 		}else{
 			// leftin
-				console.log('right-dir')
 				curIndex -= 2;
 				pre = curIndex +1 
 				next = curIndex -1
@@ -80,9 +65,6 @@ $(function () {
 					pre = 1;
 					next = items.length -1;
 				}
-
-				console.log(pre+'^curIndex:'+curIndex+'^'+next);
-
 				items.eq(pre).removeClass(leftin+' '+leftOut+' '+rightin).addClass(rightOut)
 				setTimeout(function () {
 					items.eq(curIndex).addClass(leftin+" "+rightOut)
@@ -90,42 +72,64 @@ $(function () {
 					items.eq(curIndex).addClass('da-current')
 				},1600)
 		}
-		changeNav(curIndex)
-
-		
-
-
-
-
-
-		
 	}
-		function changeNav(index) {
-			var navs = $('.da-dots').find('span'),classname='da-dots-current'
+	function changeNav(index) {
+		var navs = $('.da-dots').find('span'),classname='da-dots-current'
+		$('.'+classname).removeClass(classname);
+		navs.eq(index).addClass(classname);
+	}
+	function navChange(index) {
+		var sliders = $('.da-slider').find('.slider-anima');
+		$('.da-current').removeClass('da-current');
+		sliders.eq(index).addClass('da-current');
+	}
+	function removeClass(classname,time) {
+		if (time == ''|| time == 'undefined' ) {
+			time =1000;
+		}
+		setTimeout(function () {
 			$('.'+classname).removeClass(classname);
-			navs.eq(index).addClass(classname);
-			console.log(index)
-		}
-		function navChange(index) {
-			var sliders = $('.da-slider').find('.slider-anima');
-			$('.da-current').removeClass('da-current');
-			sliders.eq(index).addClass('da-current');
-		}
-		function removeClass(classname,time) {
-			if (time == ''|| time == 'undefined' ) {
-				time =1000;
-			}
-			setTimeout(function () {
-				$('.'+classname).removeClass(classname);
-			},time)
-		}
+		},time)
+	}
+	function dotSlide(oIndex,cIndex,right) {
 
-	// $('.da-dots span').click(function () {
-	// 	console.log('click')
-	// 	var cIndex = $(this).index();
-	// 	console.log(cIndex)
-	// 	changeNav(cIndex)
-	// 	navChange(cIndex);
-	// })
+		var leftin = 'da-slide-fromleft',
+			rightin= 'da-slide-fromright',
+			// out
+			leftOut= 'da-slide-toleft',
+			rightOut= 'da-slide-toright';
+		var curItem = $('.da-current'),
+			items = $('.da-slider').find('.slider-anima'),
+			dClass = 'slider-anima',
+			curIndex = cIndex,
+			pre = oIndex
+		if(right){
+			items.eq(pre).removeClass(rightin+' '+rightOut+' '+leftin).addClass(leftOut)
+			setTimeout(function () {
+				items.eq(curIndex).addClass(rightin+" "+leftOut)
+				$('.da-current').removeClass('da-current')
+				items.eq(curIndex).addClass('da-current')
+			},1600)
+		}else{
+			items.eq(pre).removeClass(leftin+' '+leftOut+' '+rightin).addClass(rightOut)
+			setTimeout(function () {
+				items.eq(curIndex).addClass(leftin+" "+rightOut)
+				$('.da-current').removeClass('da-current')
+				items.eq(curIndex).addClass('da-current')
+			},1600)
+		}
+	}
+
+	$('.da-dots span').click(function () {
+		var oIndex = $('.da-dots-current').index(),right = false,
+			cIndex = $(this).index();
+		oIndex - cIndex > 0 ?
+			right = false:
+			right = true;
+		var _this = $(this),goal = '.header'
+		right = changeBg(_this,goal,right);
+		changeNav(cIndex)
+		dotSlide(oIndex,cIndex,right)
+	})
 
 })
