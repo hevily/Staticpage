@@ -2,4 +2,6 @@
 #
 #忽略.idea文件夹所有文件
 .idea/
+#node_modules
+.node_modules/
 #忽略所有rar.zip

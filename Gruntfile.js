@@ -166,6 +166,22 @@ module.exports = function(grunt) {
 					//}
 				}
 			// watch End
+			//browser-sync
+				broserSync:{
+					dev: {
+		                bsFiles: {
+		                    src : [
+		                        'app/css/*.css',
+		                        'app/*.html'
+		                    ]
+		                },
+		                options: {
+		                    watchTask: true,
+		                    server: './app'
+		                }
+		            }
+				}
+			//browser-sync
 		});
 	// grunt.initConfig配置完毕
 
@@ -178,6 +194,8 @@ module.exports = function(grunt) {
 		grunt.loadNpmTasks('grunt-contrib-cssmin');
 		grunt.loadNpmTasks('grunt-contrib-connect');
 		grunt.loadNpmTasks('grunt-contrib-watch');
+		grunt.loadNpmTasks('browser-sync');
+
 
 	// 自定义任务
 		grunt.registerTask('default', ['connect', 'watch']);
