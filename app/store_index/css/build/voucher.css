@@ -182,8 +182,11 @@
     color: #fff;
     font-size: 14px; }
   .voucher-yh P {
-    height: 20px;
-    color: #686868; }
+    height: 30px;
+    line-height: 35px;
+    color: #686868;
+    overflow: hidden;
+    padding-right: 55px; }
   .voucher-yh .yh {
     background-color: #E35353; }
   .voucher-yh .pq {
@@ -191,16 +194,55 @@
   .voucher-yh .qnum {
     position: absolute;
     text-align: center;
-    line-height: 20px;
-    height: 20px;
-    width: 20px;
+    display: block;
+    line-height: 16px;
+    height: 26px;
+    min-width: 50px;
     bottom: 0;
     right: 0px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    background-color: #ff0022;
+    padding: 5px 7px;
+    border-radius: 20px;
+    background-color: #FF8D4D;
     color: #fff; }
+    .voucher-yh .qnum::before {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 36px;
+      position: absolute;
+      left: -20px;
+      top: -5px;
+      background-color: transparent; }
+    .voucher-yh .qnum img {
+      position: relative;
+      top: -1px; }
+
+.toggle-all-q {
+  width: 12px; }
+
+.active-bg:active {
+  background-color: rgba(0, 0, 0, 0.2); }
+
+.remaining-voucher-yh {
+  display: none; }
+
+.showing-all-q {
+  position: absolute;
+  width: 13px;
+  bottom: 0;
+  right: 0px;
+  padding: 10px 13px;
+  box-sizing: content-box;
+  display: none; }
+
+.remaining-voucher-yh.voucher-yh {
+  margin: 0; }
+
+.showing-q img {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg); }
 
 .nearby-store {
   color: #f36303;

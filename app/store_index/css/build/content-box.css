@@ -30,7 +30,7 @@
     padding-left: 10px; }
   .content-boxs .content.content3 .content-box, .content-boxs .content.content2 .content-box, .content-boxs .content.content6 .content-box {
     padding-left: 0; }
-.content-boxs .item-goods:last-child {
+.content-boxs li:last-child .item-goods {
   border-bottom: none; }
 .content-boxs .see-more {
   font-size: 12px;

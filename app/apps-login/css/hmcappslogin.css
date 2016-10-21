@@ -90,11 +90,11 @@
   .footer .share-way .share-tool {
     padding-top: 20px;
     padding-bottom: 40px; }
-    .footer .share-way .share-tool .wx {
+    .footer .share-way .share-tool .right {
       text-align: right; }
-      .footer .share-way .share-tool .wx img {
+      .footer .share-way .share-tool .right img {
         height: 20px; }
-    .footer .share-way .share-tool .fb img {
+    .footer .share-way .share-tool .left img {
       height: 20px; }
   .footer .contact-company {
     color: #999;

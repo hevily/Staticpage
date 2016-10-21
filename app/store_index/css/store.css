@@ -360,7 +360,7 @@ body {
     padding-left: 10px; }
   .content-boxs .content.content3 .content-box, .content-boxs .content.content2 .content-box, .content-boxs .content.content6 .content-box {
     padding-left: 0; }
-.content-boxs .item-goods:last-child {
+.content-boxs li:last-child .item-goods {
   border-bottom: none; }
 .content-boxs .see-more {
   font-size: 12px;
@@ -388,7 +388,8 @@ body {
       width: 70px;
       height: 70px; }
   .item-goods .item-name-attribute {
-    padding-left: 80px; }
+    padding-left: 80px;
+    height: 80px; }
     .item-goods .item-name-attribute .item-goodsname {
       font-weight: bold;
       font-size: 16px;
@@ -438,48 +439,100 @@ body {
         .item-goods .item-name-attribute .item-price-obj .item-goodsprice font, .item-goods .item-name-attribute .item-price-obj .item-fan-hebi font {
           color: #696969;
           font-size: 14px; }
-      .item-goods .item-name-attribute .item-price-obj .item-goodsobj {
-        float: right;
-        position: relative;
-        margin-right: 10px;
-        bottom: 10px; }
-        .item-goods .item-name-attribute .item-price-obj .item-goodsobj .item-add-cart {
-          position: relative; }
-          .item-goods .item-name-attribute .item-price-obj .item-goodsobj .item-add-cart img {
-            height: 30px;
-            width: 30px; }
-        .item-goods .item-name-attribute .item-price-obj .item-goodsobj .item-reduce-add {
+  .item-goods .item-goodsobj {
+    float: right;
+    position: absolute;
+    margin-right: 10px;
+    top: 70px;
+    right: 0;
+    height: 30px;
+    width: 100%; }
+    .item-goods .item-goodsobj .item-add-cart {
+      position: relative; }
+      .item-goods .item-goodsobj .item-add-cart img {
+        height: 30px;
+        width: 30px;
+        border-style: solid;
+        border-width: 50px 10px 10px 20px;
+        box-sizing: content-box;
+        position: absolute;
+        top: -66px;
+        right: 0;
+        border-color: transparent; }
+    .item-goods .item-goodsobj .item-reduce-add {
+      position: relative;
+      color: #000;
+      display: none;
+      bottom: -20px; }
+      .item-goods .item-goodsobj .item-reduce-add a {
+        display: inline-block;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        text-align: center;
+        text-decoration: none;
+        padding: 19px 14px 7px 14px;
+        position: absolute;
+        bottom: -5px; }
+      .item-goods .item-goodsobj .item-reduce-add .item-reduceless {
+        color: #f36303;
+        background-color: transparent;
+        right: 40px; }
+        .item-goods .item-goodsobj .item-reduce-add .item-reduceless span {
           position: relative;
-          color: #000;
-          display: none;
-          bottom: -10px; }
-          .item-goods .item-name-attribute .item-price-obj .item-goodsobj .item-reduce-add a {
-            height: 20px;
-            width: 20px;
-            display: inline-block;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            border-radius: 50%;
-            text-align: center;
-            font-size: 18px;
-            line-height: 20px;
-            text-decoration: none; }
-          .item-goods .item-name-attribute .item-price-obj .item-goodsobj .item-reduce-add .item-reduceless {
-            color: #f36303;
-            background-color: #fff;
-            border: 1px solid #f36303; }
-          .item-goods .item-name-attribute .item-price-obj .item-goodsobj .item-reduce-add span {
-            height: 20px;
-            width: 20px;
-            color: #f36303;
-            font-size: 16px;
-            line-height: 16px;
-            display: inline-block;
-            text-align: center; }
-          .item-goods .item-name-attribute .item-price-obj .item-goodsobj .item-reduce-add .item-addmore {
-            color: #fff;
-            background-color: #f36303; }
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          border-radius: 50%;
+          height: 20px;
+          line-height: 20px;
+          width: 20px;
+          direction: inline-block;
+          border: 1px solid #f36303;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+          color: #f36303;
+          background-color: transparent; }
+      .item-goods .item-goodsobj .item-reduce-add span {
+        height: 20px;
+        width: 22px;
+        color: #f36303;
+        font-size: 16px;
+        line-height: 12px;
+        display: inline-block;
+        text-align: center;
+        font-size: 18px;
+        position: absolute;
+        bottom: 0px;
+        right: 28px; }
+      .item-goods .item-goodsobj .item-reduce-add .item-addmore {
+        display: inline-block;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        text-align: center;
+        text-decoration: none;
+        padding: 19px 14px 7px 14px;
+        position: absolute;
+        bottom: -5px;
+        right: -10px; }
+        .item-goods .item-goodsobj .item-reduce-add .item-addmore span {
+          position: relative;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          border-radius: 50%;
+          height: 20px;
+          line-height: 20px;
+          width: 20px;
+          direction: inline-block;
+          border: 1px solid #f36303;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+          color: #fff;
+          background-color: #f36303; }
   .item-goods .hebi-exchange {
+    margin: 0;
     font-size: 14px;
     color: #FEC02E; }
     .item-goods .hebi-exchange span {
@@ -498,6 +551,25 @@ body {
       color: #676869;
       margin-left: 5px;
       display: inline-block; }
+  .item-goods .group-shopping .end-time {
+    font-size: 14px;
+    line-height: 20px; }
+    .item-goods .group-shopping .end-time img {
+      width: 15px;
+      vertical-align: sub; }
+  .item-goods .group-shopping .sale-out {
+    font-size: 14px;
+    line-height: 20px; }
+    .item-goods .group-shopping .sale-out img {
+      width: 15px;
+      vertical-align: sub; }
+  .item-goods .group-shopping .default-color {
+    color: #f36303;
+    letter-spacing: 2px; }
+    .item-goods .group-shopping .default-color span {
+      color: #000; }
+  .item-goods a:focus {
+    outline: none; }
 
 /*新添加商品特性标签*/
 .item-goodslogo {
@@ -1019,7 +1091,6 @@ body {
   bottom: -1px;
   height: 10px;
   width: 10px;
-  background-image: url(right-bottom.png);
   content: ""; }
 
 .voucher-yh {
@@ -1039,8 +1110,11 @@ body {
     color: #fff;
     font-size: 14px; }
   .voucher-yh P {
-    height: 20px;
-    color: #686868; }
+    height: 30px;
+    line-height: 35px;
+    color: #686868;
+    overflow: hidden;
+    padding-right: 55px; }
   .voucher-yh .yh {
     background-color: #E35353; }
   .voucher-yh .pq {
@@ -1048,16 +1122,55 @@ body {
   .voucher-yh .qnum {
     position: absolute;
     text-align: center;
-    line-height: 20px;
-    height: 20px;
-    width: 20px;
+    display: block;
+    line-height: 16px;
+    height: 26px;
+    min-width: 50px;
     bottom: 0;
     right: 0px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    background-color: #ff0022;
+    padding: 5px 7px;
+    border-radius: 20px;
+    background-color: #FF8D4D;
     color: #fff; }
+    .voucher-yh .qnum::before {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 36px;
+      position: absolute;
+      left: -20px;
+      top: -5px;
+      background-color: transparent; }
+    .voucher-yh .qnum img {
+      position: relative;
+      top: -1px; }
+
+.toggle-all-q {
+  width: 12px; }
+
+.active-bg:active {
+  background-color: rgba(0, 0, 0, 0.2); }
+
+.remaining-voucher-yh {
+  display: none; }
+
+.showing-all-q {
+  position: absolute;
+  width: 13px;
+  bottom: 0;
+  right: 0px;
+  padding: 10px 13px;
+  box-sizing: content-box;
+  display: none; }
+
+.remaining-voucher-yh.voucher-yh {
+  margin: 0; }
+
+.showing-q img {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg); }
 
 .nearby-store {
   color: #f36303;

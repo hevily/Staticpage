@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="./css/base.css" />
+	<title>last login log</title>
+	<style type="text/css">
+			body{
+				background-color: #F5F5F9;
+			}
+			.desktopimg{
+				display: block;
+				width:50%;
+				margin:0 auto;
+			}
+			.desktop p{
+				font-size: 16px;
+				text-align: center;
+				color:#333;
+				margin: 18px 0;
+			}
+
+				.browser{
+					border-top:1px solid #CCCCCC;
+					border-bottom:1px solid #CCCCCC;
+					padding:10px;
+					background-color: #fff;
+				}
+				.media-left .media-object{
+					display: none;
+				}
+				.media-left .media-object{
+					width: 40px;
+					height: 40px;
+				}
+				.chrome .chrome
+				,.firefox .firefox
+				,.ie .ie{
+					display: block;
+				}
+
+				.browser .last-time{
+					font-size: 16px;
+					color: #
+				}
+				.browser .system{
+					color: #646464;
+					font-size: 14px;
+				}
+				.logout{
+					position: absolute;
+					bottom: 20%;
+					left: 0;
+					width: 100%;
+				}
+				.logout-btn{
+					background-color: #f36303;
+					color: #fff;
+					width: 70%;display:block;
+					line-height: 45px;
+					font-size: 16px;
+					margin:0 auto;
+					border-radius:3px;
+					text-align:center;
+				}
+	</style>
+</head>
+
+<body>
+	<header></header>
+	<div class="container">
+		<div class="section desktop">
+			<img src="./img/desktop.png" class="desktopimg">
+			<p>电脑登入</p>
+		</div>
+		<div class="section browser">
+			<div class="media">
+				<!-- chrome firefox ie control the img-->
+				<div class="media-left chrome">
+					<img src="./img/browser/chrome.png" alt="browser" class="media-object chrome">
+					<img src="./img/browser/firefox.png" alt="browser" class="media-object firefox">
+					<img src="./img/browser/ie.png" alt="browser" class="media-object ie">
+				</div>
+				<div class="media-body media-middle">
+					<p class="last-time">最后登录于2022-12-24 22:28:39</p>
+					<p class="system">window 10</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="logout">
+		<a href="javascript:;" class="logout-btn">退出登录</a>
+	</div>
+	<footer></footer>
+</body>
+</html>

@@ -8,6 +8,7 @@
 	.item-name-attribute {
 	    // height: 90px; 
 	    padding-left: 80px;
+	    height: 80px;
 		.item-goodsname {
 		    font-weight: bold;
 		    font-size: 16px;
@@ -59,58 +60,107 @@
 		        }
 		        font{color: #696969; font-size: 14px;}
 		    }
+		    
+		}
+	}
 		    .item-goodsobj {
 		        float: right;
-		        position: relative;
+		        position: absolute;
 		        margin-right: 10px;
-		        bottom: 10px;
+		        top: 70px;
+		        right: 0;
+		        height: 30px;
+		        width: 100%;
 		        .item-add-cart {
 		            position: relative;
 		            img {
 		                height: 30px;
 		                width: 30px;
+		                border-style: solid;
+		                border-width: 50px 10px 10px 20px;
+		                box-sizing: content-box;
+		                position: absolute;
+		                top: -66px;right: 0;
+		                border-color: transparent;
 		            }
 		        }
 		        .item-reduce-add {
 		            position: relative;
 		            color: #000;
 		            display: none;
-		            bottom: -10px;
-		            & a {
-		                height: 20px;
-		                width: 20px;
-		                display: inline-block;
-		                -webkit-border-radius: 50%;
-		                   -moz-border-radius: 50%;
-		                        border-radius: 50%;
-		                text-align: center;
-		                font-size: 18px;
-		                line-height: 20px;
-		                text-decoration: none;
+		            bottom: -20px;
+		            a {
+		                    display: inline-block;
+		                    -moz-border-radius: 50%;
+		                    border-radius: 50%;
+		                    text-align: center;
+		                    text-decoration: none;
+		                    padding: 19px 14px 7px 14px;
+		                    position: absolute;
+		                    bottom: -5px;
+		                
 		            }
 		            .item-reduceless {
-		                color: #f36303;
-		                background-color: #fff;
-		                border: 1px solid #f36303;
+		                    color: #f36303;
+		                    background-color: rgba(0,0,0,0);
+		                    right: 40px;
+		                    span{
+		                    	position: relative;
+		                    	top: 0;right: 0;bottom: 0;left: 0;
+		                    	border-radius:50%;
+	                    	    height: 20px;
+	                    	    line-height: 20px;
+	                    	    width: 20px;
+	                    	    direction: inline-block;
+	                    	    border: 1px solid #f36303;
+	                    	    -moz-border-radius: 50%;
+	                    	    border-radius: 50%;
+	                    	    color: #f36303;
+	                    	    background-color: transparent;
+		                    }
 		            }
 		            span {
 		                height: 20px;
-		                width: 20px;
-		                color: #f36303;
-		                font-size: 16px;
-		                line-height: 16px;
-		                display: inline-block;
-		                text-align: center;
-		            }
+		                    width: 22px;
+		                    color: #f36303;
+		                    font-size: 16px;
+		                    line-height: 12px;
+		                    display: inline-block;
+		                    text-align: center;
+		                    font-size: 18px;
+	                        position: absolute;
+	                        bottom: 0px;
+	                        right: 28px;
+		                }
 		            .item-addmore {
-		                color: #fff;
-		                background-color: #f36303;
+		                    display: inline-block;
+		                    -moz-border-radius: 50%;
+		                    border-radius: 50%;
+		                    text-align: center;
+		                    text-decoration: none;
+		                    padding: 19px 14px 7px 14px;
+		                    position: absolute;
+		                    bottom: -5px;
+		                    right: -10px;
+		                    span{
+		                    	position: relative;
+		                    	top: 0;right: 0;bottom: 0;left: 0;
+		                    	border-radius:50%;
+	                    	    height: 20px;
+	                    	    line-height: 20px;
+	                    	    width: 20px;
+	                    	    direction: inline-block;
+	                    	    border: 1px solid #f36303;
+	                    	    -moz-border-radius: 50%;
+	                    	    border-radius: 50%;
+	                    	    color: #fff;
+	                    	    background-color: #f36303;
+		                    }
 		            }
 		        }
 		    }
-		}
-	}
 	.hebi-exchange{
+		margin: 0;
 		font-size: 14px;color:#FEC02E;
 		span{
 			padding: 1px;
@@ -129,6 +179,35 @@
 			color:#676869;margin-left: 5px;display:inline-block;
 		}
 	}
+	.group-shopping{
+		.end-time{
+			font-size: 14px;
+			line-height: 20px;
+			img{
+				width:15px;
+				vertical-align:sub;
+			}
+		}
+		.sale-out{
+			font-size: 14px;
+			line-height: 20px;
+			img{
+				width:15px;
+				vertical-align:sub;
+			}
+		}
+		.default-color{
+			color:#f36303;
+			letter-spacing:2px;
+			span{
+				color:#000;
+			}
+		}
+	}
+	a:focus{
+		outline:none;
+	}
+	
 }
 /*新添加商品特性标签*/
 .item-goodslogo{position: relative;}

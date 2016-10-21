@@ -24,8 +24,8 @@
 		.content-box{padding-left: 0;}
 	}
 	}
-	.item-goods{
-		&:last-child{border-bottom:none;}
+	li:last-child{
+		.item-goods{border-bottom:none;}
 	}
 	.see-more{
 		font-size: 12px;float: right;top:4px;position: relative;color:#515151;

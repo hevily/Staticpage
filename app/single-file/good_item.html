@@ -1,0 +1,266 @@
+<!-- 在原基础控件上添加item类名前缀 .item-XX -->
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta name="format-detection" content="telephone=no">
+<style type="text/css">
+	.item-goods {
+	  position: relative;
+	  border-bottom: 1px solid #C9C9C9;
+	  padding-right: 10px;
+	  padding-top: 10px; }
+	  .item-goods .item-goodslogo {
+	    float: left;
+	    position: relative; }
+	    .item-goods .item-goodslogo img {
+	      width: 70px;
+	      height: 70px; }
+	  .item-goods .item-name-attribute {
+	    height: 90px;
+	    padding-left: 80px; }
+	    .item-goods .item-name-attribute .item-goodsname {
+	      font-weight: bold;
+	      font-size: 16px;
+	      line-height: 22px; }
+	    .item-goods .item-name-attribute .item-clamp1 {
+	      overflow: hidden;
+	      text-overflow: ellipsis;
+	      display: -webkit-box;
+	      -webkit-line-clamp: 1;
+	      -webkit-box-orient: vertical;
+	      font-weight: normal; }
+	    .item-goods .item-name-attribute .item-goodsattribute {
+	      font-size: 12px;
+	      line-height: 20px;
+	      color: #FF6969; }
+	    .item-goods .item-name-attribute .item-price-obj {
+	      height: 30px;
+	      position: absolute;
+	      right: 0;
+/*changed*/
+	      top: 60px;
+/*changed*/
+	      width: 100%;
+	      line-height: 18px; }
+	      .item-goods .item-name-attribute .item-price-obj .item-goodsprice {
+	        float: left;
+	        left: 75px;
+	        position: relative;
+	        color: #D86C00;
+	        font-size: 18px; }
+	        .item-goods .item-name-attribute .item-price-obj .item-goodsprice span {
+	          line-height: 18px; }
+	        .item-goods .item-name-attribute .item-price-obj .item-goodsprice font {
+	          color: #696969;
+	          font-size: 14px; }
+	      .item-goods .item-name-attribute .item-price-obj .item-goodsobj {
+	        float: right;
+	        position: relative;
+	        margin-right: 10px;
+	        bottom: 10px; }
+	        .item-goods .item-name-attribute .item-price-obj .item-goodsobj .item-add-cart {
+	          position: relative; }
+	          .item-goods .item-name-attribute .item-price-obj .item-goodsobj .item-add-cart img {
+	            height: 30px;
+	            width: 30px; }
+	        .item-goods .item-name-attribute .item-price-obj .item-goodsobj .item-reduce-add {
+	          position: relative;
+	          color: #000;
+	          display: none;
+	          bottom: -10px; }
+	          .item-goods .item-name-attribute .item-price-obj .item-goodsobj .item-reduce-add a {
+	            height: 20px;
+	            width: 20px;
+	            display: inline-block;
+	            border-radius: 50%;
+	            text-align: center;
+	            font-size: 18px;
+	            line-height: 20px;
+	            text-decoration: none; }
+	          .item-goods .item-name-attribute .item-price-obj .item-goodsobj .item-reduce-add .item-reduceless {
+	            color: #f36303;
+	            background-color: #fff;
+	            border: 1px solid #f36303; }
+	          .item-goods .item-name-attribute .item-price-obj .item-goodsobj .item-reduce-add span {
+	            height: 20px;
+	            width: 20px;
+	            color: #f36303;
+	            font-size: 16px;
+	            line-height: 16px;
+	            display: inline-block;
+	            text-align: center; }
+	          .item-goods .item-name-attribute .item-price-obj .item-goodsobj .item-reduce-add .item-addmore {
+	            color: #fff;
+	            background-color: #f36303; }
+				
+					.item-goodsprice s{color: #cfcfcf;font-size: 14px;display: block;}
+			/*新添加商品特性标签*/
+					item-goodslogo{position: relative;}
+					.item-goodslogo span{position: absolute;top:0;right: 0;transform: translate(5px,-6px);display: inline-block;width: 25px;height: 25px;opacity: 1;-webkit-background-size: 100% 100%;	background-size: 100% 100%;}
+					.item-isOnsale{position: absolute;right: 10px;top: 10px;height: 40px;width: 40px;}
+
+</style>
+
+<!-- add -->
+	<style type="text/css">
+		/*clearfix*/
+		.clearfix:before,
+		.clearfix:after {
+		    content: ".";
+		    display: block;
+		    height: 0;
+		    visibility: hidden;
+		}
+		.clearfix:after {clear: both;}
+		.clearfix {zoom: 1;} /* IE < 8 */
+		.ysj {
+		    border-top: none;
+		    position: relative;
+		}
+		.ysj {
+		    padding-right: 15px;
+		    padding-bottom: 10px;
+		}
+		.ysj .tags {
+		    position: relative;
+		    color: #f36303;
+		    background-color: #FAFAFA;
+		    border: 1px solid #F4F4F4;
+		    margin-left: 10px;
+		    border-radius: 3px;
+		    padding: 0 13px;
+		    float: left;
+		    margin-top: 4px;
+		}
+		.ysj .tags:before {
+		    position: absolute;
+		    right: -1px;
+		    bottom: -1px;
+		    height: 10px;
+		    width: 10px;
+		    background-image: url(/statichtml/bjmovie01/estores/Public/home/img/hmxl/right-bottom.png);
+		    content: "";
+		}
+
+	</style>
+<!-- add -->
+
+
+<div class="item-goods new_list_item" link_id="20256" data-gwc_flag="0" data-isuseattributes="0" >
+	
+     <img class="item-isOnsale" src="/statichtml/bjmovie01/estores/Public/images/hmstore/onsale@2x.png">
+    <div class="item-goodslogo item-thumb" data-id="20256" >
+   
+		<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=83858&amp;width=70&amp;height=70&amp;type=3" data-collectid="41589" alt="本地苋菜" isnew="no">
+        <span style="background-image: url(/statichtml/bjmovie01/estores/Public/images/hmstore/import@2x.png);"></span>
+	</div>
+	<div class="item-name-attribute">
+		<div class="item-goodsname item-clamp1" data-id="20256">本地苋菜</div>
+		<div class="item-goodsattribute item-clamp1">475-525g/份475-525g/份475-525g/份475-525g/份475-525g/份475-525g/份</div>
+		<div class="item-price-obj">
+			<div class="item-goodsprice">
+            ¥<span>3.58</span>
+            <font style="color:#696969; font-size:14px">/ 份</font>
+            <s>￥4.00</s>
+            </div>
+			<div class="item-goodsobj">
+				<div class="item-add-cart add_cart_20256_1010"  style="display:block;"> <!-- add_cart_goods_id_goods_item_id -->
+					<img class="item-addcart"  data-goods_id="20256"  data-goods_itemid="1010"  gwc_flag="gwc_1" data-isuseattributes="0" src="/statichtml/bjmovie01/estores/Public/images/home/gwc_1.jpg" alt="添到购物车">
+				</div>
+				<div class="item-reduce-add reduce_add_20256_1010" style="display:none;">
+					<a class="item-reduceless reduceless_20256_1010"  href="javascript:;"  onclick="addmore(20256,1010)">－</a>
+					<span 
+                    class="gwcnumid_20256_1010" 
+                    data-status="0" 
+                    data-shop_price="3.58" 
+                    data-goods_itemid="17302" 
+                    data-goods_stock="0" 
+                    data-goods_isstockcount="0" 
+                    data-limit_buy_also="undefined" 
+                    data-limit_buy_num="undefined" 
+                    data-limit_buy="0"
+                    >0</span>
+					<a class="item-addmore addmore_20256_1010" href="javascript:;"   onclick="addmore(20256,1010)" >＋</a>
+				</div>
+				<!-- limit_buy_also  如果开启限购，已经购买多少件-->
+				<!-- limit_buy_num  如果开启限购，还可以购买多少-->
+				<!-- limit_buy  如果开启限购，限购多少-->
+			</div>
+		</div>
+	</div>
+<!-- add -->
+			<div class="ysj clearfix">
+				<div class="tags" onclick="location_lists('土菜',2,3440,'')">土菜<span></span></div>
+				<div class="tags" onclick="location_lists('酒店',2,3458,'')">酒店<span></span></div>
+			</div>
+<!-- add -->
+</div>
+<div class="item-goods new_list_item" link_id="20256" data-gwc_flag="0" data-isuseattributes="0" >
+	<div class="item-goodslogo item-thumb" data-id="20256">
+		<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Store/Public/img?id=83858&amp;width=70&amp;height=70&amp;type=3" data-collectid="41589" alt="本地苋菜" isnew="no">
+	</div>
+	<div class="item-name-attribute">
+		<div class="item-goodsname item-clamp1" data-id="20256">本地苋菜</div>
+		<div class="item-goodsattribute item-clamp1">475-525g/份</div>
+		<div class="item-price-obj">
+			<div class="item-goodsprice">¥<span>3.58</span><font>/ 份</font></div>
+			<div class="item-goodsobj">
+				<div class="item-add-cart add_cart_20256_1010"  style="display:block;"> <!-- add_cart_goods_id_goods_item_id -->
+					<img class="item-addcart"  data-goods_id="20256"  data-goods_itemid="1010"  gwc_flag="gwc_1" data-isuseattributes="0" src="/statichtml/bjmovie01/estores/Public/images/home/gwc_1.jpg" alt="添到购物车">
+				</div>
+				<div class="item-reduce-add reduce_add_20256_1010" style="display:none;">
+					<a class="item-reduceless reduceless_20256_1010"  href="javascript:;"  onclick="addmore(20256,1010)">－</a>
+					<span 
+                    class="gwcnumid_20256_1010" 
+                    data-status="0" 
+                    data-shop_price="3.58" 
+                    data-goods_itemid="17302" 
+                    data-goods_stock="0" 
+                    data-goods_isstockcount="0" 
+                    data-limit_buy_also="undefined" 
+                    data-limit_buy_num="undefined" 
+                    data-limit_buy="0"
+                    >0</span>
+					<a class="item-addmore addmore_20256_1010" href="javascript:;"   onclick="addmore(20256,1010)" >＋</a>
+				</div>
+				<!-- limit_buy_also  如果开启限购，已经购买多少件-->
+				<!-- limit_buy_num  如果开启限购，还可以购买多少-->
+				<!-- limit_buy  如果开启限购，限购多少-->
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="https://staticcdn.yshjie.com/cdn/librarypath/jquery/jquery-2.1.3.min.js"></script>
+<script type="text/javascript">
+	$(function () {
+		//开始添加到购物车
+		$("body").delegate( ".item-addcart","click", function  () {
+			$(this).closest('.item-add-cart').hide();
+			$(this).closest(".item-add-cart").next(".item-reduce-add").show();
+
+		});
+		//添加商品数量
+		$(".item-reduce-add").delegate('.item-addmore','click',function  () {
+			var obj = $(this).siblings("span");
+				num = parseInt(obj.text())+1;
+				obj.text(num);
+		})
+		$(".item-reduce-add").delegate('.item-reduceless','click',function  () {
+			var obj = $(this).siblings("span");
+				num = parseInt(obj.text())-1;
+				if (num>0) {
+					obj.text(num);
+				}else{
+					$(this).closest(".item-reduce-add").hide();
+					$(this).closest(".item-reduce-add").siblings(".item-add-cart").show();
+				};
+		})
+		// 图片惰性加载 节约流量
+		// $('img.lazy').lazyload({
+		//  threshold : 100,
+		//  effect : "fadeIn"
+		// });
+	})
+</script>

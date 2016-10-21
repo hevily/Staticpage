@@ -38,7 +38,10 @@ html,body{
 /* header*/
 .header{
 	height:400px;
-	background:url('../img/slider/bg.jpg') repeat 0% 0%;
+	// background-image:url('../img/slider/bg.jpg');
+	background-repeat: repeat-x;
+	background-position: 0% 0%;
+	
 }
 .bg-slider{
 	width: 100%;position: relative;

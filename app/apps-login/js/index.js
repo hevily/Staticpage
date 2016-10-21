@@ -1,4 +1,81 @@
 $(function () {
+
+	$.ajax({
+		url:"./js/setting.json"
+		,type:'get'
+		,data_type:"json"
+	}).done(function (data) {
+		console.log(data)
+		initPage(data)
+	})
+
+	function initPage(data) {
+		function initHeader(data) {
+			var data = data.home_icon;
+			$('.home-icon').append('<img src="'+data+'"/>');
+		}
+		function initSlider(data) {
+			var dom = $('.bg-slider');
+			var data = data.slider,
+			sliders = data.sliders,
+			sliderinner ='',dots =''
+			var fSClass = ' da-slide-toleft da-slide-fromright da-current',
+				fDClass = 'da-dots-current'
+
+			for (var i = 0;i <= sliders.length - 1; i++) {
+				// console.log(sliders[i])
+			if (i!== 0) {fSClass = "";fDClass = "";};
+			if( sliders.length == 1){dom.find('.da-arrows').hide();dom.find('.da-dots').hide()}
+			sliderinner += 	'<div class="slider-anima'+fSClass+'">'+
+						'<div class="top-slider slider-one ">'+
+							'<img src="'+sliders[i].left.src+'" alt="'+sliders[i].left.alt+'">'+
+							'<img src="'+sliders[i].right.src+'"'+sliders[i].right.alt+'" >'+
+						'</div></div>\n';
+
+			dots += '<span class="'+fDClass+'"></span>';
+			}
+
+			// console.log(sliderinner)
+			bgurl = "url('"+data.slider_bg+"')";
+			$('.header').css("background-image",bgurl);
+			
+			
+			dom.find('.da-slider').find('.slider-inner').append(sliderinner)
+			dom.find('.da-dots').append(dots)
+		}
+		function initFooter(data) {
+			var data = data.footer;
+			var dom = $('.footer');
+			var link = data.links,share = data.share_icon
+			var links = ''
+			for (var i = 0; i < link.length; i++) {
+				// console.log(link[i])
+				links += '<div class="footer-nav col-xs-4 col-sm-2 col-md-2 col-lg-2"><a href="'+link[i].link+'">'+link[i].name+'</a></div>';
+
+			}
+			linkdom = dom.find('.footer-navs');
+			linkdom.append(links);
+
+			var share_icons = '';
+			for (var i = 0; i < share.length; i++) {
+				var right = "right"
+				if ((i+1)%2 === 0) {
+					right = "left"
+				}
+				share_icons += '<div class="'+right+' wx col-xs-6 col-sm-6 col-md-6 col-lg-6 "><a href="'+share[i].link+'"><img src="'+share[i].icon+'"></a></div>';
+			}
+			shareDom = dom.find('.share-tool');
+			shareDom.append(share_icons)
+			
+			var company_info = '<p>联系电话：'+data.contact_phone+'</p><p>联系邮箱：'+data.contact_email+'</p><div>'+data.record_info+'</div>';
+			companyDom = dom.find('.contact-company');
+			companyDom.append(company_info)
+		}
+		initHeader(data);
+		initSlider(data);
+		initFooter(data);
+	}
+
 	function changeBg(_this,goal,dir) {
 			var goal = $(goal),
 			right = false,
@@ -17,6 +94,8 @@ $(function () {
 		},800)
 		return right;
 	}
+
+
 	$('.da-arrows-prev,.da-arrows-next').click(function () {
 		var _this = $(this),goal = '.header',
 			userdir = right,

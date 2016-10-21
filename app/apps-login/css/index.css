@@ -5460,7 +5460,8 @@ html, body {
 /* header*/
 .header {
   height: 400px;
-  background: url("../img/slider/bg.jpg") repeat 0% 0%; }
+  background-repeat: repeat-x;
+  background-position: 0% 0%; }
 
 .bg-slider {
   width: 100%;

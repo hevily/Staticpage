@@ -1,0 +1,37 @@
+{
+"sliders":[
+    {
+        "title":"智慧旅游",
+        "store":"false",
+        "index":"0",
+        "link":"javascript:;",
+        "img":{
+            "src":"./img/index/slider/slider-1.jpg",
+            "title":"智慧旅游"
+        }
+    }
+],
+
+"sorts":[
+    {
+        "sort_name":"附近景点",
+        "sort_icons":[
+            {
+                "icon_name":"必游景点",
+                "icon_source":"1.png",
+                "icon_url":"https://shop.yshjie.com/statichtml/bjmovie01/estores/Home/Voucher/stores?taggroupid=70&scopeid=4&region_id=404"
+            },
+            {
+                "icon_name":"文娱艺术",
+                "icon_source":"2.png",
+                "icon_url":"https://shop.yshjie.com/statichtml/bjmovie01/estores/Home/Voucher/stores?taggroupid=71&scopeid=4&region_id=404"
+            },
+            {
+                "icon_name":"古今文化",
+                "icon_source":"3.png",
+                "icon_url":"https://shop.yshjie.com/statichtml/bjmovie01/estores/Home/Voucher/stores?taggroupid=72&scopeid=4&region_id=404"
+            }
+        ]
+    }
+]
+}
