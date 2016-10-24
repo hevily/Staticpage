@@ -1295,7 +1295,7 @@ h3.block-title.no-line{
     bottom:-2px;
     left:50%;
     margin-left:-50px;
-    border-bottom:2px solid #f96238;
+    border-bottom:2px solid #C92644;
 }
 .block-title.left:after{
     left:0;
@@ -3077,7 +3077,7 @@ h3.block-title:after{
     max-width:250px
 }
 .widget-foot .body{
-    padding-right:13px;
+    padding-right:0px;
 }
 
 .widget-foot-wrap{
