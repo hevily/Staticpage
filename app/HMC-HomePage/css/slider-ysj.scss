@@ -1,0 +1,151 @@
+/* slider-ysj */
+.section_slideshow
+,.carousel-inner{
+    position: relative;
+    
+}
+.section_slideshow::before
+,.carousel-inner::before{
+//  content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 1;
+    position: absolute;
+    
+}
+.carousel-caption{
+    top:10%;
+    bottom:auto;
+    img{
+        height: 23rem;
+    }
+}
+.carousel-indicators li{
+    background-color: #646464;
+    border-color: #646464;
+}
+.carousel-indicators .active{
+    background-color: #ff8800;
+    border-color: #ff8800;
+}
+.carousel-control{
+    z-index: 15;
+}
+
+
+#service .item,#cooperation1 .item {
+    background-position: center;
+    background-repeat:no-repeat ;
+    background-size: cover;
+    height: 700px;
+}
+#service .carousel-caption{
+    font-size: 1.2rem;
+}
+
+
+//@media (max-width: 767px){
+//  .carousel-caption {
+//      font-size: 12px;
+//      img{
+//          height: 10rem;
+//      }
+//  }
+//}
+//@media (max-width:600px){
+//  .carousel-caption{
+//      img{
+////          height:12rem;
+//      }
+//  }
+//}
+//@media (max-width: 680px){
+//  .carousel-caption .inner {
+//      max-width: 90%;
+//  }
+//}
+//@media (max-width: 480px){
+//  .carousel-caption {
+//      font-size: 10px;
+//      img{
+//          height: 10rem;
+//      }
+//  }
+//}
+
+
+
+@media (max-width: 1199px){
+    #service .item,#cooperation1 .item {
+        height: 575px;
+    }
+    .carousel-caption {
+        img{
+            height: 18rem;
+        }
+    }
+    
+}
+
+
+@media (max-width: 991px){
+    #service .item,#cooperation1 .item {
+        height: 500px;
+    }
+    .carousel-caption {
+        img{
+            height: 14rem;
+        }
+    }
+}
+
+@media (max-width: 767px){
+    #service .item,#cooperation1 .item {
+        height: 400px;
+    }
+    .carousel-caption {
+        font-size: 12px;
+        img{
+            height: 10rem;
+        }
+    }
+        
+}
+@media (max-width:600px){
+    .carousel-caption{
+        img{
+            height:12rem;
+        }
+    }
+}
+
+@media (max-width: 480px){
+    #service .item,#cooperation1 .item {
+        height: 300px;
+    }
+    .carousel-caption {
+        img{
+            height: 10rem;
+        }
+    }
+}
+
+//@media (max-width: 767px){
+//  .carousel-caption {
+//      font-size: 12px;
+//      img{
+//          height: 10rem;
+//      }
+//  }
+//}
+//@media (max-width:600px){
+//  .carousel-caption{
+//      img{
+////          height:12rem;
+//      }
+//  }
+//}
+
+

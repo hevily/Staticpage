@@ -1,0 +1,17 @@
+@charset "utf-8";
+*{
+    font-family: "microsoft yahei" ,"Helvetica Neue","Helvetica","Arial","sans-serif";
+}
+
+//rem-base
+@import 'font-rem-base';
+
+
+@import "./ysj-head";
+@import 'slider-ysj';
+@import 'service-box';
+@import 'service';
+@import 'cooperation';
+@import 'film-resource';
+@import 'make-star';
+@import 'ysj-footer';

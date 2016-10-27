@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta content="charset=utf-8">
+  <title>FlexSlider 2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+  <!-- Syntax Highlighter -->
+  <!-- <link href="./FlexSlider/css/shCore.css" rel="stylesheet" type="text/css" /> -->
+  <!-- <link href="./FlexSlider/css/shThemeDefault.css" rel="stylesheet" type="text/css" /> -->
+  <!-- Demo CSS -->
+
+
+  <link rel="stylesheet" href="./FlexSlider/css/demo.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="./FlexSlider/css/flexslider.css" type="text/css" media="screen" />
+
+  <!-- Modernizr -->
+  <script src="Flexslider/js/modernizr.js"></script>
+
+  <style>
+    .flexslider {
+      margin-bottom: 10px;
+    }
+
+    .flex-control-nav {
+      position: relative;
+      bottom: auto;
+    }
+
+    .custom-navigation {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+    }
+
+    .custom-navigation > * {
+      display: table-cell;
+    }
+
+    .custom-navigation > a {
+      width: 50px;
+    }
+
+    .custom-navigation .flex-next {
+      text-align: right;
+    }
+  </style>
+
+</head>
+<body class="">
+
+        <div class="flexslider">
+          <ul class="slides">
+            <li>
+              <img src="FlexSlider/images/kitchen_adventurer_cheesecake_brownie.jpg" />
+            </li>
+            <li>
+              <img src="FlexSlider/images/kitchen_adventurer_lemon.jpg" />
+            </li>
+            <li>
+              <img src="FlexSlider/images/kitchen_adventurer_donut.jpg" />
+            </li>
+            <li>
+              <img src="FlexSlider/images/kitchen_adventurer_caramel.jpg" />
+            </li>
+          </ul>
+        </div>
+
+
+
+
+  <!-- jQuery -->
+
+  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> -->
+  <script src="http://cdn.bootcss.com/jquery/1.5.1/jquery.min.js"></script>
+  <!-- <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script> -->
+
+  <!-- FlexSlider -->
+  <script defer src="./Flexslider/js/jquery.flexslider.js"></script>
+
+  <script type="text/javascript">
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        directionNav:false,
+        controlsContainer: $(".custom-controls-container"),
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+
+
+  <!-- Syntax Highlighter -->
+  <!-- <script type="text/javascript" src="Flexslider/js/shCore.js"></script> -->
+  <!-- <script type="text/javascript" src="Flexslider/js/shBrushXml.js"></script> -->
+  <!-- <script type="text/javascript" src="Flexslider/js/shBrushJScript.js"></script> -->
+
+  <!-- Optional FlexSlider Additions -->
+  <!-- <script src="Flexslider/js/jquery.easing.js"></script> -->
+  <!-- <script src="Flexslider/js/jquery.mousewheel.js"></script> -->
+  <!-- <script defer src="Flexslider/js/demo.js"></script> -->
+
+</body>
+</html>

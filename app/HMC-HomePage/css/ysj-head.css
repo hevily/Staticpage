@@ -1,0 +1,35 @@
+/* ysj-head */
+.stay-top.navbar-default {
+  background-color: transparent;
+  border-color: transparent; }
+
+.stay-top.navbar-default .navbar-nav > li > a {
+  color: #FFFFFF; }
+
+.stay-top.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  background-color: transparent;
+  color: #FFFFFF; }
+
+.navbar-default {
+  border-color: transparent;
+  padding-top: 10px; }
+
+.navbar-default .navbar-nav > li > a {
+  color: #000; }
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  color: #000; }
+
+.stay-top .navbar-brand {
+  background-image: url(../img/logo.png); }
+
+.navbar-brand {
+  padding: 0 15px;
+  height: 48px;
+  width: 94px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../img/logo-top.png);
+  background-position: 10px 0; }
+
+/*# sourceMappingURL=ysj-head.css.map */

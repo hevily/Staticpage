@@ -1,0 +1,38 @@
+@charset 'utf-8';
+ /* make star */
+.make-star{
+     font-size: 1rem;
+     background-color: #FFF;
+     margin-bottom: 3rem;
+    .section-box{
+        padding:0 1rem;
+        padding-top:2rem;
+        text-align: left;
+        border-radius: 15px;
+        border:dashed 2px #f80 ;
+        .star-title{
+           width:100%;
+           color: #fff;  
+           font-weight: bolder;
+           position: absolute;
+           top: -1rem;
+           text-align: center;
+           line-height: 2rem;
+           span{
+               display: inline-block;
+               padding: 0px 1rem;
+               border-radius: 1rem;
+               background-color: #f80;
+           }
+        }
+        p{
+            line-height: 1.6rem;
+            mark{
+                background-color: #fff;
+                color: #f80;
+                font-weight: bolder;
+            }
+        }
+    }
+    
+}

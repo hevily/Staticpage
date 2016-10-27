@@ -1,0 +1,95 @@
+@charset 'utf-8';
+/* ysj-footer */
+.footer{
+    background-color: #000;
+    color: #999;
+    font-size: 1rem;
+    
+    .col-xs-12{
+        &.footer-nav{
+            padding-bottom: 50px;
+        }
+        &.qr{
+            padding-bottom: 20px;
+            text-align: center;
+            img{
+                width:100%;
+                max-width:252px;
+            }
+        }
+        padding:0;
+        .col-xs-3{  
+            padding:10px;
+        }
+        .col-xs-2{
+            padding:10px 5px;
+        }
+    }
+    .nav-qr{
+        border-bottom: 1px solid #323232;
+    }
+    .down-addr{
+        color: #999;
+       .title{
+           line-height: 2rem;
+       }
+        .download{
+            padding-left:5%;
+            text-align: left;
+            margin-top: 1rem;
+            .fa-apple{
+                
+                
+            }
+            .fa-android{
+                
+            }
+            
+            p{
+                position: relative;
+                margin:0;
+                .icon-apple,.icon-android{
+                    display: inline-block;
+                    position: relative;
+//                  margin-right:5px;
+                    color: #909090;
+                    padding:4px 8px ;
+                    padding-left: 30px;
+                    border: 1px solid #909090;
+                    border-radius: 5px;
+                    margin-top: 0.8rem;
+                    i{
+                        position: absolute;
+                        top: 7px;left: 10px;
+                    }
+                }
+            }
+        }
+        .address{
+            text-align: left;
+            padding-left: 5%;
+            line-height: 1.2rem;
+             margin-top: 1rem;
+             .title{
+                 margin-bottom: 0.8rem;
+             }
+            p{
+                position: relative;
+                padding-left: 30px;
+                i{
+                    position: absolute;
+                    top:4px;
+                    left: 0;
+                    
+                }
+            }
+            
+        }
+        
+        
+    }
+    .company-info{
+        color: #cccccc;
+    }    
+
+}
