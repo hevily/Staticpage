@@ -1,9 +1,10 @@
 @charset 'utf-8';
 /* ysj-footer */
 .footer{
-    background-color: #000;
-    color: #999;
-    font-size: 1rem;
+    background-color: #333333;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: bold;
     
     .col-xs-12{
         &.footer-nav{
@@ -26,7 +27,7 @@
         }
     }
     .nav-qr{
-        border-bottom: 1px solid #323232;
+        border-bottom: 1px solid #5C5C5C;
     }
     .down-addr{
         color: #999;

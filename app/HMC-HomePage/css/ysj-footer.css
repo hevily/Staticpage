@@ -1,8 +1,9 @@
 /* ysj-footer */
 .footer {
-  background-color: #000;
-  color: #999;
-  font-size: 1rem; }
+  background-color: #333333;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: bold; }
   .footer .col-xs-12 {
     padding: 0; }
     .footer .col-xs-12.footer-nav {
@@ -18,7 +19,7 @@
     .footer .col-xs-12 .col-xs-2 {
       padding: 10px 5px; }
   .footer .nav-qr {
-    border-bottom: 1px solid #323232; }
+    border-bottom: 1px solid #5C5C5C; }
   .footer .down-addr {
     color: #999; }
     .footer .down-addr .title {

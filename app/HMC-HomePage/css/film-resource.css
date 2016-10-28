@@ -2,7 +2,9 @@
 .film {
   background-image: url(../img/film-resource/bg.jpg);
   background-position: center;
-  background-size: cover; }
+  background-size: cover;
+  padding-top: 3rem;
+  padding-bottom: 6rem; }
   .film .media-body {
     text-align: left;
     font-size: 1rem;
@@ -25,7 +27,6 @@
       top: -10px;
       z-index: 2; }
     .film .media-right .film-img-3 {
-      top: 10px;
       right: -10px;
       z-index: 1; }
 

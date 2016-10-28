@@ -23,8 +23,8 @@
     }
 }
 .carousel-indicators li{
-    background-color: #646464;
-    border-color: #646464;
+    background-color: #CCCCCC;
+    border-color: #CCCCCC;
 }
 .carousel-indicators .active{
     background-color: #ff8800;
@@ -42,51 +42,84 @@
     height: 700px;
 }
 #service .carousel-caption{
-    font-size: 1.2rem;
+//  font-size: 1.2rem;
+  
+}
+@media screen and (min-width: 768px){
+    .carousel-caption {
+        right: 10%;
+        left: 10%;
+        padding-bottom: 30px;
+    }
 }
 
+@media screen and(min-width:1280px){
+    .carousel-caption {
+        right: 20%;
+        left: 20%;
+    
+        P{
+            &:first-child{
+                font-size: 2rem;
+            }
+            &:nth-child(2){
+                font-size: 1.5rem;
+            }
+        }
+        .slide-title{
+            left:-20%;
+            top:200px;
+            position: absolute;
+        }
+        img{
+            height: 24rem;
+            right: -30%;
+            top:100px;
+            position: absolute;
+        }
+    }
+}
+@media screen and(min-width:1800px){
+    .carousel-caption {
+        P{
+            &:first-child{
+                font-size: 2.8rem;
+            }
+            &:nth-child(2){
+                font-size: 1.5rem;
+            }
+        }
+        .slide-title{
+            left:-20%;
+            top:200px;
+            position: absolute;
+        }
+        img{
+            height: 24rem;
+            right: -20%;
+            top:100px;
+            position: absolute;
+        }
+    }
+}
 
-//@media (max-width: 767px){
-//  .carousel-caption {
-//      font-size: 12px;
-//      img{
-//          height: 10rem;
-//      }
-//  }
-//}
-//@media (max-width:600px){
-//  .carousel-caption{
-//      img{
-////          height:12rem;
-//      }
-//  }
-//}
-//@media (max-width: 680px){
-//  .carousel-caption .inner {
-//      max-width: 90%;
-//  }
-//}
-//@media (max-width: 480px){
-//  .carousel-caption {
-//      font-size: 10px;
-//      img{
-//          height: 10rem;
-//      }
-//  }
-//}
-
-
-
-@media (max-width: 1199px){
+@media (max-width: 1279px){
     #service .item,#cooperation1 .item {
         height: 575px;
-    }
+    }    
     .carousel-caption {
+        P{
+            &:first-child{
+                font-size: 2rem;
+            }
+            &:nth-child(2){
+                font-size: 1rem;
+            }
+        }
         img{
             height: 18rem;
         }
     }
-    
 }
 
 
@@ -101,11 +134,19 @@
     }
 }
 
-@media (max-width: 767px){
+@media (max-width: 769px){
     #service .item,#cooperation1 .item {
         height: 400px;
     }
     .carousel-caption {
+        P{
+            &:first-child{
+                font-size: 1.5rem;
+            }
+            &:nth-child(2){
+                font-size: 0.8rem;
+            }
+        }
         font-size: 12px;
         img{
             height: 10rem;
@@ -115,6 +156,14 @@
 }
 @media (max-width:600px){
     .carousel-caption{
+        P{
+            &:first-child{
+                font-size: 1.8rem;
+            }
+            &:nth-child(2){
+                font-size: 1rem;
+            }
+        }
         img{
             height:12rem;
         }
@@ -126,26 +175,17 @@
         height: 300px;
     }
     .carousel-caption {
+         P{
+            &:first-child{
+                font-size: 1.5rem;
+            }
+            &:nth-child(2){
+                font-size: 1rem;
+            }
+        }
         img{
-            height: 10rem;
+            height: 12rem;
         }
     }
 }
-
-//@media (max-width: 767px){
-//  .carousel-caption {
-//      font-size: 12px;
-//      img{
-//          height: 10rem;
-//      }
-//  }
-//}
-//@media (max-width:600px){
-//  .carousel-caption{
-//      img{
-////          height:12rem;
-//      }
-//  }
-//}
-
 

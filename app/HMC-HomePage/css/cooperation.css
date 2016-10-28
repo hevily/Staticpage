@@ -2,7 +2,10 @@
 .cooperation {
   background-color: #fff; }
   .cooperation #cooperation {
-    text-align: left; }
+    text-align: left;
+    padding-bottom: 50px; }
+    .cooperation #cooperation .carousel-indicators {
+      bottom: 0px; }
     .cooperation #cooperation .media .media-left {
       width: 260px; }
       .cooperation #cooperation .media .media-left .media-object {
@@ -10,26 +13,26 @@
     .cooperation #cooperation .media .media-body {
       padding-left: 3rem; }
       .cooperation #cooperation .media .media-body .title {
-        font-size: 2rem;
+        font-size: 1.4rem;
         color: #f80; }
       .cooperation #cooperation .media .media-body .desc {
-        font-size: 1.2rem;
+        font-size: 1rem;
         line-height: 2.5rem;
         position: relative;
         text-align: justify; }
         .cooperation #cooperation .media .media-body .desc::before {
           content: "";
           font-family: "microsoft yahei";
-          width: 2rem;
-          height: 2rem;
+          width: 20px;
+          height: 20px;
           display: block;
           position: absolute;
           background-image: url(../img/cooperation/dou.png);
           background-size: contain;
           background-position: 0 0;
           background-repeat: no-repeat;
-          top: 0;
-          left: -3rem;
+          top: 15px;
+          left: -30px;
           font-size: 2rem;
           color: #F80; }
 
