@@ -394,10 +394,10 @@ html {
       padding-bottom: 50px; }
     .footer .col-xs-12.qr {
       padding-bottom: 20px;
-      text-align: center; }
+      text-align: left; }
       .footer .col-xs-12.qr img {
         width: 100%;
-        max-width: 252px; }
+        max-width: 126px; }
     .footer .col-xs-12 .col-xs-3 {
       padding: 10px; }
     .footer .col-xs-12 .col-xs-2 {
@@ -407,7 +407,8 @@ html {
   .footer .down-addr {
     color: #999; }
     .footer .down-addr .title {
-      line-height: 2rem; }
+      line-height: 2rem;
+      color: #fff; }
     .footer .down-addr .download {
       padding-left: 5%;
       text-align: left;
@@ -442,7 +443,12 @@ html {
           position: absolute;
           top: 4px;
           left: 0; }
-  .footer .company-info {
-    color: #cccccc; }
+
+.company-info {
+  color: #cccccc;
+  line-height: 2.4rem;
+  background-color: #000000;
+  text-align: center;
+  margin: 0; }
 
 /*# sourceMappingURL=ysj-hp.css.map */

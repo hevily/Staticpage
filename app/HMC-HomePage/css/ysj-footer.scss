@@ -12,10 +12,10 @@
         }
         &.qr{
             padding-bottom: 20px;
-            text-align: center;
+            text-align: left;
             img{
                 width:100%;
-                max-width:252px;
+                max-width:126px;
             }
         }
         padding:0;
@@ -33,6 +33,7 @@
         color: #999;
        .title{
            line-height: 2rem;
+           color: #fff;
        }
         .download{
             padding-left:5%;
@@ -89,8 +90,12 @@
         
         
     }
-    .company-info{
-        color: #cccccc;
-    }    
-
+    
 }
+.company-info{
+        color: #cccccc;
+        line-height: 2.4rem;
+        background-color: #000000;
+        text-align: center;
+        margin: 0;
+    }    
