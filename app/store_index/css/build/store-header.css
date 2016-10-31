@@ -1,3 +1,4 @@
+@chareset 'utf-8';
 .normal-text {
   color: #3F3F3F; }
 
@@ -61,6 +62,7 @@
       -moz-border-radius-bottomright: 3px;
       border-bottom-right-radius: 3px; }
       .store-info .media .media-left .media-object {
+        -moz-border-radius: 3px;
         border-radius: 3px; }
     .store-info .media .media-body {
       font-size: 18px;
@@ -94,6 +96,80 @@
     font-weight: normal; }
   .store-action .new-page .media .media-right .media-object {
     height: 11px; }
+.store-action .new-page .nearby-store-head {
+  position: relative; }
+  .store-action .new-page .nearby-store-head .nearby-store-logo img {
+    height: 20px;
+    width: auto; }
+  .store-action .new-page .nearby-store-head .nearby-store-desc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 20px;
+    font-size: 16px;
+    height: 21px;
+    line-height: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-right: 30px; }
+    .store-action .new-page .nearby-store-head .nearby-store-desc span {
+      position: absolute;
+      right: 10px;
+      top: 0;
+      color: #F66F29; }
+  .store-action .new-page .nearby-store-head .nearby-store-more img {
+    height: 11px;
+    width: auto;
+    position: absolute;
+    right: 0;
+    top: 5px; }
+.store-action .show-ad ul {
+  list-style: none;
+  white-space: nowrap;
+  overflow-X: scroll;
+  overflow-Y: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding: 4px 0; }
+  .store-action .show-ad ul li {
+    display: inline-block;
+    margin-left: 5px; }
+    .store-action .show-ad ul li .add-box {
+      height: 80px;
+      width: 120px;
+      position: relative;
+      background-color: #bebebe; }
+      .store-action .show-ad ul li .add-box.voice-tag {
+        background-image: url("../img/store-header/voice.png");
+        -moz-background-size: cover;
+        background-size: cover;
+        background-position: center; }
+      .store-action .show-ad ul li .add-box.video-tag::before {
+        content: "";
+        width: 25px;
+        height: 25px;
+        background-image: url(../img/store-header/video.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        display: block;
+        -moz-background-size: 25px 25px;
+        background-size: 25px 25px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); }
+      .store-action .show-ad ul li .add-box .add-desc {
+        font-size: 12px;
+        color: #fff;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        bottom: 4px;
+        left: 0; }
 .store-action .img-text-borders {
   padding: 10px 0 10px 0;
   border-bottom: 1px solid #C9C9C9; }
@@ -117,18 +193,29 @@
       top: -4px;
       position: relative;
       color: #FF8F3D;
-      font-size: 16px; }
+      font-size: 16px;
+      /* &:first-child{display:inline-block;}*/
+      /* &:nth-child(1){display:none;}*/ }
     .store-action .img-text-borders .img-text-border .oneye {
       display: none; }
 .store-action .two .img-text-border {
-  width: 50%; }
-.store-action .img-text-border.done .media-object:nth-child(1) {
-  display: none !important; }
-.store-action .img-text-border.done .media-object:nth-child(2) {
-  display: inline-block !important; }
-.store-action .img-text-border.done .uneye {
-  display: none; }
-.store-action .img-text-border.done .oneye {
-  display: inline-block; }
+  width: 50%;
+  /* &:nth-child(1){*/
+  /* 	background-color: #ffba46;*/
+  /* }*/
+  /* &:nth-child(2){*/
+  /* 	background-color: lighten(#ffba46, 20%);*/
+  /* 	}*/ }
+.store-action .img-text-border.done {
+  /* span:first-child{display:none !important;}*/
+  /* span:last-child{display:inline-block !important;}*/ }
+  .store-action .img-text-border.done .media-object:nth-child(1) {
+    display: none !important; }
+  .store-action .img-text-border.done .media-object:nth-child(2) {
+    display: inline-block !important; }
+  .store-action .img-text-border.done .uneye {
+    display: none; }
+  .store-action .img-text-border.done .oneye {
+    display: inline-block; }
 
 /*# sourceMappingURL=store-header.css.map */
