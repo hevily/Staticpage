@@ -7,6 +7,13 @@
   margin: 2rem 0; }
 .section .section-box {
   text-align: center;
-  position: relative; }
+  position: relative;
+  margin-bottom: 3rem; }
+
+@media screen and (min-width: 1000px) {
+  .section .section-title {
+    margin: 4rem 0; }
+  .section .section-box {
+    margin-bottom: 4rem; } }
 
 /*# sourceMappingURL=service-box.css.map */

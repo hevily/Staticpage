@@ -11,5 +11,16 @@
     .section-box{
         text-align: center;
         position: relative;
+        margin-bottom: 3rem;
+    }
+}
+@media screen and(min-width:1000px){
+    .section{
+        .section-title{
+            margin:4rem 0;
+        }
+        .section-box{
+            margin-bottom:4rem;
+        }
     }
 }

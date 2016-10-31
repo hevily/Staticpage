@@ -234,14 +234,20 @@ html {
   margin: 2rem 0; }
 .section .section-box {
   text-align: center;
-  position: relative; }
+  position: relative;
+  margin-bottom: 3rem; }
 
+@media screen and (min-width: 1000px) {
+  .section .section-title {
+    margin: 4rem 0; }
+  .section .section-box {
+    margin-bottom: 4rem; } }
 /* service */
 .service {
   background-color: #F5F5F5; }
   .service .service-item {
     position: relative;
-    margin-bottom: 3rem; }
+    margin: 1rem 0; }
     .service .service-item .service-hover {
       width: 100%; }
     .service .service-item:hover .service-des {
@@ -273,16 +279,16 @@ html {
 .cooperation {
   background-color: #fff; }
   .cooperation #cooperation {
-    text-align: left;
-    padding-bottom: 50px; }
+    text-align: left; }
     .cooperation #cooperation .carousel-indicators {
-      bottom: 0px; }
+      bottom: -3rem; }
     .cooperation #cooperation .media .media-left {
-      width: 260px; }
+      width: 300px;
+      padding-right: 40px; }
       .cooperation #cooperation .media .media-left .media-object {
         width: 100%; }
     .cooperation #cooperation .media .media-body {
-      padding-left: 3rem; }
+      padding-left: 30px; }
       .cooperation #cooperation .media .media-body .title {
         font-size: 1.4rem;
         color: #f80; }
@@ -320,9 +326,7 @@ html {
 .film {
   background-image: url(../img/film-resource/bg.jpg);
   background-position: center;
-  background-size: cover;
-  padding-top: 3rem;
-  padding-bottom: 6rem; }
+  background-size: cover; }
   .film .media-body {
     text-align: left;
     font-size: 1rem;
@@ -354,29 +358,30 @@ html {
 /* make star */
 .make-star {
   font-size: 1rem;
-  background-color: #FFF;
-  margin-bottom: 3rem; }
+  background-color: #FFF; }
   .make-star .section-box {
     padding: 0 1rem;
-    padding-top: 2rem;
+    padding: 3rem 0;
     text-align: left;
     border-radius: 15px;
     border: dashed 2px #f80; }
     .make-star .section-box .star-title {
       width: 100%;
       color: #fff;
-      font-weight: bolder;
       position: absolute;
-      top: -1rem;
+      top: -1.3rem;
       text-align: center;
       line-height: 2rem; }
       .make-star .section-box .star-title span {
         display: inline-block;
+        font-size: 1.4rem;
+        line-height: 2.6rem;
         padding: 0px 1rem;
-        border-radius: 1rem;
+        border-radius: 2rem;
         background-color: #f80; }
     .make-star .section-box p {
-      line-height: 2rem; }
+      line-height: 2rem;
+      padding: 0 2rem; }
       .make-star .section-box p mark {
         background-color: #fff;
         color: #f80;
@@ -386,7 +391,7 @@ html {
 .footer {
   background-color: #333333;
   color: #fff;
-  font-size: 0.8rem;
+  font-size: 1.4rem;
   font-weight: bold; }
   .footer .col-xs-12 {
     padding: 0; }
@@ -420,14 +425,14 @@ html {
           display: inline-block;
           position: relative;
           color: #909090;
-          padding: 4px 8px;
+          padding: 10px 20px;
           padding-left: 30px;
           border: 1px solid #909090;
           border-radius: 5px;
           margin-top: 0.8rem; }
           .footer .down-addr .download p .icon-apple i, .footer .down-addr .download p .icon-android i {
             position: absolute;
-            top: 7px;
+            top: 12px;
             left: 10px; }
     .footer .down-addr .address {
       text-align: left;
@@ -441,7 +446,6 @@ html {
         padding-left: 30px; }
         .footer .down-addr .address p i {
           position: absolute;
-          top: 4px;
           left: 0; }
 
 .company-info {
@@ -450,5 +454,9 @@ html {
   background-color: #000000;
   text-align: center;
   margin: 0; }
+
+@media screen and (min-width: 768px) {
+  .footer {
+    font-size: 0.8rem; } }
 
 /*# sourceMappingURL=ysj-hp.css.map */

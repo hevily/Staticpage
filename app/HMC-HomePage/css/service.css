@@ -3,7 +3,7 @@
   background-color: #F5F5F5; }
   .service .service-item {
     position: relative;
-    margin-bottom: 3rem; }
+    margin: 1rem 0; }
     .service .service-item .service-hover {
       width: 100%; }
     .service .service-item:hover .service-des {

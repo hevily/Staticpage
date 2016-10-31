@@ -5,8 +5,8 @@
     background-image: url(../img/film-resource/bg.jpg);
     background-position: center;
     background-size: cover;
-    padding-top:3rem;
-    padding-bottom: 6rem;
+//  padding-top:3rem;
+//  padding-bottom: 2rem;
     .media-body{
         text-align: left;
         font-size: 1rem;
@@ -45,8 +45,10 @@
 }
 @media screen and(max-width:999px){
     .film{
+//      padding-bottom: 2rem;        
         .media-right{
             display: none;
+            
         }
     }
 }
