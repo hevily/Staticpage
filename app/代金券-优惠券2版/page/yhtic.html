@@ -7,6 +7,7 @@
 <!--     <link rel="stylesheet" href="__PUBLIC__/voucher/css/base.css" /> -->
     <link rel="stylesheet" type="text/css" href="../css/base.css" />
 	<link rel="stylesheet" type="text/css" href="../css/yhtic.css">
+	<link rel="stylesheet" type="text/css" href="../css/anytabs.css">
 <!--     <script src="__PUBLIC__/voucher/js/jquery-2.1.3.min.js"></script>s -->
  <!-- <script src="__PUBLIC__/voucher/js/voucher.js"></script> -->
     <title>我的代金券</title>
@@ -33,6 +34,36 @@
 			line-height: 18px;
 			color:#fff;
 		}
+		.tabs {
+			border-top-style: solid;
+			border-bottom-style: solid;
+			border-color: #916478;
+			border-width: 1px 0 1px 0;
+
+		}
+		.tabs .tab{
+			width:25%;
+			border:none;
+			border-radius: 0;
+			color: #916478;
+		}
+		.tabs .tab.active{
+			background-color: transparent;
+			color: #F5834D;
+		}
+		.bl::before{
+			content: "";
+			width: 1px;
+			height: 16px;
+			position: absolute;
+			left: 0;top: 10px;
+			display: block;
+			background-color: #916478;
+		}
+
+		.tabs .tab:first-child .bl::before{
+			display: none;
+		}
 	</style>
 </head>
 <body >
@@ -41,302 +72,499 @@
 			<div class="tab active" onclick="window.location='__URL__/index'">代金券<span>6</span></div>
 			<div class="tab" onclick="window.location='__URL__/ywlist'">优惠券<span>6</span></div>
 		</div>
-		<div class="tickets">
+		<div class="tabs clearfix">
+			<div class="tab active">
+				<div class="bl">
+					未使用
+				</div>
+			</div>
+			<div class="tab">
+				<div class="bl">
+					已过期
+				</div>
+			</div>
+			<div class="tab">
+				<div class="bl">
+					已使用
+				</div>
+			</div>
+			<div class="tab">
+				<div class="bl">
+					退款
+				</div>
+			</div>
+		</div>
+
+		<div class="tab-content">
 			<!-- 可使用 -->
-			<div class="ticket clearfix" onclick="window.location='ticket-details.html'">
-				<!-- used timeout 控制过期或者已使用-->
-				<div class="ticket-left">
-					<div class="ticket-face ">
-						<div class="mask">
-						</div>
-							<!-- <img src="../img/ticket-bg.png" class="ticket-bg"> -->
-						<div class="ticket-use   ">
-							<img class="used" src="../img/used.png" alt="已使用">
-							<img class="timeout" src="../img/timeout.png" alt="已过期">
-						</div>
-						<div class="ticket-name">
-							100元代金券!节假日通用！
-						</div>
-						<div class="ticket-info clearfix">
-							<div class="ticket-money three-part">
-								面额
-								<p>¥<span>100</span></p>
+			<div class="tabpanel showing">
+				<div class="tickets">
+					<div class="ticket clearfix" onclick="window.location='ticket-details.html'">
+						<!-- used timeout 控制过期或者已使用-->
+						<div class="ticket-left">
+							<div class="ticket-face ">
+								<div class="mask">
+								</div>
+									<!-- <img src="../img/ticket-bg.png" class="ticket-bg"> -->
+								<div class="ticket-use   ">
+									<img class="waiting" src="../img/waiting.png" alt="未开始">
+								</div>
+								<div class="ticket-name">
+									100元代金券!节假日通用！
+								</div>
+								<div class="ticket-info clearfix">
+									<div class="ticket-money three-part">
+										面额
+										<p>¥<span>100</span></p>
+									</div>
+									<div class="ticket-sale three-part">
+										售价
+										<p>¥<span>80</span></p>
+									</div>
+									<div class="ticket-scale three-part">
+										折扣
+										<p>¥<span>8折</span></p>
+									</div>
+								</div>
 							</div>
-							<div class="ticket-sale three-part">
-								售价
-								<p>¥<span>80</span></p>
-							</div>
-							<div class="ticket-scale three-part">
-								折扣
-								<p>¥<span>8折</span></p>
-							</div>
 						</div>
-					</div>
-				</div>
-				<div class="ticket-right">
-					<div class="ticket-status">
-						<p class="use-or-not">未消费</p>
-						<p class="back-money">&nbsp;</p>
-					</div>
-					<div class="ticket-store">
-						<img src="../img/store-logo.png" alt="" class="store-logo">
-						<span>店铺名店铺名</span>
-					</div>
-					<div class="ticket-validity">
-						<p>有效期</p>
-						<span class="from">2016-08-26</span>~
-						<span class="to">2016-08-29</span>
-					</div>
-					<img src="../img/more-details.png" class="more-details">
+						<div class="ticket-right">
+							<div class="ticket-status">
+								<p class="use-or-not">未消费</p>
+								<p class="back-money">&nbsp;</p>
+							</div>
+							<div class="ticket-store">
+								<img src="../img/store-logo.png" alt="" class="store-logo">
+								<span>店铺名店铺名</span>
+							</div>
+							<div class="ticket-validity">
+								<p>有效期</p>
+								<span class="from">2016-08-26</span>~
+								<span class="to">2016-08-29</span>
+							</div>
+							<img src="../img/more-details.png" class="more-details">
 
-				</div>
-			</div>
-			<div class="ticket clearfix">
-				<!-- used timeout 控制过期或者已使用-->
-				<div class="ticket-left">
-					<div class="ticket-face ">
-						<div class="mask">
 						</div>
-							<img src="../img/ticket-bg.png" class="ticket-bg">
-						<div class="ticket-use   ">
-							<img class="used" src="../img/used.png" alt="已使用">
-							<img class="timeout" src="../img/timeout.png" alt="已过期">
-						</div>
-						<div class="ticket-name">
-							100元代金券!节假日通用！
-						</div>
-						<div class="ticket-info clearfix">
-							<div class="ticket-money three-part">
-								面额
-								<p>¥<span>100</span></p>
+					</div>
+					<div class="ticket clearfix">
+						<!-- used timeout 控制过期或者已使用-->
+						<div class="ticket-left">
+							<div class="ticket-face ">
+								<div class="mask">
+								</div>
+									<img src="../img/ticket-bg.png" class="ticket-bg">
+								<div class="ticket-use   ">
+									<img class="waiting" src="../img/waiting.png" alt="未开始">
+								</div>
+								<div class="ticket-name">
+									100元代金券!节假日通用！
+								</div>
+								<div class="ticket-info clearfix">
+									<div class="ticket-money three-part">
+										面额
+										<p>¥<span>100</span></p>
+									</div>
+									<div class="ticket-sale three-part">
+										售价
+										<p>¥<span>80</span></p>
+									</div>
+									<div class="ticket-scale three-part">
+										折扣
+										<p>¥<span>8折</span></p>
+									</div>
+								</div>
 							</div>
-							<div class="ticket-sale three-part">
-								售价
-								<p>¥<span>80</span></p>
-							</div>
-							<div class="ticket-scale three-part">
-								折扣
-								<p>¥<span>8折</span></p>
-							</div>
 						</div>
-					</div>
-				</div>
-				<div class="ticket-right">
-					<div class="ticket-status">
-						<p class="use-or-not">未消费</p>
-						<p class="back-money">退款中</p>
-					</div>
-					<div class="ticket-store">
-						<img src="../img/store-logo.png" alt="" class="store-logo">
-						<span>店铺名</span>
-					</div>
-					<div class="ticket-validity">
-						<p>有效期</p>
-						<span class="from">2016-08-26</span>~
-						<span class="to">2016-08-29</span>
-					</div>
-					<img src="../img/more-details.png" class="more-details">
+						<div class="ticket-right">
+							<div class="ticket-status">
+								<p class="use-or-not">未消费</p>
+								<p class="back-money">&nbsp;</p>
+							</div>
+							<div class="ticket-store">
+								<img src="../img/store-logo.png" alt="" class="store-logo">
+								<span>店铺名</span>
+							</div>
+							<div class="ticket-validity">
+								<p>有效期</p>
+								<span class="from">2016-08-26</span>~
+								<span class="to">2016-08-29</span>
+							</div>
+							<img src="../img/more-details.png" class="more-details">
 
-				</div>
-			</div>
-		</div>
-		<div class="tickets">
-			<div class="tickets-title">
-				已使用 <img src="../img/top-arrow.png" class="toggle">
-			</div>
-			<div class="ticket clearfix used" onclick="window.location='used-timeout-ticket.html'">
-				<!-- used timeout 控制过期或者已使用-->
-				<div class="ticket-left">
-					<div class="ticket-face ">
-						<div class="mask">
 						</div>
-							<!-- <img src="../img/ticket-bg.png" class="ticket-bg"> -->
-						<div class="ticket-use   ">
-							<img class="used" src="../img/used.png" alt="已使用">
-							<img class="timeout" src="../img/timeout.png" alt="已过期">
-						</div>
-						<div class="ticket-name">
-							100元代金券!节假日通用！
-						</div>
-						<div class="ticket-info clearfix">
-							<div class="ticket-money three-part">
-								面额
-								<p>¥<span>100</span></p>
-							</div>
-							<div class="ticket-sale three-part">
-								售价
-								<p>¥<span>80</span></p>
-							</div>
-							<div class="ticket-scale three-part">
-								折扣
-								<p>¥<span>8折</span></p>
+					</div>
+					<div class="ticket clearfix waiting">
+						<!-- used timeout 控制过期或者已使用-->
+						<div class="ticket-left">
+							<div class="ticket-face ">
+								<div class="mask">
+								</div>
+									<img src="../img/ticket-bg.png" class="ticket-bg">
+								<div class="ticket-use  ">
+									<img class="waiting" src="../img/waiting.png" alt="未开始">
+								</div>
+								<div class="ticket-name">
+									100元代金券!节假日通用！
+								</div>
+								<div class="ticket-info clearfix">
+									<div class="ticket-money three-part">
+										面额
+										<p>¥<span>100</span></p>
+									</div>
+									<div class="ticket-sale three-part">
+										售价
+										<p>¥<span>80</span></p>
+									</div>
+									<div class="ticket-scale three-part">
+										折扣
+										<p>¥<span>8折</span></p>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-				<div class="ticket-right">
-					<div class="ticket-status">
-						<p class="use-or-not">已消费</p>
-						<p class="back-money">&nbsp;</p>
-					</div>
-					<div class="ticket-store">
-						<img src="../img/store-logo.png" alt="" class="store-logo">
-						<span>店铺名</span>
-					</div>
-					<div class="ticket-validity">
-						<p>有效期</p>
-						<span class="from">2016-08-26</span>~
-						<span class="to">2016-08-29</span>
-					</div>
-					<img src="../img/more-details.png" class="more-details">
-				</div>
-			</div>
-			<div class="ticket clearfix used">
-				<!-- used timeout 控制过期或者已使用-->
-				<div class="ticket-left">
-					<div class="ticket-face ">
-						<div class="mask">
-						</div>
-							<img src="../img/ticket-bg.png" class="ticket-bg">
-						<div class="ticket-use   ">
-							<img class="used" src="../img/used.png" alt="已使用">
-							<img class="timeout" src="../img/timeout.png" alt="已过期">
-						</div>
-						<div class="ticket-name">
-							100元代金券!节假日通用！
-						</div>
-						<div class="ticket-info clearfix">
-							<div class="ticket-money three-part">
-								面额
-								<p>¥<span>100</span></p>
+						<div class="ticket-right">
+							<div class="ticket-status">
+								<p class="use-or-not">未消费</p>
+								<p class="back-money">&nbsp;</p>
 							</div>
-							<div class="ticket-sale three-part">
-								售价
-								<p>¥<span>80</span></p>
+							<div class="ticket-store">
+								<img src="../img/store-logo.png" alt="" class="store-logo">
+								<span>店铺名</span>
 							</div>
-							<div class="ticket-scale three-part">
-								折扣
-								<p>¥<span>8折</span></p>
+							<div class="ticket-validity">
+								<p>有效期</p>
+								<span class="from">2016-08-26</span>~
+								<span class="to">2016-08-29</span>
 							</div>
-						</div>
-					</div>
-				</div>
-				<div class="ticket-right">
-					<div class="ticket-status">
-						<p class="use-or-not">已消费</p>
-						<p class="back-money">&nbsp;</p>
-					</div>
-					<div class="ticket-store">
-						<img src="../img/store-logo.png" alt="" class="store-logo">
-						<span>店铺名</span>
-					</div>
-					<div class="ticket-validity">
-						<p>有效期</p>
-						<span class="from">2016-08-26</span>~
-						<span class="to">2016-08-29</span>
-					</div>
-					<img src="../img/more-details.png" class="more-details">
+							<img src="../img/more-details.png" class="more-details">
 
-				</div>
-			</div>
-		</div>
-		<div class="tickets">
-			<div class="tickets-title">
-				已过期 <img src="../img/top-arrow.png" class="toggle">
-			</div>
-			<div class="ticket clearfix timeout">
-				<div class="ticket-left">
-					<div class="ticket-face ">
-						<div class="mask">
-						</div>
-							<!-- <img src="../img/ticket-bg.png" class="ticket-bg"> -->
-						<div class="ticket-use   ">
-							<!-- used timeout 控制过期或者已使用-->
-							<img class="used" src="../img/used.png" alt="已使用">
-							<img class="timeout" src="../img/timeout.png" alt="已过期">
-						</div>
-						<div class="ticket-name">
-							100元代金券!节假日通用！
-						</div>
-						<div class="ticket-info clearfix">
-							<div class="ticket-money three-part">
-								面额
-								<p>¥<span>100</span></p>
-							</div>
-							<div class="ticket-sale three-part">
-								售价
-								<p>¥<span>80</span></p>
-							</div>
-							<div class="ticket-scale three-part">
-								折扣
-								<p>¥<span>8折</span></p>
-							</div>
 						</div>
 					</div>
 				</div>
-				<div class="ticket-right">
-					<div class="ticket-status">
-						<p class="use-or-not">已过期</p>
-						<p class="back-money">&nbsp;</p>
-					</div>
-					<div class="ticket-store">
-						<img src="../img/store-logo.png" alt="" class="store-logo">
-						<span>店铺名</span>
-					</div>
-					<div class="ticket-validity">
-						<p>有效期</p>
-						<span class="from">2016-08-26</span>~
-						<span class="to">2016-08-29</span>
-					</div>
-					<img src="../img/more-details.png" class="more-details">
+			</div>
+			<!-- 已过期 -->
+			<div class="tabpanel ">
+				<div class="tickets">
+					<div class="ticket clearfix ">
+						<div class="ticket-left">
+							<div class="ticket-face ">
+								<div class="mask">
+								</div>
+									<!-- <img src="../img/ticket-bg.png" class="ticket-bg"> -->
+								<div class="ticket-use   ">
+									<!-- used timeout 控制过期或者已使用-->
+									<img class="canot-back.png" src="../img/canot-back.png" alt="不可退">
+								</div>
+								<div class="ticket-name">
+									100元代金券!节假日通用！
+								</div>
+								<div class="ticket-info clearfix">
+									<div class="ticket-money three-part">
+										面额
+										<p>¥<span>100</span></p>
+									</div>
+									<div class="ticket-sale three-part">
+										售价
+										<p>¥<span>80</span></p>
+									</div>
+									<div class="ticket-scale three-part">
+										折扣
+										<p>¥<span>8折</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ticket-right">
+							<div class="ticket-status">
+								<p class="use-or-not">未消费</p>
+								<p class="back-money">可退款</p>
+							</div>
+							<div class="ticket-store">
+								<img src="../img/store-logo.png" alt="" class="store-logo">
+								<span>店铺名</span>
+							</div>
+							<div class="ticket-validity">
+								<p>有效期</p>
+								<span class="from">2016-08-26</span>~
+								<span class="to">2016-08-29</span>
+							</div>
+							<img src="../img/more-details.png" class="more-details">
 
+						</div>
+					</div>
+					<div class="ticket clearfix canot-back">
+						<div class="ticket-left">
+							<div class="ticket-face ">
+								<div class="mask">
+								</div>
+									<!-- <img src="../img/ticket-bg.png" class="ticket-bg"> -->
+								<div class="ticket-use ">
+									<!-- used timeout 控制过期或者已使用-->
+									<img class="canot-back" src="../img/canot-back.png" alt="不可退">
+								</div>
+								<div class="ticket-name">
+									100元代金券!节假日通用！
+								</div>
+								<div class="ticket-info clearfix">
+									<div class="ticket-money three-part">
+										面额
+										<p>¥<span>100</span></p>
+									</div>
+									<div class="ticket-sale three-part">
+										售价
+										<p>¥<span>80</span></p>
+									</div>
+									<div class="ticket-scale three-part">
+										折扣
+										<p>¥<span>8折</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ticket-right">
+							<div class="ticket-status">
+								<p class="use-or-not">未消费</p>
+								<p class="back-money">&nbsp;</p>
+							</div>
+							<div class="ticket-store">
+								<img src="../img/store-logo.png" alt="" class="store-logo">
+								<span>店铺名</span>
+							</div>
+							<div class="ticket-validity">
+								<p>有效期</p>
+								<span class="from">2016-08-26</span>~
+								<span class="to">2016-08-29</span>
+							</div>
+							<img src="../img/more-details.png" class="more-details">
+
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="ticket clearfix timeout">
-				<div class="ticket-left">
-					<div class="ticket-face ">
-						<div class="mask">
-						</div>
-							<img src="../img/ticket-bg.png" class="ticket-bg">
-						<div class="ticket-use   ">
-							<!-- used timeout 控制过期或者已使用-->
-							<img class="used" src="../img/used.png" alt="已使用">
-							<img class="timeout" src="../img/timeout.png" alt="已过期">
-						</div>
-						<div class="ticket-name">
-							100元代金券!节假日通用！
-						</div>
-						<div class="ticket-info clearfix">
-							<div class="ticket-money three-part">
-								面额
-								<p>¥<span>100</span></p>
+			<!-- 已使用 -->
+			<div class="tabpanel ">
+				<div class="tickets">
+					<div class="tickets-title" hidden>
+						已使用 <img src="../img/top-arrow.png" class="toggle">
+					</div>
+					<div class="ticket clearfix " onclick="window.location='used-timeout-ticket.html'">
+						<!-- used timeout 控制过期或者已使用-->
+						<div class="ticket-left">
+							<div class="ticket-face ">
+								<div class="mask">
+								</div>
+									<!-- <img src="../img/ticket-bg.png" class="ticket-bg"> -->
+								<div class="ticket-use   ">
+								</div>
+								<div class="ticket-name">
+									100元代金券!节假日通用！
+								</div>
+								<div class="ticket-info clearfix">
+									<div class="ticket-money three-part">
+										面额
+										<p>¥<span>100</span></p>
+									</div>
+									<div class="ticket-sale three-part">
+										售价
+										<p>¥<span>80</span></p>
+									</div>
+									<div class="ticket-scale three-part">
+										折扣
+										<p>¥<span>8折</span></p>
+									</div>
+								</div>
 							</div>
-							<div class="ticket-sale three-part">
-								售价
-								<p>¥<span>80</span></p>
+						</div>
+						<div class="ticket-right">
+							<div class="ticket-status">
+								<p class="use-or-not">已消费</p>
+								<p class="back-money">&nbsp;</p>
 							</div>
-							<div class="ticket-scale three-part">
-								折扣
-								<p>¥<span>8折</span></p>
+							<div class="ticket-store">
+								<img src="../img/store-logo.png" alt="" class="store-logo">
+								<span>店铺名</span>
 							</div>
+							<div class="ticket-validity">
+								<p>使用时间</p>
+								<span class="from">2016-08-26</span>
+								<span class="to">11:50:17</span>
+							</div>
+							<img src="../img/more-details.png" class="more-details">
+						</div>
+					</div>
+					<div class="ticket clearfix " onclick="window.location='used-timeout-ticket.html'">
+						<!-- used timeout 控制过期或者已使用-->
+						<div class="ticket-left">
+							<div class="ticket-face ">
+								<div class="mask">
+								</div>
+									<!-- <img src="../img/ticket-bg.png" class="ticket-bg"> -->
+								<div class="ticket-use   ">
+								</div>
+								<div class="ticket-name">
+									100元代金券!节假日通用！
+								</div>
+								<div class="ticket-info clearfix">
+									<div class="ticket-money three-part">
+										面额
+										<p>¥<span>100</span></p>
+									</div>
+									<div class="ticket-sale three-part">
+										售价
+										<p>¥<span>80</span></p>
+									</div>
+									<div class="ticket-scale three-part">
+										折扣
+										<p>¥<span>8折</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ticket-right">
+							<div class="ticket-status">
+								<p class="use-or-not">已消费</p>
+								<p class="back-money">&nbsp;</p>
+							</div>
+							<div class="ticket-store">
+								<img src="../img/store-logo.png" alt="" class="store-logo">
+								<span>店铺名</span>
+							</div>
+							<div class="ticket-validity">
+								<p>使用时间</p>
+								<span class="from">2016-08-26</span>
+								<span class="to">11:50:17</span>
+							</div>
+							<img src="../img/more-details.png" class="more-details">
+						</div>
+					</div>
+					<div class="ticket clearfix " onclick="window.location='used-timeout-ticket.html'">
+						<!-- used timeout 控制过期或者已使用-->
+						<div class="ticket-left">
+							<div class="ticket-face ">
+								<div class="mask">
+								</div>
+									<!-- <img src="../img/ticket-bg.png" class="ticket-bg"> -->
+								<div class="ticket-use   ">
+								</div>
+								<div class="ticket-name">
+									100元代金券!节假日通用！
+								</div>
+								<div class="ticket-info clearfix">
+									<div class="ticket-money three-part">
+										面额
+										<p>¥<span>100</span></p>
+									</div>
+									<div class="ticket-sale three-part">
+										售价
+										<p>¥<span>80</span></p>
+									</div>
+									<div class="ticket-scale three-part">
+										折扣
+										<p>¥<span>8折</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ticket-right">
+							<div class="ticket-status">
+								<p class="use-or-not">已消费</p>
+								<p class="back-money">&nbsp;</p>
+							</div>
+							<div class="ticket-store">
+								<img src="../img/store-logo.png" alt="" class="store-logo">
+								<span>店铺名</span>
+							</div>
+							<div class="ticket-validity">
+								<p>使用时间</p>
+								<span class="from">2016-08-26</span>
+								<span class="to">11:50:17</span>
+							</div>
+							<img src="../img/more-details.png" class="more-details">
 						</div>
 					</div>
 				</div>
-				<div class="ticket-right">
-					<div class="ticket-status">
-						<p class="use-or-not">已过期</p>
-						<p class="back-money">&nbsp;</p>
+			</div>
+			<!-- 退款 -->
+			<div class="tabpanel ">
+				<div class="tickets">
+						<div class="ticket clearfix back-money">
+						<div class="ticket-left">
+							<div class="ticket-face ">
+								<div class="mask">
+								</div>
+									<!-- <img src="../img/ticket-bg.png" class="ticket-bg"> -->
+								<div class="ticket-use   ">
+									<!-- used timeout 控制过期或者已使用-->
+									<img class="back-money" src="../img/back-money.png" alt="退款中">
+									<img class="back-done" src="../img/back-done.png" alt="已完成">
+								</div>
+								<div class="ticket-name">
+									100元代金券!节假日通用！
+								</div>
+								<div class="ticket-info clearfix">
+									<div class="ticket-money three-part">
+										面额
+										<p>¥<span>100</span></p>
+									</div>
+									<div class="ticket-sale three-part">
+										售价
+										<p>¥<span>80</span></p>
+									</div>
+									<div class="ticket-scale three-part">
+										折扣
+										<p>¥<span>8折</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="ticket-right">
+							<div class="ticket-store">
+								<img src="../img/store-logo.png" alt="" class="store-logo">
+								<span>店铺名</span>
+							</div>
 					</div>
-					<div class="ticket-store">
-						<img src="../img/store-logo.png" alt="" class="store-logo">
-						<span>店铺名</span>
+					
+				</div>
+				<div class="ticket clearfix back-done">
+						<div class="ticket-left">
+							<div class="ticket-face ">
+								<div class="mask">
+								</div>
+									<!-- <img src="../img/ticket-bg.png" class="ticket-bg"> -->
+								<div class="ticket-use   ">
+									<!-- used timeout 控制过期或者已使用-->
+									<img class="back-money" src="../img/back-money.png" alt="退款中">
+									<img class="back-done" src="../img/back-done.png" alt="已完成">
+								</div>
+								<div class="ticket-name">
+									100元代金券!节假日通用！
+								</div>
+								<div class="ticket-info clearfix">
+									<div class="ticket-money three-part">
+										面额
+										<p>¥<span>100</span></p>
+									</div>
+									<div class="ticket-sale three-part">
+										售价
+										<p>¥<span>80</span></p>
+									</div>
+									<div class="ticket-scale three-part">
+										折扣
+										<p>¥<span>8折</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="ticket-right">
+							<div class="ticket-store">
+								<img src="../img/store-logo.png" alt="" class="store-logo">
+								<span>店铺名</span>
+							</div>
 					</div>
-					<div class="ticket-validity">
-						<p>有效期</p>
-						<span class="from">2016-08-26</span>~
-						<span class="to">2016-08-29</span>
-					</div>
-					<img src="../img/more-details.png" class="more-details">
+					
+				</div>
 
 				</div>
 			</div>
@@ -350,6 +578,16 @@ $(function(){
 	$('.tickets-title').click(function(event) {
 		$(this).closest('.tickets').toggleClass('toggle').find('.ticket').slideToggle('slow')
 	});
+
+	// 选项卡切换 无限极
+	$('.tabs .tab').click(function () {
+		var _this = $(this);
+		_this.siblings('.tab').removeClass('active');
+		_this.addClass('active');
+		var thistab = _this.closest('.tabs').next('.tab-content').children('.tabpanel').eq(_this.index());
+		thistab.siblings('.tabpanel').removeClass('showing');
+		thistab.addClass('showing');
+	})
 })
 
 </script>

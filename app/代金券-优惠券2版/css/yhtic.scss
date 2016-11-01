@@ -77,10 +77,10 @@ body{
 			}
 
 			.ticket-use{
-				position: absolute;
-				bottom: 10px;right: -30px;
-				
-				z-index:5;
+				    position: absolute;
+				    bottom: 5px;
+				    right: -90px;
+				    z-index: 5;
 				img{
 					width: 100px;
 					height: 100px;
@@ -169,6 +169,31 @@ body{
 			}
 			img.timeout{
 				display:block;
+			}
+		}
+		&.waiting{
+			img.waiting{
+				display: block;
+				right: 0;
+				position: relative;
+				bottom: 30px;
+				height: 90px;
+				width: 90px;
+			}
+		}
+		&.canot-back{
+			img.canot-back{
+				display: block;
+			}
+		}
+		&.back-money{
+			img.back-money{
+				display: block;
+			}
+		}
+		&.back-done{
+			img.back-done{
+				display: block;
 			}
 		}
 

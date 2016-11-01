@@ -58,8 +58,8 @@ body {
         z-index: 2; }
       .tickets .ticket .ticket-left .ticket-use {
         position: absolute;
-        bottom: 10px;
-        right: -30px;
+        bottom: 5px;
+        right: -90px;
         z-index: 5; }
         .tickets .ticket .ticket-left .ticket-use img {
           width: 100px;
@@ -123,6 +123,19 @@ body {
       -o-filter: grayscale(1);
       filter: grayscale(1); }
     .tickets .ticket.timeout img.timeout {
+      display: block; }
+    .tickets .ticket.waiting img.waiting {
+      display: block;
+      right: 0;
+      position: relative;
+      bottom: 30px;
+      height: 90px;
+      width: 90px; }
+    .tickets .ticket.canot-back img.canot-back {
+      display: block; }
+    .tickets .ticket.back-money img.back-money {
+      display: block; }
+    .tickets .ticket.back-done img.back-done {
       display: block; }
     .tickets .ticket .ticket-right {
       font-size: 12px;
