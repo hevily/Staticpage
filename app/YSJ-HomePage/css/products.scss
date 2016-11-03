@@ -1,0 +1,16 @@
+@charset "utf-8";
+body{
+    font-family: "microsoft yahei" ,"Helvetica Neue","Helvetica","Arial","sans-serif";
+}
+@import './build/font-rem-base';
+
+@import "./build/ysj-head";
+@import './build/service-box';
+@import './build/slider-ysj';
+@import './build/slider-ysj-products';
+@import './build/products-modules';
+
+
+
+
+@import './build/ysj-footer';

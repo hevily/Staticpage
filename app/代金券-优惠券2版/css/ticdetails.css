@@ -22,7 +22,7 @@ body {
   width: 100%;
   max-width: 640px;
   margin: 0 auto;
-  padding: 20px 10px; }
+  padding: 20px 10px 80px 10px; }
   .container .bg-radius img {
     width: 100%;
     display: block; }
@@ -129,6 +129,25 @@ body {
     filter: grayscale(1); }
   .container .used .guid .guid-title, .container .timeout .guid .guid-title {
     color: #848484; }
+
+.order-details {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  text-align: center; }
+  .order-details a {
+    display: inline-block;
+    width: 80%;
+    background-color: #f36303;
+    color: #fff;
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+    margin: 10px 0;
+    border-radius: 5px; }
 
 @media screen and (max-width: 320px) {
   .qr-psw {
