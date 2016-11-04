@@ -9,7 +9,8 @@
         float: right; }
       .modules .module .module-info .title {
         color: #ff8800;
-        font-size: 2.2rem; }
+        font-size: 2.2rem;
+        margin: 1rem 0; }
       .modules .module .module-info .desc {
         font-size: 1rem; }
       .modules .module .module-info img {
@@ -27,15 +28,16 @@
         .modules .module .module-animate .animate-box.align-right img {
           left: auto;
           right: 0; }
+    .modules .module.module1 .module-animate .animate-box.align-right img {
+      left: auto;
+      right: 0; }
     .modules .module.module1 .module-animate .animate-box img {
       left: 0;
       top: 0; }
       .modules .module.module1 .module-animate .animate-box img:first-child {
         top: -8px;
-        z-index: 2; }
-    .modules .module.module1 .module-animate .animate-box.align-right img {
-      left: auto;
-      right: 0; }
+        z-index: 2;
+        right: 1rem; }
     .modules .module.module2 .module-animate img {
       top: 50px; }
       .modules .module.module2 .module-animate img:first-child {
@@ -104,13 +106,14 @@
       .modules .module.module7 .module-animate img:first-child {
         z-index: 1;
         top: -45px;
-        right: 0rem; }
+        right: 1rem; }
       .modules .module.module7 .module-animate img:nth-child(2) {
-        z-index: 4; }
+        z-index: 4;
+        right: 1rem; }
       .modules .module.module7 .module-animate img:last-child {
         z-index: 9;
         left: auto;
-        right: 2.5rem;
+        right: 3.5rem;
         top: 1rem; }
 
 @media screen and (min-width: 768px) {

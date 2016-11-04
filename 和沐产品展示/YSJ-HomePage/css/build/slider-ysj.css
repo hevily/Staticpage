@@ -1,0 +1,123 @@
+/* slider-ysj */
+.section_slideshow
+, .carousel-inner {
+  position: relative; }
+
+.section_slideshow::before
+, .carousel-inner::before {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  position: absolute; }
+
+.carousel-caption {
+  top: 10%;
+  bottom: auto; }
+  .carousel-caption img {
+    height: 23rem; }
+
+.carousel-indicators li {
+  background-color: #CCCCCC;
+  border-color: #CCCCCC; }
+
+.carousel-indicators .active {
+  background-color: #ff8800;
+  border-color: #ff8800; }
+
+.carousel-control {
+  z-index: 15; }
+
+#service .item, #cooperation1 .item {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px; }
+
+@media screen and (min-width: 768px) {
+  .carousel-caption {
+    right: 10%;
+    left: 10%;
+    padding-bottom: 30px; } }
+@media screen and (min-width: 1280px) {
+  .carousel-caption {
+    right: 15%;
+    left: 15%; }
+    .carousel-caption P:first-child {
+      font-size: 2rem; }
+    .carousel-caption P:nth-child(2) {
+      font-size: 1.5rem; }
+    .carousel-caption .slide-title {
+      left: -15%;
+      top: 200px;
+      position: absolute; }
+    .carousel-caption img {
+      height: 24rem;
+      right: -15%;
+      top: 100px;
+      position: absolute; } }
+@media screen and (min-width: 1800px) {
+  .carousel-caption {
+    right: 20%;
+    left: 20%; }
+    .carousel-caption P:first-child {
+      font-size: 2.8rem; }
+    .carousel-caption P:nth-child(2) {
+      font-size: 1.5rem; }
+    .carousel-caption .slide-title {
+      left: -220px;
+      top: 200px;
+      position: absolute; }
+    .carousel-caption img {
+      height: 24rem;
+      right: -220px;
+      top: 100px;
+      position: absolute; } }
+@media (max-width: 1279px) {
+  #service .item, #cooperation1 .item {
+    height: 575px; }
+
+  .carousel-caption P:first-child {
+    font-size: 2rem; }
+  .carousel-caption P:nth-child(2) {
+    font-size: 1rem; }
+  .carousel-caption img {
+    height: 18rem; } }
+@media (max-width: 991px) {
+  #service .item, #cooperation1 .item {
+    height: 500px; }
+
+  .carousel-caption img {
+    height: 14rem; } }
+@media (max-width: 769px) {
+  #service .item, #cooperation1 .item {
+    height: 400px; }
+
+  .carousel-caption {
+    font-size: 12px; }
+    .carousel-caption P:first-child {
+      font-size: 1.5rem; }
+    .carousel-caption P:nth-child(2) {
+      font-size: 0.8rem; }
+    .carousel-caption img {
+      height: 10rem; } }
+@media (max-width: 600px) {
+  .carousel-caption P:first-child {
+    font-size: 1.8rem; }
+  .carousel-caption P:nth-child(2) {
+    font-size: 1rem; }
+  .carousel-caption img {
+    height: 12rem; } }
+@media (max-width: 480px) {
+  #service .item, #cooperation1 .item {
+    height: 300px; }
+
+  .carousel-caption P:first-child {
+    font-size: 1.5rem; }
+  .carousel-caption P:nth-child(2) {
+    font-size: 1rem; }
+  .carousel-caption img {
+    height: 12rem; } }
+
+/*# sourceMappingURL=slider-ysj.css.map */

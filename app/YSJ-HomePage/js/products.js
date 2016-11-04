@@ -108,7 +108,7 @@ $(function(){
 				}
 				
 			});
-		}
+		}check(Doms)
 		
 	}());
 	

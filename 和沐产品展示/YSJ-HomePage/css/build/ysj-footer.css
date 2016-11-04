@@ -1,0 +1,83 @@
+/* ysj-footer */
+.footer {
+  background-color: #333333;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold; }
+  .footer .col-xs-12.footer-nav {
+    text-align: left;
+    padding: 0 0 50px 0; }
+    .footer .col-xs-12.footer-nav a {
+      text-decoration: none;
+      color: #FFF; }
+  .footer .col-xs-12.qr {
+    padding-bottom: 20px;
+    text-align: left; }
+    .footer .col-xs-12.qr img {
+      width: 100%;
+      max-width: 126px; }
+    .footer .col-xs-12.qr .col-lg-6 {
+      padding: 0; }
+  .footer .col-xs-12 .col-xs-3 {
+    padding: 10px; }
+  .footer .col-xs-12 .col-xs-2 {
+    padding: 10px 5px; }
+  .footer .nav-qr {
+    border-bottom: 1px solid #5C5C5C; }
+  .footer .down-addr {
+    color: #999; }
+    .footer .down-addr .title {
+      line-height: 2rem;
+      color: #fff; }
+    .footer .down-addr .download {
+      text-align: left;
+      margin-top: 1rem; }
+      .footer .down-addr .download p {
+        position: relative;
+        margin: 0;
+        font-weight: normal; }
+        .footer .down-addr .download p .icon-apple, .footer .down-addr .download p .icon-android {
+          cursor: pointer;
+          font-size: 16px;
+          display: inline-block;
+          position: relative;
+          color: #fff;
+          padding: 10px;
+          border: 1px solid #fff;
+          background-color: #000;
+          padding-left: 40px;
+          border-radius: 5px;
+          margin-top: 0.8rem;
+          width: 152px; }
+          .footer .down-addr .download p .icon-apple i, .footer .down-addr .download p .icon-android i {
+            font-size: 20px;
+            position: absolute;
+            top: 10px;
+            left: 20px; }
+        .footer .down-addr .download p .icon-apple {
+          padding-left: 50px; }
+    .footer .down-addr .address {
+      text-align: left;
+      margin-top: 1rem; }
+      .footer .down-addr .address .title {
+        margin-bottom: 0.8rem; }
+      .footer .down-addr .address p {
+        position: relative;
+        padding-left: 30px;
+        font-weight: normal; }
+        .footer .down-addr .address p i {
+          position: absolute;
+          left: 0; }
+
+.company-info {
+  color: #cccccc;
+  line-height: 2.4rem;
+  background-color: #000000;
+  text-align: center;
+  margin: 0; }
+
+@media screen and (min-width: 768px) {
+  .footer {
+    font-size: 0.8rem; } }
+
+/*# sourceMappingURL=ysj-footer.css.map */
