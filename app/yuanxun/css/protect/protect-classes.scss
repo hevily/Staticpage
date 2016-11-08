@@ -1,0 +1,113 @@
+.section{
+    padding-top:0;
+}
+.class-box{
+    
+    padding:26px 0;
+    &.darker{
+        background-color: #F1F1F1;
+        .media{
+            .media-left,.media-right{
+                img{
+                    left: -380px;
+                }
+            }
+            .media-body.class-box-info{
+                padding-left:0px;
+                padding-right: 420px;
+            }
+        }
+    }
+    &.showed{
+        .media{
+            .media-left,.media-right{
+                img{
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    .media{
+        height: 330px;
+        .media-left,.media-right{
+            
+            position: relative;
+            width:420px;
+            img{
+                display: none;
+                position: absolute;
+                top: 20px;left: 0;
+            }
+        }
+        .media-body.class-box-info{
+            height: 330px;
+            padding-left:420px;
+            color: #3E3E3E;
+            .class-title{
+                font-size: 40px;
+            }
+            .class-info-desc{
+                text-indent: 40px;
+                font-size: 16px;
+                line-height: 26px;
+            }
+        }
+    }
+    
+}
+@media screen and(width:768px){
+    
+        .class-box{
+             padding:130px 0;
+            &.darker{
+                .media{
+                    .media-left,.media-right{
+                        width:210px;
+                        img{
+                            position: absolute;
+                            top:80px;left: -200px;
+                            max-width: 210px;
+                        }
+                    }
+                    .media-body.class-box-info{
+                        padding-left: 0;
+                        padding-right: 210px;
+                    }
+                }
+            }
+            .media{
+                .media-left,.media-right{
+                    width:210px;
+                    img{
+                        position: absolute;
+                        top:80px;left: 0;
+                        max-width: 210px;
+                    }
+                }
+                .media-body.class-box-info{
+                    padding-left: 210px;
+                }
+            }
+        } 
+} 
+@media screen and(max-width:767px){
+    .class-box{
+        text-align: justify;
+         padding:50px 0;
+         &.darker{
+             .media{
+                 .media-body.class-box-info{
+                     padding-right:0;
+                 }
+             }
+         }
+        .media{
+            .media-left,.media-right{
+                display: none;
+            }
+            .media-body.class-box-info{
+                padding-left: 0;
+            }
+        }
+    }    
+}

@@ -1,0 +1,44 @@
+.header-bg {
+  padding-top: 10px;
+  height: 254px;
+  background-image: url(../img/protect/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+  text-align: center; }
+  .header-bg .header-title-desc {
+    padding-top: 20px;
+    font-size: 40px;
+    position: relative; }
+  .header-bg #title-btm-line {
+    text-align: center;
+    height: 2px;
+    position: relative;
+    margin-bottom: 40px; }
+    .header-bg #title-btm-line span {
+      height: 2px;
+      width: 100px;
+      display: block;
+      margin: 0 auto;
+      background-color: #FEC400;
+      line-height: 2px; }
+  .header-bg .header-info-desc {
+    font-size: 14px;
+    line-height: 20px; }
+
+@media screen and (max-width: 1100px) and (min-width: 768px) {
+  .header-bg {
+    height: 300px; }
+    .header-bg .header-title-desc {
+      padding-top: 40px;
+      font-size: 30px; }
+    .header-bg .header-info-desc {
+      padding-top: 30px; } }
+@media screen and (max-width: 767px) and (min-width: 319px) {
+  .header-bg {
+    height: 400px; }
+    .header-bg .header-title-desc {
+      padding-top: 60px;
+      font-size: 28px; } }
+
+/*# sourceMappingURL=protect-header.css.map */
