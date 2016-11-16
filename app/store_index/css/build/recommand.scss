@@ -1,0 +1,17 @@
+// 促销推荐
+.recommand{
+	li{
+		margin-left:-15px;
+		padding:0 0px 0 0;
+		img{
+			width:100%;
+			display:block;
+			margin-bottom:10px;
+		}
+		&:last-child{
+			img{
+				margin-bottom:0;
+			}
+		}
+	}
+}

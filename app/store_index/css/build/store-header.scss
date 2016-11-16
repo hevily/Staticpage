@@ -56,7 +56,19 @@ $i-t-b-color: red;
 	.new-page{
 		.media{
 			border-bottom:1px solid $normal-gapline;margin: 0;padding:$pd;
-			&:first-child{}
+			&:nth-child(2){
+				padding-left:8px;
+				.nearby-store-logo{
+					img{
+						height: 16px;
+						position: relative;
+						top: 2px;
+					}
+				}
+				.nearby-store-desc{
+					padding-left:26px;
+				}
+			}
 			.media-object{height: 20px;width: auto;}
 			.media-body{
 				.media-heading{
@@ -145,6 +157,11 @@ $i-t-b-color: red;
     						   -moz-transform: translate(-50%,-50%);
     						    -ms-transform: translate(-50%,-50%);
     						        transform: translate(-50%,-50%);
+					}
+					img{
+						position:absolute;
+						width:100%;
+						height:100%;
 					}
 					.add-desc{
 						font-size: 12px;
