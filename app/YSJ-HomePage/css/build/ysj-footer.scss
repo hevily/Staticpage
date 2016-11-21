@@ -11,6 +11,10 @@
 //          padding-bottom: 50px;
             text-align: left;
             padding:0 0 50px 0;
+            a{
+                text-decoration: none;
+                color: #FFF;
+            }
         }
         &.qr{
             padding-bottom: 20px;
@@ -56,12 +60,14 @@
                 margin:0;
                 font-weight: normal;
                 .icon-apple,.icon-android{
+                        cursor: pointer;
                         font-size: 16px;
                         display: inline-block;
                         position: relative;
-                        color: #909090;
+                        color: #fff;
                         padding: 10px;
-                        border: 1px solid #909090;
+                        border: 1px solid #fff;
+                        background-color: #000;
                         padding-left: 40px;
                         border-radius: 5px;
                         margin-top: 0.8rem;

@@ -42,35 +42,38 @@
     padding-bottom: 30px; } }
 @media screen and (min-width: 1280px) {
   .carousel-caption {
-    right: 30%;
-    left: 30%; }
+    right: 15%;
+    left: 15%; }
     .carousel-caption P:first-child {
       font-size: 2rem; }
     .carousel-caption P:nth-child(2) {
       font-size: 1.5rem; }
     .carousel-caption .slide-title {
-      left: -20%;
+      left: -15%;
       top: 200px;
       position: absolute; }
     .carousel-caption img {
       height: 24rem;
-      right: -30%;
+      right: -15%;
       top: 100px;
       position: absolute; } }
 @media screen and (min-width: 1800px) {
-  .carousel-caption P:first-child {
-    font-size: 2.8rem; }
-  .carousel-caption P:nth-child(2) {
-    font-size: 1.5rem; }
-  .carousel-caption .slide-title {
-    left: -220px;
-    top: 200px;
-    position: absolute; }
-  .carousel-caption img {
-    height: 24rem;
-    right: -220px;
-    top: 100px;
-    position: absolute; } }
+  .carousel-caption {
+    right: 20%;
+    left: 20%; }
+    .carousel-caption P:first-child {
+      font-size: 2.8rem; }
+    .carousel-caption P:nth-child(2) {
+      font-size: 1.5rem; }
+    .carousel-caption .slide-title {
+      left: -220px;
+      top: 200px;
+      position: absolute; }
+    .carousel-caption img {
+      height: 24rem;
+      right: -220px;
+      top: 100px;
+      position: absolute; } }
 @media (max-width: 1279px) {
   #service .item, #cooperation1 .item {
     height: 575px; }

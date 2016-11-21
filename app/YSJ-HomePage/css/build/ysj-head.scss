@@ -1,6 +1,8 @@
 @charset'utf-8';
 /* ysj-head */
-
+body{
+    font-family: "microsoft yahei" ,"Helvetica Neue","Helvetica","Arial","sans-serif";
+}
 @media (min-width: 768px){
     
     .stay-top.navbar-default{
@@ -81,15 +83,12 @@
             margin-right: 20px;
             padding-top: 5px;
             padding-bottom: 5px;
+            &.active{
+                color: #ff8800;
+            }
         }
     }
     
-   
-    
-
-
-
-
 }
 
 

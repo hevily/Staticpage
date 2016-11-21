@@ -81,7 +81,7 @@ $(function(){
 			var of = o.offset();
 			var w = $(window);
 //			滚动距离+屏幕高度 小于目标顶部定位 在下部未冒头
-			if((w.scrollTop() + w.height()) > (of.top+(o.outerHeight())- 80)){
+			if((w.scrollTop() + w.height()) > (of.top+(o.outerHeight())- 100)){
 				console.log('进入')
 				return true;
 //				console.log(o)
@@ -111,42 +111,4 @@ $(function(){
 		}check(Doms)
 		
 	}());
-	
-	
-//	(function(){
-//		function isVisible (Dom) {
-//			var o = $(Dom);
-//			var of = o.offset();
-//			var w = $(window);
-//			return !(w.scrollTop() > (of.top + o.outerHeight()) || (w.scrollTop() + w.height()) < of.top);
-//		}
-//		
-//		var Doms = $('.fun1,.fun2,.fun3');
-//		
-//		window.onscroll = function(){
-////			console.log($(window).scrollTop())
-//
-//
-//			function check(Array){
-//				var className = 'showed'
-//				$.each(Array, function(key,value) {
-////					console.log(value)
-//					if(!$(value).hasClass(className)){
-////						console.log('first-see')
-//						if(isVisible(value)){
-////							console.log(value);
-//							$(value).addClass(className);
-//						}
-//					}
-//					
-//				});
-//			}
-//			
-//			check(Doms)
-//			
-//			function isVisible(dom){
-//				
-//			}
-//		}
-//	})()
 })

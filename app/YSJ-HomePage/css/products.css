@@ -1,6 +1,3 @@
-body {
-  font-family: "microsoft yahei" ,"Helvetica Neue","Helvetica","Arial","sans-serif"; }
-
 /* font-rem-base */
 html {
   font-size: 62.5%; }
@@ -15,6 +12,9 @@ html {
   html {
     font-size: 125% !important; } }
 /* ysj-head */
+body {
+  font-family: "microsoft yahei" ,"Helvetica Neue","Helvetica","Arial","sans-serif"; }
+
 @media (min-width: 768px) {
   .stay-top.navbar-default {
     background-color: transparent;
@@ -74,7 +74,9 @@ html {
     .navbar-default .navbar-nav > li > a {
       margin-right: 20px;
       padding-top: 5px;
-      padding-bottom: 5px; } }
+      padding-bottom: 5px; }
+      .navbar-default .navbar-nav > li > a.active {
+        color: #ff8800; } }
 .stay-top.navbar-default .navbar-collapse, .navbar-default .navbar-form {
   background-color: transparent;
   color: #FFFFFF; }
@@ -168,35 +170,38 @@ html {
     padding-bottom: 30px; } }
 @media screen and (min-width: 1280px) {
   .carousel-caption {
-    right: 30%;
-    left: 30%; }
+    right: 15%;
+    left: 15%; }
     .carousel-caption P:first-child {
       font-size: 2rem; }
     .carousel-caption P:nth-child(2) {
       font-size: 1.5rem; }
     .carousel-caption .slide-title {
-      left: -20%;
+      left: -15%;
       top: 200px;
       position: absolute; }
     .carousel-caption img {
       height: 24rem;
-      right: -30%;
+      right: -15%;
       top: 100px;
       position: absolute; } }
 @media screen and (min-width: 1800px) {
-  .carousel-caption P:first-child {
-    font-size: 2.8rem; }
-  .carousel-caption P:nth-child(2) {
-    font-size: 1.5rem; }
-  .carousel-caption .slide-title {
-    left: -220px;
-    top: 200px;
-    position: absolute; }
-  .carousel-caption img {
-    height: 24rem;
-    right: -220px;
-    top: 100px;
-    position: absolute; } }
+  .carousel-caption {
+    right: 20%;
+    left: 20%; }
+    .carousel-caption P:first-child {
+      font-size: 2.8rem; }
+    .carousel-caption P:nth-child(2) {
+      font-size: 1.5rem; }
+    .carousel-caption .slide-title {
+      left: -220px;
+      top: 200px;
+      position: absolute; }
+    .carousel-caption img {
+      height: 24rem;
+      right: -220px;
+      top: 100px;
+      position: absolute; } }
 @media (max-width: 1279px) {
   #service .item, #cooperation1 .item {
     height: 575px; }
@@ -259,18 +264,21 @@ html {
 
 .download-ysj {
   font-size: 1.5rem;
-  line-height: 2.3rem;
-  padding: 1.5rem 0; }
+  line-height: 3.0rem;
+  padding: 2rem 0;
+  color: #323232; }
   .download-ysj .download-btn {
+    margin-left: 2rem;
     font-size: 1rem;
     background-color: #ff8800;
     color: #fff;
     line-height: 1.5rem;
     display: inline-block;
     border-radius: 5px;
-    padding: 0.4rem 1.5rem;
-    vertical-align: text-bottom;
+    padding: 0.4rem 2.5rem;
     text-decoration: none; }
+    .download-ysj .download-btn:hover {
+      background-color: #FFA336; }
     .download-ysj .download-btn:active {
       opacity: 0.7;
       color: #000; }
@@ -280,44 +288,50 @@ html {
   .carousel-inner .item .carousel-caption .slide-title P {
     text-shadow: none; }
     .carousel-inner .item .carousel-caption .slide-title P:first-child {
-      color: #3d3d3d; }
+      color: #3d3d3d;
+      margin-bottom: 1.5rem; }
     .carousel-inner .item .carousel-caption .slide-title P:nth-child(2) {
+      font-size: 1.2rem;
       color: #5C5C5C;
-      font-family: "yahei-light";
-      -webkit-font-smoothing: antialiased; }
+      font-family: "Noto Sans CJK SC", "Source Han Sans CN", 'Hiragino Sans GB', 'Microsoft YaHei', '\5b8b\4f53', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      margin-bottom: 1rem; }
     .carousel-inner .item .carousel-caption .slide-title P:nth-child(3) {
       color: #4c4c4c; }
 
 @media screen and (min-width: 1280px) {
   .carousel-caption img {
-    height: 18rem; } }
+    height: 18rem; }
+
+  .carousel-caption img {
+    top: 160px; } }
 @media screen and (min-width: 1200px) {
   .carousel-caption img {
     height: 300px;
-    left: -350px;
+    left: -170px;
     right: auto; }
   .carousel-caption .slide-title {
-    left: 405px;
-    top: 200px;
-    right: -380px;
+    left: 650px;
+    top: 150px;
+    right: -170px;
     position: absolute; }
     .carousel-caption .slide-title P {
       text-align: left; }
       .carousel-caption .slide-title P:first-child {
         font-size: 2.2rem; }
       .carousel-caption .slide-title P:nth-child(2) {
-        font-size: 1rem; }
+        font-size: 1.3rem; }
       .carousel-caption .slide-title P:nth-child(3) {
         font-size: 1.5rem; } }
 @media screen and (min-width: 1800px) {
   .carousel-caption img {
     height: 397px;
-    left: -500px;
+    left: -300px;
     right: auto; }
   .carousel-caption .slide-title {
-    left: 600px;
+    left: 750px;
     top: 200px;
-    right: -500px;
+    right: -282px;
     position: absolute; }
     .carousel-caption .slide-title P {
       text-align: left; }
@@ -347,13 +361,13 @@ html {
         font-size: 1.5rem; } }
 @media (max-width: 769px) {
   .carousel-caption {
-    top: 12%; }
+    top: 10%; }
     .carousel-caption img {
       height: 120px;
       left: 0; }
     .carousel-caption .slide-title {
       left: 0px;
-      top: 170px;
+      top: 145px;
       right: 0;
       position: absolute; }
       .carousel-caption .slide-title P {
@@ -380,8 +394,34 @@ html {
       height: auto; }
     .carousel-caption .slide-title {
       top: 140px; } }
+@media screen and (width: 768px) {
+  .module {
+    padding-bottom: 20px !important; }
+    .module.module1 {
+      padding-top: 20px !important; }
+
+  .carousel-caption {
+    top: 10%; }
+    .carousel-caption img {
+      height: 120px;
+      left: 0; }
+    .carousel-caption .slide-title {
+      left: 0px;
+      top: 145px;
+      right: 0;
+      position: absolute; }
+      .carousel-caption .slide-title P {
+        text-align: center; }
+        .carousel-caption .slide-title P:first-child {
+          font-size: 1.8rem;
+          margin-bottom: 0 !important; }
+        .carousel-caption .slide-title P:nth-child(2) {
+          font-size: 1rem;
+          margin-bottom: 0 !important; }
+        .carousel-caption .slide-title P:nth-child(3) {
+          font-size: 1.3rem; } }
 .modules {
-  font-family: "microsoft-yahei"; }
+  font-family: "Noto Sans CJK SC", "Source Han Sans CN", 'Hiragino Sans GB', 'Microsoft YaHei', '\5b8b\4f53', sans-serif; }
   .modules .module {
     position: relative; }
     .modules .module .module-info {
@@ -394,7 +434,9 @@ html {
         font-size: 2.2rem;
         margin: 1rem 0; }
       .modules .module .module-info .desc {
-        font-size: 1rem; }
+        font-size: 0.9rem;
+        color: #909090;
+        line-height: 1.5rem; }
       .modules .module .module-info img {
         width: 100%;
         max-width: 460px; }
@@ -410,30 +452,34 @@ html {
         .modules .module .module-animate .animate-box.align-right img {
           left: auto;
           right: 0; }
-    .modules .module.module1 .module-animate .animate-box.align-right img {
-      left: auto;
-      right: 0; }
-    .modules .module.module1 .module-animate .animate-box img {
-      left: 0;
-      top: 0; }
-      .modules .module.module1 .module-animate .animate-box img:first-child {
-        top: -8px;
-        z-index: 2;
-        right: 1rem; }
-    .modules .module.module2 .module-animate img {
-      top: 50px; }
-      .modules .module.module2 .module-animate img:first-child {
-        z-index: 1;
+    .modules .module.module1 {
+      padding-top: 30px; }
+      .modules .module.module1 .module-animate .animate-box.align-right img {
+        left: auto;
+        right: 0; }
+      .modules .module.module1 .module-animate .animate-box img {
+        left: 0;
         top: 0; }
-      .modules .module.module2 .module-animate img:nth-child(2) {
-        z-index: 2;
-        left: 5rem; }
-      .modules .module.module2 .module-animate img:nth-child(3) {
-        z-index: 3;
-        left: 12rem; }
-      .modules .module.module2 .module-animate img:last-child {
-        z-index: 4;
-        left: 20rem; }
+        .modules .module.module1 .module-animate .animate-box img:first-child {
+          top: 2rem;
+          z-index: 2;
+          right: 1rem; }
+    .modules .module.module2 .module-animate {
+      top: 100px; }
+      .modules .module.module2 .module-animate img {
+        top: 50px; }
+        .modules .module.module2 .module-animate img:first-child {
+          z-index: 1;
+          top: 0; }
+        .modules .module.module2 .module-animate img:nth-child(2) {
+          z-index: 2;
+          left: 5rem; }
+        .modules .module.module2 .module-animate img:nth-child(3) {
+          z-index: 3;
+          left: 12rem; }
+        .modules .module.module2 .module-animate img:last-child {
+          z-index: 4;
+          left: 20rem; }
     .modules .module.module3 .module-animate {
       top: 100px; }
       .modules .module.module3 .module-animate img:first-child {
@@ -459,7 +505,7 @@ html {
         left: 3rem;
         top: -70px; }
     .modules .module.module5 .module-animate {
-      top: 50px; }
+      top: 4rem; }
       .modules .module.module5 .module-animate img:first-child {
         z-index: 1;
         top: 0;
@@ -470,7 +516,7 @@ html {
         right: 5rem;
         top: 1rem; }
     .modules .module.module6 .module-animate {
-      top: 50px; }
+      top: 6rem; }
       .modules .module.module6 .module-animate img:first-child {
         z-index: 1;
         top: 0;
@@ -484,23 +530,26 @@ html {
         z-index: 4;
         top: 10px; }
     .modules .module.module7 .module-animate {
-      top: 50px; }
+      top: 4rem; }
       .modules .module.module7 .module-animate img:first-child {
         z-index: 1;
-        top: -45px;
+        top: -0.5rem;
         right: 1rem; }
       .modules .module.module7 .module-animate img:nth-child(2) {
         z-index: 4;
+        top: 3rem;
         right: 1rem; }
       .modules .module.module7 .module-animate img:last-child {
         z-index: 9;
         left: auto;
         right: 3.5rem;
-        top: 1rem; }
+        top: 4rem; }
 
 @media screen and (min-width: 768px) {
   .module {
-    padding-bottom: 4rem; }
+    padding-bottom: 5rem; }
+    .module.module1 {
+      padding-top: 5rem !important; }
     .module .module2 .animate-box {
       position: relative;
       top: 100px; } }
@@ -556,25 +605,34 @@ html {
     right: 3rem !important;
     top: 1rem; }
 
-  .module6 .module-animate .animate-box {
-    position: relative;
-    top: 100px; }
-    .module6 .module-animate .animate-box img {
-      top: 50px;
-      width: 70px; }
-      .module6 .module-animate .animate-box img:first-child {
-        width: 230px;
-        z-index: 1;
-        top: 0;
-        left: 2.5rem !important; }
-      .module6 .module-animate .animate-box img:nth-child(2) {
-        z-index: 2;
-        left: 2rem !important;
-        top: 40px; }
-      .module6 .module-animate .animate-box img:last-child {
-        z-index: 2;
-        top: 20px;
-        left: 11rem !important; } }
+  .module6 .module-animate {
+    top: 2rem !important; }
+    .module6 .module-animate .animate-box {
+      position: relative;
+      top: 100px; }
+      .module6 .module-animate .animate-box img {
+        top: 50px;
+        width: 70px; }
+        .module6 .module-animate .animate-box img:first-child {
+          width: 230px;
+          z-index: 1;
+          top: 0;
+          left: 2.5rem !important; }
+        .module6 .module-animate .animate-box img:nth-child(2) {
+          z-index: 2;
+          left: 2rem !important;
+          top: 40px; }
+        .module6 .module-animate .animate-box img:last-child {
+          z-index: 2;
+          top: 20px;
+          left: 11rem !important; }
+
+  .module7 .module-animate img:first-child {
+    top: -0.5rem !important; }
+  .module7 .module-animate img:nth-child(2) {
+    top: 3rem !important; }
+  .module7 .module-animate img:last-child {
+    top: 4rem !important; } }
 .showed .animate-box {
   display: block !important; }
 
@@ -587,6 +645,9 @@ html {
   .footer .col-xs-12.footer-nav {
     text-align: left;
     padding: 0 0 50px 0; }
+    .footer .col-xs-12.footer-nav a {
+      text-decoration: none;
+      color: #FFF; }
   .footer .col-xs-12.qr {
     padding-bottom: 20px;
     text-align: left; }
@@ -614,12 +675,14 @@ html {
         margin: 0;
         font-weight: normal; }
         .footer .down-addr .download p .icon-apple, .footer .down-addr .download p .icon-android {
+          cursor: pointer;
           font-size: 16px;
           display: inline-block;
           position: relative;
-          color: #909090;
+          color: #fff;
           padding: 10px;
-          border: 1px solid #909090;
+          border: 1px solid #fff;
+          background-color: #000;
           padding-left: 40px;
           border-radius: 5px;
           margin-top: 0.8rem;

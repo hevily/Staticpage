@@ -1,6 +1,6 @@
 @charset 'utf-8';
 .modules{
-    font-family: "microsoft-yahei";
+    font-family: "Noto Sans CJK SC", "Source Han Sans CN", 'Hiragino Sans GB', 'Microsoft YaHei', '\5b8b\4f53', sans-serif;
     
     .module{
         position: relative;
@@ -16,7 +16,9 @@
                 margin:1rem 0;
             }
             .desc{
-                font-size: 1rem;
+                font-size: 0.9rem;
+                color: #909090;
+                line-height: 1.5rem;
             }
             img{
                 width:100%;
@@ -44,6 +46,7 @@
             }
         }
         &.module1{
+            padding-top:30px;
             .module-animate{
             .animate-box{
                 &.align-right{
@@ -56,7 +59,7 @@
                     left: 0;
                     top:0;
                     &:first-child{
-                        top:-8px;
+                        top:2rem;
                         z-index: 2;
                         right: 1rem;
                     }
@@ -67,6 +70,7 @@
         }
         &.module2{
             .module-animate{
+                top:100px;
                 img{
                     top: 50px;
                     &:first-child{
@@ -130,7 +134,7 @@
         }
         &.module5{
             .module-animate{
-                top:50px;
+                top:4rem;
                 img{
                     &:first-child{
                         z-index: 1;
@@ -149,7 +153,7 @@
         
         &.module6{
             .module-animate{
-                top:50px;
+                top:6rem;
                 img{
                     &:first-child{
                         z-index: 1;
@@ -172,22 +176,23 @@
         
         &.module7{
             .module-animate{
-                top:50px;
+                top:4rem;
                 img{
                     &:first-child{
                         z-index: 1;
-                        top: -45px;
+                        top: -0.5rem;
                         right: 1rem;
                     }
                     &:nth-child(2){
                         z-index: 4;
+                        top: 3rem;
                         right: 1rem;                        
                     }
                     &:last-child{
                         z-index: 9;
                         left: auto;
                         right: 3.5rem;
-                        top: 1rem;
+                        top: 4rem;
                     }
                 }
             }
@@ -196,7 +201,11 @@
 }
 @media screen and(min-width:768px){
     .module{        
-        padding-bottom: 4rem;
+        padding-bottom: 5rem;
+        &.module1{
+            padding-top:5rem !important;
+            
+        }
         .module2{
             .animate-box{
                 position: relative;
@@ -210,7 +219,7 @@
         display:none;
     }
 }
-@media screen and(width:768px){
+@media screen and(width:768px){    
     .module2{
         .module-animate{
             .animate-box{
@@ -292,6 +301,7 @@
     }
     .module6{
         .module-animate{
+            top: 2rem !important;
             .animate-box{
                 position: relative;
                 top:100px;
@@ -314,6 +324,23 @@
                         top: 20px ;
                         left: 11rem !important;
                     }
+                }
+            }
+            
+        }
+    }
+    .module7{
+        .module-animate{
+            img{
+                &:first-child {
+                    top: -0.5rem !important;
+                }
+                &:nth-child(2) {
+//                  right: 1rem ;
+                    top: 3rem !important;
+                }
+                &:last-child {
+                    top: 4rem !important;
                 }
             }
             
