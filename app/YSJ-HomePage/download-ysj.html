@@ -34,7 +34,7 @@
 		        <li><a href="products.html">产品</a></li>
 		        <li><a href="download-ysj.html" class="active">下载</a></li>
 		
-		        <li><a href="#">博客</a></li>
+		        <li><a href="#">动态</a></li>
 		
 		        <li><a href="javascript:;" class="login">登录</a></li>
 		
@@ -58,6 +58,22 @@
 		  <!-- Wrapper for slides -->
 		  <div class="carousel-inner" role="listbox">
 		    <div class="item active" style="background-image: url(img/download/download-bj.jpg);"></div>
+		    <div class="carousel-caption">
+		    	<div class="media">
+		    		<div class="media-left media-middle">
+		    			<div class="media-object" style="background-image: url(./img/download/ysj-logo@2x.png);background-size: contain;background-repeat: no-repeat;"></div>
+		    			
+		    		</div>
+	    			<div class="media-body media-middle">
+	    				<p>
+	    					下载影视界APP
+	    				</p>
+	    				<p>
+	    					心随所动，让拍片更轻松
+	    				</p>
+		    		</div>
+		    	</div>
+		    </div>
 		  </div>
 		</div>
 		<!--slide end-->
@@ -84,9 +100,11 @@
 						<div class="download-logo">
 							<i class="fa fa fa-apple "></i>
 						</div>
-						<div class="download-btn">
-							Apple store 下载							
-						</div>
+						<a href="https://itunes.apple.com/cn/app/ying-shi-jie/id920247554?mt=8" target="_blank" class="download-ios">
+							<button class="download-btn">
+								Apple store 下载							
+							</button>
+						</a>
 					</div>
 					
 					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 download-box">
@@ -94,9 +112,11 @@
 						<div class="download-logo">
 							<i class="fa fa fa-android "></i>
 						</div>
-						<div class="download-btn">
+						<a href="http://staticcdn.yshjie.com/cdn/download/hmwyg" target="_blank" class="download-and">
+							<button class="download-btn">
 							立即下载							
-						</div>
+							</button>
+						</a>
 					</div>
 
 				</div>			
@@ -107,7 +127,7 @@
 				<div class="especially">
 					<div class="row">
 						<!--P1-->
-						<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 special">
+						<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 special hovering">
 							<div class="special-box">
 								<div class="special-img">
 									<img src="./img/download/p1.png" alt="" />
@@ -227,7 +247,7 @@
 							<div class="address">
 								<div class="title">联系我们</div>
 								<p><i class="fa fa-map-marker"></i>北京市朝阳区东四环中路 78号大成国际A1座7A07</p>
-								<p><i class="fa fa-phone"></i>010-56579630</p>
+								<p><i class="fa fa-phone"></i>010-59626221</p>
 								<p><i class="fa fa-envelope-o"></i>malin@yshjie.com</p>
 							</div>
 						</div>
@@ -242,6 +262,22 @@
 		<p class="company-info">京ICP备14036806号 Copyright © 2014 北京和沐天成文化传媒有限公司 All Rights Reserved</p>
 		<script src="http://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
 		<script src="bootstrap-3.3.0-dist/dist/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="./js/products.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="js/head-nav.js" type="text/javascript" charset="utf-8"></script>-->
+		<script type="text/javascript">
+			$(function(){
+				var doms = $('.special'),
+					cN = "hovering";
+				doms.hover(
+					function(){
+						$("."+cN).removeClass(cN)
+						$(this).addClass(cN)
+					},
+					function(){
+//						$(this).removeClass(cN)
+					}
+				)
+			})
+		</script>
+		
 	</body>
 </html>

@@ -1,5 +1,31 @@
 @charset 'utf-8';
 
+.carousel-caption{
+    text-shadow:none;
+    .media{
+        width: 570px;
+        margin: 0 auto;
+        .media-left{
+            padding-right:30px;
+        }
+        .media-body{
+            width:440px;
+            P{
+                margin:0;
+                text-align: justify;
+                &:nth-child(1){
+                    font-size: 2.6rem;
+                }
+                &:nth-child(2){
+                    color: #4090c7;
+                    font-size: 1.6rem;
+                    margin-bottom:12px;
+                }
+            }
+        }
+    }
+}
+
 .download-ysj-boxes{
     text-align: center;
     p{
@@ -47,6 +73,20 @@
             border:1px solid #B3B3B3;
             border-radius:4px;
             background-color: #FFF;
+            &:hover{
+                background-color: #EDEDED;
+            }
+            a{
+                color: #323232;
+                text-decoration: none;
+                
+                &:hover{
+                    text-decoration: none;
+                }
+                &:active{
+                    background-color: #EDEDED;
+                }
+            }
         }
     }
     
@@ -58,6 +98,15 @@
         min-height: 330px;
         .special-box{
             text-align: center;
+            position:relative; 
+            &:before{
+                content: "";
+                width:100%;height:100%;
+                position: absolute;
+                top:0;left:0;
+                z-index: 1;
+                background-color: rgba(255,255,255,0.3);
+            }
             .special-img{
                 img{
                     width:100%;
@@ -65,12 +114,12 @@
             }
             .special-title{
                 color: #ff8800;
-                font-size: 1.4rem;
+                font-size: 1.3rem;
                 padding:1rem 0;
             }
             .special-desc{
                 color: #4a2700;
-                font-size: 0.8rem;
+                font-size: 0.7rem;
                 min-height: 70px;
                 padding:10px 10px 50px 10px;
                 text-align: justify;
@@ -87,21 +136,24 @@
                 background-color: #FCF9E8;
             }
         }
-        &:hover{
+        &.hovering{
             .special-box{
                 position: relative;
                 top:-10px;
                 z-index: 2;
-                box-shadow:1px 1px 30px 3px rgba(222,217,197,0.5)                
+                box-shadow:1px 1px 30px 3px rgba(222,217,197,0.5);
+                &:before{
+                    display: none;
+                }                
             }
             &:nth-child(odd){
                 .special-box{            
-                    border-bottom: 10px solid #FFFCEC;
+//                  border-bottom: 10px solid #FFFCEC;
                 }
             }
             &:nth-child(even){
                 .special-box{            
-                    border-bottom: 10px solid #FCF9E8;
+//                  border-bottom: 10px solid #FCF9E8;
                 }
             }
             
@@ -148,6 +200,64 @@
         
     }
 }
+@media screen and(min-width:1200px){
+    .especially{
+        .special{
+            .special-box{
+                .special-desc{
+                    min-height: 126px;
+                }
+            }
+           
+        }
+    }
+}
+@media screen and(min-width:991px) and(max-width:1199px){
+    .especially{
+        .special{
+            .special-box{
+                .special-desc{
+                    min-height: 148px;
+                }
+            }
+            &.hovering{
+                .special-box{
+                    position: relative;
+                    top:-10px;
+                    z-index: 2;
+                    box-shadow:1px 1px 30px 3px rgba(222,217,197,0.5);
+                    &:before{
+                        display: none;
+                    }                
+                }
+                &:nth-child(odd){
+                    .special-box{            
+                        border-bottom: 10px solid #FFFCEC;
+                    }
+                }
+                &:nth-child(even){
+                    .special-box{            
+                        border-bottom: 10px solid #FCF9E8;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+@media screen and(min-width:768px) and(max-width:990px){
+    .especially{
+        .special{
+            .special-box{
+                .special-desc{
+                    min-height: 148px;
+                }
+            }
+        }
+    }
+}
+
 @media screen and(min-width:769px){
     .especially{
         .special{
@@ -161,29 +271,39 @@
                 height:14px;
                 background-color: #FBA440;
             }
-            .special-box{
-                
-                position:relative
-                .special-img{
-                    img{
-                        
-                    }
-                }
-                .special-title{
-                  
-                }
-                .special-desc{
-                    
+            
+        }
+    }
+    
+    .carousel-caption{
+        .media{
+            .media-left{
+                .media-object{
+                    width: 120px;
+                    height: 120px;
                 }
             }
         }
     }
 }
+
+@media screen and(width: 768px){
+    .carousel-caption{
+        .media{
+            .media-left{
+                .media-object{
+                    width: 120px;
+                    height: 120px;
+                }
+            }
+        }
+    }
+    
+    
+}
 @media screen and(max-width: 767px){
     .download-ysj-boxes{
         .download-box{
-            
-//          box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.3);
             border-bottom:1px solid #cfcfcf;
             p{
                 
@@ -199,5 +319,31 @@
             }
         }
         
+    }
+    
+    .carousel-caption{
+        .media{
+            width:240px;
+            .media-left{
+                .media-object{
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+            .media-body{
+                width:180px;
+//              text-align: justify;
+                text-align:justify; justify:inter-ideograph;
+                P{
+                    &:nth-child(1){
+                        font-size: 2.0rem;
+                    }
+                    &:nth-child(2){
+                        font-size: 1.3rem;
+                        margin:0;
+                    }
+                }
+            }
+        }
     }
 }
