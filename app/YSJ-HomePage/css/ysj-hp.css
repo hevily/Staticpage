@@ -393,6 +393,29 @@ body {
         color: #f80;
         font-weight: bolder; }
 
+.partner {
+  background-image: url(../img/index/partner/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat-y;
+  text-align: center; }
+  .partner .section-title {
+    margin-bottom: 3rem; }
+  .partner .row {
+    padding-bottom: 1rem; }
+    .partner .row .partner-logo {
+      max-width: 100%; }
+    .partner .row .partner-logo-hover {
+      display: none;
+      max-width: 100%; }
+    .partner .row .col-lg-3:hover img[class^="partner-logo"] {
+      display: none; }
+    .partner .row .col-lg-3:hover img[class$="logo-hover"] {
+      display: inline-block; }
+
+.partner-logo:hover {
+  display: none; }
+
 /* ysj-footer */
 .footer {
   background-color: #333333;
