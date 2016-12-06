@@ -13,14 +13,14 @@ var browserSync = require('browser-sync').create();
 // 代理
 
 gulp.task('sync', function() {
-	browserSync({
-		files:"**",
-		server:{
-			proxy: "192.168.1.120/statichtml/moviehelper/app/"
-		}
-	})
+	// browserSync({
+	// 	files:"**",
+	// 	server:{
+	// 		proxy: "192.168.1.120/statichtml/moviehelper/app/"
+	// 	}
+	// });
     browserSync.init({
         proxy: "192.168.1.120/statichtml/moviehelper/app/"
     });
 });
-gulp.task('default', ["watch"]);
+gulp.task('default',['browserSync']);

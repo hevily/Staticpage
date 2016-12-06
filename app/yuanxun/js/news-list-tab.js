@@ -53,7 +53,7 @@ $(function(){
 						"</div></div>"
 				}
 			  	$(goal).find('.news-lists').html(NewsList)
-			  	getAjaxImg(".pagination-news",100,100,2);
+			  	getAjaxImg(".pagination-news",346,208,3);
 			  	$(window).scrollTop(0)
 		  	}
 		

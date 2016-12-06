@@ -47,22 +47,22 @@ module.exports = function(grunt) {
 			config: config,
 			// LiveReload task Start
 				// 通过connect任务，创建一个静态服务器
-				connect: {
-					options: {
-						// 服务器端口号
-						port: 8080,
-						// 服务器地址(可以使用主机名localhost，也能使用IP)
-						hostname: 'localhost',
-						// 物理路径(默认为. 即根目录) 注：使用'.'或'..'为路径的时，可能会返回403 Forbidden. 此时将该值改为相对路径 如：/grunt/reloard。
-						base: '.'
-					},
-					livereload: {
-						options: {
-							// 通过LiveReload脚本，让页面重新加载。
-							middleware: lrMiddleware
-						}
-					}
-				},
+				// connect: {
+				// 	options: {
+				// 		// 服务器端口号
+				// 		port: 8080,
+				// 		// 服务器地址(可以使用主机名localhost，也能使用IP)
+				// 		hostname: 'localhost',
+				// 		// 物理路径(默认为. 即根目录) 注：使用'.'或'..'为路径的时，可能会返回403 Forbidden. 此时将该值改为相对路径 如：/grunt/reloard。
+				// 		base: '.'
+				// 	},
+				// 	livereload: {
+				// 		options: {
+				// 			// 通过LiveReload脚本，让页面重新加载。
+				// 			middleware: lrMiddleware
+				// 		}
+				// 	}
+				// },
 			// livereload task End
 
 			// copy file task Start
@@ -164,16 +164,16 @@ module.exports = function(grunt) {
 					//	tasks:watch_tasks,// 此处配置监测到变动后执行的任务（事件）
 					//	options:{spawn:false}// (任务规则，额我也不知道是什么意思。空了再研究)
 					//}
-				}
+				},
 			// watch End
 			//browser-sync
 				browserSync: {
 				    dev: {
 				        bsFiles: {
-				            src : 'assets/css/style.css'
+				            src : '**.*'
 				        },
 				        options: {
-				            proxy: "local.dev"
+				            server: '192.168.1.120/statichtml/moviehelper/app/'
 				        }
 				    }
 				}
@@ -194,6 +194,7 @@ module.exports = function(grunt) {
 		grunt.loadNpmTasks('grunt-browser-sync');
 
 	// 自定义任务
-		grunt.registerTask('default', ['browserSync', 'watch']);
+		 grunt.registerTask('default', ['browserSync', 'watch']);
+
 		grunt.registerTask('build', ['jshint','uglify','csslint','cssmin']);
 };

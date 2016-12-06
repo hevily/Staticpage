@@ -1,6 +1,5 @@
 window.onload = function(){
 	
-
 	$('#service').carousel({
 	  	interval: 5000 
 	});
@@ -11,7 +10,7 @@ window.onload = function(){
 	
 	// 顶部导航滚动更改主题  base on js
 	(function(){
-		var slide = document.getElementById('service');
+		var slide = document.querySelector('.service');
 		var header = document.getElementById('header');
 		var cN = 'stay-top';
 	//	滚动监听处理
@@ -26,7 +25,7 @@ window.onload = function(){
 				sTop = document.body.scrollTop || document.documentElement.scrollTop,
 				headH = header.offsetHeight,
 				dCN = ' navbar navbar-default navbar-fixed-top ';
-				console.log(sTop+'|'+sH+'|'+headH)
+				// console.log(sTop+'|'+sH+'|'+headH)	
 			if(sTop > (sH - headH)){
 				header.setAttribute('class',dCN);
 			}else{
@@ -34,8 +33,9 @@ window.onload = function(){
 			}
 		}checkNav();
 		function checkFilm(sTop){
-			var goal = document.getElementById('film'),
-				gH = goal.offsetHeight;
+			var goal = document.getElementById('film');
+			if(goal == null) return	
+			var gH = goal.offsetHeight;
 			var oT = goal.offsetTop;
 			var img1 = document.getElementById('img1'),
 				img2 = document.getElementById('img2'),

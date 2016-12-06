@@ -144,8 +144,8 @@
     display: inline-block;
     margin-left: 5px; }
     .store-action .show-ad ul li .add-box {
-      height: 80px;
-      width: 120px;
+      height: 59px;
+      width: 104px;
       position: relative;
       background-color: #bebebe; }
       .store-action .show-ad ul li .add-box.voice-tag {
@@ -165,7 +165,7 @@
         background-size: 25px 25px;
         position: absolute;
         left: 50%;
-        top: 50%;
+        top: 40%;
         -webkit-transform: translate(-50%, -50%);
         -moz-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
