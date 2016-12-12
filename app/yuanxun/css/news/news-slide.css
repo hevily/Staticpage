@@ -24,7 +24,9 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
         z-index: 15; }
         #carousel_news .item .carousel-caption .inner .slide-news-title {
           font-size: 30px; }

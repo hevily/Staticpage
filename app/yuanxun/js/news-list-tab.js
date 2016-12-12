@@ -36,7 +36,7 @@ $(function(){
 					
 					NewsList+=  "<div class='list  col-lg-4 col-md-4 col-sm-4'>"+
 						"<div class='list-box animated fadeInRight'>"+
-								"<img src='"+newsImg+"' data-collectid='"+collectid +"' class='news-img' alt='"+newsImgT+"' isnew='no' />"+
+								"<a class='hoverLarger' target='_blank' href='#'><img src='/images/blank.gif' height='210px' width='100%' style='height:210px' data-collectid='"+collectid +"' class='news-img' title='"+newsImgT+"' alt='"+newsImgT+"' isnew='yes' /></a>"+
 								"<div class='news-title'><a href='#'>"+newsTitle+"</a></div>"+
 								"<div class='news-time-editer'>"+
 									newsDate+"&nbsp;&nbsp;by&nbsp;&nbsp;<span class='editer-dark'>"+newsEditer+"</span></div>"+

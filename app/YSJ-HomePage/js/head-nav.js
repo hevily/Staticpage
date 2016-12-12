@@ -7,7 +7,6 @@ window.onload = function(){
 	$('#cooperation').carousel({
 		interval:3000
 	});
-	
 	// 顶部导航滚动更改主题  base on js
 	(function(){
 		var slide = document.querySelector('.service');
@@ -18,7 +17,7 @@ window.onload = function(){
 			var sTop = document.body.scrollTop ||  document.documentElement.scrollTop 
 			checkNav(sTop)
 			checkFilm(sTop)
-			
+			// console.log(sTop)
 		}
 		function checkNav(sTop){
 			var sH = slide.offsetHeight,
