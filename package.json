@@ -1,27 +1,26 @@
 {
-  "name": "reload",
-  "version": "1.0.2",
-  "description": "最后更新于：2015-12-4",
+  "name": "node_project",
+  "version": "1.0.0",
+  "description": "first node project",
   "main": "Gruntfile.js",
-  "dependencies": {},
-  "devDependencies": {
-    "autoprefixer": "^6.0.2",
-    "browser-sync": "^2.17.6",
-    "connect-livereload": "~0.5.3",
-    "grunt": "^0.4.5",
-    "grunt-browser-sync": "^2.2.0",
-    "grunt-contrib-clean": "^0.7.0",
-    "grunt-contrib-connect": "~0.11.2",
-    "grunt-contrib-copy": "^0.8.2",
-    "grunt-contrib-csslint": "^0.5.0",
-    "grunt-contrib-cssmin": "^0.14.0",
-    "grunt-contrib-jshint": "^0.11.3",
-    "grunt-contrib-uglify": "^0.11.0",
-    "grunt-contrib-watch": "~0.6.1",
-    "gulp": "^3.9.1",
-    "serve-index": "~1.7.2",
-    "serve-static": "~1.10.0"
+  "dependencies": {
+    "browser-sync": "^2.18.5"
   },
-  "author": "Lch",
-  "license": "MIT license"
+  "devDependencies": {
+    "browser-sync": "^2.18.5",
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TogetherWithM/staticpage.git"
+  },
+  "author": "l",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TogetherWithM/staticpage/issues"
+  },
+  "homepage": "https://github.com/TogetherWithM/staticpage#readme"
 }

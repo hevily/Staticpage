@@ -37,7 +37,7 @@ $(function(){
 					NewsList+=
 						"<div class='list  col-lg-4 col-md-4 col-sm-4'>"+
 						"	<div class='list-box'>"+
-						"		<a class='hoverLarger' href='news-details.html'><img src='"+newsImg+"' class='news-img' alt='"+newsImgT+"' data-collectid='"+collectid+"'/></a>"+
+						"		<a class='hoverLarger' href='news-details.html' target='_blank'><img src='"+newsImg+"' class='news-img' alt='"+newsImgT+"' data-collectid='"+collectid+"'/></a>"+
 						"		<div class='news-title'><a href='news-details.html'>"+newsTitle+"</a></div>"+
 						"		<div class='news-desc'>"+newsDesc+"</div>"+
 						"		<div class='news-detail'>"+

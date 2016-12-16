@@ -1,0 +1,74 @@
+.second-img img {
+  width: 100%; }
+
+.classes {
+  overflow: hidden; }
+  .classes.row {
+    margin-left: 0;
+    margin-right: 0; }
+  .classes .class-box {
+    clear: both;
+    padding: 60px 0; }
+    .classes .class-box .class-box-title {
+      color: #343434;
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 40px; }
+      .classes .class-box .class-box-title span {
+        border-bottom: 2px solid #C92644;
+        display: inline-block;
+        padding-bottom: 18px; }
+    .classes .class-box.gd-service {
+      background-color: #FAEEFF; }
+    .classes .class-box .class-box-detail {
+      text-align: center; }
+      .classes .class-box .class-box-detail.text-left {
+        text-align: left;
+        padding: 40px 70px; }
+      .classes .class-box .class-box-detail.text-right {
+        text-align: right;
+        padding: 40px 70px; }
+      .classes .class-box .class-box-detail .detail-img {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        max-width: 410px; }
+        .classes .class-box .class-box-detail .detail-img img {
+          max-width: 100%;
+          display: none; }
+      .classes .class-box .class-box-detail h3 {
+        margin-top: 20px;
+        display: inline-block;
+        color: #3D3D3D;
+        font-size: 2.6rem;
+        width: 100%;
+        max-width: 410px;
+        text-align: center; }
+      .classes .class-box .class-box-detail p {
+        display: inline-block;
+        color: #3D3D3D;
+        font-size: 18px;
+        width: 100%;
+        max-width: 410px;
+        text-align: justify; }
+    .classes .class-box.showed .class-box-detail img {
+      display: inline-block; }
+    .classes .class-box.bg-dark {
+      background-color: #F1F1F1; }
+
+.class-box-title {
+  color: #343434;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 40px; }
+  .class-box-title span {
+    border-bottom: 2px solid #C92644;
+    display: inline-block;
+    padding-bottom: 18px; }
+
+@media screen and (max-width: 414px) {
+  .classes .class-box .class-box-detail.text-left, .classes .class-box .class-box-detail.text-right {
+    padding: 40px 10px;
+    text-align: center; } }
+
+/*# sourceMappingURL=case-hmc.css.map */

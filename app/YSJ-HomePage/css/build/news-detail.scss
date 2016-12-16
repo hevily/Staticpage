@@ -28,6 +28,17 @@
     }
     
 }
+    .news-title-img{
+        position:absolute;
+        width:100%;height:100%;
+        text-align:center;
+        padding-top:50px;
+        img{
+            max-width:100%;
+            // left:50% ;
+            // transform:translateX(-50%);
+        }
+    }
 
 .news-detail{
     text-align: center;
@@ -45,6 +56,7 @@
     position: relative;
     height: 44px;
     border-top:1px solid #EEEEEE;
+    margin-bottom:50px;
     .pre-next-news{
         background-color: #fff;
         .pre-news,.next-news{

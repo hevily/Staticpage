@@ -1,0 +1,24 @@
+@charset 'utf-8';
+@import 'protect/protect-header';
+
+.header-bg{
+    background-image:url('../img/case/case-bg-hmc.jpg');
+    #title-btm-line span{
+        width:300px;
+    }
+}
+.header-bg-t{
+        background-image: url(../img/case/bg-hmc-2_03.jpg); 
+        height:440px;
+        background-position:center;
+        background-size:cover;
+    }
+@media screen and(min-width:1367px){
+    .header-bg-t{
+        height:765px;
+    }
+}
+@import 'news/news-pagi';
+.pagination-news .pannels .pannel .news-lists .list .list-box .news-share{line-height: 30px;}
+@import 'build/case-hmc';
+

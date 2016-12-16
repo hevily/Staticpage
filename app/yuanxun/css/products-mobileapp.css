@@ -1,0 +1,126 @@
+.header-bg {
+  padding-top: 10px;
+  height: 254px;
+  background-image: url(../img/protect/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  text-align: center; }
+  .header-bg .header-title-desc {
+    padding-top: 20px;
+    font-size: 40px;
+    position: relative; }
+  .header-bg #title-btm-line {
+    text-align: center;
+    height: 2px;
+    position: relative;
+    margin-bottom: 40px; }
+    .header-bg #title-btm-line span {
+      height: 2px;
+      width: 100px;
+      display: block;
+      margin: 0 auto;
+      background-color: #FEC400;
+      line-height: 2px; }
+  .header-bg .header-info-desc {
+    font-size: 14px;
+    line-height: 20px; }
+
+@media screen and (max-width: 1100px) and (min-width: 768px) {
+  .header-bg {
+    height: 300px; }
+    .header-bg .header-title-desc {
+      padding-top: 40px;
+      font-size: 30px; }
+    .header-bg .header-info-desc {
+      padding-top: 30px; } }
+@media screen and (max-width: 767px) and (min-width: 319px) {
+  .header-bg {
+    height: 400px; }
+    .header-bg .header-title-desc {
+      padding-top: 60px;
+      font-size: 28px; } }
+.header-bg {
+  background-image: url("../img/mobile-app/app-bg.jpg"); }
+  .header-bg #title-btm-line span {
+    width: 300px; }
+
+.second-img img {
+  width: 100%; }
+
+.classes {
+  overflow: hidden; }
+  .classes.row {
+    margin-left: 0;
+    margin-right: 0; }
+  .classes .class-box {
+    clear: both;
+    padding: 60px 0; }
+    .classes .class-box .class-box-title {
+      color: #343434;
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 40px; }
+      .classes .class-box .class-box-title span {
+        border-bottom: 2px solid #C92644;
+        display: inline-block;
+        padding-bottom: 18px; }
+    .classes .class-box.gd-service {
+      background-color: #FAEEFF; }
+    .classes .class-box .class-box-detail {
+      text-align: center; }
+      .classes .class-box .class-box-detail.text-left {
+        text-align: left;
+        padding: 40px 70px; }
+      .classes .class-box .class-box-detail.text-right {
+        text-align: right;
+        padding: 40px 70px; }
+      .classes .class-box .class-box-detail .detail-img {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        max-width: 410px; }
+        .classes .class-box .class-box-detail .detail-img img {
+          max-width: 100%;
+          display: none; }
+      .classes .class-box .class-box-detail h3 {
+        margin-top: 20px;
+        display: inline-block;
+        color: #3D3D3D;
+        font-size: 2.6rem;
+        width: 100%;
+        max-width: 410px;
+        text-align: center; }
+      .classes .class-box .class-box-detail p {
+        display: inline-block;
+        color: #3D3D3D;
+        font-size: 18px;
+        width: 100%;
+        max-width: 410px;
+        text-align: justify; }
+    .classes .class-box.showed .class-box-detail img {
+      display: inline-block; }
+    .classes .class-box.bg-dark {
+      background-color: #F1F1F1; }
+
+.class-box-title {
+  color: #343434;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 40px; }
+  .class-box-title span {
+    border-bottom: 2px solid #C92644;
+    display: inline-block;
+    padding-bottom: 18px; }
+
+@media screen and (max-width: 414px) {
+  .classes .class-box .class-box-detail.text-left, .classes .class-box .class-box-detail.text-right {
+    padding: 40px 10px;
+    text-align: center; } }
+.service-bg {
+  height: 165px;
+  background-image: url("../img/mobile-app/service-bg.jpg");
+  background-position: center; }
+
+/*# sourceMappingURL=products-mobileapp.css.map */

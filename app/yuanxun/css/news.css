@@ -95,7 +95,8 @@
             box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.2); }
             .pagination-news .pannels .pannel .news-lists .list .list-box .hoverLarger {
               display: block;
-              position: relative; }
+              position: relative;
+              overflow: hidden; }
               .pagination-news .pannels .pannel .news-lists .list .list-box .hoverLarger::before {
                 content: "";
                 position: absolute;
@@ -109,19 +110,15 @@
               .pagination-news .pannels .pannel .news-lists .list .list-box .hoverLarger:hover::before {
                 display: block; }
               .pagination-news .pannels .pannel .news-lists .list .list-box .hoverLarger:hover .news-img {
-                -webkit-animation: all 2s ease;
-                        animation: all 2s ease;
-                position: relative;
-                left: 50%;
-                -webkit-transform: translateX(-50%);
-                    -ms-transform: translateX(-50%);
-                        transform: translateX(-50%);
-                width: 130%;
-                max-width: 130%; }
+                -webkit-transform: scale(1.2) rotate(1deg);
+                    -ms-transform: scale(1.2) rotate(1deg);
+                        transform: scale(1.2) rotate(1deg); }
               .pagination-news .pannels .pannel .news-lists .list .list-box .hoverLarger .news-img {
+                position: relative;
                 width: 100%;
                 max-width: 100%;
-                height: auto; }
+                -webkit-transition: all 0.7s ease-in;
+                        transition: all 0.7s ease-in; }
             .pagination-news .pannels .pannel .news-lists .list .list-box .news-title {
               font-size: 18px;
               padding: 0 10px;

@@ -6,9 +6,6 @@ html{ height:auto;}
 body{
 	height:auto;
 	background-color:#383A47;
-
-
-	
 }
 .tickets{
 	max-width: 640px;
@@ -44,9 +41,6 @@ body{
 		position: relative;
 		margin-bottom: 20px;
 		background-color: rgba(255,255,255,0.7);
-
-
-		
 		&:last-child{
 			margin-bottom: 0;
 		}
@@ -57,7 +51,6 @@ body{
 			color: #fff;
 			float: left;
 			position: relative;
-
 			&:before,&:after{
 				content:"";
 				width: 40px;
@@ -75,32 +68,18 @@ body{
 				top:-20px;
 				z-index:2;
 			}
-
-			.ticket-use{
-				    position: absolute;
-				    bottom: 5px;
-				    right: -90px;
-				    z-index: 5;
-				img{
-					width: 100px;
-					height: 100px;
-					display:none;
-				}
-				
-			}
-
 			.ticket-bg{
 				position: absolute;
 				top: 0;left: 0;
 				width: 100%;
-				height: 100%;
+				// height: 100%;
 			}
 			.ticket-face{
 				position: relative;
 				height: $ticheight;
 				padding: 20px;
 				padding-right: 0;
-			
+				overflow:hidden;
 				.mask{
 					width: 100%;
 					height:$ticheight;
@@ -146,69 +125,38 @@ body{
 				}
 			}
 		}
-
-		&.used{
-			.ticket-bg{
-				-ms-filter: grayscale(1);
-				-webkit-filter: grayscale(1);
-				-moz-filter: grayscale(1);
-				-o-filter: grayscale(1);
-				filter: grayscale(1);
-			}
-			img.used{
-				display:block;
-			}
-		}
-		&.timeout{
-			.ticket-bg{
-				-ms-filter: grayscale(1);
-				-webkit-filter: grayscale(1);
-				-moz-filter: grayscale(1);
-				-o-filter: grayscale(1);
-				filter: grayscale(1);
-			}
-			img.timeout{
-				display:block;
-			}
-		}
-		&.waiting{
-			img.waiting{
-				display: block;
-				right: 0;
-				position: relative;
-				bottom: 30px;
-				height: 90px;
-				width: 90px;
-			}
-		}
-		&.canot-back{
-			img.canot-back{
-				display: block;
-			}
-		}
-		&.back-money{
-			img.back-money{
-				display: block;
-			}
-		}
-		&.back-done{
-			img.back-done{
-				display: block;
-			}
-		}
-
 		.ticket-right{
 			font-size: 12px;
 			height: 100%;
 		    position: relative;
 			padding: 10px 10px 10px 5px;
-
 			background-color: #fff;
 			float: left;
 			width: 97px;
 			height: 131px;
 			margin-left: -97px;
 			border-left: 1px dashed #B4B4B4;
+			.ticket-use{
+				    position: absolute;
+				    top:5px;
+				    right: 5px;
+				    z-index: 5;
+				    width: 100px;
+					height: 100px;
+				img{
+					height: 100%;
+					width: 100%;
+					display:none;
+					&.back-money,&.back-done{
+						top:25px;
+						position: relative;
+					}
+				}
+				
+			}
+			
+
+
 			&:before,&:after{
 				content:"";
 				width: 40px;
@@ -265,6 +213,54 @@ body{
 				        transform:translateY(-50%) rotate(90deg);
 			}
 		}
-
+		&.used{
+					.ticket-bg{
+						-ms-filter: grayscale(1);
+						-webkit-filter: grayscale(1);
+						-moz-filter: grayscale(1);
+						-o-filter: grayscale(1);
+						filter: grayscale(1);
+					}
+					img.used{
+						display:block;
+					}
+				}
+				&.timeout{
+					.ticket-bg{
+						-ms-filter: grayscale(1);
+						-webkit-filter: grayscale(1);
+						-moz-filter: grayscale(1);
+						-o-filter: grayscale(1);
+						filter: grayscale(1);
+					}
+					img.timeout{
+						display:block;
+					}
+				}
+				&.waiting{
+					img.waiting{
+						display: block;
+						right: 0px;
+						position: relative;
+						top:0px;
+						height: 100px;
+						width: 100px;
+					}
+				}
+				&.canot-back{
+					img.canot-back{
+						display: block;
+					}
+				}
+				&.back-money{
+					img.back-money{
+						display: block;
+					}
+				}
+				&.back-done{
+					img.back-done{
+						display: block;
+					}
+				}
 	}
 }

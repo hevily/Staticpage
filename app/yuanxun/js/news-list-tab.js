@@ -36,18 +36,18 @@ $(function(){
 					
 					NewsList+=  "<div class='list  col-lg-4 col-md-4 col-sm-4'>"+
 						"<div class='list-box animated fadeInRight'>"+
-								"<a class='hoverLarger' target='_blank' href='#'><img src='/images/blank.gif' height='210px' width='100%' style='height:210px' data-collectid='"+collectid +"' class='news-img' title='"+newsImgT+"' alt='"+newsImgT+"' isnew='yes' /></a>"+
+								"<a class='hoverLarger' target='_blank' href='#'><img src='/images/blank.gif' width='100%'  data-collectid='"+collectid +"' class='news-img' title='"+newsImgT+"' alt='"+newsImgT+"' isnew='yes' /></a>"+
 								"<div class='news-title'><a href='#'>"+newsTitle+"</a></div>"+
 								"<div class='news-time-editer'>"+
 									newsDate+"&nbsp;&nbsp;by&nbsp;&nbsp;<span class='editer-dark'>"+newsEditer+"</span></div>"+
 								"<div class='news-desc'>"+newsDesc+"</div>"+
-								"<div class='news-detail'><a href='"+newsDetail+"'>更多<span>>></span></a></div>"+
+								"<div class='news-detail'><a href='news-detail.html'>更多<span>>></span></a></div>"+
 								"<div class='news-share'><hr />分享"+
 									"<div class='share-icon'>"+
-										"<a href='#'><img src='../img/news/news-list/share/fb-d.png' alt='' /><img src='../img/news/news-list/share/fb.png' alt='' /></a>"+
-										"<a href='#'><img src='../img/news/news-list/share/wb-d.png' alt=' '/><img src='../img/news/news-list/share/wb.png' alt='' /></a>"+
-										"<a href='#'><img src='../img/news/news-list/share/pyq-d.png' alt=' '/><img src='../img/news/news-list/share/pyq.png' alt=' '/></a>"+
-										"<a href='#'><img src='../img/news/news-list/share/wx-d.png' alt=' '/><img src='../img/news/news-list/share/wx.png' alt='' /></a>"+
+										"<a href='#'><img src='../../img/news/news-list/share/fb-d.png' alt='' /><img src='../../img/news/news-list/share/fb.png' alt='' /></a>"+
+										"<a href='#'><img src='../../img/news/news-list/share/wb-d.png' alt=' '/><img src='../../img/news/news-list/share/wb.png' alt='' /></a>"+
+										"<a href='#'><img src='../../img/news/news-list/share/pyq-d.png' alt=' '/><img src='../../img/news/news-list/share/pyq.png' alt=' '/></a>"+
+										"<a href='#'><img src='../../img/news/news-list/share/wx-d.png' alt=' '/><img src='../../img/news/news-list/share/wx.png' alt='' /></a>"+
 									"</div>"+
 								"</div>"+
 						"</div></div>"
@@ -82,7 +82,7 @@ $(function(){
 	(function getPage (){
 		$.ajax({
 			type:"get",
-			url:"../js/getPage.json",
+			url:"../../js/getPage.json",
 			async:true
 		}).fail(function(){
 			
@@ -104,7 +104,7 @@ $(function(){
 				next: '>',
 				jump:function(obj){
 					getdata({
-							"url":'../js/news.json',
+							"url":'../../js/news.json',
 							"type":"all",
 							"page":obj.curr,
 							"goal":".pannelA"
@@ -126,7 +126,7 @@ $(function(){
 			next: '>',
 			jump:function(obj){
 				getdata({
-						"url":'../js/news.json',
+						"url":'../../js/news.json',
 						"type":"moviehelper",
 						"page":obj.curr,
 						"goal":".pannelm"
@@ -148,7 +148,7 @@ $(function(){
 			next: '>',
 			jump:function(obj){
 				getdata({
-						"url":'../js/news.json',
+						"url":'../../js/news.json',
 						"type":"hmc",
 						"page":obj.curr,
 						"goal":".pannelhmc"
