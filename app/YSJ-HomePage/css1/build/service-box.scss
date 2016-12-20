@@ -1,0 +1,26 @@
+@charset 'utf-8';
+/* section-box */
+.section{
+    .section-title{
+        text-align: center;
+        font-size: 2rem;
+        color: #333333;
+        line-height: 2rem;
+        margin: 2rem 0; 
+    }
+    .section-box{
+        text-align: center;
+        position: relative;
+        margin-bottom: 3rem;
+    }
+}
+@media screen and(min-width:1000px){
+    .section{
+        .section-title{
+            margin:4rem 0;
+        }
+        .section-box{
+            margin-bottom:4rem;
+        }
+    }
+}

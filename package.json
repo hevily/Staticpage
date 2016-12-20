@@ -8,7 +8,11 @@
   },
   "devDependencies": {
     "browser-sync": "^2.18.5",
-    "gulp": "^3.9.1"
+    "fs": "0.0.1-security",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-sass": "^3.0.0",
+    "gulp-sourcemaps": "^1.9.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,7 +22,7 @@
     "url": "git+https://github.com/TogetherWithM/staticpage.git"
   },
   "author": "l",
-  "license": "MIT",
+  "license": "UNlicence",
   "bugs": {
     "url": "https://github.com/TogetherWithM/staticpage/issues"
   },

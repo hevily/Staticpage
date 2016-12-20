@@ -1,0 +1,130 @@
+@charset 'utf-8';
+/* ysj-footer */
+.footer{
+    background-color: #333333;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: bold;
+    
+    .col-xs-12{
+        &.footer-nav{
+//          padding-bottom: 50px;
+            text-align: left;
+            padding:0 0 50px 0;
+            a{
+                text-decoration: none;
+                color: #FFF;
+            }
+        }
+        &.qr{
+            padding-bottom: 20px;
+            text-align: left;
+            img{
+                width:100%;
+                max-width:126px;
+            }
+            .col-lg-6{
+                padding:0;
+            }
+        }
+        .col-xs-3{  
+            padding:10px;
+        }
+        .col-xs-2{
+            padding:10px 5px;
+        }
+    }
+    .nav-qr{
+        border-bottom: 1px solid #5C5C5C;
+    }
+    .down-addr{
+        color: #999;
+       .title{
+           line-height: 2rem;
+           color: #fff;
+       }
+        .download{
+//          padding-left:5%;
+            text-align: left;
+            margin-top: 1rem;
+            .fa-apple{
+//              font-size: 1.2rem;
+                
+            }
+            .fa-android{
+//              font-size: 1.2rem;
+            }
+            
+            p{
+                position: relative;
+                margin:0;
+                font-weight: normal;
+                .icon-apple,.icon-android{
+                        cursor: pointer;
+                        font-size: 16px;
+                        display: inline-block;
+                        position: relative;
+                        color: #fff;
+                        padding: 10px;
+                        border: 1px solid #fff;
+                        background-color: #000;
+                        padding-left: 40px;
+                        border-radius: 5px;
+                        margin-top: 0.8rem;
+                        width: 152px;
+                    i{
+                        font-size: 20px;
+                        position: absolute;
+                        top: 10px;
+                        left: 20px;
+                    }
+                }
+                .icon-apple{
+                    padding-left: 50px;
+                }
+            }
+        }
+        .address{
+            text-align: left;
+//          padding-left: 5%;
+//          line-height: 1.2rem;
+             margin-top: 1rem;
+             .title{
+                 margin-bottom: 0.8rem;
+             }
+            p{
+                position: relative;
+                padding-left: 30px;
+                font-weight: normal;
+                i{
+                    position: absolute;
+//                  top:4px;
+                    left: 0;
+                    
+                }
+            }
+            
+        }
+        
+        
+    }
+    
+}
+.company-info{
+        color: #cccccc;
+        line-height: 2.4rem;
+        background-color: #000000;
+        text-align: center;
+        margin: 0;
+    }    
+@media screen and(min-width:768px){
+    .footer{
+        font-size: 0.8rem;
+    }
+    .footer-nav{
+        &.col-lg-8{
+//          padding-left:0 ;
+//          padding-right: 0;
+        }
+    }
+}
