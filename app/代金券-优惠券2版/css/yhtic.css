@@ -15,7 +15,6 @@ body {
     padding-bottom: 10px; }
   .tickets.toggle img.toggle {
     -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg); }
   .tickets .tickets-title {
@@ -50,32 +49,22 @@ body {
         left: -20px;
         bottom: -20px;
         background-color: #383a47;
-        -moz-border-radius: 50%;
         border-radius: 50%;
         z-index: 2; }
       .tickets .ticket .ticket-left:before {
         top: -20px;
         z-index: 2; }
-      .tickets .ticket .ticket-left .ticket-use {
-        position: absolute;
-        bottom: 5px;
-        right: -90px;
-        z-index: 5; }
-        .tickets .ticket .ticket-left .ticket-use img {
-          width: 100px;
-          height: 100px;
-          display: none; }
       .tickets .ticket .ticket-left .ticket-bg {
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%; }
+        width: 100%; }
       .tickets .ticket .ticket-left .ticket-face {
         position: relative;
         height: 131px;
         padding: 20px;
-        padding-right: 0; }
+        padding-right: 0;
+        overflow: hidden; }
         .tickets .ticket .ticket-left .ticket-face .mask {
           width: 100%;
           height: 131px;
@@ -108,35 +97,6 @@ body {
             text-align: left; }
           .tickets .ticket .ticket-left .ticket-face .ticket-info .ticket-scale {
             text-align: right; }
-    .tickets .ticket.used .ticket-bg {
-      -ms-filter: grayscale(1);
-      -webkit-filter: grayscale(1);
-      -moz-filter: grayscale(1);
-      -o-filter: grayscale(1);
-      filter: grayscale(1); }
-    .tickets .ticket.used img.used {
-      display: block; }
-    .tickets .ticket.timeout .ticket-bg {
-      -ms-filter: grayscale(1);
-      -webkit-filter: grayscale(1);
-      -moz-filter: grayscale(1);
-      -o-filter: grayscale(1);
-      filter: grayscale(1); }
-    .tickets .ticket.timeout img.timeout {
-      display: block; }
-    .tickets .ticket.waiting img.waiting {
-      display: block;
-      right: 0;
-      position: relative;
-      bottom: 30px;
-      height: 90px;
-      width: 90px; }
-    .tickets .ticket.canot-back img.canot-back {
-      display: block; }
-    .tickets .ticket.back-money img.back-money {
-      display: block; }
-    .tickets .ticket.back-done img.back-done {
-      display: block; }
     .tickets .ticket .ticket-right {
       font-size: 12px;
       height: 100%;
@@ -148,6 +108,20 @@ body {
       height: 131px;
       margin-left: -97px;
       border-left: 1px dashed #B4B4B4; }
+      .tickets .ticket .ticket-right .ticket-use {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        z-index: 5;
+        width: 100px;
+        height: 100px; }
+        .tickets .ticket .ticket-right .ticket-use img {
+          height: 100%;
+          width: 100%;
+          display: none; }
+          .tickets .ticket .ticket-right .ticket-use img.back-money, .tickets .ticket .ticket-right .ticket-use img.back-done {
+            top: 25px;
+            position: relative; }
       .tickets .ticket .ticket-right:before, .tickets .ticket .ticket-right:after {
         content: "";
         width: 40px;
@@ -157,7 +131,6 @@ body {
         right: -20px;
         bottom: -20px;
         background-color: #383a47;
-        -moz-border-radius: 50%;
         border-radius: 50%;
         z-index: 2; }
       .tickets .ticket .ticket-right:before {
@@ -192,8 +165,34 @@ body {
         width: 12px;
         height: 8px;
         -webkit-transform: translateY(-50%) rotate(90deg);
-        -moz-transform: translateY(-50%) rotate(90deg);
         -ms-transform: translateY(-50%) rotate(90deg);
         transform: translateY(-50%) rotate(90deg); }
+    .tickets .ticket.used .ticket-bg {
+      -ms-filter: grayscale(1);
+      -webkit-filter: grayscale(1);
+      -moz-filter: grayscale(1);
+      filter: grayscale(1); }
+    .tickets .ticket.used img.used {
+      display: block; }
+    .tickets .ticket.timeout .ticket-bg {
+      -ms-filter: grayscale(1);
+      -webkit-filter: grayscale(1);
+      -moz-filter: grayscale(1);
+      filter: grayscale(1); }
+    .tickets .ticket.timeout img.timeout {
+      display: block; }
+    .tickets .ticket.waiting img.waiting {
+      display: block;
+      right: 0px;
+      position: relative;
+      top: 0px;
+      height: 100px;
+      width: 100px; }
+    .tickets .ticket.canot-back img.canot-back {
+      display: block; }
+    .tickets .ticket.back-money img.back-money {
+      display: block; }
+    .tickets .ticket.back-done img.back-done {
+      display: block; }
 
 /*# sourceMappingURL=yhtic.css.map */

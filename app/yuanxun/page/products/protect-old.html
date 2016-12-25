@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required for Animations -->
+    <style> [data-sr] { visibility: hidden; } </style>
+    
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no user-scalable"/  >
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    
+    <!-- Page title -->
+    <title>養老管理系統</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+    
+    <!-- Google Fonts -->
+    <!--<link href='../../css/1ced977f1dd84886a054414eb7e45b87.css' rel='stylesheet' type='text/css' />
+    <link href='../../css/20188c4aefdf426e9111c7acf4edbcc1.css' rel='stylesheet' type='text/css'>-->
+    
+    <!-- CSS Required -->
+    <link type="text/css" rel="stylesheet" href="../../css/bootstrap.min.css" />
+    
+    <!-- CSS Plugins -->
+    <link type="text/css" rel="stylesheet" href="../../css/font-awesome.min.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/animate.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/hover.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/magnific-popup.css">    
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.bxslider.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/bootstrap-social.css" />
+    
+    <!-- CSS Theme -->
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <link rel="alternate stylesheet" type="text/css" href="../../css/theme-orange.css" title="orange" media="all" />
+    <!-- Loader -->
+    <link rel="stylesheet" href="../../css/loader.css">
+    <link rel="stylesheet" type="text/css" href="../../css/service.css"/>
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="../../js/html5shiv.js"></script>
+        <script type="text/javascript" src="../../js/respond.min.js"></script>
+    <![endif]-->
+    
+    <!--protect css-->
+    <link rel="stylesheet" type="text/css" href="../../css/protect.css"/>
+</head>
+<body class="home-default">
+
+<!-- Start Loader -->
+<div id="loader-wrapper" hidden>
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+<!-- End Loader -->
+
+    
+    <!-- ========== Navbar ========== -->
+    <div class="navbar navbar-magnet navbar-fixed-top" role="navigation" id="navbar-main-magnet">
+        <div class="container">
+            
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><i class="fa fa-bars"></i></button>
+                <!-- Search Form -->
+                <div class="magnet-search hidden-sm hidden-md hidden-lg">
+                    <form method="get" action="javascript:;" name="magnet-search">
+                        <input type="search" id="s" name="s" placeholder="Enter your search term..." class="magnet-search-input" />
+                        <button type="submit" class="magnet-search-submit"><i class="fa fa-search"></i></button>
+                        <span class="magnet-icon-search"><i class="fa fa-search"></i></span>
+                        <span class="magnet-icon-search-close"><i class="fa fa-close"></i>CLOSE</span>
+                    </form>
+                </div>
+                <!-- /Search Form -->
+                
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html"><img src="../../picture/logo@2x.png" alt="Magnet" style="width: 144px;;"/></a>
+                <!-- /Logo -->
+            </div>
+            
+            <!-- Navigation -->
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- Home -->
+                    <li class="dropdown"><a  href="../../index.html" class="dropdown-toggle curent" data-toggle="dropdown">首页</a>
+                    </li>
+                    <!-- 产品 -->
+                    <li class="dropdown "><a href="#" class="dropdown-toggle nav-current" data-toggle="dropdown">產    品 <i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown"><a href="../products/products-mobileapp.html" class="dropdown-toggle" data-toggle="dropdown">App移動應用設計開發<i class="fa fa-angle-right"></i></a>
+                            </li>
+                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">電子商務系統<i class="fa fa-angle-right"></i></a>
+                            </li>
+                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">會員管理系統<i class="fa fa-angle-right"></i></a>
+                            </li>
+                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">門票管理系統<i class="fa fa-angle-right"></i></a>
+                            </li>
+                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">企業官網設計開發<i class="fa fa-angle-right"></i></a>
+                            </li>
+                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">影視製片管理系統<i class="fa fa-angle-right"></i></a>
+                            </li>
+                            <li class="dropdown"><a href="../products/protect-old.html" class="dropdown-toggle" data-toggle="dropdown">養老院管理系統<i class="fa fa-angle-right"></i></a>
+                            </li>
+                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">觸屏一體機/廣告機<i class="fa fa-angle-right"></i></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- 成功案例 -->
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">成功案例<i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class=""><a href="#" class="" data-toggle="dropdown"> 影視行業<i class="fa fa-angle-right"></i></a>
+                            </li>
+                            <li class=""><a href="../case/case-hmc.html" class="" data-toggle="dropdown">電商行業<i class="fa fa-angle-right"></i></a>
+                            </li>
+                            <li class=""><a href="#" class="" data-toggle="dropdown">餐飲行業<i class="fa fa-angle-right"></i></a>
+                            </li>
+                            <li class=""><a href="#" class="" data-toggle="dropdown">社會醫療<i class="fa fa-angle-right"></i></a>
+                            </li>
+                            <li class=""><a href="#" class="" data-toggle="dropdown">旅遊行業<i class="fa fa-angle-right"></i></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- 公司動態 -->
+                    <li class="dropdown"><a href="../news/news.html" class="dropdown-toggle" data-toggle="dropdown">公司動態 <i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">源訊動態</a></li>
+                            <li><a href="#">行業動態</a></li>
+                        </ul>
+                    </li>
+                    <!-- 關於我們 -->
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">關於我們 <i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">聯繫我們</a></li>
+                            <li><a href="#">公司介紹</a></li>
+                            <li><a href="#">團隊介紹</a></li>
+                            <li><a href="jobs.html">人才招聘</a></li>                            
+                        </ul>
+                    </li>
+                    <!-- Mobile Search -->
+                    <li class="magnet-search hidden-xs">
+                        <form method="get" action="javscript:;" name="magnet-search">
+                            <input type="search" id="s2" name="s" placeholder="Enter your search term..." class="magnet-search-input" />
+                            <button type="submit" class="magnet-search-submit"><i class="fa fa-search"></i></button>
+                            <span class="magnet-icon-search"><i class="fa fa-search"></i></span>
+                            <span class="magnet-icon-search-close"><i class="fa fa-close"></i>CLOSE</span>
+                        </form>
+                    </li>
+                    <!-- /Mobile Search -->
+                </ul>
+            </div>
+            <!-- /Navigation -->
+            
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <!-- ========== /Navbar ========== -->    
+    
+    	<!--養老頂部大圖-->
+		<div class="header-bg">
+ 			<div class="container">
+ 				<div class="header-title-desc">
+ 				機構養老管理系統
+	 			</div>
+	 			<div id="title-btm-line">
+	 				<span></span>
+	 			</div>
+	 			<div class="header-info-desc">
+	 				機構養老管理系統是應用於養老院、敬老院、福利院等養老機構的專業養老管理軟體。涵蓋院友管理、收費管理、居住管理、檔案管理、護理管理、醫療管理、人事管理、醫療管理等16個功能，涉及從接待到退房的所有流程。通過明確部門職能，精簡業務流程，優化服務專案，科學規範管理，提高養老機構業務處理效率和管理效率，減少資源浪費，提升核心競爭力。
+	 			</div>
+ 			</div>
+ 		</div>
+        <!--養老頂部大圖 END-->
+        
+        <!-- ========== 類別開始 共計16 ========== -->
+        <div class="section bg-white">
+            <div class="classes-box">
+            	<!--院友管理-->
+            	<div class="class-box">
+            		<div class="container">
+            			<div class="media">
+		            		<div class="media-left">
+		            			<img src="./../../img/protect/classes/1.jpg" class="animated bounceInLeft"/>
+		            		</div>
+		        			<div class="media-body class-box-info media-middle">
+		        				<div class="class-title">
+		        					院友管理
+		        				</div>
+		        				<div class="class-info-desc">
+		        					可通過該管理系統查詢瞭解院友的相關資訊，包含編號，姓名，性別，出生日期，醫保號，家屬聯絡等，以及看護記錄，身體狀況變化指數等，並可以據此有院方確定一對一的養護方案。
+		        				</div>
+		        			</div>
+		            	</div>
+            		</div>
+            	</div>
+            	
+            	<!--收費管理-->
+            	<div class="class-box darker">
+            		<div class="container">
+            			<div class="media">
+		        			<div class="media-body class-box-info media-middle">
+		        				<div class="class-title">
+		        					收費管理
+		        				</div>
+		        				<div class="class-info-desc">
+		        					包括押金管理、基本收費管理、收費查詢、入院繳費、出院結算、繳費通知單等十二個菜單，清晰明瞭的收費分類，詳細無誤的費用記錄，做到收費全面無遺漏，費用透明無糾紛。
+		        				</div>
+		        			</div>
+		        			<div class="media-right">
+		            			<img src="./../../img/protect/classes/2.jpg" class="animated bounceInRight"/>
+		            		</div>
+		            	</div>
+            		</div>
+            	</div>
+            	<!--2end-->
+            	
+            	<!--居住管理-->
+            	<div class="class-box">
+            		<div class="container">
+            			<div class="media">
+		            		<div class="media-left">
+		            			<img src="./../../img/protect/classes/3.jpg" class="animated bounceInLeft"/>
+		            		</div>
+		        			<div class="media-body class-box-info media-middle">
+		        				<div class="class-title">
+		        					居住管理
+		        				</div>
+		        				<div class="class-info-desc">
+		        					包括預約登記、准入評估、分類排序、老人選房、入院登記、出院登記、統計管理共七個功能表，為老人辦理入住、退住和訂房等相關手續，對資訊進行集中化處理，一目了然。
+		        				</div>
+		        			</div>
+		            	</div>
+            		</div>
+            	</div>
+            	
+            	<!--檔案管理-->
+            	<div class="class-box darker">
+            		<div class="container">
+            			<div class="media">
+		        			<div class="media-body class-box-info media-middle">
+		        				<div class="class-title">
+		        					檔案管理
+		        				</div>
+		        				<div class="class-info-desc">
+		        					包括基本資訊、老人病歷、老人藥方、老人事件、體檢項目、生日查詢、合同附件等十二個功能表，全面的老人資訊記錄保證了機構的服務品質，保障了老人的健康和安全。
+		        				</div>
+		        			</div>
+		        			<div class="media-right">
+		            			<img src="./../../img/protect/classes/4.jpg" class="animated bounceInRight"/>
+		            		</div>
+		            	</div>
+            		</div>
+            	</div>
+            	<!--4end-->
+            	
+            	<!--護理管理-->
+            	<div class="class-box">
+            		<div class="container">
+            			<div class="media">
+		            		<div class="media-left">
+		            			<img src="./../../img/protect/classes/5.jpg" class="animated bounceInLeft"/>
+		            		</div>
+		        			<div class="media-body class-box-info media-middle">
+		        				<div class="class-title">
+		        					護理管理
+		        				</div>
+		        				<div class="class-info-desc">
+		        					包括護理類型、護理項目、護理員排班、護理記錄、護理變更、入住日期管理等十個功能表，明確了護理崗位的職能，科學安排任務和計畫，促進工作有序有效進行，提高工作效率。
+		        				</div>
+		        			</div>
+		            	</div>
+            		</div>
+            	</div>
+            	
+            	<!--後勤管理-->
+            	<div class="class-box darker">
+            		<div class="container">
+            			<div class="media">
+		        			<div class="media-body class-box-info media-middle">
+		        				<div class="class-title">
+		        					後勤管理
+		        				</div>
+		        				<div class="class-info-desc">
+		        					包括設備報修、日常巡查、雜費抄表三個功能表，解決了後勤管理混亂，資訊不清等問題，減少不必要開支，保證機構正常運行。
+		        				</div>
+		        			</div>
+		        			<div class="media-right">
+		            			<img src="./../../img/protect/classes/6.jpg" class="animated bounceInRight"/>
+		            		</div>
+		            	</div>
+            		</div>
+            	</div>
+            	<!--6end-->
+            	
+            	
+            	<!--人事管理-->
+            	<div class="class-box">
+            		<div class="container">
+            			<div class="media">
+		            		<div class="media-left">
+		            			<img src="./../../img/protect/classes/7.jpg" class="animated bounceInLeft"/>
+		            		</div>
+		        			<div class="media-body class-box-info media-middle">
+		        				<div class="class-title">
+		        					人事管理
+		        				</div>
+		        				<div class="class-info-desc">
+		        					包括人事考勤、工資發放、人事變動、崗位管理等十一個功能表，統一管理人事各項事宜，做到資訊清楚公開，管理明確輕鬆。
+		        				</div>
+		        			</div>
+		            	</div>
+            		</div>
+            	</div>
+            	
+            	<!--收費设置-->
+            	<div class="class-box darker">
+            		<div class="container">
+            			<div class="media">
+		        			<div class="media-body class-box-info media-middle">
+		        				<div class="class-title">
+		        					收費设置
+		        				</div>
+		        				<div class="class-info-desc">
+		        					包括系統費項定義、收費參數設置、基本費項配置等九個功能表，對老人入住期間的消費專案進行預先配置，標準定義每項所需費用，標準化和規範化設置有利於工作的高效展開。
+		        				</div>
+		        			</div>
+		        			<div class="media-right">
+		            			<img src="./../../img/protect/classes/8.jpg" class="animated bounceInRight"/>
+		            		</div>
+		            	</div>
+            		</div>
+            	</div>
+            	<!--8end-->
+            	
+            	
+            	<!--領導決策-->
+            	<div class="class-box">
+            		<div class="container">
+            			<div class="media">
+		            		<div class="media-left">
+		            			<img src="./../../img/protect/classes/9.jpg" class="animated bounceInLeft"/>
+		            		</div>
+		        			<div class="media-body class-box-info media-middle">
+		        				<div class="class-title">
+		        					領導決策
+		        				</div>
+		        				<div class="class-info-desc">
+		        					包括概況統計、營業額統計、入住業務、退費、接待業務、來訪等八個功能表，通過對業務和運營情況的統計和科學分析，為機構運營和管理決策提供強有力的支援。
+		        				</div>
+		        			</div>
+		            	</div>
+            		</div>
+            	</div>
+            	
+            	<!--社工管理-->
+            	<div class="class-box darker">
+            		<div class="container">
+            			<div class="media">
+		        			<div class="media-body class-box-info media-middle">
+		        				<div class="class-title">
+		        					社工管理
+		        				</div>
+		        				<div class="class-info-desc">
+		        					包括志願者資訊登記、需求申報、社工活動安排日程、情況回饋、情況分析五個功能表，使用者可以加強對養老院中志願者的記錄跟管理，為活動的進行提供可追蹤的資訊查詢。
+		        				</div>
+		        			</div>
+		        			<div class="media-right">
+		            			<img src="./../../img/protect/classes/10.jpg" class="animated bounceInRight"/>
+		            		</div>
+		            	</div>
+            		</div>
+            	</div>
+            	<!--10end-->
+            	
+            	<!--接待管理-->
+            	<div class="class-box">
+            		<div class="container">
+            			<div class="media">
+		            		<div class="media-left">
+		            			<img src="./../../img/protect/classes/11.jpg" class="animated bounceInLeft"/>
+		            		</div>
+		        			<div class="media-body class-box-info media-middle">
+		        				<div class="class-title">
+		        					接待管理
+		        				</div>
+		        				<div class="class-info-desc">
+		        					包括接待登記、來訪登記、預約登記、房態圖、員工查詢等七個功能表，對來訪的人員進行登記，並在允許的前提下為客人提供老人、床位狀態、房間狀態等資訊，做好接待工作，維護機構形象。
+		        				</div>
+		        			</div>
+		            	</div>
+            		</div>
+            	</div>
+            	
+            	<!--系統管理-->
+            	<div class="class-box darker">
+            		<div class="container">
+            			<div class="media">
+		        			<div class="media-body class-box-info media-middle">
+		        				<div class="class-title">
+		        					系統管理
+		        				</div>
+		        				<div class="class-info-desc">
+		        					包括使用者帳號、許可權組管理、系統日誌、字典管理四個功能表，保障了系統能對不同帳號進行許可權定義，對整個系統的安全和運行起到保護作用。
+		        				</div>
+		        			</div>
+		        			<div class="media-right">
+		            			<img src="./../../img/protect/classes/12.jpg" class="animated bounceInRight"/>
+		            		</div>
+		            	</div>
+            		</div>
+            	</div>
+            	<!--12end-->
+            	
+            	
+            	<!--查詢統計報表-->
+            	<div class="class-box">
+            		<div class="container">
+            			<div class="media">
+		            		<div class="media-left">
+		            			<img src="./../../img/protect/classes/13.jpg" class="animated bounceInLeft"/>
+		            		</div>
+		        			<div class="media-body class-box-info media-middle">
+		        				<div class="class-title">
+		        					查詢統計報表
+		        				</div>
+		        				<div class="class-info-desc">
+		        					包括老人統計資訊、員工統計資訊、老人帳戶明細查詢、費用項統計等七個功能表，隨時查詢所需要的資訊，通過統計報表形式清晰明瞭的呈現，為工作帶來極大方便。
+		        				</div>
+		        			</div>
+		            	</div>
+            		</div>
+            	</div>
+            	
+            	<!--基礎資料管理-->
+            	<div class="class-box darker">
+            		<div class="container">
+            			<div class="media">
+		        			<div class="media-body class-box-info media-middle">
+		        				<div class="class-title">
+		        					基礎資料管理
+		        				</div>
+		        				<div class="class-info-desc">
+		        					包括樓區管理、房間類型、房間管理、床位管理、護理級別配置五個功能表，對養老機構的樓區、房間和床位等進行統一登記和管理，高效又方便。
+		        				</div>
+		        			</div>
+		        			<div class="media-right">
+		            			<img src="./../../img/protect/classes/14.jpg" class="animated bounceInRight"/>
+		            		</div>
+		            	</div>
+            		</div>
+            	</div>
+            	<!--14end-->
+            	
+            	
+            	<!--醫療管理-->
+            	<div class="class-box">
+            		<div class="container">
+            			<div class="media">
+		            		<div class="media-left">
+		            			<img src="./../../img/protect/classes/15.jpg" class="animated bounceInLeft"/>
+		            		</div>
+		        			<div class="media-body class-box-info media-middle">
+		        				<div class="class-title">
+		        					醫療管理
+		        				</div>
+		        				<div class="class-info-desc">
+		        					包括掛號登記、患者登記、醫生工作站、護士工作站、結帳付款、掛號設置共六個功能表。完善的醫療管理功能，明確的流程設置，協助養老機構系統的、科學的管理醫療工作。
+		        				</div>
+		        			</div>
+		            	</div>
+            		</div>
+            	</div>
+            	
+            	<!--藥政管理-->
+            	<div class="class-box darker">
+            		<div class="container">
+            			<div class="media">
+		        			<div class="media-body class-box-info media-middle">
+		        				<div class="class-title">
+		        					藥政管理
+		        				</div>
+		        				<div class="class-info-desc">
+		        					包括基礎設置、藥房管理、藥房統計三個功能表。為養老機構提供完善全面的藥品管理工作，採用資訊化手段，準確無誤的對全院所有藥品的進行集中統一管理。
+		        				</div>
+		        			</div>
+		        			<div class="media-right">
+		            			<img src="./../../img/protect/classes/16.jpg" class="animated bounceInRight"/>
+		            		</div>
+		            	</div>
+            		</div>
+            	</div>
+            	<!--16end-->
+            	<div style="height: 1px;background-color:#C92644;"></div>
+            	
+            	
+            	
+                </div>
+            </div>
+        </div>
+        <!-- ========== 類別結束 共計16 ========== -->
+        
+        
+        
+        
+        
+    <!-- Page sections end. -->
+    
+            
+    <!-- ========== Footer Widgets ========== -->
+    <div class="widget-foot-wrap bg-white">
+        <div class="container">
+            <div class="row">
+                <!-- Footer Col 1 -->
+                <div class="col-md-4">
+                    <div class="widget-foot">
+                        <h4 class="title">關於源訊國際</h4>
+                        <div class="body">
+                            <p>中國領先的創新型技術服務提供者，公司以移動app定制開發服務為核心，提供完整的移動互聯網解決方案。</p>
+                            <ul class="contact-list-icon">
+                                <li><i class="fa fa-map-marker"></i>九龍旺角廣東道998號高明商業大廈19樓B室</li>
+                                <li><i class="fa fa-phone"></i>+852 23410261</li>
+                                <li><i class="fa fa-envelope"></i>williamlam@resourcefact.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Footer Col 1 -->
+                <!-- Footer Col 2 -->
+                <div class="col-md-4">
+                    <div class="widget-foot">
+                        <h4 class="title">聯繫我們</h4>
+                        <div class="body">
+                            <ul class="box-follower">
+                                <li class="facebok">
+                                    <a href="https://www.facebook.com/Resourcefact-254336511287152/?ref=aymt_homepage_panel" target="_blank">
+                                        <span class="icon"><i class="fa fa-facebook"></i></span>
+                                        <span class="desc">10k <span>Likes</span></span>
+                                    </a>
+                                </li>
+                                <li class="twitter">
+                                    <a href="#">
+                                        <span class="icon"><i class="fa fa-twitter"></i></span>
+                                        <span class="desc">8k <span>Followers</span></span>
+                                    </a>
+                                </li>
+                                <li class="google-plus">
+                                    <a href="#">
+                                        <span class="icon"><i class="fa fa-google-plus"></i></span>
+                                        <span class="desc">12k <span>Followers</span></span>
+                                    </a>
+                                </li>
+                                <li class="instagram">
+                                    <a href="#">
+                                        <span class="icon"><i class="fa fa-instagram"></i></span>
+                                        <span class="desc">11k <span>Followers</span></span>
+                                    </a>
+                                </li>
+                                <li class="yahoo">
+                                    <a href="#">
+                                        <span class="icon"><i class="fa fa-yahoo"></i></span>
+                                        <span class="desc">7k <span>Followers</span></span>
+                                    </a>
+                                </li>
+                                <li class="rss">
+                                    <a href="#">
+                                        <span class="icon"><i class="fa fa-rss"></i></span>
+                                        <span class="desc">RSS<br />Feed</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Footer Col 2 -->
+                <!-- Footer Col 3 -->
+                <div class="col-md-4">
+                    <div class="widget-foot">
+                        <h4 class="title">合作夥伴</h4>
+                        <div class="body">
+                            <a href="http://www.hmcmall.com" target="_blank"><img src="../../img/foo/hmc.jpg" class="friend"/></a>
+                            <a href="http://www.yshjie.com" target="_blank"><img src="../../img/foo/ysj.jpg" class="friend"/></a>
+
+                            <a href="http://www.pokkacafe.com/" target="_blank"><img src="../../img/foo/pokka.jpg" class="friend"/></a>
+                            <a href="http://www.kowlooneast.com.hk/" target="_blank"><img src="../../img/foo/jiulong.jpg" class="friend"/></a>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- /Footer Col 3 -->
+            </div>
+        </div>
+    </div>
+    <!-- ========== /Footer Widgets ========== -->    
+    
+    <!-- ========== Footer Nav and Copyright ========== -->
+    <div id="footers">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="nav-foot">
+                        <li><a href="../../index.html">首頁</a></li>
+                        <li><a href="#">產品</a></li>
+                        <li><a href="#">成功案例</a></li>
+                        <li><a href="../news/news.html">公司動態</a></li>
+                        <li><a href="#">關於我們</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <div class="copyright">版權所有 © 2014-2016 源訊國際科技股份有限公司<br/>
+    Copyright © 2014-2016 www.resourcefact.com All Rights Reserved</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ========== /Footer Nav and Copyright ========== -->    
+    
+    <!-- Back to Top -->
+    <div id="back_to_top">
+        <div class="container">
+            <a href="#"><i class="ic ic-angle-up-white"></i></a>
+        </div>
+    </div>
+    <!-- /Back to Top -->    
+        
+    <!-- jQuery -->
+    <!-- <script type="text/javascript" src="../../js/jquery-1.10.2.min.js"></script> -->
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script type="text/javascript" src="../../js/modernizr-2.6.2.min.js"></script>
+    <script type="text/javascript" src="../../js/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="../../js/isotope.pkgd.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.smartmenus.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.smartmenus.bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/scrollreveal.js"></script>
+    <script type="text/javascript" src="../../js/jquery.magnific-popup.js"></script>
+    <!-- <script type="text/javascript" src="../../js/parallax.min.js"></script> -->
+    
+    <!-- Switcher - DEMO ONLY --->
+    <script src="../../js/dmss.js"></script>
+
+    <!-- Loader -->
+    <!--<script src="../../js/loader.js"></script>-->
+
+    <!-- Needed for Video/Image Slider/Banners -->
+    <script type="text/javascript" src="../../js/video.js"></script>
+    <script type="text/javascript" src="../../js/bigvideo.js"></script>
+    <script type="text/javascript" src="../../js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="../../js/magnet-video-image-slider.js"></script>
+    <script type="text/javascript" src="../../js/magnet-video-image-slider-fullscreen.js"></script>
+
+    <!-- Custom JS -->
+    <script type="text/javascript" src="../../js/magnet-main.js"></script>
+    <script type="text/javascript" src="../../js/carousel-animations.js"></script>
+    
+    <script src="../../js/domVisiable.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+    var config = {
+        reset:  false,
+        delay:  'onload',
+        vFactor: 0.90,
+        mobile: false
+    }
+    window.sr = new scrollReveal(config);
+    $('.gallery-link').magnificPopup({
+        type: 'image',
+        gallery:{enabled:true}
+    });
+    
+    $(function(){
+    	$('.sm-nowrap').find('a').click(function(){
+    		var _this = $(this);
+    		var href = _this.attr('href');
+    		console.log(href)
+    	});
+    	
+    
+	 domvisiabled($('.class-box'))
+    })
+    </script>
+    
+    <script src="../../js/service.js" type="text/javascript" charset="utf-8"></script>
+    
+</body>
+</html>

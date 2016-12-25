@@ -1,14 +1,10 @@
-@charset "utf-8";
-//rem-base
-@import './build/font-rem-base';
-
-
-@import "./build/ysj-head";
-@import './build/slider-ysj';
-@import './build/service-box';
-@import './build/service';
-@import './build/cooperation';
-@import './build/film-resource';
-@import './build/make-star';
-@import './build/partner';
-@import './build/ysj-footer';
+@import './build/font-rem-base.scss';
+@import "./build/ysj-head.scss";
+@import './build/slider-ysj.scss';
+@import './build/service-box.scss';
+@import './build/service.scss';
+@import './build/cooperation.scss';
+@import './build/film-resource.scss';
+@import './build/make-star.scss';
+@import './build/partner.scss';
+@import './build/ysj-footer.scss';

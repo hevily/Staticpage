@@ -1,0 +1,63 @@
+.job-title-box {
+  padding: 4rem 0 2rem 0;
+  background-color: #FAFAFA; }
+  .job-title-box .job-title h2 {
+    font-size: 2.2rem;
+    color: #2e2e2e;
+    margin-bottom: 2rem; }
+  .job-title-box .job-title p {
+    font-size: 1.1rem;
+    color: #999999;
+    padding: 0 5rem; }
+
+.job-desc .jobs {
+  padding-top: 2.5rem; }
+  .job-desc .jobs .job-branch {
+    font-size: 1.4rem;
+    color: #333333;
+    border-bottom: 1px solid #D6D6D6;
+    margin-bottom: 1rem; }
+  .job-desc .jobs .job {
+    border-bottom: 1px dashed #D6D6D6;
+    margin-bottom: 1rem; }
+    .job-desc .jobs .job:last-child {
+      border: none; }
+    .job-desc .jobs .job .job-name {
+      position: relative;
+      text-indent: 20px;
+      min-height: 3rem;
+      line-height: 3rem;
+      color: #7E8080;
+      font-size: 1rem; }
+      .job-desc .jobs .job .job-name .line-vertical {
+        position: absolute;
+        left: 10px;
+        top: 1rem;
+        display: block;
+        background-color: #FF8800;
+        height: 1rem;
+        width: 4px; }
+      .job-desc .jobs .job .job-name .job-name-desc {
+        color: #FF8800;
+        font-size: 1rem;
+        font-weight: bold; }
+    .job-desc .jobs .job .job-duty {
+      padding-left: 10px; }
+      .job-desc .jobs .job .job-duty .duty-title {
+        font-size: 0.8rem;
+        font-weight: bold; }
+      .job-desc .jobs .job .job-duty .duty-desc {
+        font-size: 0.7rem; }
+        .job-desc .jobs .job .job-duty .duty-desc ul {
+          padding: 10px 0 10px 1rem; }
+          .job-desc .jobs .job .job-duty .duty-desc ul li {
+            line-height: 1.5rem;
+            color: #4D4D4D; }
+.job-desc .job-foot {
+  color: #333333;
+  font-size: 1rem;
+  text-align: right;
+  font-weight: bold;
+  margin: 2rem 0; }
+
+/*# sourceMappingURL=job-desc.css.map */

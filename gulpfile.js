@@ -1,40 +1,64 @@
-// conf
-	var conf ={
-		server:{
-			static:'',
-			proxy : 'work.com/moviehelper/app/vuejs/',
-			proxy_dir:'d:/WorkSpace/moviehelper/app/vuejs/'
-		}
+var staticdir = ''
+// 如果不适用本地服务器更改定义staticdir为非空项目目录即可 如当前目录'./';'e:/youproject/'
+// 以下定义为proxy 本地启动服务器 动态页面设定
+// 定义具体项目目录
+var Products= 'YSJ-HomePage/';
+// define 本地开发目录
+var baseserver		= 'work.com/moviehelper/app/',
+ baseserver_dir 	= 'e:/WorkSpace/moviehelper/app/',
+ conf = {
+	server:{
+		static:staticdir,
+		proxy:baseserver+Products,
+		proxy_dir:baseserver_dir+Products
 	}
-// require 
-	var gulp 	= require('gulp');
-	var bs 		= require('browser-sync').create();
-// tasks
-	// broser-sync init server
-	gulp.task('bsserver', function() {
-		conf.server.static !=''
-		?
-	    bs.init({
-	        server: "./app"
-	    })
-		:
-	    bs.init({
-	        proxy: conf.server.proxy
-	    });
-	});
-	// gulp.wath
-	gulp.task('watch',function () {
-		gulp.watch(conf.server.proxy_dir+'**/*.html',function (event) {
-			console.log('File ' + event.path + ' was ' + event.type + ', running tasks...')
-			return gulp.src(event.path)
-				.pipe(bs.reload({stream:true}))
-		});
-		gulp.watch(conf.server.proxy_dir+'**/*.css',function (event) {
-			console.log('File ' + event.path + ' was ' + event.type + ', running tasks...')
-			return gulp.src(event.path)
-				.pipe(bs.reload({stream:true}))
-			// bs.reload() too low and skip away by node pipe stream
-		})
+}
+
+// import require pulgin
+	var gulp    = require('gulp');
+	var bs		= require('browser-sync').create();
+
+	// task
+//init server
+gulp.task('initserver',function(){
+	conf.server.static !=""
+	?
+	bs.init({
+		 server: {
+            baseDir: conf.server.static
+        }
+    })
+	:
+	bs.init({
+		proxy:conf.server.proxy
 	})
-	// default task
-	gulp.task('default', ['bsserver','watch']);
+})
+
+// watch css html js
+gulp.task('watch',function(){
+	conf.server.static !=""
+	?
+	folder = conf.server.static
+	:
+	folder = conf.server.proxy_dir;
+
+	gulp.watch(folder+'**/*.html',function (event) {
+		console.log("File"+event.path+" changed,watching....")
+		return gulp.src(event.path)
+			.pipe(bs.reload({stream:true}));
+	});
+
+	gulp.watch(folder+'**/*.css',function (event) {
+		console.log("File"+event.path+" changed,watching....")
+		return gulp.src(folder+'**/*.css')
+			.pipe(bs.reload({stream:true}));
+	});
+
+	gulp.watch(folder+'**/*.js',function(event){
+		console.log("File"+event.path+" changed,watching....")
+		return gulp.src(event.path)
+			.pipe(bs.reload({stream:true}));
+	})
+});
+
+gulp.task('default',['initserver','watch']);

@@ -3,19 +3,16 @@ html, body {
   min-height: 100%; }
 
 body {
-  background: -moz-linear-gradient(225deg, #E17B55 0, #694290 100%);
   /* FF3.6+ */
   background: -webkit-gradient(linear, 225deg, color-stop(0, E17B55), color-stop(100%, 694290));
   /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(225deg, #E17B55 0, #694290 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(225deg, #E17B55 0, #694290 100%);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(225deg, #E17B55 0, #694290 100%);
   /* IE10+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1');
   /* for IE */
-  background: linear-gradient(225deg, #E17B55 0, #694290 100%);
+  background: linear-gradient(225deg, #E17B55 0, #694290 100%)
   /* W3C */ }
 
 .container {
@@ -125,7 +122,6 @@ body {
     -ms-filter: grayscale(1);
     -webkit-filter: grayscale(1);
     -moz-filter: grayscale(1);
-    -o-filter: grayscale(1);
     filter: grayscale(1); }
   .container .used .guid .guid-title, .container .timeout .guid .guid-title {
     color: #848484; }

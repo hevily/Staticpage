@@ -1,0 +1,14 @@
+@charset 'utf-8';
+@import 'protect/protect-header';
+.header-bg{
+    background-image:url('../img/mobile-app/app-bg.jpg');
+    #title-btm-line span{
+        width:300px;
+    }
+}
+@import 'build/case-hmc';
+.service-bg{
+    height: 165px;
+    background-image:url('../img/mobile-app/service-bg.jpg');
+    background-position: center;
+}
