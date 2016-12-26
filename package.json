@@ -1,30 +1,24 @@
 {
-  "name": "node_project",
-  "version": "1.0.0",
-  "description": "first node project",
-  "main": "Gruntfile.js",
-  "dependencies": {
-    "browser-sync": "^2.18.5"
-  },
+  "name": "moviehelper",
+  "version": "0.0.1",
+  "description": "staticpage sync by gulp+bs",
+  "main": "gulpfile.js",
+  "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.18.5",
-    "fs": "0.0.1-security",
     "gulp": "^3.9.1",
-    "gulp-clean": "^0.3.2",
-    "gulp-sass": "^3.0.0",
-    "gulp-sourcemaps": "^1.9.1"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "jade": "^1.11.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TogetherWithM/staticpage.git"
+    "url": "\"\""
   },
+  "keywords": [
+    "statipage",
+    "bs",
+    "gulp",
+    "workflow"
+  ],
   "author": "l",
-  "license": "UNlicence",
-  "bugs": {
-    "url": "https://github.com/TogetherWithM/staticpage/issues"
-  },
-  "homepage": "https://github.com/TogetherWithM/staticpage#readme"
+  "license": "UNLICENSED"
 }

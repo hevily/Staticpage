@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <script src="../Public/vue.js"></script>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="../Public/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+
+	<style type="text/css">
+		.vue-modules{
+			border-bottom: 1px solid #f36303;
+			padding-bottom: 30px;
+			margin-bottom: 30px;
+		}
+	</style>
+
+	<title>vuejs</title>
+</head>
+<body>
+	<div class="container">
+		<h3 id="app" class="vue-modules jumbotron">{{message}}</h3>
+		<script>
+			var app = new Vue({
+				el:'#app',
+				data:{
+					message:'Hello vue'
+				}
+			})
+		</script>
+		
+		<p id="app-2" class="vue-modules jumbotron">
+			<span v-bind:title="message">
+				Hover your mouse over me for a few seconds to see my dynamically bound title!
+			</span>
+			<img id="app_img" class="img-thumbnail" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDkwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzc3NyIvPjxnPjx0ZXh0IHg9IjM0MSIgeT0iMjUwIiBzdHlsZT0iZmlsbDojNzc3O2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjQycHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+OTAweDUwMDwvdGV4dD48L2c+PC9zdmc+" v-bind:alt="message" v-bind:title="message">
+		</p>
+		<script>
+			var app2 = new Vue({
+				el:'#app-2',
+				data:{
+					message:'You loaded this page on ' + new Date()
+				}
+			})
+		</script>
+		<script>
+			var app_img = new Vue({
+				el:'#app_img',
+				data:{
+					message:'You loaded this page on ' + new Date()
+				}
+			})
+		</script>
+
+		<div id="app-3" class="vue-modules jumbotron">
+			<p v-if="seen">Now you see me</p>
+		</div>
+		<script>
+			var app3 = new Vue({
+				el:'#app-3',
+				data:{
+					seen:true
+				}
+			})
+		</script>
+
+		<div id="app-4" class="vue-modules jumbotron">
+			<ol>
+				<li v-for="todo in todos">
+					{{todo.text}}
+				</li>
+			</ol>
+		</div>
+		<script>
+			var app4 = new Vue({
+				el:'#app-4',
+				data:{
+					todos:[
+						{text:'Learn JavaScript'},
+						{text:'Learn Vue'},
+						{text:'Learn something awesome'},
+					]
+				}
+			})
+		</script>
+
+		<div id="app-5" class="vue-modules jumbotron">
+			<p>{{message}}</p>
+			<button v-on:click="reversMessage">Revers Message</button>
+		</div>
+		<script>
+			var app5 = new Vue({
+				el:'#app-5',
+				data:{
+					message:'Input something'
+				},
+				methods:{
+					reversMessage:function () {
+						this.message = this.message.split('').reverse().join('')
+					}
+				}
+			})
+		</script>
+
+		<div id="app-6" class="vue-modules jumbotron">
+			<p>{{message}}</p>
+			<input type="text" v-model="message">
+		</div>
+		<script>
+			var app6 = new Vue({
+				el:'#app-6',
+				data:{
+					message:'Hello vue'
+				}
+			})
+		</script>
+
+		<div id="app-7" class="vue-modules jumbotron">
+			<ol>
+				<todo-item v-for="item in items" v-bind:todo="item"></todo-item>
+			</ol>
+		</div>
+		<script>
+		</script>
+		<script>
+			Vue.component('todo-item',{
+				props:['todo'],
+				template:'<li>{{todo.text}}'+
+						'<a>{{todo.text}}</a></li>'
+			})
+			var app7 = new Vue({
+				el:'#app-7',
+				data:{
+					items:[
+						{text:'Java'},
+						{text:'C++'},
+						{text:'JavaScript'},
+						{text:'ruby'},
+						{text:'Python'},
+						{text:'php'}
+					]
+				}
+			})
+		</script>
+		
+		<div id="insertTextU" class="vue-modules jumbotron">
+			
+		<span>Message:{{msg}}</span>
+		<hr>
+		<span v-once>This will never change:{{msg}}</span>
+		</div>
+		<script>
+			var msg = 'test text'
+			var insertTextU = new Vue({
+				el:'#insertTextU',
+				data:{
+					msg:msg
+				}
+			})
+		</script>
+
+	</div>
+</body>
+</html>
