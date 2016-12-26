@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../Public/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="../Public/Vue.js"></script>
+    <script src="https://unpkg.com/lodash@4.13.1/lodash.min.js"></script>
+	<title>vuejs-computed</title>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div id="example" class="jumbotron">
+			<p>Original mesage :"{{message}}"</p>
+			<p>Computed reversed message:"{{reversedMessage}}"</p>
+		</div>
+		<script>
+			var example = new Vue({
+				el:'#example',
+				data:{
+					message:'Hello computed'
+				},
+				computed:{
+					reversedMessage:function () {
+						return this.message.split('').reverse().join('')
+					}
+				}
+			})
+		</script>
+
+		<div id="exampleM" class="jumbotron">
+			<p>Original mesage :"{{message}}"</p>
+			<p>Computed reversed message:"{{reversedMessage()}}"</p>
+		</div>
+		<script>
+			var exampleM = new Vue({
+				el:'#exampleM',
+				data:{
+					message:'Hello methods'
+				},
+				methods:{
+					reversedMessage:function () {
+						return this.message.split('').reverse().join('')
+					}
+				}
+			})
+		</script>
+		
+		<div id="fullName" class="jumbotron">{{fullName}}</div>
+		<script>
+			var fullName = new Vue({
+				el:'#fullName',
+				data:{
+					firstName:'Foo',
+					lastName:'Bar',
+					fullName:'Foo Bar'
+				},
+				watch:{
+					firstName:function (val) {
+						this.fullName = val + '' +this.lastName
+					},
+					lastName:function (val) {
+						this.fullName = this.firstName + '' +val
+					}
+				}
+			})
+		</script>
+
+		<div id="fullNameSet" class="jumbotron">{{fullName}}</div>
+		<script>
+			var fullNameSet = new Vue({
+				el:'#fullNameSet',
+				data:{
+					firstName:'Foo',
+					lastName:'Bar',
+					fullName:'Foo Bar'
+				},
+				computed:{
+					get:function () {
+						return this.firstName + '' +this.lastName
+					},
+					set:function (newValue) {
+						var names = newValue.split('')
+						this.firstName = name[0]
+						this.lastName 	= name[names.length - 1]
+					}
+				}
+			})
+		</script>
+
+		<div id="watch-example" class="jumbotron">
+			<p>
+				Ask a yes /no question:
+				<input type="text" v-model="question">
+			</p>
+			<p>{{answer}}</p>
+		</div>
+		<script>
+			var watchExample = new Vue({
+				el:'#watch-example',
+				data:{
+					question:'',
+					answer:'I cannot give you an answer until you ask a right question!'
+				},
+				methods:{
+					getAnswer:_.debounce(function () {
+						var watchQ = this;
+						if (this.question.indexOf('?') === -1) {
+							watchQ.answer = 'Questions usually contain a question mark. ;-)'
+							return
+						}
+						watchQ.answer = 'Thinking'
+						axios.get('https://yesno.wtf/api')
+							.then(function (response) {
+								watchQ.answer = _.capitalize(response.data.answer)
+							})
+							.catch(function (error) {
+								watchQ.answer = 'Error! Could not reach the API. ' + error
+							})
+					},500)
+				},
+				watch:{
+					question:function (newQuestion) {
+						this.answer = 'Waiting for you to stop typing...'
+						this.getAnswer()
+					}
+				}
+			})
+		</script>
+
+	</div>
+	<footer></footer>
+	<script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+</body>
+</html>

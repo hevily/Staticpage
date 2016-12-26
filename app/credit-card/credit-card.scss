@@ -1,0 +1,63 @@
+@charset 'utf-8';
+*{
+	margin: 0;
+	padding: 0;
+}
+.container{
+	width:100%;
+	max-width:640px;
+	padding: 10px;
+	margin:0 auto;
+	box-sizing: border-box;
+}
+
+.credit-card-module{
+	position: relative;
+	border-radius:10px;
+	overflow:hidden;
+	font-family:'微软雅黑';
+	.card-bg-img{
+			img{
+				width:100%;
+			}
+	}
+	.card-top-text{
+		position: absolute;
+		top: 10px;left: 10px;right:10px;bottom:10px;
+		overflow:hidden;
+	}
+	&.positioned-by-module{
+		.card-top-text{
+			.text-position{
+				height: 30px;
+				&.text-top{
+					position:absolute;
+					left: 0;right: 0;
+					top: 0;
+				}
+				&.text-middle{
+					position:absolute;
+					left:0;right:0;
+					// top:0;right: 0;bottom:0;left: 0;
+					top:50%;
+					margin-top:-15px;
+
+				}
+				&.text-bottom{
+					position:absolute;
+					left: 0;right: 0;
+					bottom:0;
+				}
+				&.text-left{
+					text-align:left;
+				}
+				&.text-center{
+					text-align:center;
+				}
+				&.text-right{
+					text-align:right;
+				}
+			}
+		}
+	}
+}

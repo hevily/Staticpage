@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../Public/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="../Public/Vue.js"></script>
+	<title>vuejs-base example</title>
+	<style type="text/css">
+		.jumbotron{
+			padding-left:20px;
+		}
+	</style>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div id="app" class="jumbotron" title="app-1">{{message}}</div>
+		<script>
+			var app = new Vue({
+				el:'#app',
+				data:{
+					message:'Hello Vue'
+				}
+			})
+		</script>
+
+		<div id="app-2" class="jumbotron" title="app-2">
+			<span v-bind:title="message">
+				Hover your mouse over me for a few seconds to see my dynamically bound title!
+			</span>
+		</div>
+		<script>
+			var app2 = new Vue({
+				el:'#app-2',
+				data:{
+					message:'You loaded this page on ' + new Date()
+				}
+			})
+		</script>
+		
+		<div id="app-3" class="jumbotron" title="app-3">
+			<p v-if="seen">Now you see me</p>
+		</div>
+		<script>
+			var app3 = new Vue({
+				el:'#app-3',
+				data:{
+					seen:true
+				}
+			})
+		</script>
+
+		<div id="app-4" class="jumbotron" title="app-4">
+			<ol>
+				<li v-for="todo in todos">{{todo.text}}</li>
+			</ol>
+		</div>
+		<script>
+			var app4 = new Vue({
+				el:'#app-4',
+				data:{
+					todos:[
+						{text:'Learn JavaScript'},
+						{text:'Learn jQuery'},
+						{text:'Learn Python'},
+						{text:'Learn C++'},
+						{text:'Learn C'}
+					]
+				}
+			})
+		</script>
+
+		<div id="app-5" class="jumbotron" title="app-5">
+			<p>{{message}}</p>
+			<button v-on:click="reversMessage">Reverse Message</button>
+		</div>
+		<script>
+			var app5 = new Vue({
+				el:'#app-5',
+				data:{
+					message:'Hello Vue'
+				},
+				methods:{
+					reversMessage:function () {
+						this.message = this.message.split('').reverse().join('')
+					}
+				}
+			})
+		</script>
+
+		<div id="app-6" class="jumbotron" title="app-6">
+			<p>{{message}}</p>
+			<input type="text" v-model="message">
+		</div>
+		<script>
+			var app6 = new Vue({
+				el:'#app-6',
+				data:{
+					message:'Hello Vue'
+				}
+
+			})
+		</script>
+
+		<div id="app-7" class="jumbotron" title="app-7">
+			<ol>
+				<li-item v-for="item in names" v-bind:ol="item"></li-item>
+			</ol>
+		</div>
+		<script>
+		Vue.component('li-item',{
+			props:['ol'],
+			template:'<li>{{ol.text}}</li>'
+		})
+			var app7 = new Vue({
+				el:'#app-7',
+				data:{
+					names:[
+					{text:'Apple'},
+					{text:'Banana'},
+					{text:'Orange'}
+					]
+				}
+			})
+		</script>
+		<div id="insertTextU" class="jumbotron">
+			<span title="normal-data-bind">message:{{msg}}</span>
+			<p v-once="" title="v-once">This will never change :{{msg}}</p>
+			<input type="text" v-model="msg" v-bind:disabled="edit">
+			<div v-bind:id="dynamicId"><p>number:3</p></div>
+			<div class="addNumber">number+1:{{number+1}}</div>
+		</div>
+		<script>
+			var insertTextU = new Vue({
+				el:'#insertTextU',
+				data:{
+					msg:"InsertTextU",
+					edit:false,
+					dynamicId:'id',
+					number:3
+				}
+			})
+		</script>
+
+		
+
+	</div>
+
+	<script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+</body>
+</html>
