@@ -25,7 +25,7 @@
     bottom: 10px;
     overflow: hidden; }
   .credit-card-module.positioned-by-module .card-top-text .text-position {
-    height: 30px; }
+    height: auto; }
     .credit-card-module.positioned-by-module .card-top-text .text-position.text-top {
       position: absolute;
       left: 0;
