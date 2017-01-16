@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document */
+.selecting .select-good { }
+		.select-good {
+			height: 20px;
+			width: 20px;
+			border-radius: 50%;
+			display: inline-block;
+			vertical-align: middle;
+			position: relative;
+		}
+		.select-good {
+			height: 20px;
+			width: 20px;
+			border-radius: 50%;
+			display: inline-block;
+			vertical-align: middle;
+			position: relative;
+		}
+		.selecting .select-good:before{
+			content: "";
+			width: 11px;
+			height: 5px;
+			background-color: rgba(0,0,0,0);
+			border-left: 1px solid #e36221;
+			border-bottom: 1px solid #e36221;
+			position: absolute;
+			left: 3px;
+			top:4px;
+			transform:rotate(-45deg);
+			-webkit-transform:rotate(-45deg);
+			-moz-transform:rotate(-45deg);
+			-o-transform:rotate(-45deg);
+		}
+		#documenter_sidebar {
+				   -moz-box-shadow: 0 0 0 #FFFFFF;
+				   webkit-box-shadow: 0 0 0 #FFFFFF;
+				   box-shadow: 0 0 0 #FFFFFF;
+				}
+		
+		.store-cart { height: 60px; padding: 14px 10px 14px 10px; background-color: #fff;}
+		.classes{
+			width:33.3333%;
+			float: left;
+			background-color: #fff;
+			font-size: 16px;
+			text-align: center;
+			line-height: 30px;
+			color: #3c4043;
+		}
+		.classes-box{ background-color: #eff3f6; margin-left: 10px; border:1px solid #eff3f6;
+			position: relative; border-radius:5px; height: 32px;}
+		.selecting .classes-box{ border:1px solid #e36221; color:#e36221; background-color: #fff; }
+		.classes:first-child .classes-box{ margin-left: 0; }

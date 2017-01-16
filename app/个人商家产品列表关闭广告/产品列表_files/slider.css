@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+/* 焦点图 */
+/* 焦点图 */
+		
+
+		@-webkit-keyframes bounce {
+			0%, 100% { -webkit-transform: scale(0.0) }
+			50% { -webkit-transform: scale(1.0) }
+		}
+
+		@keyframes bounce {
+			0%, 100% {
+				transform: scale(0.0);
+				-webkit-transform: scale(0.0);
+			} 50% {
+				  transform: scale(1.0);
+				  -webkit-transform: scale(1.0);
+			  }
+		}
+		.onscroll{display: block; -webkit-animation:h100 2.0s infinite ease-in-out; animation:h100 2.0s infinite ease-in-out;}
+		@-webkit-keyframes h100{
+			0% {top: 0;}
+			100%{top: -100%;}
+		}
+		@keyframes h100{
+			0% {top: 0;}
+			100%{top: -100%;}
+		}
+		
+		.am-slider-a1 .am-control-nav li a.am-active {
+			background-color: #fff;
+		}
+
+		.am-slider-a1 .am-control-nav li a.am-active {
+			background-color: #fff;
+		}
+		.am_fix{
+			top:0;left:0;
+			width:100%;
+			z-index:100;
+		}

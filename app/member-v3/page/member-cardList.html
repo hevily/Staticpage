@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../css/normalize.min.css" />
+	<title>我的会员卡</title>
+	<style type="text/css">
+		*{
+			margin: 0;padding: 0;
+			box-sizing: border-box;
+			font-family: 'microsoft-yahei';
+		}
+		.gapformember {
+		    border-bottom: 1px solid #686868;
+		    position: relative;
+		    height: 22px;
+		    margin-bottom: 20px;
+		    margin-top: -10px;
+		}
+		.gapformember p {
+		    position: absolute;
+		    left: 50%;
+		    top: 0%;
+		    -webkit-transform: translate(-50%,50%);
+		    transform: translate(-50%,50%);
+		    background-color: #fff;
+		    padding: 0 5px;
+		    color: #686868;
+		    font-size: 14px;
+		    height: 22px;
+		    line-height: 22px;
+		}
+		.card-list{
+			padding: 10px;
+			width:100%;
+			max-width:640px;
+			margin:0 auto;
+		}
+		.card-list .card{
+			position: relative;
+			height: 75px;
+			overflow: hidden;
+			margin-bottom: 10px;
+			border-radius: 15px;
+			-webkit-touch-callout: none;
+			user-select:none;
+			-webkit-user-select: none;
+		}
+		.card-list .card .card-level-bg{
+			width: 100%;
+			-webkit-touch-callout: none;
+			user-select:none;
+			-webkit-user-select: none;
+		}
+		.card-detail{
+			position: absolute;
+			right: 10px;
+			top:30px;
+			width: ;
+		}
+		.card-list .card:active{
+			opacity: 0.6;
+		}
+		.no-tap{
+			-webkit-tap-highlight-color: transparent;
+		}
+
+		/*disable*/
+		.card-list.disabled .card .card-level-bg{
+			-ms-filter: grayscale(1) brightness(70%);
+			-webkit-filter: grayscale(1) brightness(70%);
+			-moz-filter: grayscale(1) brightness(70%);
+			-o-filter: grayscale(1) brightness(70%);
+			filter: grayscale(1) brightness(70%);
+		}
+	</style>
+
+</head>
+<body>
+	<div class="container">
+		<div class="section">
+			<div class="card-list">
+				<ul>
+					<li class="card">
+						<a href="member-cardDetail.html" class="no-tap">
+							<img src="../img/card-1.png" class="card-level-bg">
+							<img src="../img/card-detail.png" class="card-detail" />
+						</a>
+					</li>
+					<li class="card">
+						<a href="member-cardDetail.html" class="no-tap">
+							<img src="../img/card-1.png" class="card-level-bg">
+							<img src="../img/card-detail.png" class="card-detail" />
+						</a>
+					</li>
+					<li class="card">
+						<a href="member-cardDetail.html" class="no-tap">
+							<img src="../img/card-1.png" class="card-level-bg">
+							<img src="../img/card-detail.png" class="card-detail" />
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="gapformember"><p>不可用会员卡</p></div>
+		<div class="section">
+			<div class="card-list disabled">
+				<ul>
+					<li class="card">
+						<img src="../img/card-1.png" class="card-level-bg">
+						<img src="../img/card-detail.png" class="card-detail" />
+					</li>
+					<li class="card">
+						<img src="../img/card-1.png" class="card-level-bg">
+						<img src="../img/card-detail.png" class="card-detail" />
+					</li>
+					<li class="card">
+						<img src="../img/card-1.png" class="card-level-bg">
+						<img src="../img/card-detail.png" class="card-detail" />
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<footer></footer>
+	<script>document.body.addEventListener('touchstart', function () { })</script>
+</body>
+</html>

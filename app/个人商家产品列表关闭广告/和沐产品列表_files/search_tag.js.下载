@@ -1,0 +1,62 @@
+// JavaScript Document
+
+	//经营范围标签，周边商品标签，点击跳转搜索页  
+	//封装跳转列表页
+	//keyword:关键词 
+	//type:  1 宝贝  2商家 3 资讯 4 代金券 
+	//keywordtagid : 关键词id
+	//stores_id : 店铺id   如果跳转某个店铺搜索，传值；  如果跳转总搜索，留空
+	
+	function location_lists(keyword,type,keywordtagid,stores_id){
+		//获取当前坐标
+		var xylocation = tag_getloc();
+		var xloc=0,yloc=0,address="";
+		if(xylocation.isSuccess == '1'){
+			xloc = xylocation.locX;
+			yloc = xylocation.locY;
+			address=xylocation.address;
+		}
+		
+		if(keywordtagid=='' || keywordtagid==null){
+			keywordtagid=0;
+		}
+		
+		var timestamp = new Date().getTime();
+        $.ajax({
+            url: urlRoot + "Home/Search/search_cookie?time=" + timestamp + "&" + Math.random() + "&beginappi&navbar=search&endappi",
+            async: false,
+            data: {keyword:keyword, type: type, keywordtagid:keywordtagid,xloc:xloc,yloc:yloc,address:address},
+            type: "POST",
+        })
+	
+        $.post("/statichtml/bjmovie01/estores/Mall/Public/setCookieZb?time=" + timestamp + "&" + Math.random(), {xloc: xloc, yloc: yloc},function(){
+             if(stores_id!=''){
+                  location.href = urlRoot + "Home/Search/lists?stores_id=" + stores_id + "&loc=1&keywordtagid="+keywordtagid+"&beginappi&navbar=search&action=newView&endappi";
+			} else {
+			     location.href = urlRoot + "Home/Search/lists?keywordtagid="+keywordtagid+"&loc=1&beginappi&navbar=search&action=newView&endappi";
+			}
+         });
+		 
+	}
+	//有些页面可能没有引用getloc()，不好估量，那就从新引用一个吧
+	function tag_getloc() {
+    try {
+        var xylocation;
+       
+        if (window.showLocation) {
+            //安卓的
+            xylocation = window.showLocation.getLocation();
+           
+        } else {
+            //ios的
+            xylocation = getLocationIos();
+		//	alert(xylocation);
+        }
+        return JSON.parse(xylocation);
+    } catch (e) {
+        return JSON.parse('{ "isSuccess": 0 }');
+    }
+}
+
+
+	

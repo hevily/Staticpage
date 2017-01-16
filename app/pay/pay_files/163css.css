@@ -1,0 +1,66 @@
+@charset "utf-8";
+.box_163css{ width:100%; overflow:hidden;}
+.top_box{ width:100%; position:relative; height:42px;}
+.nav_top{ float:left; width:100%; height:40px; line-height:40px; border-bottom:1px solid #aca082; text-align:center;}
+.nav_top li{ width:25%; float:left; font-size:14px; border-bottom:1px solid #ccc; border-bottom: none;}
+/*.nav_top li.on{ color:#c00;}*/
+
+
+.nav_mid{ width:400%; height:auto; padding-top:10px; float:left;}
+.box01{ width:25%; height: auto; line-height:90px; font-size:14px;}
+.newlist{ width:100%; float:left; margin-bottom:10px;}
+.newlist li{ height:36px; line-height:36px; position:relative;}
+.newlist li:nth-child(1){ border-top:none;}
+.newlist li a{ float:left;text-align:left; text-indent:7px;}
+.em_arrow{ display:block; width:0; height:0; position:absolute; right:5px; top:10px; border:5px solid #ccc;
+   border-color:transparent transparent transparent #ccc;}
+.btn_href{ display:inline-block; color:#000; font-size:14px; float:left; margin-left:2%; height:30px;
+   line-height:30px; border-radius:5px;box-shadow:0 1px 1px #dedede inset,0 1px 1px #fff;
+   background:-webkit-gradient(linear,0 0,0 100%,from(#eee),to(#e4e4e4)); width:96%;}
+.newlist li input{  border: none;}
+.newlist li img:nth-child(1){ position: absolute; top: 9px; left: 10px;}
+.newlist li img:nth-child(2){ position: absolute; right: 10px; top: 5px;}
+.nav_top li .li_img1{ width: 52px; height: 64px; background: url("../img/IDwdj.png") no-repeat;
+                    background-size: 52px 34px; position: absolute; left: 12.5%; margin-left: -26px; top: 8px;
+					padding: 0 0 20px 0;
+                }
+                .nav_top li .li_img2{ width: 16px; height: 64px; background: url("../img/sjwdj.png") no-repeat;
+                    background-size: 16px 34px; position: absolute; left: 37.5%; margin-left: -8px; top: 8px;
+                }
+                .nav_top li .li_img3{ width: 34px; height: 64px; background: url("../img/yxwdj.png") no-repeat;
+                    background-size: 34px 34px; position: absolute; left: 62.5%; margin-left: -17px; top: 8px;
+                }
+                /*.nav_top li .li_img4{ width: 32px; height: 35px; background: url("img/fyhwdj.png") no-repeat;
+                    background-size: 32px 35px; position: absolute; left: 87.5%; margin-left: -16px; top: 8px;
+                }*/
+
+                .nav_top li:nth-child(1).on div{ width: 52px; height: 64px; background: url("../img/IDdj.png") no-repeat;
+                    background-size: 52px 34px; position: absolute; left: 12.5%; margin-left: -26px; top: 8px;
+
+                }
+                .nav_top li:nth-child(2).on div{ width: 16px; height: 64px; background: url("../img/sjdj.png") no-repeat;
+                    background-size: 16px 34px; position: absolute; left: 37.5%; margin-left: -8px; top: 8px;
+                }
+                .nav_top li:nth-child(3).on div{ width: 34px; height: 64px; background: url("../img/yxdj.png") no-repeat;
+                    background-size: 34px 34px; position: absolute; left: 62.5%; margin-left: -17px; top: 8px;
+                }
+                /*.nav_top li:nth-child(4).on div{ width: 34px; height: 34px; background: url("img/fyhdj.png") no-repeat;
+                    background-size: 32px 35px; position: absolute; left: 87.5%; margin-left: -16px; top: 8px;
+                }*/
+				.nav-right{
+					width: 25%;
+					position: absolute;
+					top: 8px;
+					right: 0;
+				}
+				.nav-right ul{
+					padding-left: 50%;
+					margin-left: -16px;
+				}
+
+.select-main{
+							margin-left: 30px;
+							border: none;
+							position: relative;
+						}
+						

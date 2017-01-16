@@ -1,0 +1,456 @@
+
+
+
+
+
+
+
+//访问统计,统计登录用户访问当前页(商品和店铺)的记录
+//dom要求:页面必须有两个隐藏input name:stores_id,goods_id
+function ecTongji() {
+    var stores_id = $("#stores_id").val();
+    var goods_id = $("#goods_id").val();
+    var datetime = (new Date()).format("yyyy-MM-dd hh:mm:ss");
+    if (!stores_id && !goods_id) {
+        return;
+    }
+    var data = {};
+    if (stores_id) {
+        data.stores_id = stores_id;
+    }
+    if (goods_id) {
+        data.goods_id = goods_id;
+    }
+    data.local_log_datetime = datetime;
+    data = JSON.stringify(data);
+    var url = urlRestapi + "logInfo.php?session_id=" + cookieGet("PHPSESSID");
+    $.ajax({
+        type: "post",
+        url: url,
+        data: data,
+        async: true,
+        success: function (response) {
+            if (response.isSuccess) {
+                console.log('ok');
+            } else {
+                console.log('false');
+            }
+        }, error: function () {
+            console.log('error:ajax错误');
+        }
+    });
+}
+
+
+
+/**
+ * 异步加载相册图片,替代ajaxImg
+ * @param {Object} select 可以是选择器字符串,也可以是jquery对象. 相册容器
+ * @param {Object} thumb_ 可选 关于图片(width/height/type)的json对象.如果不填,必须在容器的data-thumb里填写
+ */
+function loadImgNew(select, thumb_) {
+    var imgSrcBase = urlRoot + "Store/Public/img?id=";
+    var $ul;
+
+    if (typeof select === "string") {
+        $ul = $(select);
+    } else if (typeof select === "object") {
+        $ul = select;
+    }
+    if ($ul.length == 0) {
+        return;
+    }
+    if (!($ul.length)) {
+        $ul = $('body');
+    }
+    var thumb = thumb_ ? thumb_ : $ul.data("thumb");
+    $ul.find("img[isnew='yes']").each(function () {
+        var collectId = $(this).data("collectid");
+        var $img = $(this);
+        if (collectId) {
+            $.ajax({
+                type: "post",
+                url: urlRestapi + "getCollect_public.php", //getCollectElems_public.php
+                data: '{"collect_id":"' + collectId + '","itemsIndexMin":0,  "itemsIndexMax":200,  "itemsLimit":1  }',
+                async: true,
+                success: function (response) {
+                    if (response.isSuccess) {
+                        if (response.item.wfemltableid) {
+                            $img.attr('src', imgSrcBase + response.item.wfemltableid + "&width=" + thumb.width + "&height=" + thumb.height + "&type=" + thumb.type);
+                        } else if (response.item.elems) {
+                            $.map(response.item.elems, function (item) {
+                                $img.attr('src', imgSrcBase + item.wfemltableid + "&width=" + thumb.width + "&height=" + thumb.height + "&type=" + thumb.type);
+                            });
+                        }
+                        $img.attr('isnew', 'no');
+                    }
+                }
+            });
+        }
+    });
+}
+
+//在指定容器加载商品列表,不支持more
+function ecGoodsList($select) {
+    var thumb = $select.data("thumb");
+    var url = $select.data("url");
+    var data = $select.data("data");
+    var tpl = $("<p></p>").append($select.find(".tpl").removeClass('tpl')).html();
+    $.ajax({
+        type: "post", url: url, data: data,
+        success: function (response) {
+            if (response.status && response.status == '1') {
+                $.each(response.data, function (i, e) {
+                    laytpl(tpl).render(e, function (render) {
+                        $select.append(render);
+                    });
+                });
+                loadImgNew($select, thumb);
+            }
+        }
+    });
+}
+
+/**
+ * 异步加载相册图片
+ * @param {Object} callback( $对象 , 数据 )
+ * 如果callback不是函数则 默认修改$对象的src
+ */
+function ajaxImg(callback) {
+    var imgSrcBase = urlRoot + "Store/Public/img?id=";
+    $("[isnew='yes']").each(function () {
+        var collectId = $(this).data("id") ? $(this).data("id") : ($(this).data("collectid") ? $(this).data("collectid") : 0);
+        var $img = $(this);
+        if (collectId) {
+            $.ajax({
+                type: "post",
+                url: urlRestapi + "getCollectElems_public.php?session_id=" + cookieGet("PHPSESSID"),
+                data: '{"collect_id":"' + collectId + '","itemsIndexMin":0,  "itemsIndexMax":200,  "itemsLimit":1  }',
+                async: true,
+                success: function (response) {
+                    if (response.isSuccess) {
+                        $.map(response.items, function (item) {
+                            if (typeof callback === 'function') {
+                                callback($img, item);
+                            } else {
+                                $img.attr('src', imgSrcBase + item.wfemltableid + "&width=120&height=120&type=3");
+                                //$img.parents(".img").css('background-image','url('+imgSrcBase+item.wfemltableid+"&width=120&height=120&type=3"+')');
+                            }
+                        });
+                        $img.attr('isnew', 'no');
+                    }
+                }
+            });
+        }
+    });
+}
+
+
+/**
+ * 动态为超链接设置触摸时显示边框
+ * @param {String} select 目标的选择器
+ * @param {String} className '触摸时的css样式'
+ */
+function ecTouchAble(select, className) {
+    className = className ? className : "ecTouchstart";
+    $("body").delegate(select, 'touchstart', function () {
+        $(this).addClass(className);
+    });
+    $("body").delegate(select, 'touchcancel', function () {
+        $(this).removeClass(className);
+    });
+    $("body").delegate(select, 'touchend', function () {
+        $(this).removeClass(className);
+    });
+}
+
+
+/**
+ * 通用加载更多 版本2
+ * @param {Object} select 容器的选择器
+ * @param {Object} config 可选配制,如果不用容器的data配制,就用JS传入config配置
+ * 配制内容:
+ * 		data-url | config.url		'../../Mall/public/loadmore'
+ * 		data-tpl | config.tpl 		'#tpl'
+ * 		data-thumb | config.thumb 	{"width":110,"height":110,"type":3}
+ */
+var thispage=0;
+var loadMore2 = function (select, config) {
+
+    loadMore2.prototype.config = {};
+
+    loadMore2.prototype.init = function (config_) {
+        var plugin = this;
+        this.$ul = $(select);
+        this.config = config = $.extend({}, loadMore2.prototype.config, config_);
+        this.url = (config && config.url) ? config.url : $(select).data("url");
+        this.tpl = (config && config.tpl) ? $(config.tpl).html() : $($(select).data("tpl")).html();
+        this.thumb = (config && config.thumb) ? config.thumb : $(select).data("thumb");
+        this.$btnMore = this.$ul.parent().find(".row-load-more");
+		
+		
+		
+        //点击 加载更多
+        $(".row-load-more").on("click", function () {
+			 if ( $(this).html() != '没有更多了') {
+				    plugin.query();
+			}
+        });
+		
+		$(".scrollarea").scroll(function () {
+					
+			var $html = "";
+                  $html += "<br/>可视高度: " + $(".scrollarea").height();//可视高度
+                  $html += "<br/>文本高度: " + $(".goodscontent").outerHeight();//文本高度
+                  $html += "<br/>document.scrollTop: " + $(".scrollarea").scrollTop();
+                  // console.log($html);
+				
+				  //距离下方120像素开始加载下一页
+					if( ( $(".scrollarea").scrollTop() >$(".goodscontent").outerHeight()-$(".scrollarea").height()-120)){
+						 $(".row-load-more").click();
+						 //plugin.query();
+					}
+		});
+
+
+    }
+    //显示loading动画
+    loadMore2.prototype.loading = function () {
+        this.$btnMore.html('<div class="sk-spinner sk-spinner-rotating-plane"></div> 加载中');
+    }
+    //加载
+    loadMore2.prototype.query = function () {
+		
+        var plugin = this;
+        var $btnMore = this.$btnMore;
+        var page = $btnMore.data('page') ? $btnMore.data('page') : 0;
+		
+        page = page + 1;
+		
+		if(page==thispage){
+			return false;
+		}else{
+			thispage=page;
+		}
+		
+        var data = plugin.$ul.data("data");
+        data.page = page;
+		
+        data.pagesize = $("#pagesize").val();
+
+        plugin.loading();
+        //debugger;
+        $.ajax({
+            type: "post",
+            data: data,
+            url: plugin.url,
+            success: function (response) {
+				
+                if (response.status) {
+                    switch (response.status) {
+                        case 1:
+							
+                            if (page <= 1) {
+                                plugin.$ul.html("");
+                            }
+                            console.log(page);
+                            if (response.data) {
+                                $btnMore.data('page', page);
+                                plugin.append(response.data, page);
+                                if (response.pageCount <= page) {
+                                    $btnMore.html('没有更多了');
+                                } else {
+                                    $btnMore.html('点击加载更多');
+                                }
+
+                            } else {
+                                $btnMore.html('没有更多了');
+                            }
+                            break;
+                        default:
+                            $btnMore.html('加载失败');
+                    }
+                } else {
+                    $btnMore.html('加载失败');
+                }
+
+            },
+            error: function () {
+				
+                $btnMore.html('加载失败,请重试');
+            }
+        });
+        //debugger;
+    }
+
+    //加载成功 dom插入
+    loadMore2.prototype.append = function (data, page) {
+        var plugin = this;
+        if (data) {
+            $.each(data, function (i, e) {
+                laytpl(plugin.tpl).render(e, function (render) {
+                    plugin.$ul.append(render);
+                });
+            });
+            loadImgNew(plugin.$ul, plugin.thumb);
+        }
+    }
+
+    //对外接口,设置和获取data,data是ajax的data,也就是搜索页的筛选条件
+    //查 data
+    loadMore2.prototype.dataGet = function (key) {
+        var val = null;
+        if (val = this.$ul.data("data")[key]) {
+            return val;
+        } else {
+            return null;
+        }
+    }
+    //增改 data
+    loadMore2.prototype.dataSet = function (key, val) {
+        var data;
+        data = this.$ul.data("data");
+        data[key] = val;
+        this.$ul.data("data", data);
+        //console.dir(this.$ul.data("data"));
+    }
+    //删 data
+    loadMore2.prototype.dataDelete = function (key) {
+        var data;
+        data = this.$ul.data("data");
+        delete data[key];
+        this.$ul.data("data", data);
+    }
+    //清零page,目的是当再次执行query()时,把页面先清空再加载
+    loadMore2.prototype.pageClear = function () {
+        this.$btnMore.data("page", 0);
+		thispage=0;
+    }
+
+    this.init(config);
+}
+
+
+
+
+
+
+
+$(function () {
+    //tab 切换
+    $(".block-switch-nav a").on("click", function () {
+        var $that = $(this);
+        $that.addClass("active").siblings().removeClass("active");
+        $that.parents(".fx-block").find(".block-switch-content").hide();
+        $that.parents(".fx-block").find(".block-switch-content").eq($that.index()).show();
+    });
+
+    
+
+    //联系商家按钮(这个是商品)
+    $(".appiLxsj").on("click", function () {
+        var $obj = $(this);
+        $obj.prop("disabled", true);
+        appiLxsj($obj, {
+            success: function (response) {
+                var urlNew = location.href.replace(/beginappi&.*&endappi/, '').replace(/[\?#]+$/, "");
+                var urlCommand = location.href.slice(location.href.indexOf('beginappi&') + 10, location.href.indexOf('&endappi'));
+                var url = urlNew + '?beginappi&' + encodeURIComponent('action=chat&docId=' + response.docId + '&stores_id=' + $obj.data("stores_id") + '&admin_userid=' + $obj.data("admin_userid") + '&appid=7' + '&stores_name=' + $obj.data("stores_name") + '&msubject=' + response.msubject) + '&endappi';
+                $obj.prop("disabled", false);
+                location.href = url;
+                amAlert("success", response.message, 1200);
+            },
+            error: function (response, filename) {
+                $obj.prop("disabled", false);
+                amAlert("warning", (response.message ? response.message : "") + ',' + filename);
+            }
+        }, "goods");
+    });
+    //联系商家按钮(这个是订单)
+    $(document).delegate(".appiLxsj1", "click", function () {
+        var $obj = $(this);
+        $obj.prop("disabled", true);
+        $obj.attr("src", $obj.data("dissrc"));
+        appiLxsj($obj, {
+            success: function (response) {
+                var urlNew = location.href.replace(/beginappi&.*&endappi/, '').replace(/[\?#]+$/, "");
+                var urlCommand = location.href.slice(location.href.indexOf('beginappi&') + 10, location.href.indexOf('&endappi'));
+                var url = urlNew + '?beginappi&' + encodeURIComponent('action=chat&docId=' + response.docId + '&stores_id=' + $obj.data("stores_id") + '&admin_userid=' + $obj.data("admin_userid") + '&appid=8' + '&stores_name=' + $obj.data("stores_name") + '&msubject=' + response.msubject) + '&endappi';
+                $obj.prop("disabled", false);
+                $obj.attr("src", $obj.data("src"));
+                location.href = url;
+                //amAlert("success", response.message, 1200);
+            },
+            error: function (response, filename) {
+                $obj.prop("disabled", false);
+                $obj.attr("src", $obj.data("src"));
+                amAlert("warning", (response.message ? response.message : "") + ',' + filename);
+            }
+        }, "order");
+    });
+	
+	//author:gening time:2016-1-27
+	//点击重新设置xy并存储至cookie
+			$("body").on("click",".map_zb_gn",function(){
+				var xylocation = getloc();
+				var xloc=0,yloc=0,address="";
+				if(xylocation.isSuccess == '1'){
+					xloc = xylocation.locX;
+					yloc = xylocation.locY;
+					address=xylocation.address;
+				}	  
+				var timestamp = new Date().getTime();
+				$.post("/statichtml/bjmovie01/estores/Mall/Public/setCookieZb?time=" + timestamp + "&" + Math.random(), {xloc: xloc, yloc: yloc,address:address});
+				
+			})
+
+	
+});
+
+//获取手机app的x和y坐标
+//返回值是json对象 isSuccess,locX,locY
+function getloc() {
+    try {
+        var xylocation;
+       
+        if (window.showLocation) {
+            //安卓的
+            xylocation = window.showLocation.getLocation();
+           
+        } else {
+            //ios的
+            xylocation = getLocationIos();
+		//	alert(xylocation);
+        }
+		
+        return JSON.parse(xylocation);
+    } catch (e) {
+        return JSON.parse('{ "isSuccess": 0 }');
+    }
+}
+//主动停止ios和andride的loading动画
+function stopLoading(){
+	try {
+        if(window.stopProgressDialog){
+            window.stopProgressDialog.gotoStopProgressDialog();
+        } else {
+            //ios的
+        	gotoStopProgressDialog();
+        }
+    } catch (e) {
+        
+    }
+}
+//主动调用app的分享组件
+function showShare(title,type){
+	try {
+        if(window.showLocation ){
+            window.showLocation.getAppShare(title,type);
+        } else {
+            //ios的
+        	getAppShare({'shareTitle':title,'shareType':type});
+        }
+    } catch (e) {
+        
+    }
+}

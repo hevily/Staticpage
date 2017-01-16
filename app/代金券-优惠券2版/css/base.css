@@ -269,3 +269,8 @@ nav{height: 50px;width: 100%;position: fixed;top:0;max-width:640px;background-co
 .two.wing .wing-main{margin: 0 100px 0 50px;}
 .two.wing .wing-left{margin-left: -100%;}
 .two.wing .wing-right{width: 100px;margin-left: -100px;}
+@media screen and(-webkit-min-device-pixel-ratio:2){
+      .border-half{
+        border-width:0.5px;
+      }
+    }

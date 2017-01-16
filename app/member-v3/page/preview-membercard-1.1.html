@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../css/normalize.min.css" />
+    <link rel="stylesheet" type="text/css" href="../js/Text-Input-Effects/css/component.css" />
+    <link rel="stylesheet" type="text/css" href="../css/preview-membercard.css" />
+	<link rel="stylesheet" type="text/css" href="../js/spectrum/spectrum.min.css" />
+	<link rel="stylesheet" type="text/css" href="../js/selectpick/selectpick.css">
+	<title>会员卡模板页</title>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<!-- 后期规划使用 -->
+		<div class="container">
+			<!-- 选择文字摆放位置 -->
+			<div class="section make-card-face">
+				<h3 class="step">1、<span>输入文字选择对齐方式<small><em>默认左侧</em></small></span></h3>
+				<div class="choose-text">
+					<div class="write-text write-text-title">
+						<div class="input-text">
+							<span class="input ">
+								输入文字
+							</span>
+						</div>
+						<span class='colorpicker1'>颜色</span>
+						<div class="select-text-position">
+							选择对齐方式
+						</div>
+					</div>
+					<div class="write-text">
+						<div class="input-text">
+							<span class="input input--kaede">
+								<input class="input__field input__field--kaede" type="text" id="top-text">
+								<label class="input__label input__label--kaede" for="top-text">
+									<span class="input__label-content input__label-content--kaede">顶部文字</span>
+								</label>
+							</span>
+						</div>
+						<span class='colorpicker'></span>
+						<div class="select-text-position">
+							<div class="text-top">
+								<div class="text-left">
+								<label>
+									<input type="radio" name="select-position-top" class="checked" > 
+									<span>√</span>
+								</label>
+								</div>
+								<div class="text-center">
+								<label>
+									<input type="radio" name="select-position-top"> 
+									<span>√</span>
+								</label>
+								</div>
+								<div class="text-right">
+								<label>
+									<input type="radio" name="select-position-top"> 
+									<span>√</span>
+								</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="write-text">
+						<div class="input-text">
+							<span class="input input--kaede">
+								<input class="input__field input__field--kaede" type="text" id="middle-text">
+								<label class="input__label input__label--kaede" for="middle-text">
+									<span class="input__label-content input__label-content--kaede">中部文字</span>
+								</label>
+							</span>
+						</div>
+						<span class='colorpicker'></span>
+						<div class="select-text-position">
+							<div class="text-middle">
+								<div class="text-left">
+								<label>
+									<input type="radio" name="select-position-middle" class="checked" > 
+									<span>√</span>
+								</label>
+								</div>
+								<div class="text-center">
+								<label>
+									<input type="radio" name="select-position-middle"> 
+									<span>√</span>
+								</label>
+								</div>
+								<div class="text-right">
+								<label>
+									<input type="radio" name="select-position-middle"> 
+									<span>√</span>
+								</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="write-text">
+						<div class="input-text">
+							<span class="input input--kaede">
+								<input class="input__field input__field--kaede" type="text" id="bottom-text">
+								<label class="input__label input__label--kaede" for="bottom-text">
+									<span class="input__label-content input__label-content--kaede">下部文字</span>
+								</label>
+							</span>
+						</div>
+						<span class='colorpicker'></span>
+						<div class="select-text-position">
+							<div class="text-bottom">
+								<div class="text-left">
+								<label>
+									<input type="radio" name="select-position-bottom" class="checked" > 
+									<span>√</span>
+								</label>
+								</div>
+								<div class="text-center">
+								<label>
+									<input type="radio" name="select-position-bottom"> 
+									<span>√</span>
+								</label>
+								</div>
+								<div class="text-right">
+								<label>
+									<input type="radio" name="select-position-bottom"> 
+									<span>√</span>
+								</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="setfont">
+					<h3 class="step">2、<span>选择文字大小</span>
+						<select class="dselect">
+							<option value="">12</option>
+							<option value="">13</option>
+							<option value="">14</option>
+							<option value="">15</option>
+							<option value="">16</option>
+							<option value="">17</option>
+							<option value="">18</option>
+							<option value="">19</option>
+							<option value="">20</option>
+							<option value="">21</option>
+							<option value="">22</option>
+							<option value="">23</option>
+							<option value="">24</option>
+							<option value="">25</option>
+							<option value="">26</option>
+							<option value="">27</option>
+							<option value="">28</option>
+						</select>
+						<div class="perselect"></div>
+					</h3>
+				</div>
+				<div class="code-result">
+					<h3 class="step">3、<span>示例以iphone6/iphone6s/iphone7 为基准</span>
+					</h3>
+					<div class="preview-card">
+						<div class="credit-card-module positioned-by-module ">
+							<div class="card-bg-img">
+								<img src="../img/card-1.png" alt="卡面背景图片">
+							</div>
+							<div class="card-top-text">
+<div class="text-position text-top">
+上部文字
+</div>
+<div class="text-position text-middle">
+中部文字
+</div>
+<div class="text-position text-bottom">
+底部文字
+</div></div>
+						</div>
+					</div>
+					<h3 class="step" >4、<span>复制以下内容粘贴到编辑页面</span>
+					<button class="copy" data-clipboard-action="copy" data-clipboard-target="#code-text">复制到剪贴板</button></h3>
+					<textarea id="code-text">生成的代码在这里</textarea>
+				</div>
+
+			</div>
+			<!-- 预览会员卡 -->
+		</div>
+	<!-- 后期规划使用 end-->
+	<script src="https://staticcdn.yshjie.com/cdn/librarypath/jquery/jquery-2.1.3.min.js"></script>
+	<script src="../js/Text-Input-Effects/js/classie.js"></script>
+	<script src="../js/spectrum/spectrum.min.js"></script>
+	<script src='../js/clipboard.min.js'></script>
+	<script src="../js/layer/layer.js"></script>
+	<script src="../js/selectpick/selectpick.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			(function() {
+						// trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+						if (!String.prototype.trim) {
+							(function() {
+								// Make sure we trim BOM and NBSP
+								var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+								String.prototype.trim = function() {
+									return this.replace(rtrim, '');
+								};
+							})();
+						}
+
+						[].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+							// in case the input is already filled..
+							if( inputEl.value.trim() !== '' ) {
+								classie.add( inputEl.parentNode, 'input--filled' );
+							}
+
+							// events:
+							inputEl.addEventListener( 'focus', onInputFocus );
+							inputEl.addEventListener( 'blur', onInputBlur );
+						} );
+
+						function onInputFocus( ev ) {
+							classie.add( ev.target.parentNode, 'input--filled' );
+						}
+
+						function onInputBlur( ev ) {
+							var _this = ev.target
+								self = $(_this)
+							if( _this.value.trim() === '' ) {
+								classie.remove( _this.parentNode, 'input--filled' );
+								self.closest('.write-text').find('.select-text-position').removeClass('inputed');
+									uploadView()
+							}else{
+								console.log(self.val().toString())
+								if( self.val().toString().length >14 ){
+									alert('字符限定14，请检查输入');
+									self.val('')
+								}
+								$(ev.target).closest('.write-text').find('.select-text-position').addClass('inputed');
+								uploadView()
+							}
+						}
+
+						$('.select-text-position label').click(function() {
+							uploadView()
+						});
+						var copy = new Clipboard('.copy');
+						copy.on('success', function(e) {
+						    layer.msg('已复制');
+						})
+						copy.on('error', function(e) {
+						    console.error('Action:', e.action);
+						    console.error('Trigger:', e.trigger);
+						    layer.msg('请手动使用Ctrl+C进行复制')
+						});
+						$(".colorpicker").spectrum({
+							showInput: true,
+						    showPaletteOnly: true,
+						    togglePaletteOnly: true,
+						    togglePaletteMoreText: 'more',
+						    togglePaletteLessText: 'less',
+						    color: 'blanchedalmond',
+						    palette: [
+						        ["#000","#444","#666","#999","#ccc","#eee","#f3f3f3","#fff"],
+						        ["#f00","#f90","#ff0","#0f0","#0ff","#00f","#90f","#f0f"],
+						        ["#f4cccc","#fce5cd","#fff2cc","#d9ead3","#d0e0e3","#cfe2f3","#d9d2e9","#ead1dc"],
+						        ["#ea9999","#f9cb9c","#ffe599","#b6d7a8","#a2c4c9","#9fc5e8","#b4a7d6","#d5a6bd"],
+						        ["#e06666","#f6b26b","#ffd966","#93c47d","#76a5af","#6fa8dc","#8e7cc3","#c27ba0"],
+						        ["#c00","#e69138","#f1c232","#6aa84f","#45818e","#3d85c6","#674ea7","#a64d79"],
+						        ["#900","#b45f06","#bf9000","#38761d","#134f5c","#0b5394","#351c75","#741b47"],
+						        ["#600","#783f04","#7f6000","#274e13","#0c343d","#073763","#20124d","#4c1130"]
+						    ],
+						    change: function(color) {
+						        color.toHexString(); // #ff0000
+						        $(this).css('background-color',color)
+						        uploadView()
+						    }
+						});
+						var settings = {
+						    container:".perselect",//模拟select生成的DIV存放的父容器     
+						        height: 30, // 下拉框的高度
+						        width: 150, // 下拉框的宽度
+						        disabled: false, // 是否禁用,默认false不禁用
+						        onSelect: "", // 点击后选中回调函数
+						        onSelect: function(value,text){
+									// alert("这是回调函数，选中的值："+value+" \n选中的下拉框文本："+text)
+									var size = parseInt(text);
+									setFont(size)
+								}
+							}
+						function setFont(size) {
+							$('.code-result .text-position').css('font-size',size)
+						}
+						$(".dselect").selectpick(settings)
+						function uploadView() {
+							var topText,middleText,bottomText,
+								topPos = $('input[name="select-position-top"]')
+								,middlePos = $('input[name="select-position-middle"]')
+								,bottomPos = $('input[name="select-position-bottom"]')
+
+							// set checked
+							topPos.click(function(event) {
+								topPos.removeClass('checked')
+								$(this).addClass('checked')
+							});
+							middlePos.click(function(event) {
+								middlePos.removeClass('checked')
+								$(this).addClass('checked')
+							});
+							bottomPos.click(function(event) {
+								bottomPos.removeClass('checked')
+								$(this).addClass('checked')
+							});
+
+
+							topText = $('#top-text').val(),
+							middleText = $('#middle-text').val(),
+							bottomText = $('#bottom-text').val()
+							// get text
+							var textP= $('.card-top-text').find('.text-position')
+							topGoal =textP[0]
+							middleGoal = textP[1]
+							bottomGoal = textP[2]
+							// set text
+							$(topGoal).text(topText)
+							$(middleGoal).text(middleText)
+							$(bottomGoal).text(bottomText)
+							// get pos class
+							topP = getAlign(topPos)
+							middleP = getAlign(middlePos)
+							bottomP = getAlign(bottomPos)
+							// set pos class
+							var posAll = $('.card-top-text').find('.text-position')
+								topPosition = posAll[0],
+								middlePosition = posAll[1],
+								bottomPosition = posAll[2]
+							setAlign($(topPosition),topP)
+							setAlign($(middlePosition),middleP)
+							setAlign($(bottomPosition),bottomP)
+
+							// setcolor
+							
+							// getcontext
+							var context = getContext('.code-result .card-top-text')
+							setContext('#code-text',context)
+
+							// setcolor
+							setColor('top')
+							setColor('middle')
+							setColor('bottom')
+
+							function getAlign(Pos) {
+								// var position;
+								Pos.each(function(index, el) {
+									if ($(el).hasClass('checked')) {
+										position = Pos.eq(index).closest('div').attr('class')
+									}
+								});
+								return position
+							}
+							function setAlign(goal,addC) {
+								var dC = 'text-left text-center text-right';
+								goal.removeClass(dC)
+								goal.addClass(addC)
+							}
+							function getContext(goal) {
+								var context = $(goal).html();
+								return context;
+							}
+							function setContext(goal,context) {
+								$(goal).text(context.toString())
+							}
+							function copyit(goal){
+								var text = $(goal).text()
+								// var v=$(goal).value ;
+								window.clipboardData.setData("text",v);
+							}
+							function setColor() {
+								var colors = $('.colorpicker'),
+									tt = $('#top-text'),
+									tm = $('#middle-text'),
+									tb = $('#bottom-text')
+								var pt = $('.card-top-text').find('.text-position')[0]
+								,pm = $('.card-top-text').find('.text-position')[1]
+								,pb = $('.card-top-text').find('.text-position')[2]
+								
+								tt.css('color',colors.eq(0).css('background-color'))
+								tm.css('color',colors.eq(1).css('background-color'))
+								tb.css('color',colors.eq(2).css('background-color'))
+								$(pt).css('color',colors.eq(0).css('background-color'))
+								$(pm).css('color',colors.eq(1).css('background-color'))
+								$(pb).css('color',colors.eq(2).css('background-color'))
+							}
+
+						}
+					})();
+		});
+		
+		
+	</script>
+
+	
+</body>
+</html>

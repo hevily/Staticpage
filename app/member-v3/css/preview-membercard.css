@@ -1,0 +1,288 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0; }
+
+.container {
+  width: 100%;
+  max-width: 640px;
+  padding: 10px;
+  margin: 0 auto;
+  box-sizing: border-box; }
+
+.credit-card-module {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: '微软雅黑'; }
+  .credit-card-module .card-bg-img img {
+    width: 100%; }
+  .credit-card-module .card-top-text {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    overflow: hidden; }
+  .credit-card-module.positioned-by-module .card-top-text .text-position {
+    height: auto;
+    color: #fff; }
+    .credit-card-module.positioned-by-module .card-top-text .text-position.text-top {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0; }
+    .credit-card-module.positioned-by-module .card-top-text .text-position.text-middle {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%); }
+    .credit-card-module.positioned-by-module .card-top-text .text-position.text-bottom {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0; }
+    .credit-card-module.positioned-by-module .card-top-text .text-position.text-left {
+      text-align: left; }
+    .credit-card-module.positioned-by-module .card-top-text .text-position.text-center {
+      text-align: center; }
+    .credit-card-module.positioned-by-module .card-top-text .text-position.text-right {
+      text-align: right; }
+
+* {
+  box-sizing: border-box; }
+
+.input--kaede {
+  margin: 0;
+  width: 100%; }
+
+.input__field--kaede {
+  color: #fff;
+  background-color: #9e9e9e;
+  padding: 10px 0.8rem;
+  font-size: 24px; }
+
+.input__label--kaede {
+  color: #C35D53;
+  font-size: 28px; }
+
+.input__label-content--kaede {
+  padding: 9px 0; }
+
+#code-text {
+  width: 100%;
+  min-height: 170px;
+  background-color: #cfcfcf;
+  padding: 20px; }
+
+.make-card-face .step {
+  height: 50px;
+  line-height: 50px;
+  font-size: 26px;
+  text-indent: 2rem;
+  border-left: 5px solid #009688;
+  background-color: #f2f2f2;
+  margin-bottom: 20px; }
+  .make-card-face .step span {
+    font-size: 80%; }
+.make-card-face .setfont .perselect {
+  display: inline;
+  vertical-align: sub; }
+.make-card-face .choose-text {
+  height: 200px;
+  margin-bottom: 20px; }
+  .make-card-face .choose-text .write-text {
+    clear: both;
+    height: 52px; }
+    .make-card-face .choose-text .write-text.write-text-title {
+      background-color: #FFDCB5;
+      font-size: 18px;
+      font-weight: bold; }
+      .make-card-face .choose-text .write-text.write-text-title .input-text {
+        height: 100%; }
+      .make-card-face .choose-text .write-text.write-text-title .colorpicker1 {
+        line-height: 50px;
+        text-indent: 20px;
+        display: inline-block; }
+      .make-card-face .choose-text .write-text.write-text-title .select-text-position {
+        background-color: transparent;
+        line-height: 50px;
+        padding: 0;
+        text-align: center; }
+        .make-card-face .choose-text .write-text.write-text-title .select-text-position::before {
+          display: none; }
+    .make-card-face .choose-text .write-text .select-text {
+      float: left;
+      height: 50px;
+      line-height: 50px;
+      margin-right: 20px;
+      font-size: 26px; }
+    .make-card-face .choose-text .write-text .input-text {
+      float: left;
+      width: 350px;
+      height: 40px; }
+    .make-card-face .choose-text .write-text .colorpicker {
+      background-color: #FFF;
+      border: 1px solid #9A3914;
+      width: 50px;
+      height: 30px;
+      display: block;
+      float: left;
+      margin: 10px; }
+    .make-card-face .choose-text .write-text .select-text-position {
+      width: 200px;
+      margin: 0;
+      line-height: 1.5;
+      padding: 10px;
+      background-color: rgba(7, 17, 27, 0.1);
+      float: right;
+      position: relative; }
+      .make-card-face .choose-text .write-text .select-text-position .text-top, .make-card-face .choose-text .write-text .select-text-position .text-middle, .make-card-face .choose-text .write-text .select-text-position .text-bottom {
+        height: 30px;
+        font-size: 20px; }
+        .make-card-face .choose-text .write-text .select-text-position .text-top .text-left, .make-card-face .choose-text .write-text .select-text-position .text-middle .text-left, .make-card-face .choose-text .write-text .select-text-position .text-bottom .text-left {
+          float: left;
+          width: 33.3333%;
+          display: table;
+          height: 100%;
+          vertical-align: middle;
+          text-align: left; }
+        .make-card-face .choose-text .write-text .select-text-position .text-top .text-center, .make-card-face .choose-text .write-text .select-text-position .text-middle .text-center, .make-card-face .choose-text .write-text .select-text-position .text-bottom .text-center {
+          float: left;
+          width: 33.3333%;
+          display: table;
+          height: 100%;
+          vertical-align: middle;
+          text-align: center; }
+        .make-card-face .choose-text .write-text .select-text-position .text-top .text-right, .make-card-face .choose-text .write-text .select-text-position .text-middle .text-right, .make-card-face .choose-text .write-text .select-text-position .text-bottom .text-right {
+          float: left;
+          width: 33.3333%;
+          display: table;
+          height: 100%;
+          vertical-align: middle;
+          text-align: right; }
+        .make-card-face .choose-text .write-text .select-text-position .text-top label, .make-card-face .choose-text .write-text .select-text-position .text-middle label, .make-card-face .choose-text .write-text .select-text-position .text-bottom label {
+          height: 100%;
+          width: 100%;
+          display: block; }
+        .make-card-face .choose-text .write-text .select-text-position .text-top input[type='radio'], .make-card-face .choose-text .write-text .select-text-position .text-middle input[type='radio'], .make-card-face .choose-text .write-text .select-text-position .text-bottom input[type='radio'] {
+          display: none; }
+        .make-card-face .choose-text .write-text .select-text-position .text-top input + span, .make-card-face .choose-text .write-text .select-text-position .text-middle input + span, .make-card-face .choose-text .write-text .select-text-position .text-bottom input + span {
+          height: 100%;
+          width: 100%;
+          display: inline-block;
+          border: 1px solid #cfcfcf;
+          color: transparent;
+          -webkit-user-select: none;
+             -moz-user-select: none;
+              -ms-user-select: none;
+                  user-select: none;
+          text-align: center; }
+        .make-card-face .choose-text .write-text .select-text-position .text-top input.checked + span, .make-card-face .choose-text .write-text .select-text-position .text-middle input.checked + span, .make-card-face .choose-text .write-text .select-text-position .text-bottom input.checked + span {
+          color: #f36303;
+          font-weight: bold;
+          background-color: #2F3238;
+          color: #fff; }
+      .make-card-face .choose-text .write-text .select-text-position::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 9;
+        background-color: rgba(255, 255, 255, 0.8); }
+      .make-card-face .choose-text .write-text .select-text-position.inputed::before {
+        display: none; }
+.make-card-face .code-result {
+  clear: both;
+  margin-top: 25px; }
+  .make-card-face .code-result .preview-card {
+    clear: both;
+    width: 375px;
+    margin: 20px auto; }
+  .make-card-face .code-result .copy {
+    font-size: 16px;
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 18px;
+    background-color: #009688;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    opacity: .9;
+    outline: 0;
+    -webkit-transition: border-color 0.3s cubic-bezier(0.65, 0.05, 0.35, 0.5);
+    transition: border-color 0.3s cubic-bezier(0.65, 0.05, 0.35, 0.5);
+    box-sizing: border-box !important; }
+    .make-card-face .code-result .copy:hover {
+      opacity: .8;
+      filter: alpha(opacity=80);
+      color: #fff; }
+    .make-card-face .code-result .copy:active {
+      opacity: 1;
+      filter: alpha(opacity=100); }
+.make-card-face .select-text-position1 {
+  width: 200px;
+  margin: 20px 0;
+  line-height: 1.5;
+  padding: 10px;
+  background-color: rgba(7, 17, 27, 0.1);
+  border-radius: 5px; }
+  .make-card-face .select-text-position1 .text-top, .make-card-face .select-text-position1 .text-middle, .make-card-face .select-text-position1 .text-bottom {
+    height: 30px;
+    font-size: 20px; }
+    .make-card-face .select-text-position1 .text-top .text-left, .make-card-face .select-text-position1 .text-middle .text-left, .make-card-face .select-text-position1 .text-bottom .text-left {
+      float: left;
+      width: 33.3333%;
+      display: table;
+      height: 100%;
+      vertical-align: middle;
+      text-align: left; }
+    .make-card-face .select-text-position1 .text-top .text-center, .make-card-face .select-text-position1 .text-middle .text-center, .make-card-face .select-text-position1 .text-bottom .text-center {
+      float: left;
+      width: 33.3333%;
+      display: table;
+      height: 100%;
+      vertical-align: middle;
+      text-align: center; }
+    .make-card-face .select-text-position1 .text-top .text-right, .make-card-face .select-text-position1 .text-middle .text-right, .make-card-face .select-text-position1 .text-bottom .text-right {
+      float: left;
+      width: 33.3333%;
+      display: table;
+      height: 100%;
+      vertical-align: middle;
+      text-align: right; }
+    .make-card-face .select-text-position1 .text-top label, .make-card-face .select-text-position1 .text-middle label, .make-card-face .select-text-position1 .text-bottom label {
+      height: 100%;
+      width: 100%;
+      display: block; }
+    .make-card-face .select-text-position1 .text-top input[type='radio'], .make-card-face .select-text-position1 .text-middle input[type='radio'], .make-card-face .select-text-position1 .text-bottom input[type='radio'] {
+      display: none; }
+    .make-card-face .select-text-position1 .text-top input + span, .make-card-face .select-text-position1 .text-middle input + span, .make-card-face .select-text-position1 .text-bottom input + span {
+      height: 100%;
+      width: 100%;
+      display: inline-block;
+      border-radius: 5px;
+      border: 1px solid red;
+      color: transparent;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+      text-align: center; }
+    .make-card-face .select-text-position1 .text-top input:checked + span, .make-card-face .select-text-position1 .text-middle input:checked + span, .make-card-face .select-text-position1 .text-bottom input:checked + span {
+      color: #f36303;
+      font-weight: bold;
+      background-color: red;
+      color: #fff; }
+
+/*# sourceMappingURL=preview-membercard.css.map */
