@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="/moviehelper/app/Public/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <!-- icheck theme css -->
+    <!-- the all minimal skins here  -->
+    <link rel="stylesheet" type="text/css" href="skins/minimal/_all.css">
+    <!-- the all square skins here  -->
+    <link rel="stylesheet" type="text/css" href="skins/square/_all.css">
+    <!-- the all polaris skins here  -->
+    <link rel="stylesheet" type="text/css" href="skins/polaris/polaris.css">
+
+	<!-- different skins here -->
+    <!-- <link rel="stylesheet" type="text/css" href="skins/minimal/minimal.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="skins/minimal/aero.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="skins/minimal/blue.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="skins/minimal/green.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="skins/minimal/grey.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="skins/minimal/orange.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="skins/minimal/pink.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="skins/minimal/purple.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="skins/minimal/red.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="skins/minimal/yellow.css"> -->
+    
+	<title>icheck 试用</title>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="section default">
+			<h3>default 选择框</h3>
+			<input type="checkbox" >
+			<input type="checkbox" checked>
+			<input type="radio" name="iCheck">	
+			<input type="radio" name="iCheck" checked>
+		</div>
+		<div class="section square">
+			<h3>square 选择框</h3>
+			<input type="checkbox" >
+			<input type="checkbox" checked>
+			<input type="radio" name="iCheck">	
+			<input type="radio" name="iCheck" checked>
+		</div>
+		<div class="section red">
+		<h3>红色选择框</h3>
+			<input type="checkbox" >
+			<input type="checkbox" checked>
+			<input type="radio" name="iCheck">	
+			<input type="radio" name="iCheck" checked>
+		</div>
+		<div class="section polaris">
+		<h3>红色选择框</h3>
+			<input type="checkbox" >
+			<input type="checkbox" checked>
+			<input type="radio" name="iCheck">	
+			<input type="radio" name="iCheck" checked>
+		</div>
+	</div>
+	<footer></footer>
+	<script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+	<!-- icheck js -->
+    <script src="icheck.js"></script>
+    <script>
+    	$(function () {
+    		// polaris
+    		$('.polaris input').iCheck({
+    			checkboxClass: 'icheckbox_polaris',
+			    radioClass: 'iradio_polaris',
+			    increaseArea: '20%' // optional
+    		})
+    		// square
+    		$('.square input').iCheck({
+    			checkboxClass: 'icheckbox_square-red',
+			    radioClass: 'iradio_square-red',
+			    increaseArea: '20%' // optional
+    		})
+    		// red
+    		$('.red input').iCheck({
+    			checkboxClass: 'icheckbox_minimal-red',
+			    radioClass: 'iradio_minimal-red',
+			    increaseArea: '20%' // optional
+    		})
+    		// default
+    		$('.default input').iCheck({
+    			checkboxClass: 'icheckbox_minimal',
+			    radioClass: 'iradio_minimal',
+			    increaseArea: '20%' // optional
+    		})
+    	})
+    </script>
+</body>
+</html>
