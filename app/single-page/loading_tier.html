@@ -32,15 +32,22 @@
 			transform:translate(-50%,-50%);
 		}
 	</style>
+
 </head>
 <body>
 
-	<div class="loading-tier">
+	<div class="loading-tier" id="tier">
 		<div class="loading-box">
-			<img src="img/124.jpg" class="img vertical-trans">
+			<img src="img/locationing.gif" class="img vertical-trans">
 		</div>
 	</div>
-
+	<script type="text/javascript">
+		window.onload = function () {
+			setTimeout(function () {
+				document.getElementById('tier').style.display = 'none'
+			},3500)
+		}
+	</script>
 
 </body>
 </html>
