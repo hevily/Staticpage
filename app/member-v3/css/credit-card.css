@@ -26,25 +26,68 @@
     overflow: hidden; }
   .credit-card-module.positioned-by-module .card-top-text .text-position {
     height: auto;
-    color: #fff; }
+    color: #fff;
+    font-size: 12px; }
     .credit-card-module.positioned-by-module .card-top-text .text-position.text-top {
       position: absolute;
       left: 0;
       right: 0;
-      top: 0; }
+      top: 0;
+      min-height: 20px; }
+      .credit-card-module.positioned-by-module .card-top-text .text-position.text-top .text-left, .credit-card-module.positioned-by-module .card-top-text .text-position.text-top .text-center, .credit-card-module.positioned-by-module .card-top-text .text-position.text-top .text-right {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        display: block; }
+      .credit-card-module.positioned-by-module .card-top-text .text-position.text-top .text-left {
+        text-align: left; }
+      .credit-card-module.positioned-by-module .card-top-text .text-position.text-top .text-center {
+        text-align: center; }
+      .credit-card-module.positioned-by-module .card-top-text .text-position.text-top .text-right {
+        text-align: right; }
     .credit-card-module.positioned-by-module .card-top-text .text-position.text-middle {
       position: absolute;
       left: 0;
       right: 0;
       top: 50%;
+      min-height: 20px;
       -webkit-transform: translateY(-50%);
           -ms-transform: translateY(-50%);
               transform: translateY(-50%); }
+      .credit-card-module.positioned-by-module .card-top-text .text-position.text-middle .text-left, .credit-card-module.positioned-by-module .card-top-text .text-position.text-middle .text-center, .credit-card-module.positioned-by-module .card-top-text .text-position.text-middle .text-right {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        display: block; }
+      .credit-card-module.positioned-by-module .card-top-text .text-position.text-middle .text-left {
+        text-align: left; }
+      .credit-card-module.positioned-by-module .card-top-text .text-position.text-middle .text-center {
+        text-align: center; }
+      .credit-card-module.positioned-by-module .card-top-text .text-position.text-middle .text-right {
+        text-align: right; }
     .credit-card-module.positioned-by-module .card-top-text .text-position.text-bottom {
       position: absolute;
       left: 0;
       right: 0;
-      bottom: 0; }
+      bottom: 0;
+      min-height: 20px; }
+      .credit-card-module.positioned-by-module .card-top-text .text-position.text-bottom .text-left, .credit-card-module.positioned-by-module .card-top-text .text-position.text-bottom .text-center, .credit-card-module.positioned-by-module .card-top-text .text-position.text-bottom .text-right {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block; }
+      .credit-card-module.positioned-by-module .card-top-text .text-position.text-bottom .text-left {
+        text-align: left; }
+      .credit-card-module.positioned-by-module .card-top-text .text-position.text-bottom .text-center {
+        text-align: center; }
+      .credit-card-module.positioned-by-module .card-top-text .text-position.text-bottom .text-right {
+        text-align: right; }
     .credit-card-module.positioned-by-module .card-top-text .text-position.text-left {
       text-align: left; }
     .credit-card-module.positioned-by-module .card-top-text .text-position.text-center {

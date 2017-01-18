@@ -26,25 +26,68 @@
     overflow: hidden; }
   .credit-card-module.positioned-by-module .card-top-text .text-position {
     height: auto;
-    color: #fff; }
+    color: #fff;
+    font-size: 12px; }
     .credit-card-module.positioned-by-module .card-top-text .text-position.text-top {
       position: absolute;
       left: 0;
       right: 0;
-      top: 0; }
+      top: 0;
+      min-height: 20px; }
+      .credit-card-module.positioned-by-module .card-top-text .text-position.text-top .text-left, .credit-card-module.positioned-by-module .card-top-text .text-position.text-top .text-center, .credit-card-module.positioned-by-module .card-top-text .text-position.text-top .text-right {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        display: block; }
+      .credit-card-module.positioned-by-module .card-top-text .text-position.text-top .text-left {
+        text-align: left; }
+      .credit-card-module.positioned-by-module .card-top-text .text-position.text-top .text-center {
+        text-align: center; }
+      .credit-card-module.positioned-by-module .card-top-text .text-position.text-top .text-right {
+        text-align: right; }
     .credit-card-module.positioned-by-module .card-top-text .text-position.text-middle {
       position: absolute;
       left: 0;
       right: 0;
       top: 50%;
+      min-height: 20px;
       -webkit-transform: translateY(-50%);
           -ms-transform: translateY(-50%);
               transform: translateY(-50%); }
+      .credit-card-module.positioned-by-module .card-top-text .text-position.text-middle .text-left, .credit-card-module.positioned-by-module .card-top-text .text-position.text-middle .text-center, .credit-card-module.positioned-by-module .card-top-text .text-position.text-middle .text-right {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        display: block; }
+      .credit-card-module.positioned-by-module .card-top-text .text-position.text-middle .text-left {
+        text-align: left; }
+      .credit-card-module.positioned-by-module .card-top-text .text-position.text-middle .text-center {
+        text-align: center; }
+      .credit-card-module.positioned-by-module .card-top-text .text-position.text-middle .text-right {
+        text-align: right; }
     .credit-card-module.positioned-by-module .card-top-text .text-position.text-bottom {
       position: absolute;
       left: 0;
       right: 0;
-      bottom: 0; }
+      bottom: 0;
+      min-height: 20px; }
+      .credit-card-module.positioned-by-module .card-top-text .text-position.text-bottom .text-left, .credit-card-module.positioned-by-module .card-top-text .text-position.text-bottom .text-center, .credit-card-module.positioned-by-module .card-top-text .text-position.text-bottom .text-right {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block; }
+      .credit-card-module.positioned-by-module .card-top-text .text-position.text-bottom .text-left {
+        text-align: left; }
+      .credit-card-module.positioned-by-module .card-top-text .text-position.text-bottom .text-center {
+        text-align: center; }
+      .credit-card-module.positioned-by-module .card-top-text .text-position.text-bottom .text-right {
+        text-align: right; }
     .credit-card-module.positioned-by-module .card-top-text .text-position.text-left {
       text-align: left; }
     .credit-card-module.positioned-by-module .card-top-text .text-position.text-center {
@@ -54,6 +97,9 @@
 
 * {
   box-sizing: border-box; }
+
+.container {
+  max-width: 750px; }
 
 .input--kaede {
   margin: 0;
@@ -198,6 +244,48 @@
         background-color: rgba(255, 255, 255, 0.8); }
       .make-card-face .choose-text .write-text .select-text-position.inputed::before {
         display: none; }
+.make-card-face .nine-grid {
+  clear: both;
+  clear: all;
+  border: 1px solid #EFEEEE;
+  border-left: none; }
+  .make-card-face .nine-grid .three-grid {
+    width: 100%;
+    clear: both;
+    height: 50px;
+    border-bottom: 1px solid #EFEEEE; }
+    .make-card-face .nine-grid .three-grid .grid-input {
+      position: relative;
+      float: left;
+      width: 33.3333%;
+      border-style: solid;
+      border-width: 0 0 0 1px;
+      border-color: #EFEEEE; }
+      .make-card-face .nine-grid .three-grid .grid-input .colorpicker {
+        background-color: #FFF;
+        border: 1px solid #9A3914;
+        width: 20px;
+        height: 30px;
+        display: block;
+        float: left;
+        margin: 10px;
+        position: relative;
+        z-index: 10;
+        background-color: #000; }
+      .make-card-face .nine-grid .three-grid .grid-input .text-color-fz {
+        overflow: hidden;
+        height: 40px;
+        margin: 5px;
+        border: 1px solid #cfcfcf;
+        line-height: 40px;
+        padding: 0 50px 0 35px;
+        font-size: 14px;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        margin: 5px 0;
+        border-right: 0;
+        border-left: 0; }
 .make-card-face .code-result {
   clear: both;
   margin-top: 25px; }
@@ -284,5 +372,16 @@
       font-weight: bold;
       background-color: red;
       color: #fff; }
+.make-card-face .selectpick_div_box {
+  position: absolute;
+  right: -1px;
+  top: 5px;
+  margin: 0; }
+.make-card-face .selectpick_div {
+  line-height: 40px;
+  border-radius: 0; }
+.make-card-face .selectpick_icon {
+  position: relative;
+  top: 5px; }
 
 /*# sourceMappingURL=preview-membercard.css.map */

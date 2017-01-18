@@ -34,23 +34,74 @@
 			.text-position{
 				height: auto;
 				color:#fff;
+				font-size: 12px;
+				.text-color-set{
+					// text-shadow: 1px 1px 4px;
+				}
 				&.text-top{
 					position:absolute;
 					left: 0;right: 0;
 					top: 0;
+					min-height:20px;
+					.text-left,.text-center,.text-right{
+						position: absolute;
+						width: 100%;
+						left: 0;right: 0;top: 0;
+						display: block;
+					}
+					.text-left{
+						text-align:left;
+					}
+					.text-center{
+						text-align:center;
+					}
+					.text-right{
+						text-align:right;
+					}
 				}
 				&.text-middle{
 					position:absolute;
 					left:0;right:0;
 					// top:0;right: 0;bottom:0;left: 0;
 					top:50%;
+					min-height:20px;
 					transform:translateY(-50%);
-
+					.text-left,.text-center,.text-right{
+						position: absolute;
+						width: 100%;
+						left: 0;right: 0;top: 0;
+						display: block;
+					}
+					.text-left{
+						text-align:left;
+					}
+					.text-center{
+						text-align:center;
+					}
+					.text-right{
+						text-align:right;
+					}
 				}
 				&.text-bottom{
 					position:absolute;
 					left: 0;right: 0;
 					bottom:0;
+					min-height:20px;
+					.text-left,.text-center,.text-right{
+						position: absolute;
+						width: 100%;
+						left: 0;right: 0;bottom:0;
+						display: block;
+					}
+					.text-left{
+						text-align:left;
+					}
+					.text-center{
+						text-align:center;
+					}
+					.text-right{
+						text-align:right;
+					}
 				}
 				&.text-left{
 					text-align:left;
