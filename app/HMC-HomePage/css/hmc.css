@@ -1,0 +1,149 @@
+@import url(build/normalize.min.css);
+.footer {
+  height: 200px;
+  background-color: #FAFAFA; }
+
+#fp-nav li:first-child, #fp-nav li:last-child {
+  opacity: 0; }
+
+.container {
+  padding: 0;
+  font-family: 'yahei'; }
+
+.page {
+  font-family: "microsoft yahei" ,"Helvetica Neue","Helvetica","Arial","sans-serif"; }
+
+.page-one {
+  background-color: rgba(0, 0, 0, 0.7); }
+
+.navbar-default {
+  background-color: transparent; }
+  .navbar-default .navbar-collapse {
+    background-color: rgba(8, 8, 8, 0.9); }
+  .navbar-default .navbar-nav > li > a {
+    color: #fff; }
+    .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+      color: #C7C130; }
+  .navbar-default .navbar-brand img {
+    width: 160px; }
+
+@media (min-width: 768px) {
+  .navbar > .container-fluid .navbar-brand {
+    margin-left: 0; }
+
+  .navbar-default .navbar-collapse {
+    background-color: transparent; }
+
+  .navbar {
+    margin-top: 16px;
+    border: none;
+    font-size: 16px; }
+    .navbar .navbar-brand {
+      padding: 0; }
+    .navbar .navbar-nav {
+      height: 30px; }
+      .navbar .navbar-nav .navbar-link {
+        padding: 0;
+        margin: 4px 10px;
+        color: #fff; }
+      .navbar .navbar-nav .logoin {
+        background-color: #C7C130;
+        border-radius: 20px;
+        padding: 4px 16px;
+        margin: 0px 10px;
+        color: #323232; }
+        .navbar .navbar-nav .logoin:hover {
+          background-color: #EEEA38;
+          color: #323232; }
+      .navbar .navbar-nav .signin {
+        background-color: transparent;
+        border: 1px solid #fff;
+        border-radius: 20px;
+        padding: 4px 16px;
+        margin: 0px 10px;
+        color: #fff; }
+        .navbar .navbar-nav .signin:hover {
+          background-color: #fff;
+          color: #333; } }
+.page-one .next-page {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -16px;
+  width: 32px;
+  z-index: 1010; }
+  .page-one .next-page a {
+    width: 100%; }
+    .page-one .next-page a img {
+      width: 100%;
+      -webkit-animation: nextpage 2s ease infinite;
+              animation: nextpage 2s ease infinite; }
+.page-one .random-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-image: url("../img/page1/1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+  .page-one .random-img:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.7); }
+.page-one .welecome {
+  position: absolute;
+  z-index: 2;
+  vertical-align: middle;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  min-width: 300px; }
+  .page-one .welecome img {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 650px; }
+  .page-one .welecome a {
+    color: #fff; }
+
+@-webkit-keyframes nextpage {
+  0% {
+    -ms-filter: brightness(100%) hue-rotate(0deg);
+    -webkit-filter: brightness(100%) hue-rotate(0deg);
+    -moz-filter: brightness(100%) hue-rotate(0deg);
+    filter: brightness(100%) hue-rotate(0deg); }
+  30% {
+    -ms-filter: brightness(0%) hue-rotate(80deg);
+    -webkit-filter: brightness(0%) hue-rotate(80deg);
+    -moz-filter: brightness(0%) hue-rotate(80deg);
+    filter: brightness(0%) hue-rotate(80deg); }
+  100% {
+    -ms-filter: brightness(100%) hue-rotate(0deg);
+    -webkit-filter: brightness(100%) hue-rotate(0deg);
+    -moz-filter: brightness(100%) hue-rotate(0deg);
+    filter: brightness(100%) hue-rotate(0deg); } }
+
+@keyframes nextpage {
+  0% {
+    -ms-filter: brightness(100%) hue-rotate(0deg);
+    -webkit-filter: brightness(100%) hue-rotate(0deg);
+    -moz-filter: brightness(100%) hue-rotate(0deg);
+    filter: brightness(100%) hue-rotate(0deg); }
+  30% {
+    -ms-filter: brightness(0%) hue-rotate(80deg);
+    -webkit-filter: brightness(0%) hue-rotate(80deg);
+    -moz-filter: brightness(0%) hue-rotate(80deg);
+    filter: brightness(0%) hue-rotate(80deg); }
+  100% {
+    -ms-filter: brightness(100%) hue-rotate(0deg);
+    -webkit-filter: brightness(100%) hue-rotate(0deg);
+    -moz-filter: brightness(100%) hue-rotate(0deg);
+    filter: brightness(100%) hue-rotate(0deg); } }
+
+/*# sourceMappingURL=hmc.css.map */

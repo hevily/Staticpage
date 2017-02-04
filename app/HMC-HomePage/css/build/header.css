@@ -1,0 +1,51 @@
+.navbar-default {
+  background-color: transparent; }
+  .navbar-default .navbar-collapse {
+    background-color: rgba(8, 8, 8, 0.9); }
+  .navbar-default .navbar-nav > li > a {
+    color: #fff; }
+    .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+      color: #C7C130; }
+  .navbar-default .navbar-brand img {
+    width: 160px; }
+
+@media (min-width: 768px) {
+  .navbar > .container-fluid .navbar-brand {
+    margin-left: 0; }
+
+  .navbar-default .navbar-collapse {
+    background-color: transparent; }
+
+  .navbar {
+    margin-top: 16px;
+    border: none;
+    font-size: 16px; }
+    .navbar .navbar-brand {
+      padding: 0; }
+    .navbar .navbar-nav {
+      height: 30px; }
+      .navbar .navbar-nav .navbar-link {
+        padding: 0;
+        margin: 4px 10px;
+        color: #fff; }
+      .navbar .navbar-nav .logoin {
+        background-color: #C7C130;
+        border-radius: 20px;
+        padding: 4px 16px;
+        margin: 0px 10px;
+        color: #323232; }
+        .navbar .navbar-nav .logoin:hover {
+          background-color: #EEEA38;
+          color: #323232; }
+      .navbar .navbar-nav .signin {
+        background-color: transparent;
+        border: 1px solid #fff;
+        border-radius: 20px;
+        padding: 4px 16px;
+        margin: 0px 10px;
+        color: #fff; }
+        .navbar .navbar-nav .signin:hover {
+          background-color: #fff;
+          color: #333; } }
+
+/*# sourceMappingURL=header.css.map */
