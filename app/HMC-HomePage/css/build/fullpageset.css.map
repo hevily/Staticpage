@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AACA,OAAO;EACN,MAAM,EAAE,KAAK;EACb,gBAAgB,EAAE,OAAO;;AAE1B,6CAA4C;EAC3C,OAAO,EAAE,CAAC",
+"mappings": "AACA,OAAO;EACN,gBAAgB,EAAE,OAAO;;AAE1B,6CAA4C;EAC3C,OAAO,EAAE,CAAC",
 "sources": ["fullpageset.scss"],
 "names": [],
 "file": "fullpageset.css"

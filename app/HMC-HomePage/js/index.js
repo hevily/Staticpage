@@ -78,4 +78,25 @@ $(function () {
 		// console.log(page)
 	}
 
+	// calc colum
+	function calcCol(goal) {
+		var goal = $(goal),
+		wWidth = $(window).width(),
+		gWidth = goal.find('.media-left').width() + goal.find('.media-body').width();
+		console.log(gWidth,wWidth);
+
+		res = wWidth - (gWidth * 3 + 120 );
+		console.log(res)
+		res > 0
+		?
+			wWidth > 1700
+			?
+			// console.log('大屏超宽');
+			goal.width(gWidth)
+			:
+			console.log(1)
+		:
+			console.log('小屏缩小')
+	}
+	calcCol('.media');
 })
