@@ -26,13 +26,13 @@
       height: 30px; }
       .navbar .navbar-nav .navbar-link {
         padding: 0;
-        margin: 4px 10px;
+        margin: 4px 20px;
         color: #fff; }
       .navbar .navbar-nav .logoin {
         background-color: #C7C130;
         border-radius: 20px;
         padding: 4px 16px;
-        margin: 0px 10px;
+        margin: 0px 10px 0 57px;
         color: #323232; }
         .navbar .navbar-nav .logoin:hover {
           background-color: #EEEA38;

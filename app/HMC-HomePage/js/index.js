@@ -37,15 +37,17 @@ $(function () {
     // init fullpage
 	$('#HomePage').fullpage({
 		navigation: true,
+		scrollingSpeed:400,
 		scrollOverflow:true,
-		// verticalCentered:false,
-		// anchors:['page1','page2','page3','page4','page5','page6'],
 		onLeave:function (index,nextIndex,direction) {
 			HP.find('.page').eq(index-1).trigger('onLeave');
 		},
 		afterLoad:function (anchorLink,index) {
 			controlNav(index)
 			HP.find('.page').eq(index-1).trigger('afterLoad');
+		},
+		afterRender:function () {
+			$('.page-two .animate-box,.page-three .animate-box,.page-four .animate-box,.page-five .animate-box,.page-six .animate-box').hide()
 		}
 	})
 
@@ -54,13 +56,15 @@ $(function () {
 		var _this = $(this);
 		var index = _this.index();
 		console.log(index+'离开');
-		// _this.fadeOut(200);
+		_this.find('.animate-box').animate({opacity:0}, 500).hide(200)
+		// _this.removeClass('getIn')
 	})
 	HP.find('.page').on('afterLoad',function(){
 		var _this = $(this);
 		var index = _this.index();
 		console.log(index+'进入完成');
-		// _this.fadeIn(200);
+		_this.find('.animate-box').show().animate({opacity:1}, 500);
+		// _this.addClass('getIn')
 	})
 
 	// 首屏点击进入第二屏
@@ -69,9 +73,8 @@ $(function () {
 	})
 	// 切换右侧导航标点
 	function controlNav(page) {
-		if(page == 1){
+		if(page == 1 || page == 6){
 			$('#fp-nav').hide()
-
 		}else{
 			$("#fp-nav").show()
 		}
@@ -83,10 +86,9 @@ $(function () {
 		var goal = $(goal),
 		wWidth = $(window).width(),
 		gWidth = goal.find('.media-left').width() + goal.find('.media-body').width();
-		console.log(gWidth,wWidth);
-
+		// console.log(gWidth,wWidth);
 		res = wWidth - (gWidth * 3 + 120 );
-		console.log(res)
+		// console.log(res)
 		res > 0
 		?
 			wWidth > 1700
@@ -94,9 +96,9 @@ $(function () {
 			// console.log('大屏超宽');
 			goal.width(gWidth)
 			:
-			console.log(1)
+			console.log()
 		:
-			console.log('小屏缩小')
+			console.log()
 	}
 	calcCol('.media');
 })
