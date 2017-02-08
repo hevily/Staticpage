@@ -2,8 +2,8 @@
 $(function () {
 	// 首屏背景图
 	(function () {
-		var all = 7,
-		current = Math.ceil(Math.random() * 7 ),
+		var all = 8,
+		current = Math.ceil(Math.random() * all ),
 		dir = 'url(../img/page1/'+current+'.jpg)',
 		goal = $('.page-one').find('.random-img');
 		goal.css('background-image',dir)
@@ -100,5 +100,9 @@ $(function () {
 		:
 			console.log()
 	}
-	calcCol('.media');
+	calcCol('.media-special');
+	// backtop
+	$('.footer').on('click','.backtop-btn',function () {
+		$.fn.fullpage.moveTo(1);
+	})
 })

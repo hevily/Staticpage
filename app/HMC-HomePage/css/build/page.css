@@ -47,7 +47,6 @@
   background-position: center; }
   .page-one .random-img:before {
     content: '';
-    display: block;
     width: 100%;
     height: 100%;
     z-index: 1;
@@ -71,7 +70,8 @@
   .page-one .welecome a {
     display: inline-block;
     color: #fff;
-    padding-top: 4px; }
+    padding-top: 8px;
+    font-size: 0.9rem; }
 
 @-webkit-keyframes nextpage {
   0% {
@@ -107,17 +107,17 @@
     -moz-filter: brightness(100%) hue-rotate(0deg);
     filter: brightness(100%) hue-rotate(0deg); } }
 .page-two .contain .img {
-  background-image: url("../img/page-bg/bg-2.png"); }
+  background-image: url("../img/page-bg/bg-2.jpg"); }
 .page-two .contain .text {
   float: right;
   width: 700px;
   text-align: center; }
 
 .page-three .contain .img {
-  background-image: url("../img/page-bg/bg-3.png"); }
+  background-image: url("../img/page-bg/bg-3.jpg"); }
 
 .page-four .contain .img {
-  background-image: url("../img/page-bg/bg-4.png"); }
+  background-image: url("../img/page-bg/bg-4.jpg"); }
 .page-four .contain .text h2 {
   width: 430px;
   text-align: right; }
@@ -125,7 +125,7 @@
   margin-top: 1.2rem; }
 
 .page-five .contain .img {
-  background-image: url("../img/page-bg/bg-5.png"); }
+  background-image: url("../img/page-bg/bg-5.jpg"); }
 .page-five .contain .row {
   padding: 10px; }
   .page-five .contain .row .col-lg-4 {
@@ -159,7 +159,8 @@
     padding: 0 15px;
     text-align: left; }
     .page-five .contain .media .media-body h3 {
-      font-size: 1.8rem; }
+      font-size: 2rem;
+      margin: 8px 0 28px 0; }
     .page-five .contain .media .media-body p {
       font-size: 1rem;
       line-height: 1.6rem; }
@@ -177,64 +178,6 @@
     display: none; }
   .page-six .container .row .hover-relation:hover img:last-child {
     display: block; }
-.page-six .container .row .advatage {
-  width: 228px;
-  margin: 28px auto; }
-  .page-six .container .row .advatage .media-object {
-    width: 44px; }
-  .page-six .container .row .advatage .media-body {
-    font-size: 18px;
-    color: #000; }
-    .page-six .container .row .advatage .media-body p {
-      font-weight: bold;
-      margin: 0; }
-.page-six .container .row.relation-box {
-  padding: 0 15px; }
-.page-six .container.adv {
-  padding: 0 15px;
-  border-bottom: 1px solid #DBDBDB; }
-.page-six .footer .container .row .foot-nav {
-  padding: 5px 5px 23px 29px;
-  display: inline-block;
-  color: #333;
-  font-size: 16px; }
-.page-six .footer .container .row .qrcore {
-  text-align: center;
-  border-style: solid;
-  border-width: 0 1px;
-  border-color: #DBDBDB;
-  font-size: 16px;
-  color: #666666;
-  padding-bottom: 16px; }
-  .page-six .footer .container .row .qrcore .wx .qr-box {
-    float: right;
-    width: 106px;
-    text-align: center; }
-  .page-six .footer .container .row .qrcore .download {
-    text-align: left; }
-  .page-six .footer .container .row .qrcore img {
-    max-width: 106px; }
-.page-six .footer .container .row .hotnum {
-  text-align: right; }
-  .page-six .footer .container .row .hotnum p:first-child {
-    color: #666666; }
-  .page-six .footer .container .row .hotnum p:nth-child(3) {
-    color: #999999;
-    line-height: 22px; }
-  .page-six .footer .container .row .hotnum img {
-    width: 18px;
-    margin-right: 5px; }
-  .page-six .footer .container .row .hotnum a {
-    color: #333;
-    font-size: 1.7rem; }
-.page-six .footer .public-info {
-  padding-top: 30px; }
-.page-six .logo-on-msg {
-  text-align: center;
-  padding: 0 10px;
-  color: #999;
-  font-size: 14px;
-  margin-top: 25px; }
 
 @media screen and (max-width: 780px) {
   .page .contain .text {
@@ -255,18 +198,11 @@
       padding-left: 1.6rem; }
       .page-five .contain .media .media-body h3 {
         font-size: 2.2rem;
-        margin: 4px 0 0 0; }
+        margin: 6px 0 15px 0; }
       .page-five .contain .media .media-body p {
-        font-size: 1rem; }
-
-  .page-six .footer .container .row .hotnum {
-    margin-top: 20px;
-    text-align: center; } }
+        font-size: 1rem; } }
 @media screen and (min-width: 991px) {
   .page-five .contain .media {
     min-height: 310px; } }
-@media screen and (min-width: 1201px) {
-  .page-six .footer .container .row .foot-nav {
-    padding: 5px 40px 15px 15px; } }
 
 /*# sourceMappingURL=page.css.map */

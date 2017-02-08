@@ -6,7 +6,7 @@
 	.navbar-nav>li>a{
 		color:#fff;
 		&:hover,&:focus{
-			color:#C7C130;
+			color:#eeea38;
 		}
 	}
 
@@ -36,16 +36,16 @@
 	    	height: 30px;
 	    	.navbar-link{
     			padding:0;
-    			margin:4px 20px;
+    			margin:4px 18px;
     			color:#fff;
 	    	}
 			.logoin{
 				background-color: #C7C130;
 				border-radius:20px;
 				padding:4px 16px;
-				margin: 0px 10px 0 57px;
+				margin: 0px 0px 0 47px;
 				color:#323232;
-				&:hover{
+				&:hover,&:focus{
 					background-color: #EEEA38;
 					color:#323232;
 				}
@@ -61,6 +61,25 @@
 					background-color: #fff;
 					color:#333;
 				}
+			}
+	    }
+	}
+}
+@media screen and(max-width:1201px) {
+	
+	.navbar {
+	    .navbar-nav{
+	    	// background-color: rgba(0,0,0,0.4);
+	    	.navbar-link{
+    			margin:4px 10px;
+	    	}
+			.logoin{
+				padding:4px 16px;
+				margin: 0px 10px 0 10px;
+			}
+			.signin{
+				padding:4px 16px;
+				margin: 0px 10px;
 			}
 	    }
 	}

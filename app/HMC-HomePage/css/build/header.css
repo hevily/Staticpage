@@ -5,7 +5,7 @@
   .navbar-default .navbar-nav > li > a {
     color: #fff; }
     .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-      color: #C7C130; }
+      color: #eeea38; }
   .navbar-default .navbar-brand img {
     width: 160px; }
 
@@ -26,15 +26,15 @@
       height: 30px; }
       .navbar .navbar-nav .navbar-link {
         padding: 0;
-        margin: 4px 20px;
+        margin: 4px 18px;
         color: #fff; }
       .navbar .navbar-nav .logoin {
         background-color: #C7C130;
         border-radius: 20px;
         padding: 4px 16px;
-        margin: 0px 10px 0 57px;
+        margin: 0px 0px 0 47px;
         color: #323232; }
-        .navbar .navbar-nav .logoin:hover {
+        .navbar .navbar-nav .logoin:hover, .navbar .navbar-nav .logoin:focus {
           background-color: #EEEA38;
           color: #323232; }
       .navbar .navbar-nav .signin {
@@ -47,5 +47,14 @@
         .navbar .navbar-nav .signin:hover {
           background-color: #fff;
           color: #333; } }
+@media screen and (max-width: 1201px) {
+  .navbar .navbar-nav .navbar-link {
+    margin: 4px 10px; }
+  .navbar .navbar-nav .logoin {
+    padding: 4px 16px;
+    margin: 0px 10px 0 10px; }
+  .navbar .navbar-nav .signin {
+    padding: 4px 16px;
+    margin: 0px 10px; } }
 
 /*# sourceMappingURL=header.css.map */
