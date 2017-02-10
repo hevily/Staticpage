@@ -55,14 +55,14 @@ $(function () {
 	HP.find('.page').on('onLeave',function(){
 		var _this = $(this);
 		var index = _this.index();
-		console.log(index+'离开');
+		// console.log(index+'离开');
 		_this.find('.animate-box').animate({opacity:0}, 500).hide(200)
 		// _this.removeClass('getIn')
 	})
 	HP.find('.page').on('afterLoad',function(){
 		var _this = $(this);
 		var index = _this.index();
-		console.log(index+'进入完成');
+		// console.log(index+'进入完成');
 		_this.find('.animate-box').show().animate({opacity:1}, 500);
 		// _this.addClass('getIn')
 	})

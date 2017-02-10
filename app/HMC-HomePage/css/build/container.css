@@ -1,14 +1,4 @@
-.container-fluid {
-  padding: 0 120px; }
-
 .container {
   padding: 0; }
-
-.page {
-  font-family: "microsoft yahei" ,"Helvetica Neue","Helvetica","Arial","sans-serif"; }
-
-@media screen and (max-width: 1201px) {
-  .container-fluid {
-    padding: 0 10px; } }
 
 /*# sourceMappingURL=container.css.map */

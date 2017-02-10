@@ -1,4 +1,6 @@
 .footer{
+	background-color: #FAFAFA;
+	font-family:"microsoft yahei" ,"Helvetica Neue","Helvetica","Arial","sans-serif";
 	.container{
 		&.adv{
 			padding: 0 15px;
@@ -120,36 +122,35 @@
 	margin-top: 25px;
 }
 @media screen and(max-width:992px) {
-	.page-six{
-		.footer{
-			.container{
-				.row{
-					.hotnum{
-						margin-top: 20px;
-						text-align: center;
-					}
+	
+	.footer{
+		.container{
+			.row{
+				.hotnum{
+					margin-top: 20px;
+					text-align: center;
 				}
 			}
 		}
 	}
 }
+
 @media screen and(min-width:1201px){
-	.page-six{
-		.footer {
-			.container {
-				.row {
-					.foot-nav{
-						padding: 0px 40px 19px 15px;
-					}
-					.hotnum{
-						padding-right: 55px;
-					}
+	
+	.footer {
+		.container {
+			.row {
+				.foot-nav{
+					padding: 0px 40px 19px 15px;
 				}
-				&.public-info{
-					padding: 30px 17px 12px 15px;
+				.hotnum{
+					padding-right: 55px;
 				}
 			}
-
+			&.public-info{
+				padding: 30px 17px 12px 15px;
+			}
 		}
+
 	}
 }

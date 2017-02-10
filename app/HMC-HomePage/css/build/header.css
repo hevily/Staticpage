@@ -1,14 +1,47 @@
 .navbar-default {
-  background-color: transparent; }
+  background-color: transparent;
+  border-color: transparent;
+  font-family: "microsoft yahei" ,"Helvetica Neue","Helvetica","Arial","sans-serif"; }
   .navbar-default .navbar-collapse {
     background-color: rgba(8, 8, 8, 0.9); }
   .navbar-default .navbar-nav > li > a {
     color: #fff; }
     .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
       color: #eeea38; }
-  .navbar-default .navbar-brand img {
-    width: 160px; }
+  .navbar-default .navbar-brand {
+    height: 44px;
+    padding-top: 0px; }
+    .navbar-default .navbar-brand img {
+      width: 160px; }
+      .navbar-default .navbar-brand img:last-child {
+        display: none; }
+  .navbar-default .navbar-toggle {
+    margin-top: 13px;
+    margin-bottom: 13px; }
 
+.mobile {
+  background-color: rgba(0, 0, 0, 0.8); }
+  .mobile .navbar-brand img:first-child {
+    display: none; }
+  .mobile .navbar-brand img:last-child {
+    display: inline-block; }
+
+.scrollOut {
+  background-color: rgba(0, 0, 0, 0.8); }
+  .scrollOut .navbar-brand img:first-child {
+    display: none; }
+  .scrollOut .navbar-brand img:last-child {
+    display: inline-block; }
+
+.container-fluid {
+  padding: 0 120px; }
+
+@media screen and (max-width: 1201px) {
+  .container-fluid {
+    padding: 0 10px; } }
+@media screen and (max-width: 767px) {
+  .navbar-default .navbar-brand {
+    padding-top: 16px; } }
 @media (min-width: 768px) {
   .navbar > .container-fluid .navbar-brand {
     margin-left: 0; }
@@ -17,7 +50,7 @@
     background-color: transparent; }
 
   .navbar {
-    margin-top: 16px;
+    padding-top: 16px;
     border: none;
     font-size: 16px; }
     .navbar .navbar-brand {
@@ -26,8 +59,7 @@
       height: 30px; }
       .navbar .navbar-nav .navbar-link {
         padding: 0;
-        margin: 4px 18px;
-        color: #fff; }
+        margin: 4px 18px; }
       .navbar .navbar-nav .logoin {
         background-color: #C7C130;
         border-radius: 20px;

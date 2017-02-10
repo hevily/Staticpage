@@ -1,0 +1,190 @@
+.section {
+  font-family: "microsoft yahei" ,"Helvetica Neue","Helvetica","Arial","sans-serif";
+  background-color: #F5F5F5; }
+  .section.header-section {
+    height: 540px;
+    background-image: url("../img/merchantin/top-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+    .section.header-section .container .table-middle {
+      text-align: center; }
+      .section.header-section .container .table-middle .platform {
+        max-width: 600px;
+        width: 70%;
+        margin-top: 158px;
+        margin-bottom: 25px; }
+      .section.header-section .container .table-middle p {
+        font-size: 2rem;
+        color: #eeea38;
+        margin: 0; }
+      .section.header-section .container .table-middle .intag {
+        max-width: 804px;
+        width: 80%;
+        margin-top: 50px; }
+  .section .section-title {
+    height: 73px;
+    font-size: 20px;
+    color: #fff;
+    line-height: 54px;
+    text-indent: 7px;
+    letter-spacing: 1px;
+    background-image: url("../img/merchantin/section-bg.png");
+    background-size: contain;
+    background-position: 0 0;
+    background-repeat: no-repeat; }
+  .section .section-context {
+    padding: 20px 40px 35px 40px;
+    min-height: 50px;
+    padding-top: 20px;
+    font-size: 18px;
+    text-align: center; }
+    .section .section-context .orange {
+      color: #f36303;
+      font-size: 22px; }
+    .section .section-context .bottom-line {
+      padding-top: 24px;
+      border-bottom: 1px dashed #D3CFC8;
+      clear: both; }
+  .section.section-N1 {
+    padding-top: 80px; }
+    .section.section-N1 [class^='col'] {
+      padding: 0; }
+    .section.section-N1 .section-context {
+      min-height: 50px; }
+      .section.section-N1 .section-context .vertical-line {
+        position: absolute;
+        right: 20px;
+        top: -4px;
+        height: 350px;
+        width: 0;
+        border-left: 1px solid #E6E6E6; }
+      .section.section-N1 .section-context .pt4 {
+        min-height: 350px;
+        padding-top: 4px; }
+      .section.section-N1 .section-context .rpt4 {
+        padding-top: 4px; }
+      .section.section-N1 .section-context img {
+        width: 100%;
+        max-width: 259px; }
+      .section.section-N1 .section-context .title.orange {
+        margin-top: 8px; }
+      .section.section-N1 .section-context .context {
+        margin-top: 96px;
+        text-align: center;
+        padding-bottom: 50px; }
+  .section.section-N2 .media .media-left {
+    padding-bottom: 0; }
+    .section.section-N2 .media .media-left .bulid-store {
+      width: 82px;
+      height: 30px;
+      display: block;
+      line-height: 30px;
+      background-color: #428BCA;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 3px;
+      cursor: default;
+      text-decoration: none; }
+  .section.section-N2 .media .media-body {
+    text-align: left; }
+    .section.section-N2 .media .media-body p {
+      margin: 0; }
+  .section.section-N3 .media .media-left {
+    padding-bottom: 0; }
+    .section.section-N3 .media .media-left .iagree {
+      width: 82px;
+      height: 30px;
+      display: block;
+      line-height: 30px;
+      /* FF3.6+ */
+      background: -webkit-gradient(linear, 180deg, color-stop(20%, FFFFFF), color-stop(70%, EBEBEB));
+      /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(180deg, #FFFFFF 20%, #EBEBEB 70%);
+      /* Chrome10+,Safari5.1+ */
+      /* Opera 11.10+ */
+      /* IE10+ */
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1');
+      /* for IE */
+      background: -webkit-linear-gradient(270deg, #FFFFFF 20%, #EBEBEB 70%);
+      background: linear-gradient(180deg, #FFFFFF 20%, #EBEBEB 70%);
+      /* W3C */
+      color: #8F8189;
+      border: 1px solid #7E7E7E;
+      font-size: 14px;
+      border-radius: 3px;
+      underline: none;
+      cursor: default;
+      text-decoration: none; }
+  .section.section-N3 .media .media-body {
+    text-align: left; }
+    .section.section-N3 .media .media-body p {
+      margin: 0; }
+  .section.section-N4 [class^='col'] {
+    padding: 0; }
+  .section.section-N4 .row {
+    margin: 0; }
+    .section.section-N4 .row .col-lg-5 {
+      text-align: left; }
+  .section.section-N4 img {
+    width: 100%;
+    max-width: 347px; }
+  .section.section-N4 .N4-text {
+    text-align: left;
+    height: 140px;
+    vertical-align: middle;
+    display: table-cell; }
+  .section.section-N5 .section-context {
+    text-align: left; }
+    .section.section-N5 .section-context .red {
+      color: red; }
+    .section.section-N5 .section-context p {
+      margin: 0; }
+    .section.section-N5 .section-context .next-step {
+      width: 82px;
+      height: 30px;
+      display: block;
+      line-height: 30px;
+      text-align: center;
+      background-color: #428BCA;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 3px;
+      margin: 20px 0;
+      cursor: default;
+      text-decoration: none; }
+  .section.section-N6 .title.orange {
+    margin-bottom: 20px; }
+  .section.section-N6 .context p {
+    margin-bottom: 20px; }
+  .section.section-N6 .red {
+    color: red; }
+  .section.section-N6 img {
+    width: 100%;
+    margin-bottom: 20px; }
+  .section.section-N7 .title.orange {
+    margin-bottom: 15px; }
+  .section.section-N7 .context {
+    padding-bottom: 100px; }
+
+@media screen and (max-width: 768px) {
+  .vertical-line {
+    display: none; } }
+@media screen and (max-width: 767px) {
+  .section.section-N1 .section-context .context {
+    margin-top: 30px; }
+  .section.section-N1 .section-context .title.orange {
+    margin-top: 40px; } }
+@media screen and (max-width: 990px) {
+  .section.section-N4 .row {
+    margin: 0; }
+    .section.section-N4 .row .col-lg-5 {
+      text-align: center; }
+  .section.section-N4 .N4-text {
+    display: block;
+    height: auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center; } }
+
+/*# sourceMappingURL=merchantIn-detail.css.map */

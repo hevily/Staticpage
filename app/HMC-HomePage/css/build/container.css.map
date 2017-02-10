@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,gBAAgB;EACf,OAAO,EAAE,OAAO;;AAEjB,UAAU;EACT,OAAO,EAAE,CAAC;;AAKX,KAAK;EACJ,WAAW,EAAC,oEAAoE;;AAEjF,qCAAoC;EACnC,gBAAgB;IACf,OAAO,EAAE,MAAM",
+"mappings": "AAAA,UAAU;EACT,OAAO,EAAE,CAAC",
 "sources": ["container.scss"],
 "names": [],
 "file": "container.css"

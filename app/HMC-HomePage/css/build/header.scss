@@ -1,5 +1,7 @@
 .navbar-default{
 	background-color: transparent;
+	border-color:transparent;
+	font-family:"microsoft yahei" ,"Helvetica Neue","Helvetica","Arial","sans-serif";
 	.navbar-collapse{
 		background-color: rgba(8,8,8,0.9);
 	}
@@ -11,13 +13,71 @@
 	}
 
 	.navbar-brand{
-		// padding-top:12px;
+		height: 44px;
+		padding-top:0px;
 		img{
 			width: 160px;
-
+			&:last-child{
+				display: none;
+			}
+		}
+	}
+	.navbar-toggle{
+		margin-top: 13px;
+		margin-bottom: 13px;
+	}
+}
+.mobile{
+	background-color: rgba(0,0,0, 0.8);
+	.navbar-brand{
+		img{
+			&:first-child{
+				display: none;
+			}
+			&:last-child{
+				display: inline-block;
+			}
 		}
 	}
 }
+.scrollOut{
+	background-color: rgba(0,0,0, 0.8);
+	// .navbar-collapse{
+	// 	background-color: rgba(8,8,8,0.9);
+	// }
+	// .navbar-nav>li>a{
+	// 	color:#666;
+	// 	&:hover,&:focus{
+	// 		color:#eeea38;
+	// 	}
+	// }
+	.navbar-brand{
+		img{
+			&:first-child{
+				display: none;
+			}
+			&:last-child{
+				display: inline-block;
+			}
+		}
+	}
+}
+.container-fluid{
+	padding: 0 120px;
+}
+@media screen and(max-width:1201px) {
+	.container-fluid{
+		padding: 0 10px;
+	}
+}
+@media screen and(max-width:767px) {
+	.navbar-default{
+		.navbar-brand{
+			padding-top:16px;
+		}
+	}
+}
+
 @media (min-width: 768px){
     .navbar>.container-fluid .navbar-brand{
     	margin-left: 0;
@@ -26,7 +86,7 @@
     	background-color: transparent;
     }
 	.navbar {
-		margin-top: 16px;
+		padding-top: 16px;
 	    border:none;
 	    font-size: 16px;
 	    .navbar-brand{
@@ -37,7 +97,6 @@
 	    	.navbar-link{
     			padding:0;
     			margin:4px 18px;
-    			color:#fff;
 	    	}
 			.logoin{
 				background-color: #C7C130;
@@ -64,6 +123,36 @@
 			}
 	    }
 	}
+
+	// .scrollOut{
+	//     .navbar-nav{
+	//     	.navbar-link{
+	//     	}
+	// 		.logoin{
+	// 			background-color: #C7C130;
+	// 			border-radius:20px;
+	// 			padding:4px 16px;
+	// 			margin: 0px 0px 0 47px;
+	// 			color:#000;
+	// 			&:hover,&:focus{
+	// 				background-color: #EEEA38;
+	// 				color:#323232;
+	// 			}
+	// 		}
+	// 		.signin{
+	// 			background-color: rgba(0,0,0,0);
+	// 			border:1px solid #666;
+	// 			border-radius:20px;
+	// 			padding:4px 16px;
+	// 			margin: 0px 10px;
+	// 			color:#666;
+	// 			&:hover{
+	// 				background-color: #666;
+	// 				color:#fff;
+	// 			}
+	// 		}
+	//     }
+	// }
 }
 @media screen and(max-width:1201px) {
 	
