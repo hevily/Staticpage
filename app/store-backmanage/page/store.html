@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/store.css" />
+    <title>店铺名称</title>
+</head>
+<body>
+	<header></header>
+	<div class="container" id="filterhere">
+		<div class="store-info">
+			<div class="media" onclick="">
+				<div class="media-left media-middle">
+				    <a href="#"><img class="media-object" src="../img/example3000×1987.jpg"   alt="store-logo"></a>
+				</div>
+				<div class="media-body">
+				    <div class="vochers-description">
+						<p id="store_name">天元文化传媒有限公司天元文化传媒有限公司</p>
+						<p class="approve"><img src="../img/approve.png">已认证</p>
+					</div>
+				</div>
+				<div class="media-right media-middle">
+					<a href="javascript:;" onclick="showqrimg()"><img class="media-object scanqr" id="qrbtn" src="../img/scanqr.png"   alt="scanqr"></a>
+				</div>
+			</div>
+		</div>
+		<div class="order-info clearfix">
+			<div class="one-three today">
+				<div>
+					今日订单数
+					<p>12</p>
+				</div>
+			</div>
+			<div class="one-three wait-send">
+				<div>
+					待发货
+					<p>12345678</p>
+				</div>
+			</div>
+			<div class="one-three on-sale">
+				<div>
+					全部统计
+					<p class="statistics"><img src="../img/statistics.png"></p>
+				</div>
+			</div>
+		</div>
+		<div class="entrances clearfix">
+			<div class="entrance entrance1">
+				<div class="entxt">
+					<img src="../img/index_1.png">
+					<p>订单</p>
+				</div>
+			</div>
+			<div class="entrance entrance2">
+				<div class="entxt">
+					<img src="../img/index_2.png">
+					<p>订单</p>
+				</div>
+			</div>
+			<div class="entrance entrance3">
+				<div class="entxt">
+					<img src="../img/index_3.png">
+					<p>订单</p>
+				</div>
+			</div>
+			<div class="entrance entrance4">
+				<div class="entxt">
+					<img src="../img/index_4.png">
+					<p>订单</p>
+				</div>
+			</div>
+			<div class="entrance entrance5">
+				<div class="entxt">
+					<img src="../img/index_5.png">
+					<p>订单</p>
+				</div>
+			</div>
+			<div class="entrance entrance6">
+				<div class="entxt">
+					<img src="../img/index_6.png">
+					<p>订单</p>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<div class="qrimg" id="qrimg" onclick="hideqrimg()">
+		<img src="https://staticcdn.yshjie.com/cdn/estores/mall/hmsq/150824/../150824/img/zhaoshi/zixun.jpg" alt="">
+	</div>
+	<footer></footer>
+	<script>
+		var qrimg = document.getElementById("qrimg"),
+			filterH = document.getElementById("filterhere");
+		function showqrimg(){
+			qrimg.style.display="block";
+			filterH.className="container filter";
+		}
+		function hideqrimg(){
+			qrimg.style.display="none";
+			filterH.className="container";
+		}
+		window.onload = function () {
+			(function () {
+				var sName  = document.getElementById('store_name')
+					wWidth = document.body.clientWidth
+					;
+					sName.style.width = (wWidth - 135) + "px";
+			})()
+		}
+	</script>
+</body>
+</html>
