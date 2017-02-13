@@ -161,6 +161,7 @@
     color: red; }
   .section.section-N6 img {
     width: 100%;
+    max-width: 367px;
     margin-bottom: 20px; }
   .section.section-N7 .title.orange {
     margin-bottom: 15px; }
@@ -186,5 +187,8 @@
     margin-top: 40px;
     margin-bottom: 20px;
     text-align: center; } }
+@media screen and (min-width: 1200px) {
+  .section.section-N4 .col-lg-7 {
+    text-indent: -80px; } }
 
 /*# sourceMappingURL=merchantIn-detail.css.map */

@@ -215,6 +215,7 @@
 		}
 		img{
 			width: 100%;
+			max-width:367px;
 			margin-bottom: 20px;
 		}
 	}
@@ -259,6 +260,13 @@
 			margin-top: 40px;
 			margin-bottom: 20px;
 			text-align:center;
+		}
+	}
+}
+@media screen and(min-width:1200px) {
+	.section.section-N4{
+		.col-lg-7{
+			text-indent:-80px;
 		}
 	}
 }

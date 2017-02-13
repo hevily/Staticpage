@@ -10,6 +10,9 @@
 		&:hover,&:focus{
 			color:#eeea38;
 		}
+		&.current{
+			color: #eeea38 !important;
+		}
 	}
 
 	.navbar-brand{
