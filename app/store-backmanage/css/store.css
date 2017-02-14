@@ -8,12 +8,15 @@
 }
 .store-info{
 	background-color: #F2F2F2;
-	background: url(../img/example2048X2048.jpg);
 	height: 150px;
-	-webkit-background-size: 100% 100%;
-	background-size: 100% 100%;
+	position: relative;
 }
-
+.store-bg{
+	position: absolute;
+	width: 100%;height: 100%;
+	top: 0;left: 0;
+	z-index: 1;
+}
 .store-user{
 	color: #cfcfcf;
 }
@@ -71,6 +74,9 @@
 	padding: 5px 10px;
 	text-align: center;
 }
+.entrance a{
+	text-decoration:none;
+}
 .entrance:nth-child(even){
 	padding-left:4px;
 }
@@ -78,7 +84,7 @@
 	padding-right:4px;
 }
 .entrance img{
-	width: 40px;
+	height: 41px;
 	margin-top: 13px;
 }
 .entrance p{
@@ -144,6 +150,7 @@
 		    background-color: rgba(255,255,255,0.6);
 		    border-top-left-radius: 4px;
 		    border-bottom-left-radius: 4px;
+		    z-index: 2;
 		}
     	.media:active{
     		background-color: inherit;
