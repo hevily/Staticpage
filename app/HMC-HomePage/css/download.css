@@ -126,7 +126,8 @@ html {
           display: inline-block;
           text-align: center;
           font-size: 14px;
-          color: #fff; }
+          color: #fff;
+          text-indent: 0; }
           .section.header-section .container .table-middle .col-right .right-context .topic {
             height: 92px;
             margin-top: 135px; }
@@ -139,12 +140,12 @@ html {
             .section.header-section .container .table-middle .col-right .right-context .download-btn .down-ios {
               width: 166px;
               position: absolute;
-              top: 0;
+              top: 4px;
               left: 0; }
             .section.header-section .container .table-middle .col-right .right-context .download-btn .down-and {
               width: 166px;
               position: absolute;
-              top: 70px;
+              top: 74px;
               left: 0; }
             .section.header-section .container .table-middle .col-right .right-context .download-btn .down-qr {
               width: 118px;
@@ -155,6 +156,63 @@ html {
             margin-top: 18px; }
   .section.gap-for-header {
     height: 50px; }
+  .section .dynamic {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    margin-right: 0; }
+    .section .dynamic .col-slide {
+      text-align: right; }
+      .section .dynamic .col-slide .carousel {
+        width: 420px;
+        margin-right: 25px;
+        display: inline-block; }
+      .section .dynamic .col-slide .carousel-inner .item {
+        text-align: center;
+        width: 420px;
+        height: 360px; }
+        .section .dynamic .col-slide .carousel-inner .item img {
+          width: 420px;
+          right: 0;
+          position: absolute;
+          top: 0; }
+  .section .col-info {
+    padding-top: 45px;
+    padding-left: 48px; }
+    .section .col-info p {
+      font-size: 34px; }
+    .section .col-info h3 {
+      margin-top: 87px;
+      margin-bottom: 50px; }
+      .section .col-info h3 span {
+        font-size: 26px;
+        color: #f36303;
+        position: relative; }
+        .section .col-info h3 span:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: -55px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: #f36303; }
+    .section .col-info .slide-btn ul {
+      padding: 0; }
+      .section .col-info .slide-btn ul li {
+        display: inline-block;
+        font-size: 0; }
+        .section .col-info .slide-btn ul li img {
+          height: 70px;
+          margin-right: 12px; }
+          .section .col-info .slide-btn ul li img:nth-child(even) {
+            display: none; }
+          .section .col-info .slide-btn ul li img:active {
+            -webkit-filter: blur(3px);
+                    filter: blur(3px); }
+        .section .col-info .slide-btn ul li.current_item img:nth-child(even) {
+          display: inline-block; }
+        .section .col-info .slide-btn ul li.current_item img:nth-child(odd) {
+          display: none; }
 
 @media screen and (max-width: 992px) {
   .col-left {
@@ -163,6 +221,49 @@ html {
   .section.header-section .container .table-middle .col-right {
     text-indent: 0;
     text-align: center; } }
+@media screen and (max-width: 767px) {
+  .section .dynamic {
+    padding-top: 100px;
+    padding-bottom: 100px; }
+    .section .dynamic .col-slide {
+      text-align: center; }
+      .section .dynamic .col-slide .carousel {
+        width: 300px;
+        margin-right: 0;
+        display: inline-block; }
+      .section .dynamic .col-slide .carousel-inner .item {
+        text-align: center;
+        width: 300px;
+        height: 257px; }
+        .section .dynamic .col-slide .carousel-inner .item img {
+          width: 100%; }
+  .section .col-info {
+    padding-top: 45px;
+    text-align: center;
+    padding-bottom: 50px; }
+    .section .col-info p {
+      font-size: 34px; }
+    .section .col-info h3 {
+      margin-top: 27px;
+      margin-bottom: 20px; }
+      .section .col-info h3 span {
+        font-size: 26px;
+        color: #f36303;
+        position: relative; }
+        .section .col-info h3 span:before {
+          display: none; }
+        .section .col-info h3 span:after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: -10px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: #f36303; }
+    .section .col-info .slide-btn ul li img {
+      height: 60px;
+      margin-right: 12px; } }
 @media screen and (max-width: 413px) {
   .section.header-section .container .table-middle .col-right {
     text-indent: 0;

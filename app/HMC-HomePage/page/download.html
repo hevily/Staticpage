@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="format-detection" content="telephone=no" />
+	<link rel="SHORTCUT ICON" href="favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
   	<link rel="stylesheet" type="text/css" href="../plugin/bootstrap-3.3.5-dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../js/fullpage/jquery.fullpage.min.css">
@@ -66,8 +67,8 @@
 	</div>
 	<div class="section gap-for-header"></div>
 	<div class="section">
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-slide">
+		<div class="row dynamic">
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-slide">
 				<div id="down_carousel" class="carousel slide" data-ride="carousel">
 				  <!-- Wrapper for slides -->
 					<div class="carousel-inner" role="listbox">
@@ -87,20 +88,20 @@
 				</div>
 			</div>
 
-			<div class="col-xs-12 col-sm-12 col-md-6 col-md-6">
+			<div class="col-xs-12 col-sm-6 col-md-6 col-md-6 col-info">
 				<p>随时随地 方便生活</p>
-				<h3><span>物流追踪</span></h3>
+				<h3><span class="changetext">更多选择</span></h3>
 				<div class="slide-btn">
 					<ul>
-						<li>
+						<li class="current_item">
 						<img src="../img/download/default-more.png" alt="">
 						<img src="../img/download/current-more.png" alt=""></li><li>
-						<img src="../img/download/default-more.png" alt="">
-						<img src="../img/download/current-more.png" alt=""></li><li>
-						<img src="../img/download/default-more.png" alt="">
-						<img src="../img/download/current-more.png" alt=""></li><li>
-						<img src="../img/download/default-more.png" alt="">
-						<img src="../img/download/current-more.png" alt=""></li>
+						<img src="../img/download/default-cart.png" alt="">
+						<img src="../img/download/current-cart.png" alt=""></li><li>
+						<img src="../img/download/default-pay.png" alt="">
+						<img src="../img/download/current-pay.png" alt=""></li><li>
+						<img src="../img/download/default-ship.png" alt="">
+						<img src="../img/download/current-ship.png" alt=""></li>
 					</ul>
 				</div>
 			</div>
@@ -189,11 +190,12 @@
 			<div class="backtop-btn"><span class="glyphicon glyphicon-menu-up"></span></div>
 		</div>
 	</div>
-	<script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+	<script src="../js/jquery-2.1.4.min.js"></script>
 	<script src="../plugin/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
 	<script src="../js/header_scroll.js"></script>
 	<script type="text/javascript">
 	$(function () {
+		document.body.addEventListener('touchstart',function () {});
 		$('#down_carousel').carousel({
 			 interval: 2000
 		})
@@ -211,10 +213,67 @@
 			var CN = 'current_item';
 			$('.'+CN).removeClass(CN)
 			goal.eq(ind).addClass(CN)
+			var txt = '';
+			switch(ind)
+			{
+				case 1:
+					txt = '轻松购物';
+					break;
+				case 2:
+					txt = '便捷支付';
+					break;
+				case 3:
+					txt = '物流追踪';
+					break;
+				default:
+					txt = '更多选择';
+			}
+			document.querySelectorAll('.changetext')[0].innerHTML = txt;
 		}
 		function slideRefresh(ind) {
 			$('#down_carousel').carousel(ind)
 		}
+
+		function touchSlide(goal) {
+			var goal = $(goal),
+				items = document.querySelectorAll('#down_carousel .item');
+				console.log(items)
+			for( var i = 0;i<4 ;i++){
+				items[i].addEventListener('touchstart',touchStart);
+				items[i].addEventListener('touchmove',touchMove);
+				items[i].addEventListener('touchend',touchEnd);
+			}
+			var SX,SY,EX,EY;
+
+			function touchStart(e) {
+				var touches = e.touches[0];
+				SX = touches.pageX,SY = touches.pageY;
+			}
+			function touchMove(e) {
+				var touches = e.touches[0];
+				EX = touches.pageX,EY = touches.pageY;
+			}
+			function touchEnd(e) {
+				var offset = 30;
+				EX?EX:0
+
+				// (EX - SX) > offset ?
+				// 	console.log('moved')
+				// 	(EX -SX) > 0 ?
+				// 	console.log('right')
+				// 	:
+				// 	console.log('left')
+
+				if(EX - SX > offset ){
+					goal.carousel('prev')
+	//				console.log('向右划'+CX+'-'+SX);
+				}else if(EX - SX < (-offset)){
+					goal.carousel('next')
+	//				console.log('向左滑'+CX+'-'+SX)
+				}
+			}
+		}
+		touchSlide('#down_carousel')
 	})
 	</script>
 </body>
