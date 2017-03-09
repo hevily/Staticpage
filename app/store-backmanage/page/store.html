@@ -118,7 +118,7 @@
 		window.onload = function () {
 			(function () {
 				var sName  = document.getElementById('store_name')
-					wWidth = document.body.clientWidth
+					wWidth = document.getElementsByClassName('store-info')[0].offsetWidth
 					;
 					sName.style.width = (wWidth - 135) + "px";
 			})()

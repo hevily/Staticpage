@@ -32,11 +32,37 @@ html {
   font-family: "microsoft yahei" ,"Helvetica Neue","Helvetica","Arial","sans-serif"; }
   .navbar-default .navbar-collapse {
     background-color: rgba(8, 8, 8, 0.9); }
-  .navbar-default .navbar-nav > li > a {
+  .navbar-default .navbar-nav > li.dropdown a {
+    padding: 4px 10px; }
+  .navbar-default .navbar-nav > li.dropdown.open a {
+    color: #fff;
+    background-color: inherit; }
+    .navbar-default .navbar-nav > li.dropdown.open a:hover {
+      color: inherit;
+      background-color: inherit; }
+  .navbar-default .navbar-nav > li.dropdown .glyphicon {
+    font-size: 10px;
+    margin-left: 6px; }
+  .navbar-default .navbar-nav > li.dropdown .dropdown-menu {
+    background-color: #5E636C;
+    color: #fff;
+    min-width: auto;
+    right: auto;
+    top: 43px;
+    min-width: 95px;
+    border-radius: 0;
+    text-align: center;
+    padding: 0; }
+    .navbar-default .navbar-nav > li.dropdown .dropdown-menu li:hover {
+      background-color: #585B63; }
+    .navbar-default .navbar-nav > li.dropdown .dropdown-menu li a {
+      height: 40px;
+      line-height: 32px; }
+  .navbar-default .navbar-nav > li a {
     color: #fff; }
-    .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    .navbar-default .navbar-nav > li a:hover, .navbar-default .navbar-nav > li a:focus {
       color: #eeea38; }
-    .navbar-default .navbar-nav > li > a.current {
+    .navbar-default .navbar-nav > li a.current {
       color: #eeea38 !important; }
   .navbar-default .navbar-brand {
     height: 44px;
@@ -88,8 +114,7 @@ html {
     .navbar .navbar-nav {
       height: 30px; }
       .navbar .navbar-nav .navbar-link {
-        padding: 0;
-        margin: 4px 18px; }
+        padding: 4px 18px; }
       .navbar .navbar-nav .logoin {
         background-color: #C7C130;
         border-radius: 20px;
@@ -110,8 +135,10 @@ html {
           background-color: #fff;
           color: #333; } }
 @media screen and (max-width: 1201px) {
+  .navbar .navbar-nav li.dropdown a {
+    padding: 4px 24px; }
   .navbar .navbar-nav .navbar-link {
-    margin: 4px 10px; }
+    padding: 4px 24px; }
   .navbar .navbar-nav .logoin {
     padding: 4px 16px;
     margin: 0px 10px 0 10px; }

@@ -1,0 +1,19 @@
+.section{
+	font-family:"microsoft yahei" ,"Helvetica Neue","Helvetica","Arial","sans-serif";
+	background-color: #F5F5F5;
+	&.header-section{
+		height: 540px;
+		background-image: url("../img/about-us/about-bg.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+		background-position:center;
+	}
+	
+}
+@media screen and(max-width:768px) {
+	.section{
+		&.header-section{
+			height: 240px;
+		}
+	}
+}

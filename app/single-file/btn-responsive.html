@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="/moviehelper/app/Public/bootstrap-3.3.5-dist/css/bootstrap.min.css" />
+	<title>按钮响应条目设计初稿</title>
+	<style type="text/css">
+		.btn-box span{
+			display: block;
+			width: 80px;
+			height: 50px;margin-right: 25px;
+			margin-bottom: 20px;
+			line-height: 50px;
+			text-align: center;
+			background-color: #cfcfcf;
+			border:1px solid blue;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Brand</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+						<li><a href="#">Link</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#">Separated link</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#">One more separated link</a></li>
+							</ul>
+						</li>
+					</ul>
+					<form class="navbar-form navbar-left">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Search">
+						</div>
+						<button type="submit" class="btn btn-default">Submit</button>
+					</form>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#">Link</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#">Separated link</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+	</header>
+	<div class="container">
+		<div class="section btn-">
+			<div class="btn-box">
+				<span>按钮1</span>
+			</div>
+		</div>
+		<div class="section items">
+			<ul class="list-group">
+			  <li class="list-group-item">Cras justo odio</li>
+			  <li class="list-group-item">Dapibus ac facilisis in</li>
+			  <li class="list-group-item">Morbi leo risus</li>
+			  <li class="list-group-ite list-2">Porta ac consectetur ac</li>
+			  <li class="list-group-ite list-2">Vestibulum at eros</li>
+			</ul>
+		</div>
+	</div>
+	<footer></footer>
+	<script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+	<script src="/moviehelper/app/Public/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+	<script>
+		$(function () {
+			var res_btn = function (object) {
+
+				var goal = $(object.items)
+					btns = object.btns
+					btn_box = object.btn_box
+					sign	= object.sign
+					;
+				console.log(object)
+				goal.on('click',function () {
+					var _this = $(this);
+					;
+					if ($('.'+sign).length === 0) {
+						addBtn(btn_box,sign,btns)
+						
+					}
+				})
+				function addBtn(btn_box,sign,btns) {
+					var btn_box = $(btn_box)
+						btnList = ''
+					;
+					$.each(btns,function (i,key) {
+						var btn_name = key.btn_name
+							cls = key.class
+							btn_theme = key.btn_theme
+						;
+						btnList += '<span class="'+cls+' '+btn_theme+'"sign="'+sign+'">'+btn_name+'</span> '
+					})
+					btn_box.append(btnList).addClass(sign)
+				}
+			}
+			new res_btn({
+				btn_box:'.btn-box',
+				sign:'yuanyou',
+				items:'.list-group-item',
+				btns:[
+				{
+					btn_name:'add',
+					class:'import',
+					btn_theme:'simple'
+				},
+				{
+					btn_name:'edit',
+					class:'import',
+					btn_theme:'simple'
+				}
+				]
+			})
+			new res_btn({
+				btn_box:'.btn-box',
+				sign:'yuanyou2',
+				items:'.list-2',
+				btns:[
+				{
+					btn_name:'del',
+					class:'import',
+					btn_theme:'simple'
+				},
+				{
+					btn_name:'input',
+					class:'import',
+					btn_theme:'simple'
+				}
+				]
+			})
+		})
+	</script>
+</body>
+</html>

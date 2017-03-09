@@ -7,112 +7,98 @@
     <link rel="stylesheet" type="text/css" href="../css/base.css" />
 	<title>商品管理</title>
 	<style type="text/css">
-			.container{
-				font-family: "microsoft yahei" ,"Helvetica Neue","Helvetica","Arial","sans-serif";
-				width:100%;
-				max-width:640px;
-				margin:0 auto;
-			}
-			.section .entrance{
-				width:33.3333%;
-				float: left;
-				text-align:center;
-				padding-top: 15px;
-				padding-bottom: 5px;
-				position: relative;
-			}
-			.section .entrance:active{
-				background-color:rgba(0,0,0,0.1);
-			}
-			.section .entrance:before{
-				content: '';
-				display: block;
-				position: absolute;
-				top: 0;left: 0;
-				width: 100%;height: 100%;
-				z-index: 1;
-			}
-			.section .entrance img{
-				width: 50px;
-			}
-			.section .entrance p{
-				font-size: 14px;
-				color: #3f3f3f;
-			}
-		</style>
+		.container{
+			font-family: "microsoft yahei" ,"Helvetica Neue","Helvetica","Arial","sans-serif";
+			width:100%;
+			max-width:640px;
+			margin:0 auto;
+		}
+		.manage-items .entrance{
+			width: 33.33%;
+			float: left;
+			text-align: center;
+			padding-top: 15px;
+			padding-bottom: 5px;
+		}
+		.manage-items .entrance img{
+			width: 50px;
+		}
+		.manage-items .entrance:active{
+			background-color: rgba(0,0,0,0.1);
+		}
+		.manage-items .entrance p{
+			font-size: 14px;
+		}
+	</style>
 </head>
 <body>
-	<div class="container">
-		<div class="section clearfix">
-			<a href="#">
+	<div class="container manage-items clearfix">
+		<ul class="manage-items">
+			<li>
 				<div class="entrance">
 					<div class="entxt">
 						<img src="../img/manage-goods/1.png">
 						<p>商品管理</p>
 					</div>
 				</div>
-			</a>
-			<a href="#">
+			</li>
+			<li>
 				<div class="entrance">
 					<div class="entxt">
 						<img src="../img/manage-goods/2.png">
 						<p>代金券管理</p>
 					</div>
 				</div>
-			</a>
-			<a href="#">
+			</li>
+			<li>
 				<div class="entrance">
 					<div class="entxt">
 						<img src="../img/manage-goods/3.png">
 						<p>发布券</p>
 					</div>
 				</div>
-			</a>
-		</div>
-		<div class="section clearfix">
-			<a href="#">
+			</li>
+			<li>
 				<div class="entrance">
 					<div class="entxt">
 						<img src="../img/manage-goods/4.png">
 						<p>品牌</p>
 					</div>
 				</div>
-			</a>
-			<a href="#">
+			</li>
+			<li>
 				<div class="entrance">
 					<div class="entxt">
 						<img src="../img/manage-goods/5.png">
 						<p>分类</p>
 					</div>
 				</div>
-			</a>
-			<a href="#">
+			</li>
+			<li>
 				<div class="entrance">
 					<div class="entxt">
-						<img src="../img/manage-goods/7.png">
+						<img src="../img/manage-goods/6.png">
 						<p>快递</p>
 					</div>
 				</div>
-			</a>
-		</div>
-		<div class="section clearfix">
-			<a href="#">
+			</li>
+			<li>
 				<div class="entrance">
 					<div class="entxt">
 						<img src="../img/manage-goods/7.png">
 						<p>运费</p>
 					</div>
 				</div>
-			</a>
-			<a href="#">
+			</li>
+			<li>
 				<div class="entrance">
 					<div class="entxt">
 						<img src="../img/manage-goods/8.png">
 						<p>属性</p>
 					</div>
 				</div>
-			</a>
-		</div>
+			</li>
+		</ul>
 	</div>
 	<script>
 		document.body.addEventListener('touchstart',function () {})

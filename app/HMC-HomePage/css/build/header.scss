@@ -5,14 +5,59 @@
 	.navbar-collapse{
 		background-color: rgba(8,8,8,0.9);
 	}
-	.navbar-nav>li>a{
-		color:#fff;
-		&:hover,&:focus{
-			color:#eeea38;
+	.navbar-nav>li{
+		&.dropdown{
+			a{
+				padding: 4px 10px;
+
+			}
+			&.open{
+				a{
+					// padding: 0;
+					color:#fff;
+					background-color:inherit;
+					&:hover{
+						color:inherit;
+						background-color:inherit;
+					}
+				}
+			}
+			.glyphicon{
+				font-size: 10px;
+				margin-left: 6px;
+			}
+			.dropdown-menu{
+				background-color: #5E636C;
+				color:#fff;
+				min-width:auto;
+				right: auto;
+				top: 43px;
+				min-width:95px;
+				border-radius:0;
+				text-align:center;
+				padding: 0;
+				li{
+					&:hover{
+						background-color: #585B63;
+					}
+					a{
+						height: 40px;
+						line-height: 32px;
+					}
+					
+				}
+			}
 		}
-		&.current{
-			color: #eeea38 !important;
+		a{
+			color:#fff;
+			&:hover,&:focus{
+				color:#eeea38;
+			}
+			&.current{
+				color: #eeea38 !important;
+			}
 		}
+
 	}
 
 	.navbar-brand{
@@ -98,8 +143,7 @@
 	    .navbar-nav{
 	    	height: 30px;
 	    	.navbar-link{
-    			padding:0;
-    			margin:4px 18px;
+    			padding:4px 18px;
 	    	}
 			.logoin{
 				background-color: #C7C130;
@@ -162,8 +206,15 @@
 	.navbar {
 	    .navbar-nav{
 	    	// background-color: rgba(0,0,0,0.4);
+	    	li{
+	    		&.dropdown{
+					a{
+						padding: 4px 24px;
+					}
+				}
+	    	}
 	    	.navbar-link{
-    			margin:4px 10px;
+    			padding:4px 24px;
 	    	}
 			.logoin{
 				padding:4px 16px;
