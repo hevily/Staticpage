@@ -1,0 +1,237 @@
+/*!
+ * Documenter 1.4
+ * http://rxa.li/documenter
+ *
+ * Copyright 2011, Xaver Birsak
+ * http://revaxarts.com
+ *
+ */
+ document.createElement('section');var duration=500,easing='swing';
+ 
+$(document).ready(function() {
+	// function scroller () {
+		// body...
+	var timeout,
+		sections = new Array(),
+		sectionscount = 0,
+		win = $(window),
+		sidebar = $('#documenter_sidebar'),
+		nav = $('#documenter_nav'),
+		logo = $('#documenter_logo'),
+		navanchors = nav.find('a'),
+		timeoffset = 50,
+		hash = location.hash || null;
+		iDevice = navigator.userAgent.match(/iphone|ipod|ipad/i) || false,
+		badIE = $('html').attr('class').match(/ie(6|7|8)/)|| false;
+		var oldIndex,
+		goodsTitle = $(".section h3,.section h4");
+	//if Cufon replace headings
+	if(typeof Cufon == 'function'){
+		Cufon.replace('h1, h2, h3, h4, h5, h6');
+	}
+	//handle external links (new window)
+	$('a[href^=http]').bind('click',function(){
+		window.open($(this).attr('href'));
+		return false;
+	});
+
+	//IE 8 and lower doesn't like the smooth pagescroll
+	if(!badIE){
+		window.scroll(0,0);
+		
+		$('a[href^=#]').bind('click',function(){
+			hash = $(this).attr('href');
+			$.scrollTo.window().queue([]).stop();
+			goTo(hash);
+			return false;
+		});
+		
+		//if a hash is set => go to it
+		if(hash){
+			setTimeout(function(){
+				goTo(hash);
+			},500);
+		}
+	}
+	
+	
+	//We need the position of each section until the full page with all images is loaded
+	win.bind('load',function(){
+		
+		savePos()
+		
+		//iPhone, iPod and iPad don't trigger the scroll event
+		if(iDevice){
+			nav.find('a').bind('click',function(){
+				setTimeout(function(){
+					win.trigger('scroll');				
+				},duration);
+				
+			});
+			//scroll to top
+			window.scroll(0,0);
+		}
+
+		//how many sections
+		sectionscount = sections.length;
+		
+		//bind the handler to the scroll event
+		win.bind('scroll',function(event){
+			clearInterval(timeout);
+			//should occur with a delay
+			timeout = setTimeout(function(){
+				//get the position from the very top in all browsers
+				pos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+				
+				//iDevices don't know the fixed property so we fake it
+				if(iDevice){
+					sidebar.css({height:document.height});
+					logo.css({'margin-top':pos});
+				}
+				//activate Nav element at the current position
+				activateNav(pos,list_options);
+			},timeoffset);
+		}).trigger('scroll');
+
+	});
+	
+	//the function is called when the hash changes
+	function hashchange(){
+		//alert('location'+location.hash)
+//		goTo(location.hash, false);
+	}
+	
+	$('#documenter_nav a').click(function(){
+		var hash = $(this).attr('data-href');
+		hash = hash.replace(/([^\s]*)(#)/g,"#");
+		goTo(hash,false);
+	})
+	
+	//scroll to a section and set the hash
+	function goTo(hash,changehash){
+//		win.unbind('hashchange', hashchange);
+		hash = hash.replace(/!\//,'');
+		//alert('go to'+hash)
+		
+		
+		var scrollH = $(hash).position().top 
+		console.log(scrollH);
+		
+		
+		
+		win.stop().scrollTo(scrollH,duration,{
+			easing:easing,
+			axis:'y'			
+		});
+		if(changehash !== false){
+			var l = location;
+			location.href = (l.protocol+'//'+l.host+l.pathname+'#!/'+hash.substr(1));
+		}
+//		win.bind('hashchange', hashchange);
+	}
+	
+	
+	//activate current nav element
+	function activateNav(pos,list_options){
+			var offset = 	list_options.offset?
+			list_options.offset:
+			10;
+		
+		
+		var current, next, parent, isSub, hasSub;
+//		win.unbind('hashchange', hashchange);
+		var index,text;
+		returnindex();
+		function returnindex (argument) {
+			for(var i=sectionscount;i>0;i--){
+				if(sections[i-1].pos <= pos+offset){
+					index = i;
+					navanchors.removeClass('current');
+					current = navanchors.eq(i-1);
+					text=navanchors.eq(i-1).attr("href");
+					current.addClass('current');
+								// console.log(i);
+					parent = current.parent().parent();
+					next = current.next();
+					
+					hasSub = next.is('ol');
+					isSub = !parent.is('#documenter_nav');
+					
+					// nav.find('ol:visible').not(parent).hide();
+					nav.find('ol:visible').not(parent).hide();
+
+					if(isSub){
+						parent.prev().addClass('current');
+						// parent.stop().show();
+						parent.stop().show();
+
+					}else if(hasSub){
+						// next.stop().show();
+						next.stop().show();
+					}
+//					win.bind('hashchange', hashchange);
+					return index;
+					break;
+
+				};
+			}
+		}
+
+		console.log(index);
+		if (index===oldIndex) {
+			 console.log("stay")
+			 console.log(oldIndex);
+			 oldIndex = index;
+		}else{
+			var title = $(".showtitle").find("span");
+// $(".current").parent("li").children("ol").css({
+// 	height: 'auto',
+// 	opacity: '1',
+// 	width:"auto"
+// });;
+$(".animate").removeClass('animate');
+$(".current").parent("li").children("ol").addClass('animate');
+			
+//			alert(text.replace(\(0-9)\));
+		console.log(index);
+		console.log(goodsTitle.eq(index-1).html());
+			title.hide();
+			
+			
+			title.html(goodsTitle.eq(index-1).html());
+			
+			title.fadeIn(500);
+			console.log("change");
+			console.log(oldIndex);
+			oldIndex = index;
+		};
+		
+	}
+	function savePos() {
+		var sectionselector = 'section';
+		
+		//Documentation has subcategories		
+		if(nav.find('ol').length){
+			sectionselector = '.section, h4';
+		}
+		//saving some information
+		sections = []
+		$(sectionselector).each(function(i,e){
+			var _this = $(this);
+			var p = {
+				id: this.id,
+				pos: _this.offset().top
+			};
+			sections.push(p);
+		});
+		// console.log(sections)
+	}
+			$('#close-slider').click(function () {
+	            $('.am-slider').slideUp('600')
+	            resizeFrame(true)
+	            savePos()
+	        })
+
+	// }
+	
+});

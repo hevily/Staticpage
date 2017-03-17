@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../css/base.css" />
+	<title>扫一扫</title>
+	<style type="text/css">
+		.container{
+			font-family: "microsoft yahei" ,"Helvetica Neue","Helvetica","Arial","sans-serif";
+			width:100%;
+			max-width:640px;
+			margin:0 auto;
+		}
+		.manage-items .entrance{
+			width: 33.33%;
+			float: left;
+			text-align: center;
+			padding-top: 15px;
+			padding-bottom: 5px;
+		}
+		.manage-items .entrance img{
+			width: 50px;
+		}
+		.manage-items .entrance:active{
+			background-color: rgba(0,0,0,0.1);
+		}
+		.manage-items .entrance p{
+			font-size: 14px;
+		}
+		.corner-num{
+			display: inline-block;
+			font-size: 0;
+			position: relative;
+		}
+		.corner-text{
+			display: none;
+			position: absolute;
+			height: 18px;
+			min-width: 18px;
+			padding: 2px;
+			right: -7px;
+			top: -7px;
+			font-size: 12px;
+			background-color: red;
+			border-radius: 50%;
+			line-height: 13px;
+			color: #fff;
+			text-align: center;
+		}
+		.newmsg .corner-text{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="container manage-items clearfix">
+		<ul class="manage-items">
+			<li>
+				<div class="entrance">
+					<div class="entxt">
+						<div class="corner-num">
+							<span class="corner-text">新</span>
+							<img src="../img/scan/1.png">
+						</div>
+						<p>扫码识别</p>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="entrance">
+					<div class="entxt">
+						<div class="corner-num">
+							<span class="corner-text">新</span>
+							<img src="../img/scan/2.png">
+						</div>
+						<p>手动输入</p>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<script>
+		document.body.addEventListener('touchstart',function () {})
+	</script>
+</body>
+</html>

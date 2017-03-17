@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<title>BD_Share</title>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="section">
+			<p>测试选择文字</p>
+			<img src="http://i.guancha.cn/news/2017/02/17/20170217105707266.jpg" id="img">
+		</div>
+		
+		<div class="sction">
+			<div class="bdsharebuttonbox share-box" data-tag="share_1">
+				<!-- 此处添加展示按钮 -->
+				<a href="#" class=" more" data-cmd="more"></a>
+				<a href="#" class=" weixin" data-cmd="weixin" title="分享到微信"></a>
+				<a href="#" class=" sina" data-cmd="tsina" title="分享到新浪微博"></a>
+				<a href="#" class=" facebook" data-cmd="fbook" title="分享到facebook"></a>
+			</div>
+
+			<script type="text/javascript">
+			var pic = document.getElementById('img').getAttribute('src');
+				window._bd_share_config={
+					common : {
+						//此处放置通用设置
+						bdPic:[pic]
+					}
+					,share : [
+						//此处放置分享按钮设置
+						{bdCustomStyle:"share_style/share.css"}
+					]
+				}
+				with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+			</script>
+		</div>
+	</div>
+	<footer></footer>
+	<script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+
+</body>
+</html>

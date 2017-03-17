@@ -1,0 +1,16 @@
+.flexslider{
+	margin:0;
+	border:none;
+}
+.flex-control-nav.flex-control-paging{
+	bottom:10px;	
+}
+
+
+.flex-control-paging li a{
+background-color:rgba(255,255,255,0.3);
+}
+
+.flex-control-paging li a.flex-active{
+	background-color:#fff;
+}

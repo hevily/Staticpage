@@ -1,0 +1,83 @@
+
+$(function(){
+	
+	function setSlider (goal,sliders,stores_id) {
+		var title,link,imgSrc,error_src="/statichtml/bjmovie01/estores/Public/images/home/4/nopic4.jpg";
+		$.each(sliders,function  (key,value) {
+			title  = this.promotion_name;
+			link   = "https://shop.yshjie.com/statichtml/bjmovie01/estores/Home/Cuxiao/product_list?stores_id="+stores_id+"&promotionid="+ this.promotionid+"&beginappi&action=newView&navbar=stores_home&endappi";
+			imgSrc ="/statichtml/bjmovie01/estores/Store/Public/img?id="+this.wfcollect_id+"&width=640&height=240&type=3";
+			var slider = "<li><a href='"+link+"'><img src ='"+imgSrc+"' alt='"+title+"'   onerror='this.src=&quot"+error_src+"&quot'  /></a></li>";
+			$(goal).append(slider);
+		});
+		
+		$.ajax({
+			url:"https://staticcdn.yshjie.com/cdn/librarypath/amazeui/AmazeUI-2.4.2/js/amazeui.min.js",
+			type:"get",
+			cache:true,
+			success: function () {
+				// console.log("轮播组件加载完毕")
+				if ($.flexslider) {
+					$(".am-slider").find(".spinner").remove();
+					$('.am-slider').flexslider({
+						// 设置用户操作后延时自动播放
+						playAfterPaused: 3000,
+						before: function(slider) {
+							if (slider._pausedTimer) {
+								window.clearTimeout(slider._pausedTimer);
+								slider._pausedTimer = null;
+							}
+						},
+						after: function(slider) {
+							var pauseTime = slider.vars.playAfterPaused;
+							if (pauseTime && !isNaN(pauseTime) && !slider.playing) {
+								if (!slider.manualPause && !slider.manualPlay && !slider.stopped) {
+									slider._pausedTimer = window.setTimeout(function() {
+										slider.play();
+									}, pauseTime);
+								}
+							}
+						}
+						// 设置其他参数
+					});
+				}else{
+					console.log("aborted");
+				};
+			}
+		});
+	}
+
+ 
+ 
+
+	//	请求地址
+	var stores_id=$("#stores_id").val();
+	$.post("/statichtml/bjmovie01/estores/Home/Cuxiao/stores_cuxiao_imgList?time="+Math.random(),{"stores_id":stores_id},function  (v) {
+		if(v.status==1){
+			setSlider(".am-slides",v.list,stores_id); //获取图片
+			resizeFrame(".am-slider");
+		}else{
+			 amAlert('warning',v.msg, 1500);
+		}
+		
+		
+	});
+
+});
+
+
+
+function loadImage(url, callback) {
+	var img = new Image(); //创建一个Image对象，实现图片的预下载
+	img.src = url;
+
+	if(img.complete) { // 如果图片已经存在于浏览器缓存，直接调用回调函数
+		callback.call(img);
+		// console.log("complete")
+		return; // 直接返回，不用再处理onload事件
+	}
+	img.onload = function () { //图片下载完毕时异步调用callback函数。
+		callback.call(img);//将回调函数的this替换为Image对象
+		// console.log("onload");
+	};
+};

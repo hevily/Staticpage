@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <!-- <link rel="stylesheet" type="text/css" href="/moviehelper/app/Public/normalize.min.css" /> -->
+	<title>会员卡详情</title>
+	<style type="text/css">
+		@charset "UTF-8";
+		* {
+		  margin: 0;
+		  padding: 0; }
+
+		.container {
+		  width: 100%;
+		  max-width: 640px;
+		  padding: 10px;
+		  margin: 0 auto;
+		  box-sizing: border-box; }
+
+		.credit-card-module {
+		  position: relative;
+		  border-radius: 10px;
+		  overflow: hidden;
+		  font-family: '微软雅黑'; }
+		  .credit-card-module .card-bg-img img {
+		    width: 100%;
+		    display: block; }
+		  .credit-card-module .card-top-text {
+		    position: absolute;
+		    top: 10px;
+		    left: 10px;
+		    right: 10px;
+		    bottom: 10px;
+		    overflow: hidden; }
+		  .credit-card-module.positioned-by-module .card-top-text .text-position {
+		    height: auto; color: #fff;}
+		    .credit-card-module.positioned-by-module .card-top-text .text-position.text-top {
+		      position: absolute;
+		      left: 0;
+		      right: 0;
+		      top: 0; }
+		    .credit-card-module.positioned-by-module .card-top-text .text-position.text-middle {
+		      position: absolute;
+		      left: 0;
+		      right: 0;
+		      top: 50%;
+		      margin-top: -15px; }
+		    .credit-card-module.positioned-by-module .card-top-text .text-position.text-bottom {
+		      position: absolute;
+		      left: 0;
+		      right: 0;
+		      bottom: 0; }
+		    .credit-card-module.positioned-by-module .card-top-text .text-position.text-left {
+		      text-align: left; }
+		    .credit-card-module.positioned-by-module .card-top-text .text-position.text-center {
+		      text-align: center; }
+		    .credit-card-module.positioned-by-module .card-top-text .text-position.text-right {
+		      text-align: right; }
+
+		/*# sourceMappingURL=credit-card.css.map */
+	</style>
+	<style type="text/css">
+		*{
+			font-family: '微软雅黑'
+		}
+		.white{
+			color: white;
+		}
+		.blue{
+			color: blue;
+		}
+		.yellow{
+			color: yellow;
+		}
+		h4{
+			margin:10px;
+		}
+		.box-shadow{
+			padding:30px;
+			background-color: #84B33F;
+		}
+		.box-shadow span{
+			font-size: 38px;
+			padding: 4px 8px;
+			color: #fff;
+			text-shadow: 1px 1px 0px rgba(0,0,0,0.4);
+			padding-bottom: 20px;
+			-webkit-text-stroke: 1px rgba(0,0,0,0.15);
+		}
+	</style>
+
+	<style type="text/css">
+		.card-code{
+
+		}
+		.card-code .card-barcode{
+			padding-top: 15px;
+		}
+		.card-code .card-barcode img{
+			width:100%;
+		}
+		.card-code .qrcore{
+			padding: 15px 0;
+			position: relative;
+			text-align: center;
+		}
+		.card-code .qrcore img{
+			width:40%;
+		}
+		.label {
+			height: 45px;
+			line-height: 45px;
+			border-top:1px solid #DADADA;
+		}
+		.label:active{
+			background-color: rgba(0,0,0,0.2)
+		}
+		.label a{
+			display: block;
+			text-decoration:none;
+			padding:0 10px;
+			color: #000;
+			font-size: 14px;
+			-webkit-tap-highlight-color:transparent;
+		}
+		.label a span{
+			float: right;
+			color: #686868;
+		}
+		.label a span img{
+			position: relative;
+			top: 2px;
+			width: 9px;
+		}
+
+
+		.card-radius{
+			border-radius: 15px;
+			/*border:1px solid #000;*/
+		}
+		.card-code{
+			-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=0, Color=#35FF1F)";/*IE 8*/
+			-moz-box-shadow: 0 2px 8px 2px rgba(0,0,0,0.1);/*FF 3.5+*/
+			-webkit-box-shadow: 0 2px 8px 2px rgba(0,0,0,0.1);/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+			box-shadow: 0 2px 8px 2px rgba(0,0,0,0.1);/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+			filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color=#35FF1F); /*IE 5.5-7*/
+		}
+
+		@media screen and(-webkit-min-device-pixel-ratio:2){
+			.border-half{
+				border-width:0.5px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<!-- 卡面 -->
+		<div class="section">
+			<div class="card-face card-radius">
+				<div class="credit-card-module positioned-by-module ">
+					<div class="card-bg-img">
+						<img src="../img/card-1.png" alt="卡面背景图片">
+					</div>
+					<div class="card-top-text">
+						<div>
+							<br/><br/><br/>
+							12341234
+							<p>p- 21341234</p>
+							<h2>h2 - 123oja;rkjle.com.cn </h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 卡背 -->
+		<div class="section">
+			<div class="card-code card-radius">
+				<div class="card-barcode">
+					<img src="../img/barcode.png">
+				</div>
+				<div class="qrcore">
+					<img src="../img/qrcore.png">
+				</div>
+				<div class="card-store-info">
+					<div class="label border-half">
+						<a href="javascript:;">
+							网上店铺
+							<span>
+								<img src="../img/card-info.png" alt="">
+							</span>
+						</a>
+					</div>
+					<div class="label border-half">
+						<a href="javascript:;">
+							优惠券
+							<span>
+							查看店铺优惠券
+								<img src="../img/card-info.png" alt="">
+							</span>
+						</a>
+					</div>
+					<div class="label border-half">
+						<a href="javascript:;">
+							附近门店
+							<span>
+							最近1.5公里
+								<img src="../img/card-info.png" alt="">
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer></footer>
+	<script>document.body.addEventListener('touchstart', function () { })</script>
+</body>
+</html>

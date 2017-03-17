@@ -15,6 +15,12 @@ html {
 body {
   font-family: "microsoft yahei" ,"Helvetica Neue","Helvetica","Arial","sans-serif"; }
 
+.container-fluid {
+  padding: 0 100px; }
+
+@media screen and (max-width: 840px) {
+  .container-fluid {
+    padding: 0 15px; } }
 @media (min-width: 768px) {
   .stay-top.navbar-default {
     background-color: transparent;

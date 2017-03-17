@@ -1,0 +1,15 @@
+#fp-nav li:last-child {
+  opacity: 0; }
+
+#fp-nav ul li a span {
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 6px;
+  height: 6px; }
+
+#fp-nav ul li a.active span {
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  margin: -6px 0 0 -4px; }
+
+/*# sourceMappingURL=fullpageset.css.map */

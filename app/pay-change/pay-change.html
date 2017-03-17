@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)https://shop.yshjie.com/statichtml/bjmovie01/estores/Home/PayIndex/get_parm -->
+<html class="js cssanimations"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<script>
+    window.scopeid = "4"
+</script>
+<script type="text/javascript" src="./pay-change_files/jquery-2.1.3.min.js.下载"></script>
+<script type="text/javascript" src="./pay-change_files/amazeui.min.js.下载"></script> 
+<script type="text/javascript" src="./pay-change_files/JSLang"></script>     
+<script type="text/javascript" src="./pay-change_files/base.js.下载"></script>
+<script type="text/javascript" src="./pay-change_files/laytpl.js.下载"></script>
+<!--<script type="text/javascript" src="/statichtml/bjmovie01/estores/mall/img/touch.js"></script>-->
+<script type="text/javascript" src="./pay-change_files/mall.js.下载"></script> 
+<!-- <script type="text/javascript" src="./pay-change_files/checkWeChat.js.下载"></script>   -->
+<script type="text/javascript" src="./pay-change_files/layer.js.下载"></script><link rel="stylesheet" href="./pay-change_files/layer.css" id="layui_layer_skinlayercss">    
+<link rel="stylesheet" type="text/css" href="./pay-change_files/amazeui.css">
+<link rel="stylesheet" type="text/css" href="./pay-change_files/mobile.css">
+<link rel="stylesheet" type="text/css" href="change.css">
+<title>支付</title>
+
+
+</head>
+<body>
+
+    <div class="backdrop0"></div>
+    <style>
+      .backdrop{position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index: 9;background-color: rgba(0,0,0,0.5);}
+
+      .main-paying {
+        background: #f9f9f9;
+        overflow: hidden;
+    }
+
+    .main-paying form {
+        margin: 0px;
+        overflow: hidden;
+    }
+    .main-paying .list-item {
+        padding: 0 0.5rem;
+    }
+
+    .main-paying .sure_btn {
+        text-align: center;
+        margin: 5px;
+    }
+
+    .main-paying .d-price {
+        text-indent: 1rem;
+        overflow: hidden;
+    }
+    .d-price p:nth-child(1){
+        font-weight:bold;
+        color:#A1A1A1 !important;
+    }
+    .d-price p:nth-child(1) span{
+        font-weight:normal;
+        color:#da6b00!important;
+    }
+    .d-price p:nth-child(2){
+        color:#00A835 !important;
+    }
+    .d-main{ margin-top:10px}
+
+    .main-paying .page-container{ margin: 0 0 0 -40px;}
+    .main-paying .page-container>li {
+        min-height: 80px;
+        padding: 12px 6px;
+        /*border-bottom: 1px solid #dbdbdb;*/
+        position: relative;
+    }
+    .main-paying .page-container>li .d p {
+        line-height: 24px;
+        color: #999;
+    }
+    .main-paying .font-num {
+        float: right;
+    }
+    .main-paying .page-container>li .d .d-main .d-area {
+        text-align: right;
+    }
+    .main-paying .page-container>li .d .d-main p {
+        font-size: 12px; color: #da6b00}
+        .main-paying .page-container>li .d .lianjie { margin:10px; display:block; height:50px; border-bottom: 1px solid #dbdbdb;}
+        .main-paying ul {
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            display: block;
+            list-style-type: disc;
+            -webkit-margin-before: 1em;
+            -webkit-margin-after: 1em;
+            -webkit-margin-start: 0px;
+            -webkit-margin-end: 0px;
+            -webkit-padding-start: 40px;
+        }
+
+        .main-paying .page-container {
+            margin: 0 0 0 -40px;
+        }
+
+        .dian {
+            height: 15px;
+            width: 100%;
+            background-image: url(/statichtml/bjmovie01/estores/Public/voucher/img/circle-1.png);
+            background-size: 18px 15px;
+            background-repeat: repeat-x;
+            margin-top: 6px;
+        }
+        .dian-1 {
+            height: 15px;
+            width: 100%;
+            background-image: url(/statichtml/bjmovie01/estores/Public/voucher/img/dian-1.png);
+            background-size: 7px 3px;
+            background-repeat: repeat-x;
+            margin-top: 6px;
+        }
+        .d-title-left,.items-tip{
+            height: 100%;
+            float: left;
+            width:65px;
+            font-weight: bold;
+            color: #2B2B2B;
+        }
+        .showordersn,.items-details{
+            height: 100%;
+            padding-left: 70px;
+            text-align: left;
+            color: #646464;
+            word-break: break-all;
+            padding-right: 10px;
+        }
+        .lianjie img{height: 30px;}
+        .lianjie p{position: relative;font-size: 18px;color: #3A3A3A !important;}
+        .lianjie span{width: 20px;height: 20px;background-color: #fff;border: 1px solid #C9C9C9;float: right;border-radius: 50%;transform:translateY(-50%);-webkit-transform:translateY(-50%);-moz-transform:translateY(-50%);-o-transform:translateY(-50%);position: absolute;top: 50%;right: 10px;}
+        .lianjie.selecting span{border: 1px solid #F36303;background-image: url(http://localhost/statichtml/bjmovie01/estores/Public/images/icon-svg/iconfont-check.svg);-webkit-background-size: contain;background-size: contain;background-repeat: no-repeat;background-color: #f36303;}
+        .page-container li:nth-child(3){border-bottom:1px solid #c9c9c9;padding: 10px 6px;}
+        .page-container li:nth-child(4){border-bottom:1px solid #c9c9c9;padding: 10px 6px;}
+        .list-item .item-title{font-size: 18px;color: #3a3a3a;}
+        .ecNav .nav-tit{font-weight: bold;}
+    </style>
+    <!-- new ui style -->
+    <style type="text/css">
+        /*media(img-text-description)*/
+               .media {  margin-top: 15px;}
+               .media:active {    background-color: #cfcfcf;}
+               .media:first-child {  margin-top: 0;}
+               .media,.media-body {  overflow: hidden;  zoom: 1;}
+               .media-body {  width: 10000px;  position: relative;}
+               .media-object {  display: block;  width: 75px;  height: 75px;}
+               .media-right img {    height: 18px;    width: 12px;}
+               .media-right,.media > .pull-right {  padding-left: 10px;}
+               .media-left,.media > .pull-left {  padding-right: 10px;}
+               .media-left,.media-right,.media-body {  display: table-cell;  vertical-align: top;}
+               .media-middle {vertical-align: middle;min-width: 40px;}
+               .media-bottom {  vertical-align: bottom;}
+               .media-heading {  margin-top: 0;  margin-bottom: 5px;}
+               .media-list {  padding-left: 0;  list-style: none;}
+                 .lrs{line-height: 45px;position: relative;}
+                 .lrs:active{background-color: #cfcfcf;}
+                 .lrsl{float: left;width: 100px;top: 50%;position: absolute;-webkit-transform:translateY(-50%);transform:translateY(-50%);}
+                 .lrsm{margin: 0 0px 0 100px; }
+                 .lrsm span{float: right;}
+                 .lrsm .lrsi img{width: 10px;position: relative;top:3px;margin-left: 5px;  }
+               /*End media*/
+
+
+
+
+               .main-paying .page-container>li {
+                       border-bottom: 1px solid #C9C9C9;
+                       margin-bottom: 10px;
+                       border-top: 1px solid #C9C9C9;
+                       background-color: #fff;
+                       /* padding-right: 0; */
+                       padding: 0 0 0 14px;
+                   }
+
+                   li {}
+
+                   .main-paying .page-container>li:nth-child(1) {
+                       border-top: none;
+                   }
+
+                   h3.d-title {
+                       font-size: 14px;
+                       font-weight: normal;
+                       line-height: 45px;
+                       border-bottom: 1px solid #eaeaea;
+                   }
+
+                   .main-paying .d-price {
+                       font-size: 12px;
+                       /* border-top: 1px solid #EAEAEA; */
+                   }
+
+                   .d-price p:nth-child(1) {
+                       font-weight: normal;
+                   }
+
+                   .main-paying .list-item {
+                       padding: 0;
+                   }
+
+               span.font-num {}
+
+               .main-paying .page-container>li .d p {
+                   line-height: 27px;
+                   color: #323232 !important;
+                   font-size: 12px;
+                   text-indent: 0;
+                   padding-right: 10px;
+               }
+
+               .d-price p:nth-child(1) span {
+                   color: inherit !important;
+               }
+
+               .main-paying .page-container>li .d .d-main .d-area {
+                   text-align: left;
+                   /* font-size: 14px; */
+               }
+
+               .main-paying .page-container>li .d .d-main .d-area span {
+                   float: right;
+               }
+
+               p#totalPrice {
+                   font-size: 14px;
+                   height: 45px;
+                   border-top: 1px solid #EAEAEA;
+                   line-height: 45px;
+               }
+
+               .d-main {
+                   margin-top: 0;
+               }
+
+               #totalPrice span {
+                   color: #f36303;
+                   font-weight: bold;
+               }
+
+               p.d-price.post-info.border-top {}
+
+               .main-paying .page-container>li .d p.post-info {
+                   /* border: none; */
+               }
+
+               .main-paying .page-container>li .d p.post-info.border-top {
+                   /* border-top: 1px solid #eaeaea; */
+               }
+               button#paying_sub {
+                   background-color: #3F3F3F;
+                   border: none;
+                   border-radius: 5px;
+                   font-size: 16px;
+               }
+
+               .main-paying .page-container>li .d .lianjie {
+                   margin: 0px 0px 0 10px;
+                   height: auto;
+               }
+
+               .main-paying .page-container>li .d .lianjie:last-child {
+                   /* margin-bottom: -1px; */
+                   border: none;
+               }
+
+               .lianjie span {
+                   right: auto;
+                   top: auto;
+                   position: relative;
+                   display: block;
+                   transform: translateY(0);
+                   right: 10px;
+               }
+
+               .lianjie img {
+                   height: 31px;
+               }
+
+               .media-left img {
+                   /* width: 75px; */
+                   /* height: 75px; */
+                   /* position: relative; */
+               }
+
+               .media-left.media-middle {
+                   min-width: 60px;
+                   /* height: 75px; */
+               }
+               p.pay-name {
+                   font-size: 15px !important;
+                   line-height: 18px !important;
+               }
+
+               p.way-desc {
+                   font-size: 10px !important;
+                   line-height: 14px !important;
+               }
+
+               .meida {
+                   padding-bottom: 8px;
+                   padding-top: 8px;
+                   border-bottom: 1px solid #eaeaea;
+               }
+
+
+               div.bank-sign {
+                   position: absolute;
+                   right: 0;
+                   top: 50%;
+                   transform: translateY(-50%);
+                   font-size: 0;
+               }
+
+               .lianjie img.bank-sign {
+                   height: 20;
+                   height: 20px;
+                   margin-left: 3px;
+               }
+
+    </style>
+     <!-- End change -->
+    <div class="wrap">
+
+        <div class="main main-paying">
+            <form action="https://shop.yshjie.com/statichtml/bjmovie01/estores/Home/PayIndex/index" method="post" id="payForm" name="payForm">
+                <ul style="margin: 0px;">
+                    <div class="page-container">
+
+                        <li>
+                            <div class="list-item">
+                                <div class="d"><a href="https://shop.yshjie.com/statichtml/bjmovie01/estores/Home/PayIndex/get_parm#" title=""><h3 class="d-title">购物清单：</h3></a>
+                                    <div class="d-price">
+                                        <p>红西柚<span class="font-num"> x 1/份</span></p>
+                                        <p>&nbsp;&nbsp;红西柚<span class="font-num"> x 1/份</span></p><p>&nbsp;&nbsp;红西柚<span class="font-num"> x 1/份</span></p></div>                                        <div class="d-main">
+                                        <!-- change -->
+                                        <div>
+                                            <p class="d-area">商品<span>¥ 1500</span></p>
+                                            <p class="d-area">运费<span>¥ 20.00</span></p>
+                                        </div>
+                                        <p class="d-area" id="totalPrice">总计<span>¥ 23.68</span></p>
+                                        <!-- End change -->
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="list-item">
+                                <div class="d"><a href="javascript:;" title=""><h3 class="d-title">收货人信息：</h3></a>
+                                   <!--送货上门-->
+                                   <!-- change -->
+                                   <p class="d-price post-info border-top">雷春华 18628820460</p>
+                                   <p class="d-price post-info">中国,北京,北京,朝阳区   竞园</p>
+                                   <!-- End change -->
+                               </div>
+                           </div>
+                       </li>
+                       <!-- 如果支付是0元  要 不显示 支付方式 -->
+                       <li style="padding:0;">
+                        <div class="list-item" style="padding:0;">
+                            <div class="d" id="payList">
+                                <a href="javascript:;" title="">
+                                    <h3 class="d-title" style="border-bottom:1px solid #c9c9c9;text-indent:10px;font-size:14px;font-weight:normal;background-color:#F9F9F9;color:#9D9D9D;">
+                                        选择支付方式                                </h3>
+                                    </a>
+                                    <!-- change -->
+
+                                    <div class="lianjie" >
+                                        <div class="meida">
+                                            <div class="media-left media-middle">
+                                                <img src="img/applepay@2x.png" alt="ApplePay">
+                                            </div>
+                                            <div class="media-body media-middle">
+                                                <p class="pay-name">ApplePay</p>
+                                                <!-- <p class="way-desc">未安装PayPal APP，可选择网</p> -->
+                                                <div class="bank-sign">
+                                                    <img class="bank-sign" src="img/visa@2x.png" title="master_sign">
+                                                    <img class="bank-sign" src="img/master@2x.png" title="master_sign">
+                                                    <img class="bank-sign" src="img/express@2x.png" title="master_sign">
+                                                    <img class="bank-sign" src="img/discover@2x.png" title="master_sign">
+                                                </div>
+                                            </div>
+                                            <div class="media-right media-middle">
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                        <div class="meida">
+                                            <div class="media-left media-middle">
+                                                <img src="img/androidpay@2x.png" alt="Android—Pay">
+                                            </div>
+                                            <div class="media-body media-middle">
+                                                <p class="pay-name">Android Pay</p>
+                                                <!-- <p class="way-desc">未安装PayPal APP，可选择网</p> -->
+                                                <div class="bank-sign">
+                                                    <img class="bank-sign" src="img/visa@2x.png" title="master_sign">
+                                                    <img class="bank-sign" src="img/master@2x.png" title="master_sign">
+                                                    <img class="bank-sign" src="img/express@2x.png" title="master_sign">
+                                                    <img class="bank-sign" src="img/discover@2x.png" title="master_sign">
+                                                </div>
+                                            </div>
+                                            <div class="media-right media-middle">
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                        <div class="meida">
+                                            <div class="media-left media-middle">
+                                                <img src="img/creditcard@2x.png" alt="Creditcard">
+                                            </div>
+                                            <div class="media-body media-middle">
+                                                <p class="pay-name">信用卡</p>
+                                                <!-- <p class="way-desc">未安装PayPal APP，可选择网</p> -->
+                                                <div class="bank-sign">
+                                                    <img class="bank-sign" src="img/visa@2x.png" title="master_sign">
+                                                    <img class="bank-sign" src="img/master@2x.png" title="master_sign">
+                                                    <img class="bank-sign" src="img/express@2x.png" title="master_sign">
+                                                    <img class="bank-sign" src="img/discover@2x.png" title="master_sign">
+                                                </div>
+                                            </div>
+                                            <div class="media-right media-middle">
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                        <div class="meida">
+                                            <div class="media-left media-middle">
+                                                <img src="img/alipay@2x.png" alt="Creditcard">
+                                            </div>
+                                            <div class="media-body media-middle">
+                                                <p class="pay-name">支付宝</p>
+                                            </div>
+                                            <div class="media-right media-middle">
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                        <div class="meida">
+                                            <div class="media-left media-middle">
+                                                <img src="img/WeChatpay@2x.png" alt="Creditcard">
+                                            </div>
+                                            <div class="media-body media-middle">
+                                                <p class="pay-name">微信</p>
+                                            </div>
+                                            <div class="media-right media-middle">
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                        <div class="meida">
+                                            <div class="media-left media-middle">
+                                                <img src="img/upcash@2x.png" alt="Creditcard">
+                                            </div>
+                                            <div class="media-body media-middle">
+                                                <p class="pay-name">银联</p>
+                                            </div>
+                                            <div class="media-right media-middle">
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                        <div class="meida">
+                                            <div class="media-left media-middle">
+                                                <img src="img/PayPal@2x.png" alt="Creditcard">
+                                            </div>
+                                            <div class="media-body media-middle">
+                                                <p class="pay-name">PayPal</p>
+                                            </div>
+                                            <div class="media-right media-middle">
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                        <div class="meida" style="border:none;">
+                                            <div class="media-left media-middle">
+                                                <img src="img/PayPal-web@2x.png" alt="Creditcard">
+                                            </div>
+                                            <div class="media-body media-middle">
+                                                <p class="pay-name">PayPal</p>
+                                                <p class="way-desc">未安装PayPal APP，可选择网页支付</p>
+                                            </div>
+                                            <div class="media-right media-middle">
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                        <!-- End change -->
+
+                                    <!-- <div class="lianjie" data-xrate="0" data-tplpay_id="1">
+                                        <p>
+                                            <img src="./pay-change_files/alipay.png" alt="APP 支付宝">
+                                            APP 支付宝                                            <span></span>
+                                        </p>
+                                        <label hidden=""><input type="radio" name="paytype" value="AlipayApp"> <span>APP 支付宝</span>
+                                        </label>
+                                    </div>
+                                    <div class="lianjie" data-xrate="0" data-tplpay_id="5">
+                                        <p>
+                                            <img src="./pay-change_files/WeChat_pay.png" alt="微信支付">
+                                            微信支付
+                                            <span></span>
+                                        </p>
+                                        <label hidden=""><input type="radio" name="paytype" value="weipay"> <span> 微信支付</span></label>
+                                    </div>
+                                    <div class="lianjie" data-xrate="0" data-tplpay_id="2">
+                                        <p>
+                                            <img src="./pay-change_files/upcash.png" alt="银联支付">
+                                            银联支付                                            <span></span>
+                                        </p>
+                                        <label hidden=""><input type="radio" name="paytype" value="upop"> <span> 银联支付</span></label>
+                                    </div>
+
+                                    <div class="lianjie" data-xrate="0" data-tplpay_id="2">
+                                        <p>
+                                            <img src="./pay-change_files/upcash.png" alt="网页银联支付">
+                                            网页银联支付                                            <span></span>
+                                        </p>
+                                        <label hidden=""><input type="radio" name="paytype" value="upopMobile"> <span>网页银联支付</span>
+                                        </label>
+                                    </div> -->
+
+                                </div>
+                            </div>
+                        </li>                <!-- 如果支付是0元  要 不显示 支付方式 -->
+                    </div>
+                </ul>
+                <p class="sure_btn">
+                    <input type="hidden" name="ordersn" value="17ECF3FEC1CAA7302A35F0C8C97AE712">
+                    <input type="hidden" name="user_order_id" value="185833">
+                    <input type="hidden" name="total" value="23.68">
+                    <input type="hidden" name="tn" value="">
+                    <button class="am-btn am-btn-primary am-btn-lg" id="paying_sub" type="button">提交并支付</button>
+
+                    <input type="hidden" id="lang_total" value="总计"> <!--总计-->
+                    <input type="hidden" id="lang_select_pay" value="选择支付方式"> <!--选择支付方式-->
+                    <input type="hidden" id="lang_hqsjsb" value="获取数据失败"> <!--获取数据失败-->
+                    <input type="hidden" id="lang_znzappzjxzf" value="只能在app中进行支付"> <!--只能在app中进行支付-->
+                </p>
+
+            </form>
+
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+			loadImgNew(".voucher_thumb");  //代金券图片异步加载
+
+		//不在app打开，不让支付，判断scope_id 是否存在
+        var scopeid="4";
+        if(!scopeid){
+           amAlert('warning', $("#lang_znzappzjxzf").val());
+					$(".backdrop0").addClass("backdrop");//加遮罩
+				}
+
+
+
+        // 清除选择
+        $("#payList input:checked").each(function (i, e) {
+            $(e).prop("checked", false);
+        });
+        function org_price(total, xrate) {
+            if (!xrate) {
+                xrate = 1;
+            }
+            return Number(total * xrate).toFixed(2);
+        }
+        $("#payList input").on("click", function () {
+            return false;
+        });
+        $("#payList .lianjie").on("click", function () {
+         layer.load();
+         $("#paying_sub").prop("disabled", true);
+         $(".selecting").removeClass("selecting");
+         $(this).addClass("selecting");
+         var $obj = $(this);
+         var order_sn = $("input[name='ordersn']").val()
+         var tplpay_id = $(this).data("tplpay_id");
+         var url = "/statichtml/bjmovie01/estores/PayIndex/switchTplPayId.html";
+         var typeflg = $(this).find("input").val();
+			var lang_total=$("#lang_total").val();  //总计
+            var data = {};
+            data.tplpay_id = tplpay_id;
+            data.order_sn = order_sn;
+			//{tplpay_id: 7, order_sn: "826FDEDCAE1F5EFE279268B8180CD1FA"}
+
+            $.ajax({
+
+                type: 'post',
+                url: url,
+                data: data,
+
+                success: function (response) {
+                   var index = layer.load();
+                   layer.close(index);
+                   if (response.status == 1) {
+                    $obj.find("input").prop("checked", true);
+                    $("#totalPrice").text(lang_total+"：" + response.data.org_price + "(" + response.data.org_curr_name + ")");
+						 $("#voucher_totalPrice").text(response.data.org_price + "(" + response.data.org_curr_name + ")");//代金券选择支付方式后的价格
+
+                         $("input[name='total']").val(response.data.org_price);
+                         $(".showordersn").html(response.data.newSn);
+                         $("input[name='ordersn']").val(response.data.newSn);
+
+
+
+                         if (tplpay_id == '2' && typeflg == "upop") {
+                            //这是银联支付
+                            //获取tn
+                            $("#paying_sub").prop("disabled", true);
+                            $.post("/statichtml/bjmovie01/estores/Home/PayIndex/createTn", {order_sn: response.data.newSn, total_price: response.data.org_price}, function (res) {
+                                if (res.status == "1") {
+                                    $("input[name='tn']").val(res.tn);
+                                    $("#paying_sub").prop("disabled", false);
+                                } else {
+                                    amAlert('warning', $("#lang_hqsjsb").val(), 3000);
+                                }
+                            });
+                        }else{
+
+                        	$("#paying_sub").prop("disabled", false);
+                        }
+                    }else{
+                      amAlert('warning',response.msg, 3000);
+                  }
+              }
+          });
+        });
+        //支付按钮
+//      $("#payList .lianjie").on("click", function () {
+//        $(this).find("input").prop("checked", true);
+//        var xrate = $(this).data("xrate");
+//        var v = $(this).find("input").attr("value");
+//        var total = Number($("input[name='total']").val());
+//        var $totalPrice = $("#totalPrice");
+//        var s = '';
+//        switch (v) {
+//          case "AlipayApp":
+//            s = '合计：¥' + total + '元(RMB)';
+//            break;
+//          case "AlipayMobile":
+//            s = '合计：¥' + total + '元(RMB)';
+//            break;
+//          case "weipay":
+//            s = '合计：¥' + total + '元(RMB)';
+//            break;
+//          case "palpay":
+//            s = '合计：' + org_price(total,xrate) + '港元(HKD)';
+//          case "palpayApp":
+//            s = '合计：' + org_price(total,xrate) + '港元(HKD)';
+//            break;
+//        }
+//        $totalPrice.html(s);
+//      });
+
+$("#payForm").on("click", "#paying_sub", function () {
+   var total = Number($("input[name='total']").val());
+   var checkauth = '8ADE5D2F60CFFCA9EC0F9ED325755491';
+   if(total == 0){
+       var need_paytype = 8;
+   }else{
+       if ($("#payList input:checked").length === 0) {
+					// 提示：选择支付方式
+                    amAlert('warning', $("#lang_select_pay").val(), 3000);
+                    return false;
+                }
+                var need_paytype = $("#payList input:checked").val();
+            }
+
+            var ordersn = $("input[name='ordersn']").val();
+            var user_order_id = $("input[name='user_order_id']").val();
+            var tn = $("input[name='tn']").val();
+            var ordertype = "1";
+
+            $(this).prop("disabled", true);
+            //支付日志
+            $.post("/statichtml/bjmovie01/estores/PayIndex/createSyncPayNotify.html", {user_order_id: user_order_id,order_sn: ordersn, paytype:need_paytype, total: total}, function (v) {
+                switch(ordertype){
+                   case "2":
+                   var new_location = location.href.replace("?beginappi&action%3DnewView&ordertype%3D2&endappi", "");
+	                //支付前判断代金券库存
+	                var goods_id = "";
+	                var number = "";
+	                $.post("/statichtml/bjmovie01/estores/Home/Voucher/checkAjaxStock2.html", {goods_id: goods_id, number: number,type:1}, function (v) {
+
+                       if (v.status == 1) {
+                           if (v.limit_buy_attr.limit_buy) {
+
+                               if (number > v.limit_buy_attr.limit_buy_num && v.limit_buy != 0) {
+                                   amAlert("warning", "该代金券每人限购" + v.limit_buy_attr.limit_buy + "张，您已购买过" + v.limit_buy_attr.limit_buy_also + "张，当前购买数量已超数，无法支付，请取消订单，重新购买~~", 3000);
+                                   return false;
+                               }
+                           }
+
+                           if ($("#payList input:checked").val() === 'AlipayApp') {
+                               location.href = new_location.replace("?beginappi&action=pay&.*&endappi", "") + "?paymethod=alipay&" + appiStr("action=pay&paytype=alipay&subject=支付宝支付&total=" + total + "&ordersn=" + ordersn);
+                               return false;
+                           }
+                           if ($("#payList input:checked").val() === 'palpayApp') {
+                               location.href = new_location.replace("?beginappi&action=pay&.*&endappi", "") + "?paymethod=palpay&" + appiStr("action=pay&paytype=palpay&subject=palpay支付&total=" + total + "&ordersn=" + ordersn);
+                               return false;
+                           }
+                           if ($("#payList input:checked").val() === 'weipay') {
+	                        	//$.post("/statichtml/bjmovie01/estores/Home/PayIndex/wxprepay",{ordersn:ordersn},function(ress){
+	                        	//	location.href = new_location.replace("?beginappi&action=pay&.*&endappi", "") + "?paymethod=weipay&" + appiStr("action=pay&paytype=weipay&subject=微信支付&total=" + total + "&ordersn=" + ordersn+"&prepayid="+ress.prepayid+"&noncestr="+ress.noncestr+"&sign="+ress.sign+"&timestamp="+ress.timestamp);
+	                        	//});
+	                        	location.href = new_location.replace("?beginappi&action=pay&.*&endappi", "") + "?paymethod=weipay&" + appiStr("action=pay&paytype=weipay&subject=微信支付&total=" + total + "&ordersn=" + ordersn);
+	                        	return false;
+	                        }
+	                        if ($("#payList input:checked").val() === 'upop') {
+                               location.href = new_location.replace("?beginappi&action=pay&.*&endappi", "") + "?paymethod=upop&" + appiStr("action=pay&paytype=upop&subject=银联支付&total=" + total + "&ordersn=" + ordersn + "&tn=" + tn);
+                               return false;
+                           }
+                           if ($("#payList input:checked").val() === 'bcredit') {
+                               location.href = new_location.replace("?beginappi&action=pay&.*&endappi", "") + "?paymethod=braintree&" + appiStr("action=pay&paytype=bcredit&subject=braintree支付&total=" + total + "&ordersn=" + ordersn);
+                               return false;
+                           }
+                           if ($("#payList input:checked").val() === 'baap') {
+                               location.href = new_location.replace("?beginappi&action=pay&.*&endappi", "") + "?paymethod=braintree&" + appiStr("action=pay&paytype=baap&subject=braintree支付&total=" + total + "&ordersn=" + ordersn);
+                               return false;
+                           }
+                           if ($("#payList input:checked").val() === 'offlinepay') {
+                              $.post("/statichtml/bjmovie01/estores/Home/PayIndex/offlinepay",{order_sn:ordersn,check_formauth:checkauth},function(res){
+                                if(res.status == '1'){
+                                   amAlert("success", "下单成功", 2000);
+                                   if(res.msg == 'chuzhika'){
+                                      setTimeout("window.location='/statichtml/bjmovie01/estores/Voucher/account/index'",2000)
+                                  }else if(res.msg == 'youhuiquan'){
+                                      setTimeout("window.location='/statichtml/bjmovie01/estores/Voucher/Index/ywlist'",2000)
+                                  }else{
+                                      setTimeout("window.location='/statichtml/bjmovie01/estores/Voucher/index'",2000)
+                                  }
+                              }else{
+                                amAlert("warning", res.msg, 3600000);
+                            }
+                        });
+                              return false;
+                          }
+                          payForm.submit();
+                          return false;
+                      } else {
+                       amAlert("warning", v.msg+"&nbsp;&nbsp;&nbsp;&nbsp;<input type='button' id='error_history2'  style='color: #e56c0c;border: none;padding: 4px 15px;border-radius: 5px;' value='返回' />", 3600000);
+	                        return false; //库存不足，给予提示！
+	                    }
+	                })
+return falae;
+break;
+
+case "3":
+if(total == 0){
+   $.post("/statichtml/bjmovie01/estores/Home/PayIndex/internalpay",{order_sn:ordersn,check_formauth:checkauth},function(res){
+     if(res.status == '1'){
+         window.location="/statichtml/bjmovie01/estores/Home/Cart/nowpaylist";
+     }else{
+         amAlert("warning", res.msg, 3600000);
+     }
+ });
+   return false;
+}
+var new_location = location.href.replace("?beginappi&action%3DnewView&ordertype%3D3&endappi", "");
+if ($("#payList input:checked").val() === 'AlipayApp') {
+   location.href = new_location.replace("?beginappi&action=pay&.*&endappi", "") + "?paymethod=alipay&" + appiStr("action=pay&paytype=alipay&subject=支付宝支付&total=" + total + "&ordersn=" + ordersn);
+   return false;
+}
+if ($("#payList input:checked").val() === 'palpayApp') {
+   location.href = new_location.replace("?beginappi&action=pay&.*&endappi", "") + "?paymethod=palpay&" + appiStr("action=pay&paytype=palpay&subject=palpay支付&total=" + total + "&ordersn=" + ordersn);
+   return false;
+}
+if ($("#payList input:checked").val() === 'weipay') {
+   location.href = new_location.replace("?beginappi&action=pay&.*&endappi", "") + "?paymethod=weipay&" + appiStr("action=pay&paytype=weipay&subject=微信支付&total=" + total + "&ordersn=" + ordersn);
+   return false;
+}
+if ($("#payList input:checked").val() === 'upop') {
+   location.href = new_location.replace("?beginappi&action=pay&.*&endappi", "") + "?paymethod=upop&" + appiStr("action=pay&paytype=upop&subject=银联支付&total=" + total + "&ordersn=" + ordersn + "&tn=" + tn);
+   return false;
+}
+if ($("#payList input:checked").val() === 'bcredit') {
+    location.href = new_location.replace("?beginappi&action=pay&.*&endappi", "") + "?paymethod=braintree&" + appiStr("action=pay&paytype=bcredit&subject=braintree支付&total=" + total + "&ordersn=" + ordersn);
+    return false;
+}
+if ($("#payList input:checked").val() === 'baap') {
+    location.href = new_location.replace("?beginappi&action=pay&.*&endappi", "") + "?paymethod=braintree&" + appiStr("action=pay&paytype=baap&subject=braintree支付&total=" + total + "&ordersn=" + ordersn);
+    return false;
+}
+payForm.submit();
+return false;
+
+break;
+default:
+					//普通商品 支付前表单验证
+                   var new_location = location.href;
+                   $.post("/statichtml/bjmovie01/estores/Home/Cart/check_order_goods_item.html", {order_sn: ordersn}, function (v) {
+                       if (v.status == 1) {
+                          if(total == 0){
+                              $.post("/statichtml/bjmovie01/estores/Home/PayIndex/internalpay",{order_sn:ordersn,check_formauth:checkauth},function(res){
+                                if(res.status == '1'){
+                                    window.location="/statichtml/bjmovie01/estores/Home/Cart/orderlist/what/Paied";
+                                }else{
+                                    amAlert("warning", res.msg, 3600000);
+                                }
+                            });
+                              return false;
+                          }
+
+                          if ($("#payList input:checked").val() === 'AlipayApp') {
+
+                           location.href = new_location.replace("?beginappi&action=pay&.*&endappi", "") + "?paymethod=alipay&" + appiStr("action=pay&paytype=alipay&subject=支付宝支付&total=" + total + "&ordersn=" + ordersn);
+                           return false;
+                       }
+                       if ($("#payList input:checked").val() === 'palpayApp') {
+                           location.href = new_location.replace("?beginappi&action=pay&.*&endappi", "") + "?paymethod=palpay&" + appiStr("action=pay&paytype=palpay&subject=palpay支付&total=" + total + "&ordersn=" + ordersn);
+                           return false;
+                       }
+                       if ($("#payList input:checked").val() === 'weipay') {
+	                        	//$.post("/statichtml/bjmovie01/estores/Home/PayIndex/wxprepay",{ordersn:ordersn},function(ress){
+	                        	//	location.href = new_location.replace("?beginappi&action=pay&.*&endappi", "") + "?paymethod=weipay&" + appiStr("action=pay&paytype=weipay&subject=微信支付&total=" + total + "&ordersn=" + ordersn+"&prepayid="+ress.prepayid+"&noncestr="+ress.noncestr+"&sign="+ress.sign+"&timestamp="+ress.timestamp);
+	                        	//});
+	                        	location.href = new_location.replace("?beginappi&action=pay&.*&endappi", "") + "?paymethod=weipay&" + appiStr("action=pay&paytype=weipay&subject=微信支付&total=" + total + "&ordersn=" + ordersn);
+	                        	return false;
+	                        }
+	                        if ($("#payList input:checked").val() === 'upop') {
+                               location.href = new_location.replace("?beginappi&action=pay&.*&endappi", "") + "?paymethod=upop&" + appiStr("action=pay&paytype=upop&subject=银联支付&total=" + total + "&ordersn=" + ordersn + "&tn=" + tn);
+                               return false;
+                           }
+                           if ($("#payList input:checked").val() === 'bcredit') {
+                               location.href = new_location.replace("?beginappi&action=pay&.*&endappi", "") + "?paymethod=braintree&" + appiStr("action=pay&paytype=bcredit&subject=braintree支付&total=" + total + "&ordersn=" + ordersn);
+                               return false;
+                           }
+                           if ($("#payList input:checked").val() === 'baap') {
+                               location.href = new_location.replace("?beginappi&action=pay&.*&endappi", "") + "?paymethod=braintree&" + appiStr("action=pay&paytype=baap&subject=braintree支付&total=" + total + "&ordersn=" + ordersn);
+                               return false;
+                           }
+                           if ($("#payList input:checked").val() === 'offlinepay') {
+                              $.post("/statichtml/bjmovie01/estores/Home/PayIndex/offlinepay",{order_sn:ordersn,check_formauth:checkauth},function(res){
+                                if(res.status == '1'){
+                                   amAlert("success", "下单成功", 2000);
+                                   setTimeout("window.location='/statichtml/bjmovie01/estores/Home/Cart/orderlist/what/Paied'",2000)
+                               }else{
+                                amAlert("warning", res.msg, 3600000);
+                            }
+                        });
+                              return false;
+                          }
+                          payForm.submit();
+                      } else {
+                       amAlert("warning", v.msg+"&nbsp;&nbsp;&nbsp;&nbsp;<input type='button' id='error_history1'  style='color: #e56c0c;border: none;padding: 4px 15px;border-radius: 5px;' value='返回' />", 3600000);
+	                        return false; //库存不足，给予提示！
+	                    }
+	                })
+return falae;
+
+
+}
+
+
+});
+});
+
+		//跳转商品未支付 页面
+     $("body").on("click", "#error_history1", function () {
+        location.href='/statichtml/bjmovie01/estores/Home/Cart/orderlist/what/Nopay';
+    })
+		//跳转代金券未支付页面
+     $("body").on("click", "#error_history2", function () {
+        location.href='/statichtml/bjmovie01/estores/Home/Cart/orderlist/what/Nopay_voucher';
+    })
+
+ });
+
+</script>
+
+
+
+<div class="clear"></div>
+
+</body></html>

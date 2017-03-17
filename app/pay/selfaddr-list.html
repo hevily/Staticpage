@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="./pay_files/base.css" />
+	<title>自提点选择</title>
+	<style type="text/css">
+	ul, ol{ padding:0	
+	}
+		.addrlist{
+			-webkit-overflow-scolling:touch;
+			font-family: 'microsoft-yahei','微软雅黑';
+			padding-top: 35px;
+		}
+		.addrlist ul li.halfborder{
+			padding:10px;
+			padding-right: 0;
+			border-bottom: 1px solid #cfcfcf;
+		}
+		.addrlist ul li:nth-child(even){
+			background-color: rgba(7,17,27,0.05);
+		}
+		.addrlist ul li .name,
+		.addrlist ul li .addr,
+		.addrlist ul li .phone,
+		.addrlist ul li .business-time
+		{
+			line-height: 26px;
+			clear:both;
+		}
+		.addrlist ul li .name .media-left,
+		.addrlist ul li .addr .media-left,
+		.addrlist ul li .phone .media-left,
+		.addrlist ul li .business-time .media-left
+		{
+			color: #909090;
+			display: inline-block;
+			float: left;
+		}
+		.addrlist ul li .name .media-body,
+		.addrlist ul li .addr .media-body,
+		.addrlist ul li .phone .media-body,
+		.addrlist ul li .business-time .media-body
+		{
+			color: #2b2b2b;
+		}
+		.addrlist ul li .name .chooseaddr{
+			vertical-align: middle;
+			margin-top:-3px;
+		}
+		.addrlist .media-right{
+			min-width:40px;
+			padding-left: 0;
+		}
+		.addrlist .media-right img{
+			width:40px;
+			height: 40px;
+			padding:8px;
+		}
+		.addrlist li .media .addr .location-distance{
+			color: #9c9c9c;
+			float: right;
+			position: relative;
+			right: 10px;
+		}
+		.addrlist .media:active {
+		    background-color: transparent;
+		}
+		.addrlist .media .media-left{
+			/*min-width: 46px;*/
+			word-break: keep-all;
+		}
+		.addrlist .halfborder{
+			border-bottom: 1px solid #cfcfcf;
+		}
+		.activebtn:active{
+		  background-color: rgba(7,17,27,0.4);
+		}
+		@media (-webkit-min-device-pixel-ratio:2){
+			.addrlist .halfborder{
+				border-width: 0.5px;
+			}
+			.addrlist ul li.halfborder{
+				border-width: 0.5px;
+			}
+		}
+		.addrlist ul li .name{
+			font-size: 16px;
+		}
+		/*.addrlist ul li .addr .media-left,*/
+		.addrlist ul li .phone ,
+		.addrlist ul li .business-time {
+			font-size: 14px;
+		}
+		.addrlist ul li.chose .name,
+		.addrlist ul li.chose .addr .media-left,
+		.addrlist ul li.chose .phone .media-left,
+		.addrlist ul li.chose .business-time .media-left{
+			color: #f36303;
+
+		}
+		
+		.sure-one-addr{
+			display: block;
+			width:160px;
+			height: 50px;
+			line-height: 50px;
+			margin:35px auto;
+			border:1px solid #f36303;
+			text-align: center;
+			border-radius: 5px;
+			background-color: #f36303;
+			color: #fff;
+			outline: none;
+			-webkit-tap-highlight-color: rgba(0,0,0,0);
+		}
+		.sure-one-addr:active{
+			background-color: #fff;
+			color: #f36303;
+		}
+	</style>
+	<style type="text/css">
+		    .chooseaddr {
+		    display: inline-block;
+		    border-radius: 50%;
+		    border:1px solid #f36303;
+		    margin-right: 10px;
+		    width: 20px;
+		    height: 20px;
+		    vertical-align: top;
+		}
+		.chose .chooseaddr {
+		    border:none;
+		    background-color: #f36303 !important;
+		    background: url(/statichtml/bjmovie01/estores/Public/images/icon-svg/iconfont-check.svg) 0px 0px no-repeat #bf9153;
+		    background-size: contain;
+		}
+	</style>
+	<!-- refresh style -->
+	<style type="text/css">
+		/*search-bar 开始	*/
+			.search-bar{position: fixed;top: 0;width:100%;max-width: 640px;z-index: 9; height: 35px;background-color: #F4F4F4;text-align: center;padding: 5px;border-bottom: 1px solid #E5DCD5;color: #3F3F3F;}
+			.search-bar .location-btn img{
+				height: 14px;
+				position: absolute;
+				top: -5px;
+				display: inline-block;
+				padding: 10px 10px;
+				box-sizing: content-box;
+			}
+			.search-bar .location-btn img:nth-of-type(1){
+				left:10px;
+			}
+			.search-bar .location-btn img:nth-of-type(2){
+				right:0;
+			}
+			.search-bar .map img{
+				height: 14px;
+				display: inline-block;
+			}
+			.search-bar .location-btn{
+				float: left;
+				position: relative;
+				padding-left: 10px;
+				/*width: calc(100% - 190px);*/
+				width: 100%;
+			}
+			.search-bar .search-btn{
+				float: right;
+				border-left:1px solid #C9C9C9;
+				border-right:1px solid #C9C9C9;
+				overflow: hidden;
+			}
+			.search-bar .location-btn span{
+				margin:0 3px;
+				width: calc(100% - 45px);
+				    display: inline-block;
+				    overflow: hidden;
+				    height: 25px;
+				    line-height: 25px;
+			}
+			.search-bar .map{
+				float: right;
+				width:50px;
+			}
+			.search-btn{height: 25px;	width: 120px;margin: 0px auto;line-height: 25px;font-size: 14px;}
+			.search-btn img{height: 4px;width: 7px;top: -2px;position: relative;}
+			/*给需要转动的图片添加类名rootate-img  其父级添加类名rotating 控制父级类名实现转动效果*/
+				.rotating .rotate-img{
+					-webkit-animation: rotatimg linear 1s infinite;
+					   -moz-animation: rotatimg linear 1s infinite;
+					        animation: rotatimg linear 1s infinite;
+				}
+				@-webkit-keyframes rotatimg{
+					0%{ -webkit-transform:rotate(0);transform:rotate(0);}
+					100%{ -webkit-transform:rotate(359deg);transform:rotate(359deg);}
+				}
+				@-moz-keyframes rotatimg{
+					0%{ -moz-transform:rotate(0);transform:rotate(0);}
+					100%{ -moz-transform:rotate(359deg);transform:rotate(359deg);}
+				}
+				@keyframes rotatimg{
+					0%{ -webkit-transform:rotate(0);-moz-transform:rotate(0);transform:rotate(0);}
+					100%{ -webkit-transform:rotate(359deg);-moz-transform:rotate(359deg);transform:rotate(359deg);}
+				}
+		/*search-bar 结束	*/
+	</style>
+</head>
+<body>
+	<div class="container">
+		<!-- refresh -->
+		<div class="search-bar">
+        	<div class="location-btn">
+				<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/home/img/hmxl/location-top.png" alt="">
+				<span id="location">
+                               </span>
+				<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/home/img/hmxl/refresh.png" id="refresh" class="rotate-img">
+			</div>
+			<!-- <div class="map Appmap">
+				<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/home/img/hmxl/map.png" alt="" style="height:16px; margin-bottom:5px">
+			</div>
+			<div class="search-btn">
+				<span class="nav-tag">住宿</span>
+				<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/home/img/hmxl/trigger.png" alt="三角标">
+			</div> -->
+		</div>
+		<div class="addrlist">
+			<ul>
+				<li class="halfborder chose">
+					<div class="media">
+						<div class="media-body">
+							<h4 class="name"><span class="chooseaddr"></span>自提点名称</h4>
+							<div class="addr">
+								<div class="media">
+									<div class="media-left">地址:</div>
+									<div class="media-body">北京市-朝阳区-丰台区-嘉利路99号-捷佳大大厦
+									<span class="location-distance">5.9168465165km</span>
+									</div>
+								</div>
+							</div>
+							<div class="phone shipprice">
+								<div class="media">
+									<div class="media-left">运费:</div>
+									<div class="media-body">
+										10.00
+									</div>
+								</div>
+							</div>
+							<div class="phone">
+								<div class="media">
+									<div class="media-left">电话:</div>
+									<div class="media-body">
+										0345-89657135
+									</div>
+								</div>
+							</div>
+							<div class="business-time">
+								<div class="media">
+									<div class="media-left">营业时间:</div>
+									<div class="media-body">
+										14:00-22：00
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="media-right media-middle">
+							<div class="addrlocation activebtn halfborder">
+								<img src="/statichtml/bjmovie01/estores/Public/images/position.png">
+							</div>
+							<div class="phonecall activebtn">
+								<img src="/statichtml/bjmovie01/estores/Public/images/call1.png">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="halfborder ">
+					<div class="media">
+						<div class="media-body">
+							<h4 class="name"><span class="chooseaddr"></span>自提点名称</h4>
+							<div class="addr">
+								<div class="media">
+									<div class="media-left">地址:</div>
+									<div class="media-body">北京市-朝阳区-丰台区-嘉利路99号-捷佳大大厦
+									<span class="location-distance">5.9168465165km</span>
+									</div>
+								</div>
+							</div>
+							<div class="phone">
+								<div class="media">
+									<div class="media-left">电话:</div>
+									<div class="media-body">
+										0345-89657135
+									</div>
+								</div>
+							</div>
+							<div class="business-time">
+								<div class="media">
+									<div class="media-left">营业时间:</div>
+									<div class="media-body">
+										14:00-22：00
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="media-right media-middle">
+							<div class="addrlocation activebtn halfborder">
+								<img src="/statichtml/bjmovie01/estores/Public/images/position.png">
+							</div>
+							<div class="phonecall activebtn">
+								<img src="/statichtml/bjmovie01/estores/Public/images/call1.png">
+							</div>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+
+			<a href="javaScript:;" class="sure-one-addr ">确定</a>
+		</div>
+	</div>
+	<footer></footer>
+	<script>document.body.addEventListener('touchstart',function () {})</script>
+	<script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+	<script>
+		$(function () {
+			$('.name').click(function () {
+				var _this = $(this);
+				$('.chose').removeClass('chose');
+				_this.closest('li').addClass('chose');
+			})
+			//刷新
+			$("body").on("click", "#refresh", function () {
+					$(".location-btn").addClass("rotating");
+					 setTimeout(function(){
+						  $(".location-btn").removeClass("rotating");
+						},1000);
+			})
+			
+		})
+	</script>
+</body>
+</html>

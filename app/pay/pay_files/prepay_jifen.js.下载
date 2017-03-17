@@ -1,0 +1,129 @@
+// JavaScript Document
+//结算页面 积分存入 
+ $(function(){
+		  $(".top_box").on("click","ul li",function(){
+		   var index=$(this).index();
+			$(this).siblings("ul li").removeClass('on');
+			$(this).addClass('on');
+			$(".box01").css("display","none");
+			$(".box01:eq("+index+")").css("display","block");
+		 })
+	 })
+	 
+//积分存入 搜索
+function sosoJfcr(type){
+	var data = {};
+	data.type =type;
+	data.order_id=$("#order_id").val();
+	
+	switch(type){
+		case 1:
+		//id搜索
+		
+		if($("#real_userid").val()==''){
+			var yhidbnwk=$("#lang_yhidbnwk").val(); //lang  用户ID不能为空
+			amAlert("warning",yhidbnwk,500);return false;
+		}
+		data.real_userid =$("#real_userid").val();
+		break;
+		
+		case 2:
+		//手机搜索
+		
+		if($("#real_mobilenum").val()==''){
+			var sjhbnwk=$("#lang_sjhbnwk").val(); //lang  手机号不能为空
+			amAlert("warning",sjhbnwk,500);return false;
+		}
+		data.real_mobilecode =$("#real_mobilecode").val();
+		data.real_mobilenum =$("#real_mobilenum").val();
+		break;
+		
+		case 3:
+		//邮箱搜索
+		
+		if($("#real_personalemail").val()==''){
+			var yxdzbuwk=$("#lang_yxdzbuwk").val(); //lang  邮箱地址不能为空
+			amAlert("warning",yxdzbuwk,500);return false;
+		}
+		data.real_personalemail =$("#real_personalemail").val();
+		break;
+	}
+	//搜索
+	$.post(urlRoot+"Home/Cart/sosojfcr",data,function(v){
+		
+		if(v.status==1){
+			$("#jf_res_pic").attr("src","https://shop.yshjie.com/statichtml/bjmovie01/site/public/image.php?id="+v.data.picwfemltableid+"&width=60&height=60");
+			$("#jf_res_name").text(v.data.publishedname);
+			$("#jf_res_id").text("ID:"+v.data.id_user);
+			$("#res_user_id").val(v.data.id_user);
+			//判断，如果该会员已被关联，搜出来的状态也是已被关联
+			if(v.rs_flag==1){
+				$(".res_close").data("status",1);
+				$(".res_guanlian").data("status",1).attr("src","/statichtml/bjmovie01/estores/Public/home/img/jfcr/img/bd.png");
+			}else{
+				$(".res_close").data("status",0);
+				$(".res_guanlian").data("status",0).attr("src","/statichtml/bjmovie01/estores/Public/home/img/jfcr/img/tu-2.png");
+			}
+			$('.jfcr_res').css("display","block");
+			
+		}else{
+			amAlert("warning",v.msg,500);
+		}
+	})
+	
+}
+
+		  
+		  
+//关闭 或 取消  积分存入账户 
+$(".res_close").on("click",function(){
+	if($(this).data("status")==0){  //点击隐藏查询结果
+		$('.jfcr_res').css("display","none");
+	}else{    //点击取消关联，即删除数据库数据，关联按钮变成对号
+			var order_id="{$order_id}";
+			var e=$(this);
+			$('#my-confirm-jfcr-2').modal({
+			relatedTarget: this,
+			onConfirm: function(options) {
+				
+				$.post(urlRoot+"Home/Cart/setJfcr",{type:1,order_id:order_id},function(v){
+					if(v.status==1){
+						var glqxcg=$("#lang_glqxcg").val(); //lang 关联取消成功
+						amAlert("success",glqxcg,500);
+						e.data("status",0);
+						$(".res_guanlian").data("status",0).attr("src","/statichtml/bjmovie01/estores/Public/home/img/jfcr/img/tu-2.png");
+						
+					}else{
+						amAlert("warning",v.msg,500);
+					}
+				})
+			}
+		});
+	}
+});
+
+//关联 积分存入
+$(".res_guanlian").on("click",function(){
+	if($(this).data("status")==0){  //点击关联数据到数据库，同时状态改为已关联，不可点击
+		var order_id="{$order_id}";
+		var user_id=$("#res_user_id").val();
+		var e=$(this);
+		$('#my-confirm-jfcr-1').modal({
+			relatedTarget: this,
+			onConfirm: function(options) {
+				
+				$.post(urlRoot+"Home/Cart/setJfcr",{type:2,order_id:order_id,user_id:user_id},function(v){
+					if(v.status==1){
+						$(".res_close").data("status",1);
+						e.data("status",1).attr("src","/statichtml/bjmovie01/estores/Public/home/img/jfcr/img/bd.png");
+						var jfcrcg=$("#lang_jfcrcg").val(); //lang 积分存入成功
+						amAlert("success",jfcrcg,500);
+					}else{
+						amAlert("warning",v.msg,500);
+					}
+				})
+			}
+		});
+	}
+});	 
+	 

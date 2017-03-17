@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../css/normalize.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/preview-membercard.css" />
+	<script src="https://staticcdn.yshjie.com/cdn/librarypath/jquery/jquery-2.1.3.min.js"></script>
+
+	<title>预览会员卡</title>
+
+	<style type="text/css">
+		@charset "UTF-8";
+		* {
+		  margin: 0;
+		  padding: 0; }
+
+		.container {
+		  width: 100%;
+		  max-width: 640px;
+		  padding: 10px;
+		  margin: 0 auto;
+		  box-sizing: border-box; }
+
+		.credit-card-module {
+		  position: relative;
+		  border-radius: 10px;
+		  overflow: hidden;
+		  font-family: '微软雅黑'; }
+		  .credit-card-module .card-bg-img img {
+		    width: 100%;
+		    display: block; }
+		  .credit-card-module .card-top-text {
+		    position: absolute;
+		    top: 10px;
+		    left: 10px;
+		    right: 10px;
+		    bottom: 10px;
+		    overflow: hidden; }
+		  .credit-card-module.positioned-by-module .card-top-text .text-position {
+		    height: auto; color: #fff;}
+		    .credit-card-module.positioned-by-module .card-top-text .text-position.text-top {
+		      position: absolute;
+		      left: 0;
+		      right: 0;
+		      top: 0; }
+		    .credit-card-module.positioned-by-module .card-top-text .text-position.text-middle {
+		      position: absolute;
+		      left: 0;
+		      right: 0;
+		      top: 50%;
+		      margin-top: -15px; }
+		    .credit-card-module.positioned-by-module .card-top-text .text-position.text-bottom {
+		      position: absolute;
+		      left: 0;
+		      right: 0;
+		      bottom: 0; }
+		    .credit-card-module.positioned-by-module .card-top-text .text-position.text-left {
+		      text-align: left; }
+		    .credit-card-module.positioned-by-module .card-top-text .text-position.text-center {
+		      text-align: center; }
+		    .credit-card-module.positioned-by-module .card-top-text .text-position.text-right {
+		      text-align: right; }
+
+		/*# sourceMappingURL=credit-card.css.map */
+	</style>
+</head>
+<body>
+	<div style="height: 100px;background-color: blue;"></div>
+		<button id="PreviewBTN2">预览会员卡</button>
+	<footer></footer>
+	<script src="../js/layer/layer.js"></script>
+	<!-- 现行方式 -->
+		
+		<div style="margin-top: 100px">
+		用户上传的会员卡对应等级的背景图片和文本内容
+			<img src="../img/card-1.png" id="currentCardBG">
+
+			<pre id="currentCardText">
+				卡片用户自定义内容
+				<h2>h2标签</h2>
+				<p style="font-weight: bold;border:1px solid orange;">p标签内容</p>
+				<h4>1</h4>
+				<h4 style="color: red;">2</h4>
+				<h4>3</h4>
+				<h4>4</h4>
+				<h4>5</h4>
+				<h4>6</h4>
+				<h4>7</h4>
+				<h4>8888 9999 0000</h4>
+				<h4>9</h4>
+				<h4>10</h4>
+			</pre>
+		</div>
+		<script type="text/javascript">
+			$(function () {
+				
+				function previewCard(imgSrc,context,viewWidth) {
+					imgSrc = imgSrc?imgSrc:'未收到图片信息'
+					context = context?context:'未收到内容信息'
+					viewWidth = viewWidth?viewWidth:'375px'
+					var prevText = '<div class="credit-card-module positioned-by-module ">'+
+										'<div class="card-bg-img">'+
+										// innerIMG
+											'<img src="'+imgSrc+'" alt="卡面背景图片"></div>'+
+										'<div class="card-top-text">'+
+											'<div class="text-position1 text-bottom1 text-1">123123</div>'+
+											// innerHtml
+												context+
+											'</div></div>';
+					layer.open({
+						type:1,
+						title:false,
+						area:[viewWidth],
+						content:prevText
+					})
+				}
+
+				$('#PreviewBTN2').click(function () {
+					// 传入内容
+					var innerHtml = $('#currentCardText').html();
+					var innerIMGSRC  = $('#currentCardBG').attr('src');
+					// 展示预览
+					previewCard(innerIMGSRC,innerHtml);
+				})
+			})
+		</script>
+	<!-- 现行方式 end-->
+
+</body>
+</html>

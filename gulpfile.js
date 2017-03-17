@@ -2,7 +2,7 @@ var staticdir = ''
 // 如果不适用本地服务器更改定义staticdir为非空项目目录即可 如当前目录'./';'e:/youproject/'
 // 以下定义为proxy 本地启动服务器 动态页面设定
 // 定义具体项目目录
-var Products= 'single-file/';
+var Products= 'store-backmanage/';
 // define 本地开发目录
 var baseserver		= 'work.com/moviehelper/app/',
  baseserver_dir 	= 'd:/WorkSpace/moviehelper/app/',
@@ -41,21 +41,23 @@ gulp.task('watch',function(){
 	folder = conf.server.static
 	:
 	folder = conf.server.proxy_dir;
-
+	// var date = new Date();
 	gulp.watch(folder+'**/*.html',function (event) {
-		console.log("File"+event.path+" changed,watching....")
+		console.log("File →"+event.path+"← changed,watching....")
+
+		// console.log(Date.getDate())
 		return gulp.src(event.path)
 			.pipe(bs.reload({stream:true}));
 	});
 
 	gulp.watch(folder+'**/*.css',function (event) {
-		console.log("File"+event.path+" changed,watching....")
-		return gulp.src(folder+'**/*.css')
+		console.log("File →"+event.path+"← changed,watching....")
+		return gulp.src(event.path)
 			.pipe(bs.reload({stream:true}));
 	});
 
 	gulp.watch(folder+'**/*.js',function(event){
-		console.log("File"+event.path+" changed,watching....")
+		console.log("File →"+event.path+"← changed,watching....")
 		return gulp.src(event.path)
 			.pipe(bs.reload({stream:true}));
 	})
