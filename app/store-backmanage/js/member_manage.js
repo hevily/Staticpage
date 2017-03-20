@@ -77,6 +77,8 @@ $(function () {
 		var notice = confirm('确认拒绝该申请？');
 		if (notice) {
 			alert('已拒绝本次申请')
+			memberInfo.hide()
+			memeberList.show()
 		}else{
 			alert('你可接着处理，也可放松放松待会儿再来处理本次申请')
 		}
