@@ -7,6 +7,9 @@
 .section {
   display: none; }
 
+.section div {
+  -webkit-backface-visibility: hidden; }
+
 .pull-right {
   float: right;
   margin-right: 2.5%; }
@@ -91,7 +94,8 @@
         word-break: keep-all; }
         .add-newmember .member-input ul .media .media-left .input-label {
           line-height: 45px;
-          width: 65px; }
+          width: 65px;
+          color: #969696; }
       .add-newmember .member-input ul .media .media-body {
         text-align: right;
         height: 45px; }
@@ -101,7 +105,7 @@
           .add-newmember .member-input ul .media .media-body .input-text .member-logo {
             width: 50px; }
           .add-newmember .member-input ul .media .media-body .input-text input {
-            width: 100%;
+            width: calc(100% - 10px);
             height: 100%;
             padding-left: 10px;
             line-height: 1.5;

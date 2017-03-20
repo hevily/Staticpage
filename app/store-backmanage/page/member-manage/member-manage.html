@@ -24,15 +24,15 @@
 			<p>温馨提示：你的会员等级尚未设置，暂无法使用相关功能，请立即设置会员等级。</p>
 		</div>
 		
-		<div class="section animated has-Member  slideInLeft">
-			<div class="animated member-btn bounceInDown">
+		<div class="section animated has-Member  ">
+			<div class="animated member-btn fadeInRight">
 				<a href="javascript:;" class="btn btn-theme new-member">新增会员</a>
 				<a href="javascript:;" class="btn btn-space apply-log">审核记录</a>
 				<!-- <a href="javascript:;" class="btn btn-theme apply-log">修改会员信息</a> -->
 			</div>
 
-			<ul class="member-list media-list">
-				<li class="media single-member">
+			<ul class="member-list media-list animated slideInLeft">
+				<li class="media single-member ">
 					<div class="media-body media-middle">
 						<div class="applyer">
 							<h4>姓名四字</h4>
@@ -92,9 +92,9 @@
 		</div>
 
 		<div class="section animated add-newmember">
-			<div class="animated member-btn bounceInDown">
-				<a href="javascript:;" class="btn btn-space ">取消</a>
-				<a href="javascript:;" class="btn btn-theme pull-right">保存</a>
+			<div class="animated member-btn fadeIn">
+				<a href="javascript:;" class="btn btn-space add-new-cancel">取消</a>
+				<a href="javascript:;" class="btn btn-theme pull-right add-new-save">保存</a>
 			</div>
 			<div class="member-input">
 				<ul>
@@ -118,7 +118,7 @@
 						</div>
 						<div class="media-body media-middle">
 							<div class="input-text">
-								<input type="text" name="username">
+								<input type="text" name="fullname">
 							</div>
 						</div>
 					</li>
@@ -130,7 +130,7 @@
 						</div>
 						<div class="media-body media-middle">
 							<div class="input-text">
-								<input type="text" name="username">
+								<input type="text" name="firstName">
 							</div>
 						</div>
 					</li>
@@ -142,7 +142,7 @@
 						</div>
 						<div class="media-body media-middle">
 							<div class="input-text">
-								<input type="text" name="username">
+								<input type="text" name="secondName">
 							</div>
 						</div>
 					</li>
@@ -154,7 +154,7 @@
 						</div>
 						<div class="media-body media-middle">
 							<div class="input-text">
-								<input type="text" name="username">
+								<input type="text" name="sex">
 							</div>
 						</div>
 					</li>
@@ -166,7 +166,7 @@
 						</div>
 						<div class="media-body media-middle">
 							<div class="input-text">
-								<input type="text" name="username">
+								<input type="date" name="birthday">
 							</div>
 						</div>
 					</li>
@@ -178,7 +178,7 @@
 						</div>
 						<div class="media-body media-middle">
 							<div class="input-text">
-								<input type="text" name="username">
+								<input type="text" name="personalIDCard">
 							</div>
 						</div>
 					</li>
@@ -190,7 +190,7 @@
 						</div>
 						<div class="media-body media-middle">
 							<div class="input-text">
-								<input type="text" name="username">
+								<input type="text" name="email">
 							</div>
 						</div>
 					</li>
@@ -202,7 +202,7 @@
 						</div>
 						<div class="media-body media-middle">
 							<div class="input-text">
-								<input type="text" name="username">
+								<input type="text" name="phone">
 							</div>
 						</div>
 					</li>
@@ -214,7 +214,7 @@
 						</div>
 						<div class="media-body media-middle">
 							<div class="input-text">
-								<input type="text" name="username">
+								<input type="text" name="address">
 							</div>
 						</div>
 					</li>
@@ -226,7 +226,7 @@
 						</div>
 						<div class="media-body media-middle">
 							<div class="input-text">
-								<input type="date" name="username">
+								<input type="date" name="submit">
 							</div>
 						</div>
 					</li>
@@ -239,7 +239,7 @@
 			<div class="member-btn ">
 				<a href="javascript:;" class="btn btn-theme pass-apply">审核通过</a>
 				<a href="javascript:;" class="btn btn-space pass-decline">拒绝</a>
-				<a href="javascript:;" class="btn btn-theme ">修改会员信息</a>
+				<a href="javascript:;" class="btn btn-theme edit-apply">修改会员信息</a>
 			</div>
 			<div class="member-input animated slideInLeft">
 				<ul>
@@ -262,7 +262,7 @@
 							</div>
 						</div>
 						<div class="media-body media-middle">
-							<div class="input-text">
+							<div class="input-text fullnameT">
 								<span>王铁锤</span>
 							</div>
 						</div>
@@ -274,8 +274,8 @@
 							</div>
 						</div>
 						<div class="media-body media-middle">
-							<div class="input-text">
-								<span>王铁锤</span>
+							<div class="input-text first-nameT">
+								<span>王</span>
 							</div>
 						</div>
 					</li>
@@ -286,8 +286,8 @@
 							</div>
 						</div>
 						<div class="media-body media-middle">
-							<div class="input-text">
-								<span>王铁锤</span>
+							<div class="input-text second-nameT">
+								<span>铁锤</span>
 							</div>
 						</div>
 					</li>
@@ -298,8 +298,8 @@
 							</div>
 						</div>
 						<div class="media-body media-middle">
-							<div class="input-text">
-								<span>王铁锤</span>
+							<div class="input-text member-sexT">
+								<span>男</span>
 							</div>
 						</div>
 					</li>
@@ -310,8 +310,8 @@
 							</div>
 						</div>
 						<div class="media-body media-middle">
-							<div class="input-text">
-								<span>王铁锤</span>
+							<div class="input-text birthdayT">
+								<span>1987-09-12</span>
 							</div>
 						</div>
 					</li>
@@ -322,8 +322,8 @@
 							</div>
 						</div>
 						<div class="media-body media-middle">
-							<div class="input-text">
-								<span>王铁锤</span>
+							<div class="input-text personalIDCardT">
+								<span>560843189794782758</span>
 							</div>
 						</div>
 					</li>
@@ -334,8 +334,8 @@
 							</div>
 						</div>
 						<div class="media-body media-middle">
-							<div class="input-text">
-								<span>王铁锤</span>
+							<div class="input-text emailT">
+								<span>tiechui@sohu.com</span>
 							</div>
 						</div>
 					</li>
@@ -346,8 +346,8 @@
 							</div>
 						</div>
 						<div class="media-body media-middle">
-							<div class="input-text">
-								<span>王铁锤</span>
+							<div class="input-text phoneT">
+								<span>183778189897</span>
 							</div>
 						</div>
 					</li>
@@ -358,20 +358,20 @@
 							</div>
 						</div>
 						<div class="media-body media-middle">
-							<div class="input-text">
-								<span>王铁锤</span>
+							<div class="input-text addressT">
+								<span>北京-北京-海淀区-中关村南大街-56号-xxx大楼</span>
 							</div>
 						</div>
 					</li>
 					<li class="media">
 						<div class="media-left media-middle">
-							<div class="input-label">
+							<div class="input-label ">
 								提交日期
 							</div>
 						</div>
 						<div class="media-body media-middle">
-							<div class="input-text">
-								<span>王铁锤</span>
+							<div class="input-text submitT">
+								<span>2018-09-15</span>
 							</div>
 						</div>
 					</li>
@@ -386,7 +386,7 @@
 				</div>
 				<div class="member-card-number ">
 					<p>会员编号<span class="label-mark">*</span></p>
-					<input type="text" name="member-card-number" placeholder="会员编号不能重复">
+					<input type="tel" name="member-card-number" placeholder="会员编号不能重复">
 				</div>
 				<div class="member-card-mark">
 					<p>备注<span class="dark-color">(选填)</span></p>
@@ -451,7 +451,7 @@
 						<div class="media">
 							<div class="media-left media-middle"><div class="time-num-label">卡号：</div></div>
 							<div class="media-body">
-								<input type="number" name="member-card-uniqnum" placeholder="卡号不可重复">
+								<input type="tel" name="member-card-uniqnum" placeholder="卡号不可重复">
 							</div>
 						</div>
 					</div>
@@ -461,127 +461,6 @@
 	</div>
 	<footer></footer>
 	<script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript">
-		$(function () {
-			var member = '0';
-			var  noneCard= $('.noneCard'),
-				 memeberList= $('.has-Member'),
-				 memberInfo = $('.member-info'),
-				 addNewMember = $('.add-newmember'),
-				 addNewmemberCard = $('.add-newmember-card'),
-				 levelText ='',
-				 title
-				;
-			function renderMemberList(member) {
-				if (member == '' || member == undefined || member == null) {
-					noneCard.show();
-					title = '等级设置';
-				}else if(member === '1'){
-					addNewMember.show();
-					title = '添加会员';
-				}else if(member === '2'){
-					addNewmemberCard.show();
-					title = '开通会员';
-				}else if(member === '3'){
-					addNewmemberCard.show();
-					title = '开通会员';
-				}else {
-					memeberList.show();
-					title = '会员管理';
-				}
-				changeTitle(title);
-			}
-			function changeTitle(title) {
-				document.querySelectorAll('title')[0].text = title;
-			}
-			renderMemberList(member)
-			// 处理申请信息
-			$('.single-member').on('click',function () {
-				var _t = $(this),
-					mList = $('.has-Member'),
-					info = $('.member-info')
-					;
-				mList.hide()
-				info.show()
-
-			})
-			// 通过审核
-			$('.pass-apply').on('click',function () {
-				var _t = $(this),
-					addCard = $('.add-newmember-card'),
-					info = $('.member-info')
-					;
-				info.hide()
-				addCard.show()
-			})
-			$('.pass-decline').on('click',function () {
-				var notice = confirm('确认拒绝该申请？');
-				if (notice) {
-					alert('已拒绝本次申请')
-				}else{
-					alert('你可接着处理，也可放松放松待会儿再来处理本次申请')
-				}
-			})
-			// 选择会员级别
-			$('.card-level').on('click',function () {
-				var cardLevel = $('.member-card-level'),
-					addCard = $('.member-card-info')
-				;
-				levelText = $(this).find('.card-level-label').text()
-				addCard.hide()
-				cardLevel.show()
-			})
-			// 会员卡级别选择
-				$('.member-card-level-cancel').on('click',function () {
-					var cardLevel = $('.member-card-level'),
-						addCard = $('.member-card-info')
-					;
-					cardLevel.hide()
-					addCard.show()
-				})
-				$('.member-card-level-save').on('click',function () {
-					var cardLevel = $('.member-card-level'),
-						addCard = $('.member-card-info'),
-						stime = $('input[name="member-card-starttime"]').val(),
-						etime = $('input[name="member-card-endtime"]').val(),
-						cardNum = $('input[name="member-card-uniqnum"]').val(),
-						stopit = true
-					;
-					if(stime == '' || etime == '' || cardNum == ''){
-						stime? "":alert('请选择起始日期')
-						etime? "":alert('请选择终止日期')
-						cardNum? "":alert('请正确输入卡号')
-						return false;
-					}
-					var memberSign = '<span><span class="member-get-sign">'+cardNum+'</span><span class="member-get-sign">'+stime+'-'+etime+'</span></span>'
-					if(levelText === '银牌会员'){
-						$('.card-level-silver').find('.card-level-select').find('p span').removeClass("unselect").addClass('getmembernum').html(memberSign)
-					}else if(levelText === '普通会员'){
-						$('.card-level-normal').find('.card-level-select').find('p span').removeClass("unselect").addClass('getmembernum').html(memberSign)
-					}
-
-					cardLevel.hide()
-					addCard.show()
-				})
-			// 会员卡信息保存
-				$('.member-card-sign-save').on('click',function () {
-					var  mcNum= $('input[name="member-card-number"]').val()
-					;
-					if(mcNum == ''){
-						alert('请输入会员卡号')
-						return false;
-					}
-					addNewmemberCard.hide()
-					memeberList.show()
-				});
-				//取消
-				$('.member-card-sign-cacel').on('click',function () {
-					addNewmemberCard.hide()
-					memberInfo.show()
-				});
-
-
-		})
-	</script>
+	<script src="../../js/member_manage.js"></script>
 </body>
 </html>

@@ -4,6 +4,9 @@
 .section{
 	display: none;
 }
+.section div{
+	-webkit-backface-visibility: hidden;
+}
 .pull-right{
 	float: right;
 	margin-right: 2.5%;
@@ -111,12 +114,12 @@
 						.input-label{
 							line-height:45px;
 							width: 65px;
+							color: #969696;
 						}
 					}
 					.media-body{
 						text-align:right;
 						height: 45px;
-						// padding: 10px 0;
 						.input-text{
 							padding-right: 10px;
 							height: 100%;
@@ -124,7 +127,7 @@
 								width: 50px;
 							}
 							input{
-								width:100%;
+								width:calc(100% - 10px);
 								height: 100%;
 								padding-left: 10px;
 								line-height: 1.5;
