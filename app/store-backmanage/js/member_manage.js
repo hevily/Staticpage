@@ -238,9 +238,9 @@ submit.val());
 			;
 			count += 1;
 			if(mcNum == ''){
-				layer.msg('请输入会员卡号')
+				layer.msg('请输入会员编号')
 				if(count > 10){
-					layer.alert('请输入卡号，无卡号无法保存...',{
+					layer.alert('请输入会员编号，无编号无法保存...',{
 						title:false
 					})
 				}
