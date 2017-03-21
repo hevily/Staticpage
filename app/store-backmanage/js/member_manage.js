@@ -96,6 +96,7 @@ $(function () {
 			phoneT = minfo.find('.phoneT').find('span').text(),
 			addrT = minfo.find('.addressT').find('span').text(),
 			submitT = minfo.find('.submitT').find('span').text()
+			;
 
 
 		var editinfo = $('.add-newmember').find('.member-input'),
@@ -109,6 +110,7 @@ $(function () {
 			phone = editinfo.find('input[name="phone"]'),
 			addr = editinfo.find('input[name="address"]'),
 			submit = editinfo.find('input[name="submit"]')
+			;
 
 			fullname.val(fullnameT)
 			firstName.val(firstNameT)
@@ -123,7 +125,7 @@ $(function () {
 
 			memberInfo.hide()
 			addNewMember.show()
-			console.log(fullname,firstName,secondName,sex,birthday,IDCard,email,phone,addr,submit)
+			// console.log(fullname,firstName,secondName,sex,birthday,IDCard,email,phone,addr,submit)
 
 	})
 	// 选择会员级别
