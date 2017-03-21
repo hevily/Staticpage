@@ -1,0 +1,326 @@
+@charset "utf-8";
+
+$bgc:rgba(0,0,0,0.3);
+$ticheight:131px;
+html{ height:auto;}
+body{
+	height:auto;
+	background-color:#383A47;
+}
+.tickets{
+	max-width: 640px;
+	margin: 0 auto;
+	// padding:10px 0;
+	padding-bottom: 0;
+	overflow:hidden;
+	.ticket-classes{
+		margin-bottom: 20px;
+		color:#fff;
+		font-size: 14px;
+		text-indent:10px;
+		border-style:solid;
+		border-width:1px 0 1px 0;
+		border-color:#949496;
+		height: 36px;
+		line-height: 34px;
+	}
+	&:last-child{
+		padding-bottom: 10px;
+	}
+	&.toggle{
+		img.toggle{
+			-webkit-transform:rotate(180deg);
+			   -moz-transform:rotate(180deg);
+			    -ms-transform:rotate(180deg);
+			        transform:rotate(180deg);
+		}
+	}
+	.tickets-title{
+		color: #f36303;
+		margin-bottom: 18px;
+		img{
+			width: 12px;
+			height: 7px;
+			float: right;
+			top:11px;
+			position: relative;
+		}
+	}
+	ul{
+		li{
+			padding:10px;
+			position: relative;
+			.ticket{
+				width: 100%;
+				position: relative;
+				margin-bottom: 20px;
+				background-color: rgba(255,255,255,0.7);
+				&:last-child{
+					margin-bottom: 0;
+				}
+				.ticket-left{
+					font-size: 16px;
+					width: 100%;
+					padding-right: 96px;
+					color: #fff;
+					float: left;
+					position: relative;
+					&:before,&:after{
+						content:"";
+						width: 40px;
+						height: 40px;
+						display:block;
+						position: absolute;
+						left: -20px;
+						bottom:-20px;
+						background-color: rgb(56, 58, 71);
+						-moz-border-radius:50%;
+						     border-radius:50%;
+						z-index:2;
+					}
+					&:before{
+						top:-20px;
+						z-index:2;
+					}
+					.ticket-bg{
+						position: absolute;
+						top: 0;left: 0;
+						width: 100%;
+						// height: 100%;
+					}
+					.ticket-face{
+						position: relative;
+						height: $ticheight;
+						padding: 20px;
+						padding-right: 0;
+						overflow:hidden;
+						.mask{
+							width: 100%;
+							height:$ticheight;
+							position: absolute;
+							top: 0;left: 0;
+							z-index:1;
+						
+							img.ticket-bg{
+								width: 100%;
+								height: 100%;
+							}
+						}
+						.ticket-name{
+							position: relative;
+							z-index:2;
+						}
+						.ticket-use-tips{
+							position: relative;
+							z-index:1;
+							font-size: 12px;
+							p{
+								position: relative;
+								text-indent:8px;
+								span{
+									position: absolute;
+									top:-4px;left:-5px;
+								}
+							}
+						}
+						.ticket-info{
+							z-index:2;
+							position: absolute;
+							bottom: 15px;
+							left:0px;
+							width: 100%;
+							padding:0 20px;
+							.three-part{
+								width: 33.3333%;
+								float: left;
+								font-size: 12px;
+								font-weight: bold;
+								text-align:center;
+								p{
+									font-size: 14px;
+								}
+							}
+							.ticket-money{
+								text-align:left;
+							}
+							.ticket-sale{
+
+							}
+							.ticket-scale{
+								text-align:right;
+							}
+						}
+					}
+				}
+				.ticket-right{
+					font-size: 12px;
+					height: 100%;
+				    position: relative;
+					padding: 10px 10px 10px 5px;
+					background-color: #fff;
+					float: left;
+					width: 97px;
+					height: 131px;
+					margin-left: -97px;
+					border-left: 1px dashed #B4B4B4;
+					.ticket-use{
+						    position: absolute;
+						    top:5px;
+						    right: 5px;
+						    z-index: 5;
+						    width: 100px;
+							height: 100px;
+						img{
+							height: 100%;
+							width: 100%;
+							display:none;
+							&.back-money,&.back-done{
+								top:25px;
+								position: relative;
+							}
+						}
+					}
+					.ticket-action{
+						height: 62px;
+						a{
+							display: none;
+							text-align:center;
+							line-height: 26px;
+							font-size: 14px;
+							color:#fff;
+							border-radius:5px;
+							width: 65px;
+							height: 28px;
+							position: relative;
+							top:16px;
+							&.use{
+								background-color: #3F3F3F;
+							}
+							&.wait{
+								background-color: #9B9B9B;
+							}
+						}
+					}
+
+
+
+					&:before,&:after{
+						content:"";
+						width: 40px;
+						height: 40px;
+						display:block;
+						position: absolute;
+						right: -20px;
+						bottom:-20px;
+						background-color: rgb(56, 58, 71);
+						-moz-border-radius:50%;
+						     border-radius:50%;
+						z-index:2;
+					}
+					&:before{
+						top:-20px;
+						z-index:2;
+					}
+					.ticket-status{
+						.use-or-not{
+							color:#D86C00;
+						}
+						.back-money{
+							color:#D60000;
+						}
+						
+					}
+					.ticket-store{
+						.store-logo{
+							width: 30px;
+							height: 30px;
+							vertical-align:middle;
+				
+						}
+						span{
+							display:inline-block;width:38px;overflow:hidden;height: 16px;
+							position: relative;top:5px;
+						}
+						color:#686868;
+					}
+					.ticket-validity{
+						color:#F4844D;
+						p{
+							color:#686868;
+							font-size: 10px;
+						}
+					}
+					.more-details{
+						position: absolute;
+						top:50%;right:5px;
+						width: 12px;height: 8px;
+						-webkit-transform:translateY(-50%) rotate(90deg);
+						   -moz-transform:translateY(-50%) rotate(90deg);
+						    -ms-transform:translateY(-50%) rotate(90deg);
+						        transform:translateY(-50%) rotate(90deg);
+					}
+				}
+
+				&.use{
+					a.use{
+						display: inline-block;
+					}
+				}
+				&.wait{
+					a.wait{
+						display: inline-block;
+					}
+				}
+				&.used{
+							.ticket-bg{
+								-ms-filter: grayscale(1);
+								-webkit-filter: grayscale(1);
+								-moz-filter: grayscale(1);
+								-o-filter: grayscale(1);
+								filter: grayscale(1);
+							}
+							img.used{
+								display:block;
+							}
+						}
+						&.timeout{
+							.ticket-bg{
+								-ms-filter: grayscale(1);
+								-webkit-filter: grayscale(1);
+								-moz-filter: grayscale(1);
+								-o-filter: grayscale(1);
+								filter: grayscale(1);
+							}
+							img.timeout{
+								display:block;
+							}
+						}
+						&.waiting{
+							img.waiting{
+								display: block;
+								right: 0px;
+								position: relative;
+								top:0px;
+								height: 100px;
+								width: 100px;
+							}
+						}
+						&.canot-back{
+							img.canot-back{
+								display: block;
+							}
+						}
+						&.back-money{
+							img.back-money{
+								display: block;
+							}
+						}
+						&.back-done{
+							img.back-done{
+								display: block;
+							}
+						}
+			}
+		}
+	}
+}
