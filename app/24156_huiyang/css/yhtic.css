@@ -11,15 +11,18 @@ body {
   padding-bottom: 0;
   overflow: hidden; }
   .tickets .ticket-classes {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: #fff;
     font-size: 14px;
-    text-indent: 10px;
+    text-indent: 15px;
     border-style: solid;
-    border-width: 1px 0 1px 0;
+    border-width: 0 0 1px 0;
     border-color: #949496;
     height: 36px;
     line-height: 34px; }
+  .tickets.get-tickets .ticket-classes {
+    border-top: 1px solid #949496;
+    margin-top: 5px; }
   .tickets:last-child {
     padding-bottom: 10px; }
   .tickets.toggle img.toggle {
@@ -84,12 +87,16 @@ body {
             top: 0;
             left: 0;
             z-index: 1; }
-            .tickets ul li .ticket .ticket-left .ticket-face .mask img.ticket-bg {
-              width: 100%;
-              height: 100%; }
+          .tickets ul li .ticket .ticket-left .ticket-face img.ticket-bg {
+            width: 100%;
+            height: 100%; }
           .tickets ul li .ticket .ticket-left .ticket-face .ticket-name {
             position: relative;
-            z-index: 2; }
+            z-index: 2;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding-right: 2px; }
           .tickets ul li .ticket .ticket-left .ticket-face .ticket-use-tips {
             position: relative;
             z-index: 1;
@@ -112,7 +119,6 @@ body {
               width: 33.3333%;
               float: left;
               font-size: 12px;
-              font-weight: bold;
               text-align: center; }
               .tickets ul li .ticket .ticket-left .ticket-face .ticket-info .three-part p {
                 font-size: 14px; }
@@ -150,7 +156,7 @@ body {
           .tickets ul li .ticket .ticket-right .ticket-action a {
             display: none;
             text-align: center;
-            line-height: 26px;
+            line-height: 28px;
             font-size: 14px;
             color: #fff;
             border-radius: 5px;
@@ -162,6 +168,11 @@ body {
               background-color: #3F3F3F; }
             .tickets ul li .ticket .ticket-right .ticket-action a.wait {
               background-color: #9B9B9B; }
+            .tickets ul li .ticket .ticket-right .ticket-action a.buy {
+              background-color: #3F3F3F; }
+            .tickets ul li .ticket .ticket-right .ticket-action a img.cart-ticket {
+              width: 15px;
+              margin-right: 4px; }
         .tickets ul li .ticket .ticket-right:before, .tickets ul li .ticket .ticket-right:after {
           content: "";
           width: 40px;
@@ -180,21 +191,19 @@ body {
           color: #D86C00; }
         .tickets ul li .ticket .ticket-right .ticket-status .back-money {
           color: #D60000; }
-        .tickets ul li .ticket .ticket-right .ticket-store {
-          color: #686868; }
-          .tickets ul li .ticket .ticket-right .ticket-store .store-logo {
-            width: 30px;
-            height: 30px;
-            vertical-align: middle; }
-          .tickets ul li .ticket .ticket-right .ticket-store span {
-            display: inline-block;
-            width: 38px;
-            overflow: hidden;
-            height: 16px;
-            position: relative;
-            top: 5px; }
+        .tickets ul li .ticket .ticket-right .ticket-store .store-logo {
+          width: 30px;
+          height: 30px;
+          vertical-align: middle; }
+        .tickets ul li .ticket .ticket-right .ticket-store span {
+          display: inline-block;
+          width: 38px;
+          overflow: hidden;
+          height: 16px;
+          position: relative;
+          top: 5px; }
         .tickets ul li .ticket .ticket-right .ticket-validity {
-          color: #F4844D; }
+          color: #292929; }
           .tickets ul li .ticket .ticket-right .ticket-validity p {
             color: #686868;
             font-size: 10px; }
@@ -210,6 +219,8 @@ body {
       .tickets ul li .ticket.use a.use {
         display: inline-block; }
       .tickets ul li .ticket.wait a.wait {
+        display: inline-block; }
+      .tickets ul li .ticket.buy a.buy {
         display: inline-block; }
       .tickets ul li .ticket.used .ticket-bg {
         -ms-filter: grayscale(1);
@@ -238,5 +249,39 @@ body {
         display: block; }
       .tickets ul li .ticket.back-done img.back-done {
         display: block; }
+
+.member-info {
+  background-color: #FFF; }
+  .member-info .media {
+    padding: 10px;
+    margin: 0; }
+    .member-info .media:active {
+      background-color: transparent; }
+    .member-info .media:nth-child(1) {
+      display: none; }
+    .member-info .media:nth-child(2) {
+      display: block; }
+    .member-info .media .media-body {
+      color: #404040; }
+      .member-info .media .media-body p:nth-child(1) {
+        margin-bottom: 5px; }
+      .member-info .media .media-body p span {
+        margin-left: 8px; }
+    .member-info .media .media-right {
+      word-break: keep-all; }
+      .member-info .media .media-right a {
+        background-color: #3F3F3F;
+        color: #fff;
+        line-height: 20px;
+        padding: 4px 8px;
+        border-radius: 5px;
+        width: 100px;
+        display: inline-block;
+        text-align: center;
+        font-size: 14px; }
+  .member-info.not-member .media:nth-child(1) {
+    display: block; }
+  .member-info.not-member .media:nth-child(2) {
+    display: none; }
 
 /*# sourceMappingURL=yhtic.css.map */

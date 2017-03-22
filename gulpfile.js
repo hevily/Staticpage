@@ -5,7 +5,7 @@ var staticdir = ''
 var Products= '24156_huiyang/';
 // define 本地开发目录
 var baseserver		= 'work.com/moviehelper/app/',
- baseserver_dir 	= 'd:/WorkSpace/moviehelper/app/',
+ baseserver_dir 	= 'e:/WorkSpace/moviehelper/app/',
  conf = {
 	server:{
 		static:staticdir,
