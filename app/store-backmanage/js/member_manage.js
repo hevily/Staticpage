@@ -157,6 +157,7 @@ submit.val());
 			phoneT = minfo.find('.phoneT').find('span').text(),
 			addrT = minfo.find('.addressT').find('span').text(),
 			submitT = minfo.find('.submitT').find('span').text()
+			;
 
 
 		var editinfo = $('.add-newmember').find('.member-input'),
@@ -170,6 +171,7 @@ submit.val());
 			phone = editinfo.find('input[name="phone"]'),
 			addr = editinfo.find('input[name="address"]'),
 			submit = editinfo.find('input[name="submit"]')
+			;
 
 			fullname.val(fullnameT)
 			firstName.val(firstNameT)
@@ -236,9 +238,9 @@ submit.val());
 			;
 			count += 1;
 			if(mcNum == ''){
-				layer.msg('请输入会员卡号')
+				layer.msg('请输入会员编号')
 				if(count > 10){
-					layer.alert('请输入卡号，无卡号无法保存...',{
+					layer.alert('请输入会员编号，无编号无法保存...',{
 						title:false
 					})
 				}
