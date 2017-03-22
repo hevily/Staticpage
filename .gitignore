@@ -1,5 +1,6 @@
 ﻿#HMC 文件忽略摘要
-#
+
+.gulpfile.js
 #忽略.idea文件夹所有文件
 .idea/
 #node_modules
