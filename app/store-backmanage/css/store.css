@@ -66,12 +66,13 @@
 }
 .entrances{
 	padding-top: 4px;
+	background-color: #EEEEEE;
 }
 .entrance{
 	width: 50%;
 	background-color: #EEEEEE;
 	float: left;
-	padding: 5px 10px;
+	padding: 10px;
 	text-align: center;
 }
 .entrance a{

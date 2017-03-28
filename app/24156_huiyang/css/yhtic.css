@@ -3,13 +3,18 @@ html {
 
 body {
   height: auto;
-  background-color: #383A47; }
+  background-color: #424345; }
 
 .tickets {
   max-width: 640px;
   margin: 0 auto;
   padding-bottom: 0;
   overflow: hidden; }
+  .tickets .none-tickets {
+    padding: 10px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center; }
   .tickets .ticket-classes {
     margin-bottom: 10px;
     color: #fff;
@@ -23,8 +28,47 @@ body {
   .tickets.get-tickets .ticket-classes {
     border-top: 1px solid #949496;
     margin-top: 5px; }
+  .tickets.sales-promotion .ticket-classes {
+    border-width: 1px 0 0 0;
+    margin-bottom: 0; }
+  .tickets.sales-promotion ul {
+    background-color: #fff; }
+    .tickets.sales-promotion ul li {
+      padding: 0; }
+      .tickets.sales-promotion ul li .sales-item {
+        position: relative; }
+        .tickets.sales-promotion ul li .sales-item img {
+          width: 100%;
+          display: block;
+          margin-bottom: 3px; }
+        .tickets.sales-promotion ul li .sales-item .sales-info {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          padding: 15px;
+          color: #fff;
+          font-size: 14px; }
+          .tickets.sales-promotion ul li .sales-item .sales-info .sales-time {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            border-top: 1px solid #fff; }
+          .tickets.sales-promotion ul li .sales-item .sales-info .sales-classes {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border: 1px solid #fff;
+            padding: 2px 4px; }
+          .tickets.sales-promotion ul li .sales-item .sales-info .sales-desc {
+            position: absolute;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            font-size: 16px; }
   .tickets:last-child {
-    padding-bottom: 10px; }
+    padding-bottom: 5px; }
   .tickets.toggle img.toggle {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
@@ -63,7 +107,7 @@ body {
           position: absolute;
           left: -20px;
           bottom: -20px;
-          background-color: #383a47;
+          background-color: #424345;
           border-radius: 50%;
           z-index: 2; }
         .tickets ul li .ticket .ticket-left:before {
@@ -103,11 +147,11 @@ body {
             font-size: 12px; }
             .tickets ul li .ticket .ticket-left .ticket-face .ticket-use-tips p {
               position: relative;
-              text-indent: 8px; }
+              text-indent: 10px; }
               .tickets ul li .ticket .ticket-left .ticket-face .ticket-use-tips p span {
                 position: absolute;
                 top: -4px;
-                left: -5px; }
+                left: -8px; }
           .tickets ul li .ticket .ticket-left .ticket-face .ticket-info {
             z-index: 2;
             position: absolute;
@@ -126,6 +170,12 @@ body {
               text-align: left; }
             .tickets ul li .ticket .ticket-left .ticket-face .ticket-info .ticket-scale {
               text-align: right; }
+              .tickets ul li .ticket .ticket-left .ticket-face .ticket-info .ticket-scale .yue {
+                width: 30px;
+                text-align: left;
+                display: inline-block; }
+                .tickets ul li .ticket .ticket-left .ticket-face .ticket-info .ticket-scale .yue span {
+                  font-size: 14px; }
       .tickets ul li .ticket .ticket-right {
         font-size: 12px;
         height: 100%;
@@ -181,7 +231,7 @@ body {
           position: absolute;
           right: -20px;
           bottom: -20px;
-          background-color: #383a47;
+          background-color: #424345;
           border-radius: 50%;
           z-index: 2; }
         .tickets ul li .ticket .ticket-right:before {
@@ -251,10 +301,14 @@ body {
         display: block; }
 
 .member-info {
-  background-color: #FFF; }
+  background-color: #FFF;
+  max-width: 640px;
+  margin: 0 auto;
+  width: 100%; }
   .member-info .media {
     padding: 10px;
-    margin: 0; }
+    margin: 0;
+    text-indent: 5px; }
     .member-info .media:active {
       background-color: transparent; }
     .member-info .media:nth-child(1) {
@@ -278,7 +332,9 @@ body {
         width: 100px;
         display: inline-block;
         text-align: center;
-        font-size: 14px; }
+        font-size: 14px;
+        float: left;
+        margin-bottom: 5px; }
   .member-info.not-member .media:nth-child(1) {
     display: block; }
   .member-info.not-member .media:nth-child(2) {

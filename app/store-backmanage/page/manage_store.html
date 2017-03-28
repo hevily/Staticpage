@@ -41,11 +41,11 @@
 			height: 18px;
 			min-width: 18px;
 			padding: 2px;
-			right: -7px;
+			right: -50%;
 			top: -7px;
 			font-size: 12px;
 			background-color: red;
-			border-radius: 50%;
+			border-radius: 4px;
 			line-height: 13px;
 			color: #fff;
 			text-align: center;
@@ -53,16 +53,23 @@
 		.newmsg .corner-text{
 			display: block;
 		}
+		.nocontrol img{
+			-ms-filter: grayscale(1);
+			-webkit-filter: grayscale(1);
+			-moz-filter: grayscale(1);
+			-o-filter: grayscale(1);
+			filter: grayscale(1);
+		}
 	</style>
 </head>
 <body>
 	<div class="container manage-items clearfix">
 		<ul class="manage-items">
 			<li>
-				<div class="entrance">
+				<div class="entrance" onclick="window.location.href='manage_store/base_setting.html'">
 					<div class="entxt">
-						<div class="corner-num">
-							<span class="corner-text">新</span>
+						<div class="corner-num newmsg">
+							<span class="corner-text">未完成</span>
 							<img src="../img/manage-store/1.png">
 						</div>
 						<p>基本设置</p>
@@ -72,8 +79,8 @@
 			<li>
 				<div class="entrance">
 					<div class="entxt">
-						<div class="corner-num">
-							<span class="corner-text">新</span>
+						<div class="corner-num nocontrol">
+							<span class="corner-text">未完成</span>
 							<img src="../img/manage-store/2.png">
 						</div>
 						<p>店铺装修</p>
@@ -84,7 +91,7 @@
 				<div class="entrance">
 					<div class="entxt">
 						<div class="corner-num">
-							<span class="corner-text">新</span>
+							<span class="corner-text">未完成</span>
 							<img src="../img/manage-store/3.png">
 						</div>
 						<p>权限管理</p>
@@ -92,10 +99,10 @@
 				</div>
 			</li>
 			<li>
-				<div class="entrance" onclick="window.location.href='member-manage/member-manage.html'">
+				<div class="entrance" onclick="window.location.href='manage_store/member_manage.html'">
 					<div class="entxt">
-						<div class="corner-num newmsg">
-							<span class="corner-text">新</span>
+						<div class="corner-num">
+							<span class="corner-text">未完成</span>
 							<img src="../img/manage-store/4.png">
 						</div>
 						<p>会员管理</p>
@@ -106,7 +113,7 @@
 				<div class="entrance">
 					<div class="entxt">
 						<div class="corner-num">
-							<span class="corner-text">新</span>
+							<span class="corner-text">未完成</span>
 							<img src="../img/manage-store/5.png">
 						</div>
 						<p>客服记录</p>

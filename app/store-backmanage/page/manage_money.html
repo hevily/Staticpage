@@ -40,17 +40,24 @@
 			height: 18px;
 			min-width: 18px;
 			padding: 2px;
-			right: -7px;
+			right: -50%;
 			top: -7px;
 			font-size: 12px;
 			background-color: red;
-			border-radius: 50%;
+			border-radius: 4px;
 			line-height: 13px;
 			color: #fff;
 			text-align: center;
 		}
 		.newmsg .corner-text{
 			display: block;
+		}
+		.nocontrol img{
+			-ms-filter: grayscale(1);
+			-webkit-filter: grayscale(1);
+			-moz-filter: grayscale(1);
+			-o-filter: grayscale(1);
+			filter: grayscale(1);
 		}
 	</style>
 </head>
@@ -60,8 +67,8 @@
 			<li>
 				<div class="entrance">
 					<div class="entxt">
-						<div class="corner-num">
-							<span class="corner-text">新</span>
+						<div class="corner-num newmsg">
+							<span class="corner-text">未完成</span>
 							<img src="../img/manage-money/1.png">
 						</div>
 						<p>银行卡</p>
@@ -71,8 +78,8 @@
 			<li>
 				<div class="entrance">
 					<div class="entxt">
-						<div class="corner-num">
-							<span class="corner-text">新</span>
+						<div class="corner-num nocontrol">
+							<span class="corner-text">未完成</span>
 							<img src="../img/manage-money/2.png">
 						</div>
 						<p>提现订单</p>
@@ -83,7 +90,7 @@
 				<div class="entrance">
 					<div class="entxt">
 						<div class="corner-num">
-							<span class="corner-text">新</span>
+							<span class="corner-text">未完成</span>
 							<img src="../img/manage-money/3.png">
 						</div>
 						<p>提现记录</p>

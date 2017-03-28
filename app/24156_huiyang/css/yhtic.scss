@@ -5,7 +5,7 @@ $ticheight:131px;
 html{ height:auto;}
 body{
 	height:auto;
-	background-color:#383A47;
+	background-color:#424345;
 }
 .tickets{
 	max-width: 640px;
@@ -13,6 +13,12 @@ body{
 	// padding:10px 0;
 	padding-bottom: 0;
 	overflow:hidden;
+	.none-tickets{
+		padding:10px;
+		color:#fff;
+		font-size:16px;
+		text-align:center;
+	}
 	.ticket-classes{
 		margin-bottom: 10px;
 		color:#fff;
@@ -30,8 +36,56 @@ body{
 			margin-top:5px;
 		}
 	}
+	&.sales-promotion{
+		.ticket-classes{
+			border-width:1px 0 0 0 ;
+			margin-bottom: 0;
+		}
+		ul{
+			background-color: #fff;
+			// margin-bottom: -5px;
+			li{
+				padding: 0;
+				.sales-item{
+					position: relative;
+					img{
+						width: 100%;
+						display: block;
+						margin-bottom: 3px;
+					}
+					.sales-info{
+						position: absolute;
+						left:0;right: 0;top: 0;bottom: 0;
+						padding: 15px;
+						color:#fff;
+						font-size: 14px;
+						.sales-time{
+							position: absolute;
+							top: 10px;left: 10px;
+							border-top:1px solid #fff;
+
+						}
+						.sales-classes{
+							position: absolute;
+							top: 10px;right: 10px;
+							border:1px solid #fff;
+							padding: 2px 4px;
+
+						}
+						.sales-desc{
+							position: absolute;
+							left: 10px;right: 10px;
+							bottom: 10px;
+							font-size: 16px;
+
+						}
+					}
+				}
+			}
+		}
+	}
 	&:last-child{
-		padding-bottom: 10px;
+		padding-bottom: 5px;
 	}
 	&.toggle{
 		img.toggle{
@@ -79,7 +133,7 @@ body{
 						position: absolute;
 						left: -20px;
 						bottom:-20px;
-						background-color: rgb(56, 58, 71);
+						background-color: #424345;
 						-moz-border-radius:50%;
 						     border-radius:50%;
 						z-index:2;
@@ -126,10 +180,10 @@ body{
 							font-size: 12px;
 							p{
 								position: relative;
-								text-indent:8px;
+								text-indent:10px;
 								span{
 									position: absolute;
-									top:-4px;left:-5px;
+									top:-4px;left:-8px;
 								}
 							}
 						}
@@ -157,6 +211,14 @@ body{
 							}
 							.ticket-scale{
 								text-align:right;
+								.yue{
+									width: 30px;
+									text-align:left;
+									display: inline-block;
+									span{
+										font-size: 14px;
+									}
+								}
 							}
 						}
 					}
@@ -230,7 +292,7 @@ body{
 						position: absolute;
 						right: -20px;
 						bottom:-20px;
-						background-color: rgb(56, 58, 71);
+						background-color: #424345;
 						-moz-border-radius:50%;
 						     border-radius:50%;
 						z-index:2;
@@ -350,9 +412,13 @@ body{
 }
 .member-info{
 	background-color: #FFF;
+	max-width: 640px;
+	margin: 0 auto;
+	width: 100%;
 	.media{
 		padding: 10px;
 		margin: 0;
+		text-indent:5px;
 		&:active{
 			background-color: transparent;
 		}
@@ -386,6 +452,8 @@ body{
 			    display: inline-block;
 			    text-align: center;
 			    font-size: 14px;
+			    float: left;
+			    margin-bottom: 5px;
 			}
 		}
 	}
