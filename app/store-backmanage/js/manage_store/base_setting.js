@@ -7,7 +7,13 @@ window.onload = function () {
 		url = basedir + dataUrl
 		getData(url)
 		_t.closest('select').attr('data-level',_t.index()+1)
+		_t.closest('.option-items-classes').removeClass('selecting')
 	})
+	$('.option-items-classes').focusin(function() {
+		$(this).addClass('selecting')
+	}).focusout(function() {
+		$(this).removeClass('selecting')
+	});
 
 	function getData(url) {
 		$.ajax({
@@ -46,25 +52,26 @@ window.onload = function () {
 		}else{
 			alert('至多选择8项')
 		}
-		e.stopPropagation()
 	})
-
-	// remove items
-	$('.select-area').on('click','li',function (e) {
-		e.stopPropagation()
-	})
-	$('.select-area').on('click','.option-selected',function (e) {
+	$('.select-area ul').on('click','.option-selected',function (e) {
 		var _t = $(this).closest('li').addClass('item-choose'),
 			optionsBox = $('.option-items-choose').find('ul');
+		// call server api reset database
+			serverRemove()
 		if(!checkLevel(_t)){
 			_t.remove();
-			// call server api reset database
-			serverRemove()
 			return ;
 		}
 		optionsBox.append(_t.css({opacity:0}))
 		_t.animate({opacity:1})
-		e.stopPropagation()
+	})
+
+	$('.option-selected').on('touchstart',function (e) {
+		var _t = $(this);
+		_t.closest('li').addClass('touching');
+	}).on('touchend',function (e) {
+		var _t = $(this);
+		_t.closest('li').removeClass('touching')
 	})
 
 	function checkLevel(goal) {
