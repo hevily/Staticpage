@@ -23,7 +23,7 @@
 			</div>
 			<p>温馨提示：你的会员等级尚未设置，暂无法使用相关功能，请立即设置会员等级。</p>
 		</div>
-		
+		<!-- 申请列表 -->
 		<div class="section animated has-Member  ">
 			<div class="animated member-btn fadeInRight">
 				<a href="javascript:;" class="btn btn-theme new-member">新增会员</a>
@@ -32,7 +32,7 @@
 			</div>
 
 			<ul class="member-list media-list animated slideInLeft">
-				<li class="media single-member ">
+				<li class="media single-member change-title">
 					<div class="media-body media-middle">
 						<div class="applyer">
 							<h4>姓名四字</h4>
@@ -46,7 +46,7 @@
 						</div>
 					</div>
 				</li>
-				<li class="media single-member">
+				<li class="media single-member"change-title>
 					<div class="media-body media-middle">
 						<div class="applyer">
 							<h4>姓名四字</h4>
@@ -60,7 +60,7 @@
 						</div>
 					</div>
 				</li>
-				<li class="media single-member">
+				<li class="media single-member"change-title>
 					<div class="media-body media-middle">
 						<div class="applyer">
 							<h4>姓名四字</h4>
@@ -74,7 +74,7 @@
 						</div>
 					</div>
 				</li>
-				<li class="media single-member">
+				<li class="media single-member"change-title>
 					<div class="media-body media-middle">
 						<div class="applyer">
 							<h4>姓名四字</h4>
@@ -91,6 +91,7 @@
 			</ul>
 		</div>
 
+		<!-- 添加会员 -->
 		<div class="section animated add-newmember">
 			<div class="animated member-btn fadeIn">
 				<a href="javascript:;" class="btn btn-space add-new-cancel">取消</a>
@@ -234,7 +235,7 @@
 			</div>
 		</div>
 
-
+		<!-- 会员信息 pass-decline -->
 		<div class="section animated member-info">
 			<div class="member-btn ">
 				<a href="javascript:;" class="btn btn-theme pass-apply">审核通过</a>
@@ -378,6 +379,26 @@
 				</ul>
 			</div>
 		</div>
+		<!-- 拒绝申请 decline-apply -->
+		<div class="section animated decline-apply">
+			<div class="member-btn">
+				<a href="javascript:;" class="btn btn-space decline-cancel">取消</a>
+				<a href="javascript:;" class="btn btn-theme decline-sure pull-right">拒绝</a>
+			</div>
+			<div class="decline-info">
+				<div class="decline-res">
+					<p><span>*</span>如确定拒绝该会员的申请，请输入拒绝理由</p>
+					<textarea placeholder="请输入拒绝理由"></textarea>
+				</div>
+				<div class="decline-sign">
+					<p>备注（仅商家自己可见）</p>
+					<textarea placeholder="请输入备注信息"></textarea>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- 添加会员卡 -->
 		<div class="section animated add-newmember-card slideInRight">
 			<div class="member-card-info animated">
 				<div class="animated member-btn">
@@ -462,6 +483,22 @@
 	<footer></footer>
 	<script src="../../js/plugin/jquery-2.1.4.min.js"></script>
 	<script src="../../js/plugin/layer/layer.js"></script>
+	<script>
+		function changeTitle(title) {
+			try {
+			    if(window.stopProgressDialog){
+			        // android change title
+			        
+			    } else {
+					// ios change title
+					newTitle(title);
+			    }
+			} catch (e) {}
+			//web change title
+			document.querySelectorAll('title')[0].text = title;
+		}
+	</script>
+
 	<script src="../../js/manage_store/member_manage.js"></script>
 </body>
 </html>

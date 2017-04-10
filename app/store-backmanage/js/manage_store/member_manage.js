@@ -9,6 +9,7 @@ $(function () {
 		 memberInfo = $('.member-info'),
 		 addNewMember = $('.add-newmember'),
 		 addNewmemberCard = $('.add-newmember-card'),
+		 declineApply = $('.decline-apply'),
 		 levelText ='',
 		 title
 		;
@@ -23,9 +24,7 @@ $(function () {
 		}
 		changeTitle(title);
 	}
-	function changeTitle(title) {
-		document.querySelectorAll('title')[0].text = title;
-	}
+	
 	renderMemberList(member)
 	// add new member
 	$('.new-member').on('click',function () {
@@ -111,6 +110,7 @@ submit.val());
 			;
 		mList.hide()
 		info.show()
+		changeTitle("审核会员");
 
 	})
 	// pass apply
@@ -121,28 +121,45 @@ submit.val());
 			;
 		info.hide()
 		addCard.show()
+		setTimeout(function () {
+			// layer.msg('请为新成员添加相关会员信息')
+		},1000)
+
 	})
 	// decline apply
 	$('.pass-decline').on('click',function () {
-		layer.open({
-			title:false,
-			btn: ['确认', '取消'],
-		  	content: '确认拒绝该申请？',
-		  	btn1:function(index, layero){
-			    //do something
-			    layer.msg('已拒绝本次申请')
-			    layer.close(index);
-			    memberInfo.hide()
-			    memeberList.show()
-
-			},
-			btn2:function (index) {
-				layer.msg('你可接着处理，也可放松放松待会儿再来处理本次申请')
-			},
-			cancel:function () {
-				layer.msg('溜达了一圈，什么也没做.')
+		memberInfo.hide()
+		declineApply.show()
+	})
+		$('.decline-sure').on('click',function () {
+		    var declineInfo = $('.decline-res').find('textarea').val();
+		    if(declineInfo == ''){
+		    	layer.msg('请输入拒绝理由');
+		    	return false;
+		    }else{
+				layer.open({
+					title:false,
+					btn: ['确认', '取消'],
+				  	content: '确认拒绝该申请？',
+				  	btn1:function(index, layero){
+					    //do something
+						    layer.msg('已拒绝本次申请')
+						    layer.close(index);
+						    declineApply.hide();
+						    memeberList.show();
+					},
+					btn2:function (index) {
+						layer.msg('你可接着处理，也可放松放松待会儿再来处理本次申请')
+					},
+					cancel:function () {
+						layer.msg('溜达了一圈，什么也没做.')
+					}
+				});
 			}
-		});
+		})
+	$('.decline-cancel').on('click',function () {
+		memberInfo.show()
+		declineApply.hide()
 	})
 	// edit apply info
 	$('.edit-apply').on('click',function () {
@@ -196,6 +213,7 @@ submit.val());
 			addCard = $('.member-card-info')
 		;
 		levelText = $(this).find('.card-level-label').text()
+		$('.member-card-level').find('.card-sign').text(levelText)
 		addCard.hide()
 		cardLevel.show()
 	})

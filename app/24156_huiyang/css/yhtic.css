@@ -24,13 +24,16 @@ body {
     border-width: 0 0 1px 0;
     border-color: #949496;
     height: 36px;
-    line-height: 34px; }
+    line-height: 34px;
+    position: relative;
+    z-index: 10; }
   .tickets.get-tickets .ticket-classes {
     border-top: 1px solid #949496;
-    margin-top: 5px; }
+    margin-top: 10px; }
   .tickets.sales-promotion .ticket-classes {
     border-width: 1px 0 0 0;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    margin-top: 10px; }
   .tickets.sales-promotion ul {
     background-color: #fff; }
     .tickets.sales-promotion ul li {
@@ -49,7 +52,8 @@ body {
           bottom: 0;
           padding: 15px;
           color: #fff;
-          font-size: 14px; }
+          font-size: 14px;
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); }
           .tickets.sales-promotion ul li .sales-item .sales-info .sales-time {
             position: absolute;
             top: 10px;
@@ -60,13 +64,28 @@ body {
             top: 10px;
             right: 10px;
             border: 1px solid #fff;
-            padding: 2px 4px; }
+            padding: 2px 4px;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }
           .tickets.sales-promotion ul li .sales-item .sales-info .sales-desc {
             position: absolute;
-            left: 10px;
-            right: 10px;
-            bottom: 10px;
-            font-size: 16px; }
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 10px;
+            font-size: 18px;
+            line-height: 22px;
+            /* FF3.6+ */
+            background: -webkit-gradient(linear, 0deg, color-stop(rgba(0, 0, 0, 0.5) 35%), color-stop(transparent 85%));
+            /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.5) 35%, transparent 85%);
+            /* Chrome10+,Safari5.1+ */
+            /* Opera 11.10+ */
+            /* IE10+ */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1');
+            /* for IE */
+            background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.5) 35%, transparent 85%);
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 35%, transparent 85%)
+            /* W3C */ }
   .tickets:last-child {
     padding-bottom: 5px; }
   .tickets.toggle img.toggle {
@@ -83,7 +102,7 @@ body {
       top: 11px;
       position: relative; }
   .tickets ul li {
-    padding: 10px;
+    padding: 5px 10px;
     position: relative; }
     .tickets ul li .ticket {
       width: 100%;
@@ -120,17 +139,28 @@ body {
           width: 100%; }
         .tickets ul li .ticket .ticket-left .ticket-face {
           position: relative;
-          height: 131px;
+          min-height: 131px;
           padding: 20px;
           padding-right: 0;
           overflow: hidden; }
           .tickets ul li .ticket .ticket-left .ticket-face .mask {
             width: 100%;
-            height: 131px;
+            height: 100%;
             position: absolute;
             top: 0;
             left: 0;
-            z-index: 1; }
+            z-index: 1;
+            background-image: url("../img/ticket-bg.png");
+            background-size: cover; }
+            .tickets ul li .ticket .ticket-left .ticket-face .mask:before {
+              content: '';
+              display: block;
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+              background-color: rgba(0, 0, 0, 0.5); }
           .tickets ul li .ticket .ticket-left .ticket-face img.ticket-bg {
             width: 100%;
             height: 100%; }
@@ -144,14 +174,44 @@ body {
           .tickets ul li .ticket .ticket-left .ticket-face .ticket-use-tips {
             position: relative;
             z-index: 1;
-            font-size: 12px; }
+            font-size: 12px;
+            padding-bottom: 30px; }
             .tickets ul li .ticket .ticket-left .ticket-face .ticket-use-tips p {
               position: relative;
-              text-indent: 10px; }
+              text-indent: 10px;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              padding-right: 10px;
+              padding-right: 65px;
+              display: none; }
+              .tickets ul li .ticket .ticket-left .ticket-face .ticket-use-tips p:nth-child(1), .tickets ul li .ticket .ticket-left .ticket-face .ticket-use-tips p:nth-child(2) {
+                display: block; }
               .tickets ul li .ticket .ticket-left .ticket-face .ticket-use-tips p span {
                 position: absolute;
                 top: -4px;
                 left: -8px; }
+            .tickets ul li .ticket .ticket-left .ticket-face .ticket-use-tips .toggle-rules {
+              position: absolute;
+              top: 0;
+              right: 0; }
+              .tickets ul li .ticket .ticket-left .ticket-face .ticket-use-tips .toggle-rules a {
+                -webkit-tap-highlight-color: transparent; }
+              .tickets ul li .ticket .ticket-left .ticket-face .ticket-use-tips .toggle-rules img {
+                height: 6px;
+                line-height: 100%;
+                display: inline-block;
+                -webkit-transition: all 0.5s;
+                        transition: all 0.5s;
+                vertical-align: baseline;
+                position: relative;
+                top: -2px;
+                margin-left: 3px;
+                margin-right: 3px; }
+                .tickets ul li .ticket .ticket-left .ticket-face .ticket-use-tips .toggle-rules img.rules-showing {
+                  -webkit-transform: rotate(180deg);
+                      -ms-transform: rotate(180deg);
+                          transform: rotate(180deg); }
           .tickets ul li .ticket .ticket-left .ticket-face .ticket-info {
             z-index: 2;
             position: absolute;
@@ -179,12 +239,13 @@ body {
       .tickets ul li .ticket .ticket-right {
         font-size: 12px;
         height: 100%;
-        position: relative;
+        position: absolute;
+        bottom: 0;
+        right: 0;
         padding: 10px 10px 10px 5px;
         background-color: #fff;
         float: left;
         width: 97px;
-        height: 131px;
         margin-left: -97px;
         border-left: 1px dashed #B4B4B4; }
         .tickets ul li .ticket .ticket-right .ticket-use {
@@ -213,7 +274,7 @@ body {
             width: 65px;
             height: 28px;
             position: relative;
-            top: 16px; }
+            top: 14px; }
             .tickets ul li .ticket .ticket-right .ticket-action a.use {
               background-color: #3F3F3F; }
             .tickets ul li .ticket .ticket-right .ticket-action a.wait {
@@ -253,7 +314,9 @@ body {
           position: relative;
           top: 5px; }
         .tickets ul li .ticket .ticket-right .ticket-validity {
-          color: #292929; }
+          color: #292929;
+          position: absolute;
+          bottom: 16px; }
           .tickets ul li .ticket .ticket-right .ticket-validity p {
             color: #686868;
             font-size: 10px; }
@@ -304,11 +367,11 @@ body {
   background-color: #FFF;
   max-width: 640px;
   margin: 0 auto;
-  width: 100%; }
+  width: 100%;
+  font-size: 14px; }
   .member-info .media {
     padding: 10px;
-    margin: 0;
-    text-indent: 5px; }
+    margin: 0; }
     .member-info .media:active {
       background-color: transparent; }
     .member-info .media:nth-child(1) {
@@ -317,10 +380,14 @@ body {
       display: block; }
     .member-info .media .media-body {
       color: #404040; }
-      .member-info .media .media-body p:nth-child(1) {
-        margin-bottom: 5px; }
-      .member-info .media .media-body p span {
-        margin-left: 8px; }
+      .member-info .media .media-body p {
+        line-height: 18px;
+        font-size: 12px; }
+        .member-info .media .media-body p:nth-child(1) {
+          font-size: 16px;
+          margin-bottom: 8px; }
+        .member-info .media .media-body p span {
+          margin-left: 8px; }
     .member-info .media .media-right {
       word-break: keep-all; }
       .member-info .media .media-right a {
@@ -335,6 +402,8 @@ body {
         font-size: 14px;
         float: left;
         margin-bottom: 5px; }
+        .member-info .media .media-right a:last-child {
+          margin-bottom: 0; }
   .member-info.not-member .media:nth-child(1) {
     display: block; }
   .member-info.not-member .media:nth-child(2) {

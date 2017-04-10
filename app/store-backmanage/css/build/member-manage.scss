@@ -3,6 +3,9 @@
 @import "build/media_bt.css";
 .section{
 	display: none;
+	width:100%;
+	max-width:640px;
+	margin:0 auto;
 }
 .section div{
 	-webkit-backface-visibility: hidden;
@@ -324,6 +327,34 @@
 		}
 		.member-card-time{
 			border-top:1px solid #9a9a9a;
+		}
+	}
+}
+.decline-apply{
+	
+	.decline-info{
+		border-top:1px solid #CFD7C5;
+		padding: 10px;
+		p{
+			margin-bottom: 10px;
+		}
+		textarea{
+			color:#757575;
+			-webkit-appearance:none;
+			-webkit-tap-hightlight-color:rgba(0,0,0,0.1);
+			border:none;
+			width: calc(100% - 10px);
+			min-height:150px;
+			resize:none;
+			padding: 5px;
+		}
+		.decline-res{
+			p{
+				color:#2865B6;
+			}
+		}
+		.decline-sign{
+			color:#757575;
 		}
 	}
 }
