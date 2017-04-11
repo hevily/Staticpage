@@ -10,13 +10,20 @@
 		*{margin: 0;padding: 0;box-sizing:border-box;}
 		.container{width:100%;max-width:640px;margin:0 auto;}
 		.section{text-align:left;text-indent:10px;line-height: 40px;}
-		.section .log-title {height: 45px;}
-		.section .log-title .log-user{ float: left;width:68%;background-color: #F2F2F2;line-height: 45px;}
-		.section .log-title .log-time{ float: left;min-width:100px; width:32%;background-color: #F2F2F2;line-height: 45px;padding-right: 10px;text-align: center;border-left:1px solid #fff;}
+		.section .log-title {height: 45px;background-color: #F2F2F2;line-height: 45px;}
+		.section .log-title .log-user{
+			float: left;width:calc(100% - 235px);line-height: 45px;}
+		.section .log-title .log-time{ float: left;width:170px;padding-right: 10px;text-align: center;border-left:1px solid #fff;border-right:1px solid #fff;}
+		.section .log-title .log-status{
+			float: left;width:60px;text-align:center;
+		}
 		.section ul li {list-style: none;border-bottom:1px solid #ececec;}
 		.section ul li .member-log {height: 40px;}
-		.section ul li .member-log .user{float: left;width:68%;color:#2b2b2b;overflow: hidden;text-overflow: ellipsis;white-space:nowrap;}
-		.section ul li .member-log .time{float: left;min-width:100px;width:32%;padding-right: 10px;text-align: right;border-left:1px solid #ececec;color:#2b2b2b;}
+		.section ul li .member-log .user{float: left;width:calc(100% - 235px);color:#2b2b2b;overflow: hidden;text-overflow: ellipsis;white-space:nowrap;}
+		.section ul li .member-log .time{float: left;width:170px;text-align: center;border-left:1px solid #ececec;border-right:1px solid #ececec;color:#2b2b2b;}
+		.section ul li .member-log .status{
+			float: left;width:60px;text-align:center;color:red;
+		}
 	</style>
 </head>
 <body>
@@ -30,6 +37,9 @@
 				<div class="log-time">
 					操作时间
 				</div>
+				<div class="log-status">
+					状态
+				</div>
 			</div>
 			<ul>
 				<li>
@@ -38,8 +48,9 @@
 							网二
 						</div>
 						<div class="time">
-							2017-4-10
+							2017-4-11 10:24:52
 						</div>
+						<div class="status">修改</div>
 					</div>
 				</li>
 				<li>
@@ -48,7 +59,10 @@
 							wasdfayqrtqwrqwrqqwerqrwasdfayqrtqwrqwrqqwerqrwasdfayqrtqwrqwrqqwerqrwasdfayqrtqwrqwrqqwerqr
 						</div>
 						<div class="time">
-							2017-4-10
+							2017-4-11 10:24:52
+						</div>
+						<div class="status">
+							修改
 						</div>
 					</div>
 				</li>

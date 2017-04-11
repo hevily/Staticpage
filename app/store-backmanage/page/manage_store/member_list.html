@@ -43,7 +43,7 @@
 						<div class="media-body">
 							<h3 class="member-name">王小川</h3>
 							<p><span>普通会员</span><span>个人申请</span><span>卡状态:<em>正常</em></span></p>
-							<a href="javascript:;">查看消费记录</a>
+							<a href="get_shopping_list.html">查看消费记录</a>
 						</div>
 						<div class="media-right media-middle member-info-handle">
 							<img src="../../img/arrow.png" alt="详细" class="media-object">
@@ -66,9 +66,10 @@
 		<!-- member-info -->
 		<div class="section animated member-info" >
 			<div class="member-btn ">
-				<a href="javascript:;" class="btn btn-space edit-info">修改资料</a>
-				<a href="javascript:;" class="btn btn-theme ">变更会员卡</a>
-				<a href="javascript:;" class="btn btn-space relationship-free">解除关系</a>
+				<a href="javascript:;" class="btn four btn-space member-info-cancel">返回</a>
+				<a href="javascript:;" class="btn four btn-space edit-info">修改资料</a>
+				<a href="javascript:;" class="btn four btn-theme change-card">变更会员卡</a>
+				<a href="javascript:;" class="btn four btn-space relationship-free">解除关系</a>
 			</div>
 
 			<div class="member-input animated slideInLeft">
@@ -335,7 +336,7 @@
 								</div>
 							</div>
 							<div class="media-body media-middle">
-								<div class="input-text addressT">
+								<div class="input-text card-number-txt">
 									<span>XXXXXXX</span>
 								</div>
 							</div>
@@ -347,8 +348,8 @@
 								</div>
 							</div>
 							<div class="media-body media-middle">
-								<div class="input-text addressT">
-									<span></span>
+								<div class="input-text notice-txt">
+									<span>秦莞尔特聊天完全儿童威慑力他我儿童伍尔特维尔他我儿童伍尔特</span>
 								</div>
 							</div>
 						</li>
@@ -516,7 +517,7 @@
 						</div>
 					</li>
 					<li class="media event-log tap-action">
-						<a href="tap-action-member-info.html">
+						<a href="member_list_info/tap-action-member-info.html">
 							<div class="media-left media-middle">
 								<div class="input-label">
 									操作记录
@@ -531,6 +532,107 @@
 					</li>
 				</ul>
 				<!-- <div class="gap"></div> -->
+			</div>
+		</div>
+		<!-- member-info member card change -->
+		<div class="section animated member-card-change slideInRight" >
+			<div class="member-card-info animated">
+				<div class="animated member-btn">
+					<a href="javascript:;" class="btn btn-space member-card-sign-cacel">取消</a>
+					<a href="javascript:;" class="btn btn-theme pull-right member-card-sign-save">保存</a>
+				</div>
+				<div class="member-card-number ">
+					<p>会员编号<span class="label-mark">*</span></p>
+					<input type="tel" name="member-card-number" placeholder="会员编号不能重复">
+				</div>
+				<div class="member-card-mark">
+					<p>备注<span class="dark-color">(选填)</span></p>
+					<textarea placeholder="仅商家可见"></textarea>
+				</div>
+				<div class="member-card-level-select">
+					<p class="member-card-level-label">会员等级<span class="dark-color">(可多选)</span><span class="label-mark">*</span></p>
+					<div class="card-level-silver card-level">
+						<div class="media">
+							<div class="media-left media-middle">
+								<div class="card-level-label">银牌会员</div>
+							</div>
+							<div class="media-body">
+								<div class="card-level-select">
+									<p><span class="unselect">未设置</span>
+									</p>
+								</div>
+							</div>
+							<div class="media-right media-middle">
+								<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/member/img/for-more.png" alt="" class="">
+							</div>
+						</div>
+
+						
+					</div>
+					<div class="card-level-normal card-level">
+						<div class="media">
+							<div class="media-left media-middle">
+								<div class="card-level-label">普通会员</div>
+							</div>
+							<div class="media-body">
+								<div class="card-level-select">
+									<p><span class="unselect">未设置</span>
+									</p>
+								</div>
+							</div>
+							<div class="media-right media-middle">
+								<img src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/member/img/for-more.png" alt="" class="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<ul class="member-card-num-action">
+					<li class="media event-log tap-action">
+						<a href="member_list_info/tap-action-history.html">
+							<div class="media-left media-middle">
+								<div class="input-label">
+									历史记录
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="media event-log tap-action">
+						<a href="member_list_info/tap-action-log.html">
+							<div class="media-left media-middle">
+								<div class="input-label">
+									操作记录
+								</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="member-card-level section animated ">
+				<div class="member-btn">
+					<a href="javascript:;" class="btn btn-space member-card-level-cancel">取消</a>
+					<a href="javascript:;" class="btn btn-theme pull-right member-card-level-save">保存</a>
+				</div>
+				<div class=" member-card-time-num animated slideInLeft">
+					<p class="member-card-title">会员卡等级：<span class="card-sign">银牌会员</span></p>
+					<div class="member-card-time">
+						<div class="media">
+							<div class="media-left media-middle"><div class="time-num-label">有效期：</div></div>
+							<div class="media-body">
+								<input type="date" name="member-card-starttime" value="<%=date()%>" placeholder="请选择有效日期">
+								<p>至</p>
+								<input type="date" name="member-card-endtime" value="<%=date()%>" placeholder="请选择有效日期">
+							</div>
+						</div>
+					</div>
+					<div class="member-card-num">
+						<div class="media">
+							<div class="media-left media-middle"><div class="time-num-label">卡号：</div></div>
+							<div class="media-body">
+								<input type="tel" name="member-card-uniqnum" placeholder="卡号不可重复">
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="section">

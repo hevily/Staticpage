@@ -233,10 +233,14 @@ submit.val());
 				cardNum = $('input[name="member-card-uniqnum"]').val(),
 				stopit = true
 			;
-			if(stime == '' || etime == '' || cardNum == ''){
-				stime? "":layer.msg('请选择起始日期')
-				etime? "":layer.msg('请选择终止日期')
-				cardNum? "":layer.msg('请正确输入卡号')
+			if (stime == '') {
+				layer.msg('请选择起始日期');
+				return false;
+			}if(etime == ''){
+					layer.msg('请选择终止日期');
+					return false;
+			}if(cardNum == ''){
+				layer.msg('请正确输入卡号');
 				return false;
 			}
 			var memberSign = '<span><span class="member-get-sign">'+cardNum+'</span><span class="member-get-sign">'+stime+'-'+etime+'</span></span>'

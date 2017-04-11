@@ -1,6 +1,11 @@
 @charset 'utf-8';
 @import '../css/build/normalize.min.css';
 @import '../css/build/media_bt.css';
+.container{
+	max-width:640px;
+	width:100%;
+	margin:0 auto;
+}
 .section{
 	* {margin: 0;padding: 0;}
 	display: none;
@@ -16,6 +21,9 @@
 			text-align:center;
 			line-height: 36px;
 			border-radius:5px;
+			&.four{
+				width:21%;
+			}
 			&.btn-space{
 				border:1px solid #C3C8CC;
 				color:#333333;
@@ -55,6 +63,9 @@
 		display: block;
 		.member-filter{
 			position: fixed;
+			max-width:640px;
+			width:100%;
+			margin:0 auto;
 			z-index:1;
 			top: 0;
 			left: 0;right: 0;
@@ -132,7 +143,7 @@
 			.media-list{
 				margin-top: 10px;
 				.media{
-					padding: 10px;
+					padding: 10px 0 10px 10px;
 					border-bottom:1px solid #ebebeb;
 					.media-left{
 						.media-object{
@@ -161,8 +172,7 @@
 						}
 					}
 					.media-right{
-						padding-left: 10px;
-						// padding: 0 10px;
+						padding: 0 10px;
 						.media-object{
 							transform:rotate(-90deg);
 							width: 10px;
@@ -361,5 +371,219 @@
 				}
 			}
 		}
+	}
+
+	&.member-card-change{
+		.member-card-info{
+			.label-mark{
+				color:red;
+				position: relative;
+				top:3px;left:5px;
+			}
+			.dark-color{
+				color:#868686;
+			}
+			.member-card-number,.member-card-mark{
+				padding: 0 10px;
+				border-top:1px solid #9a9a9a;
+				margin-bottom:20px;
+				p{
+					line-height: 45px;
+
+				}
+				input,textarea{
+					color:#757575;
+					-webkit-appearance:none;
+					-webkit-tap-hightlight-color:rgba(0,0,0,0.1);
+					border:none;
+				}
+				input{
+					width: calc(100% - 10px);
+					line-height: 35px;
+					padding: 5px 5px;
+				}
+				textarea{
+					width: calc(100% - 10px);
+					min-height:150px;
+					resize:none;
+					padding: 5px;
+				}
+			}
+			.member-card-level-label{
+				border-top:1px solid #9a9a9a;
+				// border-bottom:1px solid #9a9a9a;
+				padding-left: 10px;
+			}
+			.member-card-level-select{
+				line-height: 45px;
+				.card-level-silver,.card-level-normal{
+					padding-left: 10px;
+					.media{
+						padding-left: 10px;
+						margin: 0;
+						border-bottom:1px solid #ebebeb;
+						.card-level-label{
+							word-break:keep-all;
+						}
+						.card-level-select{
+							p{
+								text-align:right;
+								padding-right: 10px;
+								.unselect{
+									color:red;
+								}
+								.getmembernum{
+									color:#f36303;
+									span{
+										&:nth-child(2){
+											color:#cfcfcf;
+										}
+									}
+								}
+							}
+						}
+						.media-right{
+							img{
+								width: 7px;
+								padding-right: 10px;
+							}
+						}
+					}
+					.member-get-sign{
+						display: block;
+						line-height: 30px;
+					}
+				}
+			}
+		}
+
+		.member-card-level{
+			.member-card-time-num{
+				.member-card-title{
+					line-height: 45px;
+					border-top:1px solid #9a9a9a;
+					padding-left: 10px;
+					.card-sign{
+						color:#f36303;
+					}
+				}
+				.media{
+					// line-height:30px;
+					border-bottom:1px solid #ededed;
+					margin: 0;
+					padding-top: 10px;
+					padding-bottom: 10px;
+					padding-left: 10px;
+					.media-left{
+						.time-num-label{
+							text-align:right;
+							word-break:keep-all;
+							width:65px;
+							color:#f36303;
+						}
+					}
+					.media-body{
+						padding-left: 20px;
+						p{
+							padding-top: 10px;
+
+						}
+						input{
+							width:calc(100% - 20px);
+							padding: 5px;
+							line-height: 25px;
+							-webkit-appearance:none;
+							border:none;
+							border-bottom:1px solid #a1a1a1;
+							border-radius:0;
+							-webkit-tap-hightlight-color:rgba(0,0,0,1);
+							height: 100%;
+							&[name='member-card-endtime'],&[name='member-card-starttime']{
+								height: 25px;
+							}
+						}
+					}
+				}
+				.member-card-time{
+					border-top:1px solid #9a9a9a;
+				}
+			}
+		}
+		.member-card-num-action{
+			li{
+				padding-left: 10px;
+				border-bottom:1px solid #ececec;
+				font-size: 0;
+				a{
+					font-size: 16px;
+					line-height: 45px;
+					display: inline-block;
+					width: 100%;height: 100%;
+					text-decoration:none;
+					position: relative;
+					&:after{
+						content:'';
+						display: block;
+						position: absolute;
+						top: 16px;right: 10px;
+						transform: rotate(-45deg);
+						width: 8px;height: 8px;
+						border-right:1px solid #959595;
+						border-bottom:1px solid #959595;
+					}
+				}
+			}
+		}
+	}
+	&.shopping-list{
+		display: block;
+		.shopping-list-guid{
+			h3{
+				padding-left: 10px;
+				margin-top: 20px;
+				font-weight: normal;
+			}
+			.member-card-num-action{
+				li{
+					padding-left: 10px;
+					border-bottom:1px solid #ececec;
+					font-size: 0;
+					a{
+						font-size: 16px;
+						line-height: 45px;
+						display: inline-block;
+						width: 100%;height: 100%;
+						text-decoration:none;
+						position: relative;
+						&:after{
+							content:'';
+							display: block;
+							position: absolute;
+							top: 16px;right: 10px;
+							transform: rotate(-45deg);
+							width: 8px;height: 8px;
+							border-right:1px solid #959595;
+							border-bottom:1px solid #959595;
+						}
+					}
+				}
+			}
+		}
+
+	}
+	&.money-detail{
+
+	}
+	&.money-log{
+
+	}
+	&.integral-detail{
+
+	}
+	&.integral-use{
+		
+	}
+	&.integral-add{
+
 	}
 }

@@ -1,5 +1,10 @@
 @import url(../css/build/normalize.min.css);
 @import url(../css/build/media_bt.css);
+.container {
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto; }
+
 .section {
   display: none; }
   .section * {
@@ -17,6 +22,8 @@
       text-align: center;
       line-height: 36px;
       border-radius: 5px; }
+      .section .member-btn .btn.four {
+        width: 21%; }
       .section .member-btn .btn.btn-space {
         border: 1px solid #C3C8CC;
         color: #333333; }
@@ -46,6 +53,9 @@
     display: block; }
     .section.member-list-home-filter .member-filter {
       position: fixed;
+      max-width: 640px;
+      width: 100%;
+      margin: 0 auto;
       z-index: 1;
       top: 0;
       left: 0;
@@ -116,7 +126,7 @@
       .section.member-list-home-filter .member-list .media-list {
         margin-top: 10px; }
         .section.member-list-home-filter .member-list .media-list .media {
-          padding: 10px;
+          padding: 10px 0 10px 10px;
           border-bottom: 1px solid #ebebeb; }
           .section.member-list-home-filter .member-list .media-list .media .media-left .media-object {
             width: 75px; }
@@ -137,7 +147,7 @@
               margin-bottom: 5px;
               text-decoration: none; }
           .section.member-list-home-filter .member-list .media-list .media .media-right {
-            padding-left: 10px; }
+            padding: 0 10px; }
             .section.member-list-home-filter .member-list .media-list .media .media-right .media-object {
               -webkit-transform: rotate(-90deg);
                   -ms-transform: rotate(-90deg);
@@ -291,5 +301,151 @@
           height: 10px;
           border-right: 1px solid #4c4c4c;
           border-bottom: 1px solid #4c4c4c; }
+  .section.member-card-change .member-card-info .label-mark {
+    color: red;
+    position: relative;
+    top: 3px;
+    left: 5px; }
+  .section.member-card-change .member-card-info .dark-color {
+    color: #868686; }
+  .section.member-card-change .member-card-info .member-card-number, .section.member-card-change .member-card-info .member-card-mark {
+    padding: 0 10px;
+    border-top: 1px solid #9a9a9a;
+    margin-bottom: 20px; }
+    .section.member-card-change .member-card-info .member-card-number p, .section.member-card-change .member-card-info .member-card-mark p {
+      line-height: 45px; }
+    .section.member-card-change .member-card-info .member-card-number input, .section.member-card-change .member-card-info .member-card-number textarea, .section.member-card-change .member-card-info .member-card-mark input, .section.member-card-change .member-card-info .member-card-mark textarea {
+      color: #757575;
+      -webkit-appearance: none;
+      -webkit-tap-hightlight-color: rgba(0, 0, 0, 0.1);
+      border: none; }
+    .section.member-card-change .member-card-info .member-card-number input, .section.member-card-change .member-card-info .member-card-mark input {
+      width: calc(100% - 10px);
+      line-height: 35px;
+      padding: 5px 5px; }
+    .section.member-card-change .member-card-info .member-card-number textarea, .section.member-card-change .member-card-info .member-card-mark textarea {
+      width: calc(100% - 10px);
+      min-height: 150px;
+      resize: none;
+      padding: 5px; }
+  .section.member-card-change .member-card-info .member-card-level-label {
+    border-top: 1px solid #9a9a9a;
+    padding-left: 10px; }
+  .section.member-card-change .member-card-info .member-card-level-select {
+    line-height: 45px; }
+    .section.member-card-change .member-card-info .member-card-level-select .card-level-silver, .section.member-card-change .member-card-info .member-card-level-select .card-level-normal {
+      padding-left: 10px; }
+      .section.member-card-change .member-card-info .member-card-level-select .card-level-silver .media, .section.member-card-change .member-card-info .member-card-level-select .card-level-normal .media {
+        padding-left: 10px;
+        margin: 0;
+        border-bottom: 1px solid #ebebeb; }
+        .section.member-card-change .member-card-info .member-card-level-select .card-level-silver .media .card-level-label, .section.member-card-change .member-card-info .member-card-level-select .card-level-normal .media .card-level-label {
+          word-break: keep-all; }
+        .section.member-card-change .member-card-info .member-card-level-select .card-level-silver .media .card-level-select p, .section.member-card-change .member-card-info .member-card-level-select .card-level-normal .media .card-level-select p {
+          text-align: right;
+          padding-right: 10px; }
+          .section.member-card-change .member-card-info .member-card-level-select .card-level-silver .media .card-level-select p .unselect, .section.member-card-change .member-card-info .member-card-level-select .card-level-normal .media .card-level-select p .unselect {
+            color: red; }
+          .section.member-card-change .member-card-info .member-card-level-select .card-level-silver .media .card-level-select p .getmembernum, .section.member-card-change .member-card-info .member-card-level-select .card-level-normal .media .card-level-select p .getmembernum {
+            color: #f36303; }
+            .section.member-card-change .member-card-info .member-card-level-select .card-level-silver .media .card-level-select p .getmembernum span:nth-child(2), .section.member-card-change .member-card-info .member-card-level-select .card-level-normal .media .card-level-select p .getmembernum span:nth-child(2) {
+              color: #cfcfcf; }
+        .section.member-card-change .member-card-info .member-card-level-select .card-level-silver .media .media-right img, .section.member-card-change .member-card-info .member-card-level-select .card-level-normal .media .media-right img {
+          width: 7px;
+          padding-right: 10px; }
+      .section.member-card-change .member-card-info .member-card-level-select .card-level-silver .member-get-sign, .section.member-card-change .member-card-info .member-card-level-select .card-level-normal .member-get-sign {
+        display: block;
+        line-height: 30px; }
+  .section.member-card-change .member-card-level .member-card-time-num .member-card-title {
+    line-height: 45px;
+    border-top: 1px solid #9a9a9a;
+    padding-left: 10px; }
+    .section.member-card-change .member-card-level .member-card-time-num .member-card-title .card-sign {
+      color: #f36303; }
+  .section.member-card-change .member-card-level .member-card-time-num .media {
+    border-bottom: 1px solid #ededed;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px; }
+    .section.member-card-change .member-card-level .member-card-time-num .media .media-left .time-num-label {
+      text-align: right;
+      word-break: keep-all;
+      width: 65px;
+      color: #f36303; }
+    .section.member-card-change .member-card-level .member-card-time-num .media .media-body {
+      padding-left: 20px; }
+      .section.member-card-change .member-card-level .member-card-time-num .media .media-body p {
+        padding-top: 10px; }
+      .section.member-card-change .member-card-level .member-card-time-num .media .media-body input {
+        width: calc(100% - 20px);
+        padding: 5px;
+        line-height: 25px;
+        -webkit-appearance: none;
+        border: none;
+        border-bottom: 1px solid #a1a1a1;
+        border-radius: 0;
+        -webkit-tap-hightlight-color: black;
+        height: 100%; }
+        .section.member-card-change .member-card-level .member-card-time-num .media .media-body input[name='member-card-endtime'], .section.member-card-change .member-card-level .member-card-time-num .media .media-body input[name='member-card-starttime'] {
+          height: 25px; }
+  .section.member-card-change .member-card-level .member-card-time-num .member-card-time {
+    border-top: 1px solid #9a9a9a; }
+  .section.member-card-change .member-card-num-action li {
+    padding-left: 10px;
+    border-bottom: 1px solid #ececec;
+    font-size: 0; }
+    .section.member-card-change .member-card-num-action li a {
+      font-size: 16px;
+      line-height: 45px;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      position: relative; }
+      .section.member-card-change .member-card-num-action li a:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 16px;
+        right: 10px;
+        -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+        width: 8px;
+        height: 8px;
+        border-right: 1px solid #959595;
+        border-bottom: 1px solid #959595; }
+  .section.shopping-list {
+    display: block; }
+    .section.shopping-list .shopping-list-guid h3 {
+      padding-left: 10px;
+      margin-top: 20px;
+      font-weight: normal; }
+    .section.shopping-list .shopping-list-guid .member-card-num-action li {
+      padding-left: 10px;
+      border-bottom: 1px solid #ececec;
+      font-size: 0; }
+      .section.shopping-list .shopping-list-guid .member-card-num-action li a {
+        font-size: 16px;
+        line-height: 45px;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        position: relative; }
+        .section.shopping-list .shopping-list-guid .member-card-num-action li a:after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 16px;
+          right: 10px;
+          -webkit-transform: rotate(-45deg);
+              -ms-transform: rotate(-45deg);
+                  transform: rotate(-45deg);
+          width: 8px;
+          height: 8px;
+          border-right: 1px solid #959595;
+          border-bottom: 1px solid #959595; }
 
 /*# sourceMappingURL=member_list.css.map */
