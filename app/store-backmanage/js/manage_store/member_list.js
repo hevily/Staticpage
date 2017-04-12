@@ -241,5 +241,31 @@ $(function () {
 					});
 
 	// 会员列表-消费信息
-	var a
+	var shoppingList = $('.shopping-list'), // 消费信息
+		moneyDetail = $('.money-detail'), // 消费明细
+		moneyLog = $('.section.money-log'), // 消费记录
+		integralDetail = $('.integral-detail'), // 积分明细
+		integralUse = $('.integral-use'), // 积分兑现
+		integralAdd = $('.integral-add'), // 新增积分
+		addNewMoneyLog = $('.add-new-money-log') // 赠送积分
+
+		;
+
+	// 消费记录展示
+	$('li.money-log').on('click',function () {
+		shoppingList.hide()
+		moneyLog.show()
+		console.log(1)
+	})
+	// 消费记录 取消
+	$('.money-log-back').on('click',function () {
+		moneyLog.hide()
+		shoppingList.show()
+	})
+	// 赠送积分
+	$('.integral-add-btn').on('click',function () {
+		addNewMoneyLog.show()
+		moneyLog.hide()
+	})
+	
 })

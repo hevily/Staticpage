@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <link rel="stylesheet" type="text/css" href="../../css/member_list.css" />
 	<title>消费记录</title>
+	<style type="text/css">
+		.index_title{ width:100%; padding-top:10px; padding-bottom:10px;height: 45px;background-color: #F3F3F3;}
+		.index_title ul{ width:60%; display:block;height: 45px;margin:0 auto;}
+		.index_title ul li{list-style:none;float:left; width:50%;height: 45px;line-height: 45px;background:#fff;color:#0885E3;text-align:center;}
+		.index_title ul li.active{background:#0885E3;color:#fff;}
+		.index_title ul li:first-child{
+			border-top-left-radius: 8px;border-bottom-left-radius: 8px;}
+		.index_title ul li:last-child{
+			border-top-right-radius: 8px;border-bottom-right-radius: 8px;}
+	</style>
 </head>
 <body>
 	<header></header>
@@ -14,8 +24,8 @@
 			<div class="shopping-list-guid">
 				<h3>消费金额</h3>
 				<ul class="member-card-num-action">
-					<li class="media event-log tap-action">
-						<a href="">
+					<li class="media event-log tap-action money-detail">
+						<a href="member_list_info/money_detail.html">
 							<div class="media-left media-middle">
 								<div class="input-label">
 									消费明细
@@ -23,8 +33,8 @@
 							</div>
 						</a>
 					</li>
-					<li class="media event-log tap-action">
-						<a href="">
+					<li class="media event-log tap-action money-log">
+						<a href="javascript:;">
 							<div class="media-left media-middle">
 								<div class="input-label">
 									消费记录
@@ -35,8 +45,8 @@
 				</ul>
 				<h3>积分余额</h3>
 				<ul class="member-card-num-action">
-					<li class="media event-log tap-action">
-						<a href="">
+					<li class="media event-log tap-action integral-detail">
+						<a href="member_list_info/integral_detail.html">
 							<div class="media-left media-middle">
 								<div class="input-label">
 									积分明细
@@ -44,8 +54,8 @@
 							</div>
 						</a>
 					</li>
-					<li class="media event-log tap-action">
-						<a href="">
+					<li class="media event-log tap-action integral-use">
+						<a href="javascript:;">
 							<div class="media-left media-middle">
 								<div class="input-label">
 									兑现积分
@@ -53,8 +63,8 @@
 							</div>
 						</a>
 					</li>
-					<li class="media event-log tap-action">
-						<a href="">
+					<li class="media event-log tap-action integral-add">
+						<a href="javascript:;">
 							<div class="media-left media-middle">
 								<div class="input-label">
 									新增积分
@@ -65,8 +75,226 @@
 				</ul>
 			</div>
 		</div>
-		<div class="section">
-
+		<div class="section money-detail">
+			<!-- 跳转页面 money_detail.html -->
+		</div>
+		<div class="section money-log">
+			<div class="member-btn ">
+				<a href="javascript:;" class="btn  btn-space money-log-back">返回</a>
+				<a href="javascript:;" class="btn  btn-theme money-log-add">新增消费记录</a>
+			</div>
+			<div class="money-log-list">
+				<div class="log-list-title media">
+					<div class="media-left media-middle">消费数据</div>
+					<div class="media-body media-middle">积分</div>
+					<div class="media-right media-middle">操作</div>
+				</div>
+				<div class="log-list-detail">
+					<ul>
+						<li class="media">
+							<div class="media-left media-middle">
+								<img src="#" alt="商品logo" class="media-object">
+								<div class="detail-money">
+									<p>¥ 38989.98</p>
+									<p>4-12</p>
+								</div>
+							</div>
+							<div class="media-body media-middle">
+								<div class="gifted">
+									<p>已赠送</p>
+									<p>345</p>
+								</div>
+								<div class="waitgift">
+									<p>未赠积分</p>
+									<p><a href="javascript:;" class="integral-add-btn">赠送</a></p>
+								</div>
+							</div>
+							<div class="media-right media-middle">
+								<div class="server">
+									<p>客服-0312</p>
+									<p class="time">4-12 14:42</p>
+								</div>
+							</div>
+						</li>
+						<li class="media">
+							<div class="media-left media-middle">
+								<img src="#" alt="商品logo" class="media-object">
+								<div class="detail-money">
+									<p>¥ 38989.98</p>
+									<p>4-12</p>
+								</div>
+							</div>
+							<div class="media-body gifted midia-middle">
+								<div class="gifted">
+									<p>已赠送</p>
+									<p>345</p>
+								</div>
+								<div class="waitgift">
+									<p>未赠积分</p>
+									<p><a href="javascript:;" class="integral-add-btn">赠送</a></p>
+								</div>
+							</div>
+							<div class="media-right">
+								<div class="server">
+									<p>客服-0312</p>
+									<p class="time">4-12 14:42</p>
+								</div>
+							</div>
+						</li>
+						<li class="media">
+							<div class="media-left media-middle">
+								<img src="#" alt="商品logo" class="media-object">
+								<div class="detail-money">
+									<p>¥ 38989.98</p>
+									<p>4-12</p>
+								</div>
+							</div>
+							<div class="media-body ">
+								<div class="gifted">
+									<p>已赠送</p>
+									<p>345</p>
+								</div>
+								<div class="waitgift">
+									<p>未赠积分</p>
+									<p><a href="javascript:;" class="integral-add-btn">赠送</a></p>
+								</div>
+							</div>
+							<div class="media-right">
+								<div class="server">
+									<p>客服-0312</p>
+									<p class="time">4-12 14:42</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="section integral-detail">
+			<!-- 跳转页面 integral_detail -->
+		</div>
+		<div class="section integral-use">
+	
+		</div>
+		<div class="section integral-add">
+	
+		</div>
+		<!-- 新增消费记录 -->
+		<div class="section animated add-new-money-log" >
+			<div class="member-btn ">
+				<a href="javascript:;" class="btn  btn-space add-money-log-cancel">取消</a>
+				<a href="javascript:;" class="btn  btn-theme add-money-log-submit">提交</a>
+			</div>
+			<div class="member-input">
+				<ul>
+					<li class="media">
+						<div class="media-left media-middle">
+							<div class="input-label">
+								消费日期
+							</div>
+						</div>
+						<div class="media-body media-middle">
+							<div class="input-text">
+								<input type="text" name="fullname">
+							</div>
+						</div>
+					</li>
+					<li class="media">
+						<div class="media-left media-middle">
+							<div class="input-label">
+								消费金额
+							</div>
+						</div>
+						<div class="media-body media-middle">
+							<div class="input-text">
+								<input type="text" name="firstName">
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div class="integral-add-box">
+					<h3>积分赠送 </h3>
+					<div class="integral-add-switch">
+						<input type="checkbox" id="checkbox_c1" class="chk_3">
+						<label for="checkbox_c1"></label>
+						<ul>
+							<li class="media">
+								<div class="media-left media-middle">
+									<div class="input-label">
+										积分开始时间
+									</div>
+								</div>
+								<div class="media-body media-middle">
+									<div class="input-text">
+										<input type="date" name="secondName">
+									</div>
+								</div>
+							</li>
+							<li class="media">
+								<div class="media-left media-middle">
+									<div class="input-label">
+										积分到期时间
+									</div>
+								</div>
+								<div class="media-body media-middle">
+									<div class="input-text">
+										<input type="date" name="sex">
+									</div>
+								</div>
+							</li>
+							<li class="media">
+								<div class="media-left media-middle">
+									<div class="input-label">
+										积分
+									</div>
+								</div>
+								<div class="media-body media-middle">
+									<div class="input-text">
+										<input type="text" name="birthday">
+									</div>
+								</div>
+							</li>
+							<li class="media">
+								<div class="media-left media-middle">
+									<div class="input-label">
+										留言
+									</div>
+								</div>
+								<div class="media-body media-middle">
+									<div class="input-text">
+										<input type="text" name="personalIDCard">
+									</div>
+								</div>
+							</li>
+							<li class="media">
+								<div class="media-left media-middle">
+									<div class="input-label">
+										邮箱
+									</div>
+								</div>
+								<div class="media-body media-middle">
+									<div class="input-text">
+										<input type="text" name="email">
+									</div>
+								</div>
+							</li>
+							<li class="media">
+								<div class="media-left media-middle">
+									<div class="input-label">
+										照片(消费凭证)
+									</div>
+								</div>
+								<div class="media-body media-middle">
+									<div class="input-text">
+										<img src="../../img/member-manage/member-logo.png" class="member-logo">
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
 		</div>
 	</div>
 	<footer></footer>
@@ -75,6 +303,6 @@
 	<script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
 	<!-- statistics  -->
 	<script src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/js/storecommon.js"></script>
-
+	<script src="../../js/manage_store/member_list.js"></script>
 </body>
 </html>
