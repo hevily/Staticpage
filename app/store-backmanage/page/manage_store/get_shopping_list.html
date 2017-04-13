@@ -4,23 +4,15 @@
 	<meta charset="utf-8" />
 	<meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../../css/animate.min.css">
     <link rel="stylesheet" type="text/css" href="../../css/member_list.css" />
 	<title>消费记录</title>
-	<style type="text/css">
-		.index_title{ width:100%; padding-top:10px; padding-bottom:10px;height: 45px;background-color: #F3F3F3;}
-		.index_title ul{ width:60%; display:block;height: 45px;margin:0 auto;}
-		.index_title ul li{list-style:none;float:left; width:50%;height: 45px;line-height: 45px;background:#fff;color:#0885E3;text-align:center;}
-		.index_title ul li.active{background:#0885E3;color:#fff;}
-		.index_title ul li:first-child{
-			border-top-left-radius: 8px;border-bottom-left-radius: 8px;}
-		.index_title ul li:last-child{
-			border-top-right-radius: 8px;border-bottom-right-radius: 8px;}
-	</style>
+	
 </head>
 <body>
 	<header></header>
 	<div class="container">
-		<div class="section shopping-list">
+		<div class="section animated slideInLeft shopping-list" >
 			<div class="shopping-list-guid">
 				<h3>消费金额</h3>
 				<ul class="member-card-num-action">
@@ -75,10 +67,11 @@
 				</ul>
 			</div>
 		</div>
-		<div class="section money-detail">
+		<div class="section animated money-detail">
 			<!-- 跳转页面 money_detail.html -->
 		</div>
-		<div class="section money-log">
+			<!-- 消费记录 -->
+		<div class="section animated slideInLeft money-log" >
 			<div class="member-btn ">
 				<a href="javascript:;" class="btn  btn-space money-log-back">返回</a>
 				<a href="javascript:;" class="btn  btn-theme money-log-add">新增消费记录</a>
@@ -170,17 +163,11 @@
 				</div>
 			</div>
 		</div>
-		<div class="section integral-detail">
+		<div class="section animated integral-detail">
 			<!-- 跳转页面 integral_detail -->
 		</div>
-		<div class="section integral-use">
-	
-		</div>
-		<div class="section integral-add">
-	
-		</div>
-		<!-- 新增消费记录 -->
-		<div class="section animated add-new-money-log" >
+			<!-- 新增消费记录 -->
+		<div class="section animated slideInLeft add-new-money-log" style="display: block;">
 			<div class="member-btn ">
 				<a href="javascript:;" class="btn  btn-space add-money-log-cancel">取消</a>
 				<a href="javascript:;" class="btn  btn-theme add-money-log-submit">提交</a>
@@ -189,25 +176,21 @@
 				<ul>
 					<li class="media">
 						<div class="media-left media-middle">
-							<div class="input-label">
-								消费日期
-							</div>
+							<div class="input-label">消费日期<span>*</span></div>
 						</div>
 						<div class="media-body media-middle">
 							<div class="input-text">
-								<input type="text" name="fullname">
+								<input type="date" name="shoppingDay" >
 							</div>
 						</div>
 					</li>
 					<li class="media">
 						<div class="media-left media-middle">
-							<div class="input-label">
-								消费金额
-							</div>
+							<div class="input-label">消费金额<span>*</span></div>
 						</div>
 						<div class="media-body media-middle">
 							<div class="input-text">
-								<input type="text" name="firstName">
+								<input type="tel" name="shoppingCash">
 							</div>
 						</div>
 					</li>
@@ -217,40 +200,34 @@
 					<div class="integral-add-switch">
 						<input type="checkbox" id="checkbox_c1" class="chk_3">
 						<label for="checkbox_c1"></label>
-						<ul>
+						<ul class="animated slideInUp">
 							<li class="media">
 								<div class="media-left media-middle">
-									<div class="input-label">
-										积分开始时间
-									</div>
+									<div class="input-label">积分开始时间<span>*</span></div>
 								</div>
 								<div class="media-body media-middle">
 									<div class="input-text">
-										<input type="date" name="secondName">
+										<input type="date" name="integralStartTime">
 									</div>
 								</div>
 							</li>
 							<li class="media">
 								<div class="media-left media-middle">
-									<div class="input-label">
-										积分到期时间
-									</div>
+									<div class="input-label">积分到期时间<span>*</span></div>
 								</div>
 								<div class="media-body media-middle">
 									<div class="input-text">
-										<input type="date" name="sex">
+										<input type="date" name="integralEndTime" dir="rtl">
 									</div>
 								</div>
 							</li>
 							<li class="media">
 								<div class="media-left media-middle">
-									<div class="input-label">
-										积分
-									</div>
+									<div class="input-label">积分<span>*</span></div>
 								</div>
 								<div class="media-body media-middle">
 									<div class="input-text">
-										<input type="text" name="birthday">
+										<input type="text" name="integralNum">
 									</div>
 								</div>
 							</li>
@@ -262,7 +239,7 @@
 								</div>
 								<div class="media-body media-middle">
 									<div class="input-text">
-										<input type="text" name="personalIDCard">
+										<textarea class="levaveMsg"></textarea>
 									</div>
 								</div>
 							</li>
@@ -296,6 +273,126 @@
 				
 			</div>
 		</div>
+			<!-- 新增积分 赠送积分 -->
+		<div class="section animated slideInLeft add-integral-gift" >
+			<div class="member-btn ">
+				<a href="javascript:;" class="btn  btn-space add-integral-gift-cancel">取消</a>
+				<a href="javascript:;" class="btn  btn-theme add-integral-gift-submit">提交</a>
+			</div>
+
+			<div class="member-input">
+				<ul>
+					<li class="media">
+						<div class="media-left media-middle">
+							<div class="input-label">
+								积分开始时间
+							</div>
+						</div>
+						<div class="media-body media-middle">
+							<div class="input-text">
+								<input type="date" name="fullname" >
+							</div>
+						</div>
+					</li>
+					<li class="media">
+						<div class="media-left media-middle">
+							<div class="input-label">
+								积分到期时间
+							</div>
+						</div>
+						<div class="media-body media-middle">
+							<div class="input-text">
+								<input type="date" name="firstName">
+							</div>
+						</div>
+					</li>
+					<li class="media">
+						<div class="media-left media-middle">
+							<div class="input-label">
+								积分
+							</div>
+						</div>
+						<div class="media-body media-middle">
+							<div class="input-text">
+								<input type="tel" name="firstName">
+							</div>
+						</div>
+					</li>
+					<li class="media">
+						<div class="media-left media-middle">
+							<div class="input-label">
+								留言
+							</div>
+						</div>
+						<div class="media-body media-middle">
+							<div class="input-text">
+								<textarea></textarea>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+			<!-- 兑现积分 -->
+		<div class="section animated slideInLeft cash-integral"  >
+			<div class="member-btn ">
+				<a href="javascript:;" class="btn  btn-space cash-integral-cancel">取消</a>
+				<a href="javascript:;" class="btn  btn-theme cash-integral-submit">提交</a>
+			</div>
+			<div class="member-input">
+				<ul>
+					<li class="media">
+						<div class="media-left media-middle">
+							<div class="input-label">
+								积分余额
+							</div>
+						</div>
+						<div class="media-body media-middle">
+							<div class="input-text">
+								<input type="tel" value="9999" name="fullname" readonly="readonly">
+							</div>
+						</div>
+					</li>
+					<li class="media">
+						<div class="media-left media-middle">
+							<div class="input-label" dir="rtl">
+								兑换日期
+							</div>
+						</div>
+						<div class="media-body media-middle">
+							<div class="input-text">
+								<input type="date" name="firstName">
+							</div>
+						</div>
+					</li>
+					<li class="media">
+						<div class="media-left media-middle">
+							<div class="input-label">
+								兑换分数
+							</div>
+						</div>
+						<div class="media-body media-middle">
+							<div class="input-text">
+								<input type="tel" name="firstName">
+							</div>
+						</div>
+					</li>
+					<li class="media">
+						<div class="media-left media-middle">
+							<div class="input-label">
+								留言
+							</div>
+						</div>
+						<div class="media-body media-middle">
+							<div class="input-text">
+								<textarea></textarea>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+		</div>
 	</div>
 	<footer></footer>
 	<!-- jQuery 2.1.4 -->
@@ -303,6 +400,7 @@
 	<script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
 	<!-- statistics  -->
 	<script src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/js/storecommon.js"></script>
+	<script src="../../js/plugin/layer/layer.js"></script>
 	<script src="../../js/manage_store/member_list.js"></script>
 </body>
 </html>

@@ -5,6 +5,9 @@
 	max-width:640px;
 	width:100%;
 	margin:0 auto;
+	div{
+		-webkit-backface-visibility: hidden;
+	}
 }
 .section{
 	* {margin: 0;padding: 0;}
@@ -305,7 +308,7 @@
 			}
 		}
 	}
-	&.edit-info-box{
+	&.edit-info-box,&.add-integral-gift,&.cash-integral{
 		.member-input{
 			border-top:1px solid #CFD7C5;
 			border-bottom:1px solid #cfd7c5;
@@ -344,10 +347,17 @@
 								border:none;
 								text-shadow:none;
 								box-shadow:none;
+								text-align:left;
 								// -webkit-tap-highlight-color:rgba(0,0,0,0.1);
 								&:focus{
 
 								}
+							}
+							textarea{
+								width:100% ;
+								border:none;
+								min-height:100px;
+								padding: 10px;
 							}
 						}
 					}
@@ -644,7 +654,6 @@
 
 	}
 	&.money-log{
-		display: block;
 		.money-log-list{
 			border-top:1px solid #CFD7C5;
 			.log-list-title{
@@ -735,9 +744,7 @@
 		
 		.member-input{
 			border-top:1px solid #CFD7C5;
-			border-bottom:1px solid #cfd7c5;
 			ul{
-				// transition:all 0.5s;
 				list-style:none;
 				padding-left: 10px;
 				.media{
@@ -752,13 +759,18 @@
 							line-height:45px;
 							width: 120px;
 							color: #969696;
+							span{
+								color:red;
+								position: relative;
+								top:5px;left:3px;
+							}
 						}
 					}
 					.media-body{
 						text-align:right;
 						height: 45px;
 						.input-text{
-							padding-right: 10px;
+							padding-right: 30px;
 							height: 100%;
 							.member-logo{
 								width: 50px;
@@ -772,11 +784,22 @@
 								border:none;
 								text-shadow:none;
 								box-shadow:none;
-								text-align:right;
-								// -webkit-tap-highlight-color:rgba(0,0,0,0.1);
-								&:focus{
+								// text-align:right;
+								-webkit-tap-highlight-color:rgba(0,0,0,0.1);
+								padding-right: 20px;
+								// &::-webkit-calendar-picker-indicator,&::-webkit-clear-button,&::-webkit-inner-spin-button{
+								// 	display: none;
 
+								// }
+								&::-webkit-datetime-edit{
+									float: right;
 								}
+							}
+							textarea{
+								width:100% ;
+								border:none;
+								min-height:100px;
+								padding: 10px;
 							}
 						}
 					}
@@ -809,11 +832,14 @@
 					line-height: 45px;
 					font-size: 16px;
 					font-weight: normal;
+					background-color: #f2f2f2;
 				}
 				.integral-add-switch{
 					position: relative;
 					ul{
 						display: none;
+						transition: all 2s;
+						border-bottom:1px solid #cfd7c5;
 					}
 					input:checked + label + ul{
 						display: block;

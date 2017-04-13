@@ -4,6 +4,8 @@
   max-width: 640px;
   width: 100%;
   margin: 0 auto; }
+  .container div {
+    -webkit-backface-visibility: hidden; }
 
 .section {
   display: none; }
@@ -249,32 +251,32 @@
       color: #2865B6; }
     .section.relationShip-free .decline-info .decline-sign {
       color: #757575; }
-  .section.edit-info-box .member-input {
+  .section.edit-info-box .member-input, .section.add-integral-gift .member-input, .section.cash-integral .member-input {
     border-top: 1px solid #CFD7C5;
     border-bottom: 1px solid #cfd7c5; }
-    .section.edit-info-box .member-input ul {
+    .section.edit-info-box .member-input ul, .section.add-integral-gift .member-input ul, .section.cash-integral .member-input ul {
       list-style: none;
       padding-left: 10px; }
-      .section.edit-info-box .member-input ul .media {
+      .section.edit-info-box .member-input ul .media, .section.add-integral-gift .member-input ul .media, .section.cash-integral .member-input ul .media {
         border-bottom: 1px solid #ebebeb;
         margin: 0; }
-        .section.edit-info-box .member-input ul .media:last-child {
+        .section.edit-info-box .member-input ul .media:last-child, .section.add-integral-gift .member-input ul .media:last-child, .section.cash-integral .member-input ul .media:last-child {
           border-bottom: none; }
-        .section.edit-info-box .member-input ul .media .media-left {
+        .section.edit-info-box .member-input ul .media .media-left, .section.add-integral-gift .member-input ul .media .media-left, .section.cash-integral .member-input ul .media .media-left {
           word-break: keep-all; }
-          .section.edit-info-box .member-input ul .media .media-left .input-label {
+          .section.edit-info-box .member-input ul .media .media-left .input-label, .section.add-integral-gift .member-input ul .media .media-left .input-label, .section.cash-integral .member-input ul .media .media-left .input-label {
             line-height: 45px;
             width: 65px;
             color: #969696; }
-        .section.edit-info-box .member-input ul .media .media-body {
+        .section.edit-info-box .member-input ul .media .media-body, .section.add-integral-gift .member-input ul .media .media-body, .section.cash-integral .member-input ul .media .media-body {
           text-align: right;
           height: 45px; }
-          .section.edit-info-box .member-input ul .media .media-body .input-text {
+          .section.edit-info-box .member-input ul .media .media-body .input-text, .section.add-integral-gift .member-input ul .media .media-body .input-text, .section.cash-integral .member-input ul .media .media-body .input-text {
             padding-right: 10px;
             height: 100%; }
-            .section.edit-info-box .member-input ul .media .media-body .input-text .member-logo {
+            .section.edit-info-box .member-input ul .media .media-body .input-text .member-logo, .section.add-integral-gift .member-input ul .media .media-body .input-text .member-logo, .section.cash-integral .member-input ul .media .media-body .input-text .member-logo {
               width: 50px; }
-            .section.edit-info-box .member-input ul .media .media-body .input-text input {
+            .section.edit-info-box .member-input ul .media .media-body .input-text input, .section.add-integral-gift .member-input ul .media .media-body .input-text input, .section.cash-integral .member-input ul .media .media-body .input-text input {
               width: calc(100% - 10px);
               height: 100%;
               padding-left: 10px;
@@ -282,13 +284,19 @@
               -webkit-appearance: none;
               border: none;
               text-shadow: none;
-              box-shadow: none; }
-      .section.edit-info-box .member-input ul .event-log {
+              box-shadow: none;
+              text-align: left; }
+            .section.edit-info-box .member-input ul .media .media-body .input-text textarea, .section.add-integral-gift .member-input ul .media .media-body .input-text textarea, .section.cash-integral .member-input ul .media .media-body .input-text textarea {
+              width: 100%;
+              border: none;
+              min-height: 100px;
+              padding: 10px; }
+      .section.edit-info-box .member-input ul .event-log, .section.add-integral-gift .member-input ul .event-log, .section.cash-integral .member-input ul .event-log {
         position: relative; }
-        .section.edit-info-box .member-input ul .event-log a {
+        .section.edit-info-box .member-input ul .event-log a, .section.add-integral-gift .member-input ul .event-log a, .section.cash-integral .member-input ul .event-log a {
           display: block;
           text-decoration: none; }
-        .section.edit-info-box .member-input ul .event-log:after {
+        .section.edit-info-box .member-input ul .event-log:after, .section.add-integral-gift .member-input ul .event-log:after, .section.cash-integral .member-input ul .event-log:after {
           content: '';
           display: block;
           position: absolute;
@@ -500,68 +508,65 @@
           width: 110px;
           text-align: center;
           color: blue; }
-  .section.money-log {
-    display: block; }
-    .section.money-log .money-log-list {
-      border-top: 1px solid #CFD7C5; }
-      .section.money-log .money-log-list .log-list-title {
-        border-bottom: 1px solid #CFD7C5;
-        line-height: 45px;
-        text-align: center; }
-        .section.money-log .money-log-list .log-list-title .media-left {
-          width: 40%; }
-        .section.money-log .money-log-list .log-list-title .media-right {
-          width: 30%; }
-      .section.money-log .money-log-list .log-list-detail li {
-        border-bottom: 1px solid #CFD7C5;
-        padding: 0 10px 15px 10px;
-        font-size: 14px; }
-      .section.money-log .money-log-list .log-list-detail .media-left {
+  .section.money-log .money-log-list {
+    border-top: 1px solid #CFD7C5; }
+    .section.money-log .money-log-list .log-list-title {
+      border-bottom: 1px solid #CFD7C5;
+      line-height: 45px;
+      text-align: center; }
+      .section.money-log .money-log-list .log-list-title .media-left {
         width: 40%; }
-        .section.money-log .money-log-list .log-list-detail .media-left img {
-          width: 40px;
-          height: 40px;
+      .section.money-log .money-log-list .log-list-title .media-right {
+        width: 30%; }
+    .section.money-log .money-log-list .log-list-detail li {
+      border-bottom: 1px solid #CFD7C5;
+      padding: 0 10px 15px 10px;
+      font-size: 14px; }
+    .section.money-log .money-log-list .log-list-detail .media-left {
+      width: 40%; }
+      .section.money-log .money-log-list .log-list-detail .media-left img {
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        float: left; }
+      .section.money-log .money-log-list .log-list-detail .media-left .detail-money {
+        float: left;
+        text-align: center;
+        color: #cfcfcf;
+        font-size: 12px;
+        margin-top: 5px;
+        margin-left: 10px; }
+        .section.money-log .money-log-list .log-list-detail .media-left .detail-money p {
+          margin-bottom: 5px; }
+          .section.money-log .money-log-list .log-list-detail .media-left .detail-money p:first-child {
+            color: #2b2b2b; }
+    .section.money-log .money-log-list .log-list-detail .media-body {
+      text-align: center; }
+      .section.money-log .money-log-list .log-list-detail .media-body .gifted {
+        display: none;
+        color: green; }
+      .section.money-log .money-log-list .log-list-detail .media-body .waitgift {
+        color: red; }
+        .section.money-log .money-log-list .log-list-detail .media-body .waitgift a {
+          text-decoration: none;
           display: inline-block;
-          float: left; }
-        .section.money-log .money-log-list .log-list-detail .media-left .detail-money {
-          float: left;
-          text-align: center;
-          color: #cfcfcf;
-          font-size: 12px;
           margin-top: 5px;
-          margin-left: 10px; }
-          .section.money-log .money-log-list .log-list-detail .media-left .detail-money p {
-            margin-bottom: 5px; }
-            .section.money-log .money-log-list .log-list-detail .media-left .detail-money p:first-child {
-              color: #2b2b2b; }
-      .section.money-log .money-log-list .log-list-detail .media-body {
-        text-align: center; }
-        .section.money-log .money-log-list .log-list-detail .media-body .gifted {
-          display: none;
-          color: green; }
-        .section.money-log .money-log-list .log-list-detail .media-body .waitgift {
-          color: red; }
-          .section.money-log .money-log-list .log-list-detail .media-body .waitgift a {
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 5px;
-            padding: 2px 8px;
-            border: 1px solid #cfcfcf;
-            border-radius: 3px; }
-        .section.money-log .money-log-list .log-list-detail .media-body.gifted .gifted {
-          display: block; }
-        .section.money-log .money-log-list .log-list-detail .media-body.gifted .waitgift {
-          display: none; }
-      .section.money-log .money-log-list .log-list-detail .media-right {
-        width: 30%;
-        text-align: right; }
-        .section.money-log .money-log-list .log-list-detail .media-right p {
-          margin-top: 5px; }
-          .section.money-log .money-log-list .log-list-detail .media-right p:first-child {
-            margin: 0; }
+          padding: 2px 8px;
+          border: 1px solid #cfcfcf;
+          border-radius: 3px; }
+      .section.money-log .money-log-list .log-list-detail .media-body.gifted .gifted {
+        display: block; }
+      .section.money-log .money-log-list .log-list-detail .media-body.gifted .waitgift {
+        display: none; }
+    .section.money-log .money-log-list .log-list-detail .media-right {
+      width: 30%;
+      text-align: right; }
+      .section.money-log .money-log-list .log-list-detail .media-right p {
+        margin-top: 5px; }
+        .section.money-log .money-log-list .log-list-detail .media-right p:first-child {
+          margin: 0; }
   .section.add-new-money-log .member-input {
-    border-top: 1px solid #CFD7C5;
-    border-bottom: 1px solid #cfd7c5; }
+    border-top: 1px solid #CFD7C5; }
     .section.add-new-money-log .member-input ul {
       list-style: none;
       padding-left: 10px; }
@@ -576,11 +581,16 @@
             line-height: 45px;
             width: 120px;
             color: #969696; }
+            .section.add-new-money-log .member-input ul .media .media-left .input-label span {
+              color: red;
+              position: relative;
+              top: 5px;
+              left: 3px; }
         .section.add-new-money-log .member-input ul .media .media-body {
           text-align: right;
           height: 45px; }
           .section.add-new-money-log .member-input ul .media .media-body .input-text {
-            padding-right: 10px;
+            padding-right: 30px;
             height: 100%; }
             .section.add-new-money-log .member-input ul .media .media-body .input-text .member-logo {
               width: 50px; }
@@ -593,7 +603,15 @@
               border: none;
               text-shadow: none;
               box-shadow: none;
-              text-align: right; }
+              -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+              padding-right: 20px; }
+              .section.add-new-money-log .member-input ul .media .media-body .input-text input::-webkit-datetime-edit {
+                float: right; }
+            .section.add-new-money-log .member-input ul .media .media-body .input-text textarea {
+              width: 100%;
+              border: none;
+              min-height: 100px;
+              padding: 10px; }
       .section.add-new-money-log .member-input ul .event-log {
         position: relative; }
         .section.add-new-money-log .member-input ul .event-log a {
@@ -620,11 +638,15 @@
       border-width: 1px 0 1px 0;
       line-height: 45px;
       font-size: 16px;
-      font-weight: normal; }
+      font-weight: normal;
+      background-color: #f2f2f2; }
     .section.add-new-money-log .member-input .integral-add-box .integral-add-switch {
       position: relative; }
       .section.add-new-money-log .member-input .integral-add-box .integral-add-switch ul {
-        display: none; }
+        display: none;
+        -webkit-transition: all 2s;
+                transition: all 2s;
+        border-bottom: 1px solid #cfd7c5; }
       .section.add-new-money-log .member-input .integral-add-box .integral-add-switch input:checked + label + ul {
         display: block; }
 
