@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../../css/build/normalize.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/build/media_bt.css" />
+	<title>搜索会员</title>
+	<style type="text/css">
+
+		.container {
+		  max-width: 640px;
+		  width: 100%;
+		  margin: 0 auto; }
+		  .container div {
+		    -webkit-backface-visibility: hidden; }
+
+			.member-input {
+			  border-bottom: 1px solid #CFD7C5;
+			}
+			  .member-input ul {
+			  	margin-bottom: 0;
+			    list-style: none;
+			    padding-left: 0px; }
+			    .member-input ul .media {
+			      border-bottom: 1px solid #ebebeb;
+			      margin: 0; }
+			      .member-input ul .media:last-child {
+			        border-bottom: none; }
+			      .member-input ul .media .media-left {
+			        word-break: keep-all;
+			        position: relative; }
+			        .member-input ul .media .media-left .input-label {
+			          line-height: 45px;
+			          width: 120px;
+			          color: #969696;
+			          text-indent: 10px; }
+			        .member-input ul .media .media-left span {
+			          color: red;
+			          position: absolute;
+			          top: 18px;
+			          left: 0px; }
+			      .member-input ul .media .media-body {
+			        text-align: right;
+			        height: 45px; }
+			        .member-input ul .media .media-body .input-text {
+			          padding-right: 10px;
+			          height: 100%; }
+			          .member-input ul .media .media-body .input-text .member-logo {
+			            width: 50px; }
+			          .member-input ul .media .media-body .input-text input {
+			            width: calc(100% - 10px);
+			            height: 100%;
+			            padding-left: 10px;
+			            line-height: 1.5;
+			            -webkit-appearance: none;
+			            border: none;
+			            text-shadow: none;
+			            box-shadow: none;
+			            text-align:right;
+			            -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+			            padding-right: 0px; }
+			            .member-input ul .media .media-body .input-text input::-webkit-datetime-edit {
+			              float: right; }
+			          .member-input ul .media .media-body .input-text textarea {
+			            width: 100%;
+			            border: none;
+			            min-height: 100px;
+			            padding: 10px; }
+			    .member-input ul .event-log {
+			      position: relative; }
+			      .member-input ul .event-log a {
+			        display: block;
+			        text-decoration: none; }
+			      .member-input ul .event-log:after {
+			        content: '';
+			        display: block;
+			        position: absolute;
+			        top: 18px;
+			        right: 10px;
+			        -webkit-transform: rotate(-45deg);
+			            -ms-transform: rotate(-45deg);
+			                transform: rotate(-45deg);
+			        width: 10px;
+			        height: 10px;
+			        border-right: 1px solid #4c4c4c;
+			        border-bottom: 1px solid #4c4c4c; }
+			  .member-input .integral-add-box h3 {
+			    color: #969696;
+			    text-indent: 10px;
+			    border-style: solid;
+			    border-color: #ebebeb;
+			    border-width: 1px 0 1px 0;
+			    line-height: 45px;
+			    font-size: 16px;
+			    font-weight: normal;
+			    background-color: #f2f2f2; }
+			  .member-input .integral-add-box .integral-add-switch {
+			    position: relative; }
+			    .member-input .integral-add-box .integral-add-switch ul {
+			      display: none;
+			      -webkit-transition: all 2s;
+			              transition: all 2s;
+			      border-bottom: 1px solid #cfd7c5; }
+			    .member-input .integral-add-box .integral-add-switch input:checked + label + ul {
+			      display: block; }
+
+		.search-btn a{
+			display: block;
+			width: 50%;margin:0 auto;
+			height: 45px;
+			border:none;
+			background-color: #4285F4;
+			color:#fff;
+			text-decoration: none;
+			line-height: 45px;
+			text-align: center;
+			margin-top: 18px;
+			border-radius:5px;
+		}
+
+	</style>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="section">
+			<div class="member-input">
+				<ul>
+					<li class="media">
+						<div class="media-left media-middle">
+							<div class="input-label">
+								姓
+							</div>
+						</div>
+						<div class="media-body media-middle">
+							<div class="input-text">
+								<input type="text" placeholder="请输入姓" name="fullname" dir="">
+							</div>
+						</div>
+					</li>
+					<li class="media">
+						<div class="media-left media-middle">
+							<div class="input-label">
+								名
+							</div>
+						</div>
+						<div class="media-body media-middle">
+							<div class="input-text">
+								<input type="text" placeholder="请输入名" name="fullname" dir="">
+							</div>
+						</div>
+					</li>
+					<li class="media">
+						<div class="media-left media-middle">
+							<div class="input-label">
+								全名
+							</div>
+						</div>
+						<div class="media-body media-middle">
+							<div class="input-text">
+								<input type="text" placeholder="请输入全名" name="firstName" dir="">
+							</div>
+						</div>
+					</li>
+					<li class="media">
+						<div class="media-left media-middle">
+							<div class="input-label">
+								用户资料
+							</div>
+						</div>
+						<div class="media-body media-middle">
+							<div class="input-text">
+								<input type="text" placeholder="手机号/邮箱/会员卡号" name="secondName" dir="">
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="search-btn">
+				<a href="javascript:;">搜索</a>
+			</div>
+		</div>
+	</div>
+	<footer></footer>
+	<!-- jQuery 2.1.4 -->
+	<!-- <script src="https://staticcdn.yshjie.com/cdn/librarypath/jquery/jquery-2.1.4.min.js"></script> -->
+	<script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+	<!-- statistics  -->
+	<script src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/js/storecommon.js"></script>
+</body>
+</html>

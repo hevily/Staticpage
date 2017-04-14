@@ -12,7 +12,7 @@
 <body>
 	<header></header>
 	<div class="container">
-		<div class="section animated slideInLeft shopping-list" >
+		<div class="section animated slideInLeft shopping-list" style="display: block;">
 			<div class="shopping-list-guid">
 				<h3>消费金额</h3>
 				<ul class="member-card-num-action">
@@ -167,7 +167,7 @@
 			<!-- 跳转页面 integral_detail -->
 		</div>
 			<!-- 新增消费记录 -->
-		<div class="section animated slideInLeft add-new-money-log" style="display: block;">
+		<div class="section animated slideInLeft add-new-money-log" >
 			<div class="member-btn ">
 				<a href="javascript:;" class="btn  btn-space add-money-log-cancel">取消</a>
 				<a href="javascript:;" class="btn  btn-theme add-money-log-submit">提交</a>
@@ -176,7 +176,8 @@
 				<ul>
 					<li class="media">
 						<div class="media-left media-middle">
-							<div class="input-label">消费日期<span>*</span></div>
+							<div class="input-label">消费日期</div>
+							<span>*</span>
 						</div>
 						<div class="media-body media-middle">
 							<div class="input-text">
@@ -186,7 +187,8 @@
 					</li>
 					<li class="media">
 						<div class="media-left media-middle">
-							<div class="input-label">消费金额<span>*</span></div>
+							<div class="input-label">消费金额</div>
+							<span>*</span>
 						</div>
 						<div class="media-body media-middle">
 							<div class="input-text">
@@ -203,7 +205,8 @@
 						<ul class="animated slideInUp">
 							<li class="media">
 								<div class="media-left media-middle">
-									<div class="input-label">积分开始时间<span>*</span></div>
+									<div class="input-label">积分开始时间</div>
+									<span>*</span>
 								</div>
 								<div class="media-body media-middle">
 									<div class="input-text">
@@ -213,7 +216,8 @@
 							</li>
 							<li class="media">
 								<div class="media-left media-middle">
-									<div class="input-label">积分到期时间<span>*</span></div>
+									<div class="input-label">积分到期时间</div>
+									<span>*</span>
 								</div>
 								<div class="media-body media-middle">
 									<div class="input-text">
@@ -223,7 +227,8 @@
 							</li>
 							<li class="media">
 								<div class="media-left media-middle">
-									<div class="input-label">积分<span>*</span></div>
+									<div class="input-label">积分</div>
+									<span>*</span>
 								</div>
 								<div class="media-body media-middle">
 									<div class="input-text">
@@ -290,7 +295,7 @@
 						</div>
 						<div class="media-body media-middle">
 							<div class="input-text">
-								<input type="date" name="fullname" >
+								<input type="date" value="2017-04-21" name="startTime" >
 							</div>
 						</div>
 					</li>
@@ -302,7 +307,7 @@
 						</div>
 						<div class="media-body media-middle">
 							<div class="input-text">
-								<input type="date" name="firstName">
+								<input type="date" value="2017-04-21" name="endTime">
 							</div>
 						</div>
 					</li>
@@ -314,7 +319,7 @@
 						</div>
 						<div class="media-body media-middle">
 							<div class="input-text">
-								<input type="tel" name="firstName">
+								<input type="tel" value="4" name="integralNum">
 							</div>
 						</div>
 					</li>
@@ -326,7 +331,7 @@
 						</div>
 						<div class="media-body media-middle">
 							<div class="input-text">
-								<textarea></textarea>
+								<textarea class="leaveMsg"></textarea>
 							</div>
 						</div>
 					</li>
@@ -334,7 +339,7 @@
 			</div>
 		</div>
 			<!-- 兑现积分 -->
-		<div class="section animated slideInLeft cash-integral"  >
+		<div class="section animated slideInLeft cash-integral" >
 			<div class="member-btn ">
 				<a href="javascript:;" class="btn  btn-space cash-integral-cancel">取消</a>
 				<a href="javascript:;" class="btn  btn-theme cash-integral-submit">提交</a>
@@ -343,49 +348,41 @@
 				<ul>
 					<li class="media">
 						<div class="media-left media-middle">
-							<div class="input-label">
-								积分余额
-							</div>
+							<div class="input-label">积分余额</div>
 						</div>
 						<div class="media-body media-middle">
 							<div class="input-text">
-								<input type="tel" value="9999" name="fullname" readonly="readonly">
+								<input type="tel" value="9999" name="integralRemain" readonly="readonly">
 							</div>
 						</div>
 					</li>
 					<li class="media">
 						<div class="media-left media-middle">
-							<div class="input-label" dir="rtl">
-								兑换日期
-							</div>
+							<div class="input-label" dir="rtl">兑换日期</div>
 						</div>
 						<div class="media-body media-middle">
 							<div class="input-text">
-								<input type="date" name="firstName">
+								<input type="date" name="cashIntegralTime">
 							</div>
 						</div>
 					</li>
 					<li class="media">
 						<div class="media-left media-middle">
-							<div class="input-label">
-								兑换分数
-							</div>
+							<div class="input-label">兑换分数</div>
 						</div>
 						<div class="media-body media-middle">
 							<div class="input-text">
-								<input type="tel" name="firstName">
+								<input type="tel" name="cashIntegralNum">
 							</div>
 						</div>
 					</li>
 					<li class="media">
 						<div class="media-left media-middle">
-							<div class="input-label">
-								留言
-							</div>
+							<div class="input-label">留言</div>
 						</div>
 						<div class="media-body media-middle">
 							<div class="input-text">
-								<textarea></textarea>
+								<textarea class="leaveMsg"></textarea>
 							</div>
 						</div>
 					</li>
@@ -401,6 +398,21 @@
 	<!-- statistics  -->
 	<script src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/js/storecommon.js"></script>
 	<script src="../../js/plugin/layer/layer.js"></script>
+	<script>
+		function changeTitle(title) {
+			try {
+			    if(window.stopProgressDialog){
+			        // android change title
+			        
+			    } else {
+					// ios change title
+					newTitle(title);
+			    }
+			} catch (e) {}
+			//web change title
+			document.querySelectorAll('title')[0].text = title;
+		}
+	</script>
 	<script src="../../js/manage_store/member_list.js"></script>
 </body>
 </html>

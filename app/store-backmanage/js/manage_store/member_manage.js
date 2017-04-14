@@ -74,6 +74,7 @@ submit.val());
 					if(inputinfo[i] == '') {
 						var notice = editinfo.find('li').eq(i+1).find('.input-label').text()
 						layer.msg('请检查是否已输入-'+notice+'-的内容')
+						console.log(i+1)
 						return false ;
 					}
 				}

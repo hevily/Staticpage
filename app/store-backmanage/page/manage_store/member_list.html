@@ -4,6 +4,7 @@
 	<meta charset="utf-8" />
 	<meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../../css/animate.min.css">
     <link rel="stylesheet" type="text/css" href="../../css/member_list.css">
 
 	<title>会员列表</title>
@@ -12,7 +13,7 @@
 	<header></header>
 	<div class="container">
 		<!-- member-list -->
-		<div class="section member-list-home-filter">
+		<div class="section animated slideInLeft member-list-home-filter">
 			<div class="member-filter">
 				<div class="filter-colum filter-status ">
 					<span class="filter-title">会员状态</span>
@@ -64,7 +65,7 @@
 			</div>
 		</div>
 		<!-- member-info -->
-		<div class="section animated member-info" >
+		<div class="section animated slideInLeft animated member-info" >
 			<div class="member-btn ">
 				<a href="javascript:;" class="btn four btn-space member-info-cancel">返回</a>
 				<a href="javascript:;" class="btn four btn-space edit-info">修改资料</a>
@@ -359,7 +360,7 @@
 			</div>
 		</div>
 		<!-- member-info → relationShip free -->
-		<div class="section animated relationShip-free">
+		<div class="section animated slideInLeft animated relationShip-free">
 			<div class="member-btn">
 				<a href="javascript:;" class="btn btn-space relationShip-cancel">取消</a>
 				<a href="javascript:;" class="btn btn-theme relationShip-free-done pull-right">解除</a>
@@ -377,7 +378,7 @@
 			</div>
 		</div>
 		<!-- member-info → edit info -->
-		<div class="section animated edit-info-box" >
+		<div class="section animated slideInLeft animated edit-info-box" >
 			<div class="animated member-btn fadeIn">
 				<a href="javascript:;" class="btn btn-space add-new-cancel edit-info-cancel">取消</a>
 				<a href="javascript:;" class="btn btn-theme pull-right edit-info-save">保存</a>
@@ -536,7 +537,7 @@
 		</div>
 		<!-- member-info member card change -->
 		<div class="section animated member-card-change slideInRight" >
-			<div class="member-card-info animated">
+			<div class="member-card-info animated slideInRight">
 				<div class="animated member-btn">
 					<a href="javascript:;" class="btn btn-space member-card-sign-cacel">取消</a>
 					<a href="javascript:;" class="btn btn-theme pull-right member-card-sign-save">保存</a>
@@ -607,7 +608,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="member-card-level section animated ">
+			<div class="member-card-level section animated slideInLeft">
 				<div class="member-btn">
 					<a href="javascript:;" class="btn btn-space member-card-level-cancel">取消</a>
 					<a href="javascript:;" class="btn btn-theme pull-right member-card-level-save">保存</a>
@@ -635,7 +636,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="section">
+		<div class="section animated slideInLeft">
 
 		</div>
 	</div>
@@ -646,14 +647,22 @@
 	<!-- statistics  -->
 	<script src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/js/storecommon.js"></script>
 	<script src='../../js/plugin/layer/layer.js'></script>
-	<script src='../../js/manage_store/member_list.js'></script>
 	<script>
 		document.body.addEventListener('touchstart',function () {})
-		$('.filter-colum').find('.ul').click(function (e) {
-			e.stopPropargation()
-			return false;
-		})
-
+		function changeTitle(title) {
+			try {
+			    if(window.stopProgressDialog){
+			        // android change title
+			        
+			    } else {
+					// ios change title
+					newTitle(title);
+			    }
+			} catch (e) {}
+			//web change title
+			document.querySelectorAll('title')[0].text = title;
+		}
 	</script>
+	<script src='../../js/manage_store/member_list.js'></script>
 </body>
 </html>

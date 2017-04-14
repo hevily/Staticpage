@@ -28,12 +28,14 @@ $(function () {
 		$('.member-info-handle').on('click',function () {
 			memberList.hide()
 			memberInfo.show()
+			changeTitle('会员资料')
 		})
 
 		// member-info-cancel
 		$('.member-info-cancel').on('click',function () {
 			memberInfo.hide()
 			memberList.show()
+			changeTitle('会员列表')
 		})
 
 		// toggle info detail
@@ -47,11 +49,13 @@ $(function () {
 		$('.relationship-free.btn').on('click',function () {
 			memberInfo.hide()
 			relationShipFree.show()
+			changeTitle('解除会员')
 		})
 			// relationship free cancel
 			$('.relationShip-cancel').on('click',function () {
 				relationShipFree.hide()
 				memberInfo.show()
+				changeTitle('会员资料')
 			})
 			// relationship free done
 			$('.relationShip-free-done').on('click',function () {
@@ -72,6 +76,7 @@ $(function () {
 							    layer.close(index);
 							    relationShipFree.hide();
 							    memberList.show();
+							    changeTitle('会员列表')
 						},
 						cancel:function () {
 							layer.msg('溜达了一圈，什么也没做.')
@@ -121,11 +126,13 @@ $(function () {
 
 			memberInfo.hide()
 			editInfo.show()
+			changeTitle('编辑会员信息')
 		})
 			// edit info cancel
 			$(".edit-info-cancel").on('click',function () {
 				editInfo.hide()
 				memberInfo.show()
+				changeTitle('会员资料')
 			})
 			// edit info save
 			$('.edit-info-save').on('click',function () {
@@ -156,16 +163,16 @@ $(function () {
 
 				editInfo.hide()
 				memberInfo.show()
+				changeTitle('会员资料')
 			});
 		// change card
 		$('.change-card').on('click',function () {
 			var cardNum = $('.card-number-txt').find('span').text();
-
 				$('input[name="member-card-number"]').val(cardNum);
-				console.log(cardNum)
 			memberInfo.hide()
-				memberCardChange.show()
+			memberCardChange.show()
 			changeCard.show()
+			changeTitle('变更会员卡')
 		})
 			// change card level
 				$('.card-level').on('click',function () {
@@ -176,6 +183,7 @@ $(function () {
 					$('.member-card-level').find('.card-sign').text(levelText)
 					addCard.hide()
 					cardLevel.show()
+					changeTitle('会员等级设置')
 				})
 				// 会员卡级别选择
 					$('.member-card-level-cancel').on('click',function () {
@@ -184,6 +192,7 @@ $(function () {
 						;
 						cardLevel.hide()
 						addCard.show()
+						changeTitle('变更会员卡')
 					})
 					$('.member-card-level-save').on('click',function () {
 						var cardLevel = $('.member-card-level'),
@@ -213,6 +222,7 @@ $(function () {
 
 						cardLevel.hide()
 						addCard.show()
+						changeTitle('变更会员卡')
 					})
 				// 会员卡信息保存
 				var count = 0;
@@ -233,143 +243,179 @@ $(function () {
 						changeCard.hide()
 						memberInfo.show()
 						count = 0;
+						changeTitle('会员资料')
 					});
 					//取消
 					$('.member-card-sign-cacel').on('click',function () {
 						changeCard.hide()
 						memberInfo.show()
+						changeTitle('会员资料')
 					});
 
 	// 会员列表-消费信息
-	var shoppingList = $('.shopping-list'), // 消费信息
-		moneyDetail = $('.money-detail'), // 消费明细
-		moneyLog = $('.section.money-log'), // 消费记录
-		integralDetail = $('.integral-detail'), // 积分明细
-		integralUse = $('.integral-use'), // 积分兑现
-		integralAdd = $('.integral-add'), // 新增积分
-		addNewMoneyLog = $('.add-new-money-log'), // 新增消费记录
-		addIntegralGift = $('.add-integral-gift'), // 新增 赠送积分
-		cashIntegral = $('.cash-integral') // 兑现积分
+		var shoppingList = $('.shopping-list'), // 消费信息
+			moneyDetail = $('.money-detail'), // 消费明细
+			moneyLog = $('.section.money-log'), // 消费记录
+			integralDetail = $('.integral-detail'), // 积分明细
+			integralUse = $('.integral-use'), // 积分兑现
+			integralAdd = $('.integral-add'), // 新增积分
+			addNewMoneyLog = $('.add-new-money-log'), // 新增消费记录
+			addIntegralGift = $('.add-integral-gift'), // 新增 赠送积分
+			cashIntegral = $('.cash-integral') // 兑现积分
 
-		;
+			;
 
-	// 消费记录展示
-	$('li.money-log').on('click',function () {
-		shoppingList.hide()
-		moneyLog.show()
-	})
-	// 消费记录 取消
-	$('.money-log-back').on('click',function () {
-		moneyLog.hide()
-		shoppingList.show()
-	})
-	// 新增消费记录
-	$('.money-log-add').on('click',function () {
-		addNewMoneyLog.show()
-		moneyLog.hide()
-	})
-		// 新增消费记录 取消
-		$('.add-money-log-cancel').on('click',function () {
-			addNewMoneyLog.hide()
+		// 消费记录展示
+		$('li.money-log').on('click',function () {
+			shoppingList.hide()
 			moneyLog.show()
+			changeTitle('消费记录')
 		})
-		// add-money-log-submit
-		$('.add-money-log-submit').on('click',function () {
-			var addMoneyLog = $('.add-new-money-log'),
-				shoppingDay = addMoneyLog.find('input[name="shoppingDay"]'),
-				shoppingCash = addMoneyLog.find('input[name="shoppingCash"]'),
-				integralStartTime = addMoneyLog.find('input[name="integralStartTime"]'),
-				integralEndTime = addMoneyLog.find('input[name="integralEndTime"]'),
-				integralNum = addMoneyLog.find('input[name="integralNum"]'),
-				levaveMsg = addMoneyLog.find('.levaveMsg'),
-				email = addMoneyLog.find('input[name="email"]')
-
+		// 消费记录 取消
+		$('.money-log-back').on('click',function () {
+			moneyLog.hide()
+			shoppingList.show()
+			changeTitle('消费记录')
+		})
+		// 新增消费记录
+		$('.money-log-add').on('click',function () {
+			addNewMoneyLog.show()
+			moneyLog.hide()
+			changeTitle('新增消费记录')
+			})
+			// 新增消费记录 取消
+			$('.add-money-log-cancel').on('click',function () {
+				addNewMoneyLog.hide()
+				moneyLog.show()
+				changeTitle('消费记录')
+			})
+			// add-money-log-submit
+			$('.add-money-log-submit').on('click',function () {
+				var addMoneyLog = $('.add-new-money-log'),
+					shoppingDay = addMoneyLog.find('input[name="shoppingDay"]'),
+					shoppingCash = addMoneyLog.find('input[name="shoppingCash"]'),
+					integralStartTime = addMoneyLog.find('input[name="integralStartTime"]'),
+					integralEndTime = addMoneyLog.find('input[name="integralEndTime"]'),
+					integralNum = addMoneyLog.find('input[name="integralNum"]'),
+					leaveMsg = addMoneyLog.find('.leaveMsg'),
+					email = addMoneyLog.find('input[name="email"]')
+				;
 				var logInfo = new Array();
-				logInfo.push(shoppingDay.val(),shoppingCash.val(),integralStartTime.val(),integralEndTime.val(),integralNum.val())
-				console.log(logInfo)
+				if($('#checkbox_c1').is(':checked ')){
+					logInfo.push(shoppingDay.val(),shoppingCash.val(),integralStartTime.val(),integralEndTime.val(),integralNum.val())
+				}else{
+					logInfo.push(shoppingDay.val(),shoppingCash.val())
+				}
 				for(var i in logInfo){
 					if(logInfo[i]=='' || logInfo[i] == undefined){
 						var txt = addMoneyLog.find('li').eq(i).find('.input-label').text()
-						console.log(txt)
-						// layer.open({
-						// 	title:false,
-						// 	btn: ['确认', '取消'],
-						//   	content: '确认拒绝该申请？',
-						//   	btn1:function(index, layero){
-						// 	    //do something
-						// 		    layer.msg('已拒绝本次申请')
-						// 		    layer.close(index);
-						// 		    declineApply.hide();
-						// 		    memeberList.show();
-						// 	},
-						// 	btn2:function (index) {
-						// 		layer.msg('你可接着处理，也可放松放松待会儿再来处理本次申请')
-						// 	},
-						// 	cancel:function () {
-						// 		layer.msg('溜达了一圈，什么也没做.')
-						// 	}
-						// });
 						layer.msg('请输入'+txt+'的内容');
 						return false;
 					}
 				}
-
-
-
-
-
-
-			// addNewMoneyLog.hide()
-			// moneyLog.show()
+				layer.msg('消费记录新增成功');
+				setTimeout(function () {
+					addNewMoneyLog.hide();
+					moneyLog.show();
+					changeTitle('消费记录')
+				},500)
+			})
+		// 赠送积分
+		$('.integral-add-btn').on('click',function () {
+			addIntegralGift.show()
+			moneyLog.hide()
+			var ind = $(this).closest('li').index()
+			$('.add-integral-gift-cancel').attr('data-ind',ind)
+			changeTitle('赠送积分')
 		})
-	// 赠送积分
-	$('.integral-add-btn').on('click',function () {
-		addIntegralGift.show()
-		moneyLog.hide()
-	})
-		// 赠送积分取消 同新增积分取消
-		
-		// 赠送积分提交
-		
-		// 兑现积分
-		$('li.integral-use').on('click',function () {
-			cashIntegral.show()
-			shoppingList.hide()
-		})
-			// 兑换积分取消
-			$('.cash-integral-cancel').on('click',function () {
-				cashIntegral.hide()
-				shoppingList.show()
-			})
-			// 兑换积分 确认
-			$('.cash-integral-submit').on('click',function () {
-				cashIntegral.hide()
-				shoppingList.show()
-			})
+			// 赠送积分取消 同新增积分取消
+			
+			// 赠送积分提交 同新增积分提交
+			
+			// 兑现积分
+			$('li.integral-use').on('click',function () {
+				cashIntegral.show()
+				shoppingList.hide()
+				changeTitle('兑换积分')
 
-		// 新增积分
-		$('li.integral-add').on('click',function () {
-			addIntegralGift.show();
-			$('.add-integral-gift-cancel').addClass('shoppingList')
-			shoppingList.hide()
-		})
-			// 新增积分 取消
-			$('.add-integral-gift-cancel').on('click',function () {
-				hideAddIntegral()
-
-			})
-			// 新增积分 确认
-			$('.add-integral-gift-submit').on('click',function () {
-				hideAddIntegral()
-			})
-			function hideAddIntegral() {
-				addIntegralGift.hide()
-				var cn = 'shoppingList'
-				if($('.'+cn).length != 0){
+				})
+				// 兑换积分取消
+					$('.cash-integral-cancel').on('click',function () {
+					cashIntegral.hide()
 					shoppingList.show()
-				}else{
-					moneyLog.show()
+					changeTitle('消费记录')
+				})
+				// 兑换积分 确认
+				$('.cash-integral-submit').on('click',function () {
+					var cashIntegralBox = $('.cash-integral'),
+						cashTime = cashIntegralBox.find('input[name="cashIntegralTime"]'),
+						cashIntegralNum =  cashIntegralBox.find('input[name="cashIntegralNum"]'),
+						leaveMsg = cashIntegralBox.find('.leaveMsg')
+					;
+					var cashArray = new Array()
+					cashArray.push(cashTime.val(),cashIntegralNum.val());
+					for(i in cashArray){
+						if(cashArray[i] == '' || cashArray[i] == undefined){
+							// console.log(i-0+1)
+							var txt = cashIntegralBox.find('li').eq(i-0+1).find('.input-label').text()
+							layer.msg('请输入'+ txt +'的内容');
+							return false;
+						}
+					}
+					layer.msg('积分已兑换');
+					setTimeout(function () {
+						cashIntegral.hide()
+						shoppingList.show()
+						changeTitle('消费记录')
+					},500)
+				})
+
+			// 新增积分
+			$('li.integral-add').on('click',function () {
+				addIntegralGift.show();
+				$('.add-integral-gift-cancel').addClass('shoppingList')
+				shoppingList.hide()
+				changeTitle('新增积分')
+				})
+				// 新增积分 取消
+				$('.add-integral-gift-cancel').on('click',function () {
+					hideAddIntegral()
+				})
+				// 新增积分 确认
+				$('.add-integral-gift-submit').on('click',function () {
+					var addIntegralNum = $('.add-integral-gift'),
+						startTime = addIntegralNum.find('input[name="startTime"]'),
+						endTime = addIntegralNum.find('input[name="endTime"]'),
+						integralNum = addIntegralNum.find('input[name="integralNum"]')
+					;
+					var addIntegralArray = new Array();
+					addIntegralArray.push(startTime.val(),endTime.val(),integralNum.val());
+
+					for(var i in addIntegralArray){
+						if(addIntegralArray[i] == '' || addIntegralArray[i] ==  undefined){
+							var txt = addIntegralNum.find('li').eq(i).find('.input-label').text()
+							layer.msg('请输入'+txt+'的内容')
+							return false;
+						}
+					}
+					var ind = $('.add-integral-gift-cancel').attr('data-ind'),
+						num = integralNum.val()
+					;
+					hideAddIntegral(ind,num)
+					layer.msg('已增加积分')
+				})
+				function hideAddIntegral(ind,num) {
+					addIntegralGift.hide()
+					var cn = 'shoppingList'
+					if($('.'+cn).length != 0){
+						shoppingList.show()
+					}else{
+						var integralGoal = $('.money-log-list').find('li').eq(ind).find('.media-body');
+						integralGoal.addClass('gifted');
+						integralGoal.find('p:nth-child(2)').text(num)
+						moneyLog.show()
+					}
+					changeTitle('消费记录')
+					$('.'+cn).removeClass(cn)
 				}
-				$('.'+cn).removeClass(cn)
-			}
 })
