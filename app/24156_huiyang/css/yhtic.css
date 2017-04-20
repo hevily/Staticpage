@@ -8,7 +8,6 @@ body {
 .tickets {
   max-width: 640px;
   margin: 0 auto;
-  padding-bottom: 0;
   overflow: hidden; }
   .tickets .none-tickets {
     padding: 10px;
@@ -16,7 +15,6 @@ body {
     font-size: 16px;
     text-align: center; }
   .tickets .ticket-classes {
-    margin-bottom: 10px;
     color: #fff;
     font-size: 14px;
     text-indent: 15px;
@@ -26,16 +24,18 @@ body {
     height: 36px;
     line-height: 34px;
     position: relative;
-    z-index: 10; }
+    z-index: 10;
+    -webkit-animation: all 0.5s;
+            animation: all 0.5s;
+    top: 0; }
   .tickets.get-tickets .ticket-classes {
-    border-top: 1px solid #949496;
-    margin-top: 10px; }
+    border-top: 1px solid #949496; }
   .tickets.sales-promotion .ticket-classes {
     border-width: 1px 0 0 0;
-    margin-bottom: 0;
-    margin-top: 10px; }
+    margin-bottom: 0; }
   .tickets.sales-promotion ul {
-    background-color: #fff; }
+    background-color: #fff;
+    padding: 0; }
     .tickets.sales-promotion ul li {
       padding: 0; }
       .tickets.sales-promotion ul li .sales-item {
@@ -86,8 +86,6 @@ body {
             background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.5) 35%, transparent 85%);
             background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 35%, transparent 85%)
             /* W3C */ }
-  .tickets:last-child {
-    padding-bottom: 5px; }
   .tickets.toggle img.toggle {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
@@ -101,267 +99,269 @@ body {
       float: right;
       top: 11px;
       position: relative; }
-  .tickets ul li {
-    padding: 5px 10px;
-    position: relative; }
-    .tickets ul li .ticket {
-      width: 100%;
-      position: relative;
-      margin-bottom: 20px;
-      background-color: rgba(255, 255, 255, 0.7); }
-      .tickets ul li .ticket:last-child {
-        margin-bottom: 0; }
-      .tickets ul li .ticket .ticket-left {
-        font-size: 16px;
+  .tickets ul {
+    padding: 10px 0; }
+    .tickets ul li {
+      padding: 5px 10px;
+      position: relative; }
+      .tickets ul li .ticket {
         width: 100%;
-        padding-right: 96px;
-        color: #fff;
-        float: left;
-        position: relative; }
-        .tickets ul li .ticket .ticket-left:before, .tickets ul li .ticket .ticket-left:after {
-          content: "";
-          width: 40px;
-          height: 40px;
-          display: block;
-          position: absolute;
-          left: -20px;
-          bottom: -20px;
-          background-color: #424345;
-          border-radius: 50%;
-          z-index: 2; }
-        .tickets ul li .ticket .ticket-left:before {
-          top: -20px;
-          z-index: 2; }
-        .tickets ul li .ticket .ticket-left .ticket-bg {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%; }
-        .tickets ul li .ticket .ticket-left .ticket-face {
-          position: relative;
-          min-height: 131px;
-          padding: 20px;
-          padding-right: 0;
-          overflow: hidden; }
-          .tickets ul li .ticket .ticket-left .ticket-face .mask {
-            width: 100%;
-            height: 100%;
+        position: relative;
+        margin-bottom: 20px;
+        background-color: rgba(255, 255, 255, 0.7); }
+        .tickets ul li .ticket:last-child {
+          margin-bottom: 0; }
+        .tickets ul li .ticket .ticket-left {
+          font-size: 16px;
+          width: 100%;
+          padding-right: 96px;
+          color: #fff;
+          float: left;
+          position: relative; }
+          .tickets ul li .ticket .ticket-left:before, .tickets ul li .ticket .ticket-left:after {
+            content: "";
+            width: 40px;
+            height: 40px;
+            display: block;
+            position: absolute;
+            left: -20px;
+            bottom: -20px;
+            background-color: #424345;
+            border-radius: 50%;
+            z-index: 2; }
+          .tickets ul li .ticket .ticket-left:before {
+            top: -20px;
+            z-index: 2; }
+          .tickets ul li .ticket .ticket-left .ticket-bg {
             position: absolute;
             top: 0;
             left: 0;
-            z-index: 1;
-            background-image: url("../img/ticket-bg.png");
-            background-size: cover; }
-            .tickets ul li .ticket .ticket-left .ticket-face .mask:before {
-              content: '';
-              display: block;
-              position: absolute;
+            width: 100%; }
+          .tickets ul li .ticket .ticket-left .ticket-face {
+            position: relative;
+            min-height: 131px;
+            padding: 20px;
+            padding-right: 0;
+            overflow: hidden; }
+            .tickets ul li .ticket .ticket-left .ticket-face .mask {
               width: 100%;
               height: 100%;
-              top: 0;
-              left: 0;
-              background-color: rgba(0, 0, 0, 0.5); }
-          .tickets ul li .ticket .ticket-left .ticket-face img.ticket-bg {
-            width: 100%;
-            height: 100%; }
-          .tickets ul li .ticket .ticket-left .ticket-face .ticket-name {
-            position: relative;
-            z-index: 2;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            padding-right: 2px; }
-          .tickets ul li .ticket .ticket-left .ticket-face .ticket-use-tips {
-            position: relative;
-            z-index: 1;
-            font-size: 12px;
-            padding-bottom: 30px; }
-            .tickets ul li .ticket .ticket-left .ticket-face .ticket-use-tips p {
-              position: relative;
-              text-indent: 10px;
-              overflow: hidden;
-              white-space: nowrap;
-              text-overflow: ellipsis;
-              padding-right: 10px;
-              padding-right: 65px;
-              display: none; }
-              .tickets ul li .ticket .ticket-left .ticket-face .ticket-use-tips p:nth-child(1), .tickets ul li .ticket .ticket-left .ticket-face .ticket-use-tips p:nth-child(2) {
-                display: block; }
-              .tickets ul li .ticket .ticket-left .ticket-face .ticket-use-tips p span {
-                position: absolute;
-                top: -4px;
-                left: -8px; }
-            .tickets ul li .ticket .ticket-left .ticket-face .ticket-use-tips .toggle-rules {
               position: absolute;
               top: 0;
-              right: 0; }
-              .tickets ul li .ticket .ticket-left .ticket-face .ticket-use-tips .toggle-rules a {
-                -webkit-tap-highlight-color: transparent; }
-              .tickets ul li .ticket .ticket-left .ticket-face .ticket-use-tips .toggle-rules img {
-                height: 6px;
-                line-height: 100%;
-                display: inline-block;
-                -webkit-transition: all 0.5s;
-                        transition: all 0.5s;
-                vertical-align: baseline;
-                position: relative;
-                top: -2px;
-                margin-left: 3px;
-                margin-right: 3px; }
-                .tickets ul li .ticket .ticket-left .ticket-face .ticket-use-tips .toggle-rules img.rules-showing {
-                  -webkit-transform: rotate(180deg);
-                      -ms-transform: rotate(180deg);
-                          transform: rotate(180deg); }
-          .tickets ul li .ticket .ticket-left .ticket-face .ticket-info {
-            z-index: 2;
-            position: absolute;
-            bottom: 15px;
-            left: 0px;
-            width: 100%;
-            padding: 0 20px; }
-            .tickets ul li .ticket .ticket-left .ticket-face .ticket-info .three-part {
-              width: 33.3333%;
-              float: left;
+              left: 0;
+              z-index: 1;
+              background-image: url("../img/ticket-bg.png");
+              background-size: cover; }
+              .tickets ul li .ticket .ticket-left .ticket-face .mask:before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-color: rgba(0, 0, 0, 0.5); }
+            .tickets ul li .ticket .ticket-left .ticket-face img.ticket-bg {
+              width: 100%;
+              height: 100%; }
+            .tickets ul li .ticket .ticket-left .ticket-face .ticket-name {
+              position: relative;
+              z-index: 2;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              padding-right: 2px; }
+            .tickets ul li .ticket .ticket-left .ticket-face .ticket-use-tips {
+              position: relative;
+              z-index: 1;
               font-size: 12px;
-              text-align: center; }
-              .tickets ul li .ticket .ticket-left .ticket-face .ticket-info .three-part p {
-                font-size: 14px; }
-            .tickets ul li .ticket .ticket-left .ticket-face .ticket-info .ticket-money {
-              text-align: left; }
-            .tickets ul li .ticket .ticket-left .ticket-face .ticket-info .ticket-scale {
-              text-align: right; }
-              .tickets ul li .ticket .ticket-left .ticket-face .ticket-info .ticket-scale .yue {
-                width: 30px;
-                text-align: left;
-                display: inline-block; }
-                .tickets ul li .ticket .ticket-left .ticket-face .ticket-info .ticket-scale .yue span {
+              padding-bottom: 30px; }
+              .tickets ul li .ticket .ticket-left .ticket-face .ticket-use-tips p {
+                position: relative;
+                text-indent: 10px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                padding-right: 10px;
+                padding-right: 65px;
+                display: none; }
+                .tickets ul li .ticket .ticket-left .ticket-face .ticket-use-tips p:nth-child(1), .tickets ul li .ticket .ticket-left .ticket-face .ticket-use-tips p:nth-child(2) {
+                  display: block; }
+                .tickets ul li .ticket .ticket-left .ticket-face .ticket-use-tips p span {
+                  position: absolute;
+                  top: -4px;
+                  left: -8px; }
+              .tickets ul li .ticket .ticket-left .ticket-face .ticket-use-tips .toggle-rules {
+                position: absolute;
+                top: 0;
+                right: 0; }
+                .tickets ul li .ticket .ticket-left .ticket-face .ticket-use-tips .toggle-rules a {
+                  -webkit-tap-highlight-color: transparent; }
+                .tickets ul li .ticket .ticket-left .ticket-face .ticket-use-tips .toggle-rules img {
+                  height: 6px;
+                  line-height: 100%;
+                  display: inline-block;
+                  -webkit-transition: all 0.5s;
+                          transition: all 0.5s;
+                  vertical-align: baseline;
+                  position: relative;
+                  top: -2px;
+                  margin-left: 3px;
+                  margin-right: 3px; }
+                  .tickets ul li .ticket .ticket-left .ticket-face .ticket-use-tips .toggle-rules img.rules-showing {
+                    -webkit-transform: rotate(180deg);
+                        -ms-transform: rotate(180deg);
+                            transform: rotate(180deg); }
+            .tickets ul li .ticket .ticket-left .ticket-face .ticket-info {
+              z-index: 2;
+              position: absolute;
+              bottom: 15px;
+              left: 0px;
+              width: 100%;
+              padding: 0 20px; }
+              .tickets ul li .ticket .ticket-left .ticket-face .ticket-info .three-part {
+                width: 33.3333%;
+                float: left;
+                font-size: 12px;
+                text-align: center; }
+                .tickets ul li .ticket .ticket-left .ticket-face .ticket-info .three-part p {
                   font-size: 14px; }
-      .tickets ul li .ticket .ticket-right {
-        font-size: 12px;
-        height: 100%;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        padding: 10px 10px 10px 5px;
-        background-color: #fff;
-        float: left;
-        width: 97px;
-        margin-left: -97px;
-        border-left: 1px dashed #B4B4B4; }
-        .tickets ul li .ticket .ticket-right .ticket-use {
+              .tickets ul li .ticket .ticket-left .ticket-face .ticket-info .ticket-money {
+                text-align: left; }
+              .tickets ul li .ticket .ticket-left .ticket-face .ticket-info .ticket-scale {
+                text-align: right; }
+                .tickets ul li .ticket .ticket-left .ticket-face .ticket-info .ticket-scale .yue {
+                  width: 30px;
+                  text-align: left;
+                  display: inline-block; }
+                  .tickets ul li .ticket .ticket-left .ticket-face .ticket-info .ticket-scale .yue span {
+                    font-size: 14px; }
+        .tickets ul li .ticket .ticket-right {
+          font-size: 12px;
+          height: 100%;
           position: absolute;
-          top: 5px;
-          right: 5px;
-          z-index: 5;
-          width: 100px;
-          height: 100px; }
-          .tickets ul li .ticket .ticket-right .ticket-use img {
-            height: 100%;
-            width: 100%;
-            display: none; }
-            .tickets ul li .ticket .ticket-right .ticket-use img.back-money, .tickets ul li .ticket .ticket-right .ticket-use img.back-done {
-              top: 25px;
-              position: relative; }
-        .tickets ul li .ticket .ticket-right .ticket-action {
-          height: 62px; }
-          .tickets ul li .ticket .ticket-right .ticket-action a {
-            display: none;
-            text-align: center;
-            line-height: 28px;
-            font-size: 14px;
-            color: #fff;
-            border-radius: 5px;
-            width: 65px;
-            height: 28px;
+          bottom: 0;
+          right: 0;
+          padding: 10px 10px 10px 5px;
+          background-color: #fff;
+          float: left;
+          width: 97px;
+          margin-left: -97px;
+          border-left: 1px dashed #B4B4B4; }
+          .tickets ul li .ticket .ticket-right .ticket-use {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            z-index: 5;
+            width: 100px;
+            height: 100px; }
+            .tickets ul li .ticket .ticket-right .ticket-use img {
+              height: 100%;
+              width: 100%;
+              display: none; }
+              .tickets ul li .ticket .ticket-right .ticket-use img.back-money, .tickets ul li .ticket .ticket-right .ticket-use img.back-done {
+                top: 25px;
+                position: relative; }
+          .tickets ul li .ticket .ticket-right .ticket-action {
+            height: 62px; }
+            .tickets ul li .ticket .ticket-right .ticket-action a {
+              display: none;
+              text-align: center;
+              line-height: 28px;
+              font-size: 14px;
+              color: #fff;
+              border-radius: 5px;
+              width: 65px;
+              height: 28px;
+              position: relative;
+              top: 14px; }
+              .tickets ul li .ticket .ticket-right .ticket-action a.use {
+                background-color: #3F3F3F; }
+              .tickets ul li .ticket .ticket-right .ticket-action a.wait {
+                background-color: #9B9B9B; }
+              .tickets ul li .ticket .ticket-right .ticket-action a.buy {
+                background-color: #3F3F3F; }
+              .tickets ul li .ticket .ticket-right .ticket-action a img.cart-ticket {
+                width: 15px;
+                margin-right: 4px; }
+          .tickets ul li .ticket .ticket-right:before, .tickets ul li .ticket .ticket-right:after {
+            content: "";
+            width: 40px;
+            height: 40px;
+            display: block;
+            position: absolute;
+            right: -20px;
+            bottom: -20px;
+            background-color: #424345;
+            border-radius: 50%;
+            z-index: 2; }
+          .tickets ul li .ticket .ticket-right:before {
+            top: -20px;
+            z-index: 2; }
+          .tickets ul li .ticket .ticket-right .ticket-status .use-or-not {
+            color: #D86C00; }
+          .tickets ul li .ticket .ticket-right .ticket-status .back-money {
+            color: #D60000; }
+          .tickets ul li .ticket .ticket-right .ticket-store .store-logo {
+            width: 30px;
+            height: 30px;
+            vertical-align: middle; }
+          .tickets ul li .ticket .ticket-right .ticket-store span {
+            display: inline-block;
+            width: 38px;
+            overflow: hidden;
+            height: 16px;
             position: relative;
-            top: 14px; }
-            .tickets ul li .ticket .ticket-right .ticket-action a.use {
-              background-color: #3F3F3F; }
-            .tickets ul li .ticket .ticket-right .ticket-action a.wait {
-              background-color: #9B9B9B; }
-            .tickets ul li .ticket .ticket-right .ticket-action a.buy {
-              background-color: #3F3F3F; }
-            .tickets ul li .ticket .ticket-right .ticket-action a img.cart-ticket {
-              width: 15px;
-              margin-right: 4px; }
-        .tickets ul li .ticket .ticket-right:before, .tickets ul li .ticket .ticket-right:after {
-          content: "";
-          width: 40px;
-          height: 40px;
+            top: 5px; }
+          .tickets ul li .ticket .ticket-right .ticket-validity {
+            color: #292929;
+            position: absolute;
+            bottom: 16px; }
+            .tickets ul li .ticket .ticket-right .ticket-validity p {
+              color: #686868;
+              font-size: 10px; }
+          .tickets ul li .ticket .ticket-right .more-details {
+            position: absolute;
+            top: 50%;
+            right: 5px;
+            width: 12px;
+            height: 8px;
+            -webkit-transform: translateY(-50%) rotate(90deg);
+            -ms-transform: translateY(-50%) rotate(90deg);
+            transform: translateY(-50%) rotate(90deg); }
+        .tickets ul li .ticket.use a.use {
+          display: inline-block; }
+        .tickets ul li .ticket.wait a.wait {
+          display: inline-block; }
+        .tickets ul li .ticket.buy a.buy {
+          display: inline-block; }
+        .tickets ul li .ticket.used .ticket-bg {
+          -ms-filter: grayscale(1);
+          -webkit-filter: grayscale(1);
+          -moz-filter: grayscale(1);
+          filter: grayscale(1); }
+        .tickets ul li .ticket.used img.used {
+          display: block; }
+        .tickets ul li .ticket.timeout .ticket-bg {
+          -ms-filter: grayscale(1);
+          -webkit-filter: grayscale(1);
+          -moz-filter: grayscale(1);
+          filter: grayscale(1); }
+        .tickets ul li .ticket.timeout img.timeout {
+          display: block; }
+        .tickets ul li .ticket.waiting img.waiting {
           display: block;
-          position: absolute;
-          right: -20px;
-          bottom: -20px;
-          background-color: #424345;
-          border-radius: 50%;
-          z-index: 2; }
-        .tickets ul li .ticket .ticket-right:before {
-          top: -20px;
-          z-index: 2; }
-        .tickets ul li .ticket .ticket-right .ticket-status .use-or-not {
-          color: #D86C00; }
-        .tickets ul li .ticket .ticket-right .ticket-status .back-money {
-          color: #D60000; }
-        .tickets ul li .ticket .ticket-right .ticket-store .store-logo {
-          width: 30px;
-          height: 30px;
-          vertical-align: middle; }
-        .tickets ul li .ticket .ticket-right .ticket-store span {
-          display: inline-block;
-          width: 38px;
-          overflow: hidden;
-          height: 16px;
+          right: 0px;
           position: relative;
-          top: 5px; }
-        .tickets ul li .ticket .ticket-right .ticket-validity {
-          color: #292929;
-          position: absolute;
-          bottom: 16px; }
-          .tickets ul li .ticket .ticket-right .ticket-validity p {
-            color: #686868;
-            font-size: 10px; }
-        .tickets ul li .ticket .ticket-right .more-details {
-          position: absolute;
-          top: 50%;
-          right: 5px;
-          width: 12px;
-          height: 8px;
-          -webkit-transform: translateY(-50%) rotate(90deg);
-          -ms-transform: translateY(-50%) rotate(90deg);
-          transform: translateY(-50%) rotate(90deg); }
-      .tickets ul li .ticket.use a.use {
-        display: inline-block; }
-      .tickets ul li .ticket.wait a.wait {
-        display: inline-block; }
-      .tickets ul li .ticket.buy a.buy {
-        display: inline-block; }
-      .tickets ul li .ticket.used .ticket-bg {
-        -ms-filter: grayscale(1);
-        -webkit-filter: grayscale(1);
-        -moz-filter: grayscale(1);
-        filter: grayscale(1); }
-      .tickets ul li .ticket.used img.used {
-        display: block; }
-      .tickets ul li .ticket.timeout .ticket-bg {
-        -ms-filter: grayscale(1);
-        -webkit-filter: grayscale(1);
-        -moz-filter: grayscale(1);
-        filter: grayscale(1); }
-      .tickets ul li .ticket.timeout img.timeout {
-        display: block; }
-      .tickets ul li .ticket.waiting img.waiting {
-        display: block;
-        right: 0px;
-        position: relative;
-        top: 0px;
-        height: 100px;
-        width: 100px; }
-      .tickets ul li .ticket.canot-back img.canot-back {
-        display: block; }
-      .tickets ul li .ticket.back-money img.back-money {
-        display: block; }
-      .tickets ul li .ticket.back-done img.back-done {
-        display: block; }
+          top: 0px;
+          height: 100px;
+          width: 100px; }
+        .tickets ul li .ticket.canot-back img.canot-back {
+          display: block; }
+        .tickets ul li .ticket.back-money img.back-money {
+          display: block; }
+        .tickets ul li .ticket.back-done img.back-done {
+          display: block; }
 
 .member-info {
   background-color: #FFF;
@@ -408,5 +408,20 @@ body {
     display: block; }
   .member-info.not-member .media:nth-child(2) {
     display: none; }
+
+.fixTitle:before {
+  content: '';
+  display: block;
+  height: 36px; }
+.fixTitle .ticket-classes {
+  position: fixed;
+  top: 0;
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #424345;
+  margin: 0 !important;
+  border-top: none !important;
+  z-index: 11; }
 
 /*# sourceMappingURL=yhtic.css.map */

@@ -14,6 +14,74 @@
 	float: right;
 	margin-right: 2.5%;
 }
+.memeber-manage{
+	h3{
+		padding-left: 10px;
+		line-height: 50px;font-size: 18px;
+		font-weight: normal;
+	}
+	ul{
+		border-top:1px solid #CFD7C5;
+		border-bottom:1px solid #CFD7C5;
+		li{
+			font-size: 0;
+			padding-left: 10px;
+			.media{
+				font-size: 16px;
+				line-height: 45px;
+				border-bottom:1px solid #CFD7C5;
+				user-select:none;
+				&:active{
+					background-color: rgba(0,0,0,0.2)
+				}
+				.media-left{
+					min-width: 120px;
+					padding-left: 10px;
+				}
+				.media-body{
+					text-align:right;
+					padding-right: 30px;
+					position: relative;
+					color:#3c3c3c;
+					&:after{
+						content:'';
+						display: block;
+						position: absolute;
+						top: 20px;right: 10px;
+						width:8px;height:8px;
+						border-style:solid;
+						border-width:0 1px 1px 0;
+						border-color: #838383;
+						transform:rotate(-45deg);
+					}
+					&:before{
+						content:'';
+						display: none;
+						position: absolute;
+						top: 20px;right: 20px;
+						width:8px;height:8px;
+						background-color: red;
+						border-radius:50%;
+					}
+				}
+				&.new{
+					.media-body{
+						&:before{
+							display: block;
+						}
+					}
+					
+				}
+			}
+			&:last-child{
+				.media{
+					border:none;
+				}
+			}
+		}
+		
+	}
+}
 .noneCard{
 	line-height: 45px;
 	.media{
@@ -38,6 +106,129 @@
 		line-height: 28px;
 	}
 }
+.setmemLevel{
+	.member-input{
+		border-top:1px solid #CFD7C5;
+		border-bottom:1px solid #cfd7c5;
+		ul{
+			list-style:none;
+			padding-left: 10px;
+
+				.media{
+					border-bottom:1px solid #ebebeb;
+					margin: 0;
+					&:last-child{
+						border-bottom:none;
+					}
+					.media-left{
+						word-break:keep-all;
+						position: relative;
+						.input-label{
+							line-height:45px;
+							width: 80px;
+							color: #969696;
+							text-indent:10px;
+						}
+						span{
+							color:red;
+							position: absolute;
+							top:18px;left:0px;
+						}
+					}
+					.media-body{
+						text-align:right;
+						height: 45px;
+						.input-text{
+							padding-right: 10px;
+							height: 100%;
+							.member-logo{
+								width: 50px;
+							}
+							input{
+								width:calc(100% - 10px);
+								height: 100%;
+								padding-left: 10px;
+								line-height: 1.5;
+								-webkit-appearance:none;
+								border:none;
+								text-shadow:none;
+								box-shadow:none;
+								// -webkit-tap-highlight-color:rgba(0,0,0,0.1);
+								&:focus{
+
+								}
+							}
+							textarea{
+								width: calc(100% - 20px);
+								border: none;
+								min-height: 100px;
+								padding: 10px;
+							}
+						}
+					}
+				}
+				
+			// }
+		}
+	}
+}
+.mem-level-list{
+	ul{
+		border-top:1px solid #CFD7C5;
+		padding:5px 0;
+		background-color: #cfcfcf;
+		li{
+			padding: 5px 10px;
+			font-size: 0;
+			img{
+				width: 100%;
+				border-radius:3px;
+				display: block;
+			}
+		}
+	}
+}
+.mem-level-info{
+	border-top:1px solid #CFD7C5;
+	border-bottom:1px solid #cfd7c5;
+	ul{
+		list-style:none;
+		padding-left: 10px;
+			.media{
+				border-bottom:1px solid #ebebeb;
+				margin: 0;
+				&:last-child{
+					border-bottom:none;
+				}
+				.media-left{
+					word-break:keep-all;
+					.input-label{
+						text-align:right;
+						line-height:45px;
+						width: 65px;
+					}
+				}
+				.media-body{
+					text-align:left;
+					// height: 45px;
+					padding:10px 0;
+					.input-text{
+						padding-right: 10px;
+						// height: 100%;
+						.member-logo{
+							width: 50px;
+						}
+						span{
+							line-height:25px;
+							color:#979797;
+						}
+					}
+				}
+			}
+			
+		// }
+	}
+}
 .member-btn{
 	font-size: 0;
 	padding: 10px 0;
@@ -57,6 +248,9 @@
 		&.btn-theme{
 			background-color:#FF8B0F;
 			color:#fff;
+		}
+		&.four{
+			width:21%;
 		}
 	}
 }

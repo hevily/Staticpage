@@ -12,6 +12,38 @@
 <body>
 	<header></header>
 	<div class="container">
+		<div class="section animated memeber-manage" style="display: block;">
+			<h3>相关</h3>
+			<ul>
+				<li class="applyListBtn">
+					<div class="media new">
+						<div class="media-left media-middle">会员审核</div>
+						<div class="media-body media-middle">待审核</div>
+					</div>
+				</li>
+				<li class="memberListBtn" onclick=" window.location.href='get_shopping_list.html'">
+					<div class="media ">
+						<div class="media-left media-middle">会员列表</div>
+						<div class="media-body media-middle"></div>
+					</div>
+				</li>
+				<li class="memLevelBtn">
+					<div class="media new">
+						<div class="media-left media-middle">等级设置</div>
+						<div class="media-body media-middle">已设置</div>
+					</div>
+				</li>
+			</ul>
+			<h3>其他</h3>
+			<ul>
+				<li class="memberCardUseLog">
+					<div class="media ">
+						<div class="media-left media-middle">会员卡使用报表</div>
+						<div class="media-body media-middle"></div>
+					</div>
+				</li>
+			</ul>
+		</div>
 		<div class="section animated noneCard ">
 			<div class="media">
 				<div class="media-body media-middle">等级设置</div>
@@ -23,9 +55,138 @@
 			</div>
 			<p>温馨提示：你的会员等级尚未设置，暂无法使用相关功能，请立即设置会员等级。</p>
 		</div>
+		<!-- 会员等级列表 -->
+		<div class="section animated mem-level-list" >
+			<div class="animated member-btn fadeInRight">
+				<a href="javascript:;" class="btn four btn-space memLevelBtn-cancel">返回</a>
+				<a href="javascript:;" class="btn four btn-theme memLevelBtn-add">新增等级</a>
+			</div>
+			<div class="mem-level-card animated">
+				<ul>
+					<li><img src="../../img/1080.png" alt=""></li>
+					<li><img src="../../img/1080.png" alt=""></li>
+					<li><img src="../../img/1080.png" alt=""></li>
+				</ul>
+			</div>
+		</div>
+		<!-- 会员等级详情 -->
+		<div class="section animated mem-level-info" >
+			<div class="animated member-btn fadeInRight">
+				<a href="javascript:;" class="btn four btn-space memlevelinfo-cancel">返回</a>
+				<a href="javascript:;" class="btn four btn-theme memlevelinfo-default">设为默认</a>
+				<a href="javascript:;" class="btn four btn-theme memlevelinfo-edit">编辑</a>
+				<a href="javascript:;" class="btn four btn-space memlevelinfo-del">删除</a>
+			</div>
+			<div class="member-input animated slideInLeft">
+				<ul>
+					<li class="media">
+						<div class="media-left media-middle">
+							<div class="input-label">
+								等级名称
+							</div>
+						</div>
+						<div class="media-body media-middle">
+							<div class="input-text levelName">
+								<span>标准会员</span>
+							</div>
+						</div>
+					</li>
+					<li class="media">
+						<div class="media-left media-middle">
+							<div class="input-label ">
+								级别简介
+							</div>
+						</div>
+						<div class="media-body media-middle">
+							<div class="input-text brief">
+								<span>级别简介级别简介级别简介级别简介级别简介级别简介级别简介级别简介级别简介级别简介级别简介级别简介级别简介级别简介级别简介</span>
+							</div>
+						</div>
+					</li>
+					<li class="media">
+						<div class="media-left media-middle">
+							<div class="input-label">
+								级别描述
+							</div>
+						</div>
+						<div class="media-body media-middle">
+							<div class="input-text desc">
+								<span>级别描述级别描述级别描述级别描述级别描述级别描述级别描述</span>
+							</div>
+						</div>
+					</li>
+					<li class="media">
+						<div class="media-left media-middle">
+							<div class="input-label">
+								使用条款
+							</div>
+						</div>
+						<div class="media-body media-middle">
+							<div class="input-text rule">
+								<span>使用条款使用条款使用条款使用条款使用条款使用条款使用条款使用条款使用条款使用条款使用条款使用条款</span>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 设置会员等级 -->
+		<div class="section animated setmemLevel">
+			<div class="animated member-btn fadeInRight">
+				<a href="javascript:;" class="btn btn-space setmemLevel-cancel">取消</a>
+				<a href="javascript:;" class="btn btn-theme setmemLevel-save">保存</a>
+			</div>
+			<div class="member-input">
+				<ul>
+					<li class="media">
+						<div class="media-left media-middle">
+							<div class="input-label">等级名称</div>
+							<span>*</span>
+						</div>
+						<div class="media-body media-middle">
+							<div class="input-text">
+								<input type="text" name="levelName">
+							</div>
+						</div>
+					</li>
+					<li class="media">
+						<div class="media-left media-middle">
+							<div class="input-label">级别简介</div>
+						</div>
+						<div class="media-body media-middle">
+							<div class="input-text">
+								<textarea placeholder="请录入级别简介" class="brief"></textarea>
+							</div>
+						</div>
+					</li>
+					<li class="media">
+						<div class="media-left media-middle">
+							<div class="input-label">级别描述</div>
+						</div>
+						<div class="media-body media-middle">
+							<div class="input-text">
+								<textarea placeholder="请录入级别描述" class="desc"></textarea>
+							</div>
+						</div>
+					</li>
+					<li class="media">
+						<div class="media-left media-middle">
+							<div class="input-label">使用条款</div>
+						</div>
+						<div class="media-body media-middle">
+							<div class="input-text">
+								<textarea placeholder="请录入使用条款" class="rule"></textarea>
+							</div>
+						</div>
+					</li>
+				</ul>
+				
+			</div>
+		</div>
 		<!-- 申请列表 -->
 		<div class="section animated has-Member  ">
 			<div class="animated member-btn fadeInRight">
+				<a href="javascript:;" class="btn btn-space applyList-cancel">返回</a>
 				<a href="javascript:;" class="btn btn-theme new-member">新增会员</a>
 				<a href="javascript:;" class="btn btn-space apply-log">审核记录</a>
 				<!-- <a href="javascript:;" class="btn btn-theme apply-log">修改会员信息</a> -->

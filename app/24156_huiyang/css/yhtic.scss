@@ -11,7 +11,7 @@ body{
 	max-width: 640px;
 	margin: 0 auto;
 	// padding:10px 0;
-	padding-bottom: 0;
+	// padding-bottom: 15px;
 	overflow:hidden;
 	.none-tickets{
 		padding:10px;
@@ -20,7 +20,7 @@ body{
 		text-align:center;
 	}
 	.ticket-classes{
-		margin-bottom: 10px;
+		// margin-bottom: 10px;
 		color:#fff;
 		font-size: 14px;
 		text-indent:15px;
@@ -31,22 +31,23 @@ body{
 		line-height: 34px;
 		position: relative;
 		z-index:10;
+		animation: all 0.5s;
+		top:0;
+
 	}
 	&.get-tickets{
 		.ticket-classes{
 			border-top:1px solid #949496;
-			margin-top:10px;
 		}
 	}
 	&.sales-promotion{
 		.ticket-classes{
 			border-width:1px 0 0 0 ;
 			margin-bottom: 0;
-			margin-top: 10px;
 		}
 		ul{
 			background-color: #fff;
-			// margin-bottom: -5px;
+			padding: 0;
 			li{
 				padding: 0;
 				.sales-item{
@@ -98,7 +99,7 @@ body{
 		}
 	}
 	&:last-child{
-		padding-bottom: 5px;
+		// padding-bottom: 5px;
 	}
 	&.toggle{
 		img.toggle{
@@ -120,6 +121,7 @@ body{
 		}
 	}
 	ul{
+		padding:10px 0;
 		li{
 			padding:5px 10px;
 			position: relative;
@@ -533,4 +535,21 @@ body{
 		}
 	}
 }
-
+.fixTitle{
+	&:before{
+		content: '';
+		display: block;
+		height: 36px;
+	}
+	.ticket-classes{
+		position: fixed;
+		top: 0;
+		max-width:640px;
+		width:100%;
+		margin:0 auto;
+		background-color: #424345;
+		margin: 0 !important;
+		border-top:none !important;
+		z-index: 11;
+	}
+}
