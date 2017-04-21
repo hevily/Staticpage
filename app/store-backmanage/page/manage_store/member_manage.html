@@ -12,7 +12,7 @@
 <body>
 	<header></header>
 	<div class="container">
-		<div class="section animated memeber-manage" style="display: block;">
+		<div class="section animated memeber-manage">
 			<h3>相关</h3>
 			<ul>
 				<li class="applyListBtn">
@@ -44,6 +44,7 @@
 				</li>
 			</ul>
 		</div>
+
 		<div class="section animated noneCard ">
 			<div class="media">
 				<div class="media-body media-middle">等级设置</div>
@@ -63,19 +64,31 @@
 			</div>
 			<div class="mem-level-card animated">
 				<ul>
-					<li><img src="../../img/1080.png" alt=""></li>
-					<li><img src="../../img/1080.png" alt=""></li>
-					<li><img src="../../img/1080.png" alt=""></li>
+					<li>
+						<a href="javascript:;" class="setDefault">设为默认</a>
+						<img src="../../img/1080.png" alt="">
+						<a href="javascript:;" class="defaulting seted"><span></span></a>
+					</li>
+					<li>
+						<a href="javascript:;" class="setDefault">设为默认</a>
+						<img src="../../img/1080.png" alt="">
+						<a href="javascript:;" class="defaulting"><span></span></a>
+					</li>
+					<li>
+						<a href="javascript:;" class="setDefault">设为默认</a>
+						<img src="../../img/1080.png" alt="">
+						<a href="javascript:;" class="defaulting"><span></span></a>
+					</li>
 				</ul>
 			</div>
 		</div>
 		<!-- 会员等级详情 -->
 		<div class="section animated mem-level-info" >
 			<div class="animated member-btn fadeInRight">
-				<a href="javascript:;" class="btn four btn-space memlevelinfo-cancel">返回</a>
-				<a href="javascript:;" class="btn four btn-theme memlevelinfo-default">设为默认</a>
-				<a href="javascript:;" class="btn four btn-theme memlevelinfo-edit">编辑</a>
-				<a href="javascript:;" class="btn four btn-space memlevelinfo-del">删除</a>
+				<a href="javascript:;" class="btn  btn-space memlevelinfo-cancel">返回</a>
+				<!-- <a href="javascript:;" class="btn four btn-theme memlevelinfo-default">设为默认</a> -->
+				<a href="javascript:;" class="btn  btn-theme memlevelinfo-edit">编辑</a>
+				<a href="javascript:;" class="btn  btn-space memlevelinfo-del">删除</a>
 			</div>
 			<div class="member-input animated slideInLeft">
 				<ul>
@@ -88,6 +101,18 @@
 						<div class="media-body media-middle">
 							<div class="input-text levelName">
 								<span>标准会员</span>
+							</div>
+						</div>
+					</li>
+					<li class="media">
+						<div class="media-left media-middle">
+							<div class="input-label">
+								等级图片
+							</div>
+						</div>
+						<div class="media-body media-middle">
+							<div class="input-text levelImg">
+								<span><img src="../../img/1080.png"></span>
 							</div>
 						</div>
 					</li>
@@ -146,6 +171,16 @@
 						<div class="media-body media-middle">
 							<div class="input-text">
 								<input type="text" name="levelName">
+							</div>
+						</div>
+					</li>
+					<li class="media">
+						<div class="media-left media-middle">
+							<div class="input-label">等级图片</div>
+						</div>
+						<div class="media-body media-middle">
+							<div class="input-text">
+								<img src="../../img/1080.png" class="levelImg">
 							</div>
 						</div>
 					</li>
@@ -399,9 +434,10 @@
 		<!-- 会员信息 pass-decline -->
 		<div class="section animated member-info">
 			<div class="member-btn ">
-				<a href="javascript:;" class="btn btn-theme pass-apply">审核通过</a>
-				<a href="javascript:;" class="btn btn-space pass-decline">拒绝</a>
-				<a href="javascript:;" class="btn btn-theme edit-apply">修改会员信息</a>
+				<a href="javascript:;" class="btn four btn-space pass-cancel">返回</a>
+				<a href="javascript:;" class="btn four btn-theme pass-apply">审核通过</a>
+				<a href="javascript:;" class="btn four btn-space pass-decline">拒绝</a>
+				<a href="javascript:;" class="btn four btn-theme edit-apply">修改会员信息</a>
 			</div>
 			<div class="member-input animated slideInLeft">
 				<ul>
@@ -623,9 +659,9 @@
 						<div class="media">
 							<div class="media-left media-middle"><div class="time-num-label">有效期：</div></div>
 							<div class="media-body">
-								<input type="date" name="member-card-starttime" value="<%=date()%>" placeholder="请选择有效日期">
+								<input type="date" name="member-card-starttime"  placeholder="请选择有效日期">
 								<p>至</p>
-								<input type="date" name="member-card-endtime" value="<%=date()%>" placeholder="请选择有效日期">
+								<input type="date" name="member-card-endtime"  placeholder="请选择有效日期">
 							</div>
 						</div>
 					</div>
@@ -645,6 +681,7 @@
 	<script src="../../js/plugin/jquery-2.1.4.min.js"></script>
 	<script src="../../js/plugin/layer/layer.js"></script>
 	<script>
+	document.body.addEventListener('touchstart',function () {})
 		function changeTitle(title) {
 			try {
 			    if(window.stopProgressDialog){

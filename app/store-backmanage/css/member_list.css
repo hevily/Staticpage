@@ -446,7 +446,7 @@
         content: '';
         display: block;
         position: absolute;
-        top: 16px;
+        top: 20px;
         right: 10px;
         -webkit-transform: rotate(-45deg);
             -ms-transform: rotate(-45deg);

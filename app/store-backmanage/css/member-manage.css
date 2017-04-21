@@ -138,6 +138,13 @@
             border: none;
             min-height: 100px;
             padding: 10px; }
+          .setmemLevel .member-input ul .media .media-body .input-text img {
+            height: 100px;
+            display: block; }
+.setmemLevel.first .member-btn .setmemLevel-cancel {
+  display: none; }
+.setmemLevel.first .member-btn .setmemLevel-save {
+  margin-left: 35%; }
 
 .mem-level-list ul {
   border-top: 1px solid #CFD7C5;
@@ -145,16 +152,54 @@
   background-color: #cfcfcf; }
   .mem-level-list ul li {
     padding: 5px 10px;
-    font-size: 0; }
+    font-size: 0;
+    position: relative; }
     .mem-level-list ul li img {
       width: 100%;
       border-radius: 3px;
       display: block; }
+    .mem-level-list ul li .setDefault {
+      font-size: 14px;
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      text-decoration: none;
+      background-color: #cfcfcf;
+      display: inline-block;
+      padding: 4px 8px;
+      color: #fff;
+      border-radius: 3px; }
+    .mem-level-list ul li .defaulting {
+      display: none;
+      background-color: #FFF;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      text-decoration: none;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      outline: none; }
+      .mem-level-list ul li .defaulting span {
+        width: 10px;
+        height: 7px;
+        border-style: solid;
+        border-width: 0 0 1px 1px;
+        border-color: red;
+        display: inline-block;
+        position: relative;
+        top: 4px;
+        left: 5px;
+        -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg); }
+      .mem-level-list ul li .defaulting.seted {
+        display: inline-block; }
 
 .mem-level-info {
-  border-top: 1px solid #CFD7C5;
   border-bottom: 1px solid #cfd7c5; }
   .mem-level-info ul {
+    border-top: 1px solid #CFD7C5;
     list-style: none;
     padding-left: 10px; }
     .mem-level-info ul .media {
@@ -178,6 +223,9 @@
           .mem-level-info ul .media .media-body .input-text span {
             line-height: 25px;
             color: #979797; }
+          .mem-level-info ul .media .media-body .input-text img {
+            height: 100px;
+            display: block; }
 
 .member-btn {
   font-size: 0;

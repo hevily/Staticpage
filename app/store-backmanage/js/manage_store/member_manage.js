@@ -1,10 +1,10 @@
 
 $(function () {
-	// 是否显示会员申请列表 1 为显示列表 其他为未设置会员等级 不可用状态
-	var member = 11;
+	// 是否显示会员等级设置 	1 为未设置会员等级，功能未启用
+	// 							其他为已设置会员等级
+	var member = 1;
 
-	var 
-		memebermanage = $('.memeber-manage'),
+	var memebermanage = $('.memeber-manage'),
 		memlevelList = $('.mem-level-list'),
 		memlevelInfo = $('.mem-level-info'),
 		noneCard= $('.noneCard'),
@@ -19,42 +19,54 @@ $(function () {
 		title
 	;
 	function renderMemberList(member) {
-
 		if(member === 1){
-			memeberList.show();
-			title = '会员管理';
-		} else {
 			noneCard.show();
-			title = '等级设置';
+			title = '未设置会员等级，功能未启用';
+		} else {
+			memebermanage.show();
+			title = '会员管理';
 		}
 		changeTitle(title);
 	}
-	
 	renderMemberList(member)
+	// switch on memLevel
+	$('.setmemCard').on('click',function () {
+		emptyLevelText()
+		setmemLevel.addClass('first')
+		noneCard.hide()
+		setmemLevel.show()
+		changeTitle('新增会员等级')
+	})
 	// applyList
 	$('.applyListBtn').on('click',function () {
 		memebermanage.hide();
 		memeberList.show();
+		changeTitle('会员审核')
 	})
 	// applyList cancel
 	$('.applyList-cancel').on('click',function () {
 		memeberList.hide();
 		memebermanage.show();
+		changeTitle('会员管理')
 	})
 	// setmember Level 
 	$('.memLevelBtn').on('click',function () {
 		memebermanage.hide();
 		memlevelList.show();
+		changeTitle('会员等级管理')
 	})
 	// memlevelList cancel
 	$('.memLevelBtn-cancel').on('click',function () {
 		memlevelList.hide();
 		memebermanage.show();
+		changeTitle('会员管理')
 	})
 	// memlevelList add new
 	$('.memLevelBtn-add').on('click',function () {
+		emptyLevelText();
 		memlevelList.hide();
 		setmemLevel.show();
+		changeTitle('新增会员等级')
 	})
 		// memlevelList edit cancel
 		$('.setmemLevel-cancel').on('click',function () {
@@ -62,66 +74,100 @@ $(function () {
 			setmemLevel.hide()
 			if(edit){
 				memlevelInfo.show()
+				changeTitle('会员等级详情')
 			}else{
+				changeTitle('会员等级列表')
 				memlevelList.show();
 			}
 			$('.edit').removeClass('edit')
+
 		})
 		// memlevelList edit save
 		$('.setmemLevel-save').on('click',function () {
 			var edit = $('.setmemLevel-save').hasClass('edit'),
 				levelName = setmemLevel.find('input[name="levelName"]'),
+				levelImg = setmemLevel.find('.levelImg'),
 				levelBrief = setmemLevel.find('.brief'),
 				levelDesc = setmemLevel.find('.desc'),
 				levelRule = setmemLevel.find('.rule')
 			;
 			var levelInfo = new Array()
 			levelInfo.push(levelName.val(),levelBrief.val(),levelDesc.val(),levelRule.val());
-			console.log(levelInfo)
+			// console.log(levelInfo)
+			if (levelName.val() == '' || levelName.val() == undefined) {
+				layer.msg('请至少输入等级名称');
+				return false;
+			}
 			setmemLevel.hide()
 			if(edit){
 				console.log('from detail')
 				var name = memlevelInfo.find('.levelName span'),
+					Img = memlevelInfo.find('.levelImg img'),
 					brief = memlevelInfo.find('.brief span'),
 					desc = memlevelInfo.find('.desc span'),
 					rule = memlevelInfo.find('.rule span')
 				;
-				console.log(name)
-				console.log(brief)
-				console.log(desc)
-				console.log(rule)
-
-				name.text(levelName.val())
-				brief.text(levelBrief.val())
-				desc.text(levelDesc.val())
-				rule.text(levelRule.val())
-
-				
+				name.text(levelName.val());Img.attr('src',levelImg.attr('src'));brief.text(levelBrief.val());desc.text(levelDesc.val());rule.text(levelRule.val())
 				memlevelInfo.show()
-
+				changeTitle('会员等级详情')
 			}else{
 				console.log('from add new')
 				memlevelList.show()
+				layer.msg('新增会员等级完成')
+				setmemLevel.removeClass('first')
+				changeTitle('会员等级列表')
 				// do something for add new level
 			}
-
 			$('.edit').removeClass('edit')
 		})
+	function emptyLevelText() {
+		var edit = $('.setmemLevel-save').hasClass('edit'),
+			levelName = setmemLevel.find('input[name="levelName"]'),
+			levelBrief = setmemLevel.find('.brief'),
+			levelDesc = setmemLevel.find('.desc'),
+			levelRule = setmemLevel.find('.rule'),
+			levelImg = setmemLevel.find('.levelImg')
+		;
+		levelName.val('');levelImg.attr('src','');levelBrief.val('');levelDesc.val('');levelRule.val('');
+	}
+	// set default card
+	$('.mem-level-list li .setDefault').on('click',function () {
+		$('.seted').removeClass('seted')
+		$(this).closest('li').find('.defaulting').addClass('seted');
+		layer.msg('已更改默认卡片')
+	})
 	// memlevelList detail
 	$('.mem-level-list img').on('click',function () {
 		memlevelList.hide();
 		memlevelInfo.show();
+		changeTitle('会员等级详情')
 	})
 		// memlevelinfo-cancel
 		$('.memlevelinfo-cancel').on('click',function () {
 			memlevelInfo.hide()
 			memlevelList.show();
+			changeTitle('会员等级列表')
 		})
 		// memlevelinfo-edit
 		$('.memlevelinfo-edit').on('click',function () {
 			$('.setmemLevel-save').addClass('edit')
+
+			var name = memlevelInfo.find('.levelName span').text(),
+				Img = memlevelInfo.find('.levelImg img').attr('src'),
+				brief = memlevelInfo.find('.brief span').text(),
+				desc = memlevelInfo.find('.desc span').text(),
+				rule = memlevelInfo.find('.rule span').text(),
+
+			levelName = setmemLevel.find('input[name="levelName"]'),
+			levelImg = setmemLevel.find('.levelImg'),
+			levelBrief = setmemLevel.find('.brief'),
+			levelDesc = setmemLevel.find('.desc'),
+			levelRule = setmemLevel.find('.rule')
+			;
+			levelName.val(name);levelImg.attr('src',Img);levelBrief.val(brief);levelDesc.val(desc);levelRule.val(rule)
 			memlevelInfo.hide()
 			setmemLevel.show()
+			changeTitle('编辑会员等级信息')
 		})
 	// add new member
 	$('.new-member').on('click',function () {
@@ -210,6 +256,12 @@ submit.val());
 		info.show()
 		changeTitle("审核会员");
 
+	})
+	// pass cancel
+	$('.pass-cancel').on('click',function () {
+		memberInfo.hide()
+		memeberList.show()
+		changeTitle('会员审核')
 	})
 	// pass apply
 	$('.pass-apply').on('click',function () {
