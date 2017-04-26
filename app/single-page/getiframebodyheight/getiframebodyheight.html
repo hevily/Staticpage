@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<title>获取iframe内部元素高宽属性</title>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="section">
+			正文
+		</div>
+		<div class="section" id="frame01">
+		<iframe src="table.html" style="width:100%;height:100%;border:none;" id="baidu"></iframe>
+
+		</div>
+	</div>
+	<footer></footer>
+	<!-- jQuery 2.1.4 -->
+	<!-- <script src="https://staticcdn.yshjie.com/cdn/librarypath/jquery/jquery-2.1.4.min.js"></script> -->
+	<!-- <script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script> -->
+	<!-- statistics  -->
+	<!-- <script src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/js/storecommon.js"></script> -->
+	<script>
+		// alert('外层body高度'+document.querySelector('body').offsetHeight)
+		window.onload = function () {
+			function resizeIframe(iframeName,ParentName) {
+				// var childBody = window.frames[iframeName].contentWindow.document.body,//子页面body
+				// 	parentFrameBox = document.getElementById(ParentName),//父页面iframe容器宽度 可考虑直接作用于iframe
+				// 	cDHeight = childBody.offsetHeight;// 获取子元素页面高度
+				// // console.log(parentFrameBox);
+				// // console.log(childBody);
+				// parentFrameBox.style.height = cDHeight+16 +'px';
+
+				var ifm= document.getElementById(ParentName);
+				ifm.height=document.documentElement.clientHeight;
+			}
+			resizeIframe('baidu','frame01');
+		}
+	</script>
+</body>
+</html>

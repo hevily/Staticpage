@@ -1,0 +1,231 @@
+<html><head>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css">
+    <link rel="stylesheet" type="text/css" href="../css/goodsmanage.css">
+	<title>促销管理</title>
+	<style>
+	html,body{overflow: hidden;}
+
+	.tab{width: 50%;}
+	/*.tabs.two .tab{width:50%;}*/
+	/*.tabs.two .tab.active .bl::after{height: 0;}*/
+	/*.two.tabs .tab:nth-child(2){border-right: 1px solid;}*/
+	.tab-content .tab-content .tabpanel{padding: 0;height: auto;overflow: visible;	}
+	.goods-price span{color: #cfcfcf;}
+	.media{padding: 10px;}
+	/*.tabpanel{padding-top: 0;}*/
+	</style>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="classify">
+			<div class="classifyes">
+						<div class="tabs one clearfix">
+							<div class="tab active">
+								<div class="bl">
+									在售(<span>2</span>)
+								</div>
+							</div>
+							<div class="tab ">
+								<div class="bl">
+									仓库(<span>3</span>)
+								</div>
+							</div>
+						</div>
+						<div class="tab-content clearfix">
+							<div class="tabpanel  showing ">
+								<div class="tickets onsales">
+									<div class="onsale">
+										<h4>促销名称</h4>
+										<div class="onsale-img">
+											<img src="../img/1.jpg" alt="onsalePng">
+											<p class="onsale-time">活动时间：<span>2016年3月22日-2016年3月22日</span></p>
+										</div>
+									</div>
+									<div class="ticket-action clearfix">
+										<a href="javascript:;" class="ticket-edit" >编辑</a>
+										<a href="javascript:;" class="ticket-remove" >删除</a>
+										<a href="javascript:;" class="ticket-unsale" >下架</a>
+									</div>
+								</div>
+								<div class="tickets onsales">
+									<div class="onsale">
+										<h4>促销名称</h4>
+										<div class="onsale-img">
+											<img src="../img/1.jpg" alt="onsalePng">
+											<p class="onsale-time">活动时间：<span>2016年3月22日-2016年3月22日</span></p>
+										</div>
+									</div>
+									<div class="ticket-action clearfix">
+										<a href="javascript:;" class="ticket-edit" >编辑</a>
+										<a href="javascript:;" class="ticket-remove" >删除</a>
+										<a href="javascript:;" class="ticket-unsale" >下架</a>
+									</div>
+								</div>
+								<div class="tickets onsales">
+									<div class="onsale">
+										<h4>促销名称</h4>
+										<div class="onsale-img">
+											<img src="../img/1.jpg" alt="onsalePng">
+											<p class="onsale-time">活动时间：<span>2016年3月22日-2016年3月22日</span></p>
+										</div>
+									</div>
+									<div class="ticket-action clearfix">
+										<a href="javascript:;" class="ticket-edit" >编辑</a>
+										<a href="javascript:;" class="ticket-remove" >删除</a>
+										<a href="javascript:;" class="ticket-unsale" >下架</a>
+									</div>
+								</div>
+								<div class="tickets onsales">
+									<div class="onsale">
+										<h4>促销名称</h4>
+										<div class="onsale-img">
+											<img src="../img/1.jpg" alt="onsalePng">
+											<p class="onsale-time">活动时间：<span>2016年3月22日-2016年3月22日</span></p>
+										</div>
+									</div>
+									<div class="ticket-action clearfix">
+										<a href="javascript:;" class="ticket-edit" >编辑</a>
+										<a href="javascript:;" class="ticket-remove" >删除</a>
+										<a href="javascript:;" class="ticket-unsale" >下架</a>
+									</div>
+								</div>
+							</div>
+							<div class="tabpanel clearfix">
+							1-1-2
+							</div>
+						</div>
+					</div>
+				
+					
+				</div>
+
+			</div>
+
+
+	</div>
+	<div id="attention"></div>
+	<div id="user_alert_parent"></div>
+	<footer></footer>
+	<script src="/statichtml/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+
+	<script>
+		$(function () {
+			// 标签切换
+				$('.tabs .tab').click(function () {
+						var _this = $(this);
+						_this.siblings('.tab').removeClass('active');
+						_this.addClass('active');
+						var thistab = _this.closest('.tabs').next('.tab-content').children('.tabpanel').eq(_this.index());
+						thistab.siblings('.tabpanel').removeClass('showing');
+						thistab.addClass('showing');
+						// console.log(thistab.addClass('showing'));
+				})
+				//操作券
+				$('.tabpanel').on('click','.ticket-edit',function (e) {
+
+					console.log('edit');
+					e.stopPropagation();
+				})
+				$('.tabpanel').on('click','.ticket-remove',function (e) {
+					$(this).closest('.tickets').addClass('removeing');
+
+					console.log('remove');
+					var id = 'user_alert_parent';
+					userAlert.append('user_alert_parent','确定删除？','two');
+					$('#'+id).on('click','#user_alert_btn a', function (e) {
+						if (userAlert.result()) {
+							console.log(true)
+							$('.removeing').remove();
+						}else{
+							$('.removeing').removeClass('removeing');
+						console.log(false)
+						}
+						return;
+					})
+
+
+					e.stopPropagation();
+				})
+				$('.tabpanel').on('click','.ticket-unsale',function (e) {
+
+					console.log('unsale');
+					e.stopPropagation();
+				})
+
+
+			// 选择商品 操作之前
+			$('.tab-content-onsale .media-right span').click(function () {
+				$(this).toggleClass('checked');
+			})
+			$('.remove-goods').click(function () {
+				var id = 'attention';
+				console.log($('.checked'));
+				if ($('.checked').length == 0) {
+					userAlert.append(id,'请选择需要处理的商品!');
+				}else{
+					userAlert.append(id,'确定删除？','two');
+				}
+				$('#'+id).on('click','#user_alert_btn a', function (e) {
+					if (userAlert.result()) {
+						$('.showing .checked').closest('.media').remove();
+					}
+					return;
+				})
+			})
+		})
+
+	</script>
+	<script>
+		var userAlert = {
+			// @program userAlert
+			// @program append id，text，type
+			// return userAlert Dom into the id
+
+			append:function (id,text,type) {
+				var alertArea = document.getElementById(id),
+					btn_cancel = '',user_ensure = '';
+					alertArea.style.display = 'block';
+				if (type === 'two') {
+					user_ensure = 'user-ensure';
+					btn_cancel = '<a href="javascript:;" id="user_btn_cancel" >取消</a>';
+				};
+				var text =	'<div class="user-alert trans-opacity" id="user_alert">'+
+							'<div class="uer-alert-backdrop"></div>'+
+								'<div class="user-alert-content">'+
+									'<p>'+text+'</p>'+
+									'<div class="user-alert-btn '+user_ensure+'" id="user_alert_btn">'+
+										btn_cancel+
+										'<a href="javascript:;" id="user_btn_ensure" onclick="this.isclick=1" >确认</a>'+
+									'</div>'+
+								'</div>'+
+							'</div>';
+				alertArea.innerHTML = text;
+			},
+			// @program result checkClass
+			// return false or true
+
+			result:function () {
+				// var _this = _this;
+				// _this.attributes.clasName ='clicked12';
+					var oldnode = document.getElementById('user_alert');
+					var btn_ensure = document.getElementById('user_btn_ensure');
+					if (oldnode) {
+						oldnode.parentNode.removeChild(oldnode)
+						console.log(oldnode);
+						if(btn_ensure.isclick == 1){
+							return  true;
+						}else{
+							return  false;
+						};
+						return false;
+					}
+			}
+		};
+	</script>
+
+</body>
+</html>
