@@ -25,8 +25,7 @@ body {
     line-height: 34px;
     position: relative;
     z-index: 10;
-    -webkit-animation: all 0.5s;
-            animation: all 0.5s;
+    animation: all 0.5s;
     top: 0; }
   .tickets.get-tickets .ticket-classes {
     border-top: 1px solid #949496; }
@@ -34,7 +33,7 @@ body {
     border-width: 1px 0 0 0;
     margin-bottom: 0; }
   .tickets.sales-promotion ul {
-    background-color: #fff;
+    background-color: transparent;
     padding: 0; }
     .tickets.sales-promotion ul li {
       padding: 0; }
@@ -43,7 +42,7 @@ body {
         .tickets.sales-promotion ul li .sales-item img {
           width: 100%;
           display: block;
-          margin-bottom: 3px; }
+          margin-bottom: 10px; }
         .tickets.sales-promotion ul li .sales-item .sales-info {
           position: absolute;
           left: 0;
@@ -74,20 +73,23 @@ body {
             padding: 10px;
             font-size: 18px;
             line-height: 22px;
+            background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 0.5) 35%, transparent 85%);
             /* FF3.6+ */
             background: -webkit-gradient(linear, 0deg, color-stop(rgba(0, 0, 0, 0.5) 35%), color-stop(transparent 85%));
             /* Chrome,Safari4+ */
             background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.5) 35%, transparent 85%);
             /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(0deg, rgba(0, 0, 0, 0.5) 35%, transparent 85%);
             /* Opera 11.10+ */
+            background: -ms-linear-gradient(0deg, rgba(0, 0, 0, 0.5) 35%, transparent 85%);
             /* IE10+ */
             filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1');
             /* for IE */
-            background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.5) 35%, transparent 85%);
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 35%, transparent 85%)
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 35%, transparent 85%);
             /* W3C */ }
   .tickets.toggle img.toggle {
     -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg); }
   .tickets .tickets-title {
@@ -127,6 +129,7 @@ body {
             left: -20px;
             bottom: -20px;
             background-color: #424345;
+            -moz-border-radius: 50%;
             border-radius: 50%;
             z-index: 2; }
           .tickets ul li .ticket .ticket-left:before {
@@ -201,17 +204,14 @@ body {
                   height: 6px;
                   line-height: 100%;
                   display: inline-block;
-                  -webkit-transition: all 0.5s;
-                          transition: all 0.5s;
+                  transition: all 0.5s;
                   vertical-align: baseline;
                   position: relative;
                   top: -2px;
                   margin-left: 3px;
                   margin-right: 3px; }
                   .tickets ul li .ticket .ticket-left .ticket-face .ticket-use-tips .toggle-rules img.rules-showing {
-                    -webkit-transform: rotate(180deg);
-                        -ms-transform: rotate(180deg);
-                            transform: rotate(180deg); }
+                    transform: rotate(180deg); }
             .tickets ul li .ticket .ticket-left .ticket-face .ticket-info {
               z-index: 2;
               position: absolute;
@@ -293,6 +293,7 @@ body {
             right: -20px;
             bottom: -20px;
             background-color: #424345;
+            -moz-border-radius: 50%;
             border-radius: 50%;
             z-index: 2; }
           .tickets ul li .ticket .ticket-right:before {
@@ -327,6 +328,7 @@ body {
             width: 12px;
             height: 8px;
             -webkit-transform: translateY(-50%) rotate(90deg);
+            -moz-transform: translateY(-50%) rotate(90deg);
             -ms-transform: translateY(-50%) rotate(90deg);
             transform: translateY(-50%) rotate(90deg); }
         .tickets ul li .ticket.use a.use {
@@ -339,6 +341,7 @@ body {
           -ms-filter: grayscale(1);
           -webkit-filter: grayscale(1);
           -moz-filter: grayscale(1);
+          -o-filter: grayscale(1);
           filter: grayscale(1); }
         .tickets ul li .ticket.used img.used {
           display: block; }
@@ -346,6 +349,7 @@ body {
           -ms-filter: grayscale(1);
           -webkit-filter: grayscale(1);
           -moz-filter: grayscale(1);
+          -o-filter: grayscale(1);
           filter: grayscale(1); }
         .tickets ul li .ticket.timeout img.timeout {
           display: block; }

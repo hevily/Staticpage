@@ -28,6 +28,11 @@
 			display: none;
 		}
 		.sorting .sortable-goods span{display: inline-block;}
+		transform:translateX(-50%);
+		-webkit-transform:translateX(-50%);
+		-moz-transform:translateX(-50%);
+		-o-transform:translateX(-50%);
+		-ms-transform:translateX(-50%);
 	</style>
 </head>
 <body>
@@ -597,17 +602,17 @@
 					return;
 				})
 			})
+			var sort1;
 			$('.sortable-goods').on('click',function () {
 				$('.actions').toggleClass('sorting');
-				var sorting = $('.actions').hasClass('sorting');
-
-				var el = document.getElementById('goods'),sort;
+				var sorting = $('.actions').hasClass('sorting'),
+					el = document.getElementById('goods');
 				if (sorting) {
-					console.log('sorting')
-					var sort = new Sortable(el)
+					console.log('sorting');
+					sort1 = new Sortable(el)
 				}else{
 					console.log('normal')
-					sort.destroy()
+					sort1.destroy()
 				}
 			})
 		})

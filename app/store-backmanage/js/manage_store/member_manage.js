@@ -2,7 +2,7 @@
 $(function () {
 	// 是否显示会员等级设置 	1 为未设置会员等级，功能未启用
 	// 							其他为已设置会员等级
-	var member = 1;
+	var member = 0;
 
 	var memebermanage = $('.memeber-manage'),
 		memlevelList = $('.mem-level-list'),

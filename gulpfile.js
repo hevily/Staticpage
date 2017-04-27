@@ -4,7 +4,7 @@ var staticdir = ''
 // 定义具体项目目录
 var Products= 'store-backmanage/';
 // define 本地开发目录
-var baseserver		= 'work.com/moviehelper/app/',
+var baseserver		= 'www.work.com/moviehelper/app/',
  baseserver_dir 	= 'e:/WorkSpace/moviehelper/app/',
  conf = {
 	server:{
