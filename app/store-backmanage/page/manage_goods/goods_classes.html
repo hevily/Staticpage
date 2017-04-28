@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <link rel="stylesheet" type="text/css" href="../../css/goods_classes.css" />
     <link rel="stylesheet" type="text/css" href="../../css/animate.min.css">
-	<title>分类管理</title>
+	<title>分类</title>
 </head>
 <body>
 	<header></header>
@@ -51,18 +51,72 @@
 						</div>
 						<div class="media-body media-middle">
 							<div class="input-text">
-								<!-- <input type="text" name="secondName"> -->
-
-								<!-- <div class="integral-add-switch"> -->
-						<input type="checkbox" id="checkbox_c1" class="chk_3">
-						<label for="checkbox_c1"></label>
-					
-					<!-- </div> -->
+								<div class="integral-add-switch" style="position: relative;">
+									<input type="checkbox" id="checkbox_c1" class="chk_3">
+									<label for="checkbox_c1"></label>
+								</div>
 							</div>
 						</div>
 					</li>
 				</ul>
 			</div>
+			<div class="member-btn ">
+				<a href="javascript:;" class="btn  btn-space add-classes-cancel">取消</a>
+				<a href="javascript:;" class="btn  btn-theme add-classes-submit">提交</a>
+			</div>
+		</div>
+		<div class="section classes-edit sorting badNetWork">
+			<p class="badNetWork-info">网络错误！当前网络不稳定，请稍后尝试</p>
+			<div class="member-btn ">
+				<a href="javascript:;" class="btn four btn-space ">删除</a>
+				<a href="javascript:;" class="btn four btn-theme ">添加</a>
+				<a href="javascript:;" class="btn four btn-theme ">编辑</a>
+				<a href="javascript:;" class="btn four btn-theme sort-btn"><span>更改排序</span><span>排序完成</span></a>
+			</div>
+			<div class="classes-list">
+				<ul>
+					<li>
+						<div class="media">
+							<div class="media-left">
+								<input type="radio">
+							</div>
+							<div class="media-body">
+								分类名称
+							</div>
+							<div class="media-right">
+								载入下一级
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="media">
+							<div class="media-left">
+								<input type="radio">
+							</div>
+							<div class="media-body">
+								分类名称
+							</div>
+							<div class="media-right">
+								载入下一级
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="media">
+							<div class="media-left">
+								<input type="radio">
+							</div>
+							<div class="media-body">
+								分类名称
+							</div>
+							<div class="media-right">
+								载入下一级
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
 		</div>
 	</div>
 	<footer></footer>
@@ -71,5 +125,6 @@
 	<script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
 	<!-- statistics  -->
 	<script src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/js/storecommon.js"></script>
+	<script src='../../js/manage_goods/goods_classes.js'></script>
 </body>
 </html>

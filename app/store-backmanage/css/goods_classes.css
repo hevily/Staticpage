@@ -10,6 +10,29 @@
   .section a {
     text-decoration: none;
     color: inherit; }
+  .section .member-btn {
+    font-size: 0;
+    padding: 10px 0; }
+    .section .member-btn .btn {
+      display: inline-block;
+      text-decoration: none;
+      width: 30%;
+      margin-left: 2.5%;
+      font-size: 13px;
+      text-align: center;
+      line-height: 36px;
+      border-radius: 5px; }
+      .section .member-btn .btn.four {
+        width: 21.5%; }
+      .section .member-btn .btn.btn-space {
+        border: 1px solid #C3C8CC;
+        color: #333333; }
+      .section .member-btn .btn.btn-theme {
+        background-color: #FF8B0F;
+        color: #fff; }
+      .section .member-btn .btn.pull-right {
+        float: right;
+        margin-right: 2.5%; }
   .section.none-classes {
     display: block;
     padding: 10px; }
@@ -64,6 +87,59 @@
               border: none;
               text-shadow: none;
               box-shadow: none; }
+            .section.add-classes .member-input ul .media .media-body .input-text .integral-add-switch {
+              position: relative;
+              height: 40px;
+              width: 100%; }
+              .section.add-classes .member-input ul .media .media-body .input-text .integral-add-switch .chk_3 + label {
+                top: 10px;
+                margin-right: 10px; }
+  .section.add-classes .member-btn .add-classes-cancel {
+    margin-left: 17.5%; }
+  .section.classes-edit .member-btn .sort-btn span:first-child {
+    display: inline-block; }
+  .section.classes-edit .member-btn .sort-btn span:last-child {
+    display: none; }
+  .section.classes-edit .badNetWork-info {
+    position: relative;
+    height: 0px;
+    overflow: hidden;
+    line-height: 40px;
+    text-align: center;
+    color: #1D0000;
+    font-size: 12px;
+    border-bottom: 1px solid #cfd7c5;
+    background-color: #FEDADC;
+    -webkit-transition: all 0.5s;
+            transition: all 0.5s; }
+    .section.classes-edit .badNetWork-info:after {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 10px;
+      top: 15px;
+      height: 10px;
+      width: 10px;
+      border-style: solid;
+      border-color: #000;
+      border-width: 0 1px 1px 0;
+      -webkit-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
+  .section.classes-edit .classes-list {
+    border-top: 1px solid #cfd7c5; }
+  .section.classes-edit.badNetWork .badNetWork-info {
+    height: 40px; }
+  .section.classes-edit.sorting .member-btn .btn {
+    background-color: #cfcfcf;
+    cursor: not-allowed; }
+  .section.classes-edit.sorting .member-btn a.sort-btn {
+    background-color: #f36303;
+    cursor: pointer; }
+    .section.classes-edit.sorting .member-btn a.sort-btn span:first-child {
+      display: none; }
+    .section.classes-edit.sorting .member-btn a.sort-btn span:last-child {
+      display: inline-block; }
 
 .chk_1, .chk_2, .chk_3, .chk_4 {
   display: none; }
