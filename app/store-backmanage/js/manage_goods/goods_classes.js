@@ -5,16 +5,14 @@ $(function () {
 	$('.sort-btn').on('click',function () {
 		classesList.toggleClass('sorting');
 	})
-	$('input').iCheck({
+	$('input.classes_edit').iCheck({
 	    checkboxClass: 'iradio_square-green',
 	    // radioClass: 'iradio_square-green',
 	    increaseArea: '20%' // optional
 	  });
 	var clsssesInput = $('input.classes_edit');
 	console.log(clsssesInput)
-	$.each(clsssesInput,function () {
-		
-	})
+
 	var checkedNum = $('input.classes_edit:checked').length
 	console.log(checkedNum)
 	$('input.classes_edit').on('ifChanged', function(event){
