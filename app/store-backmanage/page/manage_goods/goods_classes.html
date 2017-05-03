@@ -28,7 +28,7 @@
 						</div>
 						<div class="media-body media-middle">
 							<div class="input-text">
-								<input type="text" name="fullname">
+								<input type="text" name="classes-level">
 							</div>
 						</div>
 					</li>
@@ -40,7 +40,7 @@
 						</div>
 						<div class="media-body media-middle">
 							<div class="input-text">
-								<input type="text" name="firstName">
+								<input type="text" name="classes-name">
 							</div>
 						</div>
 					</li>
@@ -66,12 +66,12 @@
 				<a href="javascript:;" class="btn  btn-theme add-classes-submit">提交</a>
 			</div>
 		</div>
-		<div class="section classes-edit sorting badNetWork">
+		<div class="section classes-edit badNetWork">
 			<p class="badNetWork-info">网络错误！当前网络不稳定，请稍后尝试</p>
 			<div class="member-btn ">
-				<a href="javascript:;" class="btn four btn-space ">删除</a>
-				<a href="javascript:;" class="btn four btn-theme ">添加</a>
-				<a href="javascript:;" class="btn four btn-theme ">编辑</a>
+				<a href="javascript:;" class="btn four btn-space del-btn">删除</a>
+				<a href="javascript:;" class="btn four btn-theme add-btn">添加</a>
+				<a href="javascript:;" class="btn four btn-theme edit-btn">编辑</a>
 				<a href="javascript:;" class="btn four btn-theme sort-btn"><span>更改排序</span><span>排序完成</span></a>
 			</div>
 			<div class="classes-list">
@@ -79,14 +79,11 @@
 					<li>
 						<div class="media">
 							<div class="media-left">
-								<div style="width:20px;height:20px;position: relative;">
+								<div  class="item-checkbox">
 									<input class="classes_edit" type="checkbox">
-									
 								</div>
 							</div>
-							<div class="media-body">
-								分类名称
-							</div>
+							<div class="media-body">分类名称1</div>
 							<div class="media-right">
 								<span class="hidden-tag">已隐藏</span><span class="sorting-tag"></span><span class="more-tag"></span>
 							</div>
@@ -95,14 +92,11 @@
 					<li>
 						<div class="media not-publish">
 							<div class="media-left">
-								<div style="width:20px;height:20px;position: relative;">
+								<div class="item-checkbox">
 									<input class="classes_edit" type="checkbox">
-									
 								</div>
 							</div>
-							<div class="media-body">
-								分类名称
-							</div>
+							<div class="media-body">分类名称2</div>
 							<div class="media-right">
 								<span class="hidden-tag">已隐藏</span><span class="sorting-tag"></span><span class="more-tag"></span>
 							</div>
@@ -111,14 +105,11 @@
 					<li>
 						<div class="media">
 							<div class="media-left">
-								<div style="width:20px;height:20px;position: relative;">
+								<div class="item-checkbox">
 									<input class="classes_edit" type="checkbox">
-									
 								</div>
 							</div>
-							<div class="media-body">
-								分类名称
-							</div>
+							<div class="media-body">分类名称3</div>
 							<div class="media-right">
 								<span class="hidden-tag">已隐藏</span><span class="sorting-tag"></span><span class="more-tag"></span>
 							</div>
@@ -136,6 +127,8 @@
 	<!-- statistics  -->
 	<script src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/js/storecommon.js"></script>
 	<script src="../../js/plugin/icheck/icheck.min.js"></script>
+	<script src="../../js/plugin/layer/layer.js"></script>
+	<script src="../../js/plugin/Sortable.min.js"></script>
 	<script src='../../js/manage_goods/goods_classes.js'></script>
 </body>
 </html>

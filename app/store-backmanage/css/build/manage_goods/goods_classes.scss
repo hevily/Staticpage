@@ -3,7 +3,7 @@
 @import "build/media_bt.css";
 *{margin: 0;padding: 0;}
 .section{
-	display: block;
+	display: none;
 	box-sizing:border-box;
 	a{
 		text-decoration:none;
@@ -39,7 +39,7 @@
 		}
 	}
 	&.none-classes{
-		display: block;
+		// display: block;
 		padding: 10px;
 		h3{
 			font-weight: normal;
@@ -132,6 +132,18 @@
 	}
 	&.classes-edit{
 		.member-btn{
+			.btn{
+				color:#fff;
+			}
+			.del-btn{
+				background-color: #D44545;
+			}
+			.add-btn{
+				background-color: #3590B9;
+			}
+			.edit-btn{
+				background-color: #34B79D;
+			}
 			.sort-btn{
 				span{
 					&:first-child{
@@ -177,7 +189,9 @@
 						line-height: 45px;
 						.media-left{
 							padding-left: 10px;
-
+							.item-checkbox{
+								width:20px;height:20px;position: relative;
+							}
 						}
 						.media-body{
 							padding-left: 10px;
@@ -187,6 +201,7 @@
 
 							.hidden-tag{
 								display: none;
+								color:red;
 							}
 							.sorting-tag{
 								border-top:2px solid #C9C9C9;
@@ -231,52 +246,57 @@
 		&.badNetWork{
 			.badNetWork-info{
 				height: 40px;
-				// display: block;
 			}
 		}
-		&.sorting{
 			.member-btn{
 				.btn{
-					background-color: #cfcfcf;
-					cursor:not-allowed;
+					&.sorting,&.disabled-btn{
+						background-color: #cfcfcf;
+						cursor:not-allowed;
+						color:#b4b6c5;
+					}
 				}
-				a.sort-btn{
-					background-color: #f36303;
-					cursor:pointer;
-					span{
-						&:first-child{
-							display: none;
-						}
-						&:last-child{
-							display: inline-block;
+				.sort-btn{
+					&.sorting{
+						background-color: #f36303;
+						cursor:pointer;
+						color:#fff;
+						span{
+							&:first-child{
+								display: none;
+							}
+							&:last-child{
+								display: inline-block;
+							}
 						}
 					}
 				}
 			}
 			.classes-list{
-				ul{
-					li{
-						.media{
-							.media-left{
-								display: none;
-							}
-							.media-right{
-								min-width:40px;
-								.sorting-tag{
-									display: inline-block;
-								}
-								.more-tag{
+				&.sorting{
+					ul{
+						li{
+							.media{
+								.media-left{
 									display: none;
 								}
-								.hidden-tag{
-									display: none;
+								.media-right{
+									min-width:40px;
+									.sorting-tag{
+										display: inline-block;
+									}
+									.more-tag{
+										display: none;
+									}
+									.hidden-tag{
+										display: none;
+									}
 								}
 							}
 						}
 					}
 				}
 			}
-		}
 	}
 }
 .chk_1,.chk_2,.chk_3,.chk_4 {
