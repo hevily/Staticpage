@@ -1,0 +1,571 @@
+@charset "UTF-8";
+@import url(base.css);
+html, body {
+  font-size: 10px; }
+
+body {
+  height: auto;
+  -webkit-overflow-scrolling: touch; }
+
+/* 店铺头部 */
+@chareset 'utf-8';
+.normal-text {
+  color: #3F3F3F; }
+
+.store-header {
+  background-image: url("/statichtml/bjmovie01/estores/Public/images/home/4/bg.jpg");
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%; }
+
+/*store-info */
+.store-info {
+  margin: 25px 0 20px 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+  -webkit-border-top-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-bottom-left-radius: 3px; }
+  .store-info .store-name {
+    float: left;
+    line-height: 80px;
+    font-size: 18px;
+    color: #3F3F3F;
+    padding-right: 30px; }
+    .store-info .store-name .smaller {
+      font-size: 75%; }
+  .store-info .store-img {
+    float: left;
+    width: 80px;
+    height: 80px;
+    padding: 2px; }
+    .store-info .store-img img {
+      width: 100%;
+      height: 100%;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px; }
+  .store-info .store-simple {
+    float: right; }
+    .store-info .store-simple img {
+      width: 8px;
+      height: 12px; }
+  .store-info .media {
+    -webkit-border-top-left-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-bottom-left-radius: 3px; }
+    .store-info .media:active {
+      background-color: transparent !important; }
+    .store-info .media .media-left {
+      width: 80px;
+      height: 80px;
+      padding: 2px;
+      background-color: #fff;
+      -webkit-border-top-right-radius: 3px;
+      -moz-border-radius-topright: 3px;
+      border-top-right-radius: 3px;
+      -webkit-border-bottom-right-radius: 3px;
+      -moz-border-radius-bottomright: 3px;
+      border-bottom-right-radius: 3px; }
+      .store-info .media .media-left .media-object {
+        -moz-border-radius: 3px;
+        border-radius: 3px; }
+    .store-info .media .media-body {
+      font-size: 18px;
+      color: #3F3F3F;
+      padding-left: 8px; }
+    .store-info .media .media-right {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      color: #f36303;
+      font-size: 16px;
+      padding-right: 10px; }
+      .store-info .media .media-right p {
+        width: 48px; }
+      .store-info .media .media-right .media-object {
+        float: right;
+        display: inline-block;
+        position: relative;
+        top: 2px; }
+
+.store-action .new-page .media {
+  border-bottom: 1px solid #C9C9C9;
+  margin: 0;
+  padding: 10px; }
+  .store-action .new-page .media:nth-child(2) {
+    padding-left: 8px; }
+    .store-action .new-page .media:nth-child(2) .nearby-store-logo img {
+      height: 16px;
+      position: relative;
+      top: 2px; }
+    .store-action .new-page .media:nth-child(2) .nearby-store-desc {
+      padding-left: 26px; }
+  .store-action .new-page .media .media-object {
+    height: 20px;
+    width: auto; }
+  .store-action .new-page .media .media-body .media-heading {
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: normal; }
+  .store-action .new-page .media .media-right .media-object {
+    height: 11px; }
+.store-action .new-page .nearby-store-head {
+  position: relative; }
+  .store-action .new-page .nearby-store-head .nearby-store-logo img {
+    height: 20px;
+    width: auto; }
+  .store-action .new-page .nearby-store-head .nearby-store-desc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 20px;
+    font-size: 16px;
+    height: 21px;
+    line-height: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-right: 30px; }
+    .store-action .new-page .nearby-store-head .nearby-store-desc span {
+      position: absolute;
+      right: 10px;
+      top: 0;
+      color: #F66F29; }
+  .store-action .new-page .nearby-store-head .nearby-store-more img {
+    height: 11px;
+    width: auto;
+    position: absolute;
+    right: 0;
+    top: 5px; }
+.store-action .show-ad ul {
+  list-style: none;
+  white-space: nowrap;
+  overflow-X: scroll;
+  overflow-Y: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding: 4px 0; }
+  .store-action .show-ad ul li {
+    display: inline-block;
+    margin-left: 5px; }
+    .store-action .show-ad ul li .add-box {
+      height: 59px;
+      width: 104px;
+      position: relative;
+      background-color: #bebebe; }
+      .store-action .show-ad ul li .add-box.voice-tag {
+        background-image: url("../img/store-header/voice.png");
+        -moz-background-size: cover;
+        background-size: cover;
+        background-position: center; }
+      .store-action .show-ad ul li .add-box.video-tag::before {
+        content: "";
+        width: 25px;
+        height: 25px;
+        background-image: url(../img/store-header/video.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        display: block;
+        -moz-background-size: 25px 25px;
+        background-size: 25px 25px;
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); }
+      .store-action .show-ad ul li .add-box img {
+        position: absolute;
+        width: 100%;
+        height: 100%; }
+      .store-action .show-ad ul li .add-box .add-desc {
+        font-size: 12px;
+        color: #fff;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        bottom: 4px;
+        left: 0; }
+.store-action .img-text-borders {
+  padding: 10px 0 10px 0;
+  border-bottom: 1px solid #C9C9C9; }
+  .store-action .img-text-borders .img-text-border {
+    float: left;
+    text-align: center;
+    border-left: 1px solid #C9C9C9;
+    padding-top: 5px;
+    height: 25px; }
+    .store-action .img-text-borders .img-text-border .media-object {
+      height: 18px;
+      width: auto;
+      display: inline-block; }
+      .store-action .img-text-borders .img-text-border .media-object:nth-child(2) {
+        display: none; }
+    .store-action .img-text-borders .img-text-border:first-child {
+      border-left: none; }
+    .store-action .img-text-borders .img-text-border span {
+      height: 21px;
+      display: inline-block;
+      top: -4px;
+      position: relative;
+      color: #FF8F3D;
+      font-size: 16px;
+      /* &:first-child{display:inline-block;}*/
+      /* &:nth-child(1){display:none;}*/ }
+    .store-action .img-text-borders .img-text-border .oneye {
+      display: none; }
+.store-action .two .img-text-border {
+  width: 50%;
+  /* &:nth-child(1){*/
+  /* 	background-color: #ffba46;*/
+  /* }*/
+  /* &:nth-child(2){*/
+  /* 	background-color: lighten(#ffba46, 20%);*/
+  /* 	}*/ }
+.store-action .img-text-border.done {
+  /* span:first-child{display:none !important;}*/
+  /* span:last-child{display:inline-block !important;}*/ }
+  .store-action .img-text-border.done .media-object:nth-child(1) {
+    display: none !important; }
+  .store-action .img-text-border.done .media-object:nth-child(2) {
+    display: inline-block !important; }
+  .store-action .img-text-border.done .uneye {
+    display: none; }
+  .store-action .img-text-border.done .oneye {
+    display: inline-block; }
+
+/* 圆角标签 */
+.normal-text {
+  color: #3F3F3F; }
+
+/* roll-corner */
+.company-tags {
+  padding: 0 10px; }
+
+.roll-corner {
+  background-color: inherit;
+  position: relative;
+  height: 25px;
+  line-height: 23px;
+  background-color: #F1F2F4;
+  float: left;
+  border: 1px solid #E7E3E2;
+  padding-right: 4px;
+  margin-right: 12px;
+  margin-bottom: 4px;
+  -webkit-border-top-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-bottom-left-radius: 3px;
+  padding-left: 4px; }
+
+.roll-corner:before {
+  content: "";
+  position: absolute;
+  right: -9px;
+  top: -1px;
+  width: 8px;
+  height: 15px;
+  background-color: #F1F2F4;
+  border-right: 1px solid #E7E3E2;
+  border-top: 1px solid #E7E3E2;
+  border-bottom: 1px solid #E7E3E2;
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  border-top-right-radius: 3px; }
+
+.roll-corner:after {
+  content: "";
+  position: absolute;
+  right: -9px;
+  bottom: -1px;
+  border-top: 4px solid #fff;
+  border-left: 4px solid #fff;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid transparent; }
+
+/* 媒体对象 */
+/* media */
+.media {
+  margin-top: 15px; }
+  .media:first-child {
+    margin-top: 0; }
+
+.media,
+.media-body {
+  zoom: 1;
+  overflow: hidden; }
+
+.media-body {
+  width: 10000px; }
+
+.media-object {
+  display: block; }
+  .media-object.img-thumbnail {
+    max-width: none; }
+
+.media-right,
+.media > .pull-right {
+  padding-left: 10px; }
+
+.media-left,
+.media > .pull-left {
+  padding-right: 10px; }
+
+.media-left,
+.media-right,
+.media-body {
+  display: table-cell;
+  vertical-align: top; }
+
+.media-middle {
+  vertical-align: middle; }
+
+.media-bottom {
+  vertical-align: bottom; }
+
+.media-heading {
+  margin-top: 0;
+  margin-bottom: 5px; }
+
+.media-list {
+  padding-left: 0;
+  list-style: none; }
+
+/* 模块容器 */
+.normal-text {
+  color: #3F3F3F; }
+
+/* content-box */
+.content-boxs .content {
+  border-top: 1px solid #C9C9C9;
+  padding-top: 10px;
+  background-color: #F2F2F2; }
+  .content-boxs .content .content-action {
+    background-color: #FFF;
+    border-top: 1px solid #C9C9C9;
+    padding: 10px;
+    padding-bottom: 6px; }
+    .content-boxs .content .content-action .content-btn {
+      display: inline-block;
+      height: 31px;
+      padding: 4px 8px;
+      border: 1px solid #EFEFF4;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px; }
+      .content-boxs .content .content-action .content-btn .content-btn-img {
+        height: 20px;
+        width: auto;
+        vertical-align: top; }
+      .content-boxs .content .content-action .content-btn span {
+        line-height: 22px; }
+  .content-boxs .content .content-box {
+    background-color: #FFF;
+    padding-left: 10px; }
+  .content-boxs .content.content3 .content-box, .content-boxs .content.content2 .content-box, .content-boxs .content.content6 .content-box {
+    padding-left: 0; }
+.content-boxs li:last-child .item-goods {
+  border-bottom: none; }
+.content-boxs .see-more {
+  font-size: 12px;
+  float: right;
+  top: 4px;
+  position: relative;
+  color: #515151; }
+  .content-boxs .see-more img {
+    width: auto;
+    height: 12px;
+    margin-left: 4px;
+    position: relative;
+    top: 1px; }
+
+/* 动态模块 */
+/* 动态资讯 */
+.newsfeed .newsfeed-creator {
+  padding-left: 10px; }
+  .newsfeed .newsfeed-creator .media {
+    padding-bottom: 10px; }
+    .newsfeed .newsfeed-creator .media .media-left .media-object {
+      height: 30px;
+      width: 30px; }
+    .newsfeed .newsfeed-creator .media .media-body .newsfeed-creator-name {
+      color: #F26303;
+      font-size: 16px;
+      font-weight: bold; }
+    .newsfeed .newsfeed-creator .media .media-body .newsfeed-creator-time {
+      color: #9B9B9B;
+      font-size: 14px; }
+.newsfeed .newsfeed-body {
+  color: #3F3F3F;
+  font-size: 14px;
+  text-align: justify; }
+  .newsfeed .newsfeed-body .newsfeed-body-title {
+    padding: 0 10px;
+    font-size: 16px;
+    color: #000; }
+  .newsfeed .newsfeed-body .newsfeed-body-text {
+    padding: 0 10px;
+    clear: both;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical; }
+  .newsfeed .newsfeed-body .newsfeed-body-tag {
+    padding: 0 10px; }
+    .newsfeed .newsfeed-body .newsfeed-body-tag .roll-corner {
+      color: #f26303; }
+  .newsfeed .newsfeed-body .newsfeed-body-img img {
+    width: 100%;
+    display: block; }
+.newsfeed .newsfeed-action hr {
+  margin-top: 5px;
+  margin-bottom: 5px; }
+.newsfeed .gampt {
+  border-color: #d0d0d0;
+  margin-left: -10px; }
+
+/* 动态模块评论 */
+.newsfeed-action {
+  padding-right: 0px;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-select: none;
+  clear: both;
+  color: #9096A2; }
+  .newsfeed-action li:active {
+    background-color: #f2f2f2; }
+  .newsfeed-action ul.newsfeed-action-msg {
+    font-size: 14px;
+    padding-left: 10px; }
+    .newsfeed-action ul.newsfeed-action-msg li {
+      padding: 8px 0;
+      width: 50%;
+      float: left;
+      display: inline-block; }
+      .newsfeed-action ul.newsfeed-action-msg li:nth-child(2) {
+        text-align: right;
+        padding-right: 10px; }
+      .newsfeed-action ul.newsfeed-action-msg li img {
+        width: 14px;
+        height: auto;
+        vertical-align: middle;
+        margin-right: 8px; }
+  .newsfeed-action .line {
+    margin: 0 0 0 10px;
+    width: -webkit-calc(100% - 10px);
+    width: -moz-calc(100% - 10px);
+    width: calc(100% - 10px); }
+  .newsfeed-action ul.newsfeed-action-btn {
+    font-size: 14px; }
+    .newsfeed-action ul.newsfeed-action-btn li {
+      padding: 8px 0;
+      width: 33%;
+      float: left;
+      display: inline-block;
+      text-align: center; }
+      .newsfeed-action ul.newsfeed-action-btn li img {
+        width: 14px;
+        height: auto;
+        vertical-align: middle;
+        margin-right: 8px; }
+    .newsfeed-action ul.newsfeed-action-btn .newsfeed-praise img:nth-child(2) {
+      display: none; }
+    .newsfeed-action ul.newsfeed-action-btn .newsfeed-praise.praising img:nth-child(1) {
+      display: none; }
+    .newsfeed-action ul.newsfeed-action-btn .newsfeed-praise.praising img:nth-child(2) {
+      display: inline-block; }
+  .newsfeed-action .newsfeed-replay {
+    position: relative; }
+    .newsfeed-action .newsfeed-replay .text {
+      width: 100%;
+      padding-right: 80px;
+      padding-left: 10px; }
+      .newsfeed-action .newsfeed-replay .text textarea {
+        width: 100%; }
+    .newsfeed-action .newsfeed-replay .commentnow {
+      position: absolute;
+      top: 15px;
+      right: 10px;
+      padding: 4px 8px;
+      border: 1px solid #f36303;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      color: #000; }
+    .newsfeed-action .newsfeed-replay .comment-single {
+      padding: 10px 0 0px 10px;
+      color: #333; }
+      .newsfeed-action .newsfeed-replay .comment-single .media .media-left {
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        overflow: hidden;
+        padding-right: 0; }
+        .newsfeed-action .newsfeed-replay .comment-single .media .media-left .media-object {
+          width: 60px;
+          height: 60px; }
+      .newsfeed-action .newsfeed-replay .comment-single .media .media-body {
+        padding-left: 10px; }
+        .newsfeed-action .newsfeed-replay .comment-single .media .media-body .user-nanme {
+          font-size: 18px;
+          font-weight: bold; }
+        .newsfeed-action .newsfeed-replay .comment-single .media .media-body .comment-time {
+          font-size: 14px;
+          color: #9B9B9B; }
+      .newsfeed-action .newsfeed-replay .comment-single .media .media-right button {
+        width: 50px;
+        margin: 20px 10px 0 0;
+        color: #333;
+        border: 1px solid #f36303;
+        background-color: #fff;
+        padding: 4px 8px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px; }
+      .newsfeed-action .newsfeed-replay .comment-single .comment-content {
+        padding-left: 70px;
+        padding-bottom: 10px;
+        padding-right: 10px; }
+      .newsfeed-action .newsfeed-replay .comment-single .line-gap {
+        height: 1px;
+        margin-left: 10px;
+        background-color: #CFCFCF; }
+      .newsfeed-action .newsfeed-replay .comment-single:last-child .line-gap {
+        display: none; }
+
+.store-info {
+  -webkit-border-bottom-left-radius: 50px;
+  -moz-border-radius-bottomleft: 50px;
+  border-bottom-left-radius: 50px;
+  -webkit-border-top-left-radius: 50px;
+  -moz-border-radius-topleft: 50px;
+  border-top-left-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.7); }
+  .store-info .media .media-left {
+    border-radius: 50%; }
+    .store-info .media .media-left .media-object {
+      border-radius: 50%; }
+  .store-info .media .media-body p:nth-child(1) {
+    height: 27px;
+    overflow: hidden; }
+  .store-info .media .media-body p:nth-child(2) {
+    font-size: 12px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+
+/*# sourceMappingURL=store.css.map */

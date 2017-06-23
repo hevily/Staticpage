@@ -1,0 +1,37 @@
+@import "base";
+/* content-box */
+.content-boxs{
+	.content{
+		border-top:1px solid $normal-gapline;padding-top:$ptd;background-color: $normal-bg;
+		.content-action{
+			background-color: $white;border-top:1px solid $normal-gapline;padding: $pd;padding-bottom: 6px;
+			.content-btn{
+				display:inline-block;
+				height: 31px;padding: 4px 8px;
+				border:1px solid $lightGray;
+				@include border-radius(5px);
+				.content-btn-img{ height: 20px;width: auto;vertical-align:top;}
+				span{line-height: 22px;}
+			}
+			
+		}
+		.content-box{
+			// min-height:500px; 
+			background-color: $white;padding-left:$pd;
+		
+		}
+	&.content3,&.content2,&.content6{
+		.content-box{padding-left: 0;}
+	}
+	}
+	li:last-child{
+		.item-goods{border-bottom:none;}
+	}
+	.see-more{
+		font-size: 12px;float: right;top:4px;position: relative;color:#515151;
+		img{
+			width: auto;height: 12px;margin-left: 4px;position: relative;top:1px;
+		}
+	}
+	
+}

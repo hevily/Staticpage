@@ -1,0 +1,30 @@
+@charset 'utf-8';
+.store-info {
+	@include bottom-left-radius(50px);
+	@include top-left-radius(50px);
+	background-color: rgba(255, 255, 255, 0.7);
+	.media {
+		.media-left {
+			border-radius:50%;
+			.media-object{
+				border-radius:50%;
+			}
+		}
+		.media-body{
+			p{
+				&:nth-child(1){
+					height: 27px;
+					overflow:hidden;
+					// @include text-ellipsis(1);
+				}
+			}
+			p{
+				&:nth-child(2){
+					font-size: 12px;
+					overflow:hidden;
+					@include text-ellipsis(2);
+				}
+			}
+		}
+	}
+}

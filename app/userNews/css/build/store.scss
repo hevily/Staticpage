@@ -1,0 +1,19 @@
+@charset "utf-8"; //must insert this property for chinese character
+html,body{font-size: 10px;}
+body{height: auto;-webkit-overflow-scrolling:touch;}
+@import "base.css";
+/* 店铺头部 */
+@import "store-header";
+/* 圆角标签 */
+@import "roll-corner";
+/* 媒体对象 */
+@import "media";
+/* 模块容器 */
+@import "content-box";
+/* 动态模块 */
+@import "newsfeed";
+/* 动态模块评论 */
+@import "newsfeed-action";
+
+@import "corner-user-log";
+@import "user-info-friends";
