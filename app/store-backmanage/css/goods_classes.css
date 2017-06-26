@@ -33,6 +33,15 @@
       .section .member-btn .btn.pull-right {
         float: right;
         margin-right: 2.5%; }
+  .section .draging {
+    background-color: #e2e2e2;
+    color: #fff; }
+  .section .moving {
+    background-color: #D9D9D9;
+    color: #fff; }
+    .section .moving .sorting-tag span {
+      background-color: #fff;
+      border-color: #fff; }
   .section.none-classes {
     padding: 10px; }
     .section.none-classes h3 {
@@ -107,34 +116,42 @@
     display: inline-block; }
   .section.classes-edit .member-btn .sort-btn span:last-child {
     display: none; }
-  .section.classes-edit .badNetWork-info {
-    position: relative;
-    height: 0px;
-    overflow: hidden;
-    line-height: 40px;
-    text-align: center;
-    color: #1D0000;
-    font-size: 12px;
-    border-bottom: 1px solid #cfd7c5;
-    background-color: #FEDADC;
-    -webkit-transition: all 0.5s;
-            transition: all 0.5s; }
-    .section.classes-edit .badNetWork-info:after {
-      content: '';
-      display: block;
-      position: absolute;
-      right: 10px;
-      top: 15px;
-      height: 10px;
-      width: 10px;
-      border-style: solid;
-      border-color: #000;
-      border-width: 0 1px 1px 0;
-      -webkit-transform: rotate(-45deg);
-          -ms-transform: rotate(-45deg);
-              transform: rotate(-45deg); }
+  .section.classes-edit .fixed-tollbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FFF;
+    z-index: 1;
+    border-bottom: 1px solid #e2e2e2; }
+    .section.classes-edit .fixed-tollbar .badNetWork-info {
+      position: relative;
+      height: 0px;
+      overflow: hidden;
+      line-height: 40px;
+      text-align: center;
+      color: #1D0000;
+      font-size: 12px;
+      border-bottom: 1px solid #cfd7c5;
+      background-color: #FEDADC;
+      -webkit-transition: all 0.5s;
+      transition: all 0.5s; }
+      .section.classes-edit .fixed-tollbar .badNetWork-info:after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 15px;
+        height: 10px;
+        width: 10px;
+        border-style: solid;
+        border-color: #000;
+        border-width: 0 1px 1px 0;
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg); }
   .section.classes-edit .classes-list {
-    border-top: 1px solid #cfd7c5; }
+    border-top: 1px solid #cfd7c5;
+    padding-top: 59px; }
     .section.classes-edit .classes-list ul li {
       font-size: 0;
       border-bottom: 1px solid #EBEBEB; }
@@ -153,15 +170,17 @@
           display: none;
           color: red; }
         .section.classes-edit .classes-list ul li .media .media-right .sorting-tag {
-          border-top: 2px solid #C9C9C9;
-          border-bottom: 2px solid #C9C9C9;
-          height: 2px;
-          width: 15px;
-          padding: 2px 0;
-          margin: 0 10px 0 5px;
-          background-clip: content-box;
-          background-color: #C9C9C9;
           display: none; }
+          .section.classes-edit .classes-list ul li .media .media-right .sorting-tag span {
+            border-top: 2px solid #C9C9C9;
+            border-bottom: 2px solid #C9C9C9;
+            height: 2px;
+            width: 15px;
+            padding: 2px 0;
+            margin: 0 10px 0 5px;
+            background-clip: content-box;
+            background-color: #C9C9C9;
+            display: inline-block; }
         .section.classes-edit .classes-list ul li .media .media-right .more-tag {
           display: inline-block;
           width: 20px;
@@ -177,7 +196,6 @@
             border-top: 1px solid #C9C9C9;
             border-right: 1px solid #C9C9C9;
             -webkit-transform: rotate(45deg);
-                -ms-transform: rotate(45deg);
                     transform: rotate(45deg); }
         .section.classes-edit .classes-list ul li .media.not-publish .media-right {
           min-width: 72px; }
@@ -185,6 +203,8 @@
             display: inline-block; }
   .section.classes-edit.badNetWork .badNetWork-info {
     height: 40px; }
+  .section.classes-edit.badNetWork .classes-list {
+    padding-top: 98px; }
   .section.classes-edit .member-btn .btn.sorting, .section.classes-edit .member-btn .btn.disabled-btn {
     background-color: #cfcfcf;
     cursor: not-allowed;
@@ -202,7 +222,7 @@
   .section.classes-edit .classes-list.sorting ul li .media .media-right {
     min-width: 40px; }
     .section.classes-edit .classes-list.sorting ul li .media .media-right .sorting-tag {
-      display: inline-block; }
+      display: block; }
     .section.classes-edit .classes-list.sorting ul li .media .media-right .more-tag {
       display: none; }
     .section.classes-edit .classes-list.sorting ul li .media .media-right .hidden-tag {

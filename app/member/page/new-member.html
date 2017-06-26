@@ -106,7 +106,7 @@
 	<script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
 	<script>
 	$(function(){
-		$(".items-content ").width($("body").width()-$(".items-title").width()-20);//初始化输入框宽度
+		$(".items-content ").width($(".container").width()-$(".items-title").width()-20);//初始化输入框宽度
 		$(".clause").click(function  (e) {
 			$(this).toggleClass("checking");
 			e.stoppropagation

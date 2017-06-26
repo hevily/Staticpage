@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<title>下載Pokka</title>
+	<style type="text/css">
+		*{padding: 0;margin: 0;font-size: 16px;font-family: 'Microsoft YaHei','Hiragino Sans GB','Helvetica','Arial','Lucida Grande','sans-serif';}
+		html,body{
+			height: 100%;
+			width: 100%;
+			background-color: #EEF3FA;
+		}
+		.container,.section{
+			height: 100%;
+			width: 100%;
+		}
+		.container{
+			width:100%;
+			max-width:640px;
+			margin:0 auto;
+		}
+		.section.download .download-center{
+			width:100%;
+		}
+		.download{
+		}
+		.download .download-btn{
+			font-size: 0;
+		}
+		.download .download-btn a{
+			display: inline-block;
+			width:40%;
+			margin: 15% 5%;
+		}
+		.download .download-btn a:last-child{
+
+		}
+		.download .download-btn a img{
+			display: inline-block;
+			width:100%;
+		}
+	</style>
+	<style type="text/css">
+		.download-tips{
+			text-align: center;
+			font-size: 18px;
+			background-color: #F0EFF5;
+		}
+		.download-sharing{
+			position: relative;
+			top:50%;
+			transform:translateY(-50%);
+		}
+		.download-sharing h1{
+			text-align: left;
+			padding-left: 20px;
+			font-size: 18px;
+		}
+		.download-sharing img{
+			width: 96px;
+		}
+		.download-sharing.android .more{
+			transform:rotate(90deg);
+
+		}
+		.download-sharing .circle{
+			font-size: 40px;
+			line-height: 10px;
+			margin-bottom: 20px;
+		}
+		.download-sharing .gap-bt{
+			margin-bottom: 20px;
+		}
+		.download-tips,.download-sharing{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="section download" style="display: none;" id="download">
+			<img src="download-1.jpg" class="download-center">
+			<div class="download-btn">
+				<a href="https://itunes.apple.com/cn/app/pokka/id1140105613?mt=8"><img src="download-ios.png" alt="Ios下載"></a>
+				<a href="https://play.google.com/store/apps/details?id=com.resourcefact.pokka"><img src="download-android.png" alt="android 下載"></a>
+			</div>
+		</div>
+		<div class="section download-tips" >
+			<div class="download-sharing ios" id="Ios">
+				<h1>操作提示</h1>
+				<img src="see-more.png" class="more">
+				<h2>第一步</h2>
+				<p class="circle">.</p>
+				<p class="gap-bt">點擊該頁右上角<br/>的"更多"按鈕</p>
+				<img src="share-ios.png">
+				<h2>第二步</h2>
+				<p class="circle">.</p
+				<p>選擇“在Safari中打開”</p>
+			</div>
+			<div class="download-sharing android" id="Android">
+				<h1>操作提示</h1>
+				<img src="see-more.png" class="more">
+				<h2>第一步</h2>
+				<p class="circle">.</p>
+				<p class="gap-bt">點擊該頁右上角<br/>的"更多"按鈕</p>
+				<img src="share-android.png">
+				<h2>第二步</h2>
+				<p class="circle">.</p>
+				<p>選擇“在瀏覽器中打開”</p>
+			</div>
+		</div>
+	</div>
+	<footer></footer>
+	<!-- jQuery 2.1.4 -->
+	<!-- <script src="https://staticcdn.yshjie.com/cdn/librarypath/jquery/jquery-2.1.4.min.js"></script> -->
+	<!-- <script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script> -->
+	<!-- statistics  -->
+	<!-- <script src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/js/storecommon.js"></script> -->
+	<!-- <script type="text/javascript" src="/statichtml/bjmovie01/estores/Home/JSLang?v=1.1"></script> -->
+	<!-- <script type="text/javascript" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/home/js/checkWeChsat.js?ver=1.95&r={:rand(0, 9999)}"></script> -->
+	<script type="text/javascript">
+		window.onload = function () {
+			function isWeiXin1() {
+			    var ua = window.navigator.userAgent.toLowerCase();
+			    if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+			        return true;
+			    } else {
+			        return false;
+			    }
+			}
+			var ua = navigator.userAgent.toLowerCase(),
+		    isIos = /iphone|ipod|ipad/.test(ua),
+		    isAndroid = /android/.test(ua),
+		    sharing = document.querySelectorAll('.download-tips')[0],
+		    IosSharing = document.getElementById('Ios'),
+		    AndroidSharing = document.getElementById('Android'),
+		    download = document.getElementById('download')
+		    ;
+			if(isWeiXin1()){
+				console.log('wx')
+				sharing.style.display = 'block';
+				console.log(sharing)
+			    if(isIos){
+			    	console.log('isIos')
+			    	IosSharing.style.display = 'block';
+			    }else if(isAndroid){
+			    	console.log('isAndroid')
+			    	AndroidSharing.style.display = 'block';
+			    }
+			}else{
+				console.log('not wx');
+				download.style.display = 'block';
+			}
+		}
+	</script>
+</body>
+</html>

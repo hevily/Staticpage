@@ -1,0 +1,253 @@
+
+function gL(key){
+    key = key.toUpperCase()
+    if(typeof L !== 'undefined' && L[key]){
+        return L[key]
+    }
+    return key 
+}   
+            
+window.onload = function ()//用window的onload事件，窗体加载完毕的时候
+{  
+//    document.getElementsByClassName('goodsLocal')[0].onclick=function(){
+//        alert(navigator.userAgent.toLowerCase())
+////        'com.resourcefact.pokka'
+////        'com.resourcefact.hmsh' 
+//    }     
+    
+    if (!isOpenFromApp()) {
+        var scope_id = window.scopeid;
+        if (!scope_id || scope_id == '' || scope_id == 0) {
+            scope_id = GetQueryString("scope_id");
+        }
+
+
+        var ua = navigator.userAgent.toLowerCase()
+
+        ios = /iphone|ipod|ipad/.test(ua);
+        isAndroid = /android/.test(ua);
+
+  
+        var imgurl = ''
+        var desc = ''
+        var openText = ''
+        var openHref = ''
+        var openOnclick = ''
+        var downloadText = ''
+        var downloadHref = ''
+        var downloadOnclick = ''
+        switch (scope_id) {
+            case "3":
+                var prefix = "ysj"
+                imgurl = 'https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/home/img/ysj.png'
+                desc = gL('head_'+prefix+'_desc')
+                openText = gL('head_'+prefix+'_open_text')
+                openHref = 'href="javascript:;"'
+                openOnclick = 'onclick="AppOpen(3);"'
+                downloadText = gL('head_'+prefix+'_download_text')
+                downloadHref = 'href="http://yshjie.com/download-ysj.html"'
+                downloadOnclick = ''
+                break;
+            case "4":
+                var prefix = "hmc"
+                imgurl = 'https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/home/img/head-2.png'
+                desc = gL('head_'+prefix+'_desc')
+                openText = gL('head_'+prefix+'_open_text')
+                openHref = 'href="javascript:;"'
+                openOnclick = 'onclick="AppOpen(4);"'
+                downloadText = gL('head_'+prefix+'_download_text')
+                downloadHref = 'href="http://www.hmcmall.com/download.html"'
+                downloadOnclick = ''
+                break;
+            case "7":
+                var prefix = "pokka"
+                imgurl = 'https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/home/img/pokka.png'
+                desc = gL('head_'+prefix+'_desc')
+                openText = gL('head_'+prefix+'_open_text')
+                openHref = 'href="javascript:;"'
+                openOnclick = 'onclick="AppOpen(7);"'
+                downloadText = gL('head_'+prefix+'_download_text')
+                if (ios) {
+                    downloadHref = 'href="https://itunes.apple.com/us/app/pokka/id1140105613"'
+                } else if (isAndroid) {
+                    downloadHref = 'href="https://play.google.com/store/apps/details?id=com.resourcefact.pokka"'
+                } else {
+                    downloadHref = 'href="https://play.google.com/store/apps/details?id=com.resourcefact.pokka"'
+                }
+                downloadOnclick = ''
+                break;
+            case "10":
+                var prefix = "dl"
+                imgurl = 'https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/home/img/dl.png'
+                desc = gL('head_'+prefix+'_desc')
+                openText = gL('head_'+prefix+'_open_text')
+                openHref = 'href="javascript:;"'
+                openOnclick = 'onclick="AppOpen(10);"'
+                downloadText = gL('head_'+prefix+'_download_text')
+                downloadHref = 'href="https://play.google.com/store/apps/details?id=com.resourcefact.dl"'
+                downloadOnclick = ''
+                break;
+        }
+
+
+
+                var btnStyle = '\
+width:90%;\
+color:#fff;\
+display:inline-block;\
+padding:5px;\
+text-decoration:none;\
+border-radius:5px;\
+background-color: #01A73B;\
+background: -moz-linear-gradient(270deg, #7EBD26 11%, #01A73B 57%);/* FF3.6+ */\
+background: -webkit-gradient(linear, 270deg, color-stop(11%, 7EBD26), color-stop(57%, 01A73B));/* Chrome,Safari4+ */\
+background: -webkit-linear-gradient(270deg, #7EBD26 11%, #01A73B 57%);/* Chrome10+,Safari5.1+ */\
+background: -o-linear-gradient(270deg, #7EBD26 11%, #01A73B 57%);/* Opera 11.10+ */\
+background: -ms-linear-gradient(270deg, #7EBD26 11%, #01A73B 57%);/* IE10+ */\
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1301FE", endColorstr="#F4F60C", GradientType="1"); /* for IE */\
+background: linear-gradient(270deg, #7EBD26 11%, #01A73B 57%);/* W3C */\
+'
+
+                var html = '\
+<div class="head" id="float_nav01" style="height:95px;width:100%;font-size: 14px; background: #373737; position: fixed; top: 0; left: 0; z-index: 9999; color: white;">\
+    <table style="width:100%;height:55px;" onclick="wechatClose()">\
+        <tr align="center">\
+            <td align="right" style="width:30px">\
+                <a href="javascript:;" id="close01">\
+                    <img src="/statichtml/bjmovie01/estores/Public/home/img/head-1.png" style="width: 15px;\height: 15px;"/>\
+                </a>\
+            </td>\
+            <td style="width:60px">\
+                <img src="' + imgurl + '" alt="" style="width: 40px;\height: 40px;"/>\
+            </td>\
+            <td align="left">\
+                <span>' + desc + '</span>\
+            </td>\
+        </tr>\
+    </table>\
+    <table style="width:100%">\
+        <tr align="center">\
+            <td style="width:50%">\
+                <a class="WX-notice-action half" ' + openHref + ' ' + openOnclick + ' style="' + btnStyle + '">' + openText + '</a>\
+            </td>\
+            <td>\
+                <a class="WX-notice-action half" ' + downloadHref + ' ' + downloadOnclick + ' style="' + btnStyle + '">' + downloadText + '</a>\
+            </td>\
+        </tr>\
+    </table>\
+</div>'
+        if (openText || downloadText) {
+            document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeEnd", html);
+        }
+
+        return true;
+
+    } else {
+        //alert('非微信');
+
+
+    }
+}
+
+function isOpenFromApp() {  
+    var ua = navigator.userAgent.toLowerCase()
+    if (ua == '') {
+        return true
+    }
+    ios = /iphone|ipod|ipad/.test(ua);
+    isAndroid = /android/.test(ua);
+    var isFacebook = ua.indexOf("fban") > -1
+    if (ios) {
+        var is_uiwebview = /(iPhone|iPod|iPad).*AppleWebKit(?!.*Safari)/i.test(navigator.userAgent);
+        if (is_uiwebview) {
+            if (isWeiXin()) { 
+                return false
+            } else if (isFacebook) {
+                return false
+            } else {
+                return true
+            }
+        } else {
+            return false
+        }
+    } else if (isAndroid) {
+        var webViewFunctions = [
+            'openPhone',
+            'showQr',
+            'showImage',
+            'showMedia',
+            'showLocation',
+            'stopProgressDialog',
+            'cartCountAndMoney',
+            'local_obj',
+        ]  
+        for(var i in webViewFunctions){
+            var type = typeof window[webViewFunctions[i]]
+//            document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeEnd", '<div>'+type+'</div>');
+            if(type == 'object'){
+                return true 
+            }   
+        } 
+        if (window.requested_with && window.requested_with.search('com.resourcefact') == -1) {
+            return false
+        } else {
+            if (isWeiXin()) {
+                return false 
+            } else {
+                if (isFacebookApp()) {
+                    return false
+                } else {
+                    var isAndroidWebView = ua.search("; wv")!=-1
+                    if(!isAndroidWebView){
+                        return false
+                    }else{
+                        return true
+                    }  
+                }
+            }
+        } 
+    } else {
+        return false
+    }
+    ;
+}
+
+function isWeiXin() {
+    var ua = window.navigator.userAgent.toLowerCase();
+    if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+function isFacebookApp() {
+    var ua = navigator.userAgent || navigator.vendor || window.opera;
+    return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
+}
+
+//用app打开  把分享的url 加密传过去，把scopeid 传过去
+function AppOpen(scope_id) {
+    var share_url = encodeURIComponent(window.location.href);
+    //https://shop.yshjie.com  http://127.0.0.1
+    location.href = "/statichtml/bjmovie01/estores/Public/home/js/WX-notice/WX-noticePage.html?share_url=" + share_url + "&scope_id=" + scope_id;
+}
+
+//关闭按钮
+function wechatClose() {
+    document.getElementById("float_nav01").style.display = "none";
+}
+
+
+
+//采用正则表达式获取地址栏参数   获取url 参数 get 的值	
+// 调用方法   alert(GetQueryString("参数名1"));
+function GetQueryString(name)
+{
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null)
+        return  unescape(r[2]);
+    return null;
+}
