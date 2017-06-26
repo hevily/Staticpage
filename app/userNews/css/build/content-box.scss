@@ -1,6 +1,7 @@
 @import "base";
 /* content-box */
 .content-boxs{
+	margin-top: -1px;
 	.content{
 		border-top:1px solid $normal-gapline;padding-top:$ptd;background-color: $normal-bg;
 		.content-action{

@@ -1,4 +1,43 @@
 @charset 'utf-8';
 .user-info-friends{
-	
+	.user-colum{
+		box-sizing:border-box;
+		font-size: 0;
+		&.colum-3{
+			.colum-box{
+				width:33.3333%;
+				display: inline-block;
+				margin: 0;padding: 0;
+				font-size: 14px;
+				text-align:center;
+				position: relative;
+				height: 60px;line-height: 60px;
+				.colum-text{
+					// display: table-cell;
+					height: 100%;width: 100%;
+					padding:10px;
+					line-height: 20px;
+					text-align:center;
+					vertical-align:middle;
+					color:#6c6c6c;
+					span{
+						color:#f36303;
+					}
+				}
+				&:before{
+					content:'';
+					position: absolute;
+					display: block;
+					width: 1px;height: 90%;
+					right: 0;top: 50%;
+					transform:translateY(-50%);
+					background-color: #d2d2d2;
+				}
+				&:last-child:before{
+					display: none;
+				}
+			}
+		}
+		border-bottom:1px solid #d2d2d2;
+	}
 }

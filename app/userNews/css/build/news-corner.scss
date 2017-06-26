@@ -1,0 +1,14 @@
+@charset 'utf-8';
+.news-corner{
+	padding-top: 5px;
+	span{
+		float: left;display: inline-block;margin-right: 10px;line-height: 26px;color:#5d5d5d;
+	}
+	.roll-corner{
+		color:#d68c73 !important;
+		background-color: #f7f7f7;
+		&:before{
+			background-color: #f7f7f7;
+		}
+	}
+}

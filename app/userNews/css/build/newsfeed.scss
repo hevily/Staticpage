@@ -1,15 +1,16 @@
 @charset "utf-8";
 /* 动态资讯 */
 .newsfeed{
-
+	padding-top: 10px;
 	.newsfeed-creator{
 		padding-left: 10px;
 			.media{
 				padding-bottom: 10px;
 				.media-left{
 					.media-object{
-						height: 30px;
-						width: 30px;
+						height: 40px;
+						width:  40px;
+						border-radius:50%;
 					}
 				}
 				.media-body{
@@ -20,7 +21,7 @@
 					}
 					.newsfeed-creator-time{
 						color:#9B9B9B;
-						font-size: 14px;
+						font-size: 12px;
 					}
 				}
 			}
@@ -30,16 +31,16 @@
 		font-size: 14px;
 		text-align:justify;
 		.newsfeed-body-title{
-			padding: 0 10px;
+			padding: 0 10px 0 0 ;
 			// font-weight: bold;
 			font-size: 16px;
 			color:#000;
 		}
 		.newsfeed-body-text{
-			padding: 0 10px;
+			padding: 0 10px 0 0;
 			clear:both;
 			overflow:hidden;text-overflow:ellipsis;display: -webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;
-			
+			margin-bottom: 10px;
 		}
 		.newsfeed-body-tag{
 			padding: 0 10px;

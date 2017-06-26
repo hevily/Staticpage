@@ -345,94 +345,100 @@ body {
   color: #3F3F3F; }
 
 /* content-box */
-.content-boxs .content {
-  border-top: 1px solid #C9C9C9;
-  padding-top: 10px;
-  background-color: #F2F2F2; }
-  .content-boxs .content .content-action {
-    background-color: #FFF;
+.content-boxs {
+  margin-top: -1px; }
+  .content-boxs .content {
     border-top: 1px solid #C9C9C9;
-    padding: 10px;
-    padding-bottom: 6px; }
-    .content-boxs .content .content-action .content-btn {
-      display: inline-block;
-      height: 31px;
-      padding: 4px 8px;
-      border: 1px solid #EFEFF4;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px; }
-      .content-boxs .content .content-action .content-btn .content-btn-img {
-        height: 20px;
-        width: auto;
-        vertical-align: top; }
-      .content-boxs .content .content-action .content-btn span {
-        line-height: 22px; }
-  .content-boxs .content .content-box {
-    background-color: #FFF;
-    padding-left: 10px; }
-  .content-boxs .content.content3 .content-box, .content-boxs .content.content2 .content-box, .content-boxs .content.content6 .content-box {
-    padding-left: 0; }
-.content-boxs li:last-child .item-goods {
-  border-bottom: none; }
-.content-boxs .see-more {
-  font-size: 12px;
-  float: right;
-  top: 4px;
-  position: relative;
-  color: #515151; }
-  .content-boxs .see-more img {
-    width: auto;
-    height: 12px;
-    margin-left: 4px;
+    padding-top: 10px;
+    background-color: #F2F2F2; }
+    .content-boxs .content .content-action {
+      background-color: #FFF;
+      border-top: 1px solid #C9C9C9;
+      padding: 10px;
+      padding-bottom: 6px; }
+      .content-boxs .content .content-action .content-btn {
+        display: inline-block;
+        height: 31px;
+        padding: 4px 8px;
+        border: 1px solid #EFEFF4;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px; }
+        .content-boxs .content .content-action .content-btn .content-btn-img {
+          height: 20px;
+          width: auto;
+          vertical-align: top; }
+        .content-boxs .content .content-action .content-btn span {
+          line-height: 22px; }
+    .content-boxs .content .content-box {
+      background-color: #FFF;
+      padding-left: 10px; }
+    .content-boxs .content.content3 .content-box, .content-boxs .content.content2 .content-box, .content-boxs .content.content6 .content-box {
+      padding-left: 0; }
+  .content-boxs li:last-child .item-goods {
+    border-bottom: none; }
+  .content-boxs .see-more {
+    font-size: 12px;
+    float: right;
+    top: 4px;
     position: relative;
-    top: 1px; }
+    color: #515151; }
+    .content-boxs .see-more img {
+      width: auto;
+      height: 12px;
+      margin-left: 4px;
+      position: relative;
+      top: 1px; }
 
 /* 动态模块 */
 /* 动态资讯 */
-.newsfeed .newsfeed-creator {
-  padding-left: 10px; }
-  .newsfeed .newsfeed-creator .media {
-    padding-bottom: 10px; }
-    .newsfeed .newsfeed-creator .media .media-left .media-object {
-      height: 30px;
-      width: 30px; }
-    .newsfeed .newsfeed-creator .media .media-body .newsfeed-creator-name {
-      color: #F26303;
+.newsfeed {
+  padding-top: 10px; }
+  .newsfeed .newsfeed-creator {
+    padding-left: 10px; }
+    .newsfeed .newsfeed-creator .media {
+      padding-bottom: 10px; }
+      .newsfeed .newsfeed-creator .media .media-left .media-object {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%; }
+      .newsfeed .newsfeed-creator .media .media-body .newsfeed-creator-name {
+        color: #F26303;
+        font-size: 16px;
+        font-weight: bold; }
+      .newsfeed .newsfeed-creator .media .media-body .newsfeed-creator-time {
+        color: #9B9B9B;
+        font-size: 12px; }
+  .newsfeed .newsfeed-body {
+    color: #3F3F3F;
+    font-size: 14px;
+    text-align: justify; }
+    .newsfeed .newsfeed-body .newsfeed-body-title {
+      padding: 0 10px 0 0;
       font-size: 16px;
-      font-weight: bold; }
-    .newsfeed .newsfeed-creator .media .media-body .newsfeed-creator-time {
-      color: #9B9B9B;
-      font-size: 14px; }
-.newsfeed .newsfeed-body {
-  color: #3F3F3F;
-  font-size: 14px;
-  text-align: justify; }
-  .newsfeed .newsfeed-body .newsfeed-body-title {
-    padding: 0 10px;
-    font-size: 16px;
-    color: #000; }
-  .newsfeed .newsfeed-body .newsfeed-body-text {
-    padding: 0 10px;
-    clear: both;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical; }
-  .newsfeed .newsfeed-body .newsfeed-body-tag {
-    padding: 0 10px; }
-    .newsfeed .newsfeed-body .newsfeed-body-tag .roll-corner {
-      color: #f26303; }
-  .newsfeed .newsfeed-body .newsfeed-body-img img {
-    width: 100%;
-    display: block; }
-.newsfeed .newsfeed-action hr {
-  margin-top: 5px;
-  margin-bottom: 5px; }
-.newsfeed .gampt {
-  border-color: #d0d0d0;
-  margin-left: -10px; }
+      color: #000; }
+    .newsfeed .newsfeed-body .newsfeed-body-text {
+      padding: 0 10px 0 0;
+      clear: both;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      margin-bottom: 10px; }
+    .newsfeed .newsfeed-body .newsfeed-body-tag {
+      padding: 0 10px; }
+      .newsfeed .newsfeed-body .newsfeed-body-tag .roll-corner {
+        color: #f26303; }
+    .newsfeed .newsfeed-body .newsfeed-body-img img {
+      width: 100%;
+      display: block; }
+  .newsfeed .newsfeed-action hr {
+    margin-top: 5px;
+    margin-bottom: 5px; }
+  .newsfeed .gampt {
+    border-color: #d0d0d0;
+    margin-left: -10px; }
 
 /* 动态模块评论 */
 .newsfeed-action {
@@ -567,5 +573,60 @@ body {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis; }
+
+.user-info-friends .user-colum {
+  box-sizing: border-box;
+  font-size: 0;
+  border-bottom: 1px solid #d2d2d2; }
+  .user-info-friends .user-colum.colum-3 .colum-box {
+    width: 33.3333%;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+    height: 60px;
+    line-height: 60px; }
+    .user-info-friends .user-colum.colum-3 .colum-box .colum-text {
+      height: 100%;
+      width: 100%;
+      padding: 10px;
+      line-height: 20px;
+      text-align: center;
+      vertical-align: middle;
+      color: #6c6c6c; }
+      .user-info-friends .user-colum.colum-3 .colum-box .colum-text span {
+        color: #f36303; }
+    .user-info-friends .user-colum.colum-3 .colum-box:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 1px;
+      height: 90%;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #d2d2d2; }
+    .user-info-friends .user-colum.colum-3 .colum-box:last-child:before {
+      display: none; }
+
+.news-corner {
+  padding-top: 5px; }
+  .news-corner span {
+    float: left;
+    display: inline-block;
+    margin-right: 10px;
+    line-height: 26px;
+    color: #5d5d5d; }
+  .news-corner .roll-corner {
+    color: #d68c73 !important;
+    background-color: #f7f7f7; }
+    .news-corner .roll-corner:before {
+      background-color: #f7f7f7; }
+
+.newsfeed.personal .newsfeed-creator .media .media-body .newsfeed-creator-name {
+  color: #000;
+  font-weight: normal; }
 
 /*# sourceMappingURL=store.css.map */
