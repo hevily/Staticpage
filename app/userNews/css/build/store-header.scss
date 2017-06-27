@@ -198,6 +198,11 @@ $i-t-b-color: red;
 	.two{
 		.img-text-border{
 			width:$half;
+			&.relase-friend{
+				span{
+					color:#8d8d8d;
+				}
+			}
 			/* &:nth-child(1){*/
 			/* 	background-color: #ffba46;*/
 			/* }*/

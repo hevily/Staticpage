@@ -53,6 +53,8 @@ a{text-decoration: none;color: inherit;}
 /*边距/布局*/
 .container{
   margin: 0 auto;
+  max-width:640px;
+  width:100%;
 }
 .pd10{
   padding-left: 10px;

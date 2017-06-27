@@ -19,7 +19,7 @@
 	ul.newsfeed-action-btn{
 		font-size: 14px;
 		li{padding:8px 0;
-			width: 33%;float: left;display:inline-block;text-align:center;
+			width: 50%;float: left;display:inline-block;text-align:center;
 			img{
 				width: 14px;height:auto;vertical-align:middle;margin-right: 8px;
 			}
@@ -34,6 +34,7 @@
 	}
 	.newsfeed-replay{
 		position: relative;
+		display: none;
 		.text {
 			width: 100%;
 			padding-right: 80px;

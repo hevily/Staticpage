@@ -33,7 +33,7 @@
     font-size: 14px; }
     .newsfeed-action ul.newsfeed-action-btn li {
       padding: 8px 0;
-      width: 33%;
+      width: 50%;
       float: left;
       display: inline-block;
       text-align: center; }
@@ -49,7 +49,8 @@
     .newsfeed-action ul.newsfeed-action-btn .newsfeed-praise.praising img:nth-child(2) {
       display: inline-block; }
   .newsfeed-action .newsfeed-replay {
-    position: relative; }
+    position: relative;
+    display: none; }
     .newsfeed-action .newsfeed-replay .text {
       width: 100%;
       padding-right: 80px;

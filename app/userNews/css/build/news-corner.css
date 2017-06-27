@@ -1,0 +1,16 @@
+.news-corner {
+  padding-left: 10px;
+  padding-top: 5px; }
+  .news-corner span {
+    float: left;
+    display: inline-block;
+    margin-right: 10px;
+    line-height: 26px;
+    color: #5d5d5d; }
+  .news-corner .roll-corner {
+    color: #d68c73 !important;
+    background-color: #f7f7f7; }
+    .news-corner .roll-corner:before {
+      background-color: #f7f7f7; }
+
+/*# sourceMappingURL=news-corner.css.map */

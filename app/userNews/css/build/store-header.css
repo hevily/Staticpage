@@ -218,6 +218,8 @@
   /* &:nth-child(2){*/
   /* 	background-color: lighten(#ffba46, 20%);*/
   /* 	}*/ }
+  .store-action .two .img-text-border.relase-friend span {
+    color: #8d8d8d; }
 .store-action .img-text-border.done {
   /* span:first-child{display:none !important;}*/
   /* span:last-child{display:inline-block !important;}*/ }
