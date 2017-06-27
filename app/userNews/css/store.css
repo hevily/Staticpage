@@ -86,7 +86,10 @@ body {
       font-size: 16px;
       padding-right: 10px; }
       .store-info .media .media-right p {
-        width: 48px; }
+        min-width: 24px; }
+      .store-info .media .media-right img {
+        width: 26px;
+        margin-bottom: 5px; }
       .store-info .media .media-right .media-object {
         float: right;
         display: inline-block;
