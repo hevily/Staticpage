@@ -38,9 +38,11 @@
       padding: 0 10px; }
       .newsfeed .newsfeed-body .newsfeed-body-tag .roll-corner {
         color: #f26303; }
-    .newsfeed .newsfeed-body .newsfeed-body-img img {
-      width: 100%;
-      display: block; }
+    .newsfeed .newsfeed-body .newsfeed-body-img {
+      padding-right: 10px; }
+      .newsfeed .newsfeed-body .newsfeed-body-img img {
+        width: 100%;
+        display: block; }
   .newsfeed .newsfeed-action hr {
     margin-top: 5px;
     margin-bottom: 5px; }
