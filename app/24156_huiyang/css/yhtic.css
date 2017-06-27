@@ -367,6 +367,119 @@ body {
         .tickets ul li .ticket.back-done img.back-done {
           display: block; }
 
+.integral-num {
+  background-color: #FFF;
+  color: #fefc01;
+  font-size: 12px;
+  background-image: url("../img/integral-num-bg.jpg");
+  background-size: 100% 100%;
+  text-align: center;
+  padding: 15px 0; }
+  .integral-num h4 {
+    font-weight: normal; }
+  .integral-num p {
+    font-size: 30px;
+    padding: 0 10px; }
+    .integral-num p:last-child {
+      color: #C9A3BC;
+      font-size: 12px; }
+
+.integral-exchange .tab-modal {
+  padding: 0 12px; }
+  .integral-exchange .tab-modal .tabs {
+    padding: 13px 0;
+    text-align: center;
+    font-size: 0; }
+    .integral-exchange .tab-modal .tabs .tab {
+      position: relative;
+      display: inline-block;
+      width: 100px;
+      border: 1px solid #F5834D;
+      line-height: 18px;
+      text-align: center;
+      color: #F5834D;
+      width: 13%;
+      border: none;
+      border-radius: 0;
+      color: #D3BD19;
+      font-size: 12px;
+      border: 1px solid #D3BD19;
+      border-radius: 10px;
+      margin-right: 3%; }
+      .integral-exchange .tab-modal .tabs .tab.active {
+        background-color: #C9C81F;
+        color: #383A47; }
+      .integral-exchange .tab-modal .tabs .tab span {
+        height: 14px;
+        padding: 0 4px;
+        display: block;
+        position: absolute;
+        top: -8px;
+        right: -6px;
+        background-color: #FF0000;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 10px;
+        line-height: 14px; }
+      .integral-exchange .tab-modal .tabs .tab:first-child .bl::before {
+        display: none; }
+  .integral-exchange .tab-modal .tab-content .tabpanel {
+    display: none; }
+  .integral-exchange .tab-modal .tab-content .showing {
+    display: block; }
+.integral-exchange .tabpanel .integral-goods .int-good {
+  width: 47%;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  display: inline-block;
+  margin-bottom: 3%; }
+  .integral-exchange .tabpanel .integral-goods .int-good:nth-child(odd) {
+    margin-right: 3%; }
+  .integral-exchange .tabpanel .integral-goods .int-good .int-good-img {
+    position: relative;
+    font-size: 0; }
+    .integral-exchange .tabpanel .integral-goods .int-good .int-good-img img {
+      max-width: 100%; }
+    .integral-exchange .tabpanel .integral-goods .int-good .int-good-img span {
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: #3F3F3F;
+      z-index: 1;
+      width: 33px;
+      height: 20px;
+      line-height: 20px;
+      background-color: #F7F75A;
+      font-size: 12px;
+      text-align: center;
+      border-bottom-left-radius: 5px; }
+  .integral-exchange .tabpanel .integral-goods .int-good .int-good-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 8px 10px 6px 10px;
+    color: #3E3E3E; }
+  .integral-exchange .tabpanel .integral-goods .int-good .int-ex-num {
+    position: relative;
+    padding: 0 10px 10px 10px;
+    text-align: left;
+    color: #585858;
+    font-size: 12px; }
+    .integral-exchange .tabpanel .integral-goods .int-good .int-ex-num span {
+      color: #F14B30;
+      font-size: 14px; }
+    .integral-exchange .tabpanel .integral-goods .int-good .int-ex-num img {
+      position: absolute;
+      bottom: 13px;
+      right: 8px;
+      width: 37px;
+      display: none; }
+  .integral-exchange .tabpanel .integral-goods .int-good.newadd .int-ex-num img.newadd {
+    display: block; }
+  .integral-exchange .tabpanel .integral-goods .int-good.hotex .int-ex-num img.hotex {
+    display: block; }
+
 .member-info {
   background-color: #FFF;
   max-width: 640px;

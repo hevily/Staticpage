@@ -38,6 +38,21 @@
 			}
 		}
 	}
+	.draging{
+		background-color: #e2e2e2;
+		// visibility: hidden;
+		color:#fff;
+	}
+	.moving{
+		background-color: #D9D9D9;
+		color:#fff;
+		.sorting-tag{
+			span{
+				    background-color: #fff;
+				    border-color:#fff;
+			}
+		}
+	}
 	&.none-classes{
 		// display: block;
 		padding: 10px;
@@ -131,6 +146,7 @@
 
 	}
 	&.classes-edit{
+		// position: fixed;
 		.member-btn{
 			.btn{
 				color:#fff;
@@ -155,31 +171,40 @@
 				}
 			}
 		}
-		.badNetWork-info{
-			// display: none;
-			position: relative;
-			height: 0px;
-			overflow: hidden;
-			line-height: 40px;
-			text-align:center;
-			color:#1D0000;
-			font-size: 12px;
-			border-bottom:1px solid #cfd7c5;
-			background-color: #FEDADC;
-			transition:all 0.5s;
-			&:after{
-				content:'';
-				display: block;
-				position: absolute;right: 10px;top: 15px;
-				height: 10px;width: 10px;
-				border-style:solid;
-				border-color:#000;
-				border-width:0 1px 1px 0;
-				transform:rotate(-45deg);
+		.fixed-tollbar{
+			position: fixed;
+			top: 0;left: 0;width: 100%;
+			background-color: #FFF;
+			z-index:1;
+			border-bottom:1px solid #e2e2e2;
+			.badNetWork-info{
+				// display: none;
+				position: relative;
+				height: 0px;
+				overflow: hidden;
+				line-height: 40px;
+				text-align:center;
+				color:#1D0000;
+				font-size: 12px;
+				border-bottom:1px solid #cfd7c5;
+				background-color: #FEDADC;
+				transition:all 0.5s;
+				&:after{
+					content:'';
+					display: block;
+					position: absolute;right: 10px;top: 15px;
+					height: 10px;width: 10px;
+					border-style:solid;
+					border-color:#000;
+					border-width:0 1px 1px 0;
+					transform:rotate(-45deg);
+				}
 			}
 		}
 		.classes-list{
 			border-top:1px solid #cfd7c5;
+			padding-top: 59px;
+			// animation:all 0.5s;
 			ul{
 				li{
 					font-size: 0;
@@ -204,14 +229,17 @@
 								color:red;
 							}
 							.sorting-tag{
-								border-top:2px solid #C9C9C9;
-								border-bottom:2px solid #C9C9C9;
-								height:2px;width:15px;
-								padding:2px 0;
-								margin:0 10px 0 5px;
-								background-clip:content-box;
-								background-color: #C9C9C9;
 								display: none;
+								span{
+									border-top:2px solid #C9C9C9;
+									border-bottom:2px solid #C9C9C9;
+									height:2px;width:15px;
+									padding:2px 0;
+									margin:0 10px 0 5px;
+									background-clip:content-box;
+									background-color: #C9C9C9;
+									display: inline-block;
+								}
 							}
 							.more-tag{
 								display: inline-block;
@@ -246,6 +274,9 @@
 		&.badNetWork{
 			.badNetWork-info{
 				height: 40px;
+			}
+			.classes-list{
+			padding-top: 98px;
 			}
 		}
 			.member-btn{
@@ -283,7 +314,7 @@
 								.media-right{
 									min-width:40px;
 									.sorting-tag{
-										display: inline-block;
+										display: block;
 									}
 									.more-tag{
 										display: none;

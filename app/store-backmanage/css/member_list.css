@@ -41,13 +41,10 @@
   .section .mgb-1 {
     margin-bottom: -1px; }
   .section h3.mgb-1:after {
-    -webkit-transform: rotate(225deg) !important;
-        -ms-transform: rotate(225deg) !important;
-            transform: rotate(225deg) !important;
+    transform: rotate(225deg) !important;
     top: 18px !important; }
   .section .tap-action {
-    -webkit-animation: all 2s;
-            animation: all 2s;
+    animation: all 2s;
     background-color: transparent; }
     .section .tap-action:active {
       background-color: rgba(0, 0, 0, 0.2); }
@@ -90,12 +87,9 @@
           border-width: 5px;
           border-style: solid;
           border-color: transparent black black transparent;
-          -webkit-transition: all 0.2s;
-                  transition: all 0.2s; }
+          transition: all 0.2s; }
         .section.member-list-home-filter .member-filter .filter-colum.filtering:after {
-          -webkit-transform: rotate(45deg);
-              -ms-transform: rotate(45deg);
-                  transform: rotate(45deg);
+          transform: rotate(45deg);
           bottom: 17px; }
         .section.member-list-home-filter .member-filter .filter-colum.filtering ul {
           display: block;
@@ -105,7 +99,7 @@
           position: absolute;
           background-color: #FFF;
           z-index: 1;
-          bottom: -100px;
+          top: 50px;
           left: 0;
           border: 1px solid #B6B4B6;
           list-style: none;
@@ -114,8 +108,7 @@
           width: 0%;
           text-align: center;
           line-height: 45px;
-          -webkit-transition: all 0.5s;
-                  transition: all 0.5s; }
+          transition: all 0.5s; }
           .section.member-list-home-filter .member-filter .filter-colum ul li {
             border-bottom: 1px solid #B6B4B6;
             white-space: nowrap; }
@@ -151,9 +144,7 @@
           .section.member-list-home-filter .member-list .media-list .media .media-right {
             padding: 0 10px; }
             .section.member-list-home-filter .member-list .media-list .media .media-right .media-object {
-              -webkit-transform: rotate(-90deg);
-                  -ms-transform: rotate(-90deg);
-                      transform: rotate(-90deg);
+              transform: rotate(-90deg);
               width: 10px; }
   .section.member-info .member-input {
     border-top: 1px solid #CFD7C5;
@@ -180,9 +171,7 @@
           position: absolute;
           top: 12px;
           right: 10px;
-          -webkit-transform: rotate(45deg);
-              -ms-transform: rotate(45deg);
-                  transform: rotate(45deg);
+          transform: rotate(45deg);
           width: 10px;
           height: 10px;
           border-right: 1px solid #4c4c4c;
@@ -200,9 +189,7 @@
         position: absolute;
         top: 14px;
         right: 10px;
-        -webkit-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-                transform: rotate(45deg);
+        transform: rotate(45deg);
         width: 10px;
         height: 10px;
         border-right: 1px solid #4c4c4c;
@@ -302,9 +289,7 @@
           position: absolute;
           top: 18px;
           right: 10px;
-          -webkit-transform: rotate(-45deg);
-              -ms-transform: rotate(-45deg);
-                  transform: rotate(-45deg);
+          transform: rotate(-45deg);
           width: 10px;
           height: 10px;
           border-right: 1px solid #4c4c4c;
@@ -417,9 +402,7 @@
         position: absolute;
         top: 16px;
         right: 10px;
-        -webkit-transform: rotate(-45deg);
-            -ms-transform: rotate(-45deg);
-                transform: rotate(-45deg);
+        transform: rotate(-45deg);
         width: 8px;
         height: 8px;
         border-right: 1px solid #959595;
@@ -448,9 +431,7 @@
         position: absolute;
         top: 20px;
         right: 10px;
-        -webkit-transform: rotate(-45deg);
-            -ms-transform: rotate(-45deg);
-                transform: rotate(-45deg);
+        transform: rotate(-45deg);
         width: 8px;
         height: 8px;
         border-right: 1px solid #959595;
@@ -625,9 +606,7 @@
           position: absolute;
           top: 18px;
           right: 10px;
-          -webkit-transform: rotate(-45deg);
-              -ms-transform: rotate(-45deg);
-                  transform: rotate(-45deg);
+          transform: rotate(-45deg);
           width: 10px;
           height: 10px;
           border-right: 1px solid #4c4c4c;
@@ -646,8 +625,7 @@
       position: relative; }
       .section.add-new-money-log .member-input .integral-add-box .integral-add-switch ul {
         display: none;
-        -webkit-transition: all 2s;
-                transition: all 2s;
+        transition: all 2s;
         border-bottom: 1px solid #cfd7c5; }
       .section.add-new-money-log .member-input .integral-add-box .integral-add-switch input:checked + label + ul {
         display: block; }
@@ -806,9 +784,7 @@
         position: absolute;
         top: 18px;
         right: 10px;
-        -webkit-transform: rotate(-45deg);
-            -ms-transform: rotate(-45deg);
-                transform: rotate(-45deg);
+        transform: rotate(-45deg);
         width: 10px;
         height: 10px;
         border-right: 1px solid #4c4c4c;
@@ -827,8 +803,7 @@
     position: relative; }
     .member-input .integral-add-box .integral-add-switch ul {
       display: none;
-      -webkit-transition: all 2s;
-              transition: all 2s;
+      transition: all 2s;
       border-bottom: 1px solid #cfd7c5; }
     .member-input .integral-add-box .integral-add-switch input:checked + label + ul {
       display: block; }

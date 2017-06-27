@@ -1,0 +1,31 @@
+/* share.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.share-box a {
+  display: inline-block;
+  margin: 0;
+  background: url("../img/share@2x.png") 0 0 no-repeat;
+  width: 24px;
+  height: 24px;
+
+    text-decoration: none;
+    color: #9096A2;
+
+  /* background-image 33px per icon */ }
+  .share-box a.more {
+    background-position: 0 0; }
+  .share-box a.share_weixin {
+    background-position: 0px 0;
+    width:auto;
+    text-indent: 20px;
+    background-size: 14px;
+     }
+  .share-box a.sina {
+    background-position: -48px 0; }
+  .share-box a.facebook {
+    background-position: -72px 0; }
+
+/*# sourceMappingURL=share.css.map */
