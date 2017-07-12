@@ -4,8 +4,9 @@
 
 .store-header {
   background-image: url("/statichtml/bjmovie01/estores/Public/images/home/4/bg.jpg");
-  -moz-background-size: 100% 100%;
-  background-size: 100% 100%; }
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center center; }
 
 /*store-info */
 .store-info {

@@ -1,0 +1,25 @@
+@charset 'utf-8';
+html,body{
+	height: 100%;
+	width:100%;
+	background-color: #ece9e4;
+}
+.container{
+	max-width:640px;
+	width:100%;
+	margin: 0 auto;
+	.section{
+		&.chat-header{
+			background-color: #FFF;
+		}
+		&.chat-body{
+			.chat-body-top{
+				background-color: #FFF;
+
+			}
+			.chat-body-list{
+				@import "chat-body-list";
+			}
+		}
+	}
+}

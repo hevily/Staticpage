@@ -7,7 +7,9 @@
   "devDependencies": {
     "browser-sync": "^2.18.5",
     "gulp": "^3.9.1",
-    "jade": "^1.11.0"
+    "gulp-uglify": "^3.0.0",
+    "jade": "^1.11.0",
+    "uglify": "^0.1.5"
   },
   "repository": {
     "type": "git",

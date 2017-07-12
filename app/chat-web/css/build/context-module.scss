@@ -1,0 +1,442 @@
+// normal
+&.normal{
+	text-align:right;
+	.media{
+		display: inline-block;
+		.media-body{
+			display: inline-block;
+			width:auto;
+			text-align:left;
+			.chat-content{
+				// 文字-emoj
+				.text-emoj,.img,.video{
+					display: inline-block;
+					background-color: #f9e9cf;
+					padding:4px 6px;
+					img{
+						display: block;
+						max-width:100%;
+						margin-top: 2px;
+					}
+				}
+
+				.chat-sign{
+					margin-top: 5px;
+					color:#676767;
+					.sign-tag{
+						float: left;
+						font-size: 11px;
+						img{
+							width: 12px;
+							vertical-align: bottom;
+							margin-right: 5px;
+						}
+					}
+					.sign-time{
+						float: right;
+						font-size: 11px;
+					}
+				}
+				// 图片 视频
+				.img,.video{
+					position: relative;
+					padding: 0;margin:-2px;
+					img,.video-box{
+						&+.chat-sign{
+							width: calc(100% - 20px);color:#fff;
+							position: absolute; bottom: 4px;right: 6px;left:6px;
+							padding: 4px;
+							background: -moz-linear-gradient(0deg,  rgba(0,0,0,0.6) 0,  rgba(255,255,255,0.1) 100%);/* FF3.6+ */
+							background: -webkit-gradient(linear, 0deg, color-stop(0, rgba(0,0,0,0.6)), color-stop(100%, rgba(255,255,255,0.1)));/* Chrome,Safari4+ */
+							background: -webkit-linear-gradient(90deg,  rgba(0,0,0,0.6) 0,  rgba(255,255,255,0.1) 100%);/* Chrome10+,Safari5.1+ */
+							background: -o-linear-gradient(0deg,  rgba(0,0,0,0.6) 0,  rgba(255,255,255,0.1) 100%);/* Opera 11.10+ */
+							background: -ms-linear-gradient(0deg,  rgba(0,0,0,0.6) 0,  rgba(255,255,255,0.1) 100%);/* IE10+ */
+							filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1'); /* for IE */
+							background: linear-gradient(0deg, rgba(0,0,0,0.6) 0, rgba(255,255,255,0.1) 100%);/* W3C */
+						}
+					}
+					.img-desc{
+						margin: 4px 0 0 0;
+					}
+					
+				}
+				.video{
+					.video-box{
+						position: relative;
+						.video-tag{
+							position: absolute;top: 50%;left:50%;
+							transform:translate(-50%,-50%);
+							width: 36px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// goods
+&.goods{
+	.media{
+		.media-body{
+			.sign-tag{
+				display: block;
+			}
+			.media.goods{
+				background-color: #ecdfc4;
+				color: #000;
+				margin: 0;
+				.media-left{
+					padding: 0;
+					img{
+						width: 65px;
+						height: 48px;
+						display: block;
+						@include border-radius(3px);
+					}
+				}
+				.media-body{
+					padding: 0;
+					padding-left: 5px;
+					background-color: #ecdfc4;
+
+					.goods-info{
+						@include top-right-radius(3px);
+						@include bottom-right-radius(3px);
+						padding: 0;
+						.goods-title{
+							@include text-ellipsis(1);
+							font-size: 14px;
+							line-height: 18px;
+							color:#3f3f3f;
+						}
+						.goods-desc{
+							@include text-ellipsis(2);
+							line-height: 14px;
+							font-size: 12px;
+							color:#686868;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+// news
+&.news{
+	.media{
+		.media-body{
+			.sign-tag{
+				display: block;
+			}
+			.media.news{
+				background-color: #ecdfc4;
+				color: #000;
+				margin: 0;
+				.media-left{
+					padding: 0;
+					img{
+						width: 65px;
+						height: 65px;
+						display: block;
+						@include border-radius(3px);
+					}
+
+				}
+				.media-body{
+					padding: 0;
+					padding-left: 5px;
+					background-color: #ecdfc4;
+
+					.news-info{
+						@include border-radius(3px);
+						padding: 0;
+						.news-title{
+							font-size: 14px;
+							line-height: 18px;
+							color:#3f3f3f;
+						}
+						.news-desc{
+							line-height: 14px;
+							font-size: 12px;
+							color:#686868;
+						}
+					}
+				}
+				.media-left{
+					&+.media-body{
+						.news-info{
+							// @include border-radius(0px);
+						}
+					}
+				}
+
+			}
+		}
+	}
+}
+// store
+&.store{
+	.media{
+		.media-body{
+			.sign-tag{
+				display: block;
+			}
+			.media.store{
+				background-color: #ecdfc4;
+				color: #000;
+				margin: 0;
+				.media-left{
+					padding: 0;
+					img{
+						width: 65px;
+						height: 65px;
+						display: block;
+						@include border-radius(3px);
+					}
+
+				}
+				.media-body{
+					padding: 0;
+					padding-left: 5px;
+					background-color: #ecdfc4;
+
+					.store-info{
+						@include border-radius(3px);
+						padding: 0;
+						.store-title{
+							font-size: 14px;
+							line-height: 18px;
+							color:#3f3f3f;
+							@include text-ellipsis(2);
+						}
+						.store-desc{
+							line-height: 14px;
+							font-size: 12px;
+							color:#686868;
+							@include text-ellipsis(2);
+						}
+					}
+				}
+				.media-left{
+					&+.media-body{
+						.store-info{
+							// @include border-radius(0px);
+						}
+					}
+				}
+
+			}
+		}
+	}
+}
+// wx
+&.wx{
+	.media{
+		.media-body{
+			.sign-tag{
+				display: block;
+			}
+			.media.wx{
+				background-color: #ecdfc4;
+				color: #000;
+				margin: 0;
+				.media-left{
+					padding: 0;
+					img{
+						width: 65px;
+						height: 65px;
+						display: block;
+						@include border-radius(3px);
+					}
+
+				}
+				.media-body{
+					padding: 0;
+					padding-left: 5px;
+					background-color: #ecdfc4;
+
+					.wx-info{
+						@include border-radius(3px);
+						padding: 0;
+						.wx-title{
+							font-size: 14px;
+							line-height: 18px;
+							color:#3f3f3f;
+							@include text-ellipsis(2);
+						}
+						.wx-desc{
+							line-height: 14px;
+							font-size: 12px;
+							color:#686868;
+							@include text-ellipsis(2);
+						}
+					}
+				}
+				.media-left{
+					&+.media-body{
+						.wx-info{
+							// @include border-radius(0px);
+						}
+					}
+				}
+
+			}
+		}
+	}
+}
+// goods
+&.ticket{
+	.media{
+		.media-body{
+			.sign-tag{
+				display: block;
+			}
+			.media.ticket{
+				background-color: #ecdfc4;
+				color: #000;
+				margin: 0;
+				.media-left{
+					padding: 0;
+					img{
+						width: 65px;
+						height: 30px;
+						display: block;
+						@include border-radius(3px);
+					}
+				}
+				.media-body{
+					padding: 0;
+					padding-left: 5px;
+					background-color: #ecdfc4;
+
+					.ticket-info{
+						@include top-right-radius(3px);
+						@include bottom-right-radius(3px);
+						padding: 0;
+						.ticket-title{
+							@include text-ellipsis(1);
+							font-size: 14px;
+							line-height: 18px;
+							color:#3f3f3f;
+						}
+						.ticket-desc{
+							@include text-ellipsis(2);
+							line-height: 14px;
+							font-size: 12px;
+							color:#686868;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+// doc-excel-pdf
+&.doc-excel-pdf{
+	.media{
+		.media-body{
+			.sign-tag{
+				display: block;
+			}
+			.media.doc-excel-pdf{
+				// background-color: #ecdfc4;
+				color: #000;
+				margin: 0;
+				.media-left{
+					padding: 0;
+					img{
+						width: 50px;
+						height: 50px;
+						display: block;
+						@include border-radius(3px);
+					}
+
+				}
+				.media-body{
+					padding: 0;
+					padding-left: 5px;
+					// background-color: #ecdfc4;
+
+					.doc-excel-pdf-info{
+						@include border-radius(3px);
+						padding: 0;
+						.doc-excel-pdf-title{
+							font-size: 14px;
+							line-height: 18px;
+							color:#3f3f3f;
+							@include text-ellipsis(2);
+						}
+						.doc-excel-pdf-desc{
+							line-height: 18px;
+							font-size: 14px;
+							color:#686868;
+							@include text-ellipsis(2);
+						}
+					}
+				}
+				.media-left{
+					&+.media-body{
+						.doc-excel-pdf-info{
+							// @include border-radius(0px);
+						}
+					}
+				}
+
+			}
+		}
+	}
+}
+
+// adderss
+&.address{
+	.media{
+		.media-body{
+			.sign-tag{
+				display: block;
+			}
+			.media.address{
+				color: #000;
+				margin: 0;
+
+				.media-left{
+					padding: 0;
+					background-color: #f9e9cf;
+					img{
+						width: 65px;
+						height: 65px;
+						display: block;
+						@include border-radius(3px);
+					}
+				}
+				.media-body{
+					padding: 0;
+					padding-left: 5px;
+					background-color: #f9e9cf;
+					.address-info{
+						@include top-right-radius(3px);
+						@include bottom-right-radius(3px);
+						padding: 0;
+						.address-title{
+							@include text-ellipsis(1);
+							font-size: 14px;
+							line-height: 20px;
+							color:#3f3f3f;
+						}
+						.address-desc{
+							@include text-ellipsis(2);
+							line-height: 14px;
+							font-size: 12px;
+							color:#686868;
+						}
+					}
+					.chat-sign{
+						position: absolute;
+						bottom: 2px;
+						width: calc(100% - 8px);
+					}
+				}
+			}
+		}
+	}
+}
