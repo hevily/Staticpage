@@ -11,6 +11,8 @@ html,body{
 	.section{
 		&.chat-header{
 			background-color: #FFF;
+			border-bottom:1px solid #cfcfcf;
+			@import "chat-header";
 		}
 		&.chat-body{
 			.chat-body-top{
