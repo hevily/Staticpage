@@ -70,6 +70,19 @@
 						}
 					}
 				}
+				.voice{
+					display: inline-block;
+					background-color: #5ead2d;
+					padding:4px 6px;
+					@include border-radius(4px);
+					height: 18px;
+					img{
+						display: inline;
+						max-width:100%;
+						height: 12px;
+						margin: 2px 0 0 5px;
+					}
+				}
 			}
 		}
 	}
@@ -183,7 +196,6 @@
 				display: block;
 			}
 			.media.store{
-				background-color: #ecdfc4;
 				color: #000;
 				margin: 0;
 				.media-left{
@@ -199,7 +211,6 @@
 				.media-body{
 					padding: 0;
 					padding-left: 5px;
-					background-color: #ecdfc4;
 
 					.store-info{
 						@include border-radius(3px);

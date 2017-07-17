@@ -30,5 +30,20 @@ $(function () {
 				}
 			})
 		area.height(winHeight - charHeader.height() - topArea.height())
+
+		// renderVoice
+		var voice = $('.voice')
+		voice.each(function (i,item) {
+			_this = $(item)
+			time = parseInt(_this.data('voice'))
+			if(_this.closest('li').hasClass('receive')){
+				_this.find('img').css({'padding-left':time+8+'px'});
+				_this.find('span').text(time+'"')
+			}else{
+				_this.find('img').css({'margin-left':time+8+'px'});
+				_this.find('span').text(time+'"')
+			}
+
+		})
 	})()
 })

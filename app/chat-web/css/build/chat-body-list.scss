@@ -114,6 +114,16 @@
 								background-color: #fff !important;
 								padding:4px 6px;
 							}
+							.chat-content{
+								.voice{
+									img{
+										transform:rotate(180deg);
+										margin: 0 0 0 0 ;
+										padding-left: 8px;
+									}
+								}
+							}
+							
 						}
 					}
 				}
