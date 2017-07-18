@@ -9,6 +9,7 @@
 			margin-bottom: 10px;
 			padding-left: 10px;
 			position: relative;
+			// visibility: hidden;
 			.media{
 				@include border-radius(3px);
 				.media-left{
@@ -114,6 +115,16 @@
 								background-color: #fff !important;
 								padding:4px 6px;
 							}
+							.chat-content{
+								.voice{
+									img{
+										transform:rotate(180deg);
+										margin: 0 0 0 0 ;
+										padding-left: 8px;
+									}
+								}
+							}
+							
 						}
 					}
 				}
@@ -157,6 +168,48 @@
 				@import "context-module";
 				
 			}
+			// animation here
+			&.send{
+				// &:nth-child(even){
+					opacity:0;
+					animation: right 0.5s linear ;
+					-webkit-animation-fill-mode:forwards; 
+				// }
+			}
+			&.receive{
+				opacity:0;
+				animation:left 0.5s linear;
+				-webkit-animation-fill-mode:forwards; 
+			}
+			&.show-chat{
+				// visibility: visible;
+			}
+
 		}
+	}
+}
+
+@keyframes left{
+	from { 
+		left: -100%;
+		opacity: 0;
+		display:none;
+	}
+	to { 
+		left: 0;
+		opacity: 1;
+		display:block;
+	}
+}
+@keyframes right{
+	from { 
+		right: -100%;
+		opacity: 0;
+		display:none;
+	}
+	to {
+		right: 0;
+		opacity: 1;
+		display:block;
 	}
 }

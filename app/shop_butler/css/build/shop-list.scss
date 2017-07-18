@@ -1,0 +1,10 @@
+.store-group{
+	.store-first-name{
+		color:#2e4251;
+		font-size: 16px;
+		padding:4px 0 2px 5px;
+	}
+	.store-group-list{
+		@import "shop_tag-ticket.scss";
+	}
+}
