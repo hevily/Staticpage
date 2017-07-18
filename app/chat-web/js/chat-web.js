@@ -41,8 +41,6 @@ $(function () {
 				_this.find('span').text(time+'"')
 			}else{
 				_this.find('img').animate({'margin-left':2*(time+8)+'px'},600);
-				_this.find('span').text(time+'"')
-			}
 
 		})
 		// checkShowing
