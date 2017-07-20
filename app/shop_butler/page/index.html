@@ -10,7 +10,7 @@
 <body>
 	<header></header>
 	<div class="container">
-		<div class="section unfork-store" hidden>
+		<div class="section unfork-store" >
 			<div class="notice-fork">
 				<div class="unfork-text">
 					暫時還沒有關注任何店舖
@@ -22,7 +22,7 @@
 		</div>
 
 
-		<div class="section store-scroll"  >
+		<div class="section store-scroll"  hidden>
 				<div class="store-list">
 					<div class="store-group">
 						<div class="store-first-name">
@@ -640,12 +640,22 @@
 			});
 
 			// fork store
-			function forkStore(btn) {
-				var _btn = $(btn)
-				_btn.click(function() {
-					checkSys()
+			
+				$('.fork-store').click(function() {
+					Scanner()
 				});
-			}
+				function Scanner(){
+				    try {
+				        if(window.stopProgressDialog){
+				            window.showQr.getScanner();
+				        } else {
+				            //ios的
+				            getScanner();
+				        }
+				    } catch (e) {
+
+				    }
+				};
 		})
 	</script>
 </body>

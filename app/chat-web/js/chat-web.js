@@ -41,6 +41,7 @@ $(function () {
 				_this.find('span').text(time+'"')
 			}else{
 				_this.find('img').animate({'margin-left':2*(time+8)+'px'},600);
+			}
 
 		})
 		// checkShowing
@@ -59,5 +60,28 @@ $(function () {
 		// 		if(cur > goal.length - 1) return ;
 		// 	}
 		// })
+		
+		// topSlider
+		function initSwiper(swiper) {
+            var mySwiper = new Swiper(swiper, {
+            	// loop: true,
+            	pagination : '.pagination',
+            	paginationClickable :true
+
+                // centeredSlides: true
+                // , slidesPerView: 4
+                // , width: 120
+                // , watchActiveIndex: true
+                // , onTouchEnd: function (swiper) {
+                //     // var idx = mySwiper.activeIndex;
+                //     // if (osIndex !== idx) {
+                //     //     changeHeaderImg(idx);
+                //     //     changeStoreSwiper(idx);
+                //     // }
+                // }
+            })
+        }
+        initSwiper('.swiper');
+		
 	})()
 })

@@ -132,8 +132,8 @@
 		}
 	// more text ellipsis
 		@mixin text-ellipsis($line) {
-			@if($line == 1){
-				white-space:nowrap;
+			@if($line == 0){
+				// white-space:nowrap;
 			} @else{
 				display: -webkit-box;
 				-webkit-line-clamp:$line;

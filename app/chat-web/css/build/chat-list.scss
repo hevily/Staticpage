@@ -17,6 +17,113 @@ html,body{
 		&.chat-body{
 			.chat-body-top{
 				background-color: #FFF;
+				border-bottom:1px solid #d4d1cd;
+				background-color: #f7f7f7;
+				overflow:hidden;
+				.swiper{
+			    	position: relative;
+			    	.swiper-slide{
+			    		box-sizing:border-box;
+			    		padding: 5px 5px 10px 5px;
+						
+						// &:nth-child(even){
+						// 	background-color: red;
+						// }
+						/* 置顶信息版式 */
+			    		.med{
+			    			.med-left{
+			    				margin-right: 10px;
+			    				display:table-cell;
+			    				vertical-align:middle;
+			    				padding-right: 10px;
+			    				font-size: 0;
+			    				.med-object{
+			    					max-width:65px;
+			    					// 65
+			    					// 47
+			    				}
+			    			}
+			    			.med-body{
+			    				display:table-cell;
+			    				.topic-module{
+			    					.topic-module-fz14{
+			    						font-size: 14px;
+			    						line-height: 16px;
+			    						@include text-ellipsis(1);
+			    					}
+			    					.topic-module-fz12{
+			    						// margin-top: 3px;
+			    						font-size: 12px;
+			    						line-height: 14px;
+			    						@include text-ellipsis(2);
+
+			    					}
+			    				}
+			    			}
+			    			&.just-title{
+		    					.med-left{
+		    						.med-object{
+
+		    						}
+		    					}
+		    					.med-body{
+		    						.topic-module{
+		    							.topic-module-fz14{
+		    								@include text-ellipsis(3);
+		    								white-space:normal;
+		    							}
+		    							.topic-module-fz12{
+		    								display: none;
+		    							}
+		    						}
+		    					}
+			    			}
+			    			&.just-desc{
+		    					.med-left{
+		    						.med-object{
+
+		    						}
+		    					}
+		    					.med-body{
+		    						.topic-module{
+		    							.topic-module-fz14{
+		    								display: none;
+		    							}
+		    							.topic-module-fz12{
+		    								@include text-ellipsis(3);
+		    								white-space:normal;
+		    							}
+		    						}
+		    					}
+			    			}
+			    		}
+			    	}
+		    		.pagination {
+		    	        position: absolute;
+			    	    z-index: 20;
+			    	    bottom: 0;
+			    	    width: 100%;
+			    	    text-align: center;
+			    	    line-height: 10px;
+			    	    .swiper-pagination-bullet{
+			    	      	background-color: #a2a2a2;
+			    	      	height: 3px;width: 3px;
+				    	    background: rgba(0, 0, 0, 0.9);
+				    	    transition:all 0.5s;
+				    	    margin: 6px 3px;
+			    	      	&.swiper-pagination-bullet-active{
+				    	      	width:15px;
+				    	      	background-color: #5E5E5E;
+				    	      	@include border-radius(3px);;
+				    	    }
+			    	    }
+		    	    }
+			    }
+
+				
+			    
+			    
+			    
 
 			}
 			.chat-body-list{

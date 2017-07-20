@@ -211,7 +211,8 @@ html {
           transform: translate(-50%, -50%); }
           html body .container .section.unfork-store .notice-fork .unfork-text {
             color: #2e4251;
-            font-size: 14px; }
+            font-size: 14px;
+            text-align: center; }
           html body .container .section.unfork-store .notice-fork .fork-store {
             padding-top: 20px; }
             html body .container .section.unfork-store .notice-fork .fork-store img {
