@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'elderly_icon';
+  src:  url('fonts/elderly_icon.eot?202nvb');
+  src:  url('fonts/elderly_icon.eot?202nvb#iefix') format('embedded-opentype'),
+    url('fonts/elderly_icon.ttf?202nvb') format('truetype'),
+    url('fonts/elderly_icon.woff?202nvb') format('woff'),
+    url('fonts/elderly_icon.svg?202nvb#elderly_icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'elderly_icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-checked_in:before {
+  content: "\e900";
+}
