@@ -1,0 +1,74 @@
+
+ $border-color:#cfcfcf;
+.order-pay-status,.pay-way{
+	background-color: #fff7e2;
+	.media{
+		padding: 0 10px;
+		color:#404040;
+		.media-left{
+			.media-object,img{
+				width: 12px;
+			}
+		}
+		.media-body{
+
+		}
+		.media-right{
+			p{
+				color:#f36303;
+				min-width:60px;
+				text-align:right;
+				margin: 0;
+				line-height: 40px;
+			}
+		}
+	}
+}
+.pay-way{
+	background-color: #FFF;
+	.media{
+		.media-left{
+			
+		}
+		.media-right{
+			p{
+				color:#686868;
+				min-width:90px;
+			}
+		}
+	}
+}
+.order-address{
+	.media{
+		padding: 10px;
+		border-bottom:1px solid $border-color;
+		border-width:0.5px;
+		.media-left{
+			.media-object,img{
+				width: 12px;
+			}
+		}
+		.media-body{
+			.address-owner{
+				font-size: 16px;
+				span{
+					float: right;
+				}
+			}
+			.address-detail{
+				padding-top: 10px;
+				margin: 0;
+				color:#686868;
+			}
+		}
+		.media-right{
+			p{
+				color:#f36303;
+				min-width:60px;
+				text-align:right;
+				margin: 0;
+				line-height: 45px;
+			}
+		}
+	}
+}

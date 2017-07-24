@@ -1,0 +1,19 @@
+@charset 'utf-8';
+@import "build/static-base/static-base.scss";
+.container{
+	@include mobile-container;
+	font-size: 14px;
+	.section{
+		&.order-status{
+			@import "build/order-status.scss";
+		}
+
+		&.order-info{
+			@import "build/order-info.scss";
+		}
+
+		&.order-fix-btn{
+			@import "build/order-fix-btn";
+		}
+	}
+}
