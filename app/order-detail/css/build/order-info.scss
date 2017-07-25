@@ -1,0 +1,212 @@
+.order-store{
+	background-color: #f4f4f4;
+	border-bottom:1px solid #e6e6e6;
+	line-height: 40px;
+	padding: 0 10px;
+	.media{
+		.media-left{
+			.media-object{
+				width:$w;
+			}
+		}
+		.media-body{
+
+		}
+		.media-right{
+			.media-object{
+				width: 8px;
+			}
+
+		}
+	}
+}
+.goods-info{
+	.order-goods{
+		padding:  10px;
+		padding-bottom: 0;
+		.media{
+			.media-left{
+				.media-object{
+					width: 60px;
+				}
+
+			}
+			.media-body{
+				.goods-name{
+					@include text-ellipsis(2);
+					line-height: 17px;
+					margin: 0;
+				}
+				.goods-desc{
+					@include text-ellipsis(2);
+					font-size: 12px;
+					line-height: 15px;
+					margin: 0;
+					color:$tdesc;
+				}
+
+			}
+			.media-right{
+				font-size: 12px;
+				white-space:nowrap;
+				span{
+					font-size: 70%;
+				}
+
+			}
+		}
+
+	}
+	.order-seller-msg{
+		.media{
+			padding: 8px 10px;
+			line-height: 18px;
+			.media-left{
+				white-space:nowrap;
+			
+			}
+			.media-body{
+				text-align:right;
+				line-height: normal;
+				color:$tdesc;
+			}
+		}
+		&.transfer-order{
+			background-color: $bg1;
+			border-bottom:1px solid $bdc1;
+		}
+	}
+	.order-post-msg{
+		.media{
+			padding: 0 10px;
+			line-height: 35px;
+			.media-left{
+				white-space:nowrap;
+
+			}
+			.media-body{
+				text-align:right;
+			}
+		}
+		&.send{
+			padding: 4px 0;
+			.media-body{
+				text-align:left;
+				p{
+					margin: 0;
+					line-height: 18px;
+				}
+			}
+			.media-right{
+				white-space:nowrap;
+				a{
+					border:1px solid #f78211;
+					color:#f78211;
+					text-decoration:none;
+					padding: 2px 6px;
+					border-radius:5px;
+				}
+			}
+		}
+
+	}
+}
+
+.price-item{
+	margin-top: -1px;
+	border-top:1px solid $bdc1;
+	border-bottom:1px solid $bdc1;
+	.order-price{
+		padding: 0 0 0 10px;
+		.media{
+			padding: 3px 0;
+			padding-right: 10px;
+			line-height: 20px;
+			.media-body{
+
+			}
+			.media-right{
+				white-space:nowrap;
+				&.service{
+					color:#ed894e;
+				}
+				&.last{
+					color:#f36303;
+				}
+			}
+		}
+		&.last{
+			.media{
+				border-top:1px solid $bdc1;
+				line-height: 28px;
+			}
+		}
+	}
+	.order-contact{
+		padding: 10px 0;
+		box-sizing:border-box;
+		height: 55px;
+		border-top:1px solid $bdc1;
+		.contact-order{
+			box-sizing:border-box;
+			width: 50%;
+			float: left;
+			text-align:center;
+			font-size: 0;
+			img{
+				vertical-align:middle;
+				top:-5px;
+				right: 10px;
+				position: relative;
+				width: 19px;
+			}
+			span{
+				line-height: 35px;
+				font-size: 14px;
+			}
+
+		}
+		.contact-phone{
+			box-sizing:border-box;
+			border-left:1px solid $bdc1;
+			width: 50%;
+			float: left;
+			text-align:center;
+			font-size: 0;
+			img{
+				vertical-align:middle;
+				top:-5px;
+				right: 10px;
+				position: relative;
+				width: 19px;
+			}
+			span{
+				line-height: 35px;
+				font-size: 14px;
+			}
+
+		}
+	}
+}
+.transfer-order{
+	.order-seller-msg{
+		background-color: $bg1;
+			border-bottom:1px solid $bdc1;
+		.media{
+			padding: 8px 10px;
+			line-height: 18px;
+			.media-left{
+				white-space:nowrap;
+			
+			}
+			.media-body{
+				text-align:right;
+				line-height: normal;
+				color:$tdesc;
+			}
+		}
+	}
+}
+.order-post-msg{
+	background-color: $bg2;
+}

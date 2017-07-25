@@ -1,0 +1,14 @@
+.time-num{
+	background-color: #FFF;
+	line-height: 30px;
+	padding: 0 10px;
+	.media{
+		.media-left{
+			white-space:nowrap;
+		}
+		.media-body{
+			text-align:right;
+			color:$tdesc;
+		}
+	}
+}

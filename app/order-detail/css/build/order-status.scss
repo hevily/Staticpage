@@ -1,5 +1,4 @@
 
- $border-color:#cfcfcf;
 .order-pay-status,.pay-way{
 	background-color: #fff7e2;
 	.media{
@@ -7,7 +6,7 @@
 		color:#404040;
 		.media-left{
 			.media-object,img{
-				width: 12px;
+				width: $w;
 			}
 		}
 		.media-body{
@@ -15,7 +14,7 @@
 		}
 		.media-right{
 			p{
-				color:#f36303;
+				color:#f78211;
 				min-width:60px;
 				text-align:right;
 				margin: 0;
@@ -26,13 +25,14 @@
 }
 .pay-way{
 	background-color: #FFF;
+	border-bottom:1px solid $bdc1;
 	.media{
 		.media-left{
 			
 		}
 		.media-right{
 			p{
-				color:#686868;
+				color:$t68;
 				min-width:90px;
 			}
 		}
@@ -41,24 +41,26 @@
 .order-address{
 	.media{
 		padding: 10px;
-		border-bottom:1px solid $border-color;
+		border-bottom:1px solid $bdc1;
 		border-width:0.5px;
 		.media-left{
 			.media-object,img{
-				width: 12px;
+				width: $w;
 			}
 		}
 		.media-body{
 			.address-owner{
 				font-size: 16px;
+				color:$colort;
+				margin-bottom: 5px;
 				span{
 					float: right;
 				}
 			}
 			.address-detail{
-				padding-top: 10px;
+				padding: 5px 0;
 				margin: 0;
-				color:#686868;
+				color:$t68;;
 			}
 		}
 		.media-right{
@@ -71,4 +73,77 @@
 			}
 		}
 	}
+}
+.order-msg{
+		border-bottom:1px solid $bdcc;
+	.media{
+		padding: 10px;
+		border-width:0.5px;
+		.media-left{
+			.media-object,img{
+				width: $w;
+			}
+		}
+		.media-body{
+			.media{
+				border:none;
+				padding: 0;
+				.media-left{
+				min-width:60px;
+
+				}
+				.media-body{
+					text-align:right;
+					color:$t68;
+				}
+			}
+		}
+	}
+}
+.order-by-self{
+	background-color: #FFF;
+	.pay-way{
+		.media{
+			.media-left{
+
+			}
+			.media-right{
+				p{
+				}
+			}
+		}
+	}
+	.order-address{
+		&:nth-child(2){
+			border-bottom:1px solid $bdc1;
+		}
+		.media{
+			border:none;
+			.media-left{
+				.media-object,img{
+				}
+			}
+			.media-body{
+				.address-owner{
+					span{
+					}
+				}
+				.address-detail{
+				}
+			}
+			.media-right{
+				p{
+				}
+			}
+		}
+	}
+	.self-order-phone{
+		background-color: $bg1;
+		color: $color-theme;
+		line-height: 40px;
+		padding: 0 10px;
+	}
+}
+.order-by-post{
+	background-color: #FFF;
 }

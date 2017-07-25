@@ -3,16 +3,43 @@
 .container{
 	@include mobile-container;
 	font-size: 14px;
+	padding-bottom: 55px;
+	$bdc1:#ddd;
+	$bdc2:#d6d6d6;
+	$bdcc:#ccc;
+	$bg1:#fff7e2;
+	$bg2:#fff2ea;
+	$colort:#3f3f3f;
+	$t68:#686868;
+	$tdesc:#9b9b9b;
+
+	// order-store
+
+	$w:14px;
 	.section{
+		color:$colort;
 		&.order-status{
+			padding-bottom: 10px;
+			background-color: #dddddd;
+			border-bottom:1px solid $bdc2;
 			@import "build/order-status.scss";
 		}
 
 		&.order-info{
 			@import "build/order-info.scss";
 		}
-
+		
+		&.order-num-time{
+			padding: 10px 0;
+			background-color: $bdc1;
+			border-bottom:1px solid $bdcc;
+			@import "build/order-num-time";
+		}
 		&.order-fix-btn{
+			position: fixed;
+			width: 100%;
+			bottom: 0;left: 0;right: 0;height: 45px;
+			background-color: #FFF;
 			@import "build/order-fix-btn";
 		}
 	}
