@@ -42,6 +42,11 @@
 .media-body {
   display: table-cell;
   vertical-align: top;
+  box-sizing:content-box;
+  img{
+    box-sizing:content-box;
+    max-width:inherit;
+  }
 }
 
 .media-middle {

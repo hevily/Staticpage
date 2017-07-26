@@ -1,7 +1,8 @@
 .btn-item{
 	text-align:right;
-	padding-right: 10px;
+	// padding-right: 10px;
 	font-size: 0;
+	margin-top: 8px;
 	i{
 		font-size: 14px;
 		&:before{
@@ -37,6 +38,7 @@
 		padding: 6px 8px;
 		text-align:center;
 		border-radius:5px;
+		line-height: 15px;
 		&.normal{
 			border-color:$bdc1;
 		}

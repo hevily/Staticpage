@@ -3,6 +3,9 @@
 	border-bottom:1px solid #e6e6e6;
 	line-height: 40px;
 	padding: 0 10px;
+	&:active{
+		background-color: rgba(0,0,0,0.2);
+	}
 	.media{
 		.media-left{
 			.media-object{
@@ -49,15 +52,21 @@
 			.media-right{
 				font-size: 12px;
 				white-space:nowrap;
-				span{
-					font-size: 70%;
+				p{
+					margin: 0;
+					span{
+						font-size: 70%;
+					}
 				}
+				
 
 			}
 		}
 
 	}
 	.order-seller-msg{
+		color:$t68;
+		font-size: 12px;
 		.media{
 			padding: 8px 10px;
 			line-height: 18px;
@@ -68,7 +77,6 @@
 			.media-body{
 				text-align:right;
 				line-height: normal;
-				color:$tdesc;
 			}
 		}
 		&.transfer-order{
@@ -77,6 +85,7 @@
 		}
 	}
 	.order-post-msg{
+		border-bottom:1px solid $bdc1;
 		.media{
 			padding: 0 10px;
 			line-height: 35px;
@@ -132,6 +141,7 @@
 				}
 				&.last{
 					color:#f36303;
+					font-size: 18px;
 				}
 			}
 		}
@@ -145,14 +155,17 @@
 	.order-contact{
 		padding: 10px 0;
 		box-sizing:border-box;
-		height: 55px;
+		height: 45px;
 		border-top:1px solid $bdc1;
-		.contact-order{
+		.contact-order,.contact-phone{
 			box-sizing:border-box;
 			width: 50%;
 			float: left;
 			text-align:center;
 			font-size: 0;
+			&:active{
+				background-color: rgba(0,0,0,0.2);
+			}
 			img{
 				vertical-align:middle;
 				top:-5px;
@@ -161,30 +174,13 @@
 				width: 19px;
 			}
 			span{
-				line-height: 35px;
+				line-height: 25px;
 				font-size: 14px;
 			}
 
 		}
 		.contact-phone{
-			box-sizing:border-box;
 			border-left:1px solid $bdc1;
-			width: 50%;
-			float: left;
-			text-align:center;
-			font-size: 0;
-			img{
-				vertical-align:middle;
-				top:-5px;
-				right: 10px;
-				position: relative;
-				width: 19px;
-			}
-			span{
-				line-height: 35px;
-				font-size: 14px;
-			}
-
 		}
 	}
 }

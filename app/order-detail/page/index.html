@@ -4,6 +4,8 @@
 		<meta charset="utf-8" />
 		<meta name="format-detection" content="telephone=no" />
 	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	    <link rel="stylesheet" type="text/css" href="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/css/home/mobile.css">
+	    <link rel="stylesheet" type="text/css" href="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/amazeui/css/amazeui.css">
 	    <link rel="stylesheet" type="text/css" href="../css/order-detail.css" />
 		<title> 订单详情</title>
 	</head>
@@ -21,7 +23,7 @@
 					</div>
 				</div>
 				<!-- 自提 -->
-				<div class="order-by-self" hidden>
+				<div class="order-by-self" >
 					<div class="pay-way">
 						<div class="media">
 							<div class="media-left media-middle">
@@ -84,7 +86,7 @@
 					</div>
 				</div>
 				<!-- 邮寄 -->
-				<div class="order-by-post" >
+				<div class="order-by-post" hidden>
 					<div class="pay-way">
 						<div class="media">
 							<div class="media-left media-middle">
@@ -306,7 +308,9 @@
 			<div class="section order-fix-btn">
 				<div class="btn-item">
 					<a href="javascript:;" class="normal">取消订单</a>
-					<a href="javascript:;" class="theme">支付</a>
+					<a href="javascript:;" class="theme">付款</a>
+					<a href="javascript:;" class="theme">确认收货</a>
+					<a href="javascript:;" class="theme">去支付</a>
 					<!-- <i class="pay-order"></i> -->
 				</div>
 			</div>
@@ -320,5 +324,8 @@
 		<!-- <script src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/js/storecommon.js"></script> -->
 		<!-- <script type="text/javascript" src="/statichtml/bjmovie01/estores/Home/JSLang?v=1.1"></script> -->
 		<!-- <script type="text/javascript" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/home/js/checkWeChat.js?ver=1.95&r={:rand(0, 9999)}"></script> -->
+		<script>
+			document.body.addEventListener('touchstart',function () {	})
+		</script>
 	</body>
 	</html>

@@ -3,7 +3,7 @@
 .container{
 	@include mobile-container;
 	font-size: 14px;
-	padding-bottom: 55px;
+	padding-bottom: 45px;
 	$bdc1:#ddd;
 	$bdc2:#d6d6d6;
 	$bdcc:#ccc;
@@ -12,9 +12,9 @@
 	$colort:#3f3f3f;
 	$t68:#686868;
 	$tdesc:#9b9b9b;
-
+	
 	// order-store
-
+	background-color: $bdc1;
 	$w:14px;
 	.section{
 		color:$colort;
@@ -26,20 +26,26 @@
 		}
 
 		&.order-info{
+			background-color: #FFF;
 			@import "build/order-info.scss";
 		}
 		
 		&.order-num-time{
+			background-color: #FFF;
 			padding: 10px 0;
 			background-color: $bdc1;
-			border-bottom:1px solid $bdcc;
+			// border-bottom:1px solid $bdcc;
 			@import "build/order-num-time";
 		}
 		&.order-fix-btn{
 			position: fixed;
 			width: 100%;
+			max-width:640px;
+			margin:0 auto;
 			bottom: 0;left: 0;right: 0;height: 45px;
 			background-color: #FFF;
+			border-top:1px solid $bdc1;
+			// padding-top: 12px;
 			@import "build/order-fix-btn";
 		}
 	}

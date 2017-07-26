@@ -2,11 +2,13 @@
 .order-pay-status,.pay-way{
 	background-color: #fff7e2;
 	.media{
+		
 		padding: 0 10px;
 		color:#404040;
 		.media-left{
 			.media-object,img{
 				width: $w;
+				
 			}
 		}
 		.media-body{
@@ -38,42 +40,7 @@
 		}
 	}
 }
-.order-address{
-	.media{
-		padding: 10px;
-		border-bottom:1px solid $bdc1;
-		border-width:0.5px;
-		.media-left{
-			.media-object,img{
-				width: $w;
-			}
-		}
-		.media-body{
-			.address-owner{
-				font-size: 16px;
-				color:$colort;
-				margin-bottom: 5px;
-				span{
-					float: right;
-				}
-			}
-			.address-detail{
-				padding: 5px 0;
-				margin: 0;
-				color:$t68;;
-			}
-		}
-		.media-right{
-			p{
-				color:#f36303;
-				min-width:60px;
-				text-align:right;
-				margin: 0;
-				line-height: 45px;
-			}
-		}
-	}
-}
+@import "order-address.scss";;
 .order-msg{
 		border-bottom:1px solid $bdcc;
 	.media{
@@ -90,7 +57,6 @@
 				padding: 0;
 				.media-left{
 				min-width:60px;
-
 				}
 				.media-body{
 					text-align:right;
@@ -115,7 +81,7 @@
 	}
 	.order-address{
 		&:nth-child(2){
-			border-bottom:1px solid $bdc1;
+			border-bottom:1px solid $bdc2;
 		}
 		.media{
 			border:none;
@@ -138,7 +104,7 @@
 		}
 	}
 	.self-order-phone{
-		background-color: $bg1;
+		background-color: $bg2;
 		color: $color-theme;
 		line-height: 40px;
 		padding: 0 10px;
