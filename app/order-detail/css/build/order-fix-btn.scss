@@ -1,0 +1,51 @@
+.btn-item{
+	text-align:right;
+	// padding-right: 10px;
+	font-size: 0;
+	margin-top: 8px;
+	i{
+		font-size: 14px;
+		&:before{
+			content:'';
+			position: relative;
+			display: inline-block;
+			border:1px solid $bdc1;
+			line-height: 30px;padding: 0 6px;min-width:50px;
+			margin-top: 8px;
+			text-align:center;
+			border-radius:5px;
+			margin-left: 10px;
+		}
+		&.cancel-order{
+			&:before{
+				content:'取消订单';
+			}
+		}
+		&.pay-order{
+			&:before{
+				content:' 支付';
+			}
+		}
+	}
+	a{
+		font-size: 14px;
+		text-decoration:none;
+		color:#3f3f3f;
+		display: inline-block;
+		margin-right: 10px;
+		border-width:1px;
+		border-style:solid;
+		padding: 6px 8px;
+		text-align:center;
+		border-radius:5px;
+		line-height: 15px;
+		&.normal{
+			border-color:$bdc1;
+		}
+		&.theme{
+			border-color:$color-theme;
+			background-color: $color-theme;
+			color:#fff;
+		}
+	}
+}

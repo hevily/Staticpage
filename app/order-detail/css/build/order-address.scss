@@ -1,0 +1,35 @@
+.order-address{
+	.media{
+		padding: 10px;
+		border-bottom:1px solid $bdc1;
+		border-width:0.5px;
+		.media-left{
+			.media-object,img{
+				width: $w;
+			}
+		}
+		.media-body{
+			.address-owner{
+				color:$colort;
+				// margin-bottom: 5px;
+				span{
+					float: right;
+				}
+			}
+			.address-detail{
+				padding: 5px 0;
+				margin: 0;
+				color:$t68;;
+			}
+		}
+		.media-right{
+			p{
+				color:#f36303;
+				min-width:60px;
+				text-align:right;
+				margin: 0;
+				line-height: 45px;
+			}
+		}
+	}
+}
