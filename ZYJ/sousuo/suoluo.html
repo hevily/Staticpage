@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>搜索</title>
+</head>
+<style>
+* {
+	margin: 0 auto;
+	padding: 0px;
+}
+body {
+	font-family: "SimHei";
+}
+a, ul {
+	list-style: none;
+	text-decoration: none;
+}
+html {
+	font-size: 62.5%;
+}
+.clearth {
+	clear: both;
+}
+input[type="button"], input[type="submit"], input[type="reset"], input[type="text"] {
+	-webkit-appearance: none;
+	appearance: none;
+}
+.s_bg {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background: #000;
+	width: 100%;
+	height: 100%;
+	opacity: 0.3
+}
+.s_info {
+	position: absolute;
+	left: 2%;
+	top: 3%;
+	opacity: 1;
+	width: 96%;
+	height: 40px;
+}
+.s_text {
+	width: 70%;
+	height: 40px;
+	border: 0px;
+	outline: 0px;
+	background: #ffffff;
+	border-radius: 5px 0px 0px 5px;
+	display: block;
+	float: left;
+	text-indent: 0.5em;
+}
+.s_btn {
+	width: 30%;
+	height: 40px;
+	display: block;
+	float: left;
+	outline: 0px;
+	border: 0px;
+	border-radius: 0px 5px 5px 0px;
+	background: #e84142;
+	color: #ffffff;
+	font-size: 1.8rem;
+	text-align: center;
+	line-height: 40px;
+}
+.s_ul {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	background: #ffffff;
+	margin-top: 42px;
+	height: 500px;
+	overflow: scroll;
+}
+.s_ul ul li {
+	height: 40px;
+	line-height: 40px;
+	text-indent: 0.5em;
+	font-size: 1.5rem;
+	color: #555;
+}
+
+@media only screen and (min-width: 481px) {
+html {
+	font-size: 94% !important;
+}
+}
+
+@media only screen and (min-width: 561px) {
+html {
+	font-size: 109% !important;
+}
+}
+
+@media only screen and (min-width: 641px) {
+html {
+	font-size: 125% !important;
+}
+}
+</style>
+<body>
+<div>
+  <input type="text" value="" id="textt" onClick="">
+</div>
+<div class="s_bg" style="display:block;"></div>
+<div class="s_info" style="display:block;">
+  <div class="s_s">
+    <input type="text" value="" placeholder="请输入学校" class="s_text">
+    <input type="button" value="搜索" class="s_btn">
+  </div>
+  <div class="s_ul">
+    <ul id="s_li">
+      <li >河北省石家庄市第一幼儿园</li>
+      <li >河北师范大学第一幼儿园</li>
+      <li >长安区华凌幼儿园</li>
+      <li >董家庄幼儿园</li>
+      <li >长安区东古城幼儿园</li>
+      <li >长安区十里铺蓓蕾幼儿园</li>
+      <li >长安区回民幼儿园</li>
+    </ul>
+  </div>
+</div>
+<script type="text/javascript" src="js/jquery1.42.min.js"></script> 
+
+<script type="text/javascript">
+$(function () {
+	$("#textt").click(function(){
+	   $(".s_bg").show();
+	   $(".s_info").show();
+	});
+
+	(function () {
+		var style = '<style type="text/css">.current{background-color: #cfcfcf;}</style>';
+		$('head').append(style)
+	})()
+	function setBG(goal) {
+		var _goal = $(goal),CN = 'current',bg = $('.s_bg'),info = $('.s_info')
+		;
+		bg.show()
+		info.show()
+		$('.'+CN).removeClass(CN)
+		_goal.addClass(CN);
+		$('#textt').val($('.'+CN).text())
+		hideInfo()
+		bg.click(function () {
+			hideInfo()
+		})
+		function hideInfo() {
+			setTimeout(function () {
+				bg.hide()
+				info.hide()
+			},300)
+		}
+	}
+	$('.s_ul').find('li').each(function (i,item) {
+		$(item).click(function () {
+			setBG(item)
+		})
+	})
+})
+
+
+
+  
+</script>
+</body>
+</html>

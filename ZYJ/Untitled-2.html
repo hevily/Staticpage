@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<!-- <script type="text/javascript" src="js/jquery1.42.min.js"></script> -->
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<style>
+*{margin:0 auto; padding:0;}
+  .lines{ width:100%; height:60px; border-bottom:1px solid #ccc; line-height:60px;}
+  .l_lines{ float:left; width:33%; text-align:center; cursor:pointer;}
+  .m_lines{ float:left; width:33%; text-align:center; cursor:pointer;}
+  .r_lines{ float:left; width:33%; text-align:center; cursor:pointer;}
+  ul{list-style:none; padding:0;}
+  .pp_list{ position:absolute; left:0px; top:60px; display:none; line-height:60px; width:100%;}
+  .pp_list ul li{border-bottom:1px solid #cccccc; width:100%;}
+  .df_list ul{position:absolute; left:0px; top:60px; display:none;}
+  .jl_list ul{position:absolute; left:0px; top:60px; display:none;}
+</style>
+<body>
+<div class="lines">
+      <div class="l_lines" id="pp" >品牌</div>
+      <div class="m_lines" id="df">东方有一条龙</div>
+      <div class="r_lines" id="jl">距离</div>
+      <div style="clear:both;"></div>
+      <div class="pp_list" id="pp1">
+         <ul>
+             <li>中国</li>
+             <li>河北</li>
+         </ul>
+      </div>
+      <div class="df_list">
+         <ul>
+             <li>观音</li>
+             <li>河北</li>
+         </ul>
+      </div>
+      <div class="jl_list">
+         <ul>
+             <li>悟空</li>
+             <li>八戒</li>
+         </ul>
+      </div>
+</div>
+
+</body>
+
+<script>
+//  function FirstList(){
+//
+//	   var pp=document.getElementById("pp");
+//	   	 
+//	   var  pp1=document.getElementById("pp1");
+//	   
+//	   pp1.style.display="block";
+//	    //alert(123);
+//	  }
+$(function(){
+	  $('#pp').on('click',function(){
+		     alert(123);
+		  $('#pp1').toggle();
+		  });
+	})
+</script>
+</html>

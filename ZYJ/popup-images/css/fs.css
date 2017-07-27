@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+
+html {
+  font-size: 62.5%; }
+
+@media only screen and (min-width: 481px) {
+  html {
+    font-size: 94% !important; } }
+
+@media only screen and (min-width: 561px) {
+  html {
+    font-size: 109% !important; } }
+
+@media only screen and (min-width: 641px) {
+  html {
+    font-size: 125% !important; } }
+

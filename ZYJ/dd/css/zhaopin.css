@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0 auto; padding:0;}
+.con{width:100%; height:100%; margin:0 auto;}
+body{font-family:"黑体";}
+html{font-size:62.5%;}
+.clearth{clear:both;}
+ul{list-style:none;}
+a{text-decoration:none;}
+input[type=text],textarea{ -webkit-appearance: none; appearance:none;}
+button, html input[type=button], input[type=reset], input[type=submit] { -webkit-appearance: none; cursor: pointer; appearance:none; }
+
+.zhaopin{ width:100%; height:auto; margin:0 auto;}
+.zhaopin img{ display:block; width:100%; height:100%;}
+
+
+/*注册*/
+.zc_top{ width:100%; height:auto; margin:0 auto;}
+.zc_top img{display:block; width:100%; height:100%;}
+.zc_info{ width:100%; height:auto; margin:0 auto;}
+.zc_info .zc_p{ font-size:1.6rem; color:#7b9694; text-align:center;}
+.zc_info .zc_p1{ font-size:1.3rem; color:#7b9694; text-align:center; padding-top:1rem; text-align:center; color:#e84142;}
+
+.zc_zc{ width:96%; height:auto; margin:0 auto;}
+.zc_zc ul li{width:100%; margin-top:1rem;}
+.zc_zc ul li i{ color:#e84142;}
+.zc_zc ul li b{font-size:1.4rem; color:#888888; font-weight:normal;}
+.phone{ width:18%; float:left; height:3.5rem; line-height:3.5rem; font-size:1.6rem; color:#222222;}
+.p_input{width:80%; float:left; margin-left:1%; border-radius:5px; border:1px solid #cccccc; height:3.5rem; }
+.p_input input{border:none; height:3.5rem; width:100%; outline:none;text-indent:0.1em;}
+.fjk{ width:70% !important; float:left; display:block; height:3.5rem; text-indent:0.5em;}
+.hqyzm { width:30% !important; float:left; display:block; height:3.5rem; line-height:3.5rem; text-align:center; background:#ffffff; outline:none; color:#888888; border-left:1px solid #ccc !important;}
+.btnn{ width:96%; height:4rem; margin:0 auto; margin-top:3rem;}
+.btnn input{ background:#9f1f24; width:100%; height:4rem; line-height:4rem; color:#fff; outline:0px; font-size:1.6rem; border:0px; border-radius:5px;}
+.zui{width:96%; text-align:center; height:auto; margin:0 auto; color:#888888; font-size:1.4rem; margin-top:3%; margin-bottom:3%;}
+
+/*二维码*/
+.erweima{ width:100%; height:auto; margin:0 auto; position:relative; left:0px; top:0px;}
+.erweima img{ display:block; width:100%; height:100%;}
+.er2{ width:50%; height:auto; position:absolute; left:25%; top:9rem;}

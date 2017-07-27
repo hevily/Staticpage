@@ -1,0 +1,140 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<!-- swiper3 -->
+<link rel="stylesheet" type="text/css" href="../js/swiper3/animate.min.css">
+<link rel="stylesheet" type="text/css" href="../js/swiper3/swiper-3.3.1.min.css">
+
+<title>手机横、竖屏事件</title>
+<style type="text/css">
+   *{
+    margin: 0;padding: 0;
+   }
+   #container,.slider-wraper,.slider{
+    height: 100%;width: 100%;box-sizing: border-box;
+   }
+   #container{
+    background-image: url(../img/sj_bg.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+   }
+   .slider-wraper{
+    padding: 10%;
+    background-color: transparent;
+   }
+   .slider{
+    background-color: #fff;
+   }
+   .slider>.swiper-container .swiper-slide img{
+    max-width:100% ;
+   }
+</style>
+
+</head>
+<body onload="screenOrientationEvent()">
+    <div class="container" id="container">
+        <div class="slider-wraper">
+            <div class="slider">
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="../img/sj_bg.jpg">
+                    </div>
+                    <div class="swiper-slide">slider2</div>
+                    <div class="swiper-slide">
+                        <img src="../img/sj_bg.jpg">
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="notice_direction" id="notice_direction">
+         横屏浏览效果更佳！此页仅限横屏查看
+    </div>
+    <!-- JQ -->
+    <script src="https://cdn.bootcss.com/jquery/3.2.0/jquery.min.js"></script>
+    <!-- swiper3 -->
+    <script src="../js/swiper3/swiper.animate1.0.2.min.js"></script>
+    <script src="../js/swiper3/swiper-3.3.1.jquery.min.js"></script>
+
+    <!-- 检测横屏竖屏 -->
+        <script>
+            // 初始化文档高宽
+            function rennderDoc() {
+                $('body').height($(window).innerHeight())
+                $('body').width($(window).innerWidth())
+                text = '<span>'+$(window).innerHeight() +'----'+$(window).innerWidth()+'</span>'
+                // $('body').html(text)
+                
+                console.log('resize')
+            }
+            //屏幕方向标识，0竖屏，其他值竖屏
+            var orientation=0,oldorientation = 0;
+            var setting = {
+                         autoplay: 2000,//可选选项，自动滑动
+                         loop:true
+                     }
+            var mySwiper = new Swiper('.swiper-container', setting)
+            //转屏事件，内部功能可以自定义
+            var container = $('#container'),
+                notice_direction = $('#notice_direction')
+            function screenOrientationEvent(){
+
+                if(orientation == 0){
+                    // console.log('竖-----')
+                    container.hide()
+                    notice_direction.show()
+                    rennderDoc()
+                    mySwiper.destroy()
+                }
+                else {
+                     // console.log('横-----')
+                     container.show()
+                     notice_direction.hide()
+                     setTimeout(function () {
+                        mySwiper = new Swiper('.swiper-container', setting)
+                    },1000)
+                    rennderDoc()
+                }
+            }
+            var innerWidthTmp = window.innerWidth;
+            //横竖屏事件监听方法
+            function screenOrientationListener(){
+                try{
+                    var iw = window.innerWidth;
+                    //屏幕方向改变处理
+                    if(iw != innerWidthTmp){
+                        if(iw>window.innerHeight)orientation = 90;
+                        else orientation = 0;
+                        innerWidthTmp = iw;
+                    }else{
+                        if(iw < window.innerHeight) orientation = 0;
+                        else orientation = 90;
+                    }
+                    if(orientation != oldorientation){
+                        console.log(orientation)
+                        screenOrientationEvent()
+                        oldorientation = orientation;
+                    }
+                } catch(e){alert(e);};
+                //间隔固定事件检查是否转屏，默认500毫秒
+                setTimeout("screenOrientationListener()",500);
+            }
+            //启动横竖屏事件监听
+            screenOrientationListener();
+        </script>
+    <!-- 检测横屏竖屏 END-->
+
+    <script>
+        $(function () {
+            
+        })
+    </script>
+</body>
+</html>
+
+
+
