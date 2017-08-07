@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+*{margin:0 auto; padding:0;}
+h2{color:red;}/*横屏时字体红色*/
+.bg{ width:90%; height:auto;  background:#fff; margin-top:10%;}
+.bg img{display:block; width:100%; height:100%;}
+.shijue{ background:url(../images/sj_bg.jpg) no-repeat; width:100%; height:100%; background-size:cover;}
+/* 效果CSS开始 */
+.mBan2 { overflow: hidden; width:86%; margin:0 auto;}
+.mBan2 .slideBox{ width:100%; height:auto; position:relative; }
+.mBan2 .slideBox .bd{ position:relative; height:100%; z-index:0;   }
+.mBan2 .slideBox .bd ul,.slideBox .bd ul li{width:100%!important}
+.mBan2 .slideBox .bd img{ width:100%; height:100%; display:block; border-radius:10px;  }
+/* 效果CSS结束 */
+.tu_btn{width:40%; height:auto; margin:0 auto; margin-top:3%;}
+.tu_btn img{display:block; width:100%; height:100%;}
+
+.swiper-container {
+        width: 86%;
+        height: 100%;
+		margin:0 auto;
+		padding-top:3%;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        /*background: #fff;*/
+        
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+.swiper-slide img{display:block; width:100%; height:100%; border-radius:10px;}
+.bg_djs{ width:100%; height:100%; background:#151515; opacity:0.7; left:0px; top:0px; position:absolute; z-index:999; color:#ffffff;}
+.bg_times{ width:50%; height:auto; opacity:1; left:50%; margin-top:10%;}
+.bg_times img{display:block; width:100%; height:100%;}
+
+

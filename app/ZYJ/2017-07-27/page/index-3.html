@@ -1,0 +1,85 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<!-- swiper -->
+<link rel="stylesheet" type="text/css" href="../js/swiper/animate.min.css">
+<link rel="stylesheet" type="text/css" href="../js/swiper/swiper-3.4.2.min.css">
+
+<title>手机横、竖屏事件</title>
+<style type="text/css">
+   *{
+    margin: 0;padding: 0;
+   }
+   .swiper1{
+    height: 300px;
+    overflow: hidden;
+    background-color: #cfcfcf;
+   }
+
+   .swiper-pagination-bullet{
+    background-color: transparent;
+    margin: 5px 0;
+    display: block;
+    width: 20px;height: 20px;
+    color: blue;
+    opacity: 0.5;
+   }
+   .swiper-pagination-bullet-active{
+    color:blue;
+    opacity: 1;
+   }
+   .swiper-container-horizontal>.swiper-pagination-bullets{
+    position: absolute;
+    right: 10px;
+    width: 30px;
+    left: inherit;
+    top: 50%;
+    transform:translateY(-50%);
+    display: table;
+   }
+   .swiper-slide img{
+    max-width:100%;
+   }
+</style>
+
+</head>
+<body >
+    <div class="container" id="container">
+
+        <div class="swiper-container swiper1">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="../img/sj_bg.jpg"></div>
+            <div class="swiper-slide">slider2</div>
+            <div class="swiper-slide">slider3</div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        
+    </div>
+    <!-- JQ -->
+    <script src="https://cdn.bootcss.com/jquery/3.2.0/jquery.min.js"></script>
+    <!-- swiper -->
+    <script src="../js/swiper/swiper.animate1.0.2.min.js"></script>
+    <script src="../js/swiper/swiper-3.4.2.jquery.min.js"></script>
+    <script>
+        var setting = {
+            // direction : 'vertical',
+            autoplay: 51000,//可选选项，自动滑动
+            // loop:true,
+            height: 300,
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            paginationBulletRender: function (swiper, index, className) {
+                return '<span class="' + className + '">' + (index + 1) + '</span>';
+            }
+         }
+        var Swiper1 = new Swiper('.swiper1', setting)
+    </script>
+</body>
+</html>
+
+
+

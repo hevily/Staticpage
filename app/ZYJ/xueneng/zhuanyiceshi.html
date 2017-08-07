@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" >
+<title>转移测试</title>
+<link type="text/css" rel="stylesheet" href="css/zy.css">
+</head>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript" charset="utf-8">   
+
+var myScroll;
+
+function loaded () {
+	var myScroll_right;
+	var myScroll;
+	myScroll = new IScroll('#wrapper', {
+		scrollbars: true,
+		mouseWheel: true,
+		interactiveScrollbars: true,
+		shrinkScrollbars: 'scale',
+		fadeScrollbars: true
+	});
+	
+	myScroll_right = new IScroll('#right_Menu', {
+		scrollbars: true,
+		mouseWheel: true,
+		interactiveScrollbars: true,
+		shrinkScrollbars: 'scale',
+		fadeScrollbars: true
+	});
+}
+
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+
+</script>
+<body class="shijue" onLoad="loaded()">
+<div class="jiyi">
+     <div class="yiji_left">
+     <div id="wrapper">
+	<div id="scroller">
+         <ul>
+           
+            <li class="">★</li>
+            <li>●</li>
+            <li>▲</li>
+            <li>【</li>
+            <li>】</li>
+             <li>★</li>
+            <li>●</li>
+            <li>▲</li>
+            <li>【</li>
+            <li>】</li>
+             <li>★</li>
+            <li>●</li>
+            <li>▲</li>
+            <li>【</li>
+            <li>】</li>
+             <li>★</li>
+            <li>●</li>
+            <li>▲</li>
+            <li>【</li>
+            <li>】</li>
+             <li>★</li>
+            <li>●</li>
+            <li>▲</li>
+            <li>【</li>
+            <li>】</li>
+             <li>★</li>
+            <li>●</li>
+            <li>▲</li>
+            <li>【</li>
+            <li>】</li>
+             <li>★</li>
+            <li>●</li>
+            <li>▲</li>
+            <li>【</li>
+            <li>】</li>
+            <li>【</li>
+            <li>】</li>
+                  <li>【</li>
+            <li>】</li>
+             <li>★</li>
+            <li>●</li>
+            <li>▲</li>
+            <li>【</li>
+            <li>】</li>
+             <li>★</li>
+            <li>●</li>
+            <li>▲</li>
+            <li>【</li>
+            <li>】</li>
+            <li>【</li>
+            <li>】</li>
+            <div class="clearth"></div>
+         </ul>
+         
+       </div>
+       </div>  
+     </div>
+     <div class="yiji_right" >
+     <div id="right_Menu">
+     <div id="scroller2">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+             <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            
+            <div class="clearth"></div>
+        </ul>
+        </div>
+        </div>
+     </div>
+     <div class="clearth"></div>
+</div>
+<div class="zhuanyi"><img src="images/zhuanyi.png">
+    <p>请从左边图形中找出圆型</p>
+</div>
+</body>
+<script>
+ $(document).ready(function(){
+	 //alert(123);
+//	 var arr4=new Array("●,●,●,●,●,●,●,●")
+//	 alert(numAtArrayCount(arr4, "●"));
+	  var arr3=new Array("●");
+	 // alert(arr3);
+	  $("#wrapper li").click(function(){
+		      var _this = $(this);
+			var text3=_this.html();
+			//alert(text3);
+		     if(jQuery.inArray(text3,arr3)>-1){
+				 
+				 //alert('yes');
+                 _this.addClass('lvjing');
+			}else{
+               //alert('游戏结束');
+                 _this.addClass('a_over');
+				 //alert(s);	 
+            }  
+		  
+		  });
+	 })
+</script>
+</html>

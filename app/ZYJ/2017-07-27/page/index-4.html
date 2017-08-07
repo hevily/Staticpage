@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <!-- <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../css/" /> -->
+	<title> 点击 click event</title>
+	<style type="text/css">
+		html,body{
+			height: 100%;width: 100%;
+			margin: 0;padding: 0;
+			-webkit-background-size: contain ;
+			background-size: contain ;
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+		html{
+			/*background-image: url('../img/sj_bg.jpg');*/
+		}
+		body{
+			/*background-image: url('../img/gdcp.png');*/
+		}
+		.section{
+			
+		}
+		.col-row table{
+			width: 60%;
+			height: 70%;
+			margin: 0 auto;
+		}
+		.col-row table tr{
+			/*border:1px solid #ccc;*/
+		}
+		.col-row table tr td{
+			line-height: 45px;
+			border:1px solid #ccc;
+			text-align: center;
+		}
+		.wrong{
+			/*background-color: red;*/
+			opacity: 0;
+		}
+		.down{
+			background-color: #c2ecfc;
+		}
+	</style>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="section">
+			<div class="col-row">
+
+			</div>
+		</div>
+		<div class="section">
+
+		</div>
+	</div>
+	<footer></footer>
+	<!-- jQuery 2.1.4 -->
+	<!-- <script src="https://staticcdn.yshjie.com/cdn/librarypath/jquery/jquery-2.1.4.min.js"></script> -->
+	<script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+	<!-- statistics  -->
+	<!-- <script src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/js/storecommon.js"></script> -->
+	<!-- <script type="text/javascript" src="/statichtml/bjmovie01/estores/Home/JSLang?v=1.1"></script> -->
+	<!-- <script type="text/javascript" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/home/js/checkWeChat.js?ver=1.95&r={:rand(0, 9999)}"></script> -->
+	<script>
+
+		(function renderGrids(goal) {
+
+		var content = '不被肯定的关爱，渐飘渐散，如云难觅',
+			spl = 2
+
+			goal = '.col-row'
+			boxSpace = [3,25]
+
+		function mixString(str,spl) {
+			// split string
+			var ctpl=[],rightSort=[]
+			for(var i = 0; i < content.length ;i+=spl){
+				if(i +spl > content.length ) {
+					ctpl.push(content[i])
+					rightSort.push(content[i])
+				}else {
+					ctpl.push(content[i] + content[i+1]);
+					rightSort.push(content[i] + content[i+1]);
+				}
+			}
+			// mix string
+  			var result = ctpl
+  			var mixResult = []
+			for(var i = result.length -1; i > -1; i--){
+				var someone = parseInt(Math.random() * result.length );
+				var cDel = result[someone]
+				mixResult.push(cDel)
+				result.splice(someone,1)
+			}
+			return {'rightSort':rightSort,'mixResult':mixResult};
+		}
+		console.log(mixString(content,2))
+		function appendString(str,goal,boxSpace) {
+			var _goal = $(goal),mixed = str.mixResult,line = str.rightSort
+				h = boxSpace[0],v = boxSpace[1],
+				td = '',tr = '', table = ''
+			for(i=0;i < h; i++){
+				for(j = 0;j <= v; j++){
+					var cInd = i*v+j
+					if(cInd < mixed.length) cInd = i*v+j
+					else cInd = Math.floor(Math.random()*mixed.length)
+					td += '<td>'+mixed[cInd]+'</td>'
+				}
+				tr = '<tr>'+td+'</tr>'
+				td = ''
+				table += tr
+				tr = ''
+			}
+			table = '<table>'+table+'</table>'
+			_goal.append(table)
+			lineClick(line)
+
+		}
+		appendString(mixString(content,spl),goal,boxSpace)
+
+		function lineClick(line) {
+			var items = $(goal).find('td'),cInd = 0;
+			$.each(items,function (i,item) {
+				$(item).click(function () {
+					var _this = $(this)
+						txt = _this.text()
+						ind = $.inArray(txt,line)
+					if(ind > -1){
+						if(ind === cInd ){
+							cInd ++;
+							_this.addClass('down')
+							// _this.html(cInd)
+						}else{
+							_this.addClass('wrong')
+						}
+						
+					}
+				})
+			})
+		}
+		})()
+	</script>
+</body>
+</html>	

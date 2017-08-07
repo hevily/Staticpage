@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" >
+<title>广度测试开始测评</title>
+</head>
+<style>
+      *{margin:0; padding:0;}
+   html,body{height:100%;width:100%;overflow:hidden;}
+   ul{list-style:none;}
+   .clearth{clear:both;}
+    .shijue{ background:url(images/sj_bg.jpg) no-repeat; width:100%; height:100%; background-size:cover;}
+	.dianji{ width:100%; height:100%; /*width:79%; height:auto; position:relative; left:50%; top:50%; transform:translate(-50%,-50%); width:525px; height:364px; background:url(images/gdcp.png) no-repeat center center; margin:0 auto; background-size:525px 364px; margin-top:2%;*/ 		background-image: url('images/gdcp.png');
+			-webkit-background-size: contain ;
+			background-size: contain ;
+			background-position: center center;
+			background-repeat: no-repeat; -moz-background-size:contain;}
+
+.dj_fg{ position:relative; width:60%; height:auto; left:50%; top:30%; transform:translate(-50%,-30%);}
+.dj_fg ul{display:block; width:100%;}
+	.dj_fg ul li{width:10%; height:4%; background:#ffffff; float:left; text-align:center;/* line-height:30px;*/ padding:2% 2% 2% 2%; margin-left:2%; margin-top:4%;}
+	.tishi_gd{ width:60%; height:auto; margin:0 auto; position:absolute; bottom:1%; left:15%;}
+	.tishi_gd img{display:block; width:100%; height:100%;}
+	.actives{ background-color:#3a9cf5 !important; color:#ffffff;}
+	.a_over{ background-color:#ea2f2f !important; color:#ffffff;}
+@media screen and (max-width: 568px){
+
+	 .dj_fg ul li{width:10%; height:4%; background:#ffffff; float:left; text-align:center;/* line-height:30px;*/ padding:2% 2% 2% 2%; margin-left:2%; margin-top:3%;}
+	}
+</style>
+<body class="shijue">
+<div class="dianji">
+ <!--   <img src="images/gdcp.png">-->
+    
+    <div class="dj_fg" id="list_li">
+    <ul>
+       <li class="actives">1</li>
+       <li>2</li>
+       <li>3</li>
+       <li>4</li>
+       <li>5</li>
+       <li>6</li>
+    </ul>
+    <ul>
+       <li>7</li>
+       <li>8</li>
+       <li>9</li>
+       <li>10</li>
+       <li class="">11</li>
+       <li>12</li>
+    </ul>
+    <ul>
+       <li>13</li>
+       <li>14</li>
+       <li>15</li>
+       <li  class="">16</li>
+       <li>17</li>
+       <li>18</li>
+    </ul>
+    <ul>
+       <li>19</li>
+       <li>20</li>
+       <li>21</li>
+       <li>22</li>
+       <li>23</li>
+       <li>24</li>
+    </ul>
+    <ul>
+       <li>25</li>
+       <li>26</li>
+       <li>27</li>
+       <li>28</li>
+       <li>28</li>
+       <li>30</li>
+    </ul>
+    <ul>
+       <li>31</li>
+       <li>32</li>
+       <li>33</li>
+       <li>34</li>
+       <li>35</li>
+       <li>36</li>
+    </ul>
+       <div class="clearth"></div>  
+    </div>
+    
+
+</div>
+<div class="tishi_gd"><img src="images/gd_tishi.png"></div>
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script>
+ $(document).ready(function(){
+	    var arr=new Array(),
+	       num=37,curNum = 1;
+           // init Arr
+        // for ( var i=0; i<num; i++){	arr.push(i);}
+        var arr2 = new Array(1,2,3)
+		$("#list_li li").click(function(){
+            var _this = $(this);
+			var text=parseInt(_this.html());
+            if($('.a_over').length > 0) return false;
+			if($.inArray(text ,arr2) > -1){
+				 alert('yes');
+                 _this.addClass('actives')
+			}else{
+                alert('no');
+                 _this.addClass('a_over')
+            }
+            var ck = _this.data('click')
+            if(ck == undefined || ck == null || ck ==''){
+                _this.data('click',1)
+            }else{
+                _this.data('click',ck+1)
+            }
+            console.log(_this.data('click'))
+            curNum ++;
+		})
+	 });
+</script>
+</html>

@@ -2,7 +2,7 @@ var staticdir = ''
 // 如果不适用本地服务器更改定义staticdir为非空项目目录即可 如当前目录'./';'e:/youproject/'
 // 以下定义为proxy 本地启动服务器 动态页面设定
 // 定义具体项目目录
-var Products= 'order-detail/';
+var Products= 'ZYJ/';
 // define 本地开发目录
 var baseserver		= 'localhost/moviehelper/app/',
  baseserver_dir 	= '/Users/chunhua/WorkSpace/moviehelper/app/',

@@ -19,6 +19,12 @@ html{
 						transform:translate(-50%,-50%);
 						@import "build/shop-fork-store";
 					}
+					.elderly-entrance{
+						text-align:center;
+						a{
+							color:red;
+						}
+					}
 				}
 				&.store-scroll{
 					height: 100%;width: 100%;

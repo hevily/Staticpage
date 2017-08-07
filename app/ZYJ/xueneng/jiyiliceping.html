@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" >
+<title>记忆力测评_选词</title>
+<link type="text/css" rel="stylesheet" href="css/jy.css">
+</head>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript" charset="utf-8">  
+var myScroll;
+
+function loaded () {
+	myScroll = new IScroll('#wrapper', {
+		scrollbars: true,
+		mouseWheel: true,
+		interactiveScrollbars: true,
+		shrinkScrollbars: 'scale',
+		fadeScrollbars: true
+	});
+}
+
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+
+</script>
+<body class="shijue" onLoad="loaded()">
+<div class="jiyi_right"><img src="images/pc_jy.png"></div>
+<div class="jiyi">
+  <div class="jiyi_info">
+    <div id="wrapper">
+	<div id="scroller">
+		<ul>
+			<li data-click="0">今天</li>
+			<li data-click="0">自己</li>
+			<li data-click="0">上山</li>
+			<li data-click="0">门口</li>
+			<li>东西</li>
+			<li>东西</li>
+			<li>门口</li>
+			<li>自己</li>
+			<li>明天</li>
+
+			<li>今天</li>
+			<li>自己</li>
+			<li>上山</li>
+			<li>门口</li>
+			<li>东西</li>
+			<li>东西</li>
+			<li>门口</li>
+			<li>自己</li>
+			<li>上山</li>
+
+			<li>今天</li>
+			<li>自己</li>
+			<li>上山</li>
+			<li >门口</li>
+			<li>东西</li>
+			<li>东西</li>
+			<li>门口</li>
+			<li>自己</li>
+			<li>上山</li>
+
+			<li>今天</li>
+			<li>自己</li>
+			<li>上山</li>
+			<li>门口</li>
+			<li>东西</li>
+			<li>东西</li>
+			<li>门口</li>
+			<li>自己</li>
+			<li>上山</li>
+
+			<li>今天</li>
+			<li>自己</li>
+			<li>上山</li>
+			<li>门口</li>
+			<li>东西</li>
+			<li>东西</li>
+			<li>门口</li>
+			<li>自己</li>
+			<li>上山</li>
+
+			<li>今天</li>
+			<li >自己</li>
+			<li>上山</li>
+			<li>门口</li>
+			<li>东西</li>
+			<li>东西</li>
+			<li>门口</li>
+			<li>自己</li>
+			<li>上山</li>
+
+			<li>今天</li>
+			<li>自己</li>
+			<li>上山</li>
+			<li>门口</li>
+			<li>东西</li>
+			<li>东西</li>
+			<li>门口</li>
+			<li>自己</li>
+			<li>上山</li>
+            
+            <li>今天</li>
+			<li>自己</li>
+			<li>上山</li>
+			<li>门口</li>
+			<li>东西</li>
+			<li>东西</li>
+			<li>门口</li>
+			<li>自己</li>
+			<li>上山1</li>
+	</ul>
+	</div>
+    </div>
+  </div>
+  <div class="jiyi_tijiao"><a href=""><img src="images/jiyitijiao.png"></a></div>
+</div>
+</body>
+<script>
+ $(document).ready(function(){
+	   
+  var arr=new Array(),
+	       num=37,curNum = 0;
+           // init Arr
+		   
+  var arr2=new Array('门口','上山','自己');
+  //alert(arr2[curNum]);
+		
+        for ( var i=0; i<num; i++){	arr.push(i);}
+        // var boo=true;
+		$("#scroller li").click(function(){
+			//var clicks=$("#scroller li").data('click');
+			//alert(clicks);
+		//		 if($("#scroller li").hasClass('a_over')){
+//					 return false;
+//			      }
+//				  
+	//			   if($("#scroller li").hasClass('actives')){
+//					event.preventDefault();
+//			      }
+               if(curNum==arr2.length)
+			   {
+				  return false; 
+				   }
+				  
+            var _this = $(this);
+			var text=_this.html();
+			//alert(text);
+		 // var ss=jQuery.inArray(text,arr2);
+		  
+			if(jQuery.inArray(text,arr2)>-1){
+				 //alert('yes');
+                 _this.addClass('actives');
+			}else{
+               //alert('游戏结束');
+                 _this.addClass('a_over');
+				 //alert(s);	 
+            }
+			
+			var ck = _this.data('click')
+            if(ck == undefined || ck == null || ck ==''){
+                _this.data('click',1);
+				curNum ++;
+            }else{
+                _this.data('click',ck+1);
+				curNum;
+            }
+			
+			
+			//if( clicks == 0)
+//			{
+//				alert(123);
+//				//clicks ++;
+//				$(this).data("click",1);
+//				
+//				alert(curNum)
+//				}
+//				else{ $(this).data("click",2); return false; alert(重复点击)}
+           
+		});
+	 });
+</script>
+</html>

@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" >
+<title>无标题文档</title>
+</head>
+<style>
+*{margin:0 auto; padding:0;}
+  html,body{height:100%;width:100%;overflow:hidden;}
+  ul,a{list-style:none; text-decoration:none; outline:0px; border:0;}
+  .clearth{clear:both;}
+     .ceshi_bg{ width:100%; height:100%; background:url(images/xinliceshi.png) no-repeat; background-size:100% 100%; position:relative;}
+	 .ceshi_bg2{width:90%; height:auto; margin:0 auto; position:relative;}
+	 .ceshi_bg2 img{display:block; width:100%; height:100%;}
+	 .ceshi_title{width:80%; height:auto; position:absolute; top:30%; left:10%;}
+	 .ceshi_title ul{display:block; height:120px; overflow-y:scroll;}
+	 .ceshi_radio{ width:100%; height:auto; position:absolute; }
+	 .ceshi_radio ul li{margin-top:1.5%; height:30px; line-height:30px;}
+	 .ceshi1 {font-size:15px;}
+	 .ceshi_page{position:absolute; right:10px; top:10px; width:79px; height:31px;}
+	 .ceshi_page img{display:block; width:100%; height:100%;}
+	 .ceshi_page  .page{ position:absolute; left:25px; top:0px; color:#ffffff; font-weight:bold; font-size:13px; width:50px; line-height:31px;}
+	 .ceshi_page .page span{ color:#222222;}
+	 .ceshi_btn{width:60%; height:auto; margin:0 auto; margin-top:1%;}
+	 .ceshi_btn ul li{ float:left; }
+	 .ceshi_btn ul li img{display:block; width:100%; height:100%;}
+	 .ceshi_btn ul li:first-child{ width:15%;}
+	 .ceshi_btn ul li:nth-child(2){width:60%;}
+	 .ceshi_btn ul li:last-child{width:15%;}
+	 .ceshi_title ul{display:block; width:100%; overflow-y:auto;}
+.ceshi_title ul li {/*height:50px; line-height:50px; */ font-size:14px;}
+
+
+.ceshi_title ul li input[type="radio"]{
+	
+	width:30px; height:25px;
+	opacity:0;
+	
+}
+
+.ceshi_title ul li {
+            position: relative;
+            line-height: 25px;
+			/*left:20px;*/
+        }
+label{    position: absolute;
+            left: 5px;
+            top: 12px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            color:#999; display:block; text-align:center; vertical-align:middle; line-height:20px; background:url(images/cst_y.png) no-repeat; background-size:20px 20px;}
+ input:checked+label { 
+            /*background-color: #fe6d32;*/
+          /*  border: 1px solid #e8494a;
+			color:#e8494a;*/
+			 background:url(images/cst_yy.png) no-repeat; background-size:20px 20px;
+        }
+		
+		
+		input:checked+label::after {
+            position: absolute;
+            content: "";
+            width: 5px;
+            height: 10px;
+            top: 3px;
+            left: 6px;
+          /*  border: 2px solid #fff;*/
+            border-top: none;
+            border-left: none;
+           /* transform: rotate(45deg)*/
+        }
+	.ceshi_tanceng{ width:100%; height:100%; background:#141414; opacity:0.5; position:absolute; top:0px; left:0px;}
+	.cehsi_info{ width:260px; height:180px; background:#ffffff; border-radius:10px; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);}
+	.ceshi_suc {width:60%; height:auto; margin:0 auto; padding-top:22px;}
+	.ceshi_left{float:left; width:34px; height:34px;}
+	.ceshi_left img{display:block; width:100%; height:100%;}
+	.ceshi_right{float:left; width:60%; height:34px; color:#3895f5; font-size:20px; line-height:34px; text-indent:0.5em;}
+	.suc_info{ width:80%; height:auto; margin:0 auto; color:#888888; padding-top:18px; font-size:15px;}
+	.suc_back{ width:50%; height:auto; margin:0 auto; padding-top:12px;}
+	.suc_back img{display:block; width:100%; height:100%;}
+</style>
+<body>
+<div class="ceshi_bg">
+     <div class="ceshi_bg2">
+     <img src="images/xls_bg.png">
+     <div class="ceshi_page">
+        <img src="images/ceshi_page.png">
+        <div class="page">p&nbsp;<span>1/20</span></div>
+     </div>
+	     <div class="ceshi_title">
+         <div class="ceshi1">1.平时不知为什么总觉得心慌意乱，坐立不安吗？平时不知为什么总觉得心慌意乱，坐立不安吗？</div>
+           <ul>
+             <!-- <li><input type="radio" value="" checked> <label for="item1"></label>绘画才能  </li>
+              <li><input type="radio" value="" > <label for="item1"></label>语言才能和数学才能</li>
+              <li><input type="radio" value="" > <label for="item1"></label>运动才能</li>-->
+              <li><input type="radio" id="radio" value="" name="df"><label for="radio"></label>绘画才能
+               <li><input type="radio" id="radio1" value="" name="df" > <label for="radio1"></label>语言才能和数学才能</li>
+              <li><input type="radio"  id="radio2" value="" name="df" > <label for="radio2"></label>运动才能</li>
+              <li><input type="radio"  id="radio3" value="" name="df" > <label for="radio3"></label>运动才能</li>
+              </li>
+         </ul>
+         <!--<div class="ceshi_radio">
+               <ul>
+                  <li><input type="radio" id="radio" value="" name="df"><label for="radio"></label>常常是</li>
+                      <li><input type="radio" id="radio1" value="" name="df" > <label for="radio1"></label>偶尔</li>
+                     <li><input type="radio"  id="radio2" value="" name="df" > <label for="radio2"></label>完全没有</li>
+                     <li><input type="radio"  id="radio3" value="" name="df" > <label for="radio3"></label>完全没有</li>
+                     <li><input type="radio" id="radio" name="radio-1-set" class="regular-radio" checked /><label for="radio"></label><span>常常是</span></li>
+                    <li><input type="radio" id="radio1" name="radio-1-set" class="regular-radio" /><label for="radio1"></label><span>偶尔</span></li>
+                    <li><input type="radio" id="radio2" name="radio-1-set" class="regular-radio" /><label for="radio2"></label><span>完全没有</span></li>
+                    <li><input type="radio" id="radio3" name="radio-1-set" class="regular-radio" /><label for="radio3"></label><span>完全没有</span></li>
+               </ul>
+         </div>-->
+         </div>
+	 </div>
+     <div class="ceshi_btn">
+        <ul>
+            <li><a href=""><img src="images/left.png"></a></li>
+            <li><a href=""><img src="images/tijiao.png"></a></li>
+            <li><a href=""><img src="images/right.png"></a></li>
+            
+        </ul>
+        <div class="clearth"></div>
+     </div>
+</div>
+<!--弹层-->
+<div class="ceshi_tanceng"></div>
+<div class="cehsi_info">
+     <div class="ceshi_suc">
+     <div class="ceshi_left"><img src="images/suc.png"></div>
+     <div class="ceshi_right">提交成功</div>
+     <div class="clearth"></div>
+     </div>
+     <div class="suc_info">测评成绩稍后可登录家长端进行
+查看!</div>
+<div class="suc_back"><a href=""><img src="images/back.png"></a></div>
+</div>
+<!--弹层-->
+</body>
+</html>

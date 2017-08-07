@@ -217,6 +217,10 @@ html {
             padding-top: 20px; }
             html body .container .section.unfork-store .notice-fork .fork-store img {
               width: 175px; }
+        html body .container .section.unfork-store .elderly-entrance {
+          text-align: center; }
+          html body .container .section.unfork-store .elderly-entrance a {
+            color: red; }
       html body .container .section.store-scroll {
         height: 100%;
         width: 100%;
