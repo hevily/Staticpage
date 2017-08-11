@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,YAAY;EACX,KAAK,EAAC,OAAO;EACb,SAAS,EAAE,IAAI;EACf,UAAU,EAAC,MAAM;;AAElB,WAAW;EACV,WAAW,EAAE,IAAI;EACjB,eAAG;IACF,KAAK,EAAC,KAAK",
+"sources": ["shop-fork-store.scss"],
+"names": [],
+"file": "shop-fork-store.css"
+}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGG,iCAAE;EACD,UAAU,EAAC,IAAI;AASf,8HAAE;EACD,UAAU,EAAC,IAAI",
+"sources": ["nav-tabs.scss"],
+"names": [],
+"file": "nav-tabs.css"
+}
