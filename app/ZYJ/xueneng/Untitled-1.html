@@ -10,16 +10,19 @@
 <link type="text/css" rel="stylesheet" href="css/st.css">
 </head>
 
-</style>
+
 
 <body class="shijue" >
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="images/s1.jpg"></div>
-            <div class="swiper-slide"><img src="images/s2.png"></div>
-            <div class="swiper-slide"><img src="images/s3.png"></div>
-            <div class="swiper-slide"><img src="images/s4.png"></div>
-            <div class="swiper-slide"><img src="images/s5.png"></div>
+
+<input type="text" hidden="hidden" id="hid" value=" ">
+    <div class="swiper-container bgg">
+        <div class="swiper-wrapper" id="imgss">
+            <div class="swiper-slide swiper-no-swiping"><div class="qus-box" data-id="1001"><img src="images/s1.png"></div></div>
+            <div class="swiper-slide swiper-no-swiping"><div class="qus-box" data-id="1002"><img src="images/s2.png"></div></div>
+            <div class="swiper-slide swiper-no-swiping"><div class="qus-box" data-id="1003"><img src="images/s3.png"></div></div>
+            <div class="swiper-slide swiper-no-swiping"><div class="qus-box" data-id="1004"><img src="images/s4.png"></div></div>
+            <div class="swiper-slide swiper-no-swiping"><div class="qus-box" data-id="1005"><img src="images/s1.png"></div></div>
+             <div class="swiper-slide swiper-no-swiping"><div class="qus-box" data-id="1005"><img src="images/s1.png"></div></div>
         </div>
         <!-- Add Pagination -->
      <!--   <div class="swiper-pagination"></div>-->
@@ -30,33 +33,79 @@
 <!--效果html结束-->
 
 
-  <div class="tu_btn"><a href=""><img src="images/shi.png"></a></div>
- <div class="bg_djs" id="nis">
+  <div class="tu_btn"><a href="javascript:;"  id="btn"><img src="images/shi.png"></a></div>
+<!-- <div class="bg_djs" id="nis">
     <div class="bg_times"><img src="images/img10.png" id="timgs_img" /></div>
- </div> 
+ </div> -->
   
-  
-
+<!--<div class="tanceng"></div>  
+ <div class="tc">
+    <div class="tc_bn"><img src="images/bei.png"></div>
+    <div class="tc_info">恭喜你完成测试</div>
+    <div class="tc_word">测试成绩已上传家长端，可登录家长端查看。</div>
+     <div class="tc_btn"><img src="images/fanhui.png"></div>
+ </div>-->
 </body>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
 <script type="text/javascript" src="js/swiper.min.js"></script>
 
 
  <script>
-  var add_list = function() {  var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        paginationClickable: true,
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: 5000,
-        autoplayDisableOnInteraction: false
-    }); 
-  }
-  
-
-		//倒数计时
+    $(function () {
+        var qusArr = [],ansArr=[],swiperMain={},clicks = 0
+        function add_list() {
+            var swiperMain = new Swiper('.swiper-container', {
+            autoplay: false,
+            onSlideChangeEnd: function(swiper){
+				if(swiper.isEnd){
+					// swiper.stopAutoplay();
+				}
+            },onInit: function(swiper){
+                    for(var i = 0; i< swiper.slides.length ;i++){
+                        qusArr.push($(swiper.slides[i]).find('.qus-box').data('id'))
+                    }
+                    $('#btn').click(function(){
+                        var ans = getID();
+                        clicks ++;
+    					if(!swiper.isEnd){
+                            swiper.slideNext()
+    					}else{
+                            $("#hid").val(ans);
+                            console.log('last-one')
+                            console.log('input binding data is \n'+$("#hid").val())
+                           // $.ajax({
+            //                        type: 'POST',
+            //                        url: "test.html",
+            //                        data: ans ,
+            //                        success: function(){
+                                       //   $(this).addClass("done");
+                                    //   }
+                                        //                      })
+                        }
+                        console.log(ans)
+                        console.log(clicks)
+                    });
+                }
+            });
+            function getID() {
+                var cSlide=$(swiperMain.slides[swiperMain.activeIndex])
+                    cPoint = cSlide.find('.qus-box').data('id');
+					if(jQuery.inArray(cPoint,ansArr)>-1){
+						ansArr;
+						//alert(123);
+						}else{ansArr.push(cPoint);
+						//alert(456);
+						}
+                // 检查是否已经回答过
+               // if($.inArray(cPoint,ansArr) > -1){ console.log('已回答');
+//				 return ansArr; }
+                //ansArr.push(cPoint);
+				//console.log(ansArr);
+                return ansArr;
+            }
+        }
+   add_list();
+		// 倒数计时
 		var backward = function(){
 			numz--;
 			if(numz>0){
@@ -65,7 +114,7 @@
 				$(".bg_djs").remove();
 			}
 			setTimeout(backward,1000);
-			if(numz<0)
+			if(numz===0)
 			{
 				add_list();
 				}
@@ -73,5 +122,12 @@
 		}
 		var numz = 10;
 		backward();
+		
+		
+		
+		
+		
+    });
+
   </script>
 </html>

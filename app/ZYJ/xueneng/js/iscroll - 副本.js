@@ -387,9 +387,9 @@ IScroll.prototype = {
 			return;
 		}
 
-		if ( this.options.preventDefault && !utils.isBadAndroid && !utils.preventDefaultException(e.target, this.options.preventDefaultException) ) {
-			e.preventDefault();
-		}
+		//if ( this.options.preventDefault && !utils.isBadAndroid && !utils.preventDefaultException(e.target, this.options.preventDefaultException) ) {
+//			e.preventDefault();
+//		}
 
 		var point = e.touches ? e.touches[0] : e,
 			pos;
@@ -431,9 +431,9 @@ IScroll.prototype = {
 			return;
 		}
 
-		if ( this.options.preventDefault ) {	// increases performance on Android? TODO: check!
-			e.preventDefault();
-		}
+		//if ( this.options.preventDefault ) {	// increases performance on Android? TODO: check!
+//			e.preventDefault();
+//		}
 
 		var point		= e.touches ? e.touches[0] : e,
 			deltaX		= point.pageX - this.pointX,
@@ -528,9 +528,9 @@ IScroll.prototype = {
 			return;
 		}
 
-		if ( this.options.preventDefault && !utils.preventDefaultException(e.target, this.options.preventDefaultException) ) {
-			e.preventDefault();
-		}
+	//	if ( this.options.preventDefault && !utils.preventDefaultException(e.target, this.options.preventDefaultException) ) {
+//			e.preventDefault();
+//		}
 
 		var point = e.changedTouches ? e.changedTouches[0] : e,
 			momentumX,

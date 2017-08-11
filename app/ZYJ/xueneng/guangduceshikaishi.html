@@ -1,286 +1,146 @@
-<!DOCTYPE html> 
+<!doctype html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=UTF-8" />
-<meta name="viewport" content="width=device-width" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" >
+<title>广度测试开始测评</title>
+<link type="text/css" rel="stylesheet" href="css/gd.css">
+</head>
+<body class="shijue" onLoad="loaded()">
+<div class="dianji">
+ <!--   <img src="images/gdcp.png">-->
+    
+    <div class="dj_fg" id="list_li">
+    <div id="wrapper">
+	<div id="scroller">
+    <ul>
+       <li data-click="0">1</li>
+       <li data-click="0">2</li>
+       <li data-click="0">3</li>
+       <li>4</li>
+       <li>5</li>
+       <li>6</li>
 
-<title>手机横、竖屏事件</title>
-<style type="text/css">
-   *{
-    box-sizing: border-box;
-    margin: 0;padding: 0;
-   }
-   html,body,.bg1{
-    height: 100%;width: 100%;box-sizing: border-box;
-   }
-   body{
-    background-image: url(./images/sj_bg.jpg);
-    -webkit-background-size: cover;
-    background-size: cover;
-    -webkit-overflow-scrolling:touch;
-   }
-   .bg1{
-    position: absolute;
-    background-image: url(./images/gdcp.png);
-    -webkit-background-size: contain;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    overflow: hidden;
-   }
-   .container{
-    height: 80%;
-    width: 60%;
-    position: fixed;
-    left: 50%;top: 50%;z-index: 8;
-    overflow: scroll;
-    transform:translate(-50%,-50%);
-   }
+       <li>7</li>
+       <li>8</li>
+       <li>9</li>
+       <li>10</li>
+       <li>11</li>
+       <li>12</li>
 
-   .content-wraper{
+       <li>13</li>
+       <li>14</li>
+       <li>15</li>
+       <li>16</li>
+       <li>17</li>
+       <li>18</li>
 
-   }
-</style>
-<style type="text/css">
-#scroller li {
-    display: inline-block;
-    background-color: #fff;
-    width: 50px;height: 50px;
-    text-align: center;
+       <li>19</li>
+       <li>20</li>
+       <li>21</li>
+       <li>22</li>
+       <li>23</li>
+       <li>24</li>
+
+       <li>25</li>
+       <li>26</li>
+       <li>27</li>
+       <li>28</li>
+       <li>28</li>
+       <li>30</li>
+
+       <li>31</li>
+       <li>32</li>
+       <li>33</li>
+       <li>34</li>
+       <li>35</li>
+       <li>36</li>
+             <li>31</li>
+       <li>32</li>
+       <li>33</li>
+       <li>34</li>
+       <li>35</li>
+       <li>36</li>
+    </ul>
+    
+    
+       <div class="clearth"></div>
+    </div> 
+    </div> 
+    </div>
+    
+
+</div>
+<div class="tishi_gd"><img src="images/gd_tishi.png"></div>
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript" charset="utf-8">   
+var myScroll;
+
+function loaded () {
+	myScroll = new IScroll('#wrapper', {
+		scrollbars: true,
+		mouseWheel: true,
+		interactiveScrollbars: true,
+		shrinkScrollbars: 'scale',
+		fadeScrollbars: true
+	});
 }
 
-</style>
-<style type="text/css">
-    .content-wraper{
-        
-    }
-</style>
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 
 
-</head>
-<body onload="screenOrientationEvent()">
-    <div class="bg1"></div>
-    <div class="container" id="container">
-        <div class="content-wraper">
-            <div class="scroller" id="scroller">
-                <ul>
-                   <li data-click="0">1</li>
-                   <li data-click="0">2</li>
-                   <li data-click="0">3</li>
-                   <li>4</li>
-                   <li>5</li>
-                   <li>6</li>
+</script>
+<script>
+//	 onBeforeScrollStart: function (e) { //e.preventDefault(); }
+//	 function (e) {e.preventDefault();}
+ $(document).ready(function(){
+	   
+  var arr=new Array(),
+	       num=37,curNum = 1;
+           // init Arr
+        for ( var i=0; i<num; i++){	arr.push(i);}
 
-                   <li>7</li>
-                   <li>8</li>
-                   <li>9</li>
-                   <li>10</li>
-                   <li>11</li>
-                   <li>12</li>
-
-                   <li>13</li>
-                   <li>14</li>
-                   <li>15</li>
-                   <li>16</li>
-                   <li>17</li>
-                   <li>18</li>
-
-                   <li>19</li>
-                   <li>20</li>
-                   <li>21</li>
-                   <li>22</li>
-                   <li>23</li>
-                   <li>24</li>
-
-                   <li>25</li>
-                   <li>26</li>
-                   <li>27</li>
-                   <li>28</li>
-                   <li>28</li>
-                   <li>30</li>
-
-                   <li>31</li>
-                   <li>32</li>
-                   <li>33</li>
-                   <li>34</li>
-                   <li>35</li>
-                   <li>36</li>
-                    <li>31</li>
-                   <li>32</li>
-                   <li>33</li>
-                   <li>34</li>
-                   <li>35</li>
-                   <li>36</li>
-                   <li>26</li>
-                   <li>27</li>
-                   <li>28</li>
-                   <li>28</li>
-                   <li>30</li>
-
-                   <li>31</li>
-                   <li>32</li>
-                   <li>33</li>
-                   <li>34</li>
-                   <li>35</li>
-                   <li>36</li>
-                    <li>31</li>
-                   <li>32</li>
-                   <li>33</li>
-                   <li>34</li>
-                   <li>35</li>
-                   <li>36</li>
-                   <li>26</li>
-                   <li>27</li>
-                   <li>28</li>
-                   <li>28</li>
-                   <li>30</li>
-
-                   <li>31</li>
-                   <li>32</li>
-                   <li>33</li>
-                   <li>34</li>
-                   <li>35</li>
-                   <li>36</li>
-                    <li>31</li>
-                   <li>32</li>
-                   <li>33</li>
-                   <li>34</li>
-                   <li>35</li>
-                   <li>36</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="notice_direction" id="notice_direction">
-         横屏浏览效果更佳！此页仅限横屏查看
-    </div>
-    <!-- JQ -->
-    <script src="https://cdn.bootcss.com/jquery/3.2.0/jquery.min.js"></script>
-
-    <!-- 检测横屏竖屏 -->
-        <script>
-            // 初始化文档高宽
-            function rennderDoc() {
-                $('body').height($(window).innerHeight())
-                $('body').width($(window).innerWidth())
-                text = '<span>'+$(window).innerHeight() +'----'+$(window).innerWidth()+'</span>'
-                // $('body').html(text)
-                console.log('resize')
+		$("#list_li li").click(function(){
+				 if($("#list_li li").hasClass('a_over')){
+					 return false;
+			      }
+				  
+				   if($("#list_li li").hasClass('actives')){
+					event.preventDefault();
+			      }
+            var _this = $(this);
+			var text=parseInt(_this.html());
+			if(text === curNum){
+				// alert('yes');
+                 _this.addClass('actives')
+			}else{
+               //alert('游戏结束');
+                 _this.addClass('a_over');
+				// s++;
+				 //alert(s);
+				//s return false;
+				 
             }
-            // function calcBox(box,v,h) {
-            //     var v =1;
-            //     var _box = $(box);
-            //     var     v = v != undefined ? v : (5% )
-
-            //         h = h ? h : 20%
-            //     ;
-            //     console.log()
-            // }
-            //屏幕方向标识，0竖屏，其他值竖屏
-            var orientation=0,oldorientation = 0;
-            var setting = {
-                         autoplay: 2000,//可选选项，自动滑动
-                         loop:true
-                     }
-            // var mySwiper = new Swiper('.swiper-container', setting)
-            //转屏事件，内部功能可以自定义
-            var container = $('#container'),
-                notice_direction = $('#notice_direction')
-            function screenOrientationEvent(){
-
-                if(orientation == 0){
-                    // console.log('竖-----')
-                    container.hide()
-                    notice_direction.show()
-                    rennderDoc()
-                    // mySwiper.destroy()
-                }
-                else {
-                     // console.log('横-----')
-                     container.show()
-                     notice_direction.hide()
-                     // setTimeout(function () {
-                        // mySwiper = new Swiper('.swiper-container', setting)
-                    // },1000)
-                    rennderDoc()
-                }
+			
+			var ck = _this.data('click')
+            if(ck == undefined || ck == null || ck ==''){
+                _this.data('click',1);
+				curNum ++;
+            }else{
+                _this.data('click',ck+1);
+				curNum;
             }
-            var innerWidthTmp = window.innerWidth;
-            //横竖屏事件监听方法
-            function screenOrientationListener(){
-                try{
-                    var iw = window.innerWidth;
-                    //屏幕方向改变处理
-                    if(iw != innerWidthTmp){
-                        if(iw>window.innerHeight)orientation = 90;
-                        else orientation = 0;
-                        innerWidthTmp = iw;
-                    }else{
-                        if(iw < window.innerHeight) orientation = 0;
-                        else orientation = 90;
-                    }
-                    if(orientation != oldorientation){
-                        console.log(orientation)
-                        screenOrientationEvent()
-                        oldorientation = orientation;
-                    }
-                } catch(e){alert(e);};
-                //间隔固定事件检查是否转屏，默认500毫秒
-                setTimeout("screenOrientationListener()",500);
-            }
-            //启动横竖屏事件监听
-            screenOrientationListener();
-        </script>
-    <!-- 检测横屏竖屏 END-->
+            
+		})
+	 });
+	 
 
-    <script>
-        $(function () {
-            var renderDoc = function () {
-                var wW = $(window).width()
-                    wH = $(window).height()
+</script>
 
-                    console.log(wW,wH)
-            }
-            renderDoc()
-            var arr=new Array(),
-                   num=37,curNum = 1;
-                   // init Arr
-                for ( var i=0; i<num; i++){  arr.push(i);}
 
-                $("#scroller li").click(function(){
-                    alert()
-                      if($("#scroller li").hasClass('a_over')){
-                          return false;
-                       }
-                        if($("#scroller li").hasClass('actives')){
-                         event.preventDefault();
-                       }
-                    var _this = $(this);
-                 var text=parseInt(_this.html());
-                 if(text === curNum){
-                     // alert('yes');
-                         _this.addClass('actives')
-                 }else{
-                       //alert('游戏结束');
-                         _this.addClass('a_over');
-                     // s++;
-                      //alert(s);
-                     //s return false;
-                    }
-                 var ck = _this.data('click')
-                    if(ck == undefined || ck == null || ck ==''){
-                        _this.data('click',1);
-                     curNum ++;
-                    }else{
-                        _this.data('click',ck+1);
-                     curNum;
-                    }
-                })
-             
-        })
-    </script>
-</body>
 </html>
-
-
-
