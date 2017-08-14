@@ -7,6 +7,8 @@ html{
 		width: 100%;
 		height:100%;
 		overflow:auto;
+		-webkit-overflow-scrolling : touch;
+
 		.container{
 			@include mobile-container;
 			height: 100%;
@@ -39,7 +41,40 @@ html{
 					}
 				}
 			}
-			@import "build/nav-tabs.scss";
+			nav{
+				.search{
+					height: 40px;
+					line-height: 40px;
+					padding: 10px;
+					background-color: #FFF;
+					border-bottom:1px solid #ccc;
+					.search-text{
+						display: inline-block;
+						width:calc( 100% - 55px);
+						input{
+							width: calc(100% - 10px);
+							-webkit-appearance:none;
+							border:none;
+							height: 28px !important;
+							padding: 0;margin: 0;
+							line-height: 28px;
+							border:1px solid #cfcfcf;
+							border-radius:19px;
+						}
+					}
+					.search-btn{
+						display: inline-block;
+						width: 45px;
+						text-align:center;
+						a{
+							color:#f36303;
+							text-decoration:none;
+						}
+					}
+				}
+				margin-bottom: 10px;
+			}
 		}
+		@import "build/nav-tabs.scss";
 	}
 }
