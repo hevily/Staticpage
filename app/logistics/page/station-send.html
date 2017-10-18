@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../css/build/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/station-send.css">
+
+	<title>服务点自寄</title>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="section addr">
+			<div class="media send">
+				<div class="media-left media-middle">
+					 <p>寄</p>
+				</div>
+				<div class="media-body media-middle">
+					<p class="noplace-select">
+						 请选择发件人地址
+					</p>
+					<!-- <p>
+						<span class="addr-usr"> 姓名姓名</span>
+						<span class="addr-phone">17890478967</span>
+					</p>
+					<div class="addr-detail">
+						<p>
+							北京市朝阳区
+						</p>
+						<p>
+							 百子湾路大成国际 A1座07A07百子湾路大成国际 A1座07A07
+						</p>
+					</div> -->
+				</div>
+				<div class="media-right media-middle">
+					<i class="fa fa-lg fa-angle-right"></i>
+				</div>
+			</div>
+			<div class="media receive">
+				<div class="media-left media-middle">
+					 <p>收</p>
+				</div>
+				<div class="media-body media-middle">
+					<p class="noplace-select">
+						 请选择收件人地址
+					</p>
+					<!-- 
+					<p>
+						<span class="addr-usr"> 姓名姓名</span>
+						<span class="addr-phone">17890478967</span>
+					</p>
+					<div class="addr-detail">
+						<p>
+							北京市朝阳区
+						</p>
+						<p>
+							 百子湾路大成国际 A1座07A07百子湾路大成国际 A1座07A07
+						</p>
+					</div> -->
+				</div>
+				<div class="media-right media-middle">
+					<i class="fa fa-lg fa-angle-right"></i>
+				</div>
+			</div>
+		</div>
+		<div class="gap-block"></div>
+		<div class="section goods-money clearfix">
+			<div class="flex">
+				<div class="flex-item pop-classes-weight">
+					<p><span class="goods-title ">物品</span><span><i class="fa fa-lg fa-angle-right pull-right "></i></span></p>
+					<p> <span class="goods-name"> </span><span class="goods-weight"></span></p>
+				</div>
+				<div class="flex-item pop-support-value">
+					<p><span class="goods-title">保价</span><span><i class="fa fa-lg fa-angle-right pull-right "></i></span></p>
+					<p> <span class="goods-name"></span><span class="goods-height"></span></p>
+				</div>
+			</div>
+		</div>
+		<div class="gap-block"></div>
+		<div class="section post-way">
+			<p>寄件方式<span class="secondary-desc">服务点自寄</span></p>
+		</div>
+		<div class="section post-now">
+			<a href="javascript:;" class="post-btn">提交</a>
+		</div>
+		
+
+		
+
+
+
+
+	</div>
+	<footer></footer>
+	<!-- jQuery 2.1.4 -->
+	<!-- <script src="https://staticcdn.yshjie.com/cdn/librarypath/jquery/jquery-2.1.4.min.js"></script> -->
+	<script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+	<!-- statistics  -->
+	<!-- <script src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/js/storecommon.js"></script> -->
+	<!-- <script type="text/javascript" src="/statichtml/bjmovie01/estores/Home/JSLang?v=1.1"></script> -->
+	<!-- <script type="text/javascript" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/home/js/checkWeChat.js?ver=1.95&r={:rand(0, 9999)}"></script> -->
+	<script src="../../Public/layer-v3.1.0/layer/layer.js"></script>
+	<script src="../js/slideOut.js"></script>
+	<script>
+		$(function () {
+			layer.config({
+				type:1,
+				shadeClose:false,
+				closeBtn:false,
+				offset:'b',
+				anim:2,
+				move:false
+			})
+			function blockScrollLayer(goal) {
+				var _goal = $(goal)
+					,CN = 'blocked'
+				if(_goal.hasClass(CN)){
+					_goal.removeClass(CN)
+					_goal.css('overflow','auto')
+				}else{
+					_goal.addClass(CN)
+					_goal.css('overflow','hidden')
+					$('.layui-layer-shade').on('touchmove',function (e) {
+						e.preventDefault()
+						e.stopPropagation()
+					})
+				}
+			}
+			// select address popup
+			$('.addr .media-body').on('click',function () {
+				var ind = $(this).closest('.media').index()
+				var action = '<div class="addr-action addr-list listing">\
+										<div class="flex">\
+											<div class="flex-item">\
+												<a href="javascript:;" class="closePopUp">关闭</a>\
+											</div>\
+											<div class="flex-item">\
+												<a href="javascript:;" class="addnewAddr-btn">新建</a>\
+											</div>\
+										</div>\
+									</div>'
+				var addrList = '<div class="section address-lists">\
+									<ul>\
+										<li class="default-addr">\
+											<div class="addr-list">\
+												<div class="media">\
+													<div class="media-left media-middle">\
+														<p class="addr-usr">\
+															<span class="usr-name"> 张三</span>\
+															 <span class="usr-phone">1789358964</span>\
+														</p>\
+														<div class="addr-detail">\
+															<p>\
+																北京市 朝阳区\
+															</p>\
+															<p>\
+																百子湾路大成国际 A1座07A07百子湾路大成国际 A1座07A07\
+															</p>\
+														</div>\
+													</div>\
+													<div class="media-right media-middle ">\
+														<!-- <i class="fa fa-lg fa-angle-right"></i> -->\
+													</div>\
+												</div>\
+											</div>\
+										</li>\
+										<li>\
+											<div class="addr-list">\
+												<div class="media">\
+													<div class="media-left media-middle">\
+														<p class="addr-usr">\
+															<span class="usr-name"> 张三</span>\
+															 <span class="usr-phone">1789358964</span>\
+														</p>\
+														<div class="addr-detail">\
+															<p>\
+																北京市 朝阳区\
+															</p>\
+															<p>\
+																百子湾路大成国际 A1座07A07百子湾路大成国际 A1座07A07\
+															</p>\
+														</div>\
+													</div>\
+													<div class="media-right media-middle ">\
+														<!-- <i class="fa fa-lg fa-angle-right"></i> -->\
+													</div>\
+												</div>\
+											</div>\
+										</li>\
+										<li>\
+											<div class="addr-list">\
+												<div class="media">\
+													<div class="media-left media-middle">\
+														<p class="addr-usr">\
+															<span class="usr-name"> 张三</span>\
+															 <span class="usr-phone">1789358964</span>\
+														</p>\
+														<div class="addr-detail">\
+															<p>\
+																北京市 朝阳区\
+															</p>\
+															<p>\
+																百子湾路大成国际 A1座07A07百子湾路大成国际 A1座07A07\
+															</p>\
+														</div>\
+													</div>\
+													<div class="media-right media-middle ">\
+														<!-- <i class="fa fa-lg fa-angle-right"></i> -->\
+													</div>\
+												</div>\
+											</div>\
+										</li>\
+										<li>\
+											<div class="addr-list">\
+												<div class="media">\
+													<div class="media-left media-middle">\
+														<p class="addr-usr">\
+															<span class="usr-name"> 张三</span>\
+															 <span class="usr-phone">1789358964</span>\
+														</p>\
+														<div class="addr-detail">\
+															<p>\
+																北京市 朝阳区\
+															</p>\
+															<p>\
+																百子湾路大成国际 A1座07A07百子湾路大成国际 A1座07A07\
+															</p>\
+														</div>\
+													</div>\
+													<div class="media-right media-middle ">\
+														<!-- <i class="fa fa-lg fa-angle-right"></i> -->\
+													</div>\
+												</div>\
+											</div>\
+										</li>\
+										<li>\
+											<div class="addr-list">\
+												<div class="media">\
+													<div class="media-left media-middle">\
+														<p class="addr-usr">\
+															<span class="usr-name"> 张三</span>\
+															 <span class="usr-phone">1789358964</span>\
+														</p>\
+														<div class="addr-detail">\
+															<p>\
+																北京市 朝阳区\
+															</p>\
+															<p>\
+																百子湾路大成国际 A1座07A07百子湾路大成国际 A1座07A07\
+															</p>\
+														</div>\
+													</div>\
+													<div class="media-right media-middle ">\
+														<!-- <i class="fa fa-lg fa-angle-right"></i> -->\
+													</div>\
+												</div>\
+											</div>\
+										</li>\
+										<li>\
+											<div class="addr-list">\
+												<div class="media">\
+													<div class="media-left media-middle">\
+														<p class="addr-usr">\
+															<span class="usr-name"> 张三</span>\
+															 <span class="usr-phone">1789358964</span>\
+														</p>\
+														<div class="addr-detail">\
+															<p>\
+																北京市 朝阳区\
+															</p>\
+															<p>\
+																百子湾路大成国际 A1座07A07百子湾路大成国际 A1座07A07\
+															</p>\
+														</div>\
+													</div>\
+													<div class="media-right media-middle ">\
+														<!-- <i class="fa fa-lg fa-angle-right"></i> -->\
+													</div>\
+												</div>\
+											</div>\
+										</li>\
+										<li>\
+											<div class="addr-list">\
+												<div class="media">\
+													<div class="media-left media-middle">\
+														<p class="addr-usr">\
+															<span class="usr-name"> 张三</span>\
+															 <span class="usr-phone">1789358964</span>\
+														</p>\
+														<div class="addr-detail">\
+															<p>\
+																北京市 朝阳区\
+															</p>\
+															<p>\
+																百子湾路大成国际 A1座07A07百子湾路大成国际 A1座07A07\
+															</p>\
+														</div>\
+													</div>\
+													<div class="media-right media-middle ">\
+														<!-- <i class="fa fa-lg fa-angle-right"></i> -->\
+													</div>\
+												</div>\
+											</div>\
+										</li>\
+										<li>\
+											<div class="addr-list">\
+												<div class="media">\
+													<div class="media-left media-middle">\
+														<p class="addr-usr">\
+															<span class="usr-name"> 张三</span>\
+															 <span class="usr-phone">1789358964</span>\
+														</p>\
+														<div class="addr-detail">\
+															<p>\
+																北京市 朝阳区\
+															</p>\
+															<p>\
+																百子湾路大成国际 A1座07A07百子湾路大成国际 A1座07A07\
+															</p>\
+														</div>\
+													</div>\
+													<div class="media-right media-middle ">\
+														<!-- <i class="fa fa-lg fa-angle-right"></i> -->\
+													</div>\
+												</div>\
+											</div>\
+										</li>\
+										<li>\
+											<div class="addr-list">\
+												<div class="media">\
+													<div class="media-left media-middle">\
+														<p class="addr-usr">\
+															<span class="usr-name"> 张三</span>\
+															 <span class="usr-phone">1789358964</span>\
+														</p>\
+														<div class="addr-detail">\
+															<p>\
+																北京市 朝阳区\
+															</p>\
+															<p>\
+																百子湾路大成国际 A1座07A07百子湾路大成国际 A1座07A07\
+															</p>\
+														</div>\
+													</div>\
+													<div class="media-right media-middle ">\
+														<!-- <i class="fa fa-lg fa-angle-right"></i> -->\
+													</div>\
+												</div>\
+											</div>\
+										</li>\
+										<li>\
+											<div class="addr-list">\
+												<div class="media">\
+													<div class="media-left media-middle">\
+														<p class="addr-usr">\
+															<span class="usr-name"> 张三</span>\
+															 <span class="usr-phone">1789358964</span>\
+														</p>\
+														<div class="addr-detail">\
+															<p>\
+																北京市 朝阳区\
+															</p>\
+															<p>\
+																百子湾路大成国际 A1座07A07百子湾路大成国际 A1座07A07\
+															</p>\
+														</div>\
+													</div>\
+													<div class="media-right media-middle ">\
+														<!-- <i class="fa fa-lg fa-angle-right"></i> -->\
+													</div>\
+												</div>\
+											</div>\
+										</li>\
+										<li>\
+											<div class="addr-list">\
+												<div class="media">\
+													<div class="media-left media-middle">\
+														<p class="addr-usr">\
+															<span class="usr-name"> 张三</span>\
+															 <span class="usr-phone">1789358964</span>\
+														</p>\
+														<div class="addr-detail">\
+															<p>\
+																北京市 朝阳区\
+															</p>\
+															<p>\
+																百子湾路大成国际 A1座07A07百子湾路大成国际 A1座07A07\
+															</p>\
+														</div>\
+													</div>\
+													<div class="media-right media-middle ">\
+														<!-- <i class="fa fa-lg fa-angle-right"></i> -->\
+													</div>\
+												</div>\
+											</div>\
+										</li>\
+									</ul>\
+								</div>'
+				if($('.addr-action.listing').length != 0){return false}
+				layer.open({
+					type:1,
+					title:action,
+					closeBtn:false,
+					area:['100%','80%'],
+					offset:'b',
+					anim:2,
+					move: false,
+					skin:'addr-list-popup',
+					content:addrList,
+					success:function (layero,index) {
+						blockScrollLayer('body')
+						slideList()
+						// 关闭地址列表
+						$('.addr-action .closePopUp').bind('click',function () {
+							layer.close(index)
+							blockScrollLayer('body')
+						})
+						// 新增地址
+						$('.addr-action.listing .addnewAddr-btn').bind('click',function () {
+							if($('.addr-action.editing').length !=0 ){return false}
+								else editingAddr()
+						})
+						// 选择地址
+						$('.address-lists .addr-list').bind('click',function () {
+							selectpostAddr(ind,_this)
+						})
+
+					}
+				})
+				// 编辑新增地址
+				function editingAddr(data,addInd) {
+					var action = '<div class="addr-action addr-list editing">\
+									<div class="flex">\
+										<div class="flex-item">\
+											<a href="javascript:;" class="closePopUp">关闭</a>\
+										</div>\
+										<div class="flex-item">\
+											<a href="javascript:;" class="savenewAddr-btn">保存</a>\
+										</div>\
+									</div>\
+								</div>'
+
+					// normal addnew
+					var addrtable = '<div class="section new-address">\
+											<div class="addr-edit">\
+												<div class="media addr-usr-name">\
+													<div class="media-left">\
+														 姓名\
+													</div>\
+													<div class="media-body">\
+														<input type="text" class="insert-content inputname" placeholder=" 请填写真实姓名" >\
+													</div>\
+												</div>\
+												<div class="media addr-usr-phone">\
+													<div class="media-left">\
+														  联系方式\
+													</div>\
+													<div class="media-body">\
+														<input type="number" class="insert-content inputphone" placeholder=" 输入手机号或电话号码" >\
+													</div>\
+												</div>\
+												<div class="media addr-usr-phone">\
+													<div class="media-left">\
+														  选择城市\
+													</div>\
+													<div class="media-body">\
+														<p type="text" class="insert-content select-country inputcity" placeholder=" " >请选择城市</p>\
+													</div>\
+												</div>\
+												<div class="media addr-usr-phone">\
+													<div class="media-left">\
+														  详细地址\
+													</div>\
+													<div class="media-body">\
+														<textarea class="insert-content inputaddrdetail" placeholder="请详细到门牌号" ></textarea>\
+													</div>\
+												</div>\
+											</div>\
+											<div class="save-default">\
+												 <label><input type="checkbox" class="default-setting inputdefaultaddr">设为默认寄件人地址</label>\
+											</div>\
+										</div>'
+
+					// editing address
+					if(data && data != undefined){
+						var name = '',phone = '',city = '',detail = '';
+						name	= data.name		? data.name :''
+						phone	= data.phone 	? data.phone :''
+						city	= data.city		? data.city :''
+						detail	= data.detail 	? data.detail :''
+						editing = 'editing'
+						console.log(name,phone,city,detail)
+						addrtable = '<div class="section new-address '+editing+'" data-addInd="'+addInd+'">\
+												<div class="addr-edit">\
+													<div class="media addr-usr-name">\
+														<div class="media-left">\
+															 姓名\
+														</div>\
+														<div class="media-body">\
+															<input type="text" class="insert-content inputname" placeholder=" 请填写真实姓名" value="'+name+'">\
+														</div>\
+													</div>\
+													<div class="media addr-usr-phone">\
+														<div class="media-left">\
+															  联系方式\
+														</div>\
+														<div class="media-body">\
+															<input type="number" class="insert-content inputphone" placeholder=" 输入手机号或电话号码" value="'+phone+'">\
+														</div>\
+													</div>\
+													<div class="media addr-usr-phone">\
+														<div class="media-left">\
+															  选择城市\
+														</div>\
+														<div class="media-body">\
+															<p type="text" class="insert-content select-country inputcity" placeholder=" " >'+city+'</p>\
+														</div>\
+													</div>\
+													<div class="media addr-usr-phone">\
+														<div class="media-left">\
+															  详细地址\
+														</div>\
+														<div class="media-body">\
+															<textarea class="insert-content inputaddrdetail" placeholder="请详细到门牌号" >'+detail+'</textarea>\
+														</div>\
+													</div>\
+												</div>\
+												<div class="save-default">\
+													 <label><input type="checkbox" class="default-setting inputdefaultaddr">设为默认寄件人地址</label>\
+												</div>\
+											</div>'
+					}
+					layer.open({
+						type:1,
+						title:action,
+						closeBtn:false,
+						area:['100%','60%'],
+						offset:'b',
+						anim:2,
+						move: false,
+						skin:'addr-list-popup',
+						content:addrtable,
+						success:function (layero,index) {
+							$('.addr-action.editing .closePopUp').bind('click',function () {
+								layer.confirm('放弃编辑？',{offset:'auto',skin:'stopediting'},function(ind){
+									layer.close(ind)
+									layer.close(index)
+								})
+							})
+							// 保存新地址
+							$('.addr-action.editing .savenewAddr-btn').bind('click',function () {
+								var addrInfo = $('.new-address')
+									name = addrInfo.find('.inputname').val()
+									phone = addrInfo.find('.inputphone').val()
+									city = addrInfo.find('.inputcity').html()
+									detail = addrInfo.find('.inputaddrdetail').val()
+									def = addrInfo.find('.inputdefaultaddr').prop('checked')
+									defaultaddr = def ? 'default-addr' :''
+									if(def) $('.default-addr').removeClass('default-addr')
+								var addrtext = '<li class="'+defaultaddr+'"><div class="addr-list">\
+												<div class="media">\
+													<div class="media-left media-middle">\
+														<p class="addr-usr">\
+														<span class="usr-name">'+name+'</span>\
+														<span class="usr-phone">'+phone+'</span></p>\
+														<div class="addr-detail">\
+														<p>'+city+'</p>\
+														<p>'+detail+'</p>\
+														</div>\
+													</div>\
+													<div class="media-right media-middle ">\
+														<!-- <i class="fa fa-lg fa-angle-right"></i> -->\
+													</div>\
+													</div>\
+												</div>\
+											</li>'
+								var addrGoal = $('.address-lists')
+									,addinfobox = $('.new-address')
+								if(addinfobox.hasClass('editing')){
+									var ind = addinfobox.data('addind')
+									console.log(ind)
+									addrGoal.find('ul').find('li').eq(ind).remove()
+									addrGoal.find('ul').prepend(addrtext)
+								}else{
+									addrGoal.find('ul').prepend(addrtext)
+								}
+								// 重载左滑
+								slideList()
+								$('.address-lists .addr-list').unbind('click')
+								$('.address-lists .addr-list').bind('click',function () {
+									selectpostAddr(ind)
+								})
+								layer.msg('新地址已保存')
+
+								layer.close(index)
+							})
+							// 选择城市
+							$('.select-country').on('click',function () {
+								selectCountry()
+							})
+						}
+					})
+				}
+				// 选择城市
+				function selectCountry() {
+					var selectedCountry = '<div class="selected-country">\
+												<p>请选择城市，点击已选择地址来重做地址选择</p>\
+												<ul>\
+												</ul>\
+											</div>'
+					var firstCity = ["北京","天津市","上海市","重庆市","河北省","山西省","辽宁省","吉林省","黑龙江省","江苏省","浙江省","安徽省","福建省","江西省","山东省","河南省","湖北省","湖南省","广东省","海南省","四川省","贵州省","云南省","陕西省","甘肃省","青海省","西藏自治区","广西壮族自治区","内蒙古自治区","宁夏回族自治区","新疆维吾尔自治区","香港特别行政区","澳门地区","台湾省"]
+					fCityList = ''
+					$.each(firstCity,function (i,item) {
+						var CC = ''
+						if (i == 0) CC = 'active-city'
+							else CC = ''
+						fCityList += '<li class="'+CC+'">'+item+'</li>'
+					})
+					var country = '<div class="section country-select">\
+									<div class="country-list">\
+										<div class="flexc">\
+											<div class="flex-item">\
+												<ul class="country-left first">'+
+													fCityList+
+												'</ul>\
+											</div>\
+											<div class="flex-item">\
+												<ul class="country-right second">\
+													<li>北京市</li>\
+												</ul>\
+											</div>\
+										</div>\
+									</div>\
+								</div>'
+						layer.open({
+							type:1,
+							id:'country_select',
+							title:selectedCountry,
+							closeBtn:false,
+							shadeClose: true,
+							area:['100%','80%'],
+							offset:'b',
+							anim:2,
+							move: false,
+							skin:'country-select',
+							content:country,
+							success:function (layero,index) {
+								
+								// 选择城市
+								function bindLeft (){
+									$('.country-list').find('.country-left').find('li').on('click',function () {
+										var _this = $(this)
+										leftCityClick(_this)
+									})
+								}
+								bindLeft()
+								function leftCityClick(city) {
+									$('.active-city').removeClass('active-city')
+									city.addClass('active-city')
+									var url = '../js/right_list1.json'
+									$.get(url,function (data) {
+										var rightCity = ''
+										$.each(data.city,function (i,item) {
+											rightCity += '<li>'+item+'</li>'
+										})
+										$('.country-list').find('.country-right').html(rightCity)
+										bindRCity()
+									})
+								}
+
+								function bindRCity() {
+									var leftList = $('.country-list').find('.country-left')
+										rightList = $('.country-list').find('.country-right')
+
+									rightList.find('li').unbind('click')
+									rightList.find('li').bind('click',function () {
+										var _this = $(this)
+										// change top txt
+										var selectedCity = $('.selected-country ul')
+											moreCity = '<i class="fa fa-lg fa-angle-right"></i>'
+											firstLevel = ''
+										if(_this.closest('ul').hasClass('second')){
+											ftxt = $('.active-city').text()
+											firstLevel = '<li>'+ftxt+moreCity+'</li>' 
+											_this.closest('ul').removeClass('second')
+										}else{
+											firstLevel =''
+										}
+										toptxt = firstLevel+'<li>'+_this.text()+moreCity+'</li>'
+										selectedCity.append(toptxt)
+
+										// renderCityList
+										_this.addClass('active-city')
+										txt = rightList.find('li').unbind('click')
+										leftList.html(txt)
+										leftList.find('li').bind('click',function () {
+											var _this = $(this)
+											leftCityClick(_this)
+										})
+										var url = '../js/right_list2.json'
+										$.get(url,function (data) {
+											// 最后一级标志位检测
+											var end = data.isend ? data.isend : false
+
+											if (end) {
+												var addr = $('.selected-country').find('li')
+												text = ''
+												$.each(addr,function(i,item){
+													text += '<span>'+$(item).text()+'</span>'
+												})
+												$('.select-country').html(text)
+												layer.close(index)
+												return ;
+											}
+											var rightCity = ''
+											$.each(data.city,function (i,item) {
+												rightCity += '<li>'+'json2'+item+'</li>'
+											})
+											rightList.html(rightCity)
+											bindRCity()
+										})
+									})
+								}
+								bindRCity()
+
+								// 点击已选择地址重新选择
+								$('.selected-country').on('click',function () {
+									var citybox = $('#country_select')
+									citybox.html(country)
+									$(this).find('ul').html('')
+									bindLeft()
+									bindRCity()
+								})
+							}
+						})
+				}
+				// 选择地址
+				function selectpostAddr(ind) {
+					var addList = $('.address-lists').find('li')
+						,postadd = $('.section.addr').find('.media').eq(ind)
+					addList.unbind('click')
+					addList.bind('click',function () {
+						var _this = $(this)
+							name = _this.find('.usr-name').text(),
+							phone = _this.find('.usr-phone').text(),
+							city = _this.find('.addr-detail p').eq(0).text(),
+							add = _this.find('.addr-detail p').eq(1).text()
+							console.log(_this)
+							console.log(name,phone,city,add)
+						var info = '<p>\
+											<span class="addr-usr">'+name+'</span>\
+											<span class="addr-phone">'+phone+'</span>\
+										</p>\
+										<div class="addr-detail">\
+											<p>'+city+'</p>\
+											<p>'+add+'</p>\
+										</div>'
+
+
+						postadd.find('.media-body').html(info)
+						layer.closeAll()
+					})
+				}
+				// 滑动操作
+				function slideList() {
+					var ticketSlide = new slideOut({
+					     itemsBox:'.address-lists ul li' //滑动块外部容器
+					     ,items:'.addr-list' //滑动块
+					     ,width:120 //滑动块总大小
+					     ,btns:['编辑','删除'] //滑动出现按钮配置，可多个，宽度均分滑动块大小
+					     ,skin:'address-edit' //自定义样式类名 可选项
+					     ,btn1:function (btn) { //按钮点击事件 btn1 btn2 对应排列 返回为当前被点击按钮
+					     	editAddr(btn)
+					     },btn2:function (btn) {
+					     	removeAddr(btn)
+					     }
+					 })
+				}
+				function removeAddr(btn) {
+				 	var _this = $(btn).closest('li')
+				 		,width = parseInt(_this.width())
+				 	_this.animate({'left': -200 - width +'px','height':0},500)
+				 	setTimeout(function () {_this.remove()},490)
+				}
+				function editAddr(btn) {
+				 	var _this = $(btn).closest('li')
+				 		,name = _this.find('.usr-name').text()
+				 		,phone = _this.find('.usr-phone').text()
+				 		,first_Addr = _this.find('.addr-detail p').eq(0).text()
+				 		,second_Addr = _this.find('.addr-detail p').eq(1).text()
+				 		console.log(name,phone,first_Addr,second_Addr)
+				 		console.log(_this)
+				 		data = {
+				 			name:'111',
+				 			phone:'222',
+				 			city:'3333',
+				 			detail:'444'
+				 		}
+				 		addInd = _this.index()
+				 	editingAddr(data,addInd)
+				}
+			})
+			
+			// select goods classes && weight popup
+			$('.pop-classes-weight').on('click',function () {
+				var action = '<div class="addr-action classes-weight-title">\
+										<div class="flex">\
+											<div class="flex-item">\
+												<a href="javascript:;" class="closePopUp">关闭</a>\
+											</div>\
+											<div class="flex-item">\
+												<a href="javascript:;" class="saveWeight"></a>\
+											</div>\
+										</div>\
+									</div>'
+				var classesWeight = '<div class="section classes-weight">\
+										<div class="media select-goods-classes" style="display:none;">\
+											<div class="media-body media-middle"> 物品名称</div>\
+											<div class="media-right media-middle">\
+												<p>\
+													<span> 数码产品</span>\
+													<i class="fa fa-lg fa-angle-right"></i>\
+												</p>\
+											</div>\
+										</div>\
+										<div class="goods-classes">\
+											<input type="text" style="display:none;" class="classesValue"/>\
+											<p>物品名称</p>\
+											<ul>\
+												<li> 文件</li>\
+												<li> 数码产品</li>\
+												<li> 生活用品</li>\
+												<li> 服饰</li>\
+												<li> 食品</li>\
+												<li class="other"> 填其他</li>\
+											</ul>\
+											<div class="input-area">\
+												<div class="media">\
+													<div class="media-body">\
+														<input type="text" name="other-input" placeholder="告诉我们你寄的是什么？">\
+													</div>\
+													<div class="media-right">\
+														<a href="javascript:;" class="submit-other">确定</a>\
+													</div>\
+												</div>\
+											</div>\
+										</div>\
+										<div class="goods-weight" style="display:none;">\
+											<input type="text" style="display:none;" class="weightValue"/>\
+											<p> 物品重量</p>\
+											<ul>\
+												<li> 1kg</li>\
+												<li> 1.5kg</li>\
+												<li> 2kg</li>\
+												<li> 2.5kg</li>\
+												<li> 3kg</li>\
+												<li class="other"> 填其他</li>\
+											</ul>\
+											<div class="input-area">\
+												<div class="media">\
+													<div class="media-body">\
+														<input type="text" name="other-input" placeholder=" 告诉我们你的物品重量是？">\
+														<span>kg</span>\
+													</div>\
+													<div class="media-right">\
+														<a href="javascript:;" class="submit-other">确定</a>\
+													</div>\
+												</div>\
+											</div>\
+										</div>\
+									</div>'
+				if($('.addr-action.classes-weight-title').length != 0){return false}
+				layer.open({
+					title:action,
+					skin:'',
+					area:['100%','270px'],
+					content:classesWeight,
+					success:function (layero,index) {
+						blockScrollLayer('body')
+						// 关闭物品重量
+						$('.addr-action.classes-weight-title .closePopUp').bind('click',function () {
+							layer.close(index)
+							blockScrollLayer('body')
+						})
+
+						var goodsSelect = $('.select-goods-classes')
+							goodsClasse = $('.goods-classes')
+							goodsWeight = $('.goods-weight')
+							classeValue = goodsClasse.find('.classesValue')
+							weightValue = goodsWeight.find('.weightValue')
+
+						// 选择物品类别
+						goodsClasse.find('li').on('click',function () {
+							var _this = $(this)
+								,CN = 'select-classes'
+							goodsClasse.find("."+CN).removeClass(CN)
+							if(_this.hasClass('other')){
+								_this.closest("ul").next('.input-area').show()
+
+							}else{
+								_this.closest("ul").next('.input-area').hide()
+								goodsSelect.show().find('span').text(_this.text())
+								goodsClasse.hide()
+								goodsWeight.show()
+								classeValue.val(_this.text())
+							}
+							_this.addClass(CN)
+
+
+						})
+						// 重做物品类别
+						$('.select-goods-classes .media-right').on('click',function () {
+							$(this).closest('.media').hide()
+							goodsWeight.hide()
+							goodsSelect.hide()
+							goodsClasse.show()
+						})
+						// 重量选择
+						goodsWeight.find('li').on('click',function () {
+							var _this = $(this)
+								,CN = 'select-classes'
+							goodsWeight.find("."+CN).removeClass(CN)
+							if(_this.hasClass('other')){
+								_this.closest("ul").next('.input-area').show()
+
+							}else{
+								_this.closest("ul").next('.input-area').hide()
+								weightValue.val(_this.text())
+								sendClassWeight()
+							}
+							_this.addClass(CN)
+						})
+						// 自定义物品种类
+						goodsClasse.find('.submit-other').on('click',function () {
+							var inputVal = $(this).closest('.media').find('input').val()
+							if(inputVal == ''){layer.msg('请输入物品类别',{offset:'auto',time:1000});return false;}
+							goodsSelect.show().find('span').text(inputVal)
+							goodsClasse.hide()
+							goodsWeight.show()
+							classeValue.val(inputVal)
+						})
+						// 自定义物品重量
+						goodsWeight.find('.submit-other').on('click',function () {
+							var inputVal = $(this).closest('.media').find('input').val()
+							if(inputVal == ''){layer.msg('请输入物品重量',{offset:'auto',time:1000});return false;}
+							weightValue.val(inputVal+'kg')
+							sendClassWeight()
+						})
+						function sendClassWeight() {
+							var goal = $('.pop-classes-weight')
+							goal.find('.goods-name').text(goodsClasse.find('.classesValue').val())
+							goal.find('.goods-weight').text(goodsWeight.find('.weightValue').val())
+							layer.closeAll()
+						}
+					}
+
+				})
+			})
+
+			// 保价 popup
+			$('.pop-support-value').on('click',function () {
+				var action = '<div class="addr-action supportValue-title">\
+										<div class="flex">\
+											<div class="flex-item">\
+												<a href="javascript:;" class="closePopUp">不保价</a>\
+											</div>\
+											<div class="flex-item">\
+												<a href="javascript:;" class="save-supportValue">开始保价</a>\
+											</div>\
+										</div>\
+									</div>'
+										// <input type="number" name="goods-value" placeholder="请填写物品实际价值" onkeyup="this.value=this.value.replace(/[^\\d]/g,\'\')" onafterpaste="this.value=this.value.replace(/[^\\d]/g,\'\')" >\
+				var supportValue = '<div class="section supportValue">\
+									<p class="title"> 保价</p>\
+									<div class="input-value">\
+										<input type="text" name="goods-value" placeholder="请填写物品实际价值"  >\
+										<span>元</span>\
+									</div>\
+									<p class="about-money"> 预计收取费用 <span class="change-about-money"><span>0</span>元</span></p>\
+									<div class="support-value-notice">\
+										 保价费率：每一千元收取5元保价费用(不足一百元按一百元计)\
+									</div>\
+								</div>'
+				layer.open({
+					title:action,
+					area:['100%'],
+					content:supportValue,
+					success:function (laero,index) {
+						// 关闭保价层
+						$('.addr-action.supportValue-title .closePopUp').bind('click',function () {
+							popValueBox = $('.pop-support-value')
+							popValueBox.find('.goods-name').text('')
+							popValueBox.find('.goods-height').text('')
+							layer.close(index)
+							blockScrollLayer('body')
+							layer.msg('已取消保价',{offset:'auto',anim:0})
+						})
+						// 计算保价费用
+						$('input[name="goods-value"]').keyup(function () {
+							var input = $(this).val()
+				            var regu = /^([1-9][0-9]*)$/;
+				            //var regu = /^([1-9][0-9]*){1,3}$/;  亲测可用
+				            //var regu = /^\+?[1-9][0-9]*$/;  亲测可用
+				            if (input != "") {
+				                if (!regu.test(input)) {
+				                	console.log('失败')
+				                	data = input.replace(/[^1-9]/g,'')
+				                	$(this).val(data)
+				                } else {
+				                	console.log('通过')
+				                }
+			                 		value = Math.ceil(input/100)/10*5
+			                		$('.change-about-money span').text(value)
+				            }
+
+
+						})
+						// 保存保价费用
+						$('.addr-action.supportValue-title .save-supportValue').bind('click',function () {
+
+							 var value = $('input[name="goods-value"]').val()
+							 	support = $('.change-about-money span').text()
+							 	if(value ==''|| value == undefined){ layer.msg('如需保价请输入物品价值进行费用预估',{offset:'auto',anim:0}) }
+							 		else{
+							 			popValueBox = $('.pop-support-value')
+							 			popValueBox.find('.goods-name').text(value+'元')
+							 			popValueBox.find('.goods-height').text('，保费'+support+'元')
+							 		}
+							 		layer.close(index)
+							 		blockScrollLayer('body')
+							 	
+						})
+					}
+				})
+			})
+
+		})
+	</script>
+</body>
+</html>

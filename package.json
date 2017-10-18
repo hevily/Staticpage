@@ -6,6 +6,7 @@
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.18.5",
+    "bs-html-injector": "^3.0.3",
     "gulp": "^3.9.1",
     "gulp-uglify": "^3.0.0",
     "jade": "^1.11.0",

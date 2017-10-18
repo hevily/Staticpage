@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<!--<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">-->
+<title>登录客户</title>
+<link type="text/css" rel="stylesheet" href="css/dengjikehu.css">
+<link type="text/css" rel="stylesheet" href="css/auto.css">
+</head>
+<body style="background:#f2f2f2;">
+<input type="hidden" value="" id="hid">
+<div class="biaoqians" id="biaoqian">
+	<div class="clearth"></div>
+</div>
+<div class="biaoqi"><input type="text" value="" placeholder="请输入标签"></div>
+ <div class="line_hight"></div>
+ <div class="bq_total">
+    <p>大家用的标签(可直接选择)</p>
+    <div class="bqn">
+        <input type="button" value="老带新" name="isEnd" class="inuts"  >
+        <input type="button" value="中介带着" name="isEnd" class="inuts">
+        <input type="button" value="豪车" name="isEnd" class="inuts">
+        <input type="button" value="名表" name="isEnd" class="inuts">
+        <input type="button" value="公务员" name="isEnd" class="inuts">
+    </div>
+    <div class="clearth"></div>
+ </div>
+ <div class="quding"><a href="">确定</a></div>
+</body>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script type="text/javascript">
+	//var arry=new Arry[];
+	$(function(){
+        var ass=[];
+     $('.inuts').click(function(){
+        var nums=$(this).attr("value");
+        //alert(nums);
+        var spans="<span>"+nums+"</span>";
+        //$("#biaoqian").prepend("<span onclick=RemoSpan(this)>"+nums+"</span>");
+        var hid=$("#hid").val();
+        if(hid.indexOf(nums)>=0){
+              
+              //t(123);
+        }else{ //ert(456);
+               $("#biaoqian").prepend("<span onclick=RemoSpan(this)>"+nums+"</span>");
+               var qb=hid+nums+",";
+               $("#hid").val(qb);
+        }
+        
+      
+        
+
+       });  
+	});
+
+	    function RemoSpan(aa){
+		     aa.remove();
+		    // alert(aa.innerText);
+		     var his=$("#hid").val().substring(0,$("#hid").val().length-1);
+		     var hid=[];
+		     hid=his.split(",");
+		     var i="";
+		     for(var j=0; j<hid.length; j++)
+		     {
+
+                 if(hid[j]==aa.innerText){}else{
+
+                 	i=i+hid[j]+",";
+                 }
+
+		     }
+		    $("#hid").val(i);
+		      // alert(aa);
+
+		         //arry=$("#hid").attr("value").split(',');
+        //for(var i=0 ; i<arry.length; i++){
+           //if(==arry[i]){aa.remove();}else{//alert(456);
+           // $("#biaoqian").prepend("<span onclick=RemoSpan(this)>"+nums+"</span>");
+            //$("#hid").val(nums)
+          // }  
+         
+        //}
+		     }
+
+</script>
+</html>
+
+	
+
+
+

@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>柱状图</title>
+</head>
+<style type="text/css">
+ul{ list-style: none; }
+	.ji{ float: left; font-size: 60px; cursor: pointer; width: 60px; height: 60px; background: red;}
+	.jik{ float: left; font-size: 60px; cursor: pointer;}
+	.jil{ float: left; width: 500px; overflow: hidden; }
+</style>
+<body>
+<div class="ji"><</div>
+<div class="jil" id="four_flash">
+	<div class="zhutu" id="zhutu" style=" width:800px;height: 300px;"></div>
+</div>
+<div class="jik">></div>
+</body>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script type="text/javascript" src="echarts.js"></script>
+<script type="text/javascript">
+	//$("#zhutu").width($("body").width());
+ // 基于准备好的dom，初始化echarts实例
+ var XianShi=['09/08-09/20', '05/0309/23', '05/1209/18', '05/1209/18', '05/1209/18', '05/1209/18', '05/1209/18','09/08-09/20', '05/0309/23', '05/1209/18', '05/1209/18', '05/1209/18', '05/1209/18', '05/1209/18','09/08-09/20', '05/0309/23', '05/1209/18', '05/1209/18', '05/1209/18', '05/1209/18', '05/1209/18','05/1209/18'];
+ var XianShuShuZhi=[0, 52, 200, 334, 390, 330, 220,0, 52, 200, 334, 390, 330, 220,0, 52, 200, 334, 390, 330, 220,200];
+ var myChart = echarts.init(document.getElementById('zhutu'));
+ myChart.setOption({
+title:{},
+color: ['#3398DB'],
+    tooltip : {
+        trigger: 'axis',
+        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+        }
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis : [
+        {
+            type : 'category',
+            data : XianShi,
+            axisTick: {
+                alignWithLabel: false
+            },
+
+
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value',
+            axisLine:{show:false},
+            axisLabel : {
+            formatter: function(){
+                  return "";
+            }
+        }
+        }
+
+    ],
+    series : [
+        {
+            name:'',
+            type:'bar',
+            barWidth: '60%',
+            data:XianShuShuZhi,
+            itemStyle:{
+
+            	normal: {
+
+            		label: {
+            			show: true,
+						position: 'top',
+						textStyle: {
+						color: '#615a5a'
+					}
+            		}
+            	}
+            },
+        
+        }
+        
+    ],
+
+
+
+ 	})
+ myChart.on('click',function(params){ var aa=params.name; alert(aa)})
+        
+
+ 
+//学员
+var _index5=0;
+//数组
+//var numArr=new Array(1,2,3,4,5,6);
+// scroll nav btn
+	(function (goal,defaultNavs) {
+
+			var _goal = $(goal)
+				,box  = _goal.find('.zhutu')
+				,staticWidth = 50
+			box.css('transition','all 0.5s');
+			$(".ji").click(function () {
+				changePos('left')
+			})
+			$(".jik").click(function () {
+				changePos('right')
+			})
+			function changePos(dir) {
+                var left = parseInt(box.css('left'))
+                if(dir == 'left') left -= staticWidth
+                    else left += staticWidth
+                totalWidth = parseInt(box.width())
+                viewWidth = parseInt(_goal.width())
+                if (-left > (totalWidth - viewWidth)) left = -(totalWidth - viewWidth) 
+                    else if(left > 0) left = 0
+				box.css({"left":left})
+			}
+		})('#four_flash')
+</script>
+
+</html>

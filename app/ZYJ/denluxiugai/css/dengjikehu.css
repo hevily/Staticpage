@@ -1,0 +1,237 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{margin:0 auto; padding:0;}
+body{font-family:"微软雅黑";}
+ul{ list-style:none;}
+html{ font-size:62.5%}
+.clearth{ clear:both;}
+
+.dengji { width:100%; height:auto; margin:0 auto; font-size:1.2rem;}
+.denglu{ width:100%; height:40px; margin:0 auto; border-bottom:1px solid #f2f2f2;}
+.toal{width:90%; height:auto; margin:0 auto; line-height:40px;}
+.toals{width:90%; height:auto; margin:0 auto; line-height:40px;}
+.info_left{float:left; width:30%; height:auto;  color:#222; font-size:1.1rem;}
+.info_right{ float:right; width:70%;}
+.info_right input.nmaes{width:100%; height:30px; border:0px; outline:0; text-align:right;}
+.pp{line-height:60px; border-bottom:1px solid #f2f2f2; display:none;}
+#toal{display:block;}
+.dengphone{ width:100%; height:auto; border-bottom:1px solid #f2f2f2;}
+.xinzeng{width:90%; height:auto; margin:0 auto; }
+.nmaes_right{ text-align:right; float:left; width:70%;}
+.nmaes_right input{width:100%; height:30px; border:0px; outline:0; text-align:right; border:0px; outline:0px;}
+.lianming{ width:90%; height:auto; margin:0 auto;}
+.lianmi{width:60px; float:left; display:block; line-height:40px; color:#222; font-size:1.2rem;}
+.mi{ width:40px; height:40px; background:url(../images/bz.png) no-repeat; background-size:18px 18px; background-position:center center; display:inline-block; float:left;}
+.kehu{ width:30px; height:40px; background:url(../images/tianjia.png) no-repeat; background-size:20px 20px; background-position:left center; font-size:1.2rem; display:inline-block; float:left;}
+.kehu a{display:block; width:40px; height:40px;} 
+.xian{width:100%; height:auto; margin:0 auto; border-bottom:1px solid #f2f2f2; line-height:40px;}
+.spann{ display:block; float:left; line-height:40px; color:#222; font-size:1.1rem;}
+
+.info_leftp{float:left; width:15%; height:auto;  color:#222; font-size:1.1rem;}
+.moren{ width:10%; float:left; margin-left:5%;}
+.nmaes div.in_left, div.in_right{display:inline-table; float:left;}
+
+.nmaes {
+            position: relative;
+            line-height: 30px;
+			width:30%;
+			margin-top:2%;
+			font-size:1.1rem;
+        }
+        
+       .in_left input[type="radio"] {
+            width: 16px;
+            height: 16px;
+            opacity: 0;
+			
+			
+        }
+        
+       .in_left  label {
+            position: absolute;
+            left: 4px;
+            top: 6px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 1px solid #999;
+        }
+        
+        /*设置选中的input的样式*/
+        /* + 是兄弟选择器,获取选中后的label元素*/
+        .in_left input:checked+label { 
+            background-color: #3f92f7;
+            border: 1px solid #3f92f7;
+        }
+        
+      .in_left   input:checked+label::after {
+            position: absolute;
+            content: "";
+            width: 3px;
+            height: 8px;
+            top: 2px;
+            left: 6px;
+            border: 2px solid #fff;
+            border-top: none;
+            border-left: none;
+            transform: rotate(45deg)
+        }
+		
+		
+		 .in_right input[type="radio"] {
+            width: 16px;
+            height: 16px;
+            opacity: 0;
+			
+			
+        }
+        
+       .in_right  label {
+            position: absolute;
+            left: 40px;
+            top: 6px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 1px solid #999;
+        }
+        
+        /*设置选中的input的样式*/
+        /* + 是兄弟选择器,获取选中后的label元素*/
+        .in_right input:checked+label { 
+            background-color: #3f92f7;
+            border: 1px solid #3f92f7;
+        }
+        
+      .in_right   input:checked+label::after {
+            position: absolute;
+            content: "";
+            width: 3px;
+            height: 8px;
+            top: 2px;
+            left: 6px;
+            border: 2px solid #fff;
+            border-top: none;
+            border-left: none;
+            transform: rotate(45deg)
+        }
+		
+		
+	.nmaes span{padding-left:8px;}
+div.moren1 {
+            position: relative;
+            line-height: 30px;
+        }
+        
+       .moren1 input[type="radio"] {
+            width: 16px;
+            height: 16px;
+            opacity: 0;
+			
+        }
+        
+       .moren1  label {
+            position: absolute;
+            left: 8px;
+            top: 17px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 1px solid #999;
+        }
+        
+        /*设置选中的input的样式*/
+        /* + 是兄弟选择器,获取选中后的label元素*/
+        .moren1 input:checked+label { 
+            background-color: #3f92f7;
+            border: 1px solid #3f92f7;
+        }
+        
+      .moren1   input:checked+label::after {
+            position: absolute;
+            content: "";
+            width: 3px;
+            height: 8px;
+            top: 2px;
+            left: 6px;
+            border: 2px solid #fff;
+            border-top: none;
+            border-left: none;
+            transform: rotate(45deg)
+        }
+
+.moren1 p{font-size:1.1rem; text-align:center; color:#ccc;}
+
+.line_hight{ width:100%; height:8px; background:#f2f2f2;}
+.biaoqian{ width:100%; height:auto; margin:0 auto; border-bottom:1px solid #f2f2f2;}
+
+.biq{ width:90%; height:auto; margin:0 auto; margin-top:3%;}
+.biq span{float:left; display:block; width:10%;}
+.bangzhu{ width:20px; height:20px; background:url(../images/bz.png) no-repeat; background-size:18px 18px; background-position:left center; display:inline-block; float:left;}
+.bqi{ width:90%; height:auto; margin:0 auto; }
+
+.beizhu{width:100%; height:auto; margin:0 auto; border-bottom:1px solid #f2f2f2;}
+.beizhu1{ width:90%; height:auto; margin:0 auto; font-size:1.1rem; margin-top:3%;}
+.beizhu1 span b{font-style:normal; color:#ccc; font-weight:normal;}
+.beizhu2{width:90%; height:auto; margin:0 auto; margin-top:5%;}
+.beizhu2 textarea{width:100%; height:40px; margin:0 auto; border:0px; outline:0; resize:none;}
+
+.xiabu{ width:100%; height:40px; background:#ccc; text-align:center; line-height:40px; font-size:1.2rem;  position:fixed; bottom:0px;}
+.xiabu a{text-decoration:none; color:#222; }
+
+.beizhu3{width:90%; height:auto; margin:0 auto; margin-bottom:13%; padding-bottom:3%;}
+.beizhu3 input{background-color:transparent; border-color:transparent; -webkit-appearance: none; appearance:none;}
+.beizhu3 input{ width:28%; float:left; display:block; margin-left:4%; margin-top:4%; height:30px; border-radius:5px; border:1px solid #f2f2f2; background:#fff;}
+.beizhu3 input:focus{ background:#B1D2F9; border:1px solid #63a5f3; outline:0; color:#126bd3;}
+
+.xiaci{ width:100%; height:40px;}
+.xiaci1{width:90%; height:auto; margin:0 auto;}
+.xia_left{float:left; display:block; width:40%; line-height:40px; font-size:1.1rem;}
+.xia_left b{font-weight:normal; color:#ccc; font-style:normal;}
+.xia_right{ float:30%; float:right; line-height:40px; color:#ccc;}
+.biqs{ width:90%; height:auto; margin:0 auto; margin-top:3%;}
+.biqs span{display:block; margin-left:3%;   border-radius:2px; padding:1% 2% 1% 2%; font-size:1.2rem; float:left; background:#B1D2F9; border:1px solid #63a5f3; outline:0; color:#126bd3; background:#fff;}
+
+/*联名客户*/
+.t_lianming{ width:100%; height:100%; position:fixed; top:0px; left:0px; background:#000000; opacity:0.8; display:none;}
+.jieshi{ width:80%; height:auto; position:fixed; top:30%; background:#ffffff; border-radius:5px; left:10%; display:none;}
+.ji_title{ width:100%; text-align:center; height:auto; margin:0 auto; margin-top:5%; font-size:1.6rem; margin-bottom:5%;}
+.ji_info{ width:90%; height:auto; margin:0 auto; font-size:1.2rem; line-height:26px;}
+.zhidao{ width:100%; height:auto; margin:0 auto; border-top:1px solid #f2f2f2; text-align:center; line-height:40px; color:#048bd1; margin-top:3%;}
+
+/*标签*/
+.biaopian{ width:80%; height:auto; position:fixed; top:15%; background:#ffffff; border-radius:5px; left:10%; display:none;}
+.bp{ width:90%; height:auto; font-size:1.6rem; display:block; padding-top:3%; padding-bottom:3%; }
+.bp_info{width:90%; height:auto; margin:0 auto; font-size:1.2rem; line-height:26px; display:block;}
+
+/*添加标签*/
+.biaoqi{ width:100%; height:40px; margin:0 auto;}
+.biaoqi input{width:100%; height:40px; line-height:40px; color:#ccc; text-indent:0.5em; border:0px; outline:0;}
+.bq_total{ width:100%; height:auto; margin:0 auto; background:#fff; padding:3% 0 3% 0;}
+.bq_total p{display:block; width:90%; height:auto; margin:0 auto; margin-top:3%; font-size:1.2rem; color:#ccc;}
+.bqn{ width:90%; height:auto; margin:0 auto; margin-top:5%;}
+.bqn input{ display:block; margin-left:3%; padding:1% 2% 1% 2%; font-size:1.2rem; float:left; border:1px solid #ccc; background:#ffffff; outline:0; border-radius:2px; color:#555;}
+.bqn input:focus{background:#fff; border:1px solid #63a5f3; outline:0; color:#126bd3;}
+.quding{width:100%; height:40px; line-height:40px;}
+.quding a{ background:#0f6dfb; font-size:1.2rem; text-align:center; color:#fff; display:block; position:absolute; bottom:0px; display:block; width:100%;}
+.quding a{text-decoration:none; color:#ffffff;}
+
+/*联户*/
+.lianh{margin-bottom:0% !important;}
+.biaoqians{ width: 100%; height:auto; margin: 0 auto; background:#fff; padding-top: 2%; padding-bottom: 2%; }
+.biaoqians span{background:#fff; border:1px solid #63a5f3; outline:0; color:#126bd3; display: block;; float: left; margin-left: 2%;
+padding:1% 2% 1% 2%; font-size: 1rem;}
+
+.ss_info{ width:100%; height: auto; margin: 0 auto; }
+.ss_info ul li{ width: 90%; height: auto; margin: 0 auto; }
+.ss_name{ float: left; width: 30%; font-size: 1.4rem; }
+.ss_phone{ float: left; width: 64%; font-size: 1.4rem; text-align: center; }
+.ss_bij{float: left;width: 16px; height: 16px; margin-top:4%; }
+.ss_bij img{display: block;; width: 16px; height: 16px;}
+
+.shanchu{ width: 100%; height: auto; margin: 0 auto; position:absolute; bottom: 0px;}
+.shanchu ul li{width: 50%; height: auto;  float: left; background: #0f6dfb; line-height: 3rem; font-size: 1.4rem; text-align: center; color: #ffffff;}
+
+.shanchu ul li:first-child{ text-align: center; background:#f2f2f2; color: red; }
+

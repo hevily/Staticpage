@@ -1,0 +1,230 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" >
+<title>无标题文档</title>
+<link type="text/css" rel="stylesheet" href="css/swiper.min.css">
+<link type="text/css" rel="stylesheet" href="css/st.css">
+</head>
+
+
+
+<body class="shijue" >
+
+<input type="text" hidden="hidden" id="hid" value=" ">
+    <div class="swiper-container bgg" >
+       <div class="zting" id="zting">请休息一下<span id="miao">10</span>s</div>
+        <div class="swiper-wrapper" id="imgss">
+            <div class="swiper-slide swiper-no-swiping"><div class="qus-box" data-id="1001"><img src="images/s1.png"></div></div>
+            <div class="swiper-slide swiper-no-swiping"><div class="qus-box" data-id="1002"><img src="images/s3.png"></div></div>
+            <div class="swiper-slide swiper-no-swiping"><div class="qus-box" data-id="1003"><img src="images/s1.png"></div></div>
+            <div class="swiper-slide swiper-no-swiping"><div class="qus-box" data-id="1004"><img src="images/s2.png"></div></div>
+            <div class="swiper-slide swiper-no-swiping"><div class="qus-box" data-id="1005"><img src="images/s1.png"></div></div>
+             <div class="swiper-slide swiper-no-swiping"><div class="qus-box" data-id="1006"><img src="images/s2.png"></div></div>
+            <div class="swiper-slide swiper-no-swiping"><div class="qus-box" data-id="1007"><img src="images/s1.png"></div></div>
+             <div class="swiper-slide swiper-no-swiping"><div class="qus-box" data-id="1008"><img src="images/s4.png"></div></div>
+        </div>
+        <!-- Add Pagination -->
+     <!--   <div class="swiper-pagination"></div>-->
+        <!-- Add Arrows -->
+     <!--   <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>-->
+    </div>
+<!--效果html结束-->
+
+
+  <div class="tu_btn"><a href="javascript:;"  id="btn"><img src="images/shi.png"></a></div>
+<!-- <div class="bg_djs" id="nis">
+    <div class="bg_times"><img src="images/img10.png" id="timgs_img" /></div>
+ </div> -->
+  
+<!--<div class="tanceng"></div>  
+ <div class="tc">
+    <div class="tc_bn"><img src="images/bei.png"></div>
+    <div class="tc_info">恭喜你完成测试</div>
+    <div class="tc_word">测试成绩已上传家长端，可登录家长端查看。</div>
+     <div class="tc_btn"><img src="images/fanhui.png"></div>
+ </div>-->
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+
+
+ <script>
+    $(function () {
+        var qusArr = [],ansArr=[],swiperMain={}
+        function add_list() { 
+            var swiperMain = new Swiper('.swiper-container', {
+			effect : 'fade',
+			fade: {
+			  crossFade: true,
+			},
+            autoplay: 3000,
+            onSlideChangeEnd: function(swiper){
+                //console.log('1')
+				if(swiper.isEnd){
+					swiper.stopAutoplay();
+					
+						//alert("最后");
+								  var backwards = function(){
+								numzs--;
+								setTimeout(backwards,100);
+								if(numzs===0)
+								{
+									//return numzs;
+									//add_list();
+									//alert(123);
+									}
+										
+							}
+							var numzs = 5;
+		                     backwards();
+						
+						}
+		
+				if(swiper.activeIndex== 1)
+				{//alert(swiper.activeIndex); 
+				
+				  
+			    //暂停十秒
+				var zanting = function(){
+					numzz--;
+					setTimeout(zanting,1000);
+					if(numzz>0){
+						 
+						 $("#zting").css("display","block");
+						 $("#miao").html(numzz);
+						 swiper.stopAutoplay(); }
+					else if(numzz===0){
+						
+						$("#zting").css("display","none");
+						swiper.startAutoplay();
+						
+						}
+							
+				}
+				var numzz = 10;
+				zanting();	 
+				
+				}
+				if(swiper.activeIndex == 3)
+				{
+					  //暂停十秒
+				var zanting1 = function(){
+					numzz1--;
+					setTimeout(zanting1,1000);
+					if(numzz1>0){
+						 
+						 $("#zting").css("display","block");
+						 $("#miao").html(numzz1);
+						 swiper.stopAutoplay(); }
+					else if(numzz1===0){
+						
+						$("#zting").css("display","none");
+						swiper.startAutoplay();
+						
+						}
+							
+				}
+				var numzz1 = 10;
+				zanting1();	
+					
+					}
+				if(swiper.activeIndex == 5)
+				{var miao1 = function(){
+					miao--;
+					setTimeout(miao1,1000);
+					if(miao>0){
+						 
+						 $("#zting").css("display","block");
+						 $("#miao").html(miao);
+						 swiper.stopAutoplay(); }
+					else if(miao===0){
+						
+						$("#zting").css("display","none");
+						swiper.startAutoplay();
+						
+						}
+							
+				}
+				var miao = 10;
+				miao1();	
+					}
+            },onInit: function(swiper){
+                    for(var i = 0; i< swiper.slides.length ;i++){
+                        qusArr.push($(swiper.slides[i]).find('.qus-box').data('id'))
+                    }
+
+                    $('#btn').click(function(){
+                        var ans = getID();
+						
+						  if(swiper.isEnd){
+							  //if(numzs===0){ alert(123);}
+					
+						//	    $.ajax({type: 'POST',url: "test.html",data: ans ,success: function(){
+//									//$(this).addClass("done");
+//								  }})
+														  
+							  }
+                        
+                              //$("#hid").val("ans");						
+							
+						console.log(ans);
+                    });
+					
+                }
+            });
+            function getID() {
+                var cSlide=$(swiperMain.slides[swiperMain.activeIndex])
+                    cPoint = cSlide.find('.qus-box').data('id');
+
+					if(jQuery.inArray(cPoint,ansArr)>-1){
+						
+						ansArr;
+						//alert(123);
+						
+						}else{ansArr.push(cPoint); 
+						//alert(456);
+						}
+                // 检查是否已经回答过
+               // if($.inArray(cPoint,ansArr) > -1){ console.log('已回答');
+//				 return ansArr; }
+                //ansArr.push(cPoint);
+				//console.log(ansArr);
+                return ansArr;
+                  //alert(ansArr);
+            }
+        } 
+		 
+
+      
+   add_list();
+    
+		//倒数计时
+//		var backward = function(){
+//			numz--;
+//			if(numz>0){
+//				$("#timgs_img").attr("src","images/img"+numz+".png");
+//			}else{
+//				$(".bg_djs").remove();
+//			}
+//			setTimeout(backward,1000);
+//			if(numz===0)
+//			{
+//				add_list();
+//				}
+//					
+//		}
+//		var numz = 10;
+//		backward();
+		
+		
+		
+		
+    });
+
+  </script>
+</html>

@@ -1,0 +1,29 @@
+.item-action{
+    background-color: #FE3824;
+    position: absolute;
+    top: 0;right: 0;
+    height: 100%;
+    text-align:center;
+    color:#fff;
+    z-index:0;
+    .item-action-btn{
+        height: 100%;
+        display: inline-block;
+        span{
+            width: 20px;
+            display: inline-block;
+            padding: 10px 0;
+            line-height: 30px;
+            color:#fff;
+
+        }
+    }
+    &.miss-btn{
+        background-color: #9b9b9b;
+        .item-action-btn{
+            span{
+                line-height: 27px;
+            }
+        }
+    }
+}

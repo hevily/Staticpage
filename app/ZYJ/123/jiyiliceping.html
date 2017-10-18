@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" >
+<title>记忆力测评_选词</title>
+<link type="text/css" rel="stylesheet" href="css/jy.css">
+</head>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript" charset="utf-8">  
+var myScroll;
+
+function loaded () {
+	myScroll = new IScroll('#wrapper', {
+		scrollbars: true,
+		mouseWheel: true,
+		interactiveScrollbars: true,
+		shrinkScrollbars: 'scale',
+		fadeScrollbars: true
+	});
+}
+
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+
+</script>
+<body class="shijue" onLoad="loaded()">
+<div class="jiyi_right"><img src="images/pc_jy.png"></div>
+<div class="jiyi">
+  <div class="jiyi_info">
+    <div id="wrapper">
+	<div id="scroller">
+		<ul>
+			<li data-click="0" id="1">入口</li>
+			<li data-click="0" id="2">白云</li>
+			<li data-click="0" id="3">西方</li>
+			<li data-click="0" id="4">牛羊</li>
+			<li id="5">雨水</li>
+			<li id="6">书本</li>
+			<li id="7">左右</li>
+			<li id="8">小鱼</li>
+			<li id="9">瓜果</li>
+
+			<li id="10">上车</li>
+			<li id="11">今天</li>
+			<li id="12">木头</li>
+			<li id="13">尺子</li>
+			<li id="14">毛巾</li>
+			<li id="15">两天</li>
+			<li id="16">回来</li>
+			<li id="17">手心</li>
+			<li id="18">小羊</li>
+
+			<li id="19">下巴</li>
+			<li id="20">手足</li>
+			<li id="21">今年</li>
+			<li id="22">九天</li>
+			<li id="23">山上</li>
+			<li id="24">大火</li>
+			<li id="25">小牛</li>
+			<li id="26">西瓜</li>
+			<li id="27">果皮</li>
+
+			<li id="28">书包</li>
+			<li id="29">飞机</li>
+			<li id="30">中午</li>
+			<li id="31">雨天</li>
+			<li id="32">两年</li>
+			<li id="33">门口</li>
+			<li id="34">衣服</li>
+			<li id="35">过河</li>
+			<li id="36">东西</li>
+
+			<li id="37">上午</li>
+			<li id="38">出去</li>
+			<li id="39">一片</li>
+			<li id="40">半个</li>
+			<li id="41">自己</li>
+			<li id="42">雨伞</li>
+			<li id="43">来去</li>
+			<li id="44">八个</li>
+			<li id="45">开门</li>
+
+			<li id="46">和苗</li>
+			<li id="47">土地</li>
+			<li id="48">大风</li>
+			<li id="49">下山</li>
+			<li id="50">东西</li>
+			<li id="51">东西</li>
+			<li id="52">门口</li>
+			<li id="53">自己</li>
+			<li id="54">上山</li>
+
+			<li id="55">今天</li>
+			<li id="56">自己</li>
+			<li id="57">上山</li>
+			<li id="58">门口</li>
+			<li id="59">东西</li>
+			<li id="60">东西</li>
+			<li id="61">门口</li>
+			<li id="62">自己</li>
+			<li id="63">上山</li>
+            
+            <li id="64">今天</li>
+			<li id="65">自己</li>
+			<li id="66">上山</li>
+			<li id="67">门口</li>
+			<li id="68">东西</li>
+			<li id="69">东西</li>
+			<li id="70">门口</li>
+			<li id="71">自己</li>
+			<li id="72">上山1</li>
+	</ul>
+	</div>
+    </div>
+  </div>
+  <div class="jiyi_tijiao"><a href="javascript:;"><img src="images/jiyitijiao.png"></a></div>
+</div>
+</body>
+<script>
+ $(document).ready(function(){
+	   
+  var arr=new Array(), j=0, arrId=new Array(),arrInfo=new Array(),
+	       num=37,curNum = 0;
+           // init Arr
+		   
+  var arr2=new Array('门口','入口','自己');
+		
+        for ( var i=0; i<num; i++){	arr.push(i);}
+        // var boo=true;
+		$("#scroller li").click(function(){
+			if(xxx.hasClass('className')){
+
+			}else{
+
+			}
+			
+			j++;
+               if(curNum==arr2.length)
+			   {
+				  return false; 
+				   }
+				  
+            var _this = $(this);
+            //获取词语内容
+			var text=_this.html();
+			arrInfo.push(text);
+			console.log(arrInfo);
+			//获取词语id
+			var aId=_this.attr('id');
+			arrId.push(aId);
+			console.log(arrId);
+
+			if(jQuery.inArray(text,arr2)>-1){
+                 // _this.toggleClass('actives');
+			}else{
+                 // _this.toggleClass('a_over');	 
+            }
+			
+			var ck = _this.data('click')
+            if(ck == undefined || ck == null || ck ==''){
+                _this.data('click',1);
+				curNum ++;
+            }else{
+                _this.data('click',ck+1);
+				curNum;
+            }
+           
+		});
+	 });
+</script>
+</html>

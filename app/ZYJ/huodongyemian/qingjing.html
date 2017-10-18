@@ -1,0 +1,442 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" >
+<title>情景</title>
+<link type="text/css" rel="stylesheet" href="css/qingjing.css">
+<link type="text/css" rel="stylesheet" href="css/auto.css">
+<link rel="stylesheet" type="text/css" href="css/mimax.css">
+<style type="text/css">
+  .scroll-wrapper{
+    height: 100%;
+    position: fixed;
+    top: 0;left: 0;
+    margin-top: 0;
+    padding-top: 6rem !important;
+  }
+</style>
+</head>
+<body style="background:#f2f2f2;">
+  <div class="tj_title">
+  <span class="infos">义方家长网络学院</span>
+  <span class="gb"><img src="images/gb.png"></span>
+</div>
+<div class="chat">
+  <div class="wentis scroll-wrapper ">
+    <div class="scroll-content J_scrollContent">
+      <div class="chatContent">
+        
+      </div>
+    </div>
+</div>
+
+    
+    <!--<div class="qingjings">
+       <div class="wenti">
+         <img src="images/wenti.png">
+       </div>
+       <div class="wenti-info">
+       <div class="sanjiao"></div>
+         
+       </div>
+       <div class="clearth"></div>
+
+  </div>-->
+
+<!--<div class="jiazhang">
+    
+    <div class="jia_r"><img src="images/nvlaoshi.png"></div>
+    <div class="jia_l" >
+      <div class="you_sanjiao"></div>
+      <span id="da_inos">宝贝，你提的问题真得很好。 </span>
+    </div>
+    <div class="clearth"></div>
+
+</div>-->
+</div>
+
+
+<audio id="audio" src="images/music.wav" autoplay="autoplay"></audio>
+<div class="fo-total">
+<div class="footer J_inputWrapper" id="footer">
+   <div class="huida">请选择你的回答</div>
+   <div class="dans"><img src="images/daans.png"></div>
+</div>
+<div class="footer-info choice-wrapper">
+  <ul>
+  </ul>
+</div>
+</div>
+
+<input type="text" value=" " id="inId" hidden>
+
+<!--进入第二场景-->
+<div class="cj_bg" style="display: none;" id="bg"></div>
+<div class="cj_bg1" style="display: none;" id="cj">
+	<p>已完成第一场景</p>
+	<p>已完成第二场景</p>
+	<div class="cj_img"><img src="images/jiazai.gif"></div>
+</div>
+
+<!--25道题做完提交-->
+<div class="dtw" style="display: none;" id="dt">
+	  <div class="dtw_img"><img src="images/datiwc.png"></div>
+	  <p>25道题已全部答完</p>
+	  <p>正在提交考试结果数据</p>
+	  <div class="cj_img"><img src="images/jiazai.gif"></div>
+
+</div>
+
+<!--数据分析-->
+<div class="dtw" style="display: none;" id="dtw">
+	  <div class="dtw_img"><img src="images/fenxi.png"></div>
+	  <p>正在分析数据</p>
+	  <div class="cj_img"><img src="images/jiazai.gif"></div>
+
+</div>
+
+<!--数据分析完成-->
+<div class="dtw" style="display: none;" id="dws">
+	  <div class="dtw_img"><img src="images/wancheng.png"></div>
+	  <p>正在分析数据</p>
+	  <div class="cj_img"><img src="images/jiazai.gif"></div>
+
+</div>
+<style type="text/css">
+  .total{
+    height: 370px;
+    padding-bottom: 0;
+    position: relative;
+  }
+</style>
+
+</body>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script type="text/javascript">
+  $(function () {
+    var allQus = [
+      { 
+        'qusIndex':1,
+        'qus':'今天，孩子下学回来很开心，大声跟你说：“今天老师问大家的长大以后想做什么？”',
+        'ans':[
+          {
+            'anstext':'宝贝，你是怎么回答的？',
+            'ansscore':3,
+            'anstrans':4
+          },
+          {
+            'anstext':'宝贝，别告诉我，让我猜猜？宇航员？演员？超人？',
+            'ansscore':5,
+            'anstrans':5
+          },
+          {
+            'anstext':'宝贝，你想做什么我都支持你，你长大以后想做什么？',
+            'ansscore':4,
+            'anstrans':4
+          }
+        ]
+      },
+      {
+        'qusIndex':2,
+        'qus':'isert------今天，孩子下学回来很开心，大声跟你说：“今天老师问大家的长大以后想做什么？”',
+        'ans':[
+          {
+            'anstext':'宝贝，你是怎么回答的？',
+            'ansscore':3,
+            'anstrans':4
+          },
+          {
+            'anstext':'宝贝，别告诉我，让我猜猜？宇航员？演员？超人？',
+            'ansscore':5,
+            'anstrans':5
+          },
+          {
+            'anstext':'宝贝，你想做什么我都支持你，你长大以后想做什么？',
+            'ansscore':4,
+            'anstrans':4
+          }
+        ]
+      },
+      {
+        'qusIndex':3,
+        'qus':'isert------今天，孩子下学回来很开心，大声跟你说：“今天老师问大家的长大以后想做什么？”',
+        'ans':[
+          {
+            'anstext':'宝贝，你是怎么回答的？',
+            'ansscore':3,
+            'anstrans':4
+          },
+          {
+            'anstext':'宝贝，别告诉我，让我猜猜？宇航员？演员？超人？',
+            'ansscore':5,
+            'anstrans':5
+          },
+          {
+            'anstext':'宝贝，你想做什么我都支持你，你长大以后想做什么？',
+            'ansscore':4,
+            'anstrans':4
+          }
+        ]
+      },
+      {
+        'qusIndex':4,
+        'qus':'isert------今天，孩子下学回来很开心，大声跟你说：“今天老师问大家的长大以后想做什么？”',
+        'ans':[
+          {
+            'anstext':'宝贝，你是怎么回答的？',
+            'ansscore':3,
+            'anstrans':4
+          },
+          {
+            'anstext':'宝贝，别告诉我，让我猜猜？宇航员？演员？超人？',
+            'ansscore':5,
+            'anstrans':5
+          },
+          {
+            'anstext':'宝贝，你想做什么我都支持你，你长大以后想做什么？',
+            'ansscore':4,
+            'anstrans':4
+          }
+        ]
+      },
+      {
+        'qusIndex':5,
+        'qus':'都不对，我相当医生，医生总能给小朋友打针，长大以后我也要给小朋友打针。',
+        'ans':[
+          {
+            'anstext':'医生不单单是给别人打针，医生是帮助大家身体健康，救死扶伤的。而且，当医生可没有那么简单哦！',
+            'ansscore':3,
+            'anstrans':9
+          },
+          {
+            'anstext':'我怎么记得宝贝你打针时哭得可厉害了，要是你给别人打针，别人也哭怎么办？当医生可不是那么简单的！',
+            'ansscore':4,
+            'anstrans':9
+          },
+          {
+            'anstext':'宝贝，你肯定会成为一个不被小朋友喜欢的医生，医生的职责可不是让小朋友讨厌的！当医生可没有那么简单哦！',
+            'ansscore':5,
+            'anstrans':9
+          }
+        ]
+      },
+      {
+        'qusIndex':6,
+        'qus':'omsert------都不对，我相当医生，医生总能给小朋友打针，长大以后我也要给小朋友打针。',
+        'ans':[
+          {
+            'anstext':'医生不单单是给别人打针，医生是帮助大家身体健康，救死扶伤的。而且，当医生可没有那么简单哦！',
+            'ansscore':3,
+            'anstrans':9
+          },
+          {
+            'anstext':'我怎么记得宝贝你打针时哭得可厉害了，要是你给别人打针，别人也哭怎么办？当医生可不是那么简单的！',
+            'ansscore':4,
+            'anstrans':9
+          },
+          {
+            'anstext':'宝贝，你肯定会成为一个不被小朋友喜欢的医生，医生的职责可不是让小朋友讨厌的！当医生可没有那么简单哦！',
+            'ansscore':5,
+            'anstrans':9
+          }
+        ]
+      },
+      {
+        'qusIndex':7,
+        'qus':'omsert------都不对，我相当医生，医生总能给小朋友打针，长大以后我也要给小朋友打针。',
+        'ans':[
+          {
+            'anstext':'医生不单单是给别人打针，医生是帮助大家身体健康，救死扶伤的。而且，当医生可没有那么简单哦！',
+            'ansscore':3,
+            'anstrans':9
+          },
+          {
+            'anstext':'我怎么记得宝贝你打针时哭得可厉害了，要是你给别人打针，别人也哭怎么办？当医生可不是那么简单的！',
+            'ansscore':4,
+            'anstrans':9
+          },
+          {
+            'anstext':'宝贝，你肯定会成为一个不被小朋友喜欢的医生，医生的职责可不是让小朋友讨厌的！当医生可没有那么简单哦！',
+            'ansscore':5,
+            'anstrans':9
+          }
+        ]
+      },
+      {
+        'qusIndex':8,
+        'qus':'omsert------都不对，我相当医生，医生总能给小朋友打针，长大以后我也要给小朋友打针。',
+        'ans':[
+          {
+            'anstext':'医生不单单是给别人打针，医生是帮助大家身体健康，救死扶伤的。而且，当医生可没有那么简单哦！',
+            'ansscore':3,
+            'anstrans':9
+          },
+          {
+            'anstext':'我怎么记得宝贝你打针时哭得可厉害了，要是你给别人打针，别人也哭怎么办？当医生可不是那么简单的！',
+            'ansscore':4,
+            'anstrans':9
+          },
+          {
+            'anstext':'宝贝，你肯定会成为一个不被小朋友喜欢的医生，医生的职责可不是让小朋友讨厌的！当医生可没有那么简单哦！',
+            'ansscore':5,
+            'anstrans':9
+          }
+        ]
+      },
+      {
+        'qusIndex':9,
+        'qus':'老师也说当医生很不容易，还给我讲了一个奇怪的故事。跳转回第一题 跳转回第一题 跳转回第一题 跳转回第一题',
+        'ans':[
+          {
+            'anstext':'是么？老师还给你们讲了一个有关医生的故事么？你能给我讲讲么？',
+            'ansscore':4,
+            'anstrans':1
+          },
+          {
+            'anstext':'宝贝，我也想听听那个奇怪的故事，你给我讲讲吧。',
+            'ansscore':4,
+            'anstrans':1
+          },
+          {
+            'anstext':'宝贝，你给我说说那个故事吧？',
+            'ansscore':3,
+            'anstrans':1
+          },
+          {
+            'anstext':'宝贝，当医生不容易，当好医生更不容易。我们先听你说说老师的奇怪故事，你再决定你是不是要当医生吧。',
+            'ansscore':5,
+            'anstrans':1
+          }
+        ]
+      },
+    ]
+
+    $('.J_inputWrapper').on('click',function () {
+      var _this = $(this)
+        ,CN = 'opened'
+        ,choice = _this.next('.choice-wrapper')
+        ,scroll = $('.scroll-wrapper')
+
+        if(_this.hasClass(CN)){
+          // 展开
+          scroll.css('padding-bottom',choice.height())
+          choice.slideDown()
+          _this.removeClass(CN)
+          $('.J_scrollContent').scrollTop(200000)
+        }else{
+          // 收起
+          choice.slideUp()
+          _this.addClass(CN)
+          scroll.css('padding-bottom',0)
+        }
+        
+    })
+    var score = 0;
+    var qusRender = function (qus,whichqus,callback) {
+      var curQus = qus[whichqus - 1]
+        _score = 0
+        var chatBox = $('.chatContent')
+        qustext  = '<div class="clearfix">\
+              <div class="message others">\
+                <div class="avatar" data-author-id="lj">\
+                  <img src="picture/c-2-onepiece.jpg" alt="sender">\
+                </div>\
+                <div class="content">\
+                  <p class="author_name">sender</p>\
+                  <div class="bubble  bubble_default left">\
+                    <div class="bubble_cont">\
+                      <div class="plain">\
+                        <pre>'+curQus.qus+'</pre>\
+                      </div>\
+                    </div>\
+                  </div>\
+                </div>\
+              </div>\
+            </div>'
+
+        chatBox.append(qustext)
+        $('.J_scrollContent').scrollTop(2000)
+        // render ans
+          function renderAns(curQus) {
+            var ansBox = $('.choice-wrapper')
+              ,curAns = curQus.ans
+              ,ans = ''
+              $.each(curAns,function (i,item) {
+                ans +='<li data-qus_score="'+item.ansscore+'" data-qus_anstrans="'+item.anstrans+'">'+item.anstext+'</li>'
+              })
+              ansBox.html('<ul>'+ans+'</ul>')
+              scrollChat()
+
+              var ansItem = ansBox.find('li')
+              ansItem.each(function (i,item) {
+                var _item = $(item)
+                _item.unbind('clcik')
+                _item.bind('click',function () {
+                  var _this = $(this)
+                    _score = _this.data('qus_score')
+                    score += _score
+                    transqus = _this.data('qus_anstrans')
+                    // total score here
+                    console.log('当前得分合计：'+score)
+
+                  // console.log(_score,transqus)
+
+                  // 填入选择的答案
+                  var pickedAns = _this.text()
+                  anstext   = '<div class="clearfix">\
+                        <div class="message me">\
+                          <div class="avatar" data-author-id="lj">\
+                            <img src="picture/c-2-onepiece.jpg" alt="sender">\
+                          </div>\
+                          <div class="content">\
+                            <p class="author_name">sender</p>\
+                            <div class="bubble  bubble_primary right">\
+                              <div class="bubble_cont">\
+                                <div class="plain">\
+                                  <pre>'+pickedAns+'</pre>\
+                                </div>\
+                              </div>\
+                            </div>\
+                          </div>\
+                        </div>\
+                      </div>'
+
+                  chatBox.append(anstext)
+                  scrollChat()
+
+                  console.log(typeof(callback))
+                  // last one qus check
+                  if(curQus.qusIndex == qus.length){
+                    // push out score
+                    if(typeof(callback) == 'function'){
+                      callback(score)
+                    }
+                  }
+
+                  // 作答后跳转到对应问题继续
+                    setTimeout(function () {
+                      qusRender(allQus,transqus,callback)
+                    },1000)
+                })
+              })
+          }
+
+          renderAns(curQus)
+          function scrollChat() {
+            $('.scroll-wrapper').css('padding-bottom',$('.choice-wrapper').height())
+            $('.J_scrollContent').scrollTop(200000)
+          }
+    }
+
+
+    qusRender(allQus,1,function (s) {
+      alert('is last and the score is '+s)
+    })
+  })
+
+
+</script>
+</html>

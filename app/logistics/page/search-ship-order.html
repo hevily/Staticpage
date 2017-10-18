@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <style type="text/css">
+    .ship-order{
+
+    }
+    .ship-order .search-title{
+    	font-size: 18px;
+    	text-align:center;
+    }
+    .ship-order input[name="order-input"]{
+    	width: calc(100% - 10px);
+    	height: 35px;
+    	line-height: 35px;
+    	padding-left: 10px;
+    	border:1px solid #cfcfcf;
+    }
+    .ship-order .search-notice{
+    	color:#b2b2b2;
+    	font-size: 14px;
+    	margin: 5px 0;
+    }
+    .ship-order .search-start{
+    	padding-top: 40px;
+    }
+    .ship-order .search-start a{
+    	display: block;
+    	text-decoration: none;
+    	color: #fff;
+    	width: 80px;
+    	line-height: 35px;
+    	background-color: #795548;
+    	text-align:center;
+    	margin: 0 auto;
+    	border-radius: 5px;
+    }
+    .nosuchorder{
+    	color: #bd4141;
+    }
+    .nosuchorder .noorder-notice{
+    	padding-left: 40px;
+    }
+    </style>
+	<title>快递单查询</title>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="section ship-order">
+			<p class="search-title"> 快递单查询</p>
+			<input type="text" name="order-input">
+			<p class="search-notice"> 请输入需要查询的单号，一次一单。</p>
+			<div class="search-start">
+				<a href="send-record/trans-detail.html">查询</a>
+			</div>
+		</div>
+		<div class="section nosuchorder">
+			<p class="noorder-notice">暂无此单物流信息！</p>
+			<ol>
+				<li> 检查输入单号是否正确</li>
+				<li> 如果单号确认正确，且已寄送。可能暂未收入该单据，稍后再来查看吧</li>
+			</ol>
+			<p class="noorder-notice">
+				 
+			</p>
+
+		</div>
+	</div>
+	<footer></footer>
+	<!-- jQuery 2.1.4 -->
+	<!-- <script src="https://staticcdn.yshjie.com/cdn/librarypath/jquery/jquery-2.1.4.min.js"></script> -->
+	<!-- <script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script> -->
+	<!-- statistics  -->
+	<!-- <script src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/js/storecommon.js"></script> -->
+	<!-- <script type="text/javascript" src="/statichtml/bjmovie01/estores/Home/JSLang?v=1.1"></script> -->
+	<!-- <script type="text/javascript" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/home/js/checkWeChat.js?ver=1.95&r={:rand(0, 9999)}"></script> -->
+</body>
+</html>

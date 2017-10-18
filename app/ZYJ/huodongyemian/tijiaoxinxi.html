@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" >
+<title>情景</title>
+<link type="text/css" rel="stylesheet" href="css/zhaosheng.css">
+<link type="text/css" rel="stylesheet" href="css/auto.css">
+</head>
+<body>
+<div class="content">
+<div class="tj_title">
+	<span class="infos">义方家长网络学院</span>
+	<span class="gb"><img src="images/gb.png"></span>
+</div>	
+<div class="tijiao">
+	     <div class="tijiao_info">
+	     	为尽可能保证考试结果的准确性，在参加考试前，请先认真填写以下信息。
+	     </div>
+</div>
+
+<div class="tijiao_infos">
+	 <div class="tijiao_info2">
+	
+	 	 <ul>
+         <li>
+            <div class="ll">家长姓名</div>
+            <div class="rr"><input type="text" value=""></div>
+            <div class="clearth"></div>
+         </li>
+         <li>
+            <div class="ll">家长性别</div>
+            <div class="rr">
+            <label><input type="radio" name="abc"><i></i>男</label>&nbsp;&nbsp;&nbsp;
+            <label><input type="radio" name="abc" checked><i></i>女</label>
+            </div>
+            <div class="clearth"></div>
+         </li>
+         <li>
+            <div class="ll">手机号</div>
+            <div class="rr"><input type="text" value=""></div>
+            <div class="clearth"></div>
+         </li>
+         <li>
+            <div class="ll">孩子姓名</div>
+            <div class="rr"><input type="text" value=""></div>
+            <div class="clearth"></div>
+         </li>
+
+         <li>
+            <div class="ll">孩子年级</div>
+            <div class="rr">
+              <div id="search">
+             <div class="box">
+               <span class="select">请选择年级</span>  
+             </div>
+	 </div>
+
+</div>
+
+<style type="text/css">
+  
+  .bgs{ width: 100%; height: 100%; background: #000000; position: absolute; opacity: 0.5;  top: 0px; left: 0px; display: none;}
+  .sub{ width: 90%; height:300px; background: #ffffff; opacity: 1; border-radius: 5px; position: absolute; left: 5%; top: 25%; display: none; overflow-y:scroll; }
+  .intr{ color:#687aa6 !important; }
+</style>
+
+<div class="bgs" id="bgs"></div>
+  <ul class="sub" id="sub">
+              <li>幼儿园小班</li>
+               <li>幼儿园中班</li>
+                <li>幼儿园大班</li>
+              <li>一年级</li>
+              <li>二年级</li>
+              <li>三年级</li>
+              <li>四年级</li>
+              <li>五年级</li>
+              <li>六年级</li>
+            <div class="clearth"></div>
+  </ul>
+
+<div class="start" style="margin-top:10%;"><a href="qingjing.html"><img src="images/kaishi1.png"></a></div>
+</div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script type="text/javascript">
+  $("#search").click(function(){
+
+  //alert(123)
+  $("#bgs").css('display','block');
+  $("#sub").css('display','block');
+
+
+  });
+  $("#sub li").click(function(){
+
+   var info = $(this).html();
+   $(".select").html(info);
+   $(this).addClass("intr").siblings("li").removeClass("intr") ; 
+   $("#bgs").css('display','none');
+  $("#sub").css('display','none');
+   
+  });
+
+$("#bgs").click(function(){
+   $(this).css('display','none');
+   $("#sub").css('display','none');
+
+})
+</script>
+
+
+</html>
+
+<span style="font-size:14px;">
+<!--
+/* 
+ * 页面加入这段代码可使Android机器页面不再受到用户字体缩放强制改变大小 
+ * 但是会有一个1秒左右的延迟，期间可以考虑通过loading展示 
+ * 仅供参考 
+ */ -->
+ <script type="text/javascript">
+(function(){  
+    if (typeof(WeixinJSBridge) == "undefined") {  
+        document.addEventListener("WeixinJSBridgeReady", function (e) {  
+            setTimeout(function(){  
+                WeixinJSBridge.invoke('setFontSizeCallback',{"fontSize":0}, function(res) {  
+                    // alert(JSON.stringify(res));  
+                });  
+            },0);  
+        });  
+    } else {  
+        setTimeout(function(){  
+            WeixinJSBridge.invoke('setFontSizeCallback',{"fontSize":0}, function(res) {  
+                // alert(JSON.stringify(res));  
+            });  
+        },0);  
+    }  
+})();
+</script>   
+</span>  
+
+
+
+<span style="font-size:14px;"><style type="text/css">  
+    body  
+    {  
+        -webkit-text-size-adjust: 100% !important;  
+        text-size-adjust: 100% !important;  
+        -moz-text-size-adjust: 100% !important;  
+    }  
+</style></span> 

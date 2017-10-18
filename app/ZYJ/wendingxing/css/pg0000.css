@@ -1,0 +1,75 @@
+
+div, line {
+	transform-origin: 50% 50%;
+}
+
+/* Vertically centered text with SVG */
+
+div {
+    /*width: 900px;
+    height: 650px;*/
+	font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+	font-size:16px;
+ /*   text-shadow: 0 1px 2px rgba(0,0,0,.5);*/
+    overflow: hidden;
+	resize: none; /* just for this demo */
+    color: blue;
+}
+
+svg {
+    width: 100%;
+    height: 320px;
+ /*	pointer-events: none; so that you can resize the element */
+}
+
+text {
+    text-anchor: middle;
+ /*	pointer-events: auto; Cancel the svg’s pointer-events */
+    fill: currentColor;
+	
+	cursor:hand;
+}
+
+
+button[disabled]:active, button[disabled],
+input[type="button"][disabled]:active,
+input[type="button"][disabled],
+input[type="submit"][disabled]:active,
+input[type="submit"][disabled] ,
+button[disabled]:hover,
+input[type="button"][disabled]:hover,
+input[type="submit"][disabled]:hover
+{ 
+  color: GrayText!important;
+  cursor: inherit;
+  background-color: #ddd;
+  background: #ddd;
+}
+
+
+
+*{margin:0 auto; padding:0;}
+h2{color:red;}/*横屏时字体红色*/
+.bg{ width:90%; height:auto;  background:#fff; margin-top:10%;}
+.bg img{display:block; width:100%; height:100%;}
+.shijue{ background:url(../images/sj_bg.jpg) no-repeat; width:100%; height:100%; background-size:cover;}
+
+.bgg{  /* width: 96%;
+    height: 70%;
+    background-image: url('../images/wd_bg.png');
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -moz-background-size: contain;
+    position: relative;
+    top:9%;*/
+    background: #ffffff;
+    width: 96%; height:300px;
+    position: absolute; left: 2%; top: 3%; border-radius: 10px;
+   
+}
+
+.m_iimg{ position: absolute; width: 50%; height:auto; left: 25%; top: 20%; opacity: 1 !important; }
+.m_iimg img{ display: block; width: 100%; height: auto; }
+
