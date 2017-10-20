@@ -1,0 +1,152 @@
+@charset "utf-8";
+	$zero:0;
+// percent
+	$half:50%;
+	$whole:100%;
+// percent end
+// color setting
+	// normal bg
+		$normal-bg: #F2F2F2;
+	// usually color 常用颜色
+		$color-theme: #f36303;	// 橙色
+		$color-theme-block: #FF8D4D;	// 浅橙色
+
+	//text color 文字颜色
+		$color-text-normal: #3F3F3F;	// 浅灰 一般字体
+		$color-text-light: #686868;	// 浅灰 比一般字体低
+		$color-text-lighten: #C9C9C9;	// 不可用状态色
+
+	//match color 配色
+		$lemon-yellow: #FF6F2D;	// 柠檬黄
+		$light-red: #FF6969;	// 浅红色
+
+	// background-color 背景色
+		$lightGray: #EFEFF4;	// 浅灰色
+		$white: #FFF;	// 白色
+
+	//gapline 分割线
+		$normal-gapline: #C9C9C9;	// 白底分界线
+		$special-gapline: #9B9B9B;	// 白底分界线	特别的
+		$graybg-gapline: #C8C7CC;	// 灰底分界线
+
+	// mask 蒙层
+		$mask:rgba(0,0,0,0.75);	// 蒙版颜色 弹层颜色
+// color end
+// margin padding
+	$pd: 10px;
+	$ptd:$pd;
+	$prd:$pd;
+	$pbd:$pd;
+	$pld:$pd;
+
+	$md: 10px;
+	$mtd: $md;
+	$mrd: $md;
+	$mbd: $md;
+	$mld: $md;
+// margin padding end
+// font-size
+	$font-header:20px;
+// font-size end
+// position absolute
+	@mixin poa() {
+		position: absolute;
+	}
+	@mixin top($px) {
+		top:$px;
+	}
+	@mixin right($px) {
+		right:$px;
+	}
+	@mixin bottom($px) {
+		bottom:$px;
+	}
+	@mixin left($px) {
+		left:$px;
+	}
+// position absolute
+//border
+	@mixin border-style-width($style,$width) {
+		border-style: $style;
+		border-width:$width;
+	}
+	@mixin border-color($color) {
+		border-color:$color;
+	}
+//border end
+// radius
+	@mixin left-radius($R) {
+		-webkit-border-top-left-radius:$R;
+		   -moz-border-radius-topleft:$R;
+		        border-top-left-radius:$R;
+		-webkit-border-bottom-left-radius:$R;
+		   -moz-border-radius-bottomleft:$R;
+		        border-bottom-left-radius:$R;
+	}
+	@mixin right-radius($R) {
+		-webkit-border-top-right-radius:$R;
+		   -moz-border-radius-topright:$R;
+		        border-top-right-radius:$R;
+		-webkit-border-bottom-right-radius:$R;
+		   -moz-border-radius-bottomright:$R;
+		        border-bottom-right-radius:$R;
+	}
+	@mixin top-left-radius($R) {
+		-webkit-border-top-left-radius:$R;
+		   -moz-border-radius-topleft:$R;
+		        border-top-left-radius:$R;
+	}
+	@mixin top-right-radius($R) {
+		-webkit-border-top-right-radius:$R;
+		   -moz-border-radius-topright:$R;
+		        border-top-right-radius:$R;
+	}
+	@mixin bottom-left-radius($R) {
+		-webkit-border-bottom-left-radius:$R;
+		   -moz-border-radius-bottomleft:$R;
+		        border-bottom-left-radius:$R;
+	}
+	@mixin bottom-right-radius($R) {
+		-webkit-border-bottom-right-radius:$R;
+		   -moz-border-radius-bottomright:$R;
+		        border-bottom-right-radius:$R;
+	}
+	@mixin border-radius($R){
+		-webkit-border-radius:$R;
+		   -moz-border-radius:$R;
+		        border-radius:$R;
+	}
+//left-radius end
+//text
+	// 标题文字大小颜色
+		@mixin font-header($headerfz,$color) {
+
+			font-size: $headerfz;
+			color: $color;
+			.smaller{ font-size: 75%;}
+		}
+	// 标题文字大小颜色
+	// normal text
+		.normal-text{
+			color: $color-text-normal;
+		}
+	// more text ellipsis
+		@mixin text-ellipsis($line) {
+			@if($line == 1){
+				white-space:nowrap;
+			} @else{
+				display: -webkit-box;
+				-webkit-line-clamp:$line;
+				-webkit-box-orient:vertical;
+			}
+			overflow:hidden;
+			text-overflow:ellipsis;
+		}
+	// normal text end
+// text end
+// mobile container 640 center
+	@mixin mobile-container{
+		width:100%;
+		max-width:640px;
+		margin:0 auto;
+	}

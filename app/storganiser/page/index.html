@@ -2,29 +2,123 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" />
-    <link rel="stylesheet" type="text/css" href="../css/" />
-	<title>标题</title>
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" type="text/css" href="../css/build/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/build/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <!-- <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="../js/Swiper-3.4.2/dist/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/storgainser.css">
+	<title>Storganiser</title>
 </head>
 <body>
-	<header></header>
-	<div class="container">
-		<div class="section">
-			正文
-		</div>
-		<div class="section">
+	<header>
+		<nav class="navbar navbar-fixed-top ">
+			<div class="container">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand" href="#"><img src="../img/logo.png"></a>
+			    </div>
 
-		</div>
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav navbar-right">
+			        <li><a href="#" class="linear-bg">搜索店鋪</a></li>
+			        <li><a href="#">下載APP</a></li>
+			        <li><a href="#">商家參與</a></li>
+			        <li><a href="#">關於我們</a></li>
+			        <li><a href="#">商家登錄</a></li>
+			      </ul>
+			    </div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
+		</nav>
+	</header>
+	
+	<div class="swiper-container storganiser" >
+	  <div class="swiper-wrapper">
+	    <div class="swiper-slide ">
+	    	<div class="swiper-container store-search">
+	    	  <div class="swiper-wrapper">
+	    	    <div class="swiper-slide ">
+	    	    	<div class="search-slide linear-bg-alph">
+	    	    		<div class="start-search">
+	    	    			<img src="">
+	    	    			 現在開始使用Stoganiser
+	    	    		</div>
+	    	    		<div class="search-area">
+	    	    			<select name="city" id="city-select">
+	    	    				<option > 請選擇地區</option>
+	    	    				<option> 大陸</option>
+	    	    				<option> 香港</option>
+	    	    				<option> 澳門</option>
+	    	    				<option> 台灣</option>
+	    	    			</select>
+	    	    			<select name="store-classes" id="storeclasses">
+	    	    				<option> 請選擇店鋪種類</option>
+	    	    				<option> 茶餐廳</option>
+	    	    				<option> 超市</option>
+	    	    				<option> 麵條店</option>
+	    	    				<option> 炸雞店</option>
+	    	    			</select>
+	    	    			<button>
+	    	    				<i class="fa  fa-search"></i>
+	    	    				 搜索
+	    	    			</button>
+	    	    		</div>
+	    	    		<div class="search-notice">
+	    	    			選擇地區、店鋪種類、點擊搜索即可查看店鋪列表、掃碼關注。
+	    	    		</div>
+	    	    	</div>
+	    	    </div>
+	    	    <div class="swiper-slide hot">
+	    	    	<div class="wj">
+	    	    		
+	    	    	</div>
+	    	    </div>
+	    	  </div>
+	    	</div>
+	    </div>
+	    <div class="swiper-slide">slider2</div>
+	    <div class="swiper-slide">slider3</div>
+	  </div>
+	  <div class="swiper-pagination storganiser-pagination"></div>
 	</div>
-	<footer></footer>
+	
+	<footer>
+		<nav class="navbar navbar-default navbar-fixed-bottom footer">
+		  <div class="container">
+		    版權&copy;和沐天成傳媒有限公司，版權所有，不得轉載。
+		  </div>
+		</nav>
+	</footer>
 	<!-- jQuery 2.1.4 -->
 	<!-- <script src="https://staticcdn.yshjie.com/cdn/librarypath/jquery/jquery-2.1.4.min.js"></script> -->
 	<script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
 	<!-- statistics  -->
-	<script src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/js/storecommon.js"></script>
-	<script type="text/javascript" src="/statichtml/bjmovie01/estores/Home/JSLang?v=1.1"></script>
-	<script type="text/javascript" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/home/js/checkWeChat.js?ver=1.95&r={:rand(0, 9999)}"></script>
+	<script src="../css/build/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script src="../js/Swiper-3.4.2/dist/js/swiper.jquery.min.js"></script>
+	<script>
+		$(function () {
+			var storganiser = new Swiper('.storganiser', {
+				pagination:'.storganiser-pagination'
+			})
+
+			var storeSearch = new Swiper('.store-search', {
+				nested:true,
+				onInit:function (self) {
+					self.slideTo(1,50,false)
+				}
+			})
+			
+		})
+	</script>
 </body>
 </html>

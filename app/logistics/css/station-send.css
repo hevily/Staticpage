@@ -398,6 +398,9 @@ html {
           min-height: 50px;
           padding-top: 8px;
           width: 100%; }
+        html body .new-address .addr-edit .media .media-body p {
+          line-height: 45px;
+          margin: 0; }
     html body .new-address .save-default {
       padding: 0 10px;
       line-height: 45px; }
@@ -420,6 +423,10 @@ html {
       html body .country-select .selected-country {
         line-height: 30px;
         border-bottom: 1px solid #cfcfcf; }
+        html body .country-select .selected-country p {
+          padding: 0 10px;
+          margin-bottom: 0;
+          color: #989898; }
         html body .country-select .selected-country ul {
           padding: 0 10px;
           margin: 5px 0;

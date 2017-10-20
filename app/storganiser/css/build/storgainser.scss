@@ -1,0 +1,146 @@
+@import "font-rem-base.scss";
+@import "static-base/static-base.scss";
+html{
+	height: 100%;width: 100%;
+	body{
+		height: 100%;width: 100%;
+		background-image: url("../img/body-bg.png");
+		background-repeat: repeat;
+		background-size:12px 15px;
+		.container{
+			// height: 100%;
+			// @include mobile-container;
+		}
+	}
+}
+header{
+	// 导航
+	.navbar{
+		font-size: 1.2rem;
+		.navbar-header{
+			.navbar-brand{
+				height: 80px;
+				&>img{
+					width: 180px;
+				}
+			}
+			.navbar-toggle .icon-bar{
+				background-color: #ffb529;
+			}
+		}
+		.navbar-nav{
+			margin: 0;
+			
+		}
+		.nav>li{
+			padding: 25px 0;
+			a{
+				color:#fff;
+				padding: 5px 8px;
+				border-radius:5px;
+			}
+		}
+	}
+}
+
+.storganiser{
+	height: 100%;
+	width: 100%;
+	// padding-top: 80px;
+	padding-bottom: 50px;
+	color:#fff;
+	.storganiser-pagination{
+		bottom: 60px;
+		.swiper-pagination-bullet{
+			transform:all 0.5s;
+			width: 5px;height: 5px;
+			&.swiper-pagination-bullet-active{
+			width: 20px;
+			border-radius:6px;
+			background-color: #FFF;
+			}
+		}
+	}
+	.store-search{
+		height: 100%;width: 100%;
+		.search-slide{
+			position: relative;
+			top: calc(50% - 120px);
+			height: 240px;
+			overflow: hidden;
+			text-align:center;
+			padding: 50px 0 ;
+			.start-search{
+				color:#000;
+				margin-bottom: 30px;
+				font-size: 20px;
+			}
+			.search-area{
+				// font-size: 0;
+				margin-bottom: 20px;
+				select{
+					&[name="city"],&[name="store-classes"]{
+						background-color: #FFF;
+						color:#000;
+						font-size: 14px;
+					}
+				}
+				button{
+					font-size: 14px;
+					-webkit-appearance:none;
+					border-radius:5px;
+					padding: 4px 8px;
+					background-color: #ffce72;
+					border:1px solid #ffce72;
+					color:#000;
+				}
+
+			}
+			.search-notice{
+				font-size: 12px;
+			}
+		}
+		.wj{
+			width: 100%;height: 100%;
+			background-image: url("../img/wjbg.png");
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+	}
+}
+// background-color linear-gradient
+.linear-bg-alph{
+	background-image: linear-gradient(-90deg, rgba(255,180,41,0.75) 0%, rgba(255,219,40,0.75) 100%);
+}.linear-bg{
+	background-image: linear-gradient(-90deg, rgba(255,180,41,1) 0%, rgba(255,219,40,1) 100%);
+}
+footer{
+	.navbar{
+		text-align: center;
+		line-height: 50px;
+		background-color: #2f2f2f;
+		color:#fff;
+		font-size: 1.2rem;
+	}
+}
+// pad 之下查询
+@media screen and (max-width:768px) {
+	header{
+		// 导航
+		.navbar{
+			.navbar-brand>img{
+				width:120px;
+			}
+			.navbar-nav{
+				padding: 7.5px 0;
+			}
+			.nav>li{
+				
+				padding: 0;
+			}
+		}
+	}
+	
+
+	
+}

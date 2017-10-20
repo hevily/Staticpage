@@ -230,6 +230,10 @@ html{
 							width: 100%;
 
 						}
+						p{
+							line-height: 45px;
+							margin: 0;
+						}
 					}
 				}
 			}
@@ -281,6 +285,11 @@ html{
 			.selected-country{
 				line-height: 30px;
 				border-bottom: 1px solid #cfcfcf;
+				p{
+					padding: 0 10px;
+					margin-bottom: 0;
+					color:#989898;
+				}
 				ul{
 					padding: 0 10px;
 					margin: 5px 0;
