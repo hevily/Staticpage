@@ -193,9 +193,15 @@ html body .container {
   max-width: 640px;
   margin: 0 auto; }
   html body .container .flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex; }
     html body .container .flex .flex-item {
-      flex: 1;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
       padding: 0 10px;
       font-size: 14px;
       text-align: center;
@@ -367,5 +373,19 @@ html body .container {
       width: 50%;
       display: block;
       margin: 0 auto; }
+  html body .container .cancel-order {
+    margin-top: 50px;
+    text-align: center; }
+    html body .container .cancel-order a {
+      display: inline-block;
+      padding: 0 12px;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #fff;
+      background-color: red;
+      border: none;
+      width: 80px;
+      height: 35px;
+      line-height: 35px; }
 
 /*# sourceMappingURL=send-record.css.map */

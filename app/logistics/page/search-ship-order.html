@@ -12,6 +12,17 @@
     	font-size: 18px;
     	text-align:center;
     }
+    .ship-order .ship-class{
+        font-size: 16px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        color: #cfcfcf;
+    }
+    .ship-order .ship-class select{
+        font-size: 16px;
+        color: #795548;
+
+    }
     .ship-order input[name="order-input"]{
     	width: calc(100% - 10px);
     	height: 35px;
@@ -52,6 +63,15 @@
 	<div class="container">
 		<div class="section ship-order">
 			<p class="search-title"> 快递单查询</p>
+            <div class="ship-class">
+                <label>
+                     请选择物流名称：
+                     <select name="ship-name" id="shipName">
+                         <option> 和沐物流</option>
+                         <option> 顺丰速运</option>
+                     </select>
+                </label>
+            </div>
 			<input type="text" name="order-input">
 			<p class="search-notice"> 请输入需要查询的单号，一次一单。</p>
 			<div class="search-start">

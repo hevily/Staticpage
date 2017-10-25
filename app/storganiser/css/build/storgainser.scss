@@ -7,6 +7,7 @@ html{
 		background-image: url("../img/body-bg.png");
 		background-repeat: repeat;
 		background-size:12px 15px;
+		// font-family:"PingFang" !important;
 		.container{
 			// height: 100%;
 			// @include mobile-container;
@@ -16,10 +17,11 @@ html{
 header{
 	// 导航
 	.navbar{
-		font-size: 1.2rem;
+		font-size: 1rem;
+		font-weight: normal;
 		.navbar-header{
 			.navbar-brand{
-				height: 80px;
+				// height: 80px;
 				&>img{
 					width: 180px;
 				}
@@ -28,6 +30,7 @@ header{
 				background-color: #ffb529;
 			}
 		}
+		
 		.navbar-nav{
 			margin: 0;
 			
@@ -37,12 +40,24 @@ header{
 			a{
 				color:#fff;
 				padding: 5px 8px;
-				border-radius:5px;
+				border-radius:4px;
+				&:focus,&:hover{
+					background-image: linear-gradient(-90deg, #ffb429 0%, #ffdb28 100%);
+				}
+				&.active-nav{
+					background-image: linear-gradient(-90deg, #ffb429 0%, #ffdb28 100%);
+					color:#000;
+				}
 			}
 		}
 	}
 }
-
+.flex{
+	display:flex;
+	.flex-item{
+		flex:1;
+	}
+}
 .storganiser{
 	height: 100%;
 	width: 100%;
@@ -52,8 +67,9 @@ header{
 	.storganiser-pagination{
 		bottom: 60px;
 		.swiper-pagination-bullet{
-			transform:all 0.5s;
+			transition:all 0.5s;
 			width: 5px;height: 5px;
+			background:rgba(255,255,255,0.8);
 			&.swiper-pagination-bullet-active{
 			width: 20px;
 			border-radius:6px;
@@ -64,63 +80,312 @@ header{
 	.store-search{
 		height: 100%;width: 100%;
 		.search-slide{
-			position: relative;
-			top: calc(50% - 120px);
-			height: 240px;
-			overflow: hidden;
-			text-align:center;
-			padding: 50px 0 ;
-			.start-search{
-				color:#000;
-				margin-bottom: 30px;
-				font-size: 20px;
-			}
-			.search-area{
-				// font-size: 0;
-				margin-bottom: 20px;
-				select{
-					&[name="city"],&[name="store-classes"]{
-						background-color: #FFF;
-						color:#000;
-						font-size: 14px;
-					}
+			height: 100%;width: 100%;
+			// padding-top: 60px;
+			.search-before{
+				position: relative;
+				top: calc(50% - 120px);
+				// transform:translateY(-50%);
+				height: 240px;
+				overflow: hidden;
+				text-align:center;
+				padding: 50px 0 ;
+				transition:all 0.5s;
+				.start-search{
+					color:#000;
+					margin-bottom: 30px;
+					font-size: 20px;
 				}
-				button{
-					font-size: 14px;
-					-webkit-appearance:none;
-					border-radius:5px;
-					padding: 4px 8px;
-					background-color: #ffce72;
-					border:1px solid #ffce72;
+				.search-area{
+					// font-size: 0;
+					margin-bottom: 20px;
+					select{
+						&[name="city"],&[name="store-classes"]{
+							background-color: #FFF;
+							color:#000;
+							font-size: 14px;
+						}
+					}
+					button{
+						font-size: 14px;
+						-webkit-appearance:none;
+						border-radius:5px;
+						padding: 4px 8px;
+						background-color: #ffce72;
+						border:1px solid #ffce72;
+						color:#000;
+					}
+
+				}
+				.search-notice{
+					font-size: 12px;
 					color:#000;
 				}
-
 			}
-			.search-notice{
-				font-size: 12px;
+			.searched{
+				height: calc(100% - 90px);
+				overflow:auto;
+				display: none;
+				padding-bottom: 61px;
+				position: relative;
+				top:60px;
+				-webkit-overflow-scrolling:touch;
+				.container{
+					background-color: rgba(255, 255, 255, 0.9);
+					padding:10px 25px 0 25px;
+					div[class^="col-xs"]{
+						padding: 3px;
+					}
+				}
+				.store-list{
+					width:100%;
+					max-width:300px;
+					// margin-bottom: 15px;
+				}
 			}
 		}
 		.wj{
 			width: 100%;height: 100%;
-			background-image: url("../img/wjbg.png");
+			background-image: url("../img/wjbg2.jpg");
 			background-size: cover;
 			background-repeat: no-repeat;
+			// border:1px solid blue;
+			.hot-img{
+				width: 60%;
+				// border:1px solid red;
+				max-width:408px;
+				position: relative;
+				top: 50%;
+				left:50%;
+				transform:translate(-50%,-50%);
+
+			}
+		}
+	}
+	.download-app{
+		padding: 10px 0 ;
+		position: relative;
+		top:calc(50% + 15px);
+		transform:translateY(-50%);
+		.download-notice{
+			// position: relative;
+			// top:50%;
+			// transform:translateY(-50%);
+			.download-left{
+				// display: none;
+				padding: 20px 10px;
+				img{
+					width: 100%;
+				}
+			}
+			.download-right{
+				padding: 10px 10px 20px 10px;
+				@include top-right-radius(8px);
+				@include bottom-right-radius(8px);
+				h3{
+					font-size: 1.0rem;
+					margin: 0;
+					display: inline-block;
+					background-color: orange;
+					color:#fff;
+					font-weight: normal;
+					line-height: 30px;
+					padding: 0 10px;
+					border-radius:5px;
+					margin: 20px 0;
+				}
+				.download-desc{
+					.app-tips{
+						width:170px;
+						line-height: 47px;
+						margin: 0 auto;
+						padding-left: 10px;
+						img{
+							width: 40px;
+						}
+						p{
+							margin: 0;
+							font-size: 1rem;
+						}
+					}
+					.col-xs-6{
+						&:first-child{
+							// padding-left: 30px;
+							// padding-right: 0;
+						}
+						&:last-child{
+							// padding-left: 0;
+						}
+					}
+					.down-second{
+						.flex{
+							display:flex;
+							.flex-item{
+								flex:1;
+								padding: 0 10px;
+								.market-down{
+									position: relative;
+									top:50%;
+									transform:translateY(-50%);
+									img{
+										&:first-child{
+											margin-bottom: 1rem;
+										}
+									}
+								}
+
+							}
+						}
+						div[class^='col-']{
+							height: 100%;
+						}
+						img{
+							width: 100%;
+							max-width:235px;
+						}
+					}
+				}
+			}
+
+		}
+	}
+	.store-getIn{
+		padding-top: 70px;
+		text-align:center;
+		position: relative;
+		top:calc(50% - 20px);
+		transform:translateY(-50%);
+		.store-getIn-top{
+			padding: 35px 0;
+			.top-img{
+				img{
+					width: 25%;
+					max-width:300px;
+				}
+			}
+			.top-desc{
+				margin-top: 10px;
+				display: inline-block;
+				max-width:300px;
+				color:#000;
+			}
+		}
+		.store-getIn-btn{
+			display: inline-block;
+			margin-top: 20px;
+			text-align:center;
+			width: 200px;
+			border-radius:22px;
+			height: 42px;
+			line-height: 42px;
+			a{
+				color:#000;
+			}
+		}
+	}
+	.login-slide{
+		padding-top: 100px;
+		max-width:300px;
+		text-align:center;
+		position: relative;
+		top:50%;left:50%;
+		transform:translate(-50%,-50%);
+		.login-box{
+			display: inline-block;
+			color:#000;
+			border-radius:10px;
+			padding: 20px;
+			h3{
+				margin: 0 0 15px 0;
+				font-weight: normal;
+			}
+			input{
+				width: 100%;
+				margin-bottom: 15px;
+				line-height: 35px;
+				border-radius:18px;
+				border:none;
+				outline:none;
+				padding: 0 10px;
+				&[name="varify-code"]{
+					width:calc(100% - 110px);
+					margin-bottom: 0;
+				}
+			}
+			a{
+				display: inline-block;
+				width: 100px;
+				margin-left: 10px;
+				background-color: #000;
+				color:#fff;
+				line-height: 35px;
+				border-radius:18px;
+			}
+		}
+		.login-btn{
+			display: inline-block;
+			clear:all;
+			margin-top: 20px;
+			text-align:center;
+			width: 200px;
+			border-radius:22px;
+			height: 42px;
+			line-height: 42px;
+			a{
+				color:#000;
+			}
+		}
+	}
+}
+// control 控制
+.page-control{
+	position: fixed;
+	left: 0;right: 0;
+	top: 50%;
+	transform:translateY(-14px);
+	z-index:1000;
+	.control{
+		width: 28px;
+		height: 28px;
+		background-color: #FFF;
+		color:#000;
+		text-align:center;
+		line-height: 26px;
+		border-radius:50%;
+		transition:all 0.3s;
+		position: absolute;
+		top: 0;
+		&.control-left{
+			left: 10px;
+			transform:rotate(180deg);
+		}
+		&.control-right{
+			right: 10px;
+		}
+		&.disable{
+			color: #dadada;
+		}
+		&:active{
+			color:#dadada;
 		}
 	}
 }
 // background-color linear-gradient
 .linear-bg-alph{
-	background-image: linear-gradient(-90deg, rgba(255,180,41,0.75) 0%, rgba(255,219,40,0.75) 100%);
+	background-image: linear-gradient(-90deg, rgba(255,180,41,1) 0%, rgba(255,219,40,1) 100%);
 }.linear-bg{
 	background-image: linear-gradient(-90deg, rgba(255,180,41,1) 0%, rgba(255,219,40,1) 100%);
 }
 footer{
+	.container{
+		padding: 0;
+	}
 	.navbar{
 		text-align: center;
 		line-height: 50px;
 		background-color: #2f2f2f;
 		color:#fff;
-		font-size: 1.2rem;
+		font-size: 12px;
 	}
 }
 // pad 之下查询
@@ -128,8 +393,10 @@ footer{
 	header{
 		// 导航
 		.navbar{
-			.navbar-brand>img{
+			.navbar-header{
+				.navbar-brand>img{
 				width:120px;
+			}
 			}
 			.navbar-nav{
 				padding: 7.5px 0;
@@ -137,10 +404,155 @@ footer{
 			.nav>li{
 				
 				padding: 0;
+				a{
+					font-size: 16px;
+					line-height: 30px;
+				}
 			}
 		}
 	}
-	
+	// 下载
+	.download-app{
+		.download-notice{
+			.container{
+				padding: 0;margin: 0;
+			}
+			color:#000;
+			.flex{
+				.flex-item{
+					&:first-child{
+						flex:0;
+						.download-left{
+							display: none;
+						}
+					}
+					&:last-child{
+						flex:1;
+						background:rgba(246, 233, 209, 0.67);
+					}
+				}
+			}
+			.down-second{
+				.flex{
+					.flex-item{
+						&:last-child{
+							background: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width:767px) {
+	header{
+		// 导航
+		.navbar{
+			.navbar-collapse{
+				background-color: #585858;
+			}
+		}
 
-	
+	}
+}
+
+// pad 之上查询
+@media screen and(min-width:768px) {
+	.download-app{
+		.download-notice{
+			color:#000;
+			.flex{
+				.flex-item{
+					&:first-child{
+						flex:1;
+					}
+					&:last-child{
+						flex:3;
+						background-color: rgb(246, 233, 209);
+						border:2px solid #fff;
+						border-left:none;
+						@include top-right-radius(12px);
+						@include bottom-right-radius(12px);
+
+					}
+				}
+			}
+			.download-left{
+			}
+			.download-right{
+				position: relative;
+				padding-left: 30px !important;
+				top:50%;
+				transform:translateY(-50%);
+				h3{
+					font-size: 1.2rem;
+					margin: 0;
+					display: inline-block;
+					background-color: orange;
+					line-height: 30px;
+					padding: 0 10px;
+					border-radius:5px;
+					margin-bottom: 10px;
+				}
+				.download-desc{
+					.app-tips{
+						line-height: 60px;
+						margin: 0;
+						padding-left: 10px;
+						img{
+							width: 40px;
+						}
+						p{
+							margin: 0;
+							font-size: 1rem;
+						}
+					}
+
+					.down-second{
+						.flex{
+							.flex-item{
+								padding: 0 10px;
+								&:last-child{
+									border:none;
+								}
+								.market-down{
+									position: relative;
+									top:50%;
+									transform:translateY(-50%);
+									img{
+										&:first-child{
+											margin-bottom: 1rem;
+										}
+									}
+								}
+
+							}
+						}
+						div[class^='col-']{
+							height: 100%;
+						}
+						img{
+							width: 100%;
+							max-width:235px;
+						}
+					}
+				}
+			}
+
+		}
+	}
+	.store-getIn{
+		.store-getIn-top{
+			padding: 40px 0 !important;
+			.top-img{
+				margin-bottom: 40px;
+				img{
+					width: 70% !important;
+				}
+			}
+			.top-desc{
+				font-size: 1.25rem;
+			}
+		}
+	}
 }

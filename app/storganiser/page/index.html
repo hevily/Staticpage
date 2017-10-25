@@ -31,11 +31,11 @@
 			    <!-- Collect the nav links, forms, and other content for toggling -->
 			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			      <ul class="nav navbar-nav navbar-right">
-			        <li><a href="#" class="linear-bg">搜索店鋪</a></li>
+			        <li><a href="#" class="active-nav">搜索店鋪</a></li>
 			        <li><a href="#">下載APP</a></li>
 			        <li><a href="#">商家參與</a></li>
-			        <li><a href="#">關於我們</a></li>
 			        <li><a href="#">商家登錄</a></li>
+			        <li><a href="#">關於我們</a></li>
 			      </ul>
 			    </div><!-- /.navbar-collapse -->
 			  </div><!-- /.container-fluid -->
@@ -48,50 +48,305 @@
 	    	<div class="swiper-container store-search">
 	    	  <div class="swiper-wrapper">
 	    	    <div class="swiper-slide ">
-	    	    	<div class="search-slide linear-bg-alph">
-	    	    		<div class="start-search">
-	    	    			<img src="">
-	    	    			 現在開始使用Stoganiser
+	    	    	<div class="search-slide ">
+	    	    		<div class="search-before linear-bg-alph">
+	    	    			<div class="start-search">
+	    	    				<img src="">
+	    	    				 現在開始使用Stoganiser
+	    	    			</div>
+	    	    			<div class="search-area">
+	    	    				<select name="city" id="city-select">
+	    	    					<option >地區</option>
+	    	    					<option> 大陸</option>
+	    	    					<option> 香港</option>
+	    	    					<option> 澳門</option>
+	    	    					<option> 台灣</option>
+	    	    				</select>
+	    	    				<select name="store-classes" id="storeclasses">
+	    	    					<option>类别</option>
+	    	    					<option> 茶餐廳</option>
+	    	    					<option> 超市</option>
+	    	    					<option> 麵條店</option>
+	    	    					<option> 炸雞店</option>
+	    	    				</select>
+	    	    				<button class="serach-store">
+	    	    					<i class="fa  fa-search"></i>
+	    	    					 搜索
+	    	    				</button>
+	    	    			</div>
+	    	    			<div class="search-notice">
+	    	    				選擇地區、店鋪種類、點擊搜索即可查看店鋪列表、掃碼關注。
+	    	    			</div>
 	    	    		</div>
-	    	    		<div class="search-area">
-	    	    			<select name="city" id="city-select">
-	    	    				<option > 請選擇地區</option>
-	    	    				<option> 大陸</option>
-	    	    				<option> 香港</option>
-	    	    				<option> 澳門</option>
-	    	    				<option> 台灣</option>
-	    	    			</select>
-	    	    			<select name="store-classes" id="storeclasses">
-	    	    				<option> 請選擇店鋪種類</option>
-	    	    				<option> 茶餐廳</option>
-	    	    				<option> 超市</option>
-	    	    				<option> 麵條店</option>
-	    	    				<option> 炸雞店</option>
-	    	    			</select>
-	    	    			<button>
-	    	    				<i class="fa  fa-search"></i>
-	    	    				 搜索
-	    	    			</button>
-	    	    		</div>
-	    	    		<div class="search-notice">
-	    	    			選擇地區、店鋪種類、點擊搜索即可查看店鋪列表、掃碼關注。
+	    	    		<div class="searched">
+	    	    			 <div class="container">
+	    	    			 	<div class="row">
+	    	    			 		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+	    	    			 			<img src="../img/store-list.png" class="store-list">
+	    	    			 		</div>
+	    	    			 		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+	    	    			 			<img src="../img/store-list.png" class="store-list">
+	    	    			 		</div>
+	    	    			 		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+	    	    			 			<img src="../img/store-list.png" class="store-list">
+	    	    			 		</div>
+	    	    			 		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+	    	    			 			<img src="../img/store-list.png" class="store-list">
+	    	    			 		</div>
+	    	    			 		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+	    	    			 			<img src="../img/store-list.png" class="store-list">
+	    	    			 		</div>
+	    	    			 		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+	    	    			 			<img src="../img/store-list.png" class="store-list">
+	    	    			 		</div>
+	    	    			 		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+	    	    			 			<img src="../img/store-list.png" class="store-list">
+	    	    			 		</div>
+	    	    			 		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+	    	    			 			<img src="../img/store-list.png" class="store-list">
+	    	    			 		</div>
+	    	    			 		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+	    	    			 			<img src="../img/store-list.png" class="store-list">
+	    	    			 		</div>
+	    	    			 		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+	    	    			 			<img src="../img/store-list.png" class="store-list">
+	    	    			 		</div>
+	    	    			 		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+	    	    			 			<img src="../img/store-list.png" class="store-list">
+	    	    			 		</div>
+	    	    			 		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+	    	    			 			<img src="../img/store-list.png" class="store-list">
+	    	    			 		</div>
+	    	    			 		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+	    	    			 			<img src="../img/store-list.png" class="store-list">
+	    	    			 		</div>
+	    	    			 		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+	    	    			 			<img src="../img/store-list.png" class="store-list">
+	    	    			 		</div>
+	    	    			 		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+	    	    			 			<img src="../img/store-list.png" class="store-list">
+	    	    			 		</div>
+	    	    			 		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+	    	    			 			<img src="../img/store-list.png" class="store-list">
+	    	    			 		</div>
+	    	    			 		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+	    	    			 			<img src="../img/store-list.png" class="store-list">
+	    	    			 		</div>
+	    	    			 		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+	    	    			 			<img src="../img/store-list.png" class="store-list">
+	    	    			 		</div>
+	    	    			 		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+	    	    			 			<img src="../img/store-list.png" class="store-list">
+	    	    			 		</div>
+	    	    			 		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+	    	    			 			<img src="../img/store-list.png" class="store-list">
+	    	    			 		</div>
+	    	    			 		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+	    	    			 			<img src="../img/store-list.png" class="store-list">
+	    	    			 		</div>
+	    	    			 		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+	    	    			 			<img src="../img/store-list.png" class="store-list">
+	    	    			 		</div>
+	    	    			 		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+	    	    			 			<img src="../img/store-list.png" class="store-list">
+	    	    			 		</div>
+	    	    			 		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+	    	    			 			<img src="../img/store-list.png" class="store-list">
+	    	    			 		</div>
+	    	    			 		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+	    	    			 			<img src="../img/store-list.png" class="store-list">
+	    	    			 		</div>
+	    	    			 		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+	    	    			 			<img src="../img/store-list.png" class="store-list">
+	    	    			 		</div>
+	    	    			 		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+	    	    			 			<img src="../img/store-list.png" class="store-list">
+	    	    			 		</div>
+	    	    			 		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+	    	    			 			<img src="../img/store-list.png" class="store-list">
+	    	    			 		</div>
+	    	    			 	</div>
+	    	    			 </div>
 	    	    		</div>
 	    	    	</div>
 	    	    </div>
 	    	    <div class="swiper-slide hot">
 	    	    	<div class="wj">
-	    	    		
+	    	    		<img src="../img/wj.png" class="hot-img">
 	    	    	</div>
 	    	    </div>
 	    	  </div>
 	    	</div>
 	    </div>
-	    <div class="swiper-slide">slider2</div>
-	    <div class="swiper-slide">slider3</div>
+	    <div class="swiper-slide">
+	    	<div class="download-app linear-bg-alph">
+	    		<div class="download-notice ">
+	    			<div class="container">
+	    				<div class="flex">
+	    					<div class="flex-item">
+	    						<div class="download-left">
+	    							<img src="../img/download-left.png">
+	    						</div>
+	    					</div>
+	    					<div class="flex-item">
+				    			<div class="download-right">
+				    				<div class="download-desc">
+				    					<h3>Storganiser 助你管理</h3>
+				    					<div class="row down-first">
+				    						<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				    							<div class="app-tips media">
+				    								<div class="media-left media-middle">
+				    									<img src="../img/app-download/membercard.png" class="tips-img">
+				    								</div>
+				    								<div class="media-body media-middle">
+				    									<p>会员卡</p>
+				    								</div>
+				    							</div>
+				    							<div class="app-tips media">
+				    								<div class="media-left media-middle">
+				    									<img src="../img/app-download/cashcard.png" class="tips-img">
+				    								</div>
+				    								<div class="media-body media-middle">
+				    									<p>儲值卡</p>
+				    								</div>
+				    							</div>
+				    							<div class="app-tips media">
+				    								<div class="media-left media-middle">
+				    									<img src="../img/app-download/ticket.png" class="tips-img">
+				    								</div>
+				    								<div class="media-body media-middle">
+				    									<p>優惠券/現金券</p>
+				    								</div>
+				    							</div>
+				    						</div>
+				    						<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				    							<div class="app-tips media">
+				    								<div class="media-left media-middle">
+				    									<img src="../img/app-download/cart.png" class="tips-img">
+				    								</div>
+				    								<div class="media-body media-middle">
+				    									<p>在線購物</p>
+				    								</div>
+				    							</div>
+				    							<div class="app-tips media">
+				    								<div class="media-left media-middle">
+				    									<img src="../img/app-download/news.png" class="tips-img">
+				    								</div>
+				    								<div class="media-body media-middle">
+				    									<p>動態消息</p>
+				    								</div>
+				    							</div>
+				    							<div class="app-tips media">
+				    								<div class="media-left media-middle">
+				    									<img src="../img/app-download/service.png" class="tips-img">
+				    								</div>
+				    								<div class="media-body media-middle">
+				    									<p>線上顧客服務</p>
+				    								</div>
+				    							</div>
+				    						</div>
+				    					</div>
+				    					<h3>請立即下載 Storganiser APP !</h3>
+				    					<div class=" down-second" >
+				    						<div class="flex">
+				    							<div class="flex-item">
+				    								<div class="market-down">
+				    									<img src="../img/app-download/ios-down.png" alt="" class="ios">
+				    									<img src="../img/app-download/android-down.png" alt="" class="android">
+				    								</div>
+				    							</div>
+				    							<div class="flex-item">
+				    								<img src="../img/app-download/qr.png" alt="" class="qr">
+				    							</div>
+				    							<div class="flex-item">
+				    								<img src="../img/app-download/search-down.png" alt="" class="search-down">
+				    							</div>
+				    						</div>
+				    						<div class="row" hidden>
+				    							<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+					    							<div class="market-down">
+					    								<img src="../img/app-download/ios-down.png" alt="" class="ios">
+					    								<img src="../img/app-download/android-down.png" alt="" class="android">
+					    							</div>
+					    						</div>
+					    						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+					    								<img src="../img/app-download/qr.png" alt="" class="qr">
+					    						</div>
+					    						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+					    								<img src="../img/app-download/search-down.png" alt="" class="search-down">
+					    						</div>
+				    						</div>
+				    					</div>
+				    				</div>
+				    			</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
+	    	</div>
+	    </div>
+	    <div class="swiper-slide">
+	    	<div class="store-getIn">
+	    		<div class="store-getIn-top linear-bg-alph">
+	    			<div class="container">
+	    				<div class="row">
+	    					<div class="col-md-6 col-lg-6">
+	    						<div class="top-img">
+	    							<img src="../img/order.png">
+	    						</div>
+	    						<div class="top-desc">
+	    							<p>
+	    								便捷的網購和到店消費，無縫對接，包括積分、使用優惠券、使用優惠券、儲值卡等。
+	    							</p>
+	    						</div>
+	    					</div>
+	    					<div class="col-md-6 col-lg-6">
+	    						<div class="top-img">
+	    							<img src="../img/store-qr.png">
+	    						</div>
+	    						<div class="top-desc">
+	    							<p>
+	    								便捷的網購和到店消費，無縫對接，包括積分、使用優惠券、使用優惠券、儲值卡等。
+	    							</p>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
+	    		<div class="store-getIn-btn linear-bg">
+	    			<a href="javascript:;">現在加入</a>
+	    		</div>
+	    		
+	    	</div>
+	    </div>
+	    <div class="swiper-slide">
+	    	<div class="login-slide">
+	    		<div class="login-box linear-bg-alph">
+	    			<h3>商家登錄</h3>
+	    			 <input type="text" name="usr-name" placeholder="請輸入用戶名\手機\郵箱">
+	    			 <input type="password" name="usr-pass" placeholder="請輸入密碼">
+	    			 <div class="varify-code">
+	    			 	<input type="text" name="varify-code" placeholder="請輸入驗證碼"><a href="javascript:;">獲取驗證碼</a>
+	    			 </div>
+	    		</div>
+	    		<div class=" login-btn linear-bg">
+	    			<a href="javascript:;">登錄</a>
+	    		</div>
+	    	</div>
+	    </div>
+	    <div class="swiper-slide">关于我们</div>
 	  </div>
 	  <div class="swiper-pagination storganiser-pagination"></div>
 	</div>
 	
+	<div class="page-control">
+		<div class="control control-left">
+			<i class="fa fa-lg fa-angle-right"></i>
+		</div>
+		<div class="control control-right ">
+			<i class="fa fa-lg fa-angle-right"></i>
+		</div>
+	</div>
 	<footer>
 		<nav class="navbar navbar-default navbar-fixed-bottom footer">
 		  <div class="container">
@@ -107,17 +362,112 @@
 	<script src="../js/Swiper-3.4.2/dist/js/swiper.jquery.min.js"></script>
 	<script>
 		$(function () {
+			//init page
 			var storganiser = new Swiper('.storganiser', {
-				pagination:'.storganiser-pagination'
+				pagination:'.storganiser-pagination',
+				onInit:function (self) {
+					checkcontrol(self)
+					// self.slideTo(1,50,false)
+				},
+				onSlideChangeEnd:function (self) {
+					console.log(11)
+					checkcontrol(self)
+					checknav()
+				},
+				// effect : 'coverflow',
+				// centeredSlides: true
+				// ,
+				// coverflow: {
+				//             rotate: 30,
+				//             stretch: 10,
+				//             depth: 60,
+				//             modifier: 2,
+				//             slideShadows : true
+				//         }
 			})
 
 			var storeSearch = new Swiper('.store-search', {
-				nested:true,
-				onInit:function (self) {
-					self.slideTo(1,50,false)
-				}
+				nested:true
+				// ,autoplay:3000
+				// ,loop:true
 			})
-			
+			// 左右控制按钮可用性检测
+			function checkcontrol (swipe) {
+				var disable = 'disable'
+				// 首
+				if(swipe.isBeginning){
+					$(".control-left").addClass(disable)
+					return ;
+				}
+				// 尾
+				if(swipe.isEnd){
+					$('.control-right').addClass(disable)
+					return ;
+				}
+				$('.control').removeClass(disable)
+			}
+			// 导航更新检测
+			function checknav() {
+				var ind = storganiser.realIndex
+				 	,nav = $('.nav li')
+					,cNav = 'active-nav'
+				$('.'+cNav).removeClass(cNav)
+				nav.eq(ind).find('a').addClass(cNav)
+			}
+			function detectmob() {
+			    if( navigator.userAgent.match(/Android/i)
+			    || navigator.userAgent.match(/webOS/i)
+			    || navigator.userAgent.match(/iPhone/i)
+			    || navigator.userAgent.match(/iPad/i)
+			    || navigator.userAgent.match(/iPod/i)
+			    || navigator.userAgent.match(/BlackBerry/i)
+			    || navigator.userAgent.match(/Windows Phone/i)
+			    ){
+			        return true;
+			    }
+			    else {
+			        return false;
+			    }
+			}
+			(function () {
+				if(detectmob()){
+					$('.page-control').hide()
+				}
+			})()
+			// 导航切换
+			$('.nav li').on('click',function () {
+				var _this = $(this)
+					,cNav = 'active-nav'
+					,ind = _this.index()
+				$('.'+cNav).removeClass(cNav)
+				_this.find('a').addClass(cNav)
+				storganiser.slideTo(ind,1000,false)
+				checkcontrol(storganiser)
+				$('.collapse').collapse('toggle')
+			})
+			// 上下页控制按钮
+			$('.page-control .control-right').on('click',function () {
+				storganiser.slideNext(false,1000)
+				checkcontrol(storganiser)
+				checknav()
+			})
+			$('.page-control .control-left').on('click',function () {
+				storganiser.slidePrev(false,1000)
+				checkcontrol(storganiser)
+				checknav()
+			})
+			// 搜索店铺
+			$('.serach-store').on('click',function () {
+				storeSearch.stopAutoplay()
+				var _this = $(this)
+				searchBefore = _this.closest('.search-before')
+				searched = searchBefore.next('.searched')
+				topHeight = searchBefore.height()
+				searchBefore.find('.start-search').hide()
+				searchBefore.css({'height':'90px','padding':'16px 0','top':'60px'})
+				searched.fadeIn(1200)
+				// searchBefore.css({'height':'90px'})
+			})
 		})
 	</script>
 </body>

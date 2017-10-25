@@ -268,6 +268,22 @@ html{
 					}
 				}
 			}
+			// 取消订单
+			.cancel-order{
+				margin-top: 50px;
+				text-align: center;
+				a{
+					display: inline-block;
+					padding: 0 12px;
+					border-radius:5px;
+					text-decoration: none;
+					color:#fff;
+					background-color: red;
+					border:none;
+					width: 80px;height: 35px;
+					line-height: 35px;
+				}
+			}
 		}
 	}
 }
