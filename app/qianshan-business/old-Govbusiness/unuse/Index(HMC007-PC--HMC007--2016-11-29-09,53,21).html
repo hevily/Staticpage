@@ -1,0 +1,1489 @@
+﻿<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-type" content="text/html" charset="UTF-8">
+<meta name="keywords" content="电商，平台">
+<meta name="Description" content="杭州市电子商务公共服务平台">
+<link rel="stylesheet" type="text/css" href="css/common.css">  
+<input type="hidden" value="/"/>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/zlayer.css">
+<link type="text/css" href="css/uploadify.css" rel="stylesheet" />
+<script type="text/javascript"  src="js/jquery-1.11.2.min.js"></script>
+<link rel="stylesheet" href="css/jquery.e-calendar.css"/>
+<link rel="stylesheet" type="text/css" href="css/standerd.css">
+<title>
+	杭州市电子商务公共服务平台
+</title>
+
+<style type="text/css">
+/*找回密码样式*/
+		.loginWrap-02{width:360px;background:#fff;margin-top: 50px;margin-left: 20px;}
+		.loginWrap-02 form div{margin-top:25px;position:relative;}
+		.loginWrap-02 input[type="text"],.loginWrap-02 input[type="password"]{box-sizing:border-box;border:1px solid #cbcbcb;width:100%;height:40px;line-height:40px;padding: 0 10px;}
+		.loginWrap-02 input[type="text"]:focus,.loginWrap form input[type="password"]:focus{border:1px solid #126bb8;}
+		.loginWrap-02 form{padding: 0 10px;}
+		.loginWrap-02  i{color:#df0000;position: absolute;left: 0;top: 42px;display: none;}
+		.loginWrap-02 .errorTip{display:inline-block;}
+		.login .loginBtn,.register .loginBtn {position: static;cursor:pointer;height:40px;width:343px;line-height:40px;color:#fff;text-align:center;background:#4189c6;font-size: 16px;margin:35px 0 0;}
+		.loginWrap-02 .codeWrap input[type="text"]{width:200px;float: left;}
+		.loginWrap-02 .sendCode{position: static;width:120px;float: right;background:#cbcbcb;color:#fff;font-size:14px; height: 40px;line-height: 40px;+line-height:38px;}
+		.loginWrap-02 form h6{position: absolute;top: 11px;left: 10px;font-weight: normal;color: #999;font-size: 14px;margin: 0;font-family: "微软雅黑";font-weight: normal;}
+</style>
+<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<div class="header">
+		<style type="text/css">
+    	.xubox_main .xubox_title em {
+    	height:35px;
+		    text-align: center ;
+		    width: 100% ;
+		    font-family: '黑体' ;
+		    font-size: 18px ;
+		    top: 4px;
+		    left:0;
+	        color: #000 ;
+    	}
+    	.hasloginBox{color:#333;}
+    	.xubox_title{
+   		    background: #fff !important;
+		    border-bottom:none !important;
+    	}
+    	.xulayer_png32{
+   		    background: url(images/blue-delete.png) no-repeat !important;
+   		    top:0;
+   		    right:0;
+    	}
+    	.xubox_close0{
+ 		   width: 26px !important;
+    	   height: 26px !important;
+    	}
+        .loginNav{height:auto;}
+    	
+		#xubox_border2{opacity:0 !important;}
+		.hasloginBox  .unreadTips{right:65px;position: absolute;top: 10px;width: 6px;height: 6px;background-color: #f00;
+    border-radius: 50%;}
+        .loginNav li{position: relative;}
+</style>
+<div class="headerTop">
+    <div class="wrap clearfix">
+        <div class="logo fl"><a href="/index.htm"><img style="width:100%;height:100%;" src="picture/a6f89dda4a294cf18cb55d807a1844e0.jpg" alt="logo"/></a></div>
+        <div class="login fr haslogin">
+            	<div class="loginBox"><a href="javascript:void(0);" id="register">注册</a><a href="javascript:openLoginWindow();">登录</a></div>
+<!--              -->
+        </div>
+    </div>
+</div>	
+    <div class="menu">
+       <div class="nav">
+          <div class="wrap clearfix">
+			<ul class="headernav1 clearfix fl" id="sectionList">
+					<li  class="active">
+							<a   href="/index.htm"   target="_self"  >首页</a>
+							<!-- 魅力开封 -->
+							<!-- 文化+ -->
+							<!-- 电商协会 -->
+							<!-- 产业园 -->
+							
+					</li>
+					<li  >
+							<a   href="/profession/index.htm?type=2"   target="_self"  >行业动态</a>
+									<ul class="drag-nav">
+										<li><a  href="/profession/index.htm?categoryId=107127">中心动态</a></li>
+										<li><a  href="/profession/index.htm?categoryId=50779">电商动态</a></li>
+										<li><a  href="/profession/index.htm?categoryId=50780">移动电商</a></li>
+										<li><a  href="/profession/index.htm?categoryId=50781">农村电商</a></li>
+										<li><a  href="/profession/index.htm?categoryId=50782">跨境电商</a></li>
+										<li><a  href="/profession/index.htm?categoryId=50778">数据透视</a></li>
+										<li><a  href="/profession/index.htm?categoryId=50785">人物视界</a></li>
+										<li><a  href="/profession/index.htm?categoryId=50784">物流仓储</a></li>
+										<li><a  href="/profession/index.htm?categoryId=107125">专业市场</a></li>
+										<li><a  href="/profession/index.htm?categoryId=50783">互联网+</a></li>
+									</ul>
+							<!-- 魅力开封 -->
+							<!-- 文化+ -->
+							<!-- 电商协会 -->
+							<!-- 产业园 -->
+							
+					</li>
+					<li  >
+							<a   href="/policy/index.htm?type=9"   target="_self"  >产业政策</a>
+									<ul class="drag-nav">
+										<li><a href="/policy/index.htm?categoryId=50776">政策导向</a></li>
+										<li><a href="/policy/index.htm?categoryId=50777">地方政策</a></li>
+									</ul>
+							<!-- 魅力开封 -->
+							<!-- 文化+ -->
+							<!-- 电商协会 -->
+							<!-- 产业园 -->
+							
+					</li>
+					<li  >
+							<a   href="/college/index.htm"   target="_self"  >电商学院</a>
+							<!-- 魅力开封 -->
+							<!-- 文化+ -->
+							<!-- 电商协会 -->
+							<!-- 产业园 -->
+							
+					</li>
+					<li  >
+							<a   href="http://t-job.hzecps.org"   target="_blank"  >人才基地</a>
+							<!-- 魅力开封 -->
+							<!-- 文化+ -->
+							<!-- 电商协会 -->
+							<!-- 产业园 -->
+							
+					</li>
+					<li  >
+							<a   href="/service/index.htm?type=11"   target="_self"  >服务市场</a>
+							<!-- 魅力开封 -->
+							<!-- 文化+ -->
+							<!-- 电商协会 -->
+							<!-- 产业园 -->
+							
+					</li>
+					<li  >
+							<a   href="/themedactivity/index.htm"   target="_self"  >活动沙龙</a>
+							<!-- 魅力开封 -->
+							<!-- 文化+ -->
+							<!-- 电商协会 -->
+							<!-- 产业园 -->
+							
+					</li>
+					<li  >
+							<a   href="/industry/index.htm"   target="_self"  >产业基地</a>
+							<!-- 魅力开封 -->
+							<!-- 文化+ -->
+							<!-- 电商协会 -->
+							<!-- 产业园 -->
+							
+					</li>
+					<li  >
+							<a href="javascript:void(0);" >电商政务</a>
+								<ul class="drag-nav">
+										<li><a target="_blank" href="http://sfgc.hzecps.org">示范工程</a></li>
+									<!-- <li><a target="_blank" href="http://sfgc.hzecps.org">示范工程</a></li> -->
+									<!-- <li><a target="_blank" href="/fund">电商基金</a></li> -->
+								</ul>
+							<!-- 魅力开封 -->
+							<!-- 文化+ -->
+							<!-- 电商协会 -->
+							<!-- 产业园 -->
+							
+					</li>
+            </ul>
+            <div class="fr"><span class="headerInput"><input class="search" type="text"  value="" placeholder="请输入课程名称"/><input type="submit" value="" class="inputSubmit" id="searchBtn"/></span></div>
+          </div>
+        </div>
+    </div>
+<script>
+	function autoHeight(){
+	    $(".lunboAll,.lunboAll .carousel a").height($(window).width()*(550/1920));
+	    var lunboHeight = $(".lunboAll").height();
+// 	    $(".headerTop").height($(window).width()/1920*89);
+	    $(".headerTop").css({"padding-top" : 25/1920*$(window).width(),"padding-bottom" : 25/1920*$(window).width()});
+	    $(".lunboAll .before,.lunboAll .after").css({top : lunboHeight/2 - 44});
+	};
+	autoHeight();
+</script>	
+		<div class="lunbo lunboAll">
+			<span class="before"></span> <span class="after"></span>
+			<ul class="carousel fullscreen">
+				<a href="#" target="_blank"><img src="picture/Index/index-s1.jpg" alt=""></a> 
+				<a href="#" target="_blank"><img src="picture/Index/index-s2.jpg" alt=""></a> 
+			</ul>
+			<ul class="pagenation pagenationAll clearfix">
+			</ul>
+		</div>
+	</div>
+	<div class="indexContent">
+		<div class="profession role">
+			<div class="wrap">
+				<div class="professionTitle role-title mb-25" id="professionCategory">
+					<h1 class="fl">
+						<b class="normalB professionB mr-10"></b><a href="/profession/index.htm?type=2">行业动态</a>
+					</h1>
+					<a class="active" href="javascript:void(0)" data-value="0">全部</a>
+						<a href="javascript:void(0)" data-value="107127">中心动态</a>
+						<a href="javascript:void(0)" data-value="50779">电商动态</a>
+						<a href="javascript:void(0)" data-value="50780">移动电商</a>
+						<a href="javascript:void(0)" data-value="50781">农村电商</a>
+				</div>
+				<div>
+					<div class="role-content clearfix" id="professionList"></div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- part1-0 政策文件 -->
+		<div class="profession1_ role">
+			<div class="wrap">
+				<div class="profession1_Title role-title mb-25" id="profession1_Category">
+					<h1 class="fl">
+						<b class="normalB profession1_B mr-10"></b><a href="/profession1_/index.htm?type=2">政策文件</a>
+					</h1>
+					<a class="active" href="javascript:void(0)" data-value="0">全部</a>
+						<a href="javascript:void(0)" data-value="107127">中心动态</a>
+						<a href="javascript:void(0)" data-value="50779">电商动态</a>
+						<a href="javascript:void(0)" data-value="50780">移动电商</a>
+						<a href="javascript:void(0)" data-value="50781">农村电商</a>
+				</div>
+				<div>
+					<div class="role-content clearfix" id="profession1_List"></div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- part1-1 人才基地 -->
+		<div class="professionFile role">
+			<div class="wrap">
+				<div class="professionFileTitle role-title mb-25" id="professionFileCategory">
+					<h1 class="fl">
+						<b class="normalB professionFileB mr-10"></b><a href="/professionFile/index.htm?type=2">人才基地</a>
+					</h1>
+					<a class="active" href="javascript:void(0)" data-value="0">全部</a>
+						<a href="javascript:void(0)" data-value="107127">中心动态</a>
+						<a href="javascript:void(0)" data-value="50779">电商动态</a>
+						<a href="javascript:void(0)" data-value="50780">移动电商</a>
+						<a href="javascript:void(0)" data-value="50781">农村电商</a>
+				</div>
+				<div>
+					<div class="role-content clearfix" id="professionFileList"></div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- part1-2 第三方服务 -->
+		<div class="profession1_File role">
+			<div class="wrap">
+				<div class="profession1_Title role-title mb-25" id="profession1_Category">
+					<h1 class="fl">
+						<b class="normalB profession1_B mr-10"></b><a href="/profession1_/index.htm?type=2">第三方服务</a>
+					</h1>
+					<a class="active" href="javascript:void(0)" data-value="0">全部</a>
+						<a href="javascript:void(0)" data-value="107127">中心动态</a>
+						<a href="javascript:void(0)" data-value="50779">电商动态</a>
+						<a href="javascript:void(0)" data-value="50780">移动电商</a>
+						<a href="javascript:void(0)" data-value="50781">农村电商</a>
+				</div>
+				<div>
+					<div class="role-content clearfix" id="profession1_ist"></div>
+				</div>
+			</div>
+		</div>
+
+
+		
+		<div class="role">
+			<div class="wrap">
+				<div class=" marketTitle role-title mb-25">
+					<h1 class="fl">
+						<b class="normalB marketB mr-10"></b><a href="/service/index.htm?type=11">服务市场</a>
+					</h1>
+					<p id="serviceMarket">
+					<a class="active" href="javascript:void(0)">人才培训</a>
+					<a href="javascript:void(0)">运营营销</a>
+					<a href="javascript:void(0)">数据分析</a>
+					<a href="javascript:void(0)">技术咨询</a>
+					<a href="javascript:void(0)">创业孵化</a>
+					<a href="javascript:void(0)">政策法律</a>
+					<a href="javascript:void(0)">金融支付</a>
+					<a href="javascript:void(0)">物流配套</a>
+					</p>
+				</div>
+				<div id="role-servic" class="role-service">
+					<ul class="clearfix">
+						<li class="fl startup active"><a href="/service/index.htm?categoryId=10059">人才培训</a></li>
+						<li class="fl sell"><a href="/service/index.htm?categoryId=10044">运营营销</a></li>
+						<li class="fl derivative"><a href="/service/index.htm?categoryId=10036">数据分析</a></li>
+						<li class="fl it"><a href="/service/index.htm?categoryId=10040">技术咨询</a></li>
+						<li class="fl law"><a href="/service/index.htm?categoryId=10071">创业孵化</a></li>
+						<li class="fl vision"><a href="/service/index.htm?categoryId=10051">政策法律</a></li>
+						<li class="fl jinro"><a href="/service/index.htm?categoryId=10079">金融支付</a></li>
+						<li class="fl wuliu"><a href="/service/index.htm?categoryId=10054">物流配套</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- part2.电商学院 -->
+		<div class="college role">
+			<div class="wrap">
+				<div class="collegeTitle role-title mb-25" id="collegeCategory">
+					<h1 class="fl">
+						<b class="normalB collegeB mr-10"></b><a href="/college/index.htm">电商学院</a>
+					</h1>
+					<a class="active" href="javascript:void(0)" data-value="0">全部</a>
+						<a href="javascript:void(0)" data-value='105245'>创业</a>
+						<a href="javascript:void(0)" data-value='51037'>推广</a>
+						<a href="javascript:void(0)" data-value='51038'>客服</a>
+						<a href="javascript:void(0)" data-value='51039'>美工</a>
+				</div>
+				<div>
+					<div class="role-content clearfix" id="collegeList"></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- part- .产业园 -->
+
+		<div class="banner lunbobanner1 mt-70" hidden>
+			<div class="angleWrap">
+				<div class="wrap relative">
+					<span class="left-angle before"></span> <span class="right-angle after"></span>
+				</div>
+			</div>
+			<ul class="clearfix carousel fullscreen">
+				<a class="fl" href="http://www.hzecps.org/college/detail.htm?id=13863" target="_blank"><img src xSrc="picture/44becf0270ef46e99991eaa5526b4582.jpg" alt="" /></a>
+			</ul>
+			<ul class="banner1-pagenation pagenationAll clearfix">
+			</ul>
+		</div>
+		<div class="activity role" hidden>
+			<div class="wrap">
+				<div class="activityTitle role-title mb-25 clearfix" id="activityCategory">
+					<h1 class="fl">
+						<b class="normalB activityB mr-10"></b><a href="/themedactivity/index.htm">活动沙龙</a>
+					</h1>
+					<a class="active" href="javascript:void(0)" data-value="0">全部</a>
+				</div>
+				<div class="role-content clearfix">
+					<div style="width: 840px; display: inline-block;">
+						<div id="activityList"></div>
+					</div>
+					<div class="role-right ml-10 fr">
+						<div class="role-title mb-10">
+							<a class="active" href="javascript:void(0)">活动日历</a>
+						</div>
+						<div id="calendar"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 产业园 -->
+		<div class="industry role">
+			<div class="wrap basePlace clearfix">
+				<div class="industrialTitle role-title mb-25">
+					<h1 class="fl">
+						<b class="normalB industrialB mr-10"></b><a href="javascript:void(0);">产业基地</a>
+					</h1>
+					<a class="active" href="javascript:void(0)">产业园区</a><a
+						href="javascript:void(0)">众创空间</a>
+				</div>
+				<div class="baseLunbolun baseLunbo1">
+                    <span class="fl baseBefore before"></span>
+                    <div class=" fl baseLunbo">
+                        <ul class="carousel">
+                            <a href="/industry/detail.htm?id=10137" class="place fl ml-10">
+                                <img src xSrc="picture/f4184fff14ed42e596750fde45b39e75.jpg" alt=""/>
+                            </a>
+                            <a href="/industry/detail.htm?id=10099" class="place fl ml-10">
+                                <img src xSrc="picture/134ce63057f068a219a0df338fb0b723.jpg" alt=""/>
+                            </a>
+                            <a href="/industry/detail.htm?id=10098" class="place fl ml-10">
+                                <img src xSrc="picture/edab7ba7e203cd7576d1200465194ea8.jpg" alt=""/>
+                            </a>
+
+                            <a href="/industry/detail.htm?id=10098" class="place fl ml-10" hidden>
+                                <img src xSrc="picture/edab7ba7e203cd7576d1200465194ea8.jpg" alt=""/>
+                                <h1 class="placeTitle mt-20 mb-10 textover">中国网商城</h1>
+                                <p class="office">办公面积125000平米</p>
+                                <p class="save">仓储面积20000平米</p>
+                                <p c>停车位个</p>
+                                <p class="dizhi">杭州市萧山区萧山经...</p>
+                            </a>
+                        </ul>
+                        <ul class="pagenationAll">
+                        </ul>
+                    </div>
+                    <span class="fl baseAfter after"></span>
+                </div>
+                <div style="display:none;" class="baseLunbolun baseLunbo2">
+                    <span class="fl baseBefore before"></span>
+                    <div class=" fl baseLunbo">
+                        <ul class="carousel">
+                            <a href="/profession/detail.htm?id=997" class="place allcreate textover fl ml-10">
+                                <img src xSrc="picture/db0a6e9ff878467f8f75a952d74cf418.png" alt=""/>
+                                <h1 class="textover">六和桥</h1>
+                            </a>
+                            <a href="/profession/detail.htm?id=998" class="place allcreate textover fl ml-10">
+                                <img src xSrc="picture/fe3dfab7c94a46da939f8dd36d1d1bec.png" alt=""/>
+                                <h1 class="textover">梦想小镇</h1>
+                            </a>
+                            <a href="/profession/detail.htm?id=999" class="place allcreate textover fl ml-10">
+                                <img src xSrc="picture/014ec22474de499e86495986e22a5575.png" alt=""/>
+                                <h1 class="textover">贝壳社</h1>
+                            </a>
+                            <a href="/profession/detail.htm?id=1000" class="place allcreate textover fl ml-10">
+                                <img src xSrc="picture/1d98a4eaddd04bc3afb22761c82554aa.png" alt=""/>
+                                <h1 class="textover">良仓孵化器</h1>
+                            </a>
+                        </ul>
+                        <ul class="pagenationAll">
+                        </ul>
+                    </div>
+                    <span class="fl baseAfter after"></span>
+                </div>
+			</div>
+		</div>
+
+
+		<div class="banner banner2 mt-40" hidden>
+				 <img src xSrc="picture/1bb697d8328b4467bfc485bc73bf5cba.jpg" alt="" /> 
+		</div>
+
+
+
+			
+		
+			<div class="role" hidden>
+				<div class="wrap">
+					<div class="governmentTitle role-title mb-25 clearfix">
+						<h1 class="fl">
+							<b class="normalB governmentB mr-10"></b><a href="javascript:void(0);">电商政务</a>
+						</h1>
+					</div>
+					<div class="role-policy clearfix">
+							<a class="fl polict-left" href="http://www.hzssww.gov.cn/" target="_blank"><img src xSrc="picture/7524f945fb6241ec98dc37522904cd73.png" alt="" /></a> 
+						<div class="fl polict-middle clearfix">
+								<a class="fl mb-15 ml-15" href="http://www.zcom.gov.cn/"  target="_blank"><img src xSrc="picture/53417746210a4336933f11db1c59f74a.png" alt="" /></a> 
+								<a class="fl mb-15 ml-15" href="http://www.hzepa.org/index.php"  target="_blank"><img src xSrc="picture/3b53d5f3d1d64136bad3e868eacdb804.jpg" alt="" /></a> 
+								<a class="fl mb-15 ml-15" href="http://www.zjepsp.com/"  target="_blank"><img src xSrc="picture/cf3f48a34d7e4c42bd4a5574a041bda6.png" alt="" /></a> 
+								<a class="fl mb-15 ml-15" href="http://www.hzecn.org/"  target="_blank"><img src xSrc="picture/f6d8f90cb0624291b2996f06a1a532fc.png" alt="" /></a> 
+						</div>
+						<div class="fl polict-right clearfix">
+								<a class="fl mb-15" href="http://sfgc.hzecps.org/" target="_blank"><img src xSrc="picture/707e509ceab740eea6c95ac9bb2a9c8c.png" alt="" /></a> 
+								<a class="fl mb-15" href="http://www.china-hzgec.gov.cn/" target="_blank"><img src xSrc="picture/7055ac9f1dfa408c95e36c3a90828015.png" alt="" /></a> 
+						</div>
+					</div>
+				</div>
+			</div>
+		
+
+		<!-- part1-2 协会之窗 -->
+		<div class="profession1_File role">
+			<div class="wrap">
+				<div class="profession1_Title role-title mb-25" id="profession1_Category">
+					<h1 class="fl">
+						<b class="normalB profession1_B mr-10"></b><a href="/profession1_/index.htm?type=2">协会之窗</a>
+					</h1>
+					<a class="active" href="javascript:void(0)" data-value="0">全部</a>
+						<a href="javascript:void(0)" data-value="107127">中心动态</a>
+						<a href="javascript:void(0)" data-value="50779">电商动态</a>
+						<a href="javascript:void(0)" data-value="50780">移动电商</a>
+						<a href="javascript:void(0)" data-value="50781">农村电商</a>
+				</div>
+				<div>
+					<div class="role-content clearfix" id="profession1_ist"></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- part1-2 企业风采 -->
+		<div class="profession1_File role">
+			<div class="wrap">
+				<div class="profession1_Title role-title mb-25" id="profession1_Category">
+					<h1 class="fl">
+						<b class="normalB profession1_B mr-10"></b><a href="/profession1_/index.htm?type=2">企业风采</a>
+					</h1>
+					<a class="active" href="javascript:void(0)" data-value="0">全部</a>
+						<a href="javascript:void(0)" data-value="107127">中心动态</a>
+						<a href="javascript:void(0)" data-value="50779">电商动态</a>
+						<a href="javascript:void(0)" data-value="50780">移动电商</a>
+						<a href="javascript:void(0)" data-value="50781">农村电商</a>
+				</div>
+				<div>
+					<div class="role-content clearfix" id="profession1_ist"></div>
+				</div>
+			</div>
+		</div>
+
+
+			<div class="role" >
+		        <div class="wrap">
+		            <div class="specialtyTitle role-title mb-25 clearfix">
+		                <h1 class="fl"><b class="normalB specialtyB mr-10"></b><a href="javascript:void(0);">推荐服务商</a></h1>
+		            </div>
+		            <div class="role-content clearfix">
+		                		<a class="fl serviceclock" href="http://www.hzecps.org/service/index.htm?type=11" target="_blank"><img src xSrc="picture/b7614820246d4eff97da7ed38ae0997e.jpg" alt=""/></a>
+		                <div class="serviceList fl">
+		                    <ul class="clearfix">
+		                        	<li class="fl"><a href="http://www.csl1688.com/" target="_blank"><img src xSrc="picture/7f128774de4f40f88dd76f87eae09278.jpg" alt=""/></a></li>
+		                        	<li class="fl"><a href="http://www.hzmingxiao.cn/" target="_blank"><img src xSrc="picture/d87ba5f8b2484646a863c52b330cad20.jpg" alt=""/></a></li>
+		                        	<li class="fl"><a href="http://www.hztaoyue.com" target="_blank"><img src xSrc="picture/6383182ec296453b9c70482f8f4ac2e1.jpg" alt=""/></a></li>
+		                        	<li class="fl"><a href="http://www.tbdream.com" target="_blank"><img src xSrc="picture/48415d298a584354b7cb5f0fd07658c1.jpg" alt=""/></a></li>
+		                        	<li class="fl"><a href="http://www.yingkelawyer.com" target="_blank"><img src xSrc="picture/08f0c7d506c948198d403296ff518b1a.png" alt=""/></a></li>
+		                        	<li class="fl"><a href="http://www.friends-soft.com/" target="_blank"><img src xSrc="picture/8353c73d575246598657e2e2d5792c51.png" alt=""/></a></li>
+		                        	<li class="fl"><a href="http://www.93jiang.com/" target="_blank"><img src xSrc="picture/99a5791ed39e4d5ea0a31ab4d405d7ce.jpg" alt=""/></a></li>
+		                        	<li class="fl"><a href="http://www.ckjwlw.com" target="_blank"><img src xSrc="picture/d201cddd3ac141aeac4eb3cf5a70ce88.png" alt=""/></a></li>
+		                        	<li class="fl"><a href="http://www.tiaze.com" target="_blank"><img src xSrc="picture/60c91e32864a445ab12b365617b3705e.jpg" alt=""/></a></li>
+		                        	<li class="fl"><a href=" http://www.hzlgec.com/" target="_blank"><img src xSrc="picture/5648a42b95314fcc9bddad9987d68421.jpg" alt=""/></a></li>
+		                        	<li class="fl"><a href="http://www.shuyun.com" target="_blank"><img src xSrc="picture/c3a90126724540fc8cf5ce8b7627c1b0.jpg" alt=""/></a></li>
+		                        	<li class="fl"><a href="http://www.kuajg.com" target="_blank"><img src xSrc="picture/9a5895ff2fba4f6f9fe4740218174705.jpg" alt=""/></a></li>
+		                        	<li class="fl"><a href="http://www.loonxi.com" target="_blank"><img src xSrc="picture/2f86cf7496904b13a29825159df2401c.jpg" alt=""/></a></li>
+		                        	<li class="fl"><a href="https://hzbaoco.1688.com/" target="_blank"><img src xSrc="picture/b23d4f1cd2d04266b2edb04c8224f6e3.jpg" alt=""/></a></li>
+		                        	<li class="fl"><a href="http://www.cnsixi.com" target="_blank"><img src xSrc="picture/b6ffbe9253404b639d1a53ae81d3bc45.jpg" alt=""/></a></li>
+		                        	<li class="fl"><a href="http://www.mingtaokeji.com/" target="_blank"><img src xSrc="picture/40c6a42bc38f41b780ea43d8d0983618.png" alt=""/></a></li>
+		                        	<li class="fl"><a href="http://www.edusoho.com" target="_blank"><img src xSrc="picture/79383f9997ee4ef2afd52e381d66d041.png" alt=""/></a></li>
+		                        	<li class="fl"><a href="http://www.yidaijinbi.com" target="_blank"><img src xSrc="picture/89aa8c114be84dbfa9a27c475a5d54ec.png" alt=""/></a></li>
+		                        	<li class="fl"><a href="http://www.jinqueseo.com/" target="_blank"><img src xSrc="picture/c9994493debe44d7ac6b5ba413d443cd.jpg" alt=""/></a></li>
+		                        	<li class="fl"><a href="http://url.cn/U5Zfyl" target="_blank"><img src xSrc="picture/d4018625102c4133865bd3edcafaa553.jpg" alt=""/></a></li>
+		                    </ul>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+
+
+	</div>
+	
+<div class="footContainer mt-20" >
+    <div class="clearfix footWrap">
+        <img src="picture/platlogo.png" alt="杭州平台" class="fl"/>
+        <div class="fl weixinWrap"><img src="picture/platcode.png" alt="官方微信"/><a href="javascript:;">官方微信</a></div>
+        <div class="fl serviceWrap"><p>汇聚电商服务 助力电商发展</p><p>服务热线：<span>0571-56131811</span></p></div>
+    </div>
+    <p>
+		<a href="/about/platform.htm">关于我们</a><span>|</span>浙ICP备14007481号-3  
+    	版权所有：杭州市电子商务公共服务中心<span>|</span>平台支持：中智汇  
+    	<span>|</span><a target="_blank" href="/admin/login.htm">后台入口</a>
+    </p>
+    <p>Copyright©2015-2016 www.hzecps.org All Rights Reserved</p>
+    </div>
+</body>
+<div style="display:none">
+<script src="js/z_stat.php" language="JavaScript"></script>
+                <script>
+                        var _hmt = _hmt || [];
+                        (function() {
+                          var hm = document.createElement("script");
+                          hm.src = "//hm.baidu.com/hm.js?998755e8b4d7d13670ccf038d9da1175";
+                          var s = document.getElementsByTagName("script")[0];
+                          s.parentNode.insertBefore(hm, s);
+                        })();
+                        </script>
+</div>
+
+
+
+<!-- 找回密码 -->
+<div id="findPwd" class="loginWrap-02" style="display:none;">
+    <div class="login current">
+        <form action="" id="findbackPwd" class="findback">
+            <div><input  type="text" id="fmobile" name="loginWays"  data-regex="mobile" data-empty="手机号码不能为空！" data-errMsg="手机号码出错" class="mobile required"/><h6>请输入手机号</h6><i>请输入密码</i></div>
+            <div class="codeWrap clearfix"><input class="required " type="text" id="fCode" name="code" /><input type="button" value="发送验证码" class="sendCode"/><h6>验证码</h6><i>请填写验证码</i></div>
+        	<input type="button" value="完成" id="finishBtn" class="loginBtn"/>
+        </form>
+        <form action="" id="changePwd" class="findback" style="display:none">
+            <div><input  id="newPwd" class="required" type="password" name="userPwd" /><h6>请输入新密码</h6><i>密码不能为空</i><span></span></div>
+            <div><input  id="newPwd2" class="required" type="password" name="userPwd2" /><h6>确认新密码</h6><i>两次密码输入不一致</i><span></span></div>
+        	<input type="button" value="提交" id="submit_btn" class="loginBtn"/>
+        </form>
+    </div>
+</div>
+<!-- 侧边栏二维码电话号码（如有需要可以提取到公共） -->
+<div class="fixedWrap">
+        <div class="fr">
+            <span id="toTop" class="toTop"></span>
+            <span class="code">
+                <p><img src="picture/4b9dbc3c7c284690973b8a1cc06566b1.png" alt="中智汇二维码"/></p>
+            </span>
+            <span class="tel">
+                <p>0571-56131811</p>
+            </span>
+        </div>
+</div>
+<!-- 该项目前端js -->
+
+<!-- <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script> -->
+<!-- <script type="text/javascript"  src="js/buttonlite.js"></script>
+<script type="text/javascript"  src="js/bsharec0.js"></script> -->
+<!-- <script type="text/javascript" src="js/layer.min.js"></script> -->
+<!-- layer框架自带js -->
+<!-- <script type="text/javascript" src="js/layer.min_1.js"></script> -->
+<!-- 引用其他页面需带js -->
+<!-- <script type="text/javascript" src="js/swfobject.js"></script> -->
+<!-- <script type="text/javascript" src="js/jquery.uploadify.v2.1.4.min.js"></script> -->
+<!-- <script type="text/javascript" src="js/jquery.touchslider.js"></script> -->
+<script src="js/jquery.superslide.2.1.1.js"></script>
+<!-- <script type="text/javascript" src="js/jquery.mcustomscrollbar.concat.min.js"></script> -->
+<script type="text/javascript" src="js/jquery.tools.min.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<!-- 以后所有layer统一使用新版本的layer2.2 -->
+<script src="js/layer.js"></script>
+<script type="text/javascript">
+//找回密码弹出框
+function openChangePwd(){
+	$(".findback").find("i").removeClass("errorTip").siblings("h6").show();
+	layer.closeAll();
+	layer.open({
+        title:'找回密码',
+        type:1,
+        area: ['400px', '300px'],
+        shadeClose: true,
+       	content: $('#findPwd'),
+        end:function(){
+        	$(".findback")[0].reset();
+			$(".findback")[1].reset();
+        	$(".findback").find("i").removeClass("errorTip").siblings("h6").show();
+        } 
+    });
+}
+$(function(){
+	//侧边栏js
+	$(window).scroll(function(){
+        if($(this).scrollTop()>500){
+            $("#toTop").fadeIn();
+        }else{
+            $("#toTop").fadeOut();
+        }
+    })
+    $("#toTop").click(function(){
+        $('body,html').animate({scrollTop:0},500)
+    });
+	
+	//表单验证(-start-因忘记密码focus样式问题，取消该段注释By-GSM)
+	$("h6").click(function () {
+	            $(this).siblings("input.required").focus();
+	})
+	$("form").find("input[type='text'],input[type='password']").each(function () {
+		if($.trim($(this).val()).length<=0){
+    		$(this).siblings("h6").show();
+    	}else{
+    		$(this).siblings("h6").hide();
+    	}
+        $(this).blur(function () {
+            $(this).validate();
+            if($.trim($(this).val()).length<=0){
+	    		$(this).siblings("h6").show();
+	    	}else{
+	    		$(this).siblings("h6").hide();
+	    	}
+        })
+        $(this).focus(function () {
+            $(this).siblings("i").removeClass("errorTip");
+            $(this).siblings("h6").hide();
+        })
+	})
+	//(-end-因忘记密码focus样式问题，取消该段注释By-GSM)
+	//发送验证码
+    $(".sendCode").click(function () {
+        var telSuccess;
+        var mobileReg = /^(0|86|17951)?(13[0-9]|15[0-9]|17[678]|18[0-9]|14[57])[0-9]{8}$/;
+        var telVal = $(this).parents("form").find(".mobile").val();
+        if (!mobileReg.test(telVal) || telVal.length <= 0) {
+            $(this).val("发送验证码");
+            telSuccess = false;
+        } else {
+            telSuccess = true;
+        }
+        if (!telSuccess) {
+            $(this).parents("form").find($(".mobile")).siblings("i").addClass("errorTip").text("手机号有错");
+            return true;
+        } else {
+            $(".sendCode").removeAttr("disabled");
+            var btn = $(this);
+            var count = 60;
+            if (count <= 1) {
+                btn.attr('disabled', true);
+            }
+            btn.val(count + "S");
+            var resend = setInterval(function () {
+                count--;
+                if (count > 0) {
+                    btn.attr('disabled', true);
+                    btn.val(count + "S");
+                    $(".sendCode").css({background: "#cbcbcb"});
+                } else {
+                    clearInterval(resend);
+                    btn.val("重新发送").removeAttr('disabled');
+                }
+            }, 1000);
+            //发送验证码
+            var mobile = $('#fmobile').val();
+            $.ajax({
+				url : '/get_code.htm',
+				type : 'POST',
+				dataType : 'json',
+				data : {
+					mobile : mobile
+				},
+				success : function (result , textStatus){
+					if(result.result == "success"){
+						$('#findbackPwd').find($(".sendCode")).siblings("i").text("验证码发送成功").addClass("errorTip");
+					}
+				}
+				
+			});
+        }
+    })
+	//找回密码
+    $("#finishBtn").click(function () {
+        $(this).parent("form").find("input[type='text'],input[type='password']").each(function () {
+            $(this).validate();
+        })
+        if ($(this).parent("form").find(".errorTip").length > 0) {
+            return true;
+        } else {
+        	var mobile = $('#fmobile').val();
+    		var code = $('#fCode').val();
+   		   	$.ajax({
+   				url : '/validate_mobile.htm',
+   				type : 'POST',
+   				dataType : 'json',
+   				data : {
+   					mobile : mobile,
+   					code : code
+   				},
+   				success : function (result , textStatus){
+   					if(result.success){
+   						$('.findback').toggle();
+					}else{
+						if(result.mobile != null && result.mobile != ""){
+							$('#findbackPwd').find($(".mobile")).siblings("i").text(result.mobile).addClass("errorTip");
+						}
+						if(result.coed != null && result.code != ""){
+							$('#findbackPwd').find($(".sendCode")).siblings("i").text(result.code).addClass("errorTip");
+						}
+   					}
+   				}
+   			});
+        }
+    });
+  	//找回密码-输入新密码
+    $("#submit_btn").click(function () {
+        $(this).parent("form").find("input[type='text'],input[type='password']").each(function () {
+            $(this).validate();
+        })
+        var newPwd = $('#newPwd').val();
+    	var newPwd2 = $('#newPwd2').val();
+    	if(newPwd != newPwd2){
+    		$("#newPwd2").siblings("i").addClass("errorTip");
+    	}
+        if ($(this).parent("form").find(".errorTip").length > 0) {
+            return true;
+        } else {
+        	var mobile = $('#fmobile').val();
+   		   	$.ajax({
+   				url : '/change_password.htm',
+   				type : 'POST',
+   				dataType : 'json',
+   				data : {
+   					mobile : mobile,
+   					newPwd : newPwd,
+   					newPwd2 : newPwd2
+   				},
+   				success : function (result){
+   					if(result.success){
+   						$(".findback")[0].reset();
+   						$(".findback")[1].reset();
+   						$('.findback').toggle();
+   						layer.closeAll();
+   						openLoginWindow();
+   					}else{
+   						if(result.passwd != null && result.passwd != ""){
+   							$('#newPwd2').siblings("i").text(result.passwd).addClass("errorTip");
+   						}
+   					}
+   				}
+   			});
+        }
+    });
+});
+	var hasLogin = '';
+	function getUrlParam(name){  
+	    //构造一个含有目标参数的正则表达式对象  
+	    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");  
+	    //匹配目标参数  
+	    var r = window.location.search.substr(1).match(reg);  
+	    //返回参数值  
+	    if (r!=null) return unescape(r[2]);  
+	    return null;  
+	}
+	var _redirectUrl = getUrlParam('redirectUrl');
+	if ( _redirectUrl != null ) {
+		openLoginWindow();
+	}
+		function contact(){
+			var url = "/guide/index.htm?name=联系我们";
+			url = encodeURI(url);
+			window.location.href = url;
+		}
+		function about(){
+			var url = "/guide/index.htm?name=关于我们";
+			url = encodeURI(url);
+			window.location.href = url;
+		}
+		
+		//console.log(hasLogin);
+		function checkLogin(){
+			if(hasLogin == 'true'){
+				return true;
+			}
+			var redirectUrl = getUrlRelativePath();
+			openLoginWindow();
+			return false;
+		}
+		//
+		function getUrlRelativePath(){
+		　　　　var url = document.location.toString();
+		　　　　var arrUrl = url.split("//");
+		　　　　var start = arrUrl[1].indexOf("/");
+		　　　　var relUrl = arrUrl[1].substring(start);//stop省略，截取从start开始到结尾的所有字符
+		　　　　return relUrl;
+		}
+		
+		//
+		$("#register_now").click( function(){
+			openRegisterWindow();
+		});
+		//搜索
+		$("#searchBtn").click(function(){
+			var keyWord = $(this).siblings("input")[0].value;
+			window.location.href="/college/list.htm?name="+keyWord;
+		});
+		//弹出登陆窗口
+		function openLoginWindow(){
+			var i = layer.open({
+			    type : 2,
+			    title : "<h1 style='position: relative;'>用户登录</h1>",
+			    content: '/login.htm',
+			    area : ['450px' , '350px'],
+			    offset : ['100px',''],
+			    end : function(index){
+			    	layer.close(index);
+			    }
+			});
+			//
+			$("#close_login").on("click", function(event){
+				$('#email').val('');
+				$('#password').val('');
+				layer.closeAll();
+			});
+			//
+			$("#register_now").on("click", function(event){
+				$('#email').val('');
+				$('#password').val('');
+				layer.close(i);
+			});
+			
+		}
+		//触发注册事件
+		$("#register").click( function(){
+			openRegisterWindow();
+		});
+		
+		function closeAndOpenRegister(){
+			layer.closeAll();
+			openRegisterWindow();
+		}
+		//
+		function openRegisterWindow(){
+			var i = layer.open({
+			    type : 2,
+			    title : "<h1 style='position: relative;'>用户注册</h1>",
+			    content : '/register.htm',
+			    area : ['450px' , '570px'],
+			    border : [ '#000', false],
+			    offset : ['100px',''],
+			    close : function(index){
+			    	layer.close(index);
+			    },
+			    success:function(){
+			    	var windowHeight = $(window).height();
+			    	var layerHeight = $(".layui-layer").height();
+			    	$(".layui-layer").css({"top" : (windowHeight-layerHeight)/2+"px"});
+			    }
+			});
+		}
+		/* var ssoSign = '';
+		if(ssoSign){
+			var params = {sign : ssoSign};
+			ssoLogin(params);
+		} */
+		
+// 		var logout = '';
+		var needSSO = 'yes';
+		var ssoDomain = 't-job.hzecps.org';
+		function ssoCallback(data){
+			console.log('sso callback:'+data);
+			//location.reload();
+		}
+		
+		function ssoLogin(params){
+			console.log(params + "," + ssoDomain);
+			if(needSSO != 'yes'){
+				location.reload();
+				return;
+			}
+			$.ajax({
+				 type:"get",  
+				 dataType:"jsonp",
+				 data : params,
+				 jsonp : "ssoCallback",
+				 url: "http://" + ssoDomain + "/login/toCrossdomainLogin", 
+				 crossDomain:true,
+				 success: function(data){  
+					 console.log('ssoLogin return: '+data);
+				 }
+			});
+			location.reload();
+		}
+		function redirectUrlMethod(_reUrl) {
+			
+			
+		}
+		//
+		function ssoLogout(){
+			$.ajax({
+				type : "get",
+				dataType : "jsonp",
+				jsonp : "ssoCallback",
+				url: "http://" + ssoDomain + "/login/toCrossdomainLogout", 
+				crossDomain : true,
+				success : function(data) {
+					 console.log('ssoLogout return: '+data);
+				}
+			});
+		}
+		function logout() {
+			
+			if(needSSO == 'yes'){
+				ssoLogout();
+			}
+			window.location.href = '/logout.htm';
+			
+// 			$.ajax({
+// 				url : '/logout.htm',
+// 				type : 'POST',
+// 				dataType : 'json',
+// 				success : function(result, textStatus) {
+// 					if (result.success == "true") {
+// 						window.location.href="/index.htm";
+// 					}
+// 				}
+// 			});
+		}
+		function reload() {
+			window.location.reload();
+		}
+		//加入收藏
+		function addFavorite(sURL, sTitle) {
+			try {
+				window.external.addFavorite(sURL, sTitle);
+			} catch (e) {
+				try {
+					window.sidebar.addPanel(sTitle, sURL, "");
+				} catch (e) {
+					 ("加入收藏失败，请使用Ctrl+D进行添加");
+				}
+			}
+		}
+		// 设置为主页 
+		function SetHome(obj,vrl){ 
+		try{ 
+		obj.style.behavior='url(#default#homepage)';
+		obj.setHomePage(vrl); 
+		} 
+		catch(e){ 
+		if(window.netscape) { 
+		try { 
+		netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect"); 
+		} 
+		catch (e) { 
+		alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。"); 
+		} 
+		var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch); 
+		prefs.setCharPref('browser.startup.homepage',vrl); 
+		}else{ 
+		alert("您的浏览器不支持，请按照下面步骤操作：1.打开浏览器设置。2.点击设置网页。3.输入："+vrl+"点击确定。"); 
+		} 
+		} 
+		} 
+</script>
+	<script src="js/jquery.e-calendar.js"></script>
+	<script src="js/jquery.nanoscroller.js"></script>
+	<script src="js/laytpl.js"></script>
+	<script src="js/scrollload.js"></script>
+	<script src="js/lunbo.js"></script>
+	<script src="js/jquery.scorllload.js"></script>
+	<script>
+	function queryNews(id, tempId, domId){
+		if (domId =="professionFileList") {
+			$('#professionFileList').empty();
+		}else{
+			$('#professionList').empty();
+		}
+
+		$.ajax({
+			url:'/index_news.htm',
+			data:{ categoryId : id, page : 1, pageSize : 9},
+			dataType:'json',
+			async:false,
+			type:'POST',
+			success:function(data){
+				var gettpl = document.getElementById(tempId).innerHTML;
+				laytpl(gettpl).render({list:data.list,topList:data.topList}, function(html) {
+					if(!html){
+						html = '';
+					}
+					document.getElementById(domId).innerHTML = html;
+				});
+			}
+		});
+	}
+	//首次滚动加载“电商学院”
+	function firstLoadCourse(id, tempId, domId){
+		var param = {
+		        url:'/index_course.htm',
+		        data:{ categoryId : id, page : 1, pageSize : 11},
+		        success:function(data){
+		        	var gettpl = document.getElementById(tempId).innerHTML;
+					laytpl(gettpl).render({list:data.list,topList:data.topList}, function(html) {
+						if(!html){
+							html = '';
+						}
+						document.getElementById(domId).innerHTML = html;
+					});
+		        }
+		    };
+		$(".college").scorllLoad(param);
+	}
+	//点击异步加载“电商学院”课程
+	function queryCourse(id, tempId, domId){
+		$('#collegeList').empty();
+		$.ajax({
+			url:'/index_course.htm',
+			data:{ categoryId : id, page : 1, pageSize : 11},
+			dataType:'json',
+			async:false,
+			type:'POST',
+			success:function(data){
+				var gettpl = document.getElementById(tempId).innerHTML;
+				laytpl(gettpl).render({list:data.list,topList:data.topList}, function(html) {
+					if(!html){
+						html = '';
+					}
+					document.getElementById(domId).innerHTML = html;
+				});
+			}
+		});
+	}
+	//首次加载专题活动
+	function firstLoadActivity(categoryid, tempId, domId){
+		$('#activityList').empty();
+		var param = {
+		        url:'/index_activity.htm',
+		        data:{ categoryId : categoryid, page : 1, pageSize : 9},
+		        success:function(data){
+		        	var gettpl = document.getElementById(tempId).innerHTML;
+					laytpl(gettpl).render({list:data.list}, function(html) {
+						if(!html){
+							html = '';
+						}
+						document.getElementById(domId).innerHTML = html;
+					});
+		        }
+		    };
+		$(".activity").scorllLoad(param);
+	}
+	function queryActivity(categoryid, tempId, domId){
+		$('#activityList').empty();
+		$.ajax({
+			url:'/index_activity.htm',
+			data:{ categoryId : categoryid, page : 1, pageSize : 9},
+			dataType:'json',
+			async:false,
+			type:'POST',
+			success:function(data){
+				var gettpl = document.getElementById(tempId).innerHTML;
+				laytpl(gettpl).render({list:data.list}, function(html) {
+					if(!html){
+						html = '';
+					}
+					document.getElementById(domId).innerHTML = html;
+				});
+			}
+		});
+	}
+	 function autoHeight(){
+		 var width = $(window).width();
+		 $(".lunboAll,.lunboAll .carousel a").height(width*(550/1920));
+	        var lunboHeight = $(".lunboAll").height();
+	        $(".headerTop").css({"padding-top" : 25/1920*width});
+	        $(".lunboAll .before,.lunboAll .after").css({top : lunboHeight/2 - 44});
+	    };
+    function loadCalendar(){
+    	//预备展示在日历中的活动数据
+    	$.ajax({
+			url:'/index_recent_activity.htm',
+			data:{},
+			dataType:'json',
+			type:'POST',
+			success:function(data){
+				//调用日历
+				var dataArray = [];
+				for(var i = 0;i<data.list.length;i++){
+					var map = {};
+					var date_id = data.list[i].id;
+					var year = data.list[i].year;
+					var month = data.list[i].month;
+					var day = data.list[i].day;
+					var name = data.list[i].name;//活动名称
+					dataArray.push(map);
+					map.datetime = new Date(year,month,day);
+					map.href = "/themedactivity/detail.htm?id="+date_id;
+					map.name = name;
+				};
+				$('#calendar').eCalendar(
+					{events:dataArray}
+				);
+			},
+			error:function(){
+				$('#calendar').eCalendar(
+						{events:[]}
+					);
+			}
+		});
+    	
+    }
+    
+      
+  //目录导航栏切换
+    function aSelect(class1,classactive,class2){
+        $("."+class1).on("click",function(){
+            $(this).addClass(classactive).siblings("."+class1).removeClass(classactive);
+            if(class2 == "profession"){
+              	//行业动态资讯分类id
+            	var categoryId = $("#professionCategory").children("a.active").attr("data-value");
+            	queryNews(categoryId,"professionTemplate","professionList");
+            }else if(class2 == "college"){
+            	//加载电商学院课程
+            	var classifyId = $("#collegeCategory").children("a.active").attr("data-value");
+            	var type = $("#collegeCategory").children("span.active").attr("data-value");
+            	queryCourse(classifyId, "collegeTemplate", "collegeList");
+            }else if(class2 == "activity"){
+            	//加载活动沙龙
+            	var activityCategoryId = $("#activityCategory").children("a.active").attr("data-value");
+            	if(activityCategoryId != "" && activityCategoryId != null){
+            		queryActivity(activityCategoryId, "activityTemplate", "activityList");
+            	}
+            }
+        })
+    };
+    $(window).load(function(){
+    	autoHeight();
+    	function autoBannerHeight(){
+            var bannerHeight = $(window).width()*(355/1920);
+            $(".lunbobanner1,.lunbobanner1 a").height(bannerHeight);
+            var spanHeight = $(".lunbobanner1 .before").height();
+            $(".lunbobanner1 .before,.lunbobanner1 .after").css({top : (bannerHeight - spanHeight)/2+"px"});
+            $(".banner1-pagenation").css({bottom : $(window).width()*(35/1920)})
+        }
+        autoBannerHeight();
+    	$(".basePlace .role-title>a").each(function(i){
+    		$(this).on("click",function(){
+    			$(this).addClass("active").siblings("a").removeClass("active");
+    			$(".baseLunbolun").eq(i).show().siblings(".baseLunbolun").hide();
+    		});
+    	});
+    	//加载行业动态资讯
+    	var categoryId = $("#professionCategory").children("a.active").attr("data-value");
+    	queryNews(categoryId,"professionTemplate","professionList");
+    	//加载政策文件
+    	var categoryFileId = $("#professionFileCategory").children("a.active").attr("data-value");
+    	queryNews(categoryFileId,"professionFileTemplate","professionFileList");
+
+    	//加载电商学院课程
+    	var classifyId = $("#collegeCategory").children("a.active").attr("data-value");
+    	firstLoadCourse(classifyId, "collegeTemplate", "collegeList");
+    	//加载活动沙龙
+    	var activityCategoryId = $("#activityCategory").children("a.active").attr("data-value");
+    	if(activityCategoryId != "" && activityCategoryId != null){
+    		firstLoadActivity(activityCategoryId, "activityTemplate", "activityList");
+    	}
+        var BodyWidth = document.body.clientWidth;
+        $(".fullscreen a").width(BodyWidth);
+        $(".lunboAll").lunbo();
+        $(".lunbobanner1").lunbo();
+        $(".baseLunbo1").lunbo({moveIndex : 1 : 976,itemWidth : 925});
+
+        $(".baseLunbo2").lunbo({moveIndex : 4,moveWidth : 976,itemWidth : 244});
+        $(".industryLunboTop").lunbo();
+        $(".industryLunbobottom").lunbo({moveIndex : 2, moveWidth : 410,itemWidth : 195,autoplay : false});
+        //    切换图标
+        $("#serviceMarket>a").on("mouseover",function(){
+            $(this).addClass("active").siblings("a").removeClass("active");
+            $("#role-servic li").eq($(this).index()).addClass("active").siblings("li").removeClass("active");
+        })
+        $("#role-servic li").on("mouseover",function(){
+            $(this).addClass("active").siblings("li").removeClass("active");
+            $("#serviceMarket a").eq($(this).index()).addClass("active").siblings("a").removeClass("active");
+        })
+        //自定义滚动条
+        $(".nano").nanoScroller({alwaysVisible: true});
+        $("#bottom").click(function(){
+            $(".nano").nanoScroller({scroll:'bottom'});
+        });
+        $("#top").click(function(){
+            $(".nano").nanoScroller({scroll:'top'});
+        });
+        aSelect("nav a","active");
+        aSelect("profession .role-title>a","active","profession");//行业动态分类
+        aSelect("college .role-title>a","active","college");//电商学院分类
+        aSelect("college .role-title span","active","college");//电商
+        aSelect("activity .role-title>a","active","activity");//活动沙龙
+        aSelect("role-title span","active");
+        
+        //加载日历内容
+        loadCalendar();
+    });
+    
+    	
+</script>
+	<!-- 行业动态模版 -->
+	<script type="text/html" id="professionTemplate">
+{{# if(d.list != null && d.list.length > 0){ }}
+	<div class="role-left fl">
+	{{# if(d.list[0] != null){ }}
+	<a href="/profession/detail.htm?id={{d.list[0].id}}" target="_blank">
+	    <img class="trendnew" src="picture/{{d.list[0].imageurl}}" alt=""/>
+	    <h1 class="textover">{{=d.list[0].title}}</h1>
+	    <p>{{=d.list[0].summary}}</p>
+	</a>
+	{{# } }}
+	</div>
+	<div class="fl role-middle clearfix middle-toplist">
+
+<!-- 	{{# for(var j = 1;j <= 6; j++){ }}
+		{{# if(d.list[j] == null){ break;} }}
+		<a class="fl ml-20 mb-15" href="/profession/detail.htm?id={{d.list[j].id}}" target="_blank"><img src="picture/{{d.list[j].imageurl}}" alt=""/><p class="textover">{{=d.list[j].title}}</p></a>
+	{{# } }} -->
+
+		<!-- <div class="role-right ml-20 fr"> -->
+			{{# if(d.topList != null){ }}
+			<div class="role-title mb-10"><a class="active" href="javascript:void(0)" target="_blank">资讯排行</a></div>
+			<div class="ranking-content">
+				{{# for(var i = 0; i < d.topList.length ; i++){ }}
+					{{# if(i<3){ }}
+			    		<a href="/profession/detail.htm?id={{d.topList[i].id}}" class="mb-10" target="_blank"><span class="mr-10 top">{{i+1}}</span>{{=d.topList[i].title}}</a>
+					{{# }else{ }}
+						<a href="/profession/detail.htm?id={{d.topList[i].id}}" class="mb-10" target="_blank"><span class="mr-10 last">{{i+1}}</span>{{=d.topList[i].title}}</a>
+					{{# } }}
+				{{# } }}
+				{{# if(d.list[7] != null){ }}
+				{{# alert('存在细则') }}
+			    <div class="ranking-show"><a href="/profession/detail.htm?id={{d.list[7].id}}" target="_blank"><img src="picture/{{d.list[7].imageurl}}" alt=""/><p>{{=d.list[7].title}}</p></a></div>
+				{{# } }}
+				{{# if(d.list[8] != null){ }}
+			    <div class="ranking-show mt-15"><a href="/profession/detail.htm?id={{d.list[8].id}}"><img src="picture/{{d.list[8].imageurl}}" alt=""/><p>{{=d.list[8].title}}</p></a></div>
+				{{# } }}
+			</div>
+			{{# } }}
+			<!-- </div> -->
+
+	</div>
+	<div class="role-right ml-20 fr">
+	{{# if(d.topList != null){ }}
+	<div class="role-title mb-10"><a class="active" href="javascript:void(0)" target="_blank">资讯排行</a></div>
+	<div class="ranking-content">
+		{{# for(var i = 0; i < d.topList.length ; i++){ }}
+			{{# if(i<3){ }}
+	    		<a href="/profession/detail.htm?id={{d.topList[i].id}}" class="mb-10" target="_blank"><span class="mr-10 top">{{i+1}}</span>{{=d.topList[i].title}}</a>
+			{{# }else{ }}
+				<a href="/profession/detail.htm?id={{d.topList[i].id}}" class="mb-10" target="_blank"><span class="mr-10 last">{{i+1}}</span>{{=d.topList[i].title}}</a>
+			{{# } }}
+		{{# } }}
+		{{# if(d.list[7] != null){ }}
+	    <div class="ranking-show"><a href="/profession/detail.htm?id={{d.list[7].id}}" target="_blank"><img src="picture/{{d.list[7].imageurl}}" alt=""/><p>{{=d.list[7].title}}</p></a></div>
+		{{# } }}
+		{{# if(d.list[8] != null){ }}
+	    <div class="ranking-show mt-15"><a href="/profession/detail.htm?id={{d.list[8].id}}"><img src="picture/{{d.list[8].imageurl}}" alt=""/><p>{{=d.list[8].title}}</p></a></div>
+		{{# } }}
+	</div>
+	{{# } }}
+	</div>
+{{# }else{ }}
+<p style="text-align:center;margin-top:15px;font-size:14px;">暂时还木有你要的资讯，敬请期待~~！</p>
+{{# } }}
+</script>
+<!-- 行业动态模版 end -->
+
+<!-- 政策文件模板 -->
+	<script type="text/html" id="professionFileTemplate">
+{{# if(d.list != null && d.list.length > 0){ }}
+	<div class="role-left fl">
+	{{# if(d.list[0] != null){ }}
+	<a href="/profession/detail.htm?id={{d.list[0].id}}" target="_blank">
+	    <img class="trendnew" src="picture/{{d.list[0].imageurl}}" alt="" style="height:369px;" />
+	    <!-- <h1 class="textover">{{=d.list[0].title}}</h1>
+	    <p>{{=d.list[0].summary}}</p> -->
+	</a>
+	{{# } }}
+	</div>
+	<div class="fl role-middle clearfix middle-toplist">
+
+<!-- 	{{# for(var j = 1;j <= 6; j++){ }}
+		{{# if(d.list[j] == null){ break;} }}
+		<a class="fl ml-20 mb-15" href="/profession/detail.htm?id={{d.list[j].id}}" target="_blank"><img src="picture/{{d.list[j].imageurl}}" alt=""/><p class="textover">{{=d.list[j].title}}</p></a>
+	{{# } }} -->
+
+		<!-- <div class="role-right ml-20 fr"> -->
+			{{# if(d.topList != null){ }}
+			<div class="role-title mb-10"><a class="active" href="javascript:void(0)" target="_blank">资讯排行</a></div>
+			<div class="ranking-content">
+				{{# for(var i = 0; i < d.topList.length ; i++){ }}
+					{{# if(i<3){ }}
+			    		<a href="/profession/detail.htm?id={{d.topList[i].id}}" class="mb-10" target="_blank"><span class="mr-10 top">{{i+1}}</span>{{=d.topList[i].title}}</a>
+					{{# }else{ }}
+						<a href="/profession/detail.htm?id={{d.topList[i].id}}" class="mb-10" target="_blank"><span class="mr-10 last">{{i+1}}</span>{{=d.topList[i].title}}</a>
+					{{# } }}
+				{{# } }}
+				{{# if(d.list[7] != null){ }}
+				{{# alert('存在细则') }}
+			    <div class="ranking-show"><a href="/profession/detail.htm?id={{d.list[7].id}}" target="_blank"><img src="picture/{{d.list[7].imageurl}}" alt=""/><p>{{=d.list[7].title}}</p></a></div>
+				{{# } }}
+				{{# if(d.list[8] != null){ }}
+			    <div class="ranking-show mt-15"><a href="/profession/detail.htm?id={{d.list[8].id}}"><img src="picture/{{d.list[8].imageurl}}" alt=""/><p>{{=d.list[8].title}}</p></a></div>
+				{{# } }}
+			</div>
+			{{# } }}
+			<!-- </div> -->
+
+	</div>
+	<div class="role-right ml-20 fr">
+	{{# if(d.topList != null){ }}
+	<div class="role-title mb-10"><a class="active" href="javascript:void(0)" target="_blank">资讯排行</a></div>
+	<div class="ranking-content">
+		{{# for(var i = 0; i < d.topList.length ; i++){ }}
+			{{# if(i<3){ }}
+	    		<a href="/profession/detail.htm?id={{d.topList[i].id}}" class="mb-10" target="_blank"><span class="mr-10 top">{{i+1}}</span>{{=d.topList[i].title}}</a>
+			{{# }else{ }}
+				<a href="/profession/detail.htm?id={{d.topList[i].id}}" class="mb-10" target="_blank"><span class="mr-10 last">{{i+1}}</span>{{=d.topList[i].title}}</a>
+			{{# } }}
+		{{# } }}
+		{{# if(d.list[7] != null){ }}
+	    <div class="ranking-show"><a href="/profession/detail.htm?id={{d.list[7].id}}" target="_blank"><img src="picture/{{d.list[7].imageurl}}" alt=""/><p>{{=d.list[7].title}}</p></a></div>
+		{{# } }}
+		{{# if(d.list[8] != null){ }}
+	    <div class="ranking-show mt-15"><a href="/profession/detail.htm?id={{d.list[8].id}}"><img src="picture/{{d.list[8].imageurl}}" alt=""/><p>{{=d.list[8].title}}</p></a></div>
+		{{# } }}
+	</div>
+	{{# } }}
+	</div>
+{{# }else{ }}
+<p style="text-align:center;margin-top:15px;font-size:14px;">暂时还木有你要的资讯，敬请期待~~！</p>
+{{# } }}
+</script>
+<!-- 政策文件模板 end-->
+
+
+	<!-- 电商学院模版 -->
+	<script type="text/html" id="collegeTemplate">
+{{# if(d.list != null){ }}
+	<div class="role-left school fl">
+	{{# if(d.list[0] != null){ }}
+	<a class="mb-15 trendnew" href="/college/detail.htm?id={{d.list[0].id}} " target="_blank">
+		{{# if(d.list[0].type == 1){ }}<b class="maxzhibo"></b>{{# } }}
+	    <img src="picture/{{d.list[0].coverimageurl}}" alt=""/>
+	    <p class="textover">{{=d.list[0].name}}</p>
+	</a>
+	{{# } }}
+	{{# if(d.list[1] != null){ }}
+    <a class="fl" href="/college/detail.htm?id={{d.list[1].id}}" target="_blank">
+		{{# if(d.list[1].type == 1){ }}<b class="middlezhibo"></b>{{# } }}
+		<img src="picture/{{d.list[1].coverimageurl}}" alt=""/>
+		<p class="textover">{{=d.list[1].name}}</p>
+	</a>
+	{{# } }}
+	{{# if(d.list[2] != null){ }}
+    <a class="fr" href="/college/detail.htm?id={{d.list[2].id}}" target="_blank">
+		{{# if(d.list[2].type == 1){ }}<b class="middlezhibo"></b>{{# } }}
+		<img src="picture/{{d.list[2].coverimageurl}}" alt=""/>
+		<p class="textover">{{=d.list[2].name}}</p>
+	</a>
+	{{# } }}
+	</div>
+	<div class="fl role-middle clearfix">
+	{{# for(var j = 3;j <= 8; j++){ }}
+		{{# if(d.list[j] == null){ break;} }}
+		<a class="fl ml-20 mb-15" href="/college/detail.htm?id={{d.list[j].id}}" target="_blank">
+			{{# if(d.list[j].type == 1){ }}<b class="middlezhibo"></b>{{# } }}
+			<img src="picture/{{d.list[j].coverimageurl}}" alt=""/>
+			<p class="textover">{{=d.list[j].name}}</p>
+		</a>
+	{{# } }}
+	</div>
+	<div class="role-right ml-20 fr">
+	<div class="role-title mb-10"><a class="active" href="javascript:void(0)">课程排行</a></div>
+	<div class="ranking-content">
+		{{# for(var i = 0; i < d.topList.length ; i++){ }}
+			{{# if(i<3){ }}
+				<input type="hidden" value="{{i}}"/>
+	    		<a href="/college/detail.htm?id={{d.topList[i].id}}" class="mb-10" target="_blank"><span class="mr-10 top">{{i+1}}</span>{{=d.topList[i].name}}</a>
+			{{# }else{ }}
+				<input type="hidden" value="{{i}}"/>
+				<a href="/college/detail.htm?id={{d.topList[i].id}}" class="mb-10" target="_blank"><span class="mr-10 last">{{i+1}}</span>{{=d.topList[i].name}}</a>
+			{{# } }}
+		{{# } }}
+		{{# if(d.list[9] != null){ }}
+	    <div class="ranking-show">
+			<a href="/college/detail.htm?id={{d.list[9].id}}" target="_blank">
+				{{# if(d.list[9].type == 1){ }}<b class="smallzhibo"></b>{{# } }}
+				<img src="picture/{{d.list[9].coverimageurl}}" alt=""/>
+				<p>{{=d.list[9].name}}</p>
+			</a>
+		</div>
+		{{# } }}
+		{{# if(d.list[10] != null){ }}
+	    <div class="ranking-show mt-10">
+			<a href="/college/detail.htm?id={{d.list[10].id}}" target="_blank">
+				{{# if(d.list[10].type == 1){ }}<b class="smallzhibo"></b>{{# } }}
+				<img src="picture/{{d.list[10].coverimageurl}}" alt=""/>
+				<p>{{=d.list[10].name}}</p>
+			</a>
+		</div>
+		{{# } }}
+	</div>
+	</div>
+{{# }else{ }}
+<p style="text-align:center;margin-top:15px;font-size:14px;">暂时还木有你要的课程，敬请期待~~！</p>
+{{# } }}
+</script>
+<!-- 电商学院模版 end-->
+
+<script type="text/html" id="activityTemplate">
+{{# if(d.list != null && d.list.length > 0){ }}
+	<div class="role-left school  fl">
+	{{# if(d.list[0] != null){ }}
+	<a class="mb-15 trendnew" href="/themedactivity/detail.htm?id={{d.list[0].id}}">
+	    <img src="picture/{{d.list[0].coverimageurl}}" alt=""/>
+	    <p class="textover">{{=d.list[0].name}}</p>
+	</a>
+	{{# } }}
+	{{# if(d.list[1] != null){ }}
+    	<a class="fl" href="/themedactivity/detail.htm?id={{d.list[1].id}}"><img src="picture/{{d.list[1].coverimageurl}}" alt=""/><p class="textover">{{=d.list[1].name}}</p></a>
+	{{# } }}
+	{{# if(d.list[2] != null){ }}
+    	<a class="fr" href="/themedactivity/detail.htm?id={{d.list[2].id}}"><img src="picture/{{d.list[2].coverimageurl}}" alt=""/><p class="textover">{{=d.list[2].name}}</p></a>
+	{{# } }}
+	</div>
+	<div class="fl role-middle clearfix">
+	{{# for(var j = 3;j <= 6; j++){ }}
+	{{# if(d.list[j] == null){ break;} }}
+		<a class="fl ml-20 mb-15" href="/themedactivity/detail.htm?id={{d.list[j].id}}"><img src="picture/{{d.list[j].coverimageurl}}" alt=""/><p class="textover">{{=d.list[j].name}}</p></a>
+	{{# } }}
+	{{# for(var j = 7;j <= 8; j++){ }}
+	{{# if(d.list[j] == null){ break;} }}
+		<a class="fl ml-20" href="/themedactivity/detail.htm?id={{d.list[j].id}}"><img src="picture/{{d.list[j].coverimageurl}}" alt=""/><p class="textover">{{=d.list[j].name}}</p></a>
+	{{# } }}
+	</div>
+{{# }else{ }}
+<p style="text-align:center;margin-top:15px;font-size:14px;">暂时还木有你要的活动，敬请期待~~！</p>
+{{# } }}
+</script>
+</body>
+</html>

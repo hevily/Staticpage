@@ -2,6 +2,22 @@
 html{
 	body{
 		.container{
+			.jump-to-search{
+				background-color: #f6f6f6;
+				border-bottom: 1px solid #cfcfcf;
+				padding: 20px 10px;
+				input{
+					background-color: #fff;
+					border:1px solid #d1d1d1;
+					border-radius:0px;
+					width: 100%;
+					line-height: 40px;
+					display: block;
+					margin: 0 auto;
+					padding: 5px 10px;
+					text-align:center;
+				}
+			}
 			@include mobile-container;
 			.flex{
 				display: flex;
