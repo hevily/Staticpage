@@ -263,7 +263,9 @@ html body .container {
       padding: 8px 0; }
       html body .container .weui-grids.four-part .weui-grid .weui-grid__icon {
         width: 48px;
-        height: 48px; }
+        height: 48px;
+        border-radius: 5px;
+        overflow: hidden; }
       html body .container .weui-grids.four-part .weui-grid .weui-grid__label {
         font-size: 12px; }
       html body .container .weui-grids.four-part .weui-grid::before, html body .container .weui-grids.four-part .weui-grid::after {
