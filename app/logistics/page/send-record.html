@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../css/send-record.css" />
+	<title>寄送查询</title>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="jump-to-search">
+			<!-- <p>查询快件</p> -->
+			<input type="button" name="search-jumb-area"  value="请输入要查询的单号" onclick="window.location.href='search-ship-order.html'">
+		</div>
+		<div class="section tabs flex">
+			<div class="tab flex-item active-tab"> 我寄的(<span>3</span>)</div>
+			<div class="tab flex-item"> 我收的(<span>2</span>)</div>
+		</div>
+		<div class="section tabpanels orders">
+			<div class="tabpanel">
+				<div class="media notsend order">
+					<div class="media-body media-middle">
+						<div class="trans-order">
+							 运单号:<span> 无</span>
+						</div>
+						<div class="trans-time">
+							<span class="trans-action">取消时间</span>：<span class="time">2017-10-17 11:22</span>
+						</div>
+						<div class="flex">
+							<div class="flex-item">
+								<p class="send-addr"> 北京市</p>
+								 <p class="sender"> 张立</p>
+							</div>
+							<div class="flex-item">
+								 <div class="order-action">
+								 	已取消
+								 </div>
+							</div>
+							<div class="flex-item">
+								<p class="receive-addr"> 上海市</p>
+								 <p class="receiver"> 吴江</p>
+							</div>
+						</div>
+					</div>
+					<div class="media-right media-middle">
+						<div class="see-qr" onclick="window.location.href='send-record/see-qr.html'">
+							 查看二维码
+						</div>
+						<div class="see-trans-detail">
+							 查看物流
+						</div>
+					</div>
+				</div>
+				<div class="media sended order">
+					<div class="media-body media-middle">
+						<div class="trans-order">
+							 运单号:<span> 986587456256</span>
+						</div>
+						<div class="trans-time">
+							<span class="trans-action">签收时间</span>：<span class="time">2017-10-17 11:22</span>
+						</div>
+						<div class="flex">
+							<div class="flex-item">
+								<p class="send-addr"> 北京市</p>
+								 <p class="sender"> 张立</p>
+							</div>
+							<div class="flex-item">
+								 <div class="order-action">
+								 	已取消
+								 </div>
+							</div>
+							<div class="flex-item">
+								<p class="receive-addr"> 上海市</p>
+								 <p class="receiver"> 吴江</p>
+							</div>
+						</div>
+					</div>
+					<div class="media-right media-middle">
+						<div class="see-qr">
+							 查看二维码
+						</div>
+						<div class="see-trans-detail" onclick="window.location.href='send-record/trans-detail.html'">
+							 查看物流
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="tabpanel">
+				<div class="media sended order">
+					<div class="media-body media-middle">
+						<div class="trans-order">
+							 运单号:<span> 无</span>
+						</div>
+						<div class="trans-time">
+							<span class="trans-action">取消时间</span>：<span class="time">2017-10-17 11:22</span>
+						</div>
+						<div class="flex">
+							<div class="flex-item">
+								<p class="send-addr"> 北京市</p>
+								 <p class="sender"> 张立</p>
+							</div>
+							<div class="flex-item">
+								 <div class="order-action">
+								 	已取消
+								 </div>
+							</div>
+							<div class="flex-item">
+								<p class="receive-addr"> 上海市</p>
+								 <p class="receiver"> 吴江</p>
+							</div>
+						</div>
+					</div>
+					<div class="media-right media-middle">
+						<div class="see-qr" '">
+							 查看二维码
+						</div>
+						<div class="see-trans-detail" onclick="window.location.href='send-record/trans-detail.html'">
+							 查看物流
+						</div>
+					</div>
+				</div>
+				<div class="media sended order">
+					<div class="media-body media-middle">
+						<div class="trans-order">
+							 运单号:<span> 986587456256</span>
+						</div>
+						<div class="trans-time">
+							<span class="trans-action">签收时间</span>：<span class="time">2017-10-17 11:22</span>
+						</div>
+						<div class="flex">
+							<div class="flex-item">
+								<p class="send-addr"> 北京市</p>
+								 <p class="sender"> 张立</p>
+							</div>
+							<div class="flex-item">
+								 <div class="order-action">
+								 	已取消
+								 </div>
+							</div>
+							<div class="flex-item">
+								<p class="receive-addr"> 上海市</p>
+								 <p class="receiver"> 吴江</p>
+							</div>
+						</div>
+					</div>
+					<div class="media-right media-middle">
+						<div class="see-qr">
+							 查看二维码
+						</div>
+						<div class="see-trans-detail" onclick="window.location.href='send-record/trans-detail.html'">
+							 查看物流
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer></footer>
+	<!-- jQuery 2.1.4 -->
+	<!-- <script src="https://staticcdn.yshjie.com/cdn/librarypath/jquery/jquery-2.1.4.min.js"></script> -->
+	<script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+	<script src="../../Public/layer-v3.1.0/layer/layer.js"></script>
+	<!-- statistics  -->
+	<!-- <script src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/js/storecommon.js"></script> -->
+	<!-- <script type="text/javascript" src="/statichtml/bjmovie01/estores/Home/JSLang?v=1.1"></script> -->
+	<!-- <script type="text/javascript" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/home/js/checkWeChat.js?ver=1.95&r={:rand(0, 9999)}"></script> -->
+	<script>
+		$(function () {
+			// 类别切换
+			$('.tabs .tab').on('click',function () {
+				var _this = $(this)
+					,CN = 'active-tab'
+					,index = _this.index()
+					$('.'+CN).removeClass(CN)
+				_this.addClass(CN)
+				var tabpanels = $('.tabpanel')
+				tabpanels.hide()
+				tabpanels.eq(index).fadeIn()
+
+			})
+			// 查看二维码
+			$('.see-qr').on('click',function () {
+				
+			})
+			// 查看物流
+			$('.see-trans-detail').on('click',function () {
+				
+			})
+		})
+	</script>
+</body>
+</html>

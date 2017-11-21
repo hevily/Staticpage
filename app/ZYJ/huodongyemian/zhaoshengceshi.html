@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" >
+<title>情景</title>
+<link type="text/css" rel="stylesheet" href="css/zhaosheng.css">
+<link type="text/css" rel="stylesheet" href="css/auto.css">
+</head>
+<body style="background: #fceddf;">
+<div class="content">	
+
+<div class="zsgs"><img src="images/xsgx.png"></div>
+        <div class="shou_info" onclick="erWeiMa()" id="guanzhu"><span>关注我们，与百万家长共享教育知识</span></div>
+
+	  </div>
+
+</div>
+<div class="start"><a href="tijiaoxinxi.html"><img src="images/kaishi1.png"></a></div>
+</div>
+<div class="logo"><img src="images/logo.png"></div>
+
+<!--二维码-->
+
+<div class="zs_bg" id="erweimas" style="display: none;"></div>
+<div class="zs_bg1" id="erweima1" style="display: none;">
+	  <div class="zs_erwei"><img src="images/erweima.png"></div>
+	  <div class="zs_guanbi" onclick="closeErweima()"><img src="images/guanbi.png"></div>
+</div>
+
+</div>
+
+
+</body>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script type="text/javascript">
+	function erWeiMa(){
+          var erw =  document.getElementById("erweimas");
+          var erws =  document.getElementById("erweima1");
+          $("body").css('position','fixed');
+          erw.style.display="block";
+          erws.style.display="block";
+          
+ 
+	}
+
+	function closeErweima(){
+          var erw =  document.getElementById("erweimas");
+          var erws =  document.getElementById("erweima1");
+          $("body").css('position','static');
+          erw.style.display="none";
+          erws.style.display="none";
+
+	}
+
+</script>
+</html>
+
+<span style="font-size:14px;">
+<!--
+/* 
+ * 页面加入这段代码可使Android机器页面不再受到用户字体缩放强制改变大小 
+ * 但是会有一个1秒左右的延迟，期间可以考虑通过loading展示 
+ * 仅供参考 
+ */ -->
+ <script type="text/javascript">
+(function(){  
+    if (typeof(WeixinJSBridge) == "undefined") {  
+        document.addEventListener("WeixinJSBridgeReady", function (e) {  
+            setTimeout(function(){  
+                WeixinJSBridge.invoke('setFontSizeCallback',{"fontSize":0}, function(res) {  
+                    // alert(JSON.stringify(res));  
+                });  
+            },0);  
+        });  
+    } else {  
+        setTimeout(function(){  
+            WeixinJSBridge.invoke('setFontSizeCallback',{"fontSize":0}, function(res) {  
+                // alert(JSON.stringify(res));  
+            });  
+        },0);  
+    }  
+})();
+</script>   
+</span>  
+
+
+
+<span style="font-size:14px;"><style type="text/css">  
+    body  
+    {  
+        -webkit-text-size-adjust: 100% !important;  
+        text-size-adjust: 100% !important;  
+        -moz-text-size-adjust: 100% !important;  
+    }  
+</style></span>

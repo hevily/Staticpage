@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../js/plugin/jquery_WEUI/lib/weui.min.css">
+    <link rel="stylesheet" href="../js/plugin/jquery_WEUI/css/jquery-weui.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+	<title>考勤</title>
+</head>
+<body>
+	<header class="opening">
+		<div class="company">
+			<span class="company-name">公司机构名称</span><i class="fa fa-lg fa-angle-up"></i>
+		</div>
+		<ul class="company-list">
+			<li class="own-company"><i class="fa fa-th"></i>示例公司名称1</li>
+			<li class="own-company"><i class="fa fa-th"></i>示例公司名称2</li>
+			<li class="own-company"><i class="fa fa-th"></i>示例公司名称3</li>
+		</ul>
+	</header>
+	<div class="container">
+		<div class="section">
+			<div class="module-box">
+				<div class="module-title weui-flex">
+					<div class="weui-flex__item module-name">内外勤管理</div>
+					<div class="module-action">
+						<a href="javascript:;" class="toggle-list-btn">收起</a>
+					</div>
+				</div>
+				<div class="module-list">
+					<div class="weui-grids four-part">
+					      <a href="javascript:;" class="weui-grid js_grid">
+					        <div class="weui-grid__icon">
+					          <img src="../img/qiandao.jpg" alt="">
+					        </div>
+					        <p class="weui-grid__label">
+					          签到
+					        </p>
+					      </a>
+					      <a href="javascript:;" class="weui-grid js_grid">
+					        <div class="weui-grid__icon">
+					          <img src="../img/daka.jpg" alt="">
+					        </div>
+					        <p class="weui-grid__label">
+					          打卡
+					        </p>
+					      </a>
+					      <a href="javascript:;" class="weui-grid js_grid">
+					        <div class="weui-grid__icon">
+					          <img src="../img/shenpi.jpg" alt="">
+					        </div>
+					        <p class="weui-grid__label">
+					           审批
+					        </p>
+					      </a>
+					      <a href="javascript:;" class="weui-grid js_grid">
+					        <div class="weui-grid__icon">
+					          <img src="../img/email.jpg" alt="">
+					        </div>
+					        <p class="weui-grid__label">
+					           电邮
+					        </p>
+					      </a>
+					      <a href="javascript:;" class="weui-grid js_grid">
+					        <div class="weui-grid__icon">
+					          <img src="../img/icon_nav_toast.png" alt="">
+					        </div>
+					        <p class="weui-grid__label">
+					          更多
+					        </p>
+					      </a>
+				    </div>
+				</div>
+			</div>
+			<div class="module-box">
+				<div class="module-title weui-flex">
+					<div class="weui-flex__item module-name">内外勤管理</div>
+					<div class="module-action">
+						<a href="javascript:;" class="toggle-list-btn">收起</a>
+					</div>
+				</div>
+				<div class="module-list">
+					<div class="weui-grids four-part">
+					      <a href="javascript:;" class="weui-grid js_grid">
+					        <div class="weui-grid__icon">
+					          <img src="../img/finance.png" alt="">
+					        </div>
+					        <p class="weui-grid__label">
+					          考勤打卡
+					        </p>
+					      </a>
+					      <a href="javascript:;" class="weui-grid js_grid">
+					        <div class="weui-grid__icon">
+					          <img src="../img/creator.png" alt="">
+					        </div>
+					        <p class="weui-grid__label">
+					          打卡四字
+					        </p>
+					      </a>
+				    </div>
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			
+		</div>
+	</div>
+	<div class="header-mask stop_touch"></div>
+	<footer></footer>
+	<!-- jQuery 2.1.4 -->
+	<!-- <script src="https://staticcdn.yshjie.com/cdn/librarypath/jquery/jquery-2.1.4.min.js"></script> -->
+	<script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+	<script src="../js/plugin/jquery_WEUI/js/jquery-weui.min.js"></script>
+	<!-- 如果使用了某些拓展插件还需要额外的JS -->
+	<script src="../js/plugin/jquery_WEUI/lib/fastclick.js"></script>
+	<script src="../js/plugin/jquery_WEUI/js/city-picker.min.js"></script>
+	<!-- statistics  -->
+	<script src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/js/storecommon.js"></script>
+	<script type="text/javascript" src="/statichtml/bjmovie01/estores/Home/JSLang?v=1.1"></script>
+	<!-- usr -->
+	<script>
+		$(function () {
+
+			<!-- 切换顶部公司机构 -->
+			$('header').on('click',function () {
+				$(this).toggleClass('opening');
+				$(this).find('.company-list').slideToggle();
+				$('.header-mask').fadeToggle();
+			})
+			// 阻止遮罩默认动作
+			$('.stop_touch').on('click',function (e) {
+				e.preventDefault();
+				e.stopPropagation();
+			})
+			// 展开收起模块
+			function toggleModule(box) {
+				var box = $(box);
+					box.each(function (i,item) {
+						console.log(i)
+						console.log(item)
+						var btn = $(box[i]).find('.toggle-list-btn')
+							,list = $(box[i]).find('.module-list a')
+						btn.on('click',function () {
+							list.each(function (i,item) {
+								if(i > 3){
+									$(list[i]).fadeToggle()
+								}
+							})
+						})
+					})
+			}
+			var punk_clock = new toggleModule('.module-box')
+		})
+	</script>
+</body>
+</html>

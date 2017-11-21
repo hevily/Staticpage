@@ -1,0 +1,423 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<!-- swiper -->
+<link rel="stylesheet" type="text/css" href="../js/swiper/animate.min.css">
+<link rel="stylesheet" type="text/css" href="../js/swiper/swiper-3.4.2.min.css">
+
+<title>手机横、竖屏事件</title>
+<style type="text/css">
+   *{
+    box-sizing: border-box;
+    margin: 0;padding: 0;
+   }
+   html,body,.bg1{
+    height: 100%;width: 100%;box-sizing: border-box;
+   }
+   body{
+    background-image: url(../img/sj_bg.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    -webkit-overflow-scrolling:touch;
+   }
+   .bg1{
+    position: absolute;
+    background-image: url(../img/gdcp.png);
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+   }
+   .container{
+    height: 80%;
+    width: 60%;
+    position: fixed;
+    left: 50%;top: 50%;z-index: 8;
+    overflow: scroll;
+    transform:translate(-50%,-50%);
+   }
+
+   .content-wraper{
+
+   }
+</style>
+<style type="text/css">
+#scroller li {
+    display: inline-block;
+    background-color: #fff;
+    width: 50px;height: 50px;
+    text-align: center;
+}
+
+</style>
+<style type="text/css">
+    .swiper-container {
+        height: 100%;
+    }
+    .swiper-slide{
+        font-size: 0;
+    }
+    .swiper-slide .qus-box{
+        width:calc( 100% - 60px);
+    }
+    .swiper-slide img{
+        width:100%;
+    }
+    .swiper-slide ul{
+        list-style: none;
+        width: 50px;
+        position: absolute;
+        right: 1px;top: 0;
+    }
+    .swiper-slide ul li{
+        background-color: #ccc;
+        text-align:center;
+        height: 28px;
+        font-size: 16px;
+    }
+    .swiper-container{
+        display: none;
+    }
+    .mission-tips{
+        text-indent: 20px;
+        text-align: justify;
+    }
+    .text-decoration{
+        text-decoration: underline;
+    }
+    .start-test{
+        margin-left: calc( 50% - 40px) ;
+    }
+</style>
+
+
+</head>
+<body onload="screenOrientationEvent()">
+    <div class="bg1"></div>
+    <div class="container" id="container">
+        <div class="mission-tips">
+            <p>
+                “同学，你好。下面要进行一项测试。测试开始后，会呈现一个有几条连线的图片，请你找到白色格子连线那头的数字，并快速的点击该数字。注意只能用眼睛看，不能借助手等工具。你需要正确完成5张图片的连线任务。如果连线错误，则需要重新完成一张图，直到你正确完成5张图片的连线任务为止。每做完一张连线图你可以休息10秒（倒计时提醒）。请你准确快速的完成任务，完成任务所用的时间和正确性将决定你的成绩。如果你没有认真按要求完成任务，将给出警示，两次警示则测试终止。你可以通过练习来熟练测试任务。”
+            </p>
+            <p>
+                “练习结束，如果你明白了任务要求，点击‘开始’，进入正式测试。如果还需要练习，可以点击‘再次练习’，再练习一遍，直到你明白测试任务为止，点击‘开始’，进入测试”。
+            </p>
+            <p class="text-decoration">
+                如果连线错误，给出反馈，并重新完成一个新任务。备用新任务5张图。如果5张备用图用完，学生还出现错误，测试终止。记录为“错误过多”。如果测试的总时间超出5分钟，标记为“超时，未完成”（由测试员和预测结果设置），测试终止。
+            </p>
+            <a href="javascript:;" class="start-test">开始练习</a>
+        </div>
+        <div class="swiper-container">
+          <div class="swiper-wrapper"></div>
+        </div>
+       
+    </div>
+    <div class="notice_direction" id="notice_direction">
+         横屏浏览效果更佳！此页仅限横屏查看
+    </div>
+    <!-- JQ -->
+    <script src="https://cdn.bootcss.com/jquery/3.2.0/jquery.min.js"></script>
+    <script src="../js/swiper/swiper-3.4.2.jquery.min.js"></script>
+    <script src="../js/layer.mobile-v2.0/layer_mobile/layer.js"></script>
+
+     <script>
+        $(function () {
+            /**
+             * [qus description]
+             * @type {Object}
+             * level 定义使用的连线图等级 如 3 5 9
+             * qus 定义问题集合 { id:问题id,
+             *                  img: 问题图片路径,
+             *                  ans: 问题答案
+             *                }
+             */
+            var qus = {
+                level:5,
+                qus:[
+                    {
+                        id:1,
+                        img:'../img/qus/wd1.png',
+                        ans:1,
+                    },
+                    {
+                        id:2,
+                        img:'../img/qus/wd2.png',
+                        ans:2,
+                    },
+                    {
+                        id:5,
+                        img:'../img/qus/wd5.png',
+                        ans:5,
+                    },
+                    {
+                        id:1,
+                        img:'../img/qus/wd1.png',
+                        ans:1,
+                    },
+                    {
+                        id:2,
+                        img:'../img/qus/wd2.png',
+                        ans:2,
+                    }
+                ]
+            }
+
+            /* 用 ajax 获取数据 like
+            $.get(url,function (data) {
+                renderQus(data,point,timeout)
+            })
+            */
+           
+           /**
+            * [renderQus description]
+            * @param  {[type]} data    [data like qus]
+            * @param  {[type]} point   [通关分数，如5分即为过关]
+            * @param  {[type]} timeout [每完成一道关卡间歇时间]
+            * @return {[type]}         [no return ]
+            */
+            function renderQus(data,point,timeout) {
+                var mySwiper,
+                data = data,
+                test = false,
+                Time = new Date(),start = 0,old = 0,now = 0
+
+                $('.start-test').on('click',function () {
+                    test = true
+                    $(this).closest('.mission-tips').slideUp(500)
+                    initSwiper('.swiper-container',data)
+                    start = Time.getTime() / 1000
+                    old   = start
+                    console.log(start)
+                    console.log(old)
+                })
+                function initSwiper(goal,data) {
+                    level = data.level
+                    qus = data.qus
+                    _goal = $(goal)
+                    var swip = ''
+                    $.each(qus,function (i,item) {
+                        swip += '<div class="swiper-slide" data-qusID="'+item.id+'"><div class="qus-box"><img src="'+item.img+'" class="que-img" data-ans="'+item.ans+'"></div><ul></ul></div>'
+                    })
+                    _goal.find('.swiper-wrapper').append(swip)
+                    _goal.fadeIn(1000)
+                    mySwiper = new Swiper(goal, {
+                        // autoplay: 5000,//可选选项，自动滑动
+                        effect : 'cube',
+                        onInit:function (swiper) {
+                            renderAnsBtn(level)
+                        }
+                    })
+                    mySwiper.disableTouchControl();
+                }
+
+                function renderAnsBtn(level) {
+                    var ans_btn = $('.swiper-slide ul')
+                    $.each(ans_btn,function (i,item) {
+                        var Item = $(item)
+                        // console.log(Item)
+                        for(var i = 1;i < level +1; i++){
+                            Item.append('<li>'+i+'</li>')
+                        }
+                    })
+                    var btns = ans_btn.find('li')
+                        ,right = 0;
+                    btns.on('click',function () {
+                        var now = new Date()
+                            nowTime = now.getTime() / 1000
+                        console.log(nowTime)
+                        var _this = $(this)
+                        _thisSlide = _this.closest('.swiper-slide')
+                        ans = _thisSlide.find('img').data('ans')
+                        clickans = parseInt(_this.text())
+                        layerStyle = 'width:50%;'
+                        if(ans == clickans){
+                        //right
+                            right ++;
+                            console.log(right)
+                            curQus = mySwiper.activeIndex + 1
+                            checkAns()
+                        }else{
+                            checkAns()
+                        }
+                        function checkAns() {
+                            if(right >= point){
+                                layer.open({
+                                    type:0,
+                                    style:layerStyle,
+                                    shadeClose:false,
+                                    content:'测试通过，正在提交成绩',
+                                    btn:['离开测试','再来一次'],
+                                    yes:function () {
+                                        layer.closeAll()
+                                        alert('请关闭浏览器离开页面即可')
+                                    },
+                                    no:function () {
+                                        layer.closeAll()
+                                        reRenderQus()
+                                    }
+                                })
+                                console.log('达到要求')
+                                return ;
+                            }else{
+                                if(mySwiper.isEnd){
+                                    if(test){
+                                        layer.open({
+                                            content:'恭喜完成训练',
+                                            style:layerStyle,
+                                            btn:['正式开始','再试一次'],
+                                            shadeClose:false,
+                                            yes: function () {
+                                                layer.closeAll()
+                                                test = false
+                                                reRenderQus()
+                                                console.log('yes')
+                                            },
+                                            no: function () {
+                                                test = true
+                                                reRenderQus()
+                                                console.log('再试一次')
+                                            }
+                                        })
+                                    } else{
+                                        if(right < point){
+                                            layer.open({
+                                                content:'测试未合格',
+                                                style:layerStyle,
+                                                btn:['再来一次'],
+                                                shadeClose:false,
+                                                yes: function () {
+                                                    layer.closeAll()
+                                                    test = false
+                                                    reRenderQus()
+                                                }
+                                            })
+                                        }
+                                    }
+                                    return ;
+                                }else{
+                                    if(ans == clickans) notice = '正确'
+                                    else notice = '错误'
+                                    layer.open({
+                                        type:0,
+                                        style:layerStyle,
+                                        content:'回答'+notice+'<br>即将进入下一题<span class="timer"></span>',
+                                    })
+                                    nextQus(timeout)
+                                }
+
+                            }
+                        }
+
+                        function nextQus(timeout) {
+                            var timer = $('.timer')
+                            setInterval(function () {
+                                if(timeout == 0){
+                                    layer.closeAll()
+                                    mySwiper.slideNext()
+                                }
+                                timer.text(timeout)
+                                timeout --;
+                            },1000)
+                        }
+                        function reRenderQus() {
+                            mySwiper.removeAllSlides()
+                            initSwiper('.swiper-container',data)
+                        }
+                    })
+                }
+            }
+            renderQus(qus,3,2)
+
+        })
+    </script>
+
+
+    <!-- 检测横屏竖屏 -->
+        <script>
+            // 初始化文档高宽
+            function rennderDoc() {
+                $('body').height($(window).innerHeight())
+                $('body').width($(window).innerWidth())
+                text = '<span>'+$(window).innerHeight() +'----'+$(window).innerWidth()+'</span>'
+                // $('body').html(text)
+                console.log('resize')
+            }
+            // function calcBox(box,v,h) {
+            //     var v =1;
+            //     var _box = $(box);
+            //     var     v = v != undefined ? v : (5% )
+
+            //         h = h ? h : 20%
+            //     ;
+            //     console.log()
+            // }
+            //屏幕方向标识，0竖屏，其他值竖屏
+            var orientation=0,oldorientation = 0;
+            var setting = {
+                         autoplay: 2000,//可选选项，自动滑动
+                         loop:true
+                     }
+            // var mySwiper = new Swiper('.swiper-container', setting)
+            //转屏事件，内部功能可以自定义
+            var container = $('#container'),
+                bg = $('.bg1'),
+                notice_direction = $('#notice_direction')
+            function screenOrientationEvent(){
+
+                if(orientation == 0){
+                    // console.log('竖-----')
+                    container.hide()
+                    bg.hide()
+                    notice_direction.show()
+                    rennderDoc()
+                    // mySwiper.destroy()
+                }
+                else {
+                     // console.log('横-----')
+                     container.show()
+                     bg.show()
+                     notice_direction.hide()
+                     // setTimeout(function () {
+                        // mySwiper = new Swiper('.swiper-container', setting)
+                    // },1000)
+                    rennderDoc()
+                }
+            }
+            var innerWidthTmp = window.innerWidth;
+            //横竖屏事件监听方法
+            function screenOrientationListener(){
+                try{
+                    var iw = window.innerWidth;
+                    //屏幕方向改变处理
+                    if(iw != innerWidthTmp){
+                        if(iw>window.innerHeight)orientation = 90;
+                        else orientation = 0;
+                        innerWidthTmp = iw;
+                    }else{
+                        if(iw < window.innerHeight) orientation = 0;
+                        else orientation = 90;
+                    }
+                    if(orientation != oldorientation){
+                        console.log(orientation)
+                        screenOrientationEvent()
+                        oldorientation = orientation;
+                    }
+                } catch(e){alert(e);};
+                //间隔固定事件检查是否转屏，默认500毫秒
+                setTimeout("screenOrientationListener()",500);
+            }
+            //启动横竖屏事件监听
+            screenOrientationListener();
+
+        </script>
+    <!-- 检测横屏竖屏 END-->
+
+   
+</body>
+</html>
+
+
+

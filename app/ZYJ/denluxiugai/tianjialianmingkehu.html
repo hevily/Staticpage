@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>登录客户</title>
+<link type="text/css" rel="stylesheet" href="css/dengjikehu.css">
+<link type="text/css" rel="stylesheet" href="css/auto.css">
+</head>
+
+<body>
+<div class="dengji">
+    
+            <div class="denglu"> 
+            <div class="toal">
+             <div class="info_left">姓名(必填)</div>
+             <div class="info_right"><input type="text" placeholder="请输入" class="nmaes"></div>
+             <div class="clearth"></div>
+            </div>
+            </div>
+         
+         <div class="denglu">
+             <div class="toal">
+             <div class="info_left">性别(必填)</div>
+              <div class="info_right nmaes">
+                   <div class="in_left"><input id="a1" type="radio" name="aa" value="男"  >
+                    <label for="a1"></label>
+                    <span>男</span>
+                    </div>
+                      <div class="in_right"><input id="a2" type="radio" name="aa" value="女"  >
+                    <label for="a2"></label>
+                    <span>女</span>
+                    </div>
+                    </div>
+             <div class="clearth"></div>
+             </div>
+        </div>
+        <div class="dengphone" id="phones">
+           <div class="toal pp" id="toal">
+            <div class="info_leftp">手机</div>
+             <div class="nmaes_right"><input type="text" placeholder="请输入手机号码(必填)" class="nmaes"></div>
+             <div class="moren">
+                   <div class="moren1"><input id="item1" type="radio" name="item" value="默认"  checked>
+                    <label for="item1"></label>
+                    <p>默认</p>
+                    </div>
+             </div>
+             <div class="clearth"></div>
+            </div>
+            
+               <div class="toal pp">
+            <div class="info_leftp">家庭</div>
+             <div class="nmaes_right"><input type="text" placeholder="请输入家庭号码(必填)" class="nmaes"></div>
+             <div class="moren">
+                   <div class="moren1"><input id="item2" type="radio" name="item" value="默认"  >
+                    <label for="item2"></label>
+                    <p>默认</p>
+                    </div>
+             </div>
+             <div class="clearth"></div>
+            </div>
+            
+            
+            
+            
+               <div class="toal pp">
+            <div class="info_leftp">公司</div>
+             <div class="nmaes_right"><input type="text" placeholder="请输入公司号码(必填)" class="nmaes"></div>
+             <div class="moren">
+                   <div class="moren1"><input id="item3" type="radio" name="item" value="默认"  >
+                    <label for="item3"></label>
+                    <p>默认</p>
+                    </div>
+             </div>
+             <div class="clearth"></div>
+            </div>
+            
+               <div class="toal pp">
+                <div class="info_leftp">传真</div>
+                 <div class="nmaes_right"><input type="text" placeholder="请输入传真号码(必填)" class="nmaes"></div>
+                 <div class="moren">
+                       <div class="moren1"><input id="item4" type="radio" name="item" value="默认"  >
+                        <label for="item4"></label>
+                        <p>默认</p>
+                        </div>
+                 </div>
+                 <div class="clearth"></div>
+            </div>
+            <div class="xinzeng" id="zeng1"><i class="kehu" id="ceng"></i><span class="spann">新增</span>
+             <div class="clearth"></div>
+            </div>
+          </div>
+      <div class="beizhu">
+    <div class="beizhu1"><span>证件类型</span></div>
+     <div class="beizhu3 lianh">
+        <input type="button" value="学生证" checked>
+        <input type="button" value="身分证">
+        <input type="button" value="港澳通行证">
+        <input type="button" value="工作证">
+        <input type="button" value="护照">
+        <input type="button" value="军官证">
+        <div class="clearth"></div>
+     </div>
+</div>   
+   
+      <div class="denglu"> 
+            <div class="toal">
+             <div class="info_left">证件号码</div>
+             <div class="info_right"><input type="text" placeholder="请输入" class="nmaes"></div>
+             <div class="clearth"></div>
+            </div>
+            </div> 
+   
+</div>
+
+<div class="beizhu">
+    <div class="beizhu1"><span>关系</span></div>
+     <div class="beizhu2"><textarea placeholder="请输入内容"></textarea></div>
+</div>
+
+<div class="beizhu">
+    <div class="beizhu1"><span>地址</span></div>
+     <div class="beizhu2"><textarea placeholder="请输入内容"></textarea></div>
+</div>
+<div class="quding"><a href="">保存</a></div>
+</body>
+</html>
+ <script>
+              
+                     
+                       var main=document.getElementById('phones');
+                       var zeng=document.getElementById("ceng");
+                      var divArray= main.getElementsByClassName("pp");
+                    //alert(divArray.length);
+                        var num=0; 
+                               
+                       zeng.onclick=function(){
+                             
+                              
+                           num++;
+                        if(num%4==1){
+                            //alert(123);
+                            showDiv(1,2);
+                        }else if(num%4==2){
+                            //alert(456);
+                            showDiv(2,0);   
+                        }else if(num%4==3){
+                            //alert(789);
+                            showDiv(3,1);
+                            z1=document.getElementById("zeng1");    
+                            z1.style.display="none";
+                        }
+                           
+                           }
+                     
+                     
+                     function showDiv(now){ 
+                            divArray[now].style.display = "block";  
+                        }
+          </script>

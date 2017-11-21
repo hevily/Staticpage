@@ -1,0 +1,305 @@
+@import "static-base/static-base.scss";
+html{
+	body{
+		.container{
+			.jump-to-search{
+				background-color: #f6f6f6;
+				border-bottom: 1px solid #cfcfcf;
+				padding: 20px 10px;
+				input{
+					background-color: #fff;
+					border:1px solid #d1d1d1;
+					border-radius:0px;
+					width: 100%;
+					line-height: 40px;
+					display: block;
+					margin: 0 auto;
+					padding: 5px 10px;
+					text-align:center;
+				}
+			}
+			@include mobile-container;
+			.flex{
+				display: flex;
+				.flex-item{
+					flex:1;
+					padding: 0 10px;
+					font-size: 14px;
+					text-align: center;
+					vertical-align: middle;
+				}
+			}
+			.tab{
+				line-height: 40px;
+				position: relative;
+				color:#adadad;
+				&.active-tab{
+					color:#000;
+					&:before{
+						content:'';
+						display: block;
+						position: absolute;bottom: 0;left: 0;
+						width: 100%;
+						height: 2px;
+						background-color: #f02;
+					}
+				}
+			}
+			.tabpanels{
+				.tabpanel{
+					&:first-child{
+						display: block;
+					}
+					&:last-child{
+						display: none;
+					}
+				}
+			}
+			.section{
+				&.orders{
+					.order{
+						border-top: 1px solid #cfcfcf;
+						border-bottom: 1px solid #cfcfcf;
+
+						&.notsend{
+							.see-trans-detail{
+								display: none;
+							}
+						}
+						&.sended{
+							.see-qr{
+								display: none;
+							}
+						}
+						.trans-order,.trans-time{
+							font-size: 12px;
+							color:#cfcfcf;
+							line-height: 20px;
+							font-weight: normal;
+						}
+						.media-body{
+							padding: 10px;
+							.order-action{
+								line-height: 50px;
+							}
+							.flex-item{
+								p{
+									margin: 5px 0;
+									&.send-addr,&.receive-addr{
+										font-size: 18px;
+									}
+								}
+							}
+
+						}
+						.media-right{
+							min-width:50px;
+							padding: 0;
+							background-color: #f2f2f2;
+							.see-qr,.see-trans-detail{
+								padding: 0 5px;
+								text-align: center;
+							}
+						}
+						
+					}
+				}
+			}
+			// 物流详情
+			.trans-detail-item{
+				font-size: 14px;
+				.media{
+					overflow: visible;
+					margin: 0;
+					.media-left{
+						padding: 10px;
+						min-width: 100px;
+						text-align: center;
+					}
+					.media-body{
+						padding: 10px;
+
+						overflow: visible;
+						position: relative;
+						padding-left: 20px;
+						.trans-step{
+							position: absolute;
+							left: 0;top: 0;
+							width: 10px;
+							height: 100%;
+							i{
+								position: absolute;
+								left: 0;
+								top: calc(50% - 9px);
+								z-index:1;
+								font-size: 18px;
+								color:#cfcfcf;
+								background-color: #FFF;
+							}
+							&:before{
+								content:'';
+								display: block;
+								position: absolute;
+								z-index:0;
+								left: 7px;top: -50%;
+								height: 100%;width: 1px;
+								background-color: #cfcfcf;
+							}
+						}
+					}
+					&.first{
+						.media-body{
+							.trans-step{
+								i{
+									// color:green;
+								}
+							}
+						}
+					}
+					&.last{
+						.media-body{
+							.trans-step{
+								i{
+									color:#56c1d6;
+								}
+								&:before{
+									display: none;
+								}
+							}
+						}
+					}
+				}
+				
+			}
+			// 查看qr
+			&.see-qr{
+				.qr-title{
+					padding-top: 10px;
+					.flex{
+						.flex-item{
+							&:nth-child(2){
+								background-image: url("../img/sendto.png");
+								background-position: 0px 13px;
+								background-size: 100% 10px;
+								background-repeat: no-repeat;
+							}
+						}
+					}
+					.media-body{
+						padding: 0 40px;
+						p{
+							margin: 5px 0;
+							&.send-addr,&.receive-addr{
+								font-size: 18px;
+							}
+						}
+
+						.order-action{
+							line-height: 40px;
+							background-color: #FFF;
+						}
+
+					}
+					.media-right{
+						text-align:right;
+						padding-right: 10px;
+						min-width:30px;
+					}
+				}
+				.qr-service-addr{
+					background-color: #efefef;
+					margin: 10px;
+					border-radius:5px;
+					overflow: hidden;
+					.service-title{
+						position: relative;
+						font-size: 0;
+						height: 70px;
+						.bgr{
+							height: 40px;
+							background-color: #eb4f3b;
+						}
+						.bgangle{
+							position: relative;top: -2px;
+							background-image: url("../img/bgangle.png");
+							background-position: 0 0;
+							height: 10px;width: 100%;
+							background-size: cover;
+						}
+						.shipman{
+							position: absolute;
+							left: calc(50% - 22px);
+							top: 20px;
+							img{
+								width: 44px;
+							}
+
+						}
+					}
+					.ship-notice{
+						width: 240px;
+						border:1px solid #000;
+						border:0.5px solid #000;
+						padding: 5px 10px;
+						margin: 0 auto;
+						text-align: center;
+					}
+					.near-service{
+						padding: 10px;
+						.media{
+							padding: 10px;
+							margin-top: 20px;
+							background-color: #FFF;
+							border:1px solid #cfcfcf;
+							border:0.5px solid #cfcfcf;
+							p{
+								margin: 5px 0;
+							}
+							.media-right{
+								color:#b2b2b2;
+							}
+						}
+						.shipbrand{
+							color:red;
+							img{
+								width: 22px;
+							}
+						}
+
+					}
+				}
+				.qr{
+					padding: 0 10px;
+					line-height: 20px;
+					font-size: 14px;
+					.mark{
+						color:orange;
+					}
+					.qr-box{
+						img{
+							width: 50%;
+							display: block;
+							margin: 0 auto;
+						}
+					}
+				}
+			}
+			// 取消订单
+			.cancel-order{
+				margin-top: 50px;
+				text-align: center;
+				a{
+					display: inline-block;
+					padding: 0 12px;
+					border-radius:5px;
+					text-decoration: none;
+					color:#fff;
+					background-color: red;
+					border:none;
+					width: 80px;height: 35px;
+					line-height: 35px;
+				}
+			}
+		}
+	}
+}

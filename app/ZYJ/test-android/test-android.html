@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="Swiper-3.4.2/dist/css/swiper.min.css">
+	<title> 测试 swiper 在 android </title>
+	<style type="text/css">
+		img{
+			max-width:100%;
+		}
+	</style>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="section">
+			<div class="myswip swiper-containe">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide"><img src="img/1.jpg"></div>
+			        <div class="swiper-slide"><img src="img/3.jpg"></div>
+			        <div class="swiper-slide"><img src="img/2.jpg"></div>
+			        <div class="swiper-slide"><img src="img/4.jpg"></div>
+			    </div>
+			</div>
+		</div>
+		<div class="section">
+
+		</div>
+	</div>
+	<footer></footer>
+	<!-- jQuery 2.1.4 -->
+	<script src="https://staticcdn.yshjie.com/cdn/librarypath/jquery/jquery-2.1.4.min.js"></script>
+	<!-- statistics  -->
+	<script src="Swiper-3.4.2/dist/js/swiper.jquery.min.js"></script>
+	<script>
+		$(function () {
+			var mySwip = new Swiper('.myswip',{
+				autoplay : 1000,
+				loop:true
+			})
+			mySwip.disableTouchControl()
+		})
+	</script>
+</body>
+</html>

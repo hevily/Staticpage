@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" >
+<title>稳定性测试</title>
+<link type="text/css" rel="stylesheet" href="css/wd.css">
+</head>
+
+<style type="text/css">
+    .xiuxi{ position: absolute; right: 20px; font-size: 18px; display: none; }
+    //.miao_bg{ position:absolute; top: 0px; left: 0px; background: #000; opacity: 0.6; width: 100%; height: 100%; }
+
+</style>
+<link rel="stylesheet" href="css/lrtk.css">
+<link rel="stylesheet" href="css/main.css">
+<script src="js/hashtabber.js"></script>
+<body class="shijue">
+ <div class="xiuxi"  id="jis" >请休息一下<span id="maioshu">10</span>S</div>
+    <div class="wd_bg">
+       <!-- 代码 开始 -->
+<section class="example">
+	<section class="hashTabber-sandstone-wrapper">
+    <ol class="hashTabber-nav hashTabber-sandstone" data-hashtabber-id="dinosaurs" data-hashtabber-default="pterosaur">
+            <li data-hashtabber-pair="2" class="">
+                <a >1</a>
+                <a >2</a>
+                <a >3</a>
+                <a >4</a>
+                <a >5</a>
+            </li>
+            <li data-hashtabber-pair="3" class="" style="display: none;">
+                 <a >1</a>
+                <a >2</a>
+                <a >3</a>
+                <a >4</a>
+                <a >5</a>
+            </li>
+            <li data-hashtabber-pair="4" class="" style="display: none;"> 
+                <a >1</a>
+                <a >2</a>
+                <a >3</a>
+                <a >4</a>
+                <a >5</a>
+            </li>
+            <li data-hashtabber-pair="5" class="" style="display: none;">
+               <a >1</a>
+                <a >2</a>
+                <a >3</a>
+                <a >4</a>
+                <a >5</a>
+            </li>
+            <li data-hashtabber-pair="6" style="display: none;">
+               <a >1</a>
+                <a >2</a>
+                <a >3</a>
+                <a >4</a>
+                <a >5</a>
+            </li>
+              <li data-hashtabber-pair="7" style="display: none;">
+               <a >1</a>
+                <a >2</a>
+                <a >3</a>
+                <a >4</a>
+                <a >5</a>
+            </li>
+ 
+    </ol><!--
+ --><ol class="hashTabber-data hashTabber-sandstone" data-hashtabber-id="dinosaurs">
+            <li data-hashtabber-pair="1" class="active" >
+                <img src="images/wd1.png" id="1"/>
+            </li>
+            <li data-hashtabber-pair="2" class="">
+                <img src="images/wd2.png" id="2"/>
+            </li>
+        
+            <li data-hashtabber-pair="3" class="" >
+                 <img src="images/wd3.png"  id="3"/>
+            </li>
+            <li data-hashtabber-pair="4" class="" >
+                 <img src="images/wd4.png" id="4"/>
+            </li>
+        
+            <li data-hashtabber-pair="5"  >
+                 <img src="images/wd5.png" id="5" />
+            </li>
+            
+             <li data-hashtabber-pair="6" >
+                 <img src="images/wd5.png" id="6" />
+            </li>
+    </ol>
+	</section>
+</section>
+<script>
+var tabber = new HashTabber();
+tabber.run();
+</script>
+<!-- 代码 结束 -->
+         
+    </div>
+
+
+   
+
+    <div class="wd_info"><img src="images/wd.png"></div>
+</body>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script>
+var assAnr=[],imgArr=[];
+var i=0;
+  $(".hashTabber-nav li  a").click(function(){
+    var _this = $(this)
+     ass= $(this).html();
+     assAnr.push(ass);
+     i++;
+     console.log(assAnr);
+     var fu = $(".hashTabber-nav li  a").parent("li");
+    // console.log(fu);
+    fu.css('display','none');
+    var xia = fu.next("li").eq(i-1);
+     xia.css('display','block');
+     //$(this).css('display','none');
+     //alert($("img").attr("id"));
+    //var imgss = $(".hashTabber-nav li").find("img");
+    //console.log($(".hashTabber-nav").eq(0));
+    
+
+    //console.log(imgss);
+     //var i = $(this).index();
+    var anchors = document.getElementsByTagName("img");
+    //console.log(anchors);
+    imgId=anchors[i-1].id;
+    imgArr.push(imgId);
+    console.log(imgArr);
+   // console.log($(".hashTabber-nav li").index());
+    //var class_y = fu.hasClass("active");
+    var class_y = $(".hashTabber-data li");//.attr("class");
+    //class_y[i-1].attr("class");
+    console.log($(class_y[i]).attr("class"))
+   // for(var j=0; j<class_y.length;j++){
+       // class_y[]
+
+   // }
+    //console.log(class_y)
+    //var claLen = class_y.length;
+   // alert(class_y[i-1].className)
+    //if (class_y[i]==1) {console.log(1)}
+   // for(var j=0; j<=class_y.length; j++)
+   // {
+      // var class_x = class_y[j];
+       //console.log(class_x.html);
+          // if(class_x.hasClass("active")){
+                //alert(123);
+                //backward();
+               // return;
+            
+           // }
+   // }
+   // 
+   getCurAus(_this)
+
+ 
+   //if($(".hashTabber-nav li:last-child") ){alert(123)}
+  });
+
+function getCurAus(btn) {
+  var _this = $(btn)
+  ind = _this.closest('li').index()
+  var qus = $('.example ol').eq(1).find('li').eq(ind).find('img').attr('id')
+  console.log('问题 ID-'+qus)
+
+}
+//倒数计时
+     var backward = function(){
+          numz--;
+          if(numz>=0){
+              $("#jis").css("display","block");
+              $("#maioshu").html(numz);
+          }else{
+              $(".bg_djs").remove();
+          }
+          setTimeout(backward,1000);
+          if(numz===0)
+          {
+            $("#jis").css("display","none");
+          }
+                  
+      }
+      var numz = 10;
+   
+
+
+
+// $(".ashTabber-nav li").eq(0).css('display','none');
+  //console.log(len)
+   //len.eq(0).css("display","block");
+  //$("img").each(function(){alert($(this).id);})
+</script>
+</html>

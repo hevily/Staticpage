@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" >
+<title>情景</title>
+<link type="text/css" rel="stylesheet" href="css/qingjing.css">
+<link type="text/css" rel="stylesheet" href="css/auto.css">
+</head>
+<body style="background:#ffffff;">
+  <div class="title">
+  	<div class="title_title">
+       <div class="qingjing_title">情景一</div> 		
+       <div class="qingjing_info">针对身心发展知识的场景对话</div>
+       <div class="qingjing_info1">(请根据您在教育孩子过程中的真实想法，完成选择)</div>
+  	</div>
+  </div>
+
+<div class="total">
+  <div class="qingjings">
+  	   <div class="wenti">
+  	   	 <img src="images/wenti.png">
+  	   </div>
+  	   <div class="wenti-info">
+  	   <div class="sanjiao"></div>
+  	   	 3岁时，左利手和右利手的偏好就很容易看出来了。左利手的孩子在发展上并没有什么问题，还可能在哪些才能有突出的发展？
+  	   </div>
+  	   <div class="clearth"></div>
+
+  </div>
+
+
+
+<div class="jiazhang">
+	  
+	  <div class="jia_r"><img src="images/nanjiazhang.png"></div>
+	  <div class="jia_l" >
+	  	<div class="you_sanjiao"></div>
+	  	<span id="da_inos">语言才能和数学才能</span>
+	  </div>
+	  <div class="clearth"></div>
+
+</div>
+
+</div>
+
+<div class="daan">
+	<div class="daan1">
+	<ul id="daan">
+	  <li class="daan_info"  >
+	  	<div class="context" onclick="daan(this)" dataid="1001">
+	  		绘画才能
+	  	</div>
+	  	
+	  </li>
+
+	  <li class="daan_info" >
+	  	<div class="context" onclick="daan(this)" dataid="1002" >
+	  		语言才能和数学才能
+	  	</div>
+	  </li>
+
+	  <li class="daan_info"  >
+	  	<div class="context" onclick="daan(this)" dataid="1003">
+	  		运动才能
+	  	</div>
+	  </li>
+	 </ul>
+	  <div class="clearth"></div>
+
+</div>
+<div class="fasong" id="fasong"><a href="#">发送</a></div>
+
+</div>
+
+
+<input type="text" value=" " id="inId" hidden>
+
+<!--进入第二场景-->
+<div class="cj_bg" style="display: none;" id="bg"></div>
+<div class="cj_bg1" style="display: none;" id="cj">
+	<p>已完成第一场景</p>
+	<p>已完成第二场景</p>
+	<div class="cj_img"><img src="images/jiazai.gif"></div>
+</div>
+
+<!--25道题做完提交-->
+<div class="dtw" style="display: none;" id="dt">
+	  <div class="dtw_img"><img src="images/datiwc.png"></div>
+	  <p>25道题已全部答完</p>
+	  <p>正在提交考试结果数据</p>
+	  <div class="cj_img"><img src="images/jiazai.gif"></div>
+
+</div>
+
+<!--数据分析-->
+<div class="dtw" style="display: none;" id="dtw">
+	  <div class="dtw_img"><img src="images/fenxi.png"></div>
+	  <p>正在分析数据</p>
+	  <div class="cj_img"><img src="images/jiazai.gif"></div>
+
+</div>
+
+<!--数据分析完成-->
+<div class="dtw" style="display: none;" id="dws">
+	  <div class="dtw_img"><img src="images/wancheng.png"></div>
+	  <p>正在分析数据</p>
+	  <div class="cj_img"><img src="images/jiazai.gif"></div>
+
+</div>
+<style type="text/css">
+  .total{
+    height: 130px;
+    padding-bottom: 0;
+  }
+</style>
+
+</body>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script type="text/javascript">
+
+	$("#fasong").click(function(){
+      alert()
+      $('.total').scrollTop(600)
+       var daInfo = $("#inId").val();
+       //alert(daInfo)
+       if(daInfo == " "){
+       alert("请选择答案");
+
+       }else{$("#da_inos").html(daInfo);}
+       
+
+	})
+
+function daan(f){
+
+$(f).addClass("on");
+var hdinput = $(f).html();
+
+$("#inId").val(hdinput);
+    $("#daan li .context").each(function(){
+
+ if ($(this).attr("dataId") == $(f).attr("dataId")) {
+            } else { $(this).removeClass("on"); }
+
+    })
+
+}
+
+
+</script>
+</html>
+
+<span style="font-size:14px;">
+<!--
+/* 
+ * 页面加入这段代码可使Android机器页面不再受到用户字体缩放强制改变大小 
+ * 但是会有一个1秒左右的延迟，期间可以考虑通过loading展示 
+ * 仅供参考 
+ */ -->
+ <script type="text/javascript">
+(function(){  
+    if (typeof(WeixinJSBridge) == "undefined") {  
+        document.addEventListener("WeixinJSBridgeReady", function (e) {  
+            setTimeout(function(){  
+                WeixinJSBridge.invoke('setFontSizeCallback',{"fontSize":0}, function(res) {  
+                    // alert(JSON.stringify(res));  
+                });  
+            },0);  
+        });  
+    } else {  
+        setTimeout(function(){  
+            WeixinJSBridge.invoke('setFontSizeCallback',{"fontSize":0}, function(res) {  
+                // alert(JSON.stringify(res));  
+            });  
+        },0);  
+    }  
+})();
+</script>   
+</span>  
+
+
+
+<span style="font-size:14px;"><style type="text/css">  
+    body  
+    {  
+        -webkit-text-size-adjust: 100% !important;  
+        text-size-adjust: 100% !important;  
+        -moz-text-size-adjust: 100% !important;  
+    }  
+</style></span>

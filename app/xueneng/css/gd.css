@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* CSS Document */
+
+ *{margin:0; padding:0;}
+   html,body{height:100%;width:100%;overflow:hidden;}
+   ul{list-style:none;}
+   .clearth{clear:both;}
+    .shijue{ background:url(../images/sj_bg.jpg) no-repeat; width:100%; height:100%; background-size:cover;}
+	.dianji{ width:100%; height:100%; 	background-image: url('../images/gdcp.png');
+			-webkit-background-size: contain ;
+			background-size: contain ;
+			background-position: center center;
+			background-repeat: no-repeat; -moz-background-size:contain;}
+
+.dj_fg{ width:100%; height:auto; margin:0 auto;}
+.dj_fg ul{display:block; width:100%;}
+	.dj_fg ul li{width:10%; height:4%; background:#ffffff; float:left; text-align:center;/* line-height:30px;*/ padding:2% 2% 2% 2%; margin-left:2%; margin-top:4%;}
+	.tishi_gd{ width:60%; height:auto; margin:0 auto; position:absolute; bottom:1%; left:15%;}
+	.tishi_gd img{display:block; width:100%; height:100%;}
+	.actives{ background-color:#3a9cf5 !important; color:#ffffff;}
+	.a_over{ background-color:#ea2f2f !important; color:#ffffff;}
+	
+	#wrapper {
+	position: absolute;
+	z-index: 1;
+	top: 25px;
+	bottom: 50px;
+	left: 20%;
+	width: 60%;
+/*	background: #ccc;*/
+	overflow: hidden;
+}
+
+#scroller {
+	position: absolute;
+	z-index: 1;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	width: 100%;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+#scroller ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	text-align: left;
+}
+
+#scroller li {
+	padding: 0 10px;
+	height: 40px;
+	line-height: 40px;
+/*	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #fff;
+	background-color: #fafafa;*/
+	font-size: 14px;
+	float:left;
+	width:10%; height:4%; background:#ffffff; float:left; text-align:center;/* line-height:30px;*/ padding:1% 2% 1% 2%; margin-left:2%; margin-top:2%; font-size:15px; 
+}
+
+
+@media screen and (max-width: 568px){
+
+	 .dj_fg ul li{width:10%; height:4%; background:#ffffff; float:left; text-align:center;/* line-height:30px;*/padding:2% 2% 2% 2%; margin-left:4%; margin-top:4%;}
+	}
+

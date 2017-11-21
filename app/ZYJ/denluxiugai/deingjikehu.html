@@ -1,0 +1,347 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<!--<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">-->
+<!--<meta name="format-detection" content="telephone=no">-->
+<title>登录客户</title>
+<link type="text/css" rel="stylesheet" href="css/dengjikehu.css">
+<link type="text/css" rel="stylesheet" href="css/auto.css">
+</head>
+
+<body id="total_info">
+<div class="info_total" id="info_total">
+<div class="dengji">
+    
+            <div class="denglu"> 
+            <div class="toal">
+             <div class="info_left">姓名(必填)</div>
+             <div class="info_right"><input type="text" placeholder="请输入" class="nmaes"></div>
+             <div class="clearth"></div>
+            </div>
+            </div>
+         
+         <div class="denglu">
+             <div class="toal">
+             <div class="info_left">性别(必填)</div>
+             <div class="info_right nmaes">
+                   <div class="in_left"><input id="a1" type="radio" name="aa" value="男"  >
+                    <label for="a1"></label>
+                    <span>男</span>
+                    </div>
+                      <div class="in_right"><input id="a2" type="radio" name="aa" value="女"  >
+                    <label for="a2"></label>
+                    <span>女</span>
+                    </div>
+                    </div>
+             <div class="clearth"></div>
+             </div>
+        </div>
+        <div class="dengphone" id="phones_2">
+           <div class="toal pp" id="toal">
+            <div class="info_leftp">手机</div>
+             <div class="nmaes_right"><input type="text" placeholder="请输入手机号码(必填)" class="nmaes"></div>
+             <div class="moren">
+                   <div class="moren1"><input id="item1" type="radio" name="item" value="默认"  checked>
+                    <label for="item1"></label>
+                    <p>默认</p>
+                    </div>
+             </div>
+             <div class="clearth"></div>
+            </div>
+            
+               <div class="toal pp">
+            <div class="info_leftp">家庭</div>
+             <div class="nmaes_right"><input type="text" placeholder="请输入家庭号码(必填)" class="nmaes"></div>
+             <div class="moren">
+                   <div class="moren1"><input id="item2" type="radio" name="item" value="默认"  >
+                    <label for="item2"></label>
+                    <p>默认</p>
+                    </div>
+             </div>
+             <div class="clearth"></div>
+            </div>
+            
+            
+            
+            
+               <div class="toal pp">
+            <div class="info_leftp">公司</div>
+             <div class="nmaes_right"><input type="text" placeholder="请输入公司号码(必填)" class="nmaes"></div>
+             <div class="moren">
+                   <div class="moren1"><input id="item3" type="radio" name="item" value="默认"  >
+                    <label for="item3"></label>
+                    <p>默认</p>
+                    </div>
+             </div>
+             <div class="clearth"></div>
+            </div>
+            
+               <div class="toal pp">
+                <div class="info_leftp">传真</div>
+                 <div class="nmaes_right"><input type="text" placeholder="请输入传真号码(必填)" class="nmaes"></div>
+                 <div class="moren">
+                       <div class="moren1"><input id="item4" type="radio" name="item" value="默认"  >
+                        <label for="item4"></label>
+                        <p>默认</p>
+                        </div>
+                 </div>
+                 <div class="clearth"></div>
+            </div>
+            <div class="xinzeng" id="zeng1"><i class="kehu" id="ceng"></i><span class="spann">新增</span>
+             <div class="clearth"></div>
+            </div>
+          </div>
+
+           <div class="xian">
+           <div class="lianming">
+               <span class="lianmi">联名客户</span><i class="mi" onClick="Lmkh()"></i>
+               <div class="clearth"></div>
+           </div>
+           </div>
+           <div class="xian">
+           <div class="ss_info">
+                <ul>
+                    <li>
+                      <div class="ss_name">欧阳风风</div>
+                      <div class="ss_phone">1234579451421</div>
+                      <div class="ss_bij" id="img1" onclick="kehuBianji()"><img src="images/bianji.png"></div>
+                      <div class="clearth"></div>
+                    </li>
+
+                    <li>
+                      <div class="ss_name">欧阳风风</div>
+                      <div class="ss_phone">1234579451421</div>
+                      <div class="ss_bij" onclick="kehuBianji()"><img src="images/bianji.png"></div>
+                      <div class="clearth"></div>
+                    </li>
+
+                    <li>
+                      <div class="ss_name">欧阳风风</div>
+                      <div class="ss_phone">1234579451421</div>
+                      <div class="ss_bij" onclick="kehuBianji()"><img src="images/bianji.png"></div>
+                      <div class="clearth"></div>
+                    </li>
+
+                </ul>
+
+           </div>
+           <div class="toal">
+            <i class="kehu" id="kehu" onclick="kehuInfo()"><a href="javascript:;"></a></i><span class="spann">添加联名客户</span>
+            <div class="clearth"></div>
+            </div>
+            </div>
+         
+     
+     <div class="line_hight"></div>
+</div>
+
+<div class="biaoqian">
+     <div class="biq"><span class="biq1">标签</span><i class="bangzhu" onClick="biaoQ()"></i>
+      <div class="clearth"></div>
+     </div>
+     <div class="biqs"><span>名表</span><span>好车</span><span>名表</span><span>好车</span>
+        <div class="clearth"></div>
+     </div>
+     <div class="bqi"> <i class="kehu" id="kehu_biaoqian" onclick="TianjiabqS()"><a href=" javascript:;"></a></i><span class="spann">添加标签</span>
+      <div class="clearth"></div>
+     </div>
+</div>
+<div class="beizhu">
+    <div class="beizhu1"><span>备注</span></div>
+     <div class="beizhu2"><textarea placeholder="请输入内容"></textarea></div>
+</div>
+
+<div class="beizhu">
+    <div class="beizhu1"><span>跟进方式<b>(必填)</b></span></div>
+     <div class="beizhu3">
+        <input type="button" value="来访">
+        <input type="button" value="回访">
+        <input type="button" value="主动拜访">
+        <input type="button" value="退认筹">
+        <input type="button" value="退房">
+        <input type="button" value="签约">
+        <input type="button" value="复访">
+        <input type="button" value="其他">
+        <input type="button" value="定房">
+        <div class="clearth"></div>
+     </div>
+</div>
+<div class="xiabu"><a href="xiayibu.html">下一步</a></div>
+</div>
+ <div class="line_hight"></div>
+ <!--联名客户-->
+ <div class="t_lianming" id="tt"> </div>
+ <div class="jieshi" id="tt1">
+     <div class="ji_title">什么是联名客户</div>
+     <div class="ji_info">什么是联名客户什么是联名客户什么是联名客户什么是联名客户什么是联名客户什么是联名客户什么是联名客户什么是联名客户什么是联名客户什么是联名客户什么是联名客户</div>
+     <div class="zhidao" onClick="zhiDao()">我知道了</div>
+ </div>
+ 
+ <!--标签-->
+  <div class="biaopian" id="bp">
+     <p class="bp">什么是联名客户</p>
+     <p class="bp_info">什么是联名客户什么是联名客户什么是联名客户什么是联名客户什么是联名客户什么是联名客户什么是联名客户什么是联名客户什么是联名客户什么是联名客户什么是联名客户</p>
+     <p class="bp">什么是联名客户</p>
+     <p class="bp_info">什么是联名客户什么是联名客户什么是联名客户什么是联名客户什么是联名客户什么是联名客户什么是联名客户什么是联名客户什么是联名客户什么是联名客户什么是联名客户</p>
+     <div class="zhidao" onClick="zhiDaobp()">我知道了</div>
+ </div>
+
+ <!--添加联名-->
+ <div class="lmkehu" style="display: none;" id="lmkehu">
+    <div class="dengji">
+    
+            <div class="denglu"> 
+            <div class="toal">
+             <div class="info_left">姓名(必填)</div>
+             <div class="info_right"><input type="text" placeholder="请输入" class="nmaes"></div>
+             <div class="clearth"></div>
+            </div>
+            </div>
+         
+         <div class="denglu">
+             <div class="toal">
+             <div class="info_left">性别(必填)</div>
+              <div class="info_right nmaes">
+                   <div class="in_left"><input id="a3" type="radio" name="aa" value="男"  >
+                    <label for="a3"></label>
+                    <span>男</span>
+                    </div>
+                      <div class="in_right"><input id="a4" type="radio" name="aa" value="女"  >
+                    <label for="a4"></label>
+                    <span>女</span>
+                    </div>
+                    </div>
+             <div class="clearth"></div>
+             </div>
+        </div>
+        <div class="dengphone" id="phones">
+           <div class="toal pp" id="toal">
+            <div class="info_leftp">手机</div>
+             <div class="nmaes_right"><input type="text" placeholder="请输入手机号码(必填)" class="nmaes"></div>
+             <div class="moren">
+                   <div class="moren1"><input id="item6" type="radio" name="item" value="默认"  checked>
+                    <label for="item6"></label>
+                    <p>默认</p>
+                    </div>
+             </div>
+             <div class="clearth"></div>
+            </div>
+            
+               <div class="toal pp">
+            <div class="info_leftp">家庭</div>
+             <div class="nmaes_right"><input type="text" placeholder="请输入家庭号码(必填)" class="nmaes"></div>
+             <div class="moren">
+                   <div class="moren1"><input id="item7" type="radio" name="item" value="默认"  >
+                    <label for="item7"></label>
+                    <p>默认</p>
+                    </div>
+             </div>
+             <div class="clearth"></div>
+            </div>
+            
+            
+            
+            
+               <div class="toal pp">
+            <div class="info_leftp">公司</div>
+             <div class="nmaes_right"><input type="text" placeholder="请输入公司号码(必填)" class="nmaes"></div>
+             <div class="moren">
+                   <div class="moren1"><input id="item8" type="radio" name="item" value="默认"  >
+                    <label for="item8"></label>
+                    <p>默认</p>
+                    </div>
+             </div>
+             <div class="clearth"></div>
+            </div>
+            
+               <div class="toal pp">
+                <div class="info_leftp">传真</div>
+                 <div class="nmaes_right"><input type="text" placeholder="请输入传真号码(必填)" class="nmaes"></div>
+                 <div class="moren">
+                       <div class="moren1"><input id="item9" type="radio" name="item" value="默认"  >
+                        <label for="item9"></label>
+                        <p>默认</p>
+                        </div>
+                 </div>
+                 <div class="clearth"></div>
+            </div>
+            <div class="xinzeng" id="zeng2"><i class="kehu" id="ceng1"></i><span class="spann">新增</span>
+             <div class="clearth"></div>
+            </div>
+          </div>
+      <div class="beizhu">
+    <div class="beizhu1"><span>证件类型</span></div>
+     <div class="beizhu3 lianh">
+        <input type="button" value="学生证" checked>
+        <input type="button" value="身分证">
+        <input type="button" value="港澳通行证">
+        <input type="button" value="工作证">
+        <input type="button" value="护照">
+        <input type="button" value="军官证">
+        <div class="clearth"></div>
+     </div>
+</div>   
+   
+      <div class="denglu"> 
+            <div class="toal">
+             <div class="info_left">证件号码</div>
+             <div class="info_right"><input type="text" placeholder="请输入" class="nmaes"></div>
+             <div class="clearth"></div>
+            </div>
+            </div> 
+   
+</div>
+
+<div class="beizhu">
+    <div class="beizhu1"><span>关系</span></div>
+     <div class="beizhu2"><textarea placeholder="请输入内容"></textarea></div>
+</div>
+
+<div class="beizhu">
+    <div class="beizhu1"><span>地址</span></div>
+     <div class="beizhu2"><textarea placeholder="请输入内容"></textarea></div>
+</div>
+<!--添加完成-->
+<div class="shanchu" style=" display: none;">
+     <ul>
+       <li>删除客户</li>
+       <li>保存</li>
+       <div class="clearth"></div>
+     </ul>
+</div>
+<!---->
+<div class="quding"><a href="">保存</a></div>
+
+ </div>
+ <!--添加联名-->
+ <!--添加标签-->
+ <div id="tianjiabq" style="display: none;">
+ <input type="hidden" value="" id="hid">
+<div class="biaoqians" id="biaoqian">
+  <div class="clearth"></div>
+</div>
+<div class="biaoqi"><input type="text" value="" placeholder="请输入标签"></div>
+ <div class="line_hight"></div>
+ <div class="bq_total">
+    <p>大家用的标签(可直接选择)</p>
+    <div class="bqn">
+        <input type="button" value="老带新" name="isEnd" class="inuts"  >
+        <input type="button" value="中介带着" name="isEnd" class="inuts">
+        <input type="button" value="豪车" name="isEnd" class="inuts">
+        <input type="button" value="名表" name="isEnd" class="inuts">
+        <input type="button" value="公务员" name="isEnd" class="inuts">
+    </div>
+    <div class="clearth"></div>
+ </div>
+ <div class="quding"><a href="">确定</a></div>
+
+</div>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+ <!--添加标签-->
+
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<title>稳定性</title>
+	<link rel="stylesheet" type="text/css" href="css/pg0000.css">
+	<SCRIPT language=javascript type=text/javascript src="js/pg0000.js"></SCRIPT>
+<script src="https://staticcdn.yshjie.com/cdn/librarypath/jquery/jquery-2.1.4.min.js"></script>
+<script language="javascript" type="text/javascript">
+
+
+
+//	4,注意力稳定性
+
+var a = Request.QueryString("a");//学籍编号
+var b = Request.QueryString("b");//量表编号
+var c = Request.QueryString("c");//考试编号
+var d = Request.QueryString("d");//考题编号
+var g = Request.QueryString("g");//年级xt
+	g = decodeURIComponent(g);	//decodeURI()
+	g = "一年级";
+
+var Test=[
+	{	//低年级
+		timelimits:60*5*1000,     	//时限(毫秒)
+		num:3,						//线条数
+		corrects:5,               	//正确点击次数
+		times:10,                	//每次图片张数
+		rest:3                 		//休息时间(秒) - 倒计时
+	},
+	{	//中年级
+		timelimits:60*5*1000,
+		num:6,
+		corrects:5,
+		times:10,
+		rest:3
+	},
+	{	//高年级
+		timelimits:60*5*1000,
+		num:9,
+		corrects:5,
+		times:10,
+		rest:3
+	}
+];
+
+var GRADE;
+if(g && (g=="一年级" ||g=="二年级"))
+	GRADE=0;
+else if(g && (g=="三年级" ||g=="四年级"))
+	GRADE=1;
+else
+	GRADE=2;
+
+
+var N= Test[GRADE].num;		//N:曲线条数，与年级有关
+
+var A=0,					//正确点击的次数
+	term=0;					//总时间(秒)
+
+var	RespTime=[];			//记录“反应时间”
+var	ErrTime = 0;			//错误次数
+
+var startT,endT;
+var startt,endt;
+var errWarning=0;			//警告次数
+var wPrd = 3000,wTime = 2;	//警告时间与警告次数（反应时间过快，则会出现警造，两次警告，测试结束）
+
+ 
+//	var R=[4,5,6,7,8, 9,10,11,12,13];
+	var R=[3,4,5,6,7,13, 4, 5, 3, 4];
+var clr=
+[
+	"#3895f5", 	//	"#3355FF",	//
+	"#3895f5", 	//	"#FF77ff",	//
+	"#3895f5", 	//	"#AA5555",	//
+	"#3895f5", 	//	"#3377FF",	//
+	"#3895f5", 	//	"#FF9911",	//
+	"#3895f5", 	//	"#3399FF",	//
+	"#3895f5", 	//	"#33BBFF",	//
+	"#3895f5", 	//	"#33DDFF",	//
+	"#3895f5", 	//	"#DD223D",	//
+	"#3895f5", 	//	"#224455",	//
+	"#3895f5"	//	"#224455"	//
+];
+
+
+
+
+function disDgt(o,ANS) {
+
+    sheet++; //每次图片张数累计
+	var zongshu = new Array();//正确与错误的总数
+	var miaoshu = new Array();//图片之间的差
+
+	endt = new Date(); //点击后的时间
+	var shijian=endt-startt;
+	var miao = shijian/1000;
+
+	var p = MillisecDiff(startt,endt);
+	//console.log(RespTime.push(p));
+
+    console.log("startt "+startt+";endt "+endt+";p "+p+";errWarning "+errWarning);
+		
+    //如果点击在圆上，则取其相应的文本框文字
+	if(o.tagName=="circle")
+		//console.log(o.tagName)
+		{o = document.getElementById(o.id.replace(/C/,"T"));
+            
+	    }
+
+	var res;
+
+	var v = o.innerHTML;
+
+	if(v==ANS+1)
+	{
+		//alert("正确")
+		var ans = document.getElementById("Answer");
+		ans.setAttribute("style","fill:#FF4444");
+		//alert(ans.id+" Congratuagtion!");
+		res="正确";
+		A++;
+		//console.log(A);
+	} else
+	{
+		//alert("错误")
+		res="错误";
+		ErrTime++;
+		//console.log(ErrTime);
+	}
+
+
+	  zongshu=[A, ErrTime ]
+
+		if (sheet==5) {//alert("完成")
+			console.log(zongshu);
+            console.log("完成");
+            return false;
+	}
+
+
+	document.getElementById("grp000").remove(0);	//???? 只移除了一个？？？
+
+
+	//倒数计时
+		var backward = function(numz,timeStep){
+			var ss = 5;
+				ss--
+		var  timer = setInterval(function () {
+			        if(ss == 0){
+			           clearInterval(timer);
+			           console.log("提交");
+			           //console.log(zongshu())
+			           
+			           return false ;
+			        }else{
+	        		    if(numz > 0){
+	        		        numz--;
+	        		       // console.log(numz+"数")
+	        		         //$(".miaoshu").html(numz);
+	        		         $(".miaoshu").css('display','block');
+	        		        $(".m_iimg img").attr("src","images/img"+numz+".png");
+	        		      //var sss =  $(".m_iimg").append("<img src='images/img"+numz+".png '>")
+	        		      //console.log(sss);
+	        		    }else {
+	        			    $(".miaoshu").css('display','none')
+				    	    turn(N);
+				    	    clearInterval(timer);
+				    	    //console.log(ss);
+				    	}
+			        }
+			},timeStep)
+		}
+
+
+	backward(3,1000)
+
+
+
+
+
+}
+
+<!---->
+
+//倒计时5分钟提交答案
+     var wufen = function(wu,timeStep){
+       var wtimer = setInterval(function () {
+            if(wu > 0){
+                wu--;
+            }else {
+            //到5分钟提交答案
+               alert("倒计时五分钟提交答案")
+                clearInterval(wtimer);
+                return ;
+            }
+        },timeStep)
+      }
+    // wufen(3,1000);
+<!---->
+
+
+
+
+var sheet = 0;		//每次图片张数累计
+
+var PRAC = 0;	//练习次数
+var EXAM = 0;	//考试次数
+
+var Practising = 0;
+var Examming = 0;
+
+
+function cPath(K,N,vR,ANS)
+{
+	var Ww=440,	Hw=250,
+		Xs = X0-Ww/2.0,	Ys = Y0-Hw/2.0;
+	var L=10;
+
+	var c;
+	var M = 2*R[parseInt(10*Math.random())];
+	var P=new Array();
+	for(var i=0;i<M;i++)
+	{
+		P[i]=new Array();
+		if(i==0)
+		{
+			P[i][0] = Xs;
+			P[i][1] = Ys+vR[K]*Hw/(N-1);
+			c = "#0000FF";
+			line("grp000","S_"+K+"_"+i,P[i][0]-L,P[i][1],P[i][0],P[i][1],"stroke-width:2px;")
+			if(K==ANS)
+			{
+				rectc("grp000","Answer",P[i][0]-L-8,P[i][1],0,0,20,20,"fill:#0000FF;stroke-width:0px;");
+				//text("grp000","T_"+K+"_"+i,P[i][0]-L-8,P[i][1],(K+1)+"","fill:#FF0000");
+			}
+		} else if(i==M-1)
+		{
+			P[i][0] = Xs+Ww;
+			P[i][1] = Ys+K*Hw/(N-1);
+			c = "#00FF00";
+			line("grp000","E_"+K+"_"+i,		P[i][0],	P[i][1],P[i][0]+L,P[i][1],"stroke-width:2px;")
+			circlec("grp000","C_"+K+"_"+i,	P[i][0]+L+8,P[i][1],15,"fill:#3895f5",			"disDgt(this,"+ANS+")");
+			text("grp000","T_"+K+"_"+i,		P[i][0]+L+8,P[i][1]+5,(K+1)+"","fill:#ffffff",	"disDgt(this,"+ANS+")");
+		} else
+		{
+			P[i][0] = Xs+(i+Math.random())*Ww/M;
+			P[i][1] = Ys+Hw*Math.random();
+			c = clr[K];
+		}
+		//circlec("grp000","c_"+i,P[i][0],P[i][1],2,"fill:#55EEFF",null)
+		//circlec("grp000","c_"+i,P[i][0],P[i][1],1.5,"fill:"+c,null)
+	}
+	path3("grp000","p_"+K+"_"+i,P,"stroke:"+clr[K]+";fill:none;stroke-width:1px;",null)
+}
+function turn(N)
+{
+
+   startt = new Date(); //点击获取当前时间
+   //console.log(startt);
+	//生成垂直方向的随机数组
+	var vR = new Array();
+	for(var i=0;i<N;i++)
+	{
+		vR[i]=i;
+	}
+	vR.sort(randomsort);
+
+	var ANS = parseInt(N*Math.random());
+
+	grp(svg0,"grp000","fill:none;");
+	for(var i=0;i<N;i++)
+	{
+		cPath(i,N,vR,ANS);
+	}
+
+}
+</script>
+</head>
+
+
+<body  class="shijue">
+<div class="bgg">
+<?xml version="1.0" standalone="no" ?>
+<svg id='svg0' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+	<linearGradient id="orange_red" x1="0%" y1="0%" x2="0%" y2="100%">
+	<stop offset="0%" style="stop-color:rgb(255,255,255);stop-opacity:1"/>
+	<stop offset="100%" style="stop-color:rgb(185,234,255);stop-opacity:1"/>
+	</linearGradient>
+</defs>
+
+</svg>
+
+
+
+<script>
+
+
+
+var
+	WS = document.body.scrollWidth,			HS = document.body.scrollHeight;
+//	WS = window.screen.width,				HS = window.screen.height;
+//	alert(WS+":"+HS);
+var
+	W0 = WS*0.85,							H0 = HS*0.9,
+	W1 = W0*0.8,							H1 = 40,
+	W2 = W0*0.85,							H2 = H0*0.7,
+	W3 = W0*0.2,							H3 = 40,
+	W4 = W0*0.2,							H4 = 40,
+	W5 = W0*0.2,							H5 = 40,
+
+	X0 = document.body.scrollWidth/2,		Y0=document.body.scrollHeight/2-12,
+	X1 = document.body.scrollWidth/2,		Y1=Y0-H0*0.42,
+	X2 = document.body.scrollWidth/2,		Y2=Y0,
+	X3 = document.body.scrollWidth/2-200,	Y3=Y0+H0*0.42,
+	X4 = document.body.scrollWidth/2+200,	Y4=Y0+H0*0.42,
+	X5 = document.body.scrollWidth/2,		Y5=Y0+H0*0.42,
+
+	R1=20,R2=10;
+
+
+turn(N);
+</script>
+</div>
+<div class='miaoshu'>
+	<div class="m_iimg" id="#img"><img src="images/img10.png"></div>
+
+</div>
+<style type="text/css">
+	.miaoshu{ position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; background: #000; opacity: 0.5; text-align: center; color: red; display: none;}
+</style>
+</body>
+</html>

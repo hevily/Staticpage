@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+*{margin:0 auto; padding:0;}
+h2{color:red;}/*横屏时字体红色*/
+.bg{ width:90%; height:auto;  background:#fff; margin-top:10%;}
+.bg img{display:block; width:100%; height:100%;}
+.shijue{ background:url(../images/sj_bg.jpg) no-repeat; width:100%; height:100%; background-size:cover;}
+/* 效果CSS开始 */
+.mBan2 { overflow: hidden; width:86%; margin:0 auto;}
+.mBan2 .slideBox{ width:100%; height:auto; position:relative; }
+.mBan2 .slideBox .bd{ position:relative; height:100%; z-index:0;   }
+.mBan2 .slideBox .bd ul,.slideBox .bd ul li{width:100%!important}
+.mBan2 .slideBox .bd img{ width:100%; height:100%; display:block; border-radius:10px;  }
+/* 效果CSS结束 */
+.tu_btn{width:40%; height:auto; margin:0 auto; margin-top:3%;}
+.tu_btn img{display:block; width:100%; height:100%;}
+.bgg{ background:#ffffff; border-radius:10px;}
+.swiper-container {
+        width: 86%;
+        height: 100%;
+		margin:3% auto;
+		/*padding-top:3%;
+		top:3%;*/
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        /*background: #fff;*/
+        
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+		
+    }
+.qus-box{width:80%; height:auto; margin:6% auto;}
+.qus-box img{display:block; width:100%; height:100%;}
+.bg_djs{ width:100%; height:100%; background:#151515; opacity:0.7; left:0px; top:0px; position:absolute; z-index:999; color:#ffffff;}
+.bg_times{ width:50%; height:auto; opacity:1; left:50%; margin-top:10%;}
+.bg_times img{display:block; width:100%; height:100%;}
+.tanceng{ width:100%; height:100%; background:#151515; opacity:0.7; left:0px; top:0px; position:absolute; z-index:999; color:#ffffff;}
+.tc{width:50%; height:auto; position:absolute; opacity:100; left:25%; background:#ffffff; z-index:9999; top:11%; border-radius:10px;}
+.tc_bn{ width:20%; height:auto; margin:0 auto; margin-top:6%;}
+.tc_bn img{ display:block; width:100%; height:100%;}
+.tc_info{width:100%; height:auto; text-align:center; color:#555555; font-size:16px; margin-top:6%;}
+.tc_word{ width:90%; height:auto; margin:0 auto;  color:#888888; margin-top:6%; font-size:16px; line-height:26px;}
+.tc_btn{width:40%; height:auto; margin:6% auto;}
+.tc_btn img{ display:block; width:100%; height:100%;}
+.zting{text-align:right; position:absolute; right:10px;}
+
+
