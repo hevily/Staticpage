@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../js/plugin/jquery_WEUI/lib/weui.min.css">
+    <link rel="stylesheet" href="../js/plugin/jquery_WEUI/css/jquery-weui.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/signin.css" />
+	<title>XXX考勤</title>
+</head>
+<body>
+	<header>
+		
+	</header>
+	<div class="container">
+		<div class="section punk-usr">
+			<div class="media border-bottom">
+				<div class="media-body">
+					<div class="weui-panel weui-panel_access">
+					  <div class="weui-panel__bd">
+					    <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+					      <div class="weui-media-box__hd">
+					        <img class="weui-media-box__thumb left-icon" src="../img/creator.png">
+					      </div>
+					      <div class="weui-media-box__bd">
+					        <h4 class="weui-media-box__title">张俊辉</h4>
+					        <p class="weui-media-box__desc">考勤组：员工考勤</p>
+					      </div>
+					    </a>
+					</div>
+				</div>
+				
+			</div>
+			<div class="media-right media-middle choose_picker">
+				<div class="weui-flex">
+				  <div class="weui-flex__item chooser">
+						<input type="text"  class="weui-input"  value="2017-11-23" readonly="readonly" />
+				  	
+				  </div>
+					<span><i class="fa fa-angle-down"></i></span>
+				</div>
+			</div>
+		</div>
+		<div class="section punk-now">
+			<p class="notice fz12"> 每天给自己一个希望，只为明天更美好</p>
+			<div class="punk-action special-reason">
+				<div class="action-title">
+					<span class="notice-logo"><i class="fa fa-circle"></i></span>
+					<span class="reason-name">特殊事件：如请假，出差/ 酌情显示</span>
+					<span class="reason-angle"><i class="fa fa-angle-right"></i></span>
+				</div>
+				<div class="action-detail fz12">
+					2017-11-23 17:08:15 <span>~</span> 2017-11-23 17:08:23 999小时
+				</div>
+			</div>
+			<div class="punk-action ">
+				<div class="action-title">
+					<span class="notice-logo"><i class="fa fa-circle"></i></span>
+					<span class="reason-name ">上班时间 <span>09:00</span></span>
+				</div>
+				<div class="action-detail fz12">
+					<div class="punk-time fz16 black"> 打卡时间：<span>14：00</span>
+						<span class="unnormal">早到</span>
+						<span class="unnormal">正常</span></div>
+					<div class="punk-location fz14">
+						<span><i class="fa fa-map-marker fz16"></i></span>
+						<span> 北京市朝阳区南磨房镇南·大成国际停车场</span>
+					</div>
+				</div>
+			</div>
+			<div class="punk-action ">
+				<div class="action-title">
+					<span class="notice-logo"><i class="fa fa-circle"></i></span>
+					<span class="reason-name ">下班时间 <span>18:00</span></span>
+				</div>
+				<div class="action-detail fz12">
+					<div class="punk-time fz16 black"> 打卡时间：<span>14：00</span>
+						<span class="unnormal">正常</span>
+						<span class="unnormal">早退</span></div>
+					<div class="punk-location fz14">
+						<span><i class="fa fa-map-marker fz16"></i></span>
+						<span> 北京市朝阳区南磨房镇南·大成国际停车场</span>
+					</div>
+				</div>
+				<div class="punk-now">
+					<div class="punk-btn">
+						<div class="punk-in">上班打卡</div>
+						<div class="punk-out hide">下班打卡</div>
+						<div class="punk-time-now">--.--.--</div>
+					</div>
+					<div class="punk-wifi-location">
+						 <span><i class="fa fa-check-circle-o"></i></span>已进入 wifi 考勤范围：<span class="wifi-location-desc" id="wifi-location-desc">HMC1</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer></footer>
+	<!-- jQuery 2.1.4 -->
+	<!-- <script src="https://staticcdn.yshjie.com/cdn/librarypath/jquery/jquery-2.1.4.min.js"></script> -->
+	<script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+	<script src="../js/plugin/jquery_WEUI/js/jquery-weui.min.js"></script>
+	<!-- 如果使用了某些拓展插件还需要额外的JS -->
+	<script src="../js/plugin/jquery_WEUI/lib/fastclick.js"></script>
+	<script src="../js/plugin/jquery_WEUI/js/city-picker.min.js"></script>
+	<!-- statistics  -->
+	<script>
+		"use-strict";
+	  $(function () {
+	  	$('.chooser input').calendar();
+	  	function updateTime(goal) {
+	  		var goal = $(goal);
+	  		setInterval(function () {
+	  			var time = new Date();
+	  			var h = time.getHours();
+	  			var mm = time.getMinutes();
+	  			var s = time.getSeconds()
+	  			function add0(num) {
+	  				return (num<10)?'0'+num:num;
+	  			}
+	  			goal.text(add0(h)+':'+add0(mm)+':'+add0(s));
+	  		},1000)
+	  	}
+	  	updateTime('.punk-time-now');
+	  })
+	</script>
+</body>
+</html>

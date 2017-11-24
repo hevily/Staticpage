@@ -1,0 +1,110 @@
+@import "../Font-Awesome-4.7.0/css/font-awesome.css";
+@import "../../../Public/static-base/static-base.scss";
+$borderColor: #efefef ;
+html{
+	body{
+		header{
+			@include mobile-container();
+			position: fixed;
+			left: 0;right: 0;top: 0;
+			z-index:100;
+			background-color: #FFF;
+			padding: 0 10px;
+			line-height: 45px;
+			border-bottom: 1px solid #e3e3e3;
+			border-bottom: 0.5px solid #e3e3e3;
+			.company{
+				z-index:10;
+				.company-name{
+					font-weight: bold;
+					font-size: 18px;
+				}
+				i{
+					margin-left: 10px;
+					transition: all 0.5s;
+					color:#000;
+				}
+			}
+			.company-list{
+				z-index:10;
+				display: none;
+				border-top:1px solid $borderColor;
+				background-color: #fff;
+				padding:5px 0;
+				.own-company{
+					line-height: 30px;
+					i{
+						color:blue;
+						margin-right: 10px;
+					}
+				}
+			}
+			
+			&.opening{
+				.company{
+					i{
+						transform:rotate(180deg);
+					}
+				}
+				.company-list{
+				}
+			}
+
+		}
+		.header-mask{
+			display: none;
+			position: fixed;
+			top: 0;right: 0;bottom: 0;left: 0;
+			z-index: 0;
+			background-color: rgba(0,0,0,0.2);
+			}
+		.container{
+			@include mobile-container();
+			padding-top: 45px;
+			// 模块顶部标题 以及右侧收起按钮
+			.module-box{
+				padding: 0 10px;
+				.module-title{
+					padding: 10px 0 0 10px;
+					height: 35px;
+					line-height: 35px;
+					.module-name{
+						font-weight: bold;
+					}
+					.module-action{
+						// position: relative;
+						// right: 10px;
+						.toggle-list-btn{
+							color:#898989;
+							font-size: 12px;
+						}
+					}
+				}
+			}
+			// 均分4份
+			.weui-grids.four-part{
+				border-bottom: 1px solid $borderColor;
+				border-bottom: 0.5px solid $borderColor;
+				&::before,&::after{
+					display: none;
+				}
+				.weui-grid{
+					.weui-grid__icon{
+						width: 48px;
+						height: 48px;
+						border-radius: 5px;
+						overflow: hidden;
+					}
+					.weui-grid__label{
+						font-size: 12px;
+					}
+					width: 25%;
+					padding: 8px 0;
+					&::before,&::after{
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}

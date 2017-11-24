@@ -66,12 +66,43 @@
 	}
 // position absolute
 //border
-	@mixin border-style-width($style,$width) {
-		border-style: $style;
-		border-width:$width;
+	@mixin border-style-width($p,$style,$width) {
+			@if ($p == 'top'){
+				border-width:$width 0 0 0;
+				border-width:$width/2 0 0 0;
+			}
+			@else if($p == 'right'){
+			border-width:0 $width 0 0;
+			border-width:0 $width/2 0 0;
+			}
+			@else if($p == 'bottom'){
+			border-width:0 0 $width 0;
+			border-width:0 0 $width/2 0;
+			}
+			@else if($p == 'left'){
+				border-width:0 0 0 $width;
+				border-width:0 0 0 $width / 2;
+			}
+			@else {
+				border-width:$width;
+				border-width:$width/2;
+			}
+			@if($style != ''){
+				border-style: $style;
+			}
+			@else{
+				border-style: solid;
+			}
 	}
 	@mixin border-color($color) {
 		border-color:$color;
+	}
+	@mixin border($p,$style,$width,$color){
+		$style: "solid" !default;
+		$width: "1px" !default;
+		$color: "#cfcfcf" !default;
+		@include border-style-width($p,$style,$width);
+		@include border-color($color);
 	}
 //border end
 // radius
@@ -132,13 +163,13 @@
 		}
 	// more text ellipsis
 		@mixin text-ellipsis($line) {
-			@if($line == 1){
-				white-space:nowrap;
-			} @else{
+			// @if($line == 1){
+				// white-space:nowrap;
+			// } @else{
 				display: -webkit-box;
 				-webkit-line-clamp:$line;
 				-webkit-box-orient:vertical;
-			}
+			// }
 			overflow:hidden;
 			text-overflow:ellipsis;
 		}
