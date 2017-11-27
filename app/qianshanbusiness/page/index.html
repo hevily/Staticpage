@@ -14,9 +14,9 @@
 		<div class="container">
 			<div class="header-tip">
 				<div style="float:left;line-height:31px;">
-			  		<a href="index.html" onclick="setHome(this,&#39;http://www.pageadmin.net&#39;)">设为首页</a>
+			  		<a href="javascript:;" onclick="SetHome(this,document.domain)">设为首页</a>
 			  		|
-			  		<a href="javascript:AddFavorite(location.href,&#39;网站名称&#39;)">加入收藏</a>
+			  		<a href="javascript:;" onclick="AddFavorite('我的网站',location.href)">加入收藏</a>
 				</div>
 				<div class="pull-right">
 					2017年11月24日10:46:14
@@ -33,7 +33,7 @@
 					<img src="../img/static/logo.png" alt="网站logo">
 				</div>
 				<div class="media-right media-middle">
-					<input type="text" name="search-site">
+					<input type="search" name="search-site" autocomplete="true" placeholder="请输入搜索关键字">
 				</div>
 			</div>
 		</div>
@@ -125,7 +125,7 @@
 				<div class="media">
 					<div class="media-left"><img src="../img/static/news_h.png" alt="头条新闻" class="media-object"></div>
 					<div class="media-body">
-						<a href="#">中央一号文件力捧！2017年是推进农村电商发展的大好年头</a>
+						<a href="#" class="one-ellipsis">中央一号文件力捧！2017年是推进农村电商发展的大好年头中央一号文件力捧！2017年是推进农村电商发展的大好年头</a>
 					</div>
 				</div>
 			</div>
@@ -135,13 +135,16 @@
 						<div class="swiper-container news-swiper">
 						  <div class="swiper-wrapper">
 						    <div class="swiper-slide">
-						    	<img src="../img/news/082505vi1xo8uei6x9esv1.jpg">
+						    	<a href="#"><img src="../img/news/082505vi1xo8uei6x9esv1.jpg"></a>
+						    	<p class="one-ellipsis scroll-news-desc">国务院办公厅印发《2017年食品安全重点工作安国务院办公厅印发《2017年食品安全重点工作安国务院办公厅印发《2017年食品安全重点工作安</p>
 						    </div>
 						    <div class="swiper-slide">
-						    	<img src="../img/news/214041de0f44fd35cebdaf03158a486f.jpg">
+						    	<a href="#"><img src="../img/news/214041de0f44fd35cebdaf03158a486f.jpg"></a>
+						    	<p class="one-ellipsis scroll-news-desc">国务院办公厅印发《2017年食品安全重点工作安</p>
 						    </div>
 						    <div class="swiper-slide">
-						    	<img src="../img/news/082505vi1xo8uei6x9esv1.jpg">
+						    	<a href="#"><img src="../img/news/082505vi1xo8uei6x9esv1.jpg"></a>
+						    	<p class="one-ellipsis scroll-news-desc">国务院办公厅印发《2017年食品安全重点工作安</p>
 						    </div>
 						  </div>
 						</div>
@@ -195,23 +198,25 @@
 						<div class="module">
 							<div class="module-title">
 								<span class="title-name">电商资讯</span>
-								<span class="title-more pull-right"><i class="fa fa-angle-double-right"></i></span>
+								<a href="#"><span class="title-more pull-right"><i class="fa fa-angle-double-right"></i></span></a>
 							</div>
 							<div class="module-content">
 								<div class="module-kernel">
-									<div class="media">
-										<div class="media-left"><img src="../img/news/082505vi1xo8uei6x9esv1.jpg" alt="" class="media-object"></div>
-										<div class="media-body">
-											<div class="kernel">
-												<div class="kernel-title">
-													中央下拨26亿元支持基层农技推广体系改革与建设
-												</div>
-												<div class="kernel-desc">
-													中新网6月1日电据财政部网站消息，财政部农业司今日发布消息称，近日，中央财政下拨2015年农林业科技成果转化与技术推广资金26亿元，用于支持基层农技推广体系改革与...
+									<a href="#">
+										<div class="media">
+											<div class="media-left"><img src="../img/news/082505vi1xo8uei6x9esv1.jpg" alt="" class="media-object"></div>
+											<div class="media-body">
+												<div class="kernel">
+													<div class="kernel-title">
+														中央下拨26亿元支持基层农技推广体系改革与建设
+													</div>
+													<div class="kernel-desc">
+														中新网6月1日电据财政部网站消息，财政部农业司今日发布消息称，近日，中央财政下拨2015年农林业科技成果转化与技术推广资金26亿元，用于支持基层农技推广体系改革与...
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
+									</a>
 								</div>
 								<ul class="module-list">
 									<li class="module-list-item">
@@ -326,23 +331,25 @@
 						<div class="module">
 							<div class="module-title">
 								<span class="title-name">电商服务</span>
-								<span class="title-more pull-right"><i class="fa fa-angle-double-right"></i></span>
+								<a href="#"><span class="title-more pull-right"><i class="fa fa-angle-double-right"></i></span></a>
 							</div>
 							<div class="module-content">
 								<div class="module-kernel">
-									<div class="media">
-										<div class="media-left"><img src="../img/news/082505vi1xo8uei6x9esv1.jpg" alt="" class="media-object"></div>
-										<div class="media-body">
-											<div class="kernel">
-												<div class="kernel-title">
-													中央下拨26亿元支持基层农技推广体系改革与建设
-												</div>
-												<div class="kernel-desc">
-													中新网6月1日电据财政部网站消息，财政部农业司今日发布消息称，近日，中央财政下拨2015年农林业科技成果转化与技术推广资金26亿元，用于支持基层农技推广体系改革与...
+									<a href="#">
+										<div class="media">
+											<div class="media-left"><img src="../img/news/082505vi1xo8uei6x9esv1.jpg" alt="" class="media-object"></div>
+											<div class="media-body">
+												<div class="kernel">
+													<div class="kernel-title">
+														中央下拨26亿元支持基层农技推广体系改革与建设
+													</div>
+													<div class="kernel-desc">
+														中新网6月1日电据财政部网站消息，财政部农业司今日发布消息称，近日，中央财政下拨2015年农林业科技成果转化与技术推广资金26亿元，用于支持基层农技推广体系改革与...
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
+									</a>
 								</div>
 								<ul class="module-list">
 									<li class="module-list-item">
@@ -467,7 +474,7 @@
 								<div class="module">
 									<div class="module-title">
 										<span class="title-name">电商扶贫</span>
-										<span class="title-more pull-right"><i class="fa fa-angle-double-right"></i></span>
+										<a href="#"><span class="title-more pull-right"><i class="fa fa-angle-double-right"></i></span></a>
 									</div>
 									<div class="module-content">
 										<ul class="module-list">
@@ -583,7 +590,7 @@
 								<div class="module">
 									<div class="module-title">
 										<span class="title-name">电商物流</span>
-										<span class="title-more pull-right"><i class="fa fa-angle-double-right"></i></span>
+										<a href="#"><span class="title-more pull-right"><i class="fa fa-angle-double-right"></i></span></a>
 									</div>
 									<div class="module-content">
 										<ul class="module-list">
@@ -702,7 +709,7 @@
 								<div class="module">
 									<div class="module-title">
 										<span class="title-name">电商学院</span>
-										<span class="title-more pull-right"><i class="fa fa-angle-double-right"></i></span>
+										<a href="#"><span class="title-more pull-right"><i class="fa fa-angle-double-right"></i></span></a>
 									</div>
 									<div class="module-content">
 										<ul class="module-list">
@@ -818,7 +825,7 @@
 								<div class="module">
 									<div class="module-title">
 										<span class="title-name">协会之窗</span>
-										<span class="title-more pull-right"><i class="fa fa-angle-double-right"></i></span>
+										<a href="#"><span class="title-more pull-right"><i class="fa fa-angle-double-right"></i></span></a>
 									</div>
 									<div class="module-content">
 										<ul class="module-list">
@@ -936,68 +943,78 @@
 					<div class="module">
 						<div class="module-title">
 							<span class="title-name">在线培训</span>
-							<span class="title-more pull-right"><i class="fa fa-angle-double-right"></i></span>
+							<a href="#"><span class="title-more pull-right"><i class="fa fa-angle-double-right"></i></span></a>
 						</div>
 						<div class="module-content">
 							<div class="module-kernel">
-								<div class="media">
-									<div class="media-left"><img src="../img/news/082505vi1xo8uei6x9esv1.jpg" alt="" class="media-object"></div>
-									<div class="media-body media-middle">
-										<div class="kernel">
-											<div class="kernel-desc">
-												中新网6月1日电据财政部网站消息，财政部农业司今日发布消息称，近日，中央财政下拨2015年农林业科技成果转化与技术推广资金26亿元，用于支持基层农技推广体系改革与...
+								<a href="#">
+									<div class="media">
+										<div class="media-left"><img src="../img/news/082505vi1xo8uei6x9esv1.jpg" alt="" class="media-object"></div>
+										<div class="media-body media-middle">
+											<div class="kernel">
+												<div class="kernel-desc">
+													中新网6月1日电据财政部网站消息，财政部农业司今日发布消息称，近日，中央财政下拨2015年农林业科技成果转化与技术推广资金26亿元，用于支持基层农技推广体系改革与...
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
+								</a>
 							</div>
 							<div class="module-kernel">
-								<div class="media">
-									<div class="media-left"><img src="../img/news/082505vi1xo8uei6x9esv1.jpg" alt="" class="media-object"></div>
-									<div class="media-body">
-										<div class="kernel">
-											<div class="kernel-desc">
-												中新网6月1日电据财政部网站消息，财政部农业司今日发布消息称，近日，中央财政下拨2015年农林业科技成果转化与技术推广资金26亿元，用于支持基层农技推广体系改革与...
+								<a href="#">
+									<div class="media">
+										<div class="media-left"><img src="../img/news/082505vi1xo8uei6x9esv1.jpg" alt="" class="media-object"></div>
+										<div class="media-body">
+											<div class="kernel">
+												<div class="kernel-desc">
+													中新网6月1日电据财政部网站消息，财政部农业司今日发布消息称，近日，中央财政下拨2015年农林业科技成果转化与技术推广资金26亿元，用于支持基层农技推广体系改革与...
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
+								</a>
 							</div>
 							<div class="module-kernel">
-								<div class="media">
-									<div class="media-left"><img src="../img/news/082505vi1xo8uei6x9esv1.jpg" alt="" class="media-object"></div>
-									<div class="media-body">
-										<div class="kernel">
-											<div class="kernel-desc">
-												中新网6月1日电据财政部网站消息，财政部农业司今日发布消息称，近日，中央财政下拨2015年农林业科技成果转化与技术推广资金26亿元，用于支持基层农技推广体系改革与...
+								<a href="#">
+									<div class="media">
+										<div class="media-left"><img src="../img/news/082505vi1xo8uei6x9esv1.jpg" alt="" class="media-object"></div>
+										<div class="media-body">
+											<div class="kernel">
+												<div class="kernel-desc">
+													中新网6月1日电据财政部网站消息，财政部农业司今日发布消息称，近日，中央财政下拨2015年农林业科技成果转化与技术推广资金26亿元，用于支持基层农技推广体系改革与...
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
+								</a>
 							</div>
 							<div class="module-kernel">
-								<div class="media">
-									<div class="media-left"><img src="../img/news/082505vi1xo8uei6x9esv1.jpg" alt="" class="media-object"></div>
-									<div class="media-body">
-										<div class="kernel">
-											<div class="kernel-desc">
-												中新网6月1日电据财政部网站消息，财政部农业司今日发布消息称，近日，中央财政下拨2015年农林业科技成果转化与技术推广资金26亿元，用于支持基层农技推广体系改革与...
+								<a href="#">
+									<div class="media">
+										<div class="media-left"><img src="../img/news/082505vi1xo8uei6x9esv1.jpg" alt="" class="media-object"></div>
+										<div class="media-body">
+											<div class="kernel">
+												<div class="kernel-desc">
+													中新网6月1日电据财政部网站消息，财政部农业司今日发布消息称，近日，中央财政下拨2015年农林业科技成果转化与技术推广资金26亿元，用于支持基层农技推广体系改革与...
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
+								</a>
 							</div>
 							<div class="module-kernel">
-								<div class="media">
-									<div class="media-left"><img src="../img/news/082505vi1xo8uei6x9esv1.jpg" alt="" class="media-object"></div>
-									<div class="media-body">
-										<div class="kernel">
-											<div class="kernel-desc">
-												中新网6月1日电据财政部网站消息，财政部农业司今日发布消息称，近日，中央财政下拨2015年农林业科技成果转化与技术推广资金26亿元，用于支持基层农技推广体系改革与...
+								<a href="#">
+									<div class="media">
+										<div class="media-left"><img src="../img/news/082505vi1xo8uei6x9esv1.jpg" alt="" class="media-object"></div>
+										<div class="media-body">
+											<div class="kernel">
+												<div class="kernel-desc">
+													中新网6月1日电据财政部网站消息，财政部农业司今日发布消息称，近日，中央财政下拨2015年农林业科技成果转化与技术推广资金26亿元，用于支持基层农技推广体系改革与...
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -1006,7 +1023,7 @@
 		</div>
 		<!-- 企业展示 第三方服务-->
 
-		<div class="section ">
+		<div class="section company-service">
 			<div class="row">
 				<!-- 企业展示 -->
 				<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 company-show">
@@ -1014,33 +1031,33 @@
 						<div class="module">
 							<div class="module-title">
 								<span class="title-name">企业展示</span>
-								<span class="title-more pull-right"><i class="fa fa-angle-double-right"></i></span>
+								<a href="#"><span class="title-more pull-right"><i class="fa fa-angle-double-right"></i></span></a>
 							</div>
 							<div class="module-content">
 								<div class="row">
 									<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 ">
-										<img class="company-picture" src="../img/news/b8a2ed6730587f59e13bc7d3b2c508e9.jpg" alt="">
-										<i class="fa fa-play-circle-o"></i>
+										<a href="#"><img class="company-picture" src="../img/news/b8a2ed6730587f59e13bc7d3b2c508e9.jpg" alt="">
+										<i class="fa fa-play-circle-o"></i></a>
 									</div>
 									<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 video">
-										<img class="company-picture" src="../img/news/b8a2ed6730587f59e13bc7d3b2c508e9.jpg" alt="">
-										<i class="fa fa-play-circle-o"></i>
+										<a href="#"><img class="company-picture" src="../img/news/b8a2ed6730587f59e13bc7d3b2c508e9.jpg" alt="">
+										<i class="fa fa-play-circle-o"></i></a>
 									</div>
 									<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 video">
-										<img class="company-picture" src="../img/news/b8a2ed6730587f59e13bc7d3b2c508e9.jpg" alt="">
-										<i class="fa fa-play-circle-o"></i>
+										<a href="#"><img class="company-picture" src="../img/news/b8a2ed6730587f59e13bc7d3b2c508e9.jpg" alt="">
+										<i class="fa fa-play-circle-o"></i></a>
 									</div>
 									<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 video">
-										<img class="company-picture" src="../img/news/b8a2ed6730587f59e13bc7d3b2c508e9.jpg" alt="">
-										<i class="fa fa-play-circle-o"></i>
+										<a href="#"><img class="company-picture" src="../img/news/b8a2ed6730587f59e13bc7d3b2c508e9.jpg" alt="">
+										<i class="fa fa-play-circle-o"></i></a>
 									</div>
 									<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 video">
-										<img class="company-picture" src="../img/news/b8a2ed6730587f59e13bc7d3b2c508e9.jpg" alt="">
-										<i class="fa fa-play-circle-o"></i>
+										<a href="#"><img class="company-picture" src="../img/news/b8a2ed6730587f59e13bc7d3b2c508e9.jpg" alt="">
+										<i class="fa fa-play-circle-o"></i></a>
 									</div>
 									<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 video">
-										<img class="company-picture" src="../img/news/b8a2ed6730587f59e13bc7d3b2c508e9.jpg" alt="">
-										<i class="fa fa-play-circle-o"></i>
+										<a href="#"><img class="company-picture" src="../img/news/b8a2ed6730587f59e13bc7d3b2c508e9.jpg" alt="">
+										<i class="fa fa-play-circle-o"></i></a>
 									</div>
 								</div>
 							</div>
@@ -1053,27 +1070,27 @@
 					<div class="module">
 						<div class="module-title">
 							<span class="title-name">第三方服务</span>
-							<span class="title-more pull-right"><i class="fa fa-angle-double-right"></i></span>
+							<a href="#"><span class="title-more pull-right"><i class="fa fa-angle-double-right"></i></span></a>
 						</div>
 						<div class="module-content">
 							<div class="row">
 								<div class="col-md-6 col-lg-6 hidden-xs hidden-sm third-service-picture">
-									<img src="../img/news/214041de0f44fd35cebdaf03158a486f.jpg">
+									<a href="#"><img src="../img/news/214041de0f44fd35cebdaf03158a486f.jpg"></a>
 								</div>
 								<div class="col-md-6 col-lg-6 hidden-xs hidden-sm third-service-picture">
-									<img src="../img/news/214041de0f44fd35cebdaf03158a486f.jpg">
+									<a href="#"><img src="../img/news/214041de0f44fd35cebdaf03158a486f.jpg"></a>
 								</div>
 								<div class="col-md-6 col-lg-6 hidden-xs hidden-sm third-service-picture">
-									<img src="../img/news/214041de0f44fd35cebdaf03158a486f.jpg">
+									<a href="#"><img src="../img/news/214041de0f44fd35cebdaf03158a486f.jpg"></a>
 								</div>
 								<div class="col-md-6 col-lg-6 hidden-xs hidden-sm third-service-picture">
-									<img src="../img/news/214041de0f44fd35cebdaf03158a486f.jpg">
+									<a href="#"><img src="../img/news/214041de0f44fd35cebdaf03158a486f.jpg"></a>
 								</div>
 								<div class="col-md-6 col-lg-6 hidden-xs hidden-sm third-service-picture">
-									<img src="../img/news/214041de0f44fd35cebdaf03158a486f.jpg">
+									<a href="#"><img src="../img/news/214041de0f44fd35cebdaf03158a486f.jpg"></a>
 								</div>
 								<div class="col-md-6 col-lg-6 hidden-xs hidden-sm third-service-picture">
-									<img src="../img/news/214041de0f44fd35cebdaf03158a486f.jpg">
+									<a href="#"><img src="../img/news/214041de0f44fd35cebdaf03158a486f.jpg"></a>
 								</div>
 							</div>
 						</div>
@@ -1081,19 +1098,128 @@
 				</div>
 			</div>
 		</div>
+		<!-- 产业园区 -->
+		<div class="section production">
+			<div class="module">
+				<div class="module-title">
+					<span class="title-name">产业园区</span>
+					<a href="#"><span class="title-more pull-right"><i class="fa fa-angle-double-right"></i></span></a>
+				</div>
+				<div class="module-content">
+					<div class="swiper-container production-swiper">
+					  <div class="swiper-wrapper">
+						    <div class="swiper-slide">
+						    	<a href="#">
+						    		<img src="../img/news/082505vi1xo8uei6x9esv1.jpg">
+						    		<p class="one-ellipsis">中央一号文件力捧！2017年是推进农村电商发展的大好年头中央一号文件力捧！2017年是推</p>
+						    	</a>
+						    </div>
+						    <div class="swiper-slide">
+						    	<a href="#">
+						    		<img src="../img/news/214041de0f44fd35cebdaf03158a486f.jpg">
+						    		<p class="one-ellipsis">中央一号文件力捧！2017年是推进农村电商发展的大好年头中央一号文件力捧！2017年是推</p>
+						    	</a>
+						    </div>
+						    <div class="swiper-slide">
+						    	<a href="#">
+						    		<img src="../img/news/082505vi1xo8uei6x9esv1.jpg">
+						    		<p class="one-ellipsis">中央一号文件力捧！2017年是推进农村电商发展的大好年头中央一号文件力捧！2017年是推</p>
+						    	</a>
+						    </div>
+						    <div class="swiper-slide">
+						    	<a href="#">
+						    		<img src="../img/news/082505vi1xo8uei6x9esv1.jpg">
+						    		<p class="one-ellipsis">中央一号文件力捧！2017年是推进农村电商发展的大好年头中央一号文件力捧！2017年是推</p>
+						    	</a>
+						    </div>
+						    <div class="swiper-slide">
+						    	<a href="#">
+						    		<img src="../img/news/214041de0f44fd35cebdaf03158a486f.jpg">
+						    		<p class="one-ellipsis">中央一号文件力捧！2017年是推进农村电商发展的大好年头中央一号文件力捧！2017年是推</p>
+						    	</a>
+						    </div>
+						    <div class="swiper-slide">
+						    	<a href="#">
+						    		<img src="../img/news/082505vi1xo8uei6x9esv1.jpg">
+						    		<p class="one-ellipsis">中央一号文件力捧！2017年是推进农村电商发展的大好年头中央一号文件力捧！2017年是推</p>
+						    	</a>
+						    </div>
+						    <div class="swiper-slide">
+						    	<a href="#">
+						    		<img src="../img/news/082505vi1xo8uei6x9esv1.jpg">
+						    		<p class="one-ellipsis">中央一号文件力捧！2017年是推进农村电商发展的大好年头中央一号文件力捧！2017年是推</p>
+						    	</a>
+						    </div>
+						    <div class="swiper-slide">
+						    	<a href="#">
+						    		<img src="../img/news/214041de0f44fd35cebdaf03158a486f.jpg">
+						    		<p class="one-ellipsis">中央一号文件力捧！2017年是推进农村电商发展的大好年头中央一号文件力捧！2017年是推</p>
+						    	</a>
+						    </div>
+						    <div class="swiper-slide">
+						    	<a href="#">
+						    		<img src="../img/news/082505vi1xo8uei6x9esv1.jpg">
+						    		<p class="one-ellipsis">中央一号文件力捧！2017年是推进农村电商发展的大好年头中央一号文件力捧！2017年是推</p>
+						    	</a>
+						    </div>
+					  </div>
+					  
+					</div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+			</div>
+		</div>
 	</div>
-	
-	
-	<footer></footer>
+	<!-- 底部信息 -->
+	<footer>
+		<div class="row">
+			<div class="flex">
+				<div class="flex-item">
+					<div class="site-inference">
+				        <img src="../img/static/platlogo.png" alt="电商潜山平台" class="site-icon pull-left">
+						<div class="pull-left weixinWrap">
+				        	<img src="../img/static/wxgzh.jpg" class="site-icon" alt="官方微信">
+				        	<a href="javascript:;">官方微信</a>
+				        </div>
+					</div>
+				</div>
+				<div class="flex-item serviceWrap">
+					<p>汇聚电商服务 助力电商发展</p><p>服务热线：<span>0556-8921159</span></p>
+				</div>
+			</div>
+		</div>
+		<p>
+		    <!--<a href="javascript:;">关于我们</a><span>|</span>-->
+		    皖ICP备17000363号 &nbsp;
+		    版权所有：潜山县电子商务公共服务中心<span>|</span><a target="_blank" href="/Member/Public/login.html">会员登录</a>
+		    <span>|</span><a target="_blank" href="/Admin/Index/index.html">后台入口</a>
+		</p>
+		<p>技术支持：潜山和沐电子商务有限公司</p>
+		<p>Copyright©2017-2018 All Rights Reserved</p>
+	</footer>
 	<!-- jQuery 2.1.4 -->
-	<!-- <script src="https://staticcdn.yshjie.com/cdn/librarypath/jquery/jquery-2.1.4.min.js"></script> -->
-	<script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+	<script src="https://staticcdn.yshjie.com/cdn/librarypath/jquery/jquery-2.1.4.min.js"></script>
+	<!-- <script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script> -->
 	<script src="../css/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 	<script src="../js/Swiper-3.4.2/dist/js/swiper.jquery.min.js"></script>
+	<script src="../js/BrowserType.js"></script>
+	<script src="../js/basic.js"></script>
 	<!-- statistics  -->
-	<script> 
-		var mySwiper = new Swiper('.news-swiper', {
-			autoplay: 500,//可选选项，自动滑动
+	<script>
+		
+		var news = new Swiper('.news-swiper', {
+			autoplay: 5000,//可选选项，自动滑动
+		})
+		var production = new Swiper('.production-swiper', {
+			autoplay: 2000,//可选选项，自动滑动
+			speed:2500,
+			slidesPerView: productionNumber,
+			loop:true,
+			prevButton:'.swiper-button-prev',
+			nextButton:'.swiper-button-next',
+			freeMode : true,
+			freeModeMomentumBounceRatio : 5,
 		})
 	</script>
 </body>
