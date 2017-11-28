@@ -1,6 +1,7 @@
 @import "./font-awesome-4.7.0/css/font-awesome.min.css";
 @import "./bootstrap-3.3.7-dist/css/bootstrap.min.scss";
 @import "../../Public/static-base/static-base.scss";
+$hover-color : green;
 html{
 	body{
 		header{
@@ -95,9 +96,19 @@ html{
 						width: 100%;
 						position: absolute;
 						z-index:1;
-						width: 100%;
+						width: 
+						100%;
 						@include border(bottom,dashed,1px,green);
 					}
+						a{
+							&:hover{
+								color: $hover-color;
+								text-decoration:none;
+								p{
+									color:$hover-color;
+								}
+							}
+						}
 				}
 				
 			}
@@ -111,7 +122,8 @@ html{
 					font-size: 20px;
 					display: inline-block;
 					padding: 5px 10px;
-					@include border('','',1px,#ccc);
+					color:green;
+					// @include border('','',1px,#ccc);
 
 				}
 				.title-more{
@@ -129,6 +141,12 @@ html{
 			}
 			.module-content{
 				.module-kernel{
+					margin-bottom: 10px;
+					a{
+						&:hover{
+							text-decoration: none;
+						}
+					}
 					.media-left{
 						.media-object{
 							width: 200px;
@@ -143,7 +161,7 @@ html{
 						.kernel-desc{
 							margin-top: 10px;
 							@include text-ellipsis(3);
-							color:#000;
+							color:#999;
 						}
 					}
 					
@@ -153,14 +171,19 @@ html{
 					padding: 0;
 					list-style:none;
 					.module-list-item{
-						height: 30px;
-						line-height: 30px;
+						height: 40px;
+						line-height: 40px;
 						a{
 							color:#000;
+							&:hover{
+								text-decoration: none;
+								color:$hover-color;
+							}
 						}
 						
 						.module-time{
 							white-space: nowrap;
+							color: #7d7d7d;
 						}
 					}
 
@@ -177,8 +200,9 @@ html{
 			}
 		}
 		.left-class-list{
-			background-color: #f7f7f7;
+			background-color: rgb(237, 237, 237);
 		}
+
 		// 在线教学
 		.teach-online{
 			border:1px solid #f7f7f7;
@@ -199,6 +223,16 @@ html{
 								height: 70px;
 								overflow: hidden;
 								line-height:25px;
+								color:#333;
+								&:hover{
+									color:$hover-color;
+								}
+							}
+						}
+						a{
+							&:hover{
+								text-decoration:none;
+								color:$hover-color;
 							}
 						}
 					}
@@ -211,7 +245,10 @@ html{
 			.company-list{
 				.company-picture{
 					width: 100%;
-					margin-bottom: 20px;
+					margin-bottom: 5px;
+				}
+				p{
+					margin-bottom: 15px;
 				}
 				.module-content{
 					.fa{
@@ -303,8 +340,11 @@ html{
 				margin-top: 20px;
 			}
 			.weixinWrap{
-				a{
+				span{
 					display: block;
+					text-decoration: none;
+					cursor:default;
+
 				}
 			}
 			.right-desc{
@@ -325,8 +365,8 @@ html{
 
 		.one-ellipsis{
 		    // width: 100px;
-		    height: 20px;
-		    line-height: 20px;
+		    // height: 20px;
+		    // line-height: 20px;
 		    // border:solid 1px black;
 		    position: relative;         // ...这里添加relative
 		    /*多行文本省略*/

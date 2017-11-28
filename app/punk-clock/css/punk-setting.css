@@ -197,4 +197,9 @@ summary {
 .show-inline {
   display: inline-block; }
 
+html body {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto; }
+
 /*# sourceMappingURL=punk-setting.css.map */

@@ -1,0 +1,54 @@
+@import "../../../Public/static-base/static-base.scss";
+$darkblue : #3297fb;
+html{
+	height: 100%;
+	width: 100%;
+	body{
+		height: 100%;
+		width: 100%;
+		.container{
+			height: 100%;
+			width: 100%;
+			@include mobile-container();
+			#maphere{
+				height: calc(100% - 200px);
+			}
+			.location-info{
+				padding: 10px;
+				font-size: 12px;
+				.my-location{
+					.location-add{
+						color: $darkblue;
+						font-size: 18px;
+					}
+					.blue{
+						color:blue;
+					}
+
+					.location-status{
+						background-color: $darkblue;
+						display: inline-block;
+						padding: 4px 8px;
+						border-radius:20px;
+						color:#FFF;
+						font-size: 12px;
+					}
+					.location-details-info{
+						line-height: 30px;
+						font-size: 14px;
+						color:#666;
+					}
+				}
+				.location-punk-now{
+					text-align: center;
+					margin:0 10px;
+					background-color: $darkblue;
+					line-height: 40px;
+					color:#fff;
+					font-size: 16px;
+					border-radius: 8px;
+				}
+			}
+		}
+	}
+}

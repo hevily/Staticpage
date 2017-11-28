@@ -270,19 +270,19 @@ html body {
     html body .container .punk-now {
       margin-top: 10px; }
       html body .container .punk-now .punk-btn {
-        background: -webkit-linear-gradient(270deg, #BFE1FF 0, #63C1FE 67%);
-        background: linear-gradient(180deg, #BFE1FF 0, #63C1FE 67%);
+        background: -webkit-linear-gradient(270deg, #65c0fe 0, #3297fb 55%);
+        background: linear-gradient(180deg, #65c0fe 0, #3297fb 55%);
         /* W3C */
         border-radius: 50%;
-        width: 200px;
-        height: 200px;
+        width: 120px;
+        height: 120px;
         margin: 0 auto;
         overflow: hidden;
         display: table;
         text-align: center; }
         html body .container .punk-now .punk-btn .punk-in, html body .container .punk-now .punk-btn .punk-out {
-          margin-top: 80px;
-          font-size: 24px;
+          margin-top: 45px;
+          font-size: 18px;
           color: white; }
         html body .container .punk-now .punk-btn .punk-time-now {
           color: #a6dbff; }
