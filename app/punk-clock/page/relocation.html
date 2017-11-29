@@ -4,6 +4,8 @@
 	<meta charset="utf-8" />
 	<meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../js/plugin/jquery_WEUI/lib/weui.min.css">
+    <link rel="stylesheet" type="text/css" href="../js/plugin/jquery_WEUI/css/jquery-weui.min.css">
     <link rel="stylesheet" type="text/css" href="../css/relocation.css">
 	<title>重新定位</title>
 </head>
@@ -31,7 +33,7 @@
 			</div>
 			<div class="location-punk-now">
 				<span class="time-now">00:00:00</span>
-				<span>正常打卡</span>
+				<span class="location-punk">正常打卡</span>
 			</div>
 
 
@@ -42,73 +44,137 @@
 	<!-- <script src="https://staticcdn.yshjie.com/cdn/librarypath/jquery/jquery-2.1.4.min.js"></script> -->
 	<script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
 	<!-- statistics  -->
-	 <!-- <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=KxwmVql6c8ODTmif1PTbc6qIGBgl6hn8"></script> -->
-
-<!-- 	<script>
-		var map = new BMap.Map("maphere");
-		// 创建地图实例  
-		var point = new BMap.Point(116.404, 39.915);
-		// 创建点坐标  
-		map.centerAndZoom(point, 15);
-	</script> -->
-
 	<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.0&key=775f9b46c2ae55ce5e239ead400c40da"></script>
+	<script src="../js/plugin/jquery_WEUI/js/jquery-weui.min.js"></script>
 	<script type="text/javascript">
 		// 116.485 - 116.497
 		// 39.8962 - 39.9035
+		var punk_point = [116.488,39.899],radius = 280;
+		/**
+		 * [renderMapPunkaddr 打卡定位方法]
+		 * @param  {[array]} company [公司定位坐标]
+		 * @param  {[number]} radius  [打卡半径(单位米)不传递则默认500米]
+		 * @return {[type]}         [null]
+		 */
 		
-		var point = [116.488,39.899]
-	        var map = new AMap.Map('maphere',{
-	            resizeEnable: true,
-	            zoom: 14
-	            // ,center: point
-	        });
-	        AMap.plugin(['AMap.ToolBar','AMap.OverView','AMap.Geolocation'],function(){
-	            //创建并添加工具条控件
-	            var toolBar = new AMap.ToolBar();
-	            var overView = new AMap.OverView();
-	            var geolocation = new AMap.Geolocation();
-	            map.addControl(toolBar);
-	            map.addControl(overView);
-	            map.addControl(geolocation);
-	            //创建高级信息窗体并在指定位置打开
-	            var infowindow = new AMap.AdvancedInfoWindow({
-	              content: '<div class="info-title">高德地图</div><div class="info-content">'+
-	                    '<img src="http://webapi.amap.com/images/amap.jpg">'+
-	                    '高德是中国领先的数字地图内容、导航和位置服务解决方案提供商。<br>'+
-	                    '<a target="_blank" href="http://mobile.amap.com/">点击下载高德地图</a></div>',
-	              offset: new AMap.Pixel(0, -30)
-	            });
-	            // infowindow.open(map,[116.480983, 39.989628]);
-	        })
-	        // 设置公司位置标记 和 文字
-	        var marker = new AMap.Marker({ //添加自定义点标记
-	            map: map,
-	            position: point, //基点位置
-	            offset: new AMap.Pixel(-17, -42), //相对于基点的偏移位置
-	            draggable: true,  //是否可拖动
-	            content: '<div class="marker-route marker-marker-bus-from" style="color:red;">公司</div>'   //自定义点标记覆盖物内容
-	        });
-	        function addMarker() {
-               marker = new AMap.Marker({
-                   icon: "http://webapi.amap.com/theme/v1.3/markers/n/mark_b.png",
-                   position: point
-               });
-               marker.setMap(map);
-           }
-	        addMarker()
-	        // 设置打卡有效区域
-	        var circle = new AMap.Circle({
-	               center: new AMap.LngLat(point[0],point[1]),// 圆心位置
-	               radius: 500, //半径
-	               strokeColor: "blue", //线颜色
-	               strokeOpacity: 1, //线透明度
-	               strokeWeight: 1, //线粗细度
-	               fillColor: "blue", //填充颜色
-	               fillOpacity: 0.15//填充透明度
-	           });
-	           circle.setMap(map);
-	           $('.amap-geo').click()
+		function renderMapPunkaddr(company,radius) {
+			var punk_point = company,radius = radius?radius:500
+				,map,gelocation
+
+		        var map = new AMap.Map('maphere',{
+		            resizeEnable: true,
+		            zoom: 14
+		            // ,center: point
+		        });
+
+		        // 计算打卡有效性 -- 中心点 公司定位坐标
+		        var lnglat = new AMap.LngLat(punk_point[0],punk_point[1]);
+		        // 添加控件 缩放，定位
+		        AMap.plugin(['AMap.ToolBar','AMap.Geolocation'],function(){
+		            //创建并添加工具条控件
+		            var toolBar = new AMap.ToolBar();
+		            map.addControl(toolBar);
+		            // 获取定位
+	                geolocation = new AMap.Geolocation({
+	                    enableHighAccuracy: true,//是否使用高精度定位，默认:true
+	                    timeout: 10000,          //超过10秒后停止定位，默认：无穷大
+	                    buttonOffset: new AMap.Pixel(15, 15),//定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
+	                    zoomToAccuracy: true,      //定位成功后调整地图视野范围使定位位置及精度范围视野内可见，默认：false
+	                    buttonPosition:'LB'
+	                });
+
+	                map.addControl(geolocation);
+	                geolocation.getCurrentPosition();
+	                AMap.event.addListener(geolocation, 'complete', onComplete);//返回定位信息
+	                AMap.event.addListener(geolocation, 'error', onError);      //返回定位出错信息
+		        })
+		        //解析定位结果
+		        function onComplete(data) {
+		            var str=['定位成功'];
+		            str.push('经度：' + data.position.getLng());
+		            str.push('纬度：' + data.position.getLat());
+		            if(data.accuracy){
+		                 str.push('精度：' + data.accuracy + ' 米');
+		            }//如为IP精确定位结果则没有精度信息
+		            console.log(data.position.getLng(),data.position.getLat())
+		            str.push('是否经过偏移：' + (data.isConverted ? '是' : '否'));
+		            // document.getElementById('tip').innerHTML = str.join('<br>');
+		            var pos = [data.position.getLng(),data.position.getLat()]
+		            checkPunkAviable(pos,radius)
+
+		        }
+		        //解析定位错误信息
+		        function onError(data) {
+		        	$.toptip(' 定位失败，请开启定位权限或移动至开阔地带重新定位！', 9000,'error');
+		        }
+
+		        // 设置公司位置标记 和 文字
+		        var marker = new AMap.Marker({ //添加自定义点标记
+		            map: map,
+		            position: punk_point, //基点位置
+		            offset: new AMap.Pixel(-17, -42), //相对于基点的偏移位置
+		            draggable: true,  //是否可拖动
+		            content: '<div class="marker-route marker-marker-bus-from" style="color:red;">公司</div>'   //自定义点标记覆盖物内容
+		        });
+		        function addMarker() {
+	               marker = new AMap.Marker({
+	                   icon: "http://webapi.amap.com/theme/v1.3/markers/n/mark_b.png",
+	                   position: punk_point
+	               });
+	               marker.setMap(map);
+	           }
+		        addMarker()
+		        // 设置打卡有效区域圆
+		        var circle = new AMap.Circle({
+		               center: new AMap.LngLat(punk_point[0],punk_point[1]),// 圆心位置
+		               radius: radius, //半径
+		               strokeColor: "blue", //线颜色
+		               strokeOpacity: 1, //线透明度
+		               strokeWeight: 1, //线粗细度
+		               fillColor: "blue", //填充颜色
+		               fillOpacity: 0.15//填充透明度
+		           });
+		           circle.setMap(map);
+		        function checkPunkAviable(curentPos,dis) {
+		        	var dis = lnglat.distance([curentPos[0],curentPos[1]]) - dis
+		        	updateInfo(dis)
+		        	// if(dis > 0 ){
+		        	// 	return false;
+		        	// }else{
+		        	// 	return true;
+		        	// }
+		        	function updateInfo(dis) {
+		        		// var noticeinside = document.querySelectorAll('.in-out-location')[0]
+		        			// ,locationStatus = document.querySelectorAll('.location-status')[0]
+
+		        		var noticeinside = $('.in-out-location')
+							,locationStatus = $('.location-status')
+							,punk_btn = $('.location-punk')
+		        		if(dis > 0 ){
+
+		        			noticeinside.html('外');
+		        			locationStatus.html('超出范围').css({'background-color':'yellow','color':'blue'});
+		        			punk_btn.html('范围外打卡').css({'color':'yellow'})
+		        			$.toptip('处于打卡有效区域外围，慎重打卡！', 5000,'warning');
+		        			return false;
+		        		} else{
+		        			noticeinside.html('内');
+		        			 locationStatus.html('正常');
+		        			 punk_btn.html('正常地点打卡')
+		        			$.toptip('打卡有效范围内，可打卡！', 4000,'success');
+		        			return true;
+		        		}
+		        		console.log(noticeinside)
+		        		console.log(locationStatus)
+		        	}
+		        }
+		}
+		punkmap = new renderMapPunkaddr(punk_point,radius)
+
+
+
+	     
+	           // $('.amap-geo').click()
 	    </script>
 	    <script>
 	    	function updateTime(goal) {
@@ -125,6 +191,9 @@
 	    		},1000)
 	    	}
 	    	updateTime('.time-now');
+	    	$('.location-punk-now').on('click',function () {
+	    		$.toptip('打卡成功', 800,'success');
+	    	})
 	    </script>
 </body>
 </html>
