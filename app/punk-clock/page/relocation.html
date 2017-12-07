@@ -49,7 +49,7 @@
 	<script type="text/javascript">
 		// 116.485 - 116.497
 		// 39.8962 - 39.9035
-		var punk_point = [116.488,39.899],radius = 280;
+		var punk_point = [116.488,39.899],radius = 100;
 		/**
 		 * [renderMapPunkaddr 打卡定位方法]
 		 * @param  {[array]} company [公司定位坐标]
@@ -101,6 +101,7 @@
 		            // document.getElementById('tip').innerHTML = str.join('<br>');
 		            var pos = [data.position.getLng(),data.position.getLat()]
 		            checkPunkAviable(pos,radius)
+		            regeocoder(pos)
 
 		        }
 		        //解析定位错误信息
@@ -168,13 +169,29 @@
 		        		console.log(locationStatus)
 		        	}
 		        }
+		        // 经纬度 逆向城市描述
+		        function regeocoder(lnglatXY) {  //逆地理编码
+	                var geocoder = new AMap.Geocoder({
+	                    radius: 1000,
+	                    extensions: "all"
+	                });
+	                geocoder.getAddress(lnglatXY, function(status, result) {
+	                    if (status === 'complete' && result.info === 'OK') {
+	                        geocoder_CallBack(result);
+	                    }
+	                });
+	                // var marker = new AMap.Marker({  //加点
+	                //     map: map,
+	                //     position: lnglatXY
+	                // });
+	                // map.setFitView();
+	            }
+	            function geocoder_CallBack(data) {
+	                var address = data.regeocode.formattedAddress; //返回地址描述
+	                $(".location-details-info").html(address);
+	            }
 		}
 		punkmap = new renderMapPunkaddr(punk_point,radius)
-
-
-
-	     
-	           // $('.amap-geo').click()
 	    </script>
 	    <script>
 	    	function updateTime(goal) {

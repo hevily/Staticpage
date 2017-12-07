@@ -1,4 +1,4 @@
-@import url(../Font-Awesome-4.7.0/css/font-awesome.css);
+@import url(./font-awesome-4.7.0/css/font-awesome.css);
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 button, hr, input {
   overflow: visible; }
@@ -188,6 +188,15 @@ summary {
 
 .normal-text {
   color: #3F3F3F; }
+
+.hide {
+  display: none; }
+
+.show {
+  display: block; }
+
+.show-inline {
+  display: inline-block; }
 
 html body header {
   width: 100%;

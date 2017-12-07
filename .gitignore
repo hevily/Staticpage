@@ -13,3 +13,4 @@ node_modules/
 .gulpfile.js
 
 #忽略所有rar.zipgdc
+zip
