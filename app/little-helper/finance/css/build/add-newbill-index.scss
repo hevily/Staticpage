@@ -1,0 +1,41 @@
+@import "../../../../Public/static-base/static-base.scss";
+html{
+	height: 100%;width: 100%;
+	body{
+		height: 100%;width: 100%;
+		background-color: #efeff4;
+		@include mobile-container();
+		.select-bill-classes{
+			text-align:center;
+			// height: 50px;
+			background-color: #fff;
+			padding: 10px 0;
+			border-bottom:1px solid #cfcfcf;
+			border-bottom:0.5px solid #cfcfcf;
+			a{
+				height: 30px;
+				width: 70%;
+				display: inline-block;
+				line-height: 30px;
+				text-decoration:none;
+				font-size: 15px;
+				color: #000;
+				border-radius:3px;
+				border:1px solid #cfcfcf;
+				border:0.5px solid #cfcfcf;
+			}
+			.current_bill{
+				a{
+					color:#F36303;
+					border-color:#f36303;
+				}
+			}
+		}
+		.adding-here{
+			background-color: #fff;
+			margin-top: 10px;
+			padding: 10px 0;
+		}
+
+	}
+}

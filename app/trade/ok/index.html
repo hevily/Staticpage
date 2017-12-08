@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <!-- <link rel="stylesheet" type="text/css" href="/statichtml/moviehelper/app/Public/base.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../css/" /> -->
+	<title>ok~api</title>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="section">
+			<button id="getData">开始获取</button>
+		</div>
+		<div class="section">
+			<button id="verify_keygen"> 验证密钥</button>
+		</div>
+	</div>
+	<footer></footer>
+	<!-- jQuery 2.1.4 -->
+	<!-- <script src="https://staticcdn.yshjie.com/cdn/librarypath/jquery/jquery-2.1.4.min.js"></script> -->
+	<script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+	<script src="./js/plugin/CryptoJS v3.1.2/components/core.js"></script>
+	<script src="./js/plugin/CryptoJS v3.1.2/rollups/hmac-sha256.js"></script>
+	<script src="./js/plugin/CryptoJS v3.1.2/rollups/md5.js"></script>
+	<script src="./js/MD5.js"></script>
+	<script src="./js/plugin/CryptoJS v3.1.2/components/enc-base64.js"></script>
+	<script src="./js/website.js"></script>
+	<script src="./js/function.js"></script>
+	<!-- <script src="./js/_authentication.js"></script> -->
+	<!-- <script src="./js/getMarket.js"></script> -->
+	<!-- statistics  -->
+	<script>
+		$(function function_name() {
+			$('#getData').on('click',function () {
+				var parameters = [
+					{symbol:'ltc_btc'}
+				]
+				getMarket(parameters)
+			})
+			// 测试获取行情
+			$('#getData').click()
+			// 需要验证
+			$('#verify_keygen').on('click',function () {
+				// _authentication()
+			})
+			$('#verify_keygen').click()
+		})
+	</script>
+</body>
+</html>

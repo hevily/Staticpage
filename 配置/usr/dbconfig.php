@@ -1,7 +1,7 @@
 <?php
 chdir(dirname(__FILE__));
 //db
-define('dbHost','localhost');
+define('dbHost','192.168.1.192');
 define('dbName','bjmaildb');
 define('dbUser','root');
 define('dbPass','');
