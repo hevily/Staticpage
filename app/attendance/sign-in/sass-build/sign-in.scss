@@ -1,0 +1,111 @@
+@import "./font-awesome-4.7.0/css/font-awesome.min.css";
+@import "../../../Public/static-base/static-base.scss";
+@import "./_color";
+$darkblue : #3297fb;
+html{
+	height: 100%;
+	width: 100%;
+	body{
+		height: 100%;
+		width: 100%;
+		.container{
+			height: 100%;
+			width: 100%;
+			@include mobile-container();
+			#sign-tiper{
+				font-size: 12px;
+				padding: 5px 10px;
+				color: $t_b_c ;
+				i.fa{
+					margin-right: 3px;
+				}
+				.sign-company{
+					margin-left: 10px;
+				}
+			}
+			.location-show{
+				@include border(top,solid,1px,#ccc);
+				padding-left: 10px;
+				a{
+					display: inline-block;
+					width: 80px;
+					text-align: center;
+				}
+			}
+			#maphere{
+				height: 200px;
+			}
+			.location-info{
+				padding: 10px;
+				font-size: 12px;
+				.my-location{
+					.location-add{
+						color: $darkblue;
+						font-size: 18px;
+					}
+					.blue{
+						color:blue;
+					}
+
+					.location-status{
+						background-color: $darkblue;
+						display: inline-block;
+						padding: 4px 8px;
+						border-radius:20px;
+						color:#FFF;
+						font-size: 12px;
+					}
+					.location-details-info{
+						line-height: 30px;
+						font-size: 14px;
+						color:#666;
+					}
+				}
+				.location-punk-now{
+					text-align: center;
+					margin:0 10px;
+					background-color: $darkblue;
+					line-height: 40px;
+					color:#fff;
+					font-size: 16px;
+					border-radius: 8px;
+					margin-top: 20px;
+				}
+			}
+			#container{
+				// 打卡按钮
+				.punk-now{
+					margin-top: 10px;
+					.punk-btn{
+						background: linear-gradient(180deg, #f7b55e 0, #f7b55e 55%);/* W3C */
+						border-radius:50%;
+						width: 120px;height: 120px;
+						margin: 0 auto;
+						overflow: hidden;
+						display: table;
+						text-align: center;
+						.punk-in,.punk-out{
+							margin-top: 45px;
+							font-size: 18px;
+							color: #fce1bd;
+						}
+						.punk-time-now{
+							color:#fff;
+						}
+					}
+					.punk-wifi-location{
+						margin-top: 5px;
+						text-align: center;
+						i{
+							color: #63C1FE;
+						}
+					}
+				}
+			}
+		}
+		.weui-toptips{
+			// z-index:1000;
+			// position: fixed;top: 0;left: 0;right: 0;
+		}
+	}
+}

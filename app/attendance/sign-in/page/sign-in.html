@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../js/plugin/jquery_WEUI/lib/weui.min.css">
+    <link rel="stylesheet" type="text/css" href="../js/plugin/jquery_WEUI/css/jquery-weui.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/sign-in.css">
+	<title>签到</title>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="section" id="sign-tiper">
+			<span class="sign-time"><i class="fa fa-clock-o"></i>2017年12月11日</span>
+			<span class="sign-company"><i class="fa fa-home"></i>当前企业：<span class="company-name">企业名称-和沐·考勤</span></span>
+		</div>
+		<div class="weui-flex location-show">
+		  <div class="location-text"></div>
+		  <div class="weui-flex__item">
+			<a href="javascript:;" class="change-location">地点微调</a>
+		  </div>
+		</div>
+		<div class="section " id="maphere">
+			地图
+		</div>
+		<div class="section " id="container">
+		<!-- 	<div class="sign-notice">
+				<div class="weui-flex">
+				  <div class="">备注</div>
+				  <div class="weui-flex__item">
+				  	<input type="text" name="sign-notice">
+				  </div>
+				</div>
+			</div> -->
+			<div class="weui-cells__title">备注</div>
+			<div class="weui-cells weui-cells_form">
+			  <div class="weui-cell">
+			    <div class="weui-cell__bd">
+			      <textarea class="weui-textarea" placeholder="请输入备注信息" rows="3"></textarea>
+			      <div class="weui-textarea-counter"><span>0</span>/200</div>
+			    </div>
+			  </div>
+			</div>
+			<div class="punk-now">
+				<div class="punk-btn">
+					<div class="punk-in">签到</div>
+					<div class="punk-time-now">--:--:--</div>
+				</div>
+				<div class="punk-wifi-location">
+					 今日你还未签到
+				</div>
+			</div>
+		</div>
+		<div class="section location-info hide">
+			<div class="my-location">
+				<p>
+					<span class="location-add">我的位置</span>
+					（在 <span class="blue"> 考勤范围 </span><span class="in-out-location">内</span>）
+				</p>
+				<p>
+					<span class="location-status">正常/超出范围</span>
+					<span class="location-details-info">
+						 北京市朝阳区南磨房镇南磨房地区个人出租房屋税款代征点金隅·大成国际中心
+					</span>
+				</p>
+			</div>
+			<div class="location-punk-now">
+				<span class="time-now">00:00:00</span>
+				<span class="location-punk">正常打卡</span>
+			</div>
+
+
+		</div>
+	</div>
+	<footer></footer>
+	<!-- jQuery 2.1.4 -->
+	<!-- <script src="https://staticcdn.yshjie.com/cdn/librarypath/jquery/jquery-2.1.4.min.js"></script> -->
+	<script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+	<!-- statistics  -->
+	<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.0&key=775f9b46c2ae55ce5e239ead400c40da"></script>
+	<script src="../js/plugin/jquery_WEUI/js/jquery-weui.min.js"></script>
+	<script type="text/javascript">
+		// 116.485 - 116.497
+		// 39.8962 - 39.9035
+		var punk_point = [116.488,39.899],radius = 100;
+		/**
+		 * [renderMapPunkaddr 打卡定位方法]
+		 * @param  {[array]} company [公司定位坐标]
+		 * @param  {[number]} radius  [打卡半径(单位米)不传递则默认500米]
+		 * @return {[type]}         [null]
+		 */
+		
+		function renderMapPunkaddr(company,radius) {
+			var punk_point = company,radius = radius?radius:500
+				,map,gelocation
+
+		        var map = new AMap.Map('maphere',{
+		            resizeEnable: true,
+		            zoom: 14
+		            // ,center: point
+		        });
+
+		        // 计算打卡有效性 -- 中心点 公司定位坐标
+		        var lnglat = new AMap.LngLat(punk_point[0],punk_point[1]);
+		        // 添加控件 缩放，定位
+		        AMap.plugin(['AMap.ToolBar','AMap.Geolocation'],function(){
+		            //创建并添加工具条控件
+		            var toolBar = new AMap.ToolBar();
+		            map.addControl(toolBar);
+		            // 获取定位
+	                geolocation = new AMap.Geolocation({
+	                    enableHighAccuracy: true,//是否使用高精度定位，默认:true
+	                    timeout: 10000,          //超过10秒后停止定位，默认：无穷大
+	                    buttonOffset: new AMap.Pixel(15, 15),//定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
+	                    zoomToAccuracy: true,      //定位成功后调整地图视野范围使定位位置及精度范围视野内可见，默认：false
+	                    buttonPosition:'LB'
+	                });
+
+	                map.addControl(geolocation);
+	                geolocation.getCurrentPosition();
+	                AMap.event.addListener(geolocation, 'complete', onComplete);//返回定位信息
+	                AMap.event.addListener(geolocation, 'error', onError);      //返回定位出错信息
+		        })
+		        //解析定位结果
+		        function onComplete(data) {
+		            var str=['定位成功'];
+		            str.push('经度：' + data.position.getLng());
+		            str.push('纬度：' + data.position.getLat());
+		            if(data.accuracy){
+		                 str.push('精度：' + data.accuracy + ' 米');
+		            }//如为IP精确定位结果则没有精度信息
+		            console.log(data.position.getLng(),data.position.getLat())
+		            str.push('是否经过偏移：' + (data.isConverted ? '是' : '否'));
+		            // document.getElementById('tip').innerHTML = str.join('<br>');
+		            var pos = [data.position.getLng(),data.position.getLat()]
+		            // checkPunkAviable(pos,radius)
+		            regeocoder(pos)
+		            map.setZoom(16);
+		        }
+		        //解析定位错误信息
+		        function onError(data) {
+		        	$.toptip(' 定位失败，请开启定位权限或移动至开阔地带重新定位！', 9000,'error');
+		        }
+
+		       
+		        // 设置打卡有效区域圆
+		        var circle = new AMap.Circle({
+		               center: new AMap.LngLat(punk_point[0],punk_point[1]),// 圆心位置
+		               radius: radius, //半径
+		               strokeColor: "blue", //线颜色
+		               strokeOpacity: 1, //线透明度
+		               strokeWeight: 1, //线粗细度
+		               fillColor: "blue", //填充颜色
+		               fillOpacity: 0.15//填充透明度
+		           });
+		           // circle.setMap(map);
+		        function checkPunkAviable(curentPos,dis) {
+		        	var dis = lnglat.distance([curentPos[0],curentPos[1]]) - dis
+		        	updateInfo(dis)
+		        	// if(dis > 0 ){
+		        	// 	return false;
+		        	// }else{
+		        	// 	return true;
+		        	// }
+		        	function updateInfo(dis) {
+		        		// var noticeinside = document.querySelectorAll('.in-out-location')[0]
+		        			// ,locationStatus = document.querySelectorAll('.location-status')[0]
+
+		        		var noticeinside = $('.in-out-location')
+							,locationStatus = $('.location-status')
+							,punk_btn = $('.location-punk')
+		        		if(dis > 0 ){
+
+		        			noticeinside.html('外');
+		        			locationStatus.html('超出范围').css({'background-color':'yellow','color':'blue'});
+		        			punk_btn.html('范围外打卡').css({'color':'yellow'})
+		        			$.toptip('处于打卡有效区域外围，慎重打卡！', 5000,'warning');
+		        			return false;
+		        		} else{
+		        			noticeinside.html('内');
+		        			 locationStatus.html('正常');
+		        			 punk_btn.html('正常地点打卡')
+		        			$.toptip('打卡有效范围内，可打卡！', 4000,'success');
+		        			return true;
+		        		}
+		        		console.log(noticeinside)
+		        		console.log(locationStatus)
+		        	}
+		        }
+		        // 经纬度 逆向城市描述
+		        function regeocoder(lnglatXY) {  //逆地理编码
+	                var geocoder = new AMap.Geocoder({
+	                    radius: 1000,
+	                    extensions: "all"
+	                });
+	                geocoder.getAddress(lnglatXY, function(status, result) {
+	                    if (status === 'complete' && result.info === 'OK') {
+	                        geocoder_CallBack(result);
+	                    }
+	                });
+	                // var marker = new AMap.Marker({  //加点
+	                //     map: map,
+	                //     position: lnglatXY
+	                // });
+	                // map.setFitView();
+	            }
+	            function geocoder_CallBack(data) {
+	                var address = data.regeocode.formattedAddress; //返回地址描述
+	                $(".location-text").append(address);
+	            }
+		}
+		punkmap = new renderMapPunkaddr(punk_point,radius)
+	    </script>
+	    <script>
+	    	function updateTime(goal) {
+	    		var goal = $(goal);
+	    		setInterval(function () {
+	    			var time = new Date();
+	    			var h = time.getHours();
+	    			var mm = time.getMinutes();
+	    			var s = time.getSeconds()
+	    			function add0(num) {
+	    				return (num<10)?'0'+num:num;
+	    			}
+	    			goal.text(add0(h)+':'+add0(mm)+':'+add0(s));
+	    		},1000)
+	    	}
+	    	updateTime('.punk-time-now');
+
+	    	
+	    </script>
+</body>
+</html>

@@ -4,6 +4,8 @@
 	<meta charset="utf-8" />
 	<meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../js/plugin/jquery_WEUI/lib/weui.min.css">
+    <link rel="stylesheet" type="text/css" href="../js/plugin/jquery_WEUI/css/jquery-weui.min.css">
     <link rel="stylesheet" type="text/css" href="../css/finance.css" />
     <link rel="stylesheet" type="text/css" href="../css/index.css" />
 	<title>财务</title>
@@ -22,8 +24,11 @@
 				</div>
 				<div class="action-entrances">
 					<div class="entrance addbill">
-						<a href="add-newbill-index.html">
+						<a href="javascript:;">
 							<div class="entrance-icon">
+								<div class="notice-circle">
+									9
+								</div>
 								<div class="entrance-bg">
 									<div class="entrance-text">
 										+
@@ -86,8 +91,11 @@
 				</div>
 				<div class="action-entrances">
 					<div class="entrance my-apply">
-						<a href="./all-my-bills.html">
+						<a href="javascript:;">
 							<div class="entrance-icon">
+								<div class="notice-circle">
+									99
+								</div>
 								<div class="entrance-bg">
 									<div class="entrance-text">
 										申
@@ -175,5 +183,60 @@
 	<!-- <script src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/js/storecommon.js"></script> -->
 	<!-- <script type="text/javascript" src="/statichtml/bjmovie01/estores/Home/JSLang?v=1.1"></script> -->
 	<!-- <script type="text/javascript" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/home/js/checkWeChat.js?ver=1.95&r={:rand(0, 9999)}"></script> -->
+	<script src="../js/plugin/jquery_WEUI/js/jquery-weui.min.js"></script>
+	<script>
+		$(function (argument) {
+			// 新增单据
+			$('.addbill').on('click',function () {
+				$.actions({
+					title:"新建单据",
+				  actions: [{
+				    text: "借款",
+				    className: " jiekuan",
+				    onClick: function() {
+				      //do something
+				    }
+				  },{
+				    text: "付款",
+				    className: " fukuan",
+				    onClick: function() {
+				      //do something
+				    }
+				  },{
+				    text: "报销",
+				    className: " baoxiao",
+				    onClick: function() {
+				      //do something
+				    }
+				  }]
+				});
+			})
+			// 查看单据
+			$('.my-apply').on('click',function () {
+				$.actions({
+					title:"查看单据",
+				  actions: [{
+				    text: "借款",
+				    className: " jiekuan",
+				    onClick: function() {
+				      //do something
+				    }
+				  },{
+				    text: "付款",
+				    className: " fukuan",
+				    onClick: function() {
+				      //do something
+				    }
+				  },{
+				    text: "报销",
+				    className: " baoxiao",
+				    onClick: function() {
+				      //do something
+				    }
+				  }]
+				});
+			})
+		})
+	</script>
 </body>
 </html>

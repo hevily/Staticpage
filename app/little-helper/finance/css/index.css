@@ -263,14 +263,30 @@ html {
               html body .section.finance-entrance .action-box .action-entrances .entrance .entrance-icon {
                 width: 45px;
                 height: 45px;
-                overflow: hidden;
                 margin: 0 auto;
-                border-radius: 50%;
-                text-align: center; }
+                text-align: center;
+                position: relative; }
+                html body .section.finance-entrance .action-box .action-entrances .entrance .entrance-icon .notice-circle {
+                  display: inline-block;
+                  position: absolute;
+                  top: -10px;
+                  right: -10px;
+                  min-width: 16px;
+                  height: 16px;
+                  background-color: #f02;
+                  z-index: 1;
+                  color: #FFF;
+                  font-size: 10px;
+                  line-height: 16px;
+                  border-radius: 16px;
+                  padding: 2px;
+                  box-sizing: content-box; }
                 html body .section.finance-entrance .action-box .action-entrances .entrance .entrance-icon .entrance-bg {
                   height: 100%;
                   width: 100%;
                   position: relative;
+                  overflow: hidden;
+                  border-radius: 50%;
                   background-color: #f8f8f8;
                   box-sizing: border-box; }
                   html body .section.finance-entrance .action-box .action-entrances .entrance .entrance-icon .entrance-bg .entrance-text {
@@ -314,7 +330,7 @@ html {
                 background-size: 100% 100%; }
                 html body .section.finance-entrance .action-box .action-entrances .entrance.setting .entrance-bg .entrance-text {
                   font-size: 18px; }
-          html body .section.finance-entrance .action-box.action-eye .action-entrances .entrance .entrance-icon {
+          html body .section.finance-entrance .action-box.action-eye .action-entrances .entrance .entrance-icon .entrance-bg {
             border-radius: 4px; }
         html body .section.finance-entrance .entrance-gap {
           padding-left: 15px; }
@@ -324,3 +340,9 @@ html {
             height: 1px;
             width: 100%;
             background-color: #cfcfcf; }
+    html body .jiekuan {
+      color: #fb6851; }
+    html body .fukuan {
+      color: #ff8b00; }
+    html body .baoxiao {
+      color: #2eb3e8; }
