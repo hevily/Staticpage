@@ -17,24 +17,28 @@
 			<span class="sign-company"><i class="fa fa-home"></i>当前企业：<span class="company-name">企业名称-和沐·考勤</span></span>
 		</div>
 		<div class="weui-flex location-show">
-		  <div class="location-text"></div>
-		  <div class="weui-flex__item">
-			<a href="javascript:;" class="change-location">地点微调</a>
-		  </div>
+	        <div class="weui-flex__item">
+	        	<div class="location-text">当前地点</div>
+	        </div>
+	        <div>
+	        	<!-- <div class="placeholder"> -->
+	        		<a href="javascript:;" class="changeLocation">地点微调</a>
+	        	<!-- </div> -->
+	        </div>
 		</div>
 		<div class="section " id="maphere">
-			地图
+			map
 		</div>
 		<div class="section " id="container">
-		<!-- 	<div class="sign-notice">
+			<div class="sign-notice">
 				<div class="weui-flex">
-				  <div class="">备注</div>
+				  <div class="">拜访对象</div>
 				  <div class="weui-flex__item">
-				  	<input type="text" name="sign-notice">
+				  	<input type="text" name="sign-notice" class="sign-notice-input" placeholder="请输入">
 				  </div>
 				</div>
-			</div> -->
-			<div class="weui-cells__title">备注</div>
+			</div>
+			<!-- <div class="weui-cells__title">备注</div>
 			<div class="weui-cells weui-cells_form">
 			  <div class="weui-cell">
 			    <div class="weui-cell__bd">
@@ -42,36 +46,83 @@
 			      <div class="weui-textarea-counter"><span>0</span>/200</div>
 			    </div>
 			  </div>
-			</div>
+			</div> -->
 			<div class="punk-now">
-				<div class="punk-btn">
-					<div class="punk-in">签到</div>
-					<div class="punk-time-now">--:--:--</div>
-				</div>
-				<div class="punk-wifi-location">
-					 今日你还未签到
-				</div>
+					<div class="punk-btn">
+						<a href="javascript:;" class="sign-in-btn open-popup" data-target="#sign-in-popup">
+							<div class="punk-in">签到</div>
+							<div class="punk-time-now">--:--:--</div>
+						</a>
+					</div>
+					<div class="punk-wifi-location">
+						 今日你还未签到
+					</div>
 			</div>
 		</div>
-		<div class="section location-info hide">
-			<div class="my-location">
-				<p>
-					<span class="location-add">我的位置</span>
-					（在 <span class="blue"> 考勤范围 </span><span class="in-out-location">内</span>）
-				</p>
-				<p>
-					<span class="location-status">正常/超出范围</span>
-					<span class="location-details-info">
-						 北京市朝阳区南磨房镇南磨房地区个人出租房屋税款代征点金隅·大成国际中心
-					</span>
-				</p>
-			</div>
-			<div class="location-punk-now">
-				<span class="time-now">00:00:00</span>
-				<span class="location-punk">正常打卡</span>
-			</div>
-
-
+		
+		<div id="sign-in-popup" class="weui-popup__container">
+		  <div class="weui-popup__overlay"></div>
+		  <div class="weui-popup__modal">
+		  	<div class="sign-top-info">
+	  			<div class="weui-flex">
+	  			  <div class="left-desc"><span class="icon"><i class="fa fa-clock-o"></i></span>签到时间:</div>
+	  			  <div class="weui-flex__item"><span class="punk-time-now">14:06</span>
+	  		  	</div>
+	  			</div>
+	  			<div class="weui-flex">
+	  			  <div class="left-desc"><span class="icon"><i class="fa fa-map-marker"></i></span>签到地点:</div>
+	  			  <div class="weui-flex__item"><span class="location-text">北京市朝阳区双井街道百子湾路金隅·大成国际中心</span></div>
+	  			</div>
+		  	</div>
+		  	<div class="input-area">
+		  		<!-- <div class="weui-cells__title">文本域</div> -->
+		  		<div class="weui-cells weui-cells_form">
+		  		  <div class="weui-cell">
+		  		    <div class="weui-cell__bd">
+		  		      <textarea class="weui-textarea" placeholder="请输入文本" rows="6"></textarea>
+		  		      <div class="picture-upload">
+		  		      	<span class="del">
+		  		      		<i>x</i>
+		  		      		<img src="../img/email.jpg">
+		  		      	</span>
+		  		      	<span class="del">
+		  		      		<i>x</i>
+		  		      		<img src="../img/email.jpg">
+		  		      	</span>
+		  		      	<span class="del">
+		  		      		<i>x</i>
+		  		      		<img src="../img/email.jpg">
+		  		      	</span>
+		  		      	<span class="del">
+		  		      		<i>x</i>
+		  		      		<img src="../img/email.jpg">
+		  		      	</span>
+		  		      	<span class="del">
+		  		      		<i>x</i>
+		  		      		<img src="../img/email.jpg">
+		  		      	</span>
+		  		      	<span class="camera">
+		  		      		<img src="../img/camera.png">
+		  		      	</span>
+		  		      </div>
+		  		    </div>
+		  		  </div>
+		  		</div>
+		  	</div>
+		  	<div class="weui-cells sign-company-name">
+		  	  <div class="weui-cell">
+		  	    <div class="">
+		  	      <p>当前企业:</p>
+		  	    </div>
+		  	    <div class="weui-cell__ft">和沐~钉钉考勤</div>
+		  	  </div>
+		  	</div>
+		  </div>
+		  <div class="popup-btn-group">
+		  	<a href="javascript:;" class="weui-btn weui-btn_white_all close-popup ">返回</a>
+		  	<a href="javascript:;" class="weui-btn weui-btn_white_all weui-btn_primary">提交</a>
+		  	
+		  </div>
 		</div>
 	</div>
 	<footer></footer>
@@ -84,22 +135,36 @@
 	<script type="text/javascript">
 		// 116.485 - 116.497
 		// 39.8962 - 39.9035
-		var punk_point = [116.488,39.899],radius = 100;
+		// 默认区域
+		var punk_point = [116.355,39.899]
 		/**
-		 * [renderMapPunkaddr 打卡定位方法]
-		 * @param  {[array]} company [公司定位坐标]
-		 * @param  {[number]} radius  [打卡半径(单位米)不传递则默认500米]
+		 * [renderMapPunkaddr 自动定位 手动传递位置信息]
+		 * @param  {[array]} company[目标定位坐标] selfPos[是否为自行传递位置信息 boolean]
+		 * ]
 		 * @return {[type]}         [null]
 		 */
 		
-		function renderMapPunkaddr(company,radius) {
+		function renderMapPunkaddr(company,selfPos) {
+			if(selfPos){
+				var map = new AMap.Map('maphere',{
+		            resizeEnable: true,
+		            zoom: 16,
+		            center:company
+		        });
+				marker = new AMap.Marker({
+				           icon: "http://webapi.amap.com/theme/v1.3/markers/n/mark_b.png",
+				           position: company,
+				       });
+		        marker.setMap(map);
+		        regeocoder(company)
+			}else{
+
 			var punk_point = company,radius = radius?radius:500
 				,map,gelocation
 
 		        var map = new AMap.Map('maphere',{
 		            resizeEnable: true,
-		            zoom: 14
-		            // ,center: point
+		            zoom: 1,
 		        });
 
 		        // 计算打卡有效性 -- 中心点 公司定位坐标
@@ -108,7 +173,7 @@
 		        AMap.plugin(['AMap.ToolBar','AMap.Geolocation'],function(){
 		            //创建并添加工具条控件
 		            var toolBar = new AMap.ToolBar();
-		            map.addControl(toolBar);
+		            // map.addControl(toolBar);
 		            // 获取定位
 	                geolocation = new AMap.Geolocation({
 	                    enableHighAccuracy: true,//是否使用高精度定位，默认:true
@@ -123,97 +188,52 @@
 	                AMap.event.addListener(geolocation, 'complete', onComplete);//返回定位信息
 	                AMap.event.addListener(geolocation, 'error', onError);      //返回定位出错信息
 		        })
-		        //解析定位结果
-		        function onComplete(data) {
-		            var str=['定位成功'];
-		            str.push('经度：' + data.position.getLng());
-		            str.push('纬度：' + data.position.getLat());
-		            if(data.accuracy){
-		                 str.push('精度：' + data.accuracy + ' 米');
-		            }//如为IP精确定位结果则没有精度信息
-		            console.log(data.position.getLng(),data.position.getLat())
-		            str.push('是否经过偏移：' + (data.isConverted ? '是' : '否'));
-		            // document.getElementById('tip').innerHTML = str.join('<br>');
-		            var pos = [data.position.getLng(),data.position.getLat()]
-		            // checkPunkAviable(pos,radius)
-		            regeocoder(pos)
-		            map.setZoom(16);
-		        }
-		        //解析定位错误信息
-		        function onError(data) {
-		        	$.toptip(' 定位失败，请开启定位权限或移动至开阔地带重新定位！', 9000,'error');
-		        }
+		        
+			}
+				        //解析定位结果
+				        function onComplete(data) {
+				            var str=['定位成功'];
+				            str.push('经度：' + data.position.getLng());
+				            str.push('纬度：' + data.position.getLat());
+				            if(data.accuracy){
+				                 str.push('精度：' + data.accuracy + ' 米');
+				            }//如为IP精确定位结果则没有精度信息
+				            console.log(data.position.getLng(),data.position.getLat())
+				            str.push('是否经过偏移：' + (data.isConverted ? '是' : '否'));
+				            // document.getElementById('tip').innerHTML = str.join('<br>');
+				            var pos = [data.position.getLng(),data.position.getLat()]
+				            // checkPunkAviable(pos,radius)
+				            regeocoder(pos)
+				            map.setZoom(15);
+				        }
+				        //解析定位错误信息
+				        function onError(data) {
+				        	$.toptip(' 定位失败，请开启定位权限或移动至开阔地带重新定位！', 9000,'error');
+				        }
 
-		       
-		        // 设置打卡有效区域圆
-		        var circle = new AMap.Circle({
-		               center: new AMap.LngLat(punk_point[0],punk_point[1]),// 圆心位置
-		               radius: radius, //半径
-		               strokeColor: "blue", //线颜色
-		               strokeOpacity: 1, //线透明度
-		               strokeWeight: 1, //线粗细度
-		               fillColor: "blue", //填充颜色
-		               fillOpacity: 0.15//填充透明度
-		           });
-		           // circle.setMap(map);
-		        function checkPunkAviable(curentPos,dis) {
-		        	var dis = lnglat.distance([curentPos[0],curentPos[1]]) - dis
-		        	updateInfo(dis)
-		        	// if(dis > 0 ){
-		        	// 	return false;
-		        	// }else{
-		        	// 	return true;
-		        	// }
-		        	function updateInfo(dis) {
-		        		// var noticeinside = document.querySelectorAll('.in-out-location')[0]
-		        			// ,locationStatus = document.querySelectorAll('.location-status')[0]
+				        // 经纬度 逆向城市描述
+				        function regeocoder(lnglatXY) {  //逆地理编码
+			                var geocoder = new AMap.Geocoder({
+			                    radius: 1000,
+			                    extensions: "all"
+			                });
+			                geocoder.getAddress(lnglatXY, function(status, result) {
+			                    if (status === 'complete' && result.info === 'OK') {
+			                        geocoder_CallBack(result);
+			                    }
+			                });
+			            }
+			            function geocoder_CallBack(data) {
+			                var address = data.regeocode.formattedAddress; //返回地址描述
+			                $(".location-text").html(address);
+			            }
 
-		        		var noticeinside = $('.in-out-location')
-							,locationStatus = $('.location-status')
-							,punk_btn = $('.location-punk')
-		        		if(dis > 0 ){
-
-		        			noticeinside.html('外');
-		        			locationStatus.html('超出范围').css({'background-color':'yellow','color':'blue'});
-		        			punk_btn.html('范围外打卡').css({'color':'yellow'})
-		        			$.toptip('处于打卡有效区域外围，慎重打卡！', 5000,'warning');
-		        			return false;
-		        		} else{
-		        			noticeinside.html('内');
-		        			 locationStatus.html('正常');
-		        			 punk_btn.html('正常地点打卡')
-		        			$.toptip('打卡有效范围内，可打卡！', 4000,'success');
-		        			return true;
-		        		}
-		        		console.log(noticeinside)
-		        		console.log(locationStatus)
-		        	}
-		        }
-		        // 经纬度 逆向城市描述
-		        function regeocoder(lnglatXY) {  //逆地理编码
-	                var geocoder = new AMap.Geocoder({
-	                    radius: 1000,
-	                    extensions: "all"
-	                });
-	                geocoder.getAddress(lnglatXY, function(status, result) {
-	                    if (status === 'complete' && result.info === 'OK') {
-	                        geocoder_CallBack(result);
-	                    }
-	                });
-	                // var marker = new AMap.Marker({  //加点
-	                //     map: map,
-	                //     position: lnglatXY
-	                // });
-	                // map.setFitView();
-	            }
-	            function geocoder_CallBack(data) {
-	                var address = data.regeocode.formattedAddress; //返回地址描述
-	                $(".location-text").append(address);
-	            }
 		}
-		punkmap = new renderMapPunkaddr(punk_point,radius)
+		// 初始化地图
+		 signMap = new renderMapPunkaddr(punk_point,false)
 	    </script>
 	    <script>
+	    	// 更新时间
 	    	function updateTime(goal) {
 	    		var goal = $(goal);
 	    		setInterval(function () {
@@ -229,7 +249,32 @@
 	    	}
 	    	updateTime('.punk-time-now');
 
-	    	
+	    	// 点击签到弹层
+	    	$('.sign-in-btn').popup()
+	    	// $('.sign-in-btn').click()
+	    	// 删除已选择照片
+	    	$('.picture-upload').on('click','.del i',function () {
+	    		var _this = $(this).closest('span')
+	    		_this.remove()
+	    		if($('.picture-upload').find('span').length < 10){
+	    			$('.camera').show()
+	    		}
+	    	})
+	    	// 添加图片
+	    	$('.camera').on('click',function () {
+	    		var length = $('.picture-upload').find('span').length
+	    		if(length >9){return false;}
+	    		var _this = $(this)
+	    			,img = '<span class="del"><i>x</i><img src="../img/email.jpg"></span>';
+	    			_this.before(img);
+	    		if($('.picture-upload').find('span').length >9){
+	    			_this.hide()
+	    		}
+	    	})
+	    	// 自定义位置
+	    	$('.changeLocation').on('click',function () {
+	    		signMap = new renderMapPunkaddr(punk_point,true)
+	    	})
 	    </script>
 </body>
 </html>

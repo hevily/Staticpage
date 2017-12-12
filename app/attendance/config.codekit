@@ -1497,6 +1497,28 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/sign-in\/img\/camera.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6072,
+		"inputAbbreviatedPath": "\/sign-in\/img\/camera.png",
+		"outputAbbreviatedPath": "\/sign-in\/img\/camera.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/sign-in\/img\/email.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3225,
+		"inputAbbreviatedPath": "\/sign-in\/img\/email.jpg",
+		"outputAbbreviatedPath": "\/sign-in\/img\/email.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/sign-in\/js\/plugin\/jquery_WEUI\/css\/jquery-weui.css": {
 		"fileType": 16,
 		"ignore": 0,
