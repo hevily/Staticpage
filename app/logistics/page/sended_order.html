@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<title>寄送凭据</title>
+	<style type="text/css">
+		*{
+			margin: 0;padding: 0;box-sizing: border-box;
+		}
+		.print-order{
+			width: 1040px;
+		    min-height: 540px;
+			padding: 40px;
+			margin: 50px auto;
+		}
+		.print-order.flex{
+			border:none;
+		}
+		.print-order table{
+			float: left;
+			padding:0 20px;
+			width: 50%;
+			height: 100%;
+			max-height: 1754px;
+		}
+		.print-order  .order{
+			float: left;
+			border:1px solid #000;
+			padding: 10px 20px;
+
+		}
+		.print-order .qr{
+			overflow: hidden;
+		}
+		.print-order .qr img{
+			display: block;
+			max-width: 100%;
+			height: 90px;
+		}
+		.flex{
+			display: flex;
+			border:1px solid #cfcfcf;
+			border-bottom: none;
+			padding: 5px 0;
+
+		}
+		.flex-item{
+			flex:1;
+			margin:0 10px;
+		}
+		.flex-title{
+			min-width: 100px;
+		}
+		.noborder{
+			border:none;
+		}
+		.order-name .flex-item{
+			text-align: right;
+		}
+		.order-notice .flex-item{
+			text-align: left;
+		}
+		.order-notice{
+			min-height: 60px;
+			color:#656565;
+		}
+		.order-notice .flex-title{
+			min-width: 46px;
+		}
+		.flex-title{
+			padding-left: 10px;
+		}
+		.addr-title{
+			width:30px;
+		}
+		.addr-title{
+			text-align: center;
+			border-right:1px solid #cfcfcf;
+		}
+		.qr{
+			padding: 10px 0;
+			border:1px solid #cfcfcf;
+			border-bottom: none;
+		}
+		.order-price-info{
+			font-size: 12px;
+			border:1px solid #cfcfcf;
+			line-height: 20px;
+		}
+		.order-taker{
+			border:1px solid #cfcfcf;
+			border-top:none;
+			padding: 10px 0 10px 10px;
+		}
+		.destination{
+			line-height: 65px;
+			font-size: 30px;
+			font-weight: 600;
+		}
+		.destination .flex{
+			padding: 0;
+		}
+		.usr-sign{
+			color:#cfcfcf;
+			border-left:1px solid #cfcfcf;
+			font-size: 18px;
+			padding: 0 10px;
+		}
+		.addr.flex{
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="section print-order flex">
+			<div class="order flex-item ">
+				<div class="flex order-name">
+					<div class="flex-title">存根联</div>
+					<div class="flex-item">
+						和沐物流 400-960-1230
+					</div>
+				</div>
+				<div class="qr">
+					<img src="./../img/qr.jpg">
+				</div>
+				<div class="flex addr">
+					<div class="addr-title">
+						收件人
+					</div>
+					<div class="flex-item">
+						<div class="sender flex noborder">
+							<div class="sender-name">
+								 范帅
+							</div>
+							<div class="flex-item">
+								13312347890
+							</div>
+						</div>
+						<div class="sender-addr">
+							<span> 北京</span>
+							<span> 朝阳区</span>
+							<span> 大成国际07a07</span>
+						</div>
+					</div>
+				</div>
+				<div class="flex addr">
+					<div class="addr-title">
+						寄件人
+					</div>
+					<div class="flex-item">
+						<div class="sender flex noborder">
+							<div class="sender-name">
+								 范帅
+							</div>
+							<div class="flex-item">
+								13312347890
+							</div>
+						</div>
+						<div class="sender-addr">
+							<span> 北京</span>
+							<span> 朝阳区</span>
+							<span> 大成国际07a07</span>
+						</div>
+					</div>
+				</div>
+				<div class="order-notice flex">
+					<div class="flex-title">备注:</div>
+					<div class="flex-item">
+						备注信息备注信息备注信息备注信息备注信息备注信息备注信息备注信息备注信息
+					</div>
+				</div>
+				<div class="order-price-info">
+					<div class="flex noborder">
+						<div class="flex-item">
+							物品：文件
+						</div>
+						<div class="flex-item">
+							重量：1kg
+						</div>
+						<div class="flex-item">
+							付款方式：线下支付
+						</div>
+					</div>
+					<div class="flex noborder">
+						<div class="flex-item">
+							报价：2000元
+						</div>
+						<div class="flex-item">
+							保费：5元
+						</div>
+						<div class="flex-item">
+							运费：15元
+						</div>
+					</div>
+					<div class="flex noborder">
+						<div class="flex-item">
+							合计快递费：20元
+						</div>
+					</div>
+				</div>
+				<div class="order-taker">
+					<div class="man">收件员：张三</div>
+					<div class="man-addr">取件物流站名称</div>
+				</div>
+			</div>
+			<div class="order flex-item">
+				<div class="flex order-name">
+					<div class="flex-title">物品联</div>
+					<div class="flex-item">
+						和沐物流 400-960-1230
+					</div>
+				</div>
+				<div class="destination">
+					<div class="flex">
+						<div class="flex-item">
+							 目的地：潜山
+						</div>
+						<div class="usr-sign">
+							 用户签字区
+						</div>
+					</div>
+				</div>
+				<div class="qr">
+					<img src="./../img/qr.jpg">
+				</div>
+				<div class="flex addr">
+					<div class="addr-title">
+						收件人
+					</div>
+					<div class="flex-item">
+						<div class="sender flex noborder">
+							<div class="sender-name">
+								 范帅
+							</div>
+							<div class="flex-item">
+								13312347890
+							</div>
+						</div>
+						<div class="sender-addr">
+							<span> 北京</span>
+							<span> 朝阳区</span>
+							<span> 大成国际07a07</span>
+						</div>
+					</div>
+				</div>
+				<div class="flex addr">
+					<div class="addr-title">
+						寄件人
+					</div>
+					<div class="flex-item">
+						<div class="sender flex noborder">
+							<div class="sender-name">
+								 范帅
+							</div>
+							<div class="flex-item">
+								13312347890
+							</div>
+						</div>
+						<div class="sender-addr">
+							<span> 北京</span>
+							<span> 朝阳区</span>
+							<span> 大成国际07a07</span>
+						</div>
+					</div>
+				</div>
+				<div class="order-notice flex">
+					<div class="flex-title">备注:</div>
+					<div class="flex-item">
+						备注信息备注信息备注信息备注信息备注信息备注信息备注信息备注信息备注信息
+					</div>
+				</div>
+				<div class="order-price-info">
+					<div class="flex noborder">
+						<div class="flex-item">
+							物品：文件
+						</div>
+						<div class="flex-item">
+							重量：1kg
+						</div>
+						<div class="flex-item">
+							付款方式：线下支付
+						</div>
+					</div>
+					<div class="flex noborder">
+						<div class="flex-item">
+							报价：2000元
+						</div>
+						<div class="flex-item">
+							保费：5元
+						</div>
+						<div class="flex-item">
+							运费：15元
+						</div>
+					</div>
+					<div class="flex noborder">
+						<div class="flex-item">
+							合计快递费：20元
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="section">
+
+		</div>
+	</div>
+	<footer></footer>
+</body>
+</html>

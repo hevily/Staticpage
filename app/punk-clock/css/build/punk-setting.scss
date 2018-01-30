@@ -1,0 +1,7 @@
+@import "../../../Public/static-base/static-base.scss";
+html{
+	body{
+		@include mobile-container();
+		
+	}
+}

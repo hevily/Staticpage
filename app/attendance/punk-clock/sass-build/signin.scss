@@ -85,6 +85,12 @@ html{
 					.punk-time-now{
 						color:#a6dbff;
 					}
+					&.late-punk{
+						background: linear-gradient(180deg, #e9c672 0, #ff953f 55%);/* W3C */
+						.punk-time-now{
+							color:#ffd28b;
+						}
+					}
 				}
 				.punk-wifi-location{
 					margin-top: 5px;

@@ -223,7 +223,7 @@ html {
         border-width: 0 0 0.5px 0;
         border-style: solid;
         border-color: #cfcfcf;
-        padding: 14px 15px; }
+        padding: 14px 10px; }
         html body .section.borrowed-money span {
           font-size: 20px;
           color: #292929; }
@@ -240,7 +240,7 @@ html {
           line-height: 25px;
           text-align: center; }
       html body .section.finance-entrance {
-        margin-top: 15px;
+        margin-top: 10px;
         border-top: 1px solid #cfcfcf;
         border-bottom: 1px solid #cfcfcf;
         border-top: 0.5px solid #cfcfcf;
@@ -251,7 +251,7 @@ html {
             font-size: 16px;
             color: #323232;
             line-height: 18px;
-            padding-left: 15px; }
+            padding-left: 10px; }
           html body .section.finance-entrance .action-box .action-entrances {
             font-size: 0;
             padding-top: 15px; }
@@ -262,25 +262,25 @@ html {
               html body .section.finance-entrance .action-box .action-entrances .entrance a {
                 text-decoration: none; }
               html body .section.finance-entrance .action-box .action-entrances .entrance .entrance-icon {
-                width: 45px;
-                height: 45px;
+                width: 44px;
+                height: 44px;
                 margin: 0 auto;
                 text-align: center;
                 position: relative; }
                 html body .section.finance-entrance .action-box .action-entrances .entrance .entrance-icon .notice-circle {
                   display: inline-block;
                   position: absolute;
-                  top: -10px;
-                  right: -10px;
-                  min-width: 16px;
-                  height: 16px;
+                  top: -7px;
+                  right: -7px;
+                  min-width: 8px;
+                  height: 12px;
                   background-color: #f02;
                   z-index: 1;
                   color: #FFF;
                   font-size: 10px;
-                  line-height: 16px;
-                  border-radius: 16px;
-                  padding: 2px;
+                  line-height: 12px;
+                  border-radius: 12px;
+                  padding: 2px 4px;
                   box-sizing: content-box; }
                 html body .section.finance-entrance .action-box .action-entrances .entrance .entrance-icon .entrance-bg {
                   height: 100%;
@@ -296,7 +296,7 @@ html {
                     position: relative;
                     font-size: 25px;
                     color: #fff;
-                    line-height: 45px; }
+                    line-height: 44px; }
               html body .section.finance-entrance .action-box .action-entrances .entrance .entrance-name {
                 color: #666;
                 margin-top: 10px;
@@ -331,10 +331,13 @@ html {
                 background-size: 100% 100%; }
                 html body .section.finance-entrance .action-box .action-entrances .entrance.setting .entrance-bg .entrance-text {
                   font-size: 18px; }
+          html body .section.finance-entrance .action-box.action-approve .action-entrances .entrance .entrance-icon .notice-circle {
+            top: -5px;
+            right: -2px; }
           html body .section.finance-entrance .action-box.action-eye .action-entrances .entrance .entrance-icon .entrance-bg {
             border-radius: 4px; }
         html body .section.finance-entrance .entrance-gap {
-          padding-left: 15px;
+          padding-left: 10px;
           width: 100%;
           height: 1px;
           position: relative; }

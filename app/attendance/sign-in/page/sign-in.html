@@ -12,117 +12,139 @@
 <body>
 	<header></header>
 	<div class="container">
-		<div class="section" id="sign-tiper">
-			<span class="sign-time"><i class="fa fa-clock-o"></i>2017年12月11日</span>
-			<span class="sign-company"><i class="fa fa-home"></i>当前企业：<span class="company-name">企业名称-和沐·考勤</span></span>
-		</div>
-		<div class="weui-flex location-show">
-	        <div class="weui-flex__item">
-	        	<div class="location-text">当前地点</div>
-	        </div>
-	        <div>
-	        	<!-- <div class="placeholder"> -->
-	        		<a href="javascript:;" class="changeLocation">地点微调</a>
-	        	<!-- </div> -->
-	        </div>
-		</div>
-		<div class="section " id="maphere">
-			map
-		</div>
-		<div class="section " id="container">
-			<div class="sign-notice">
-				<div class="weui-flex">
-				  <div class="">拜访对象</div>
-				  <div class="weui-flex__item">
-				  	<input type="text" name="sign-notice" class="sign-notice-input" placeholder="请输入">
+		<div class="tab-pannels">
+			<div class="sign-box tab-pannel">
+				<div class="section" id="sign-tiper">
+					<span class="sign-time"><i class="fa fa-clock-o"></i>2017年12月11日</span>
+					<span class="sign-company"><i class="fa fa-home"></i>当前企业：<span class="company-name">企业名称-和沐·考勤</span></span>
+				</div>
+				<div class="weui-flex location-show">
+			        <div class="weui-flex__item">
+			        	<div class="location-text">当前地点</div>
+			        </div>
+			        <div>
+			        	<!-- <div class="placeholder"> -->
+			        		<a href="javascript:;" class="changeLocation">地点微调</a>
+			        	<!-- </div> -->
+			        </div>
+				</div>
+				<div class="section " id="maphere">
+					map
+				</div>
+				<div class="section " id="container">
+					<div class="sign-notice">
+						<div class="weui-flex">
+						  <div class="">拜访对象</div>
+						  <div class="weui-flex__item">
+						  	<input type="text" name="sign-notice" class="sign-notice-input" placeholder="请输入">
+						  </div>
+						</div>
+					</div>
+					<!-- <div class="weui-cells__title">备注</div>
+					<div class="weui-cells weui-cells_form">
+					  <div class="weui-cell">
+					    <div class="weui-cell__bd">
+					      <textarea class="weui-textarea" placeholder="请输入备注信息" rows="3"></textarea>
+					      <div class="weui-textarea-counter"><span>0</span>/200</div>
+					    </div>
+					  </div>
+					</div> -->
+					<div class="punk-now">
+							<div class="punk-btn">
+								<a href="javascript:;" class="sign-in-btn open-popup" data-target="#sign-in-popup">
+									<div class="punk-in">签到</div>
+									<div class="punk-time-now">--:--:--</div>
+								</a>
+							</div>
+							<div class="punk-wifi-location">
+								 今日你还未签到
+							</div>
+					</div>
+				</div>
+				<div id="sign-in-popup" class="weui-popup__container">
+				  <div class="weui-popup__overlay"></div>
+				  <div class="weui-popup__modal">
+				  	<div class="sign-top-info">
+			  			<div class="weui-flex">
+			  			  <div class="left-desc"><span class="icon"><i class="fa fa-clock-o"></i></span>签到时间:</div>
+			  			  <div class="weui-flex__item"><span class="punk-time-now">14:06</span>
+			  		  	</div>
+			  			</div>
+			  			<div class="weui-flex">
+			  			  <div class="left-desc"><span class="icon"><i class="fa fa-map-marker"></i></span>签到地点:</div>
+			  			  <div class="weui-flex__item"><span class="location-text">北京市朝阳区双井街道百子湾路金隅·大成国际中心</span></div>
+			  			</div>
+				  	</div>
+				  	<div class="input-area">
+				  		<!-- <div class="weui-cells__title">文本域</div> -->
+				  		<div class="weui-cells weui-cells_form">
+				  		  <div class="weui-cell">
+				  		    <div class="weui-cell__bd">
+				  		      <textarea class="weui-textarea" placeholder="请输入文本" rows="6"></textarea>
+				  		      <div class="picture-upload">
+				  		      	<span class="del">
+				  		      		<i>x</i>
+				  		      		<img src="../img/email.jpg">
+				  		      	</span>
+				  		      	<span class="del">
+				  		      		<i>x</i>
+				  		      		<img src="../img/email.jpg">
+				  		      	</span>
+				  		      	<span class="del">
+				  		      		<i>x</i>
+				  		      		<img src="../img/email.jpg">
+				  		      	</span>
+				  		      	<span class="del">
+				  		      		<i>x</i>
+				  		      		<img src="../img/email.jpg">
+				  		      	</span>
+				  		      	<span class="del">
+				  		      		<i>x</i>
+				  		      		<img src="../img/email.jpg">
+				  		      	</span>
+				  		      	<span class="camera">
+				  		      		<img src="../img/camera.png">
+				  		      	</span>
+				  		      </div>
+				  		    </div>
+				  		  </div>
+				  		</div>
+				  	</div>
+				  	<div class="weui-cells sign-company-name">
+				  	  <div class="weui-cell">
+				  	    <div class="">
+				  	      <p>当前企业:</p>
+				  	    </div>
+				  	    <div class="weui-cell__ft">和沐~钉钉考勤</div>
+				  	  </div>
+				  	</div>
+				  </div>
+				  <div class="popup-btn-group">
+				  	<a href="javascript:;" class="weui-btn weui-btn_white_all close-popup ">返回</a>
+				  	<a href="javascript:;" class="weui-btn weui-btn_white_all weui-btn_primary">提交</a>
+				  	
 				  </div>
 				</div>
 			</div>
-			<!-- <div class="weui-cells__title">备注</div>
-			<div class="weui-cells weui-cells_form">
-			  <div class="weui-cell">
-			    <div class="weui-cell__bd">
-			      <textarea class="weui-textarea" placeholder="请输入备注信息" rows="3"></textarea>
-			      <div class="weui-textarea-counter"><span>0</span>/200</div>
-			    </div>
-			  </div>
-			</div> -->
-			<div class="punk-now">
-					<div class="punk-btn">
-						<a href="javascript:;" class="sign-in-btn open-popup" data-target="#sign-in-popup">
-							<div class="punk-in">签到</div>
-							<div class="punk-time-now">--:--:--</div>
-						</a>
-					</div>
-					<div class="punk-wifi-location">
-						 今日你还未签到
-					</div>
+			<div class="sign-history tab-pannel">
+				<iframe src="./sign-history-all.html" frameborder="0"></iframe>
 			</div>
 		</div>
-		
-		<div id="sign-in-popup" class="weui-popup__container">
-		  <div class="weui-popup__overlay"></div>
-		  <div class="weui-popup__modal">
-		  	<div class="sign-top-info">
-	  			<div class="weui-flex">
-	  			  <div class="left-desc"><span class="icon"><i class="fa fa-clock-o"></i></span>签到时间:</div>
-	  			  <div class="weui-flex__item"><span class="punk-time-now">14:06</span>
-	  		  	</div>
-	  			</div>
-	  			<div class="weui-flex">
-	  			  <div class="left-desc"><span class="icon"><i class="fa fa-map-marker"></i></span>签到地点:</div>
-	  			  <div class="weui-flex__item"><span class="location-text">北京市朝阳区双井街道百子湾路金隅·大成国际中心</span></div>
-	  			</div>
-		  	</div>
-		  	<div class="input-area">
-		  		<!-- <div class="weui-cells__title">文本域</div> -->
-		  		<div class="weui-cells weui-cells_form">
-		  		  <div class="weui-cell">
-		  		    <div class="weui-cell__bd">
-		  		      <textarea class="weui-textarea" placeholder="请输入文本" rows="6"></textarea>
-		  		      <div class="picture-upload">
-		  		      	<span class="del">
-		  		      		<i>x</i>
-		  		      		<img src="../img/email.jpg">
-		  		      	</span>
-		  		      	<span class="del">
-		  		      		<i>x</i>
-		  		      		<img src="../img/email.jpg">
-		  		      	</span>
-		  		      	<span class="del">
-		  		      		<i>x</i>
-		  		      		<img src="../img/email.jpg">
-		  		      	</span>
-		  		      	<span class="del">
-		  		      		<i>x</i>
-		  		      		<img src="../img/email.jpg">
-		  		      	</span>
-		  		      	<span class="del">
-		  		      		<i>x</i>
-		  		      		<img src="../img/email.jpg">
-		  		      	</span>
-		  		      	<span class="camera">
-		  		      		<img src="../img/camera.png">
-		  		      	</span>
-		  		      </div>
-		  		    </div>
-		  		  </div>
-		  		</div>
-		  	</div>
-		  	<div class="weui-cells sign-company-name">
-		  	  <div class="weui-cell">
-		  	    <div class="">
-		  	      <p>当前企业:</p>
-		  	    </div>
-		  	    <div class="weui-cell__ft">和沐~钉钉考勤</div>
-		  	  </div>
-		  	</div>
-		  </div>
-		  <div class="popup-btn-group">
-		  	<a href="javascript:;" class="weui-btn weui-btn_white_all close-popup ">返回</a>
-		  	<a href="javascript:;" class="weui-btn weui-btn_white_all weui-btn_primary">提交</a>
-		  	
-		  </div>
+		<div class="tab sign-tab">
+			<div class="flex">
+				<div class="flex-item tab-btn active">
+					<span>
+						<i class="fa fa-map-marker"></i>
+						签到
+					  </span>
+				</div>
+				<div class="flex-item tab-btn left-border">
+					<span>
+						<i class="fa fa-male"></i>
+						 足迹
+					</span>
+				</div>
+			</div>
 		</div>
 	</div>
 	<footer></footer>
@@ -130,7 +152,7 @@
 	<!-- <script src="https://staticcdn.yshjie.com/cdn/librarypath/jquery/jquery-2.1.4.min.js"></script> -->
 	<script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
 	<!-- statistics  -->
-	<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.0&key=775f9b46c2ae55ce5e239ead400c40da"></script>
+	<!-- <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.0&key=775f9b46c2ae55ce5e239ead400c40da"></script> -->
 	<script src="../js/plugin/jquery_WEUI/js/jquery-weui.min.js"></script>
 	<script type="text/javascript">
 		// 116.485 - 116.497
@@ -208,7 +230,9 @@
 				        }
 				        //解析定位错误信息
 				        function onError(data) {
-				        	$.toptip(' 定位失败，请开启定位权限或移动至开阔地带重新定位！', 9000,'error');
+				        	var text = ' 定位失败，请开启定位权限或移动至开阔地带重新定位！';
+				        	text = JSON.stringify(data.message);
+				        	$.toptip(text, 9000,'error');
 				        }
 
 				        // 经纬度 逆向城市描述
@@ -230,7 +254,7 @@
 
 		}
 		// 初始化地图
-		 signMap = new renderMapPunkaddr(punk_point,false)
+		 // signMap = new renderMapPunkaddr(punk_point,false)
 	    </script>
 	    <script>
 	    	// 更新时间
@@ -274,6 +298,18 @@
 	    	// 自定义位置
 	    	$('.changeLocation').on('click',function () {
 	    		signMap = new renderMapPunkaddr(punk_point,true)
+	    	})
+	    	$('.tab .tab-btn').on('click',function () {
+	    		var _this = $(this)
+	    			,active = 'active'
+	    			,pannel = $('.tab-pannel')
+	    			;
+	    		if(!_this.hasClass(active)){
+	    			$('.tab-btn.'+active).removeClass(active);
+	    			_this.addClass(active);
+	    		}
+	    		pannel.hide();
+	    		pannel.eq(_this.index()).show()
 	    	})
 	    </script>
 </body>

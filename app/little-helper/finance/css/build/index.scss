@@ -2,7 +2,7 @@
 $theme_color: #f36303;
 $title_color:#323232;
 $normal_color:#666;
-$default_pd:15px;
+$default_pd:10px;
 html{
 	height: 100%;width: 100%;
 	body{
@@ -63,26 +63,25 @@ html{
 								text-decoration: none;
 							}
 							.entrance-icon{
-								width: 45px;
-								height: 45px;
+								width: 44px;
+								height: 44px;
 								margin: 0 auto;
 								text-align: center;
 								position: relative;
 								.notice-circle{
 									display: inline-block;
 									position: absolute;
-									top: -10px;right: -10px;
-									min-width:16px;
-									height:16px;
+									top: -7px;right: -7px;
+									min-width:8px;
+									height:12px;
 									background-color: #f02;
 									z-index: 1;
 									color:#FFF;
 									font-size: 10px;
-									line-height: 16px;
-									border-radius:16px;
-									padding: 2px;
+									line-height: 12px;
+									border-radius:12px;
+									padding: 2px 4px;
 									box-sizing:content-box;
-
 								}
 								.entrance-bg{
 									height: 100%;
@@ -98,7 +97,7 @@ html{
 										position: relative;
 										font-size: 25px;
 										color:#fff;
-										line-height: 45px;
+										line-height: 44px;
 									}
 								}
 							}
@@ -161,6 +160,18 @@ html{
 									background-size: 100% 100%;
 									.entrance-text{
 										font-size: 18px;
+									}
+								}
+							}
+						}
+					}
+					&.action-approve{
+						.action-entrances{
+							.entrance{
+								.entrance-icon{
+									.notice-circle{
+										top:-5px;
+										right:  -2px;
 									}
 								}
 							}

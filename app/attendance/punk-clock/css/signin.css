@@ -190,9 +190,15 @@ summary {
   color: #3F3F3F; }
 
 .flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex; }
   .flex .flex-item {
-    flex: 1; }
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1; }
 
 .hide {
   display: none; }
@@ -275,6 +281,7 @@ html body {
     html body .container .punk-now {
       margin-top: 10px; }
       html body .container .punk-now .punk-btn {
+        background: -webkit-linear-gradient(270deg, #65c0fe 0, #3297fb 55%);
         background: linear-gradient(180deg, #65c0fe 0, #3297fb 55%);
         /* W3C */
         border-radius: 50%;
@@ -290,6 +297,12 @@ html body {
           color: white; }
         html body .container .punk-now .punk-btn .punk-time-now {
           color: #a6dbff; }
+        html body .container .punk-now .punk-btn.late-punk {
+          background: -webkit-linear-gradient(270deg, #e9c672 0, #ff953f 55%);
+          background: linear-gradient(180deg, #e9c672 0, #ff953f 55%);
+          /* W3C */ }
+          html body .container .punk-now .punk-btn.late-punk .punk-time-now {
+            color: #ffd28b; }
       html body .container .punk-now .punk-wifi-location {
         margin-top: 5px;
         text-align: center; }
@@ -305,3 +318,5 @@ html body {
     height: 50px;
     line-height: 50px;
     padding-left: 10px; }
+
+/*# sourceMappingURL=signin.css.map */
