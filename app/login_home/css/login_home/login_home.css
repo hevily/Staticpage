@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'login_home';
+  src:  url('fonts/login_home.eot?jw11i2');
+  src:  url('fonts/login_home.eot?jw11i2#iefix') format('embedded-opentype'),
+    url('fonts/login_home.ttf?jw11i2') format('truetype'),
+    url('fonts/login_home.woff?jw11i2') format('woff'),
+    url('fonts/login_home.svg?jw11i2#login_home') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.login_home {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'login_home' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.lg-sort:before {
+  content: "\e909";
+}
+.lg-clock:before {
+  content: "\e90c";
+}
+.lg-admin_backend:before {
+  content: "\e900";
+}
+.lg-contact:before {
+  content: "\e901";
+}
+.lg-elderly:before {
+  content: "\e902";
+}
+.lg-finance:before {
+  content: "\e903";
+}
+.lg-home:before {
+  content: "\e904";
+}
+.lg-msg:before {
+  content: "\e905";
+}
+.lg-renshi:before {
+  content: "\e906";
+}
+.lg-shop_admin:before {
+  content: "\e907";
+}
+.lg-shopping_admin:before {
+  content: "\e908";
+}
+.lg-task:before {
+  content: "\e90a";
+}
+.lg-usr_info:before {
+  content: "\e90b";
+}
