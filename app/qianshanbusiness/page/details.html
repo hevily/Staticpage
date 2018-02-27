@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../js/Swiper-3.4.2/dist/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/details.css" />
+	<title>标题随页面内容动态更新</title>
+</head>
+<body>
+	<header>
+		<!-- 加入收藏 -->
+		<div class="container">
+			<div class="header-tip">
+				<div style="float:left;line-height:31px;">
+			  		<a href="javascript:;" onclick="SetHome(this,document.domain)">设为首页</a>
+			  		|
+			  		<a href="javascript:;" onclick="AddFavorite('我的网站',location.href)">加入收藏</a>
+				</div>
+				<div class="pull-right">
+					2017年11月24日10:46:14
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- 站点 logo 站点导航 -->
+	<div class="main-head linear">
+		<!-- 网站 logo 搜索 -->
+		<div class="container site-logo">
+			<div class="media">
+				<div class="media-body">
+					<img src="../img/static/logo.png" alt="网站logo">
+				</div>
+				<div class="media-right media-middle">
+					<input type="search" name="search-site" autocomplete="true" placeholder="请输入搜索关键字">
+				</div>
+			</div>
+		</div>
+		<!-- 网站导航 -->
+		<div class="container nav">
+			<nav class="navbar navbar-default">
+			  <div class="container-fluid">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			    </div>
+
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav">
+			        <li><a href="javascript:;">首页</a></li>
+			        <li class="dropdown">
+			          <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">电子商务<span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="http://www.baidu.com">电子商务</a></li>
+			            <li><a href="http://www.baidu.com">政策法规</a></li>
+			            <li><a href="http://www.google.com">政策解读</a></li>
+			          </ul>
+			        </li>
+			        <li class="dropdown">
+			          <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">电商资讯<span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="javascript:;">最新资讯</a></li>
+			            <li><a href="javascript:;">行业动态</a></li>
+			            <li><a href="javascript:;">交流合作</a></li>
+			          </ul>
+			        </li>
+			        <li class="dropdown">
+			          <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">电商服务<span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="javascript:;">农村电商</a></li>
+			            <li><a href="javascript:;">电商物流</a></li>
+			            <li><a href="javascript:;">跨境电商</a></li>
+			            <li><a href="javascript:;">潜山特产馆</a></li>
+			          </ul>
+			        </li>
+			        <li class="dropdown">
+			          <a href="javascript:;" >电商扶贫</a>
+			        </li>
+			        <li class="dropdown">
+			          <a href="javascript:;" >电商物流</a>
+			        </li>
+			        <li class="dropdown">
+			          <a href="javascript:;" >电商学院</a>
+			        </li>
+			        <li class="dropdown">
+			          <a href="javascript:;" >协会之窗</a>
+			        </li>
+			        <li class="dropdown">
+			          <a href="javascript:;" >在线培训</a>
+			        </li>
+			        <li class="dropdown">
+			          <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">第三方服务<span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="javascript:;">人才基地</a></li>
+			          </ul>
+			        </li>
+			        <li class="dropdown">
+			          <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">企业展示<span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="javascript:;">名优企业名优产品</a></li>
+			          </ul>
+			        </li>
+			        <li class="dropdown">
+			          <a href="javascript:;" >产业园区</a>
+			        </li>
+			      </ul>
+			      
+			    </div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
+			</nav>
+		</div>
+	</div>
+	<!-- 站点主体 -->
+	<div class="container article-body">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+				<div class="article">
+					<div class="article-path">
+						<ol class="breadcrumb">
+						  <li>当前位置：</li>
+						  <li><a href="#">Home</a></li>
+						  <li><a href="#">Library</a></li>
+						  <li class="active">Data</li>
+						</ol>
+					</div>
+					<div class="article-detail">
+						<div class="article-title">中央一号文件力捧！2017年是推进农村电商发展的大好年头</div>
+						<div class="article-action">
+							发布日期：2017年11月25日
+						  	浏览量：37
+							字号：<span class="fontSizeControl">
+									<a href="javascript:;" class="small" >小</a>
+									<a href="javascript:;" class="middle" >中</a>
+									<a href="javascript:;" class="large" >大</a>
+								</span>
+						</div>
+						<div class="article-content small middle large">
+							<img src="../img/news/214041de0f44fd35cebdaf03158a486f.jpg">
+							<div class="video-here">
+								<video src="http://www.w3school.com.cn/i/movie.ogg" controls="controls">
+									您的浏览器不支持该播放方式，你可以试试这几个浏览器....
+									<a href="https://www.baidu.com/s?wd=%E6%B5%8F%E8%A7%88%E5%99%A8&rsv_spt=1&rsv_iqid=0x81419a650001c0fd&issp=1&f=8&rsv_bp=0&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_sug3=10&rsv_sug1=6&rsv_sug7=100&rsv_sug2=0&inputT=1500&rsv_sug4=2560"> 百度搜索浏览器</a>
+								</video>
+							</div>
+							<p>
+								2月5日发布的一号文件已经是中央第14年连续对三农工作提出指导意见。值得注意的是，和去年相比，2017年专门将推进农村电商发展列为一个单独要点，作为壮大新产业新生态，拓展农业产业链价值链的重要举措。
+							</p>
+							<p>
+								2月5日发布的一号文件已经是中央第14年连续对三农工作提出指导意见。值得注意的是，和去年相比，2017年专门将推进农村电商发展列为一个单独要点，作为壮大新产业新生态，拓展农业产业链价值链的重要举措。
+							</p>
+							<p>
+								2月5日发布的一号文件已经是中央第14年连续对三农工作提出指导意见。值得注意的是，和去年相比，2017年专门将推进农村电商发展列为一个单独要点，作为壮大新产业新生态，拓展农业产业链价值链的重要举措。
+							</p>
+							<p>
+								2月5日发布的一号文件已经是中央第14年连续对三农工作提出指导意见。值得注意的是，和去年相比，2017年专门将推进农村电商发展列为一个单独要点，作为壮大新产业新生态，拓展农业产业链价值链的重要举措。
+							</p>
+							<p>
+								2月5日发布的一号文件已经是中央第14年连续对三农工作提出指导意见。值得注意的是，和去年相比，2017年专门将推进农村电商发展列为一个单独要点，作为壮大新产业新生态，拓展农业产业链价值链的重要举措。
+							</p>
+							<p>
+							    2017政府工作报告中，总理李克强强调：电子商务改变了农村产业的生产、销售模式，拓宽了农民的合作渠道。农民不仅可以将产品通过线上卖给远在另一个城市的消费者，还可以通过网络联系其他生产商，互相合作，创新生产模式。快速发展的快递行业也为农村电商的发展提供了机遇，使城乡之间的商贸合作效率得到提升，进而使互动更加频繁，进一步促进城镇一体化发展。
+							</p>
+						</div>
+						<div class="article-change">
+							<div class="atricle-prev">
+								 <a href="#">上一篇：<span>暂无</span></a>
+							</div>
+							<div class="atricle-next">
+								 <a href="#">下一篇：<span>暂无</span></a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				
+			</div>
+			<div class="col-md-3 col-lg-3 hidden-xs hidden-sm ">
+				<div class="dom-pin">
+					<div class="recommend-module">
+					<div class="recommend-title">
+						新闻头条
+					</div>
+					<ul class="recommend-list">
+						<li>
+							<a href="#">
+								<div class="media">
+									<div class="media-left">
+										<i class="module-item-title fa fa-angle-right"></i>
+									</div>
+									<div class="media-body ">
+										<div class="one-ellipsis">
+											中新网6月1日电据财政部网站消息，财政部农业司今日发布消息称，近日，中央财政下拨2015年农林业科技成果转化与技术推广资金26亿元，用于支持基层农技推广体系改革与..
+										</div>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="media">
+									<div class="media-left">
+										<i class="module-item-title fa fa-angle-right"></i>
+									</div>
+									<div class="media-body ">
+										<div class="one-ellipsis">
+											中新网6月1日电据财政部网站消息，财政部农业司今日发布消息称，近日，中央财政下拨2015年农林业科技成果转化与技术推广资金26亿元，用于支持基层农技推广体系改革与..
+										</div>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="media">
+									<div class="media-left">
+										<i class="module-item-title fa fa-angle-right"></i>
+									</div>
+									<div class="media-body ">
+										<div class="one-ellipsis">
+											中新网6月1日电据财政部网站消息，财政部农业司今日发布消息称，近日，中央财政下拨2015年农林业科技成果转化与技术推广资金26亿元，用于支持基层农技推广体系改革与..
+										</div>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="media">
+									<div class="media-left">
+										<i class="module-item-title fa fa-angle-right"></i>
+									</div>
+									<div class="media-body ">
+										<div class="one-ellipsis">
+											中新网6月1日电据财政部网站消息，财政部农业司今日发布消息称，近日，中央财政下拨2015年农林业科技成果转化与技术推广资金26亿元，用于支持基层农技推广体系改革与..
+										</div>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="media">
+									<div class="media-left">
+										<i class="module-item-title fa fa-angle-right"></i>
+									</div>
+									<div class="media-body ">
+										<div class="one-ellipsis">
+											中新网6月1日电据财政部网站消息，财政部农业司今日发布消息称，近日，中央财政下拨2015年农林业科技成果转化与技术推广资金26亿元，用于支持基层农技推广体系改革与..
+										</div>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="media">
+									<div class="media-left">
+										<i class="module-item-title fa fa-angle-right"></i>
+									</div>
+									<div class="media-body ">
+										<div class="one-ellipsis">
+											中新网6月1日电据财政部网站消息，财政部农业司今日发布消息称，近日，中央财政下拨2015年农林业科技成果转化与技术推广资金26亿元，用于支持基层农技推广体系改革与..
+										</div>
+									</div>
+								</div>
+							</a>
+						</li>
+
+					</ul>
+				</div>
+				<div class="recommend-module video-news">
+					<div class="recommend-title ">
+						视频新闻
+					</div>
+					<ul class="recommend-list ">
+						<li>
+							<a href="#">
+								<img src="../img/news/214041de0f44fd35cebdaf03158a486f.jpg">
+								<p class="news-desc one-ellipsis">发展列为一个单独要点，作为壮大新产业新生态，拓展农业产业链价值链的重要举措。</p>
+								<i class="fa fa-play-circle-o video-tag"></i></a>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="../img/news/214041de0f44fd35cebdaf03158a486f.jpg">
+								<p class="news-desc one-ellipsis">发展列为一个单独要点，作为壮大新产业新生态，拓展农业产业链价值链的重要举措。</p>
+								<i class="fa fa-play-circle-o video-tag"></i></a>
+							</a>
+						</li>
+
+					</ul>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 底部信息 -->
+	<footer>
+		<div class="row">
+			<div class="flex">
+				<div class="flex-item">
+					<div class="site-inference">
+				        <img src="../img/static/platlogo.png" alt="电商潜山平台" class="site-icon pull-left">
+						<div class="pull-left weixinWrap">
+				        	<img src="../img/static/wxgzh.jpg" class="site-icon" alt="官方微信">
+				        	<a href="javascript:;">官方微信</a>
+				        </div>
+					</div>
+				</div>
+				<div class="flex-item serviceWrap">
+					<p>汇聚电商服务 助力电商发展</p><p>服务热线：<span>0556-8937666  8921159</span></p>
+				</div>
+			</div>
+		</div>
+		<p>
+		    <!--<a href="javascript:;">关于我们</a><span>|</span>-->
+		    皖ICP备17000363号 &nbsp;
+		    版权所有：潜山县电子商务公共服务中心<span>|</span><a target="_blank" href="/Member/Public/login.html">会员登录</a>
+		    <span>|</span><a target="_blank" href="/Admin/Index/index.html">后台入口</a>
+		</p>
+		<p>技术支持：潜山和沐电子商务有限公司</p>
+		<p>Copyright©2017-2018 All Rights Reserved</p>
+	</footer>
+	<!-- jQuery 2.1.4 -->
+	<script src="https://staticcdn.yshjie.com/cdn/librarypath/jquery/jquery-2.1.4.min.js"></script>
+	<!-- <script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script> -->
+	<script src="../css/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script src="../js/Swiper-3.4.2/dist/js/swiper.jquery.min.js"></script>
+	<script src="../js/BrowserType.js"></script>
+	<script src="../js/jQuery.pin.js"></script>
+	<script src="../js/basic.js"></script>
+	<!-- statistics  -->
+	<script>
+		$(function () {
+			$('.dom-pin').pin()
+		})
+
+	</script>
+</body>
+</html>

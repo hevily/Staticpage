@@ -1,0 +1,221 @@
+@import "../../../../Public/static-base/static-base.scss";
+$theme_color: #f36303;
+$title_color:#323232;
+$normal_color:#666;
+$default_pd:10px;
+html{
+	height: 100%;width: 100%;
+	body{
+		height: 100%;width: 100%;
+		background-color: #efeff4;
+		line-height: 1.1;
+		@include mobile-container();
+		.section{
+			background-color: #FFF;
+			&.borrowed-money{
+				color: $title_color;
+				font-size: 16px;
+				padding-bottom: 10px;
+				@include border('bottom','',1px,#cfcfcf);
+
+				padding: 14px $default_pd;
+				span{
+					font-size: 20px;
+					color:#292929;
+				}
+				a{
+					float: right;
+					position: relative;
+					// top: 5px;
+					background-color: $theme_color;
+					text-decoration: none;
+					color:#fff;
+					height: 25px;
+					width: 65px;
+					border-radius: 3px;
+					font-size: 12px;
+					line-height: 25px;
+					text-align:center;
+				}
+			}
+			&.finance-entrance{
+				margin-top: $default_pd;
+				border-top:1px solid #cfcfcf;
+				border-bottom:1px solid #cfcfcf;
+				border-top:0.5px solid #cfcfcf;
+				border-bottom:0.5px solid #cfcfcf;
+				.action-box{
+					padding-top: 15px;
+					.action-title{
+						font-size: 16px;
+						color:$title_color;
+						line-height: 18px;
+						padding-left: $default_pd;
+					}
+					.action-entrances{
+						font-size: 0;
+						padding-top: 15px;
+						.entrance{
+							width: 25%;
+							display: inline-block;
+							text-align: center;
+							a{
+								text-decoration: none;
+							}
+							.entrance-icon{
+								width: 44px;
+								height: 44px;
+								margin: 0 auto;
+								text-align: center;
+								position: relative;
+								.notice-circle{
+									display: inline-block;
+									position: absolute;
+									top: -7px;right: -7px;
+									min-width:8px;
+									height:12px;
+									background-color: #f02;
+									z-index: 1;
+									color:#FFF;
+									font-size: 10px;
+									line-height: 12px;
+									border-radius:12px;
+									padding: 2px 4px;
+									box-sizing:content-box;
+								}
+								.entrance-bg{
+									height: 100%;
+									width: 100%;
+									position: relative;
+									overflow: hidden;
+									border-radius:50%;
+									background-color: #f8f8f8;
+									box-sizing:border-box;
+									.entrance-text{
+										height: 100%;
+										width: 100%;
+										position: relative;
+										font-size: 25px;
+										color:#fff;
+										line-height: 44px;
+									}
+								}
+							}
+							.entrance-name{
+								color: $normal_color;
+								margin-top: 10px;
+								margin-bottom: 15px;
+								font-size: 13px;
+							}
+
+							&.addbill{
+								.entrance-bg{
+									border-radius:50%;
+									@include border(' ',dashed,2px,#dddede);
+									.entrance-text{
+										color: #d4d5d6;
+										line-height: 39px;
+									}
+								}
+							}
+							&.wait-approve{
+								.entrance-bg{
+									background-color: #ff8d3a;
+								}
+							}
+							&.accountant{
+								.entrance-bg{
+									background-color: #26cc78;
+								}
+							}
+							&.casher{
+								.entrance-bg{
+									background-color: #ffb832;
+								}
+							}
+							&.my-apply{
+								.entrance-bg{
+									background-color: #fe7b7b;
+								}
+							}
+							&.all-apply{
+								.entrance-bg{
+									background-color: #07aff5;
+								}
+							}
+							&.bill-report{
+								.entrance-bg{
+									background-color: #f7b55e;
+								}
+							}
+							&.all-bill-list{
+								.entrance-bg{
+									background-color: #07aff5;
+								}
+							}
+							&.setting{
+								.entrance-bg{
+									background: none;
+									background-image: url("../img/setting.png");
+									background-size: 100% 100%;
+									.entrance-text{
+										font-size: 18px;
+									}
+								}
+							}
+						}
+					}
+					&.action-approve{
+						.action-entrances{
+							.entrance{
+								.entrance-icon{
+									.notice-circle{
+										top:-5px;
+										right:  -2px;
+									}
+								}
+							}
+						}
+					}
+					&.action-eye{
+						.action-entrances .entrance .entrance-icon .entrance-bg{
+							border-radius:4px;
+						}
+					}
+				}
+				.entrance-gap{
+					padding-left: $default_pd;
+					width: 100%;
+					height: 1px;
+					position: relative;
+					&::before{
+						content:'';
+						display: block;
+						position: absolute;
+						left: 10px;
+						top: 0;
+						width: 100%;
+						@include border(top,solid,1px,#e5e5e5);
+					}
+					// span{
+					// 	display: block;
+					// 	height: 1px;
+					// 	height: 0.5px;
+					// 	width: 100%;
+					// 	background-color: #e5e5e5;
+					// }
+				}
+
+			}
+		}
+		.jiekuan{
+			color: #fb6851;
+		}
+		.fukuan{
+			color: #ff8b00;
+		}
+		.baoxiao{
+			color: #2eb3e8;
+		}
+	}
+}

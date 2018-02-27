@@ -1,0 +1,134 @@
+@import "./header-footer.css";
+@import "./font-awesome-4.7.0/css/font-awesome.min.css";
+html{
+	body{
+		.article-body{
+			margin-top: 20px;
+		}
+		// 资讯内容主体样式
+		.article{
+			display: block;
+			.article-path{
+				.breadcrumb{
+					border-radius:0;
+					padding: 10px 0;
+					font-size: 16px;
+					background-color: #FFF;
+					border-bottom:1px dashed green;
+					a{
+						color:green;
+
+					}
+				}
+			}
+			.article-detail{
+				.article-title{
+					font-size: 24px;
+					margin-bottom: 10px;
+				}
+				.article-action{
+					text-align:center;
+					.fontSizeControl{
+						a{
+							display: inline-block;
+							margin-left: 5px;
+						}
+						.small{
+							font-size: 16px;
+						}
+						.middle{
+							font-size: 18px;
+						}
+						.large{
+							font-size: 22px;
+						}
+					}
+				}
+				.article-content{
+					text-align: justify;
+
+					&.small{
+						font-size: 16px;
+					}
+					&.middle{
+						font-size: 18px;
+					}
+					&.large{
+						font-size: 22px;
+					}
+					p{
+						text-indent: 2em;
+					}
+					img{
+						max-width: 100%;
+						display: block;
+						margin:5px auto;
+					}
+					video{
+						display: block;
+						margin: 0 auto;
+						max-width:100%;
+					}
+				}
+				.article-change{
+					padding: 15px 0;
+					line-height: 30px;
+					a{
+						color:green;
+					}
+				}
+			}
+		}
+
+		// 内容右侧推荐内容
+		.bgdark{
+		}
+		.recommend-module{
+			background-color: #dddddd;
+			margin: 0 -15px;
+			padding: 0 15px;
+			border-top:1px solid #b2b2b2;
+			.recommend-title{
+				font-size: 20px;
+				line-height: 50px;
+				color:green;
+			}
+			.recommend-list{
+				list-style:none;
+				padding: 0;
+				li{
+					line-height: 40px;
+					position: relative;
+
+					a{
+						color:#333;
+						img{
+							max-width: 100%;
+							display: block;
+						}
+						i.video-tag{
+							position: absolute;
+							z-index:1;
+							top: 50%;left: 50%;
+							transform:translate(-50%,-50%);
+							color:#FFF;
+							font-size: 40px;
+
+						}
+						.one-ellipsis{
+							line-height: 40px;
+							height: 40px;
+						}
+					}
+				}
+			}
+			&.video-news{
+				padding-bottom: 10px;
+				.news-desc{
+
+				}
+			}
+		}
+
+	}
+}

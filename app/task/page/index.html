@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/login_home/login_home.css" rel="stylesheet">
+    <!-- Toastr style -->
+    <link href="../css/plugins/toastr/toastr.min.css" rel="stylesheet">
+    <!-- Gritter -->
+    <link href="../js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <title>{{Storganiser}} Login index</title>
+    <style>
+        .login-info p{color:#999c9e;margin: 0 -15px;background-color: #ededed;min-height: 60px;box-shadow:2px 2px 2px rgba(0,0,0,0.1);line-height: 60px;text-align: right;padding-right: 20px;}
+        .login-info img{width: 30px;height: 30px;border-radius: 50%;margin-left: 30px;margin-right: 10px;}
+        .topic-info .col-lg-3{width: 20%;float: left;}
+        .topic-info .login_home{font-size: 40px;line-height: 60px;}
+        .sort-box{color: #1ab394;padding-left: 5%;user-select: none;}
+        .sort-box .widget {background-color: #fff;}
+        .sort-box.sorting .widget {background-color: #16987e;}
+        .sort-box.sorting { color:#fff; }
+        .company .col-md-8{padding-left: 0;}
+        .company .dl-horizontal {font-size: 22px;}
+        .company .dl-horizontal dt{ float: left;overflow: hidden;clear: left;text-align: right;text-overflow: ellipsis;white-space: nowrap;width: 90px;text-align: justify;}
+        .company .dl-horizontal dd{margin-left: 90px; color: #808080;font-size: 20px;}
+        .company .dl-horizontal dd.addr{height:60px;overflow: hidden;}
+        .company-bg {background-color: #1c84c6; color: #fff;}
+        #sortable{list-style: none;padding: 0; font-size: 0;margin: 0 -10px;}
+        #sortable li{ position: relative; display:inline-block;width: calc(50% - 20px);margin: 0 10px;font-size: 14px;}
+        @media screen and (max-width:1000px){
+            #sortable{margin: 0;}
+            #sortable li{width:100%; margin: 0;}
+        }
+        @media screen and (min-width:320px){
+            .topic-info .col-lg-3{width: 100%;}
+            .sort-box{padding-left: 15px;}
+        }
+        @media screen and (min-width:768px){
+            .topic-info .col-lg-3{width: 50%;}
+            .navbar-static-side{z-index: auto;}
+        }
+        @media screen and (min-width:992px){
+            .topic-info .col-lg-3{width: 20%;}
+            .sort-box{padding-left: 5%;}
+        }
+
+        .ibox{}
+        .ibox .ibox-title{color: #16987e;font-size: 30px;padding-left: 20px;}
+        .ibox .ibox-content{padding: 0;border: none;}
+        .ibox .ibox-content .contact-box{padding: 5px;border: none;margin-bottom: 0;}
+        .ibox .ibox-content .entrance-notice {margin: 0;}
+        .ibox .ibox-content .entrance-notice p{width: 100px;position: relative;margin: 20px auto 40px;font-size: 20px;}
+        .ibox .ibox-content .entrance-notice p img{width: 42px;}
+        .ibox .ibox-content .entrance-notice p .label{position: absolute;top: -15px;left: 30px;}
+        .flex{ display: flex; }
+        .flex-item{flex: 1;}
+        .sort-box .flex-item{text-align: right;line-height: 60px;font-size: 20px;white-space: nowrap;overflow: hidden;}
+        .ui-sortable .ibox-title{cursor: default;}
+        .ui-sortable.sorting .ibox-title{cursor: move;}
+        .ui-sortable.sorting .ibox-title .sort-sign{display: block;}
+        .sort-sign{display: none; box-sizing: content-box;padding: 6px 0;border: 2px solid #cfcfcf;border-left: none;
+            border-right: none;height: 2px;background-color: #cfcfcf;width: 20px;background-clip:content-box;
+            position: absolute;right: 20px;top: 20px;
+        }
+    </style>
+</head>
+<body class="">
+    <div id="wrapper">
+        <!-- nav -->
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <li class="active">
+                        <a href="#"><i class="login_home lg-home"></i> <span class="nav-label">首页</span> </a>
+                    <li>
+                        <a href="#"><i class="login_home lg-msg"></i> <span class="nav-label">消息</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="login_home lg-task"></i> <span class="nav-label">任務</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="login_home lg-contact"></i> <span class="nav-label">聯繫人</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="login_home lg-usr_info"></i> <span class="nav-label">我</span></a>
+                    </li>
+                    <li class="landing_link">
+                        <a href="#"><i class="login_home lg-elderly"></i> <span class="nav-label">養老院</span></a>
+                    </li>
+                    <li class="special_link">
+                        <a href="#"><i class="login_home lg-shop_admin"></i> <span class="nav-label">店鋪後台</span></a>
+                    </li>
+                    <li class="landing_link">
+                        <a href="#"><i class="login_home lg-shopping_admin"></i> <span class="nav-label">APP电商总後台</span></a>
+                    </li>
+                    <li class="special_link">
+                        <a href="#"><i class="login_home lg-admin_backend"></i> <span class="nav-label">Scopesysadmin後台</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- nav end -->
+
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+             <!-- header -->
+            <div class="login-info fixed">
+                <p>
+                    <span>登录次数：共12次</span>|
+                    <span>登录时间：2018/01/26 11:08:25</span>
+                    <img src="../img/a1.jpg" alt="usr-logo">
+                    <span>张星星，下午好</span>
+                </p>
+            </div>
+            <!-- header end -->
+
+            <!-- body -->
+            <div class="wrapper wrapper-content animated fadeInRight">
+                <div class="row topic-info">
+                    <div class="col-lg-3">
+                        <div class="widget style1 navy-bg">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <i class="login_home lg-msg"></i>
+                                </div>
+                                <div class="col-xs-8 text-right">
+                                    <span>未读消息</span>
+                                    <h2 class="font-bold">12</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="widget style1 lazur-bg">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <i class="login_home lg-task"></i>
+                                </div>
+                                <div class="col-xs-8 text-right">
+                                    <span>未完成任务</span>
+                                    <h2 class="font-bold">16</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="widget style1 yellow-bg">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <i class="login_home lg-clock"></i>
+                                </div>
+                                <div class="col-xs-8 text-right">
+                                    <span>待处理事项</span>
+                                    <h2 class="font-bold">18</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="widget style1 company-bg">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <i class="login_home lg-contact"></i>
+                                </div>
+                                <div class="col-xs-8 text-right">
+                                    <span>企業目錄</span>
+                                    <h2 class="font-bold">18</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 sort-box">
+                        <div class="widget style1 ">
+                            <!-- <div class="row"> -->
+                                <!-- <div class="col-xs-4"> -->
+                                    <div class="flex">
+                                        <div>
+                                            <i class="login_home lg-sort"></i>
+                                        </div>
+                                        <div class="flex-item">
+                                            <span class="font-bold">排序</span>
+                                        </div>
+                                    </div>
+                                <!-- </div> -->
+                                <!-- <div class="col-xs-8 text-right"> -->
+                                <!-- </div> -->
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                </div>
+                <ul class=" company  ui-sortable" id="sortable">
+                    <li class="">
+                        <div class="ibox" style="opacity: 1;">
+                            <div class="ibox-title">
+                                <p class="name">
+                                     和沐传媒
+                                </p>
+                                <span class="sort-sign"></span>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="contact-box">
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        <div class="text-center">
+                                            <img alt="image" class="img-circle m-t-xs img-responsive" src="../img/a3.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                                        <dl class="dl-horizontal">
+                                            <dt><span>负责人：</span></dt> <dd>Alex Smith</dd>
+                                            <dt><span>地&nbsp;&nbsp;&nbsp;&nbsp;址：</dt> <dd class="addr" title="九龍紅磡必嘉街92-112號地下">九龍紅磡必嘉街92-112號地下</dd>
+                                            <dt><span>电&nbsp;&nbsp;&nbsp;&nbsp;话：</dt> <dd>23926188</dd>
+                                            <dt><span>传&nbsp;&nbsp;&nbsp;&nbsp;真：</dt> <dd>23926188</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="row entrance-notice">
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        <p>
+                                            <img src="../img/login/elderly.png" alt="">
+                                            <span>養老</span>
+                                            <span class="label label-danger pull-right">2</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        <p>
+                                            <img src="../img/login/renshi.png" alt="">
+                                            <span>人事</span>
+                                            <span class="label label-danger pull-right">18</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        <p>
+                                            <img src="../img/login/finance.png" alt="">
+                                            <span>财务</span>
+                                            <span class="label label-danger pull-right">9</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="">
+                        <div class="ibox" style="opacity: 1;">
+                            <div class="ibox-title">
+                                <p class="name">
+                                     和沐传媒
+                                </p>
+                                <span class="sort-sign"></span>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="contact-box">
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        <div class="text-center">
+                                            <img alt="image" class="img-circle m-t-xs img-responsive" src="../img/a3.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                                        <dl class="dl-horizontal">
+                                            <dt><span>负责人：</span></dt> <dd>Alex Smith</dd>
+                                            <dt><span>地&nbsp;&nbsp;&nbsp;&nbsp;址：</dt> <dd class="addr" title="九龍紅磡必嘉街92-112號地下">九龍紅磡必嘉街92-112號地下</dd>
+                                            <dt><span>电&nbsp;&nbsp;&nbsp;&nbsp;话：</dt> <dd>23926188</dd>
+                                            <dt><span>传&nbsp;&nbsp;&nbsp;&nbsp;真：</dt> <dd>23926188</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="row entrance-notice">
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        <p>
+                                            <img src="../img/login/elderly.png" alt="">
+                                            <span>養老</span>
+                                            <span class="label label-danger pull-right">2</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        <p>
+                                            <img src="../img/login/renshi.png" alt="">
+                                            <span>人事</span>
+                                            <span class="label label-danger pull-right">18</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        <p>
+                                            <img src="../img/login/finance.png" alt="">
+                                            <span>财务</span>
+                                            <span class="label label-danger pull-right">9</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="">
+                        <div class="ibox" style="opacity: 1;">
+                            <div class="ibox-title">
+                                <p class="name">
+                                     和沐传媒
+                                </p>
+                                <span class="sort-sign"></span>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="contact-box">
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        <div class="text-center">
+                                            <img alt="image" class="img-circle m-t-xs img-responsive" src="../img/a3.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                                        <dl class="dl-horizontal">
+                                            <dt><span>负责人：</span></dt> <dd>Alex Smith</dd>
+                                            <dt><span>地&nbsp;&nbsp;&nbsp;&nbsp;址：</dt> <dd class="addr" title="九龍紅磡必嘉街92-112號地下">九龍紅磡必嘉街92-112號地下</dd>
+                                            <dt><span>电&nbsp;&nbsp;&nbsp;&nbsp;话：</dt> <dd>23926188</dd>
+                                            <dt><span>传&nbsp;&nbsp;&nbsp;&nbsp;真：</dt> <dd>23926188</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="row entrance-notice">
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        <p>
+                                            <img src="../img/login/elderly.png" alt="">
+                                            <span>養老</span>
+                                            <span class="label label-danger pull-right">2</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        <p>
+                                            <img src="../img/login/renshi.png" alt="">
+                                            <span>人事</span>
+                                            <span class="label label-danger pull-right">18</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        <p>
+                                            <img src="../img/login/finance.png" alt="">
+                                            <span>财务</span>
+                                            <span class="label label-danger pull-right">9</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="">
+                        <div class="ibox" style="opacity: 1;">
+                            <div class="ibox-title">
+                                <p class="name">
+                                     和沐传媒
+                                </p>
+                                <span class="sort-sign"></span>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="contact-box">
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        <div class="text-center">
+                                            <img alt="image" class="img-circle m-t-xs img-responsive" src="../img/a3.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                                        <dl class="dl-horizontal">
+                                            <dt><span>负责人：</span></dt> <dd>Alex Smith</dd>
+                                            <dt><span>地&nbsp;&nbsp;&nbsp;&nbsp;址：</dt> <dd class="addr" title="九龍紅磡必嘉街92-112號地下">九龍紅磡必嘉街92-112號地下</dd>
+                                            <dt><span>电&nbsp;&nbsp;&nbsp;&nbsp;话：</dt> <dd>23926188</dd>
+                                            <dt><span>传&nbsp;&nbsp;&nbsp;&nbsp;真：</dt> <dd>23926188</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="row entrance-notice">
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        <p>
+                                            <img src="../img/login/elderly.png" alt="">
+                                            <span>養老</span>
+                                            <span class="label label-danger pull-right">2</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        <p>
+                                            <img src="../img/login/renshi.png" alt="">
+                                            <span>人事</span>
+                                            <span class="label label-danger pull-right">18</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        <p>
+                                            <img src="../img/login/finance.png" alt="">
+                                            <span>财务</span>
+                                            <span class="label label-danger pull-right">9</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="">
+                        <div class="ibox" style="opacity: 1;">
+                            <div class="ibox-title">
+                                <p class="name">
+                                     和沐传媒
+                                </p>
+                                <span class="sort-sign"></span>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="contact-box">
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        <div class="text-center">
+                                            <img alt="image" class="img-circle m-t-xs img-responsive" src="../img/a3.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                                        <dl class="dl-horizontal">
+                                            <dt><span>负责人：</span></dt> <dd>Alex Smith</dd>
+                                            <dt><span>地&nbsp;&nbsp;&nbsp;&nbsp;址：</dt> <dd class="addr" title="九龍紅磡必嘉街92-112號地下">九龍紅磡必嘉街92-112號地下</dd>
+                                            <dt><span>电&nbsp;&nbsp;&nbsp;&nbsp;话：</dt> <dd>23926188</dd>
+                                            <dt><span>传&nbsp;&nbsp;&nbsp;&nbsp;真：</dt> <dd>23926188</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="row entrance-notice">
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        <p>
+                                            <img src="../img/login/elderly.png" alt="">
+                                            <span>養老</span>
+                                            <span class="label label-danger pull-right">2</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        <p>
+                                            <img src="../img/login/renshi.png" alt="">
+                                            <span>人事</span>
+                                            <span class="label label-danger pull-right">18</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        <p>
+                                            <img src="../img/login/finance.png" alt="">
+                                            <span>财务</span>
+                                            <span class="label label-danger pull-right">9</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- body end -->
+        </div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="../js/jquery-2.1.1.js"></script>
+
+    <script src="../js/plugins/Sortable-master/Sortable.min.js"></script>
+    <script>
+        $(function () {
+            var sortel = document.getElementById('sortable');
+            console.log(sort);
+            var sort = Sortable.create(sortel, {
+              animation: 150,
+              handle: ".ibox-title",
+              disabled:true,
+              onUpdate: function (evt){
+                 var item = evt.item;
+              }
+            });
+            // 编辑切换
+            $('.sort-box').on('click',function () {
+                var _this = $(this)
+                    ,CN = 'sorting'
+                _this.toggleClass(CN);
+                $(sortel).toggleClass(CN);
+                if(_this.hasClass(CN)){
+                    _this.find('span').text('完成');
+                    sort.options.disabled = false;
+                }else{
+                    sort.options.disabled = true;
+                    _this.find('span').text('排序');
+                }
+            })
+        })
+    </script>
+</body>
+</html>

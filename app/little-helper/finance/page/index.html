@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../js/plugin/jquery_WEUI/lib/weui.min.css">
+    <link rel="stylesheet" type="text/css" href="../js/plugin/jquery_WEUI/css/jquery-weui.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/finance.css" />
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+	<title>财务</title>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<div class="section borrowed-money">
+			借款金额 <span>223456789.00</span>
+			<a href="javascript:;" class="back-borrowed-money">我要还款</a>
+		</div>
+		<div class="section finance-entrance">
+			<div class="action-box action-approve">
+				<div class="action-title">
+					 操作
+				</div>
+				<div class="action-entrances">
+					<div class="entrance addbill">
+						<a href="javascript:;">
+							<div class="entrance-icon">
+								<div class="notice-circle">
+									9
+								</div>
+								<div class="entrance-bg">
+									<div class="entrance-text">
+										+
+									</div>
+								</div>
+							</div>
+							<div class="entrance-name">
+								 新增
+							</div>
+						</a>
+					</div>
+					<div class="entrance wait-approve">
+						<a href="javascript:;">
+							<div class="entrance-icon">
+								<div class="notice-circle">
+									9
+								</div>
+								<div class="entrance-bg">
+									<div class="entrance-text">
+										待
+									</div>
+								</div>
+							</div>
+							<div class="entrance-name">
+								 待我审批
+							</div>
+						</a>
+					</div>
+					<div class="entrance accountant">
+						<a href="javascript:;">
+							<div class="entrance-icon">
+								<div class="entrance-bg">
+									<div class="entrance-text">
+										会
+									</div>
+								</div>
+							</div>
+							<div class="entrance-name">
+								 会计
+							</div>
+						</a>
+					</div>
+					<div class="entrance casher">
+						<a href="javascript:;">
+							<div class="entrance-icon">
+								<div class="entrance-bg">
+									<div class="entrance-text">
+										出
+									</div>
+								</div>
+							</div>
+							<div class="entrance-name">
+								 出纳
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="entrance-gap"><span></span></div>
+			<div class="action-box action-eye">
+				<div class="action-title">
+					 查看
+				</div>
+				<div class="action-entrances">
+					<div class="entrance my-apply">
+						<a href="javascript:;">
+							<div class="entrance-icon">
+								<div class="notice-circle">
+									99
+								</div>
+								<div class="entrance-bg">
+									<div class="entrance-text">
+										申
+									</div>
+								</div>
+							</div>
+							<div class="entrance-name">
+								 我的申请
+							</div>
+						</a>
+					</div>
+					<div class="entrance all-apply">
+						<a href="javascript:;">
+							<div class="entrance-icon">
+								<div class="notice-circle">
+									9
+								</div>
+								<div class="entrance-bg">
+									<div class="entrance-text">
+										审
+									</div>
+								</div>
+							</div>
+							<div class="entrance-name">
+								 所有审批
+							</div>
+						</a>
+					</div>
+					<div class="entrance bill-report">
+						<a href="javascript:;">
+							<div class="entrance-icon">
+								<div class="entrance-bg">
+									<div class="entrance-text">
+										表
+									</div>
+								</div>
+							</div>
+							<div class="entrance-name">
+								 财务报表
+							</div>
+						</a>
+					</div>
+					<div class="entrance all-bill-list">
+						<a href="javascript:;">
+							<div class="entrance-icon">
+								<div class="entrance-bg">
+									<div class="entrance-text">
+										单
+									</div>
+								</div>
+							</div>
+							<div class="entrance-name">
+								 所有单据
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="entrance-gap"><span></span></div>
+			<div class="action-box">
+				<div class="action-title">
+					 设置
+				</div>
+				<div class="action-entrances">
+					<div class="entrance setting">
+						<a href="javascript:;">
+							<div class="entrance-icon">
+								<div class="entrance-bg">
+									<div class="entrance-text">
+										设
+									</div>
+								</div>
+							</div>
+							<div class="entrance-name">
+								 设置
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer></footer>
+	<!-- jQuery 2.1.4 -->
+	<!-- <script src="https://staticcdn.yshjie.com/cdn/librarypath/jquery/jquery-2.1.4.min.js"></script> -->
+	<script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+	<!-- statistics  -->
+	<!-- <script src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/js/storecommon.js"></script> -->
+	<!-- <script type="text/javascript" src="/statichtml/bjmovie01/estores/Home/JSLang?v=1.1"></script> -->
+	<!-- <script type="text/javascript" src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/home/js/checkWeChat.js?ver=1.95&r={:rand(0, 9999)}"></script> -->
+	<script src="../js/plugin/jquery_WEUI/js/jquery-weui.min.js"></script>
+	<script>
+		$(function (argument) {
+			// 新增单据
+			$('.addbill').on('click',function () {
+				$.actions({
+					title:"新建单据",
+				  actions: [{
+				    text: "借款",
+				    className: " jiekuan",
+				    onClick: function() {
+				      //do something
+				    }
+				  },{
+				    text: "付款",
+				    className: " fukuan",
+				    onClick: function() {
+				      //do something
+				    }
+				  },{
+				    text: "报销",
+				    className: " baoxiao",
+				    onClick: function() {
+				      //do something
+				    }
+				  }]
+				});
+			})
+			// 查看单据
+			$('.my-apply').on('click',function () {
+				$.actions({
+					title:"查看单据",
+				  actions: [{
+				    text: "借款",
+				    className: " jiekuan",
+				    onClick: function() {
+				      //do something
+				    }
+				  },{
+				    text: "付款",
+				    className: " fukuan",
+				    onClick: function() {
+				      //do something
+				    }
+				  },{
+				    text: "报销",
+				    className: " baoxiao",
+				    onClick: function() {
+				      //do something
+				    }
+				  }]
+				});
+			})
+		})
+	</script>
+</body>
+</html>

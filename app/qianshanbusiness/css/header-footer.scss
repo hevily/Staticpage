@@ -1,0 +1,239 @@
+@import "./bootstrap-3.3.7-dist/css/bootstrap.min.scss";
+@import "../../Public/static-base/static-base.scss";
+// header
+	header{
+		background-color: #dee0dd;
+		.header-tip{
+			.pull-right{
+				position: relative;
+				top: 4px;
+			}
+		}
+	}
+	.main-head{
+		.site-logo{
+			img{
+				max-width:100%;
+			}
+		}
+		.navbar-default{
+			background-color: transparent;
+			border:none;
+		}
+
+	}
+	// 导航修正
+	.dropdown-menu{
+		min-width: auto;
+		& > li > a{
+					// padding: 0;
+				}
+	}
+	.news{
+		.topic-news{
+			padding-right: 10px;
+			a{
+				display: inline-block;
+				margin: 0;
+				line-height: 90px;
+				font-size: 32px;
+				color:green;
+				@include text-ellipsis(1);
+			}
+		}
+		// 新闻头条 产业园区轮播
+		.news-swiper{
+			img{
+				max-width:100%;
+			}
+		}
+		.news-list{
+			padding: 0;
+			list-style:none;
+			.news-item{
+				position: relative;
+				margin: 40px 0;
+				.news-item-title{
+					color:#000;
+					font-size: 18px;
+					height: 20px;
+					line-height: 20px;
+					overflow: hidden;
+
+				}
+				.news-item-desc{
+					color:#333;
+					height: 60px;
+					line-height: 30px;
+					overflow: hidden;
+					text-indent: 30px;
+				}
+				&::after{
+					content:"";
+					display: block;
+					width: 100%;
+					position: absolute;
+					z-index:1;
+					width: 100%;
+					@include border(bottom,dashed,1px,green);
+				}
+			}
+			
+		}
+	}
+	// 模板
+	.module{
+		margin: 20px 0;
+		.module-title{
+			margin-bottom: 10px;
+			.title-name{
+				font-size: 20px;
+				display: inline-block;
+				padding: 5px 10px;
+				@include border('','',1px,#ccc);
+
+			}
+			.title-more{
+				color:green;
+				font-size: 18px;
+				border:1px solid green;
+				width: 20px;height: 20px;
+				border-radius:50%;
+				text-align: center;
+				line-height: 18px;
+				position: relative;
+				top: 10px;
+
+			}
+		}
+		.module-content{
+			.module-kernel{
+				.media-left{
+					.media-object{
+						width: 200px;
+					}
+				}
+				.kernel{
+					.kernel-title{
+						font-size: 18px;
+						color:green;
+						@include text-ellipsis(2);
+					}
+					.kernel-desc{
+						margin-top: 10px;
+						@include text-ellipsis(3);
+						color:#000;
+					}
+				}
+				
+
+			}
+			.module-list{
+				padding: 0;
+				list-style:none;
+				.module-list-item{
+					height: 30px;
+					line-height: 30px;
+					a{
+						color:#000;
+					}
+					.one-ellipsis{
+						@include text-ellipsis(1);
+					}
+					.module-time{
+						white-space: nowrap;
+					}
+				}
+
+			}
+		}
+
+
+	}
+	// flex 布局
+	.flex{
+		display: flex;
+		.flex-item{
+			flex:1;
+		}
+	}
+
+// footer
+// 页脚
+footer{
+	background-color: #cfcfcf;
+	padding: 20px 10px;
+	.row{
+		margin: 0;
+	}
+	text-align: center;
+	div[class ^="col"]{
+		padding: 5px;
+	}
+	.flex{
+		.flex-item{
+			&:first-child{
+				text-align: right;
+			}
+			&:last-child{
+				text-align: left;
+			}
+		}
+	}
+	.site-inference{
+		display: inline-block;
+		width: 200px;
+		text-align: center;
+		.site-icon{
+			width: 90px;
+			margin-left: 5px;
+		}
+	}
+	.serviceWrap{
+		margin-top: 20px;
+	}
+	.weixinWrap{
+		a{
+			display: block;
+		}
+	}
+	.right-desc{
+		text-align: left;
+	}
+}
+
+.linear{
+	background: linear-gradient(180deg, #ffffff 0, #DDDDDD 80%);/* W3C */
+}
+.one-ellipsis{
+    // width: 100px;
+    // height: 20px;
+    // line-height: 20px;
+    // border:solid 1px black;
+    position: relative;         // ...这里添加relative
+    /*多行文本省略*/
+    overflow : hidden;
+    text-overflow: ellipsis;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+
+    display: -moz-box;
+    -moz-line-clamp: 1!important;
+    -moz-box-orient: vertical;
+}
+// 后面自动补上点
+.one-ellipsis:after {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #f7f7f7 50%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    bottom: 0;
+    content: "...";
+    padding: 0 5px 1px 30px;
+    position: absolute;
+    right: 0;
+}
+// 移除 chrome 下的省略号
+.noafter::after{
+	content:'';
+	display: none;
+}

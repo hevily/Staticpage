@@ -1,0 +1,111 @@
+@import "../../../Public/static-base/static-base.scss";
+@import "./font-awesome-4.7.0/css/font-awesome.min.css";
+@import "./color";
+html{
+	body{
+		color:$t_b_c;
+		.container{
+			@include mobile-container();
+			.media{
+				@include border(bottom,solid,1px,#ededee);
+			}
+			.punk-usr {
+				.weui-panel{
+					&::before,&::after{
+						display: none;
+					}
+					.left-icon{
+						border-radius:50%;
+						width: 35px;height: 35px;
+						vertical-align: middle;
+					}
+				}
+			}
+			.choose_picker{
+				line-height: 40px;
+				color:$t_blue_c;
+				padding-right: 10px;
+				.chooser{
+					width: 90px;
+					text-align:right;
+				}
+			}
+			.punk-now{
+				padding: 0 10px;
+				.notice{
+					margin: 20px 0;
+
+				}
+			}
+			// 打卡完成信息
+			.punk-action{
+				margin: 15px 0;
+				&.special-reason{
+					.notice-logo{
+						color: $orange;
+					}
+				}
+				.notice-logo{
+						font-size: 10px;
+				}
+				.unnormal{
+					color:$orange;
+					@include border('','',1px,$orange);
+					border-radius: 3px;
+					margin-left: 5px;
+					text-align: center;
+					padding: 2px 4px;
+				}
+				.action-title{
+					margin: 4px 0;
+				}
+				.action-detail{
+					padding-left: 15px;
+					.punk-time{
+						margin-bottom: 5px;
+					}
+				}
+			}
+			// 打卡按钮
+			.punk-now{
+				margin-top: 10px;
+				.punk-btn{
+					background: linear-gradient(180deg, #65c0fe 0, #3297fb 55%);/* W3C */
+					border-radius:50%;
+					width: 120px;height: 120px;
+					margin: 0 auto;
+					overflow: hidden;
+					display: table;
+					text-align: center;
+					.punk-in,.punk-out{
+						margin-top: 45px;
+						font-size: 18px;
+						color:white;
+					}
+					.punk-time-now{
+						color:#a6dbff;
+					}
+				}
+				.punk-wifi-location{
+					margin-top: 5px;
+					text-align: center;
+					i{
+						color: #63C1FE;
+					}
+				}
+			}
+
+			.none-appearance{
+				-webkit-appearance: none;
+			}
+		}
+		// usr-weui-media-box for punk-clock
+			a.weui-media-box{
+				padding: 0;
+			}
+			.weui-media-box_appmsg .weui-media-box__hd{
+				height: auto;
+				width: 50px;height: 50px;line-height: 50px;padding-left: 10px;
+			}
+	}
+}

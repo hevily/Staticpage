@@ -1,0 +1,289 @@
+@import "./font-awesome-4.7.0/css/font-awesome.min.css";
+@import "../../../Public/static-base/static-base.scss";
+@import "./_color";
+$darkblue : #3297fb;
+html{
+	height: 100%;
+	width: 100%;
+	// background-color: #f0eff5;
+	body{
+		height: 100%;
+		width: 100%;
+		.container{
+			height: 100%;
+			width: 100%;
+			@include mobile-container();
+			.tab-pannels{
+				height: 100%;
+				.tab-pannel{
+					height: 100%;
+					&:nth-child(2){
+						display: none;
+					}
+				}
+			}
+			.sign-box{
+				#sign-tiper{
+					background-color: #FFF;
+					font-size: 12px;
+					padding: 5px 10px;
+					color: $t_b_c ;
+					i.fa{
+						margin-right: 3px;
+					}
+					.sign-company{
+						margin-left: 10px;
+					}
+				}
+				.location-show{
+					background-color: #FFF;
+					@include border(top,solid,1px,#cfcfcf);
+					.location-text{
+						padding: 10px;
+					}
+					a{
+						display: inline-block;
+						width: 80px;
+						text-align: center;
+						height: 100%;
+						vertical-align: middle;
+						position: relative;
+						top: calc(50% - 13px);
+					}
+				}
+				#maphere{
+					display: none;
+					height: 200px;
+				}
+				.location-info{
+					padding: 10px;
+					font-size: 12px;
+					.my-location{
+						.location-add{
+							color: $darkblue;
+							font-size: 18px;
+						}
+						.blue{
+							color:blue;
+						}
+
+						.location-status{
+							background-color: $darkblue;
+							display: inline-block;
+							padding: 4px 8px;
+							border-radius:20px;
+							color:#FFF;
+							font-size: 12px;
+						}
+						.location-details-info{
+							line-height: 30px;
+							font-size: 14px;
+							color:#666;
+						}
+					}
+					.location-punk-now{
+						text-align: center;
+						margin:0 10px;
+						background-color: $darkblue;
+						line-height: 40px;
+						color:#fff;
+						font-size: 16px;
+						border-radius: 8px;
+						margin-top: 20px;
+					}
+				}
+				#container{
+					.sign-notice{
+						background-color: #FFF;
+						padding-left: 10px;
+						line-height: 45px;
+						@include border(top,solid,1px,#cfcfcf);
+						.sign-notice-input{
+							margin-left: 10px;
+							width: calc(100% - 20px);
+							height: 40px;
+							-webkit-tap-highlight-color: none;
+							outline: none;
+							-webkit-appearance:none;
+							border:none;
+						}
+					}
+					// 打卡按钮
+					.punk-now{
+						margin-top: 10px;
+						.punk-btn{
+							background: linear-gradient(180deg, #f7b55e 0, #f7b55e 55%);/* W3C */
+							border-radius:50%;
+							width: 120px;height: 120px;
+							margin: 0 auto;
+							overflow: hidden;
+							display: table;
+							text-align: center;
+							.punk-in,.punk-out{
+								margin-top: 45px;
+								font-size: 18px;
+								color: #fce1bd;
+							}
+							.punk-time-now{
+								color:#fff;
+							}
+						}
+						.punk-wifi-location{
+							margin-top: 5px;
+							text-align: center;
+							i{
+								color: #63C1FE;
+							}
+						}
+					}
+				}
+			}
+			.sign-history{
+				// display: none;
+				height: 100%;
+				margin-bottom: 50px;
+				iframe{
+					width: 100%;height: 100%;
+					border: none;
+
+				}
+			}
+			.tab{
+				position: fixed;
+				bottom: 0;
+				left: 0;right: 0;
+				height: 50px;
+				background-color: #FFF;
+				.flex-item{
+					text-align: center;
+					border-top:1px solid #cfcfcf;
+					line-height: 49px;
+					color:#a6a6a6;
+					&.left-border{
+						border-left:0.5px solid #cfcfcf;
+						border-left:1px solid #cfcfcf;
+					}
+					&.active{
+						color: #38adff;
+					}
+				}
+				&.sign-tab{
+					box-shadow: 0px -1px 20px rgba(0, 0, 0, 0.31);
+				}
+			}
+		}
+		.weui-toptips{
+			// z-index:1000;
+			// position: fixed;top: 0;left: 0;right: 0;
+		}
+		.weui-popup__container{
+			z-index: 10000;
+			.weui-popup__modal{
+				background-color: #f0eff5;
+			}
+			.sign-top-info{
+				padding: 10px;
+				background-color: #FFF;
+				.left-desc{
+					width: 100px;
+					color:#858e98;
+					span.icon{
+						display: inline-block;
+						width: 20px;
+						text-align:center;
+					}
+				}
+				@include border(bottom,solid,1px,#cfcfcf);
+				margin-bottom: 10px;
+			}
+			.input-area{
+				margin-bottom: 10px;
+				border-top:1px solid #cfcfcf;
+				border-bottom:1px solid #cfcfcf;
+				border-top:0.5px solid #cfcfcf;
+				border-bottom:0.5px solid #cfcfcf;
+				.picture-upload{
+					font-size: 0;
+
+					span{
+						display: inline-block;
+						box-sizing:border-box;
+						margin:2.5%;
+						width: 69px;
+						height: 69px;
+						// overflow: hidden;
+						border:1px dashed #cfcfcf;
+						border-radius:5px;
+						margin-bottom: 10px;
+						position: relative;
+						font-size: 0;
+						&.del i{
+							display: block;
+							position: absolute;
+							right: -13px;top: -10px;
+							font-size: 12px;
+							font-weight: 400;
+							color:#fff;
+							background: #f02;
+							width: 14px;
+							height: 14px;
+							margin: 5px;
+							border-radius: 10px;
+							text-align: center;
+							line-height: 14px;
+						}
+						img{
+							width: 100%;
+							display: block;
+							border-radius: 5px;
+						}
+						&.camera{
+							padding: 16px;
+							img{
+								width: 35px;
+								height: 35px;
+							}
+						}
+					}
+					.fa{
+						font-size: 36px;
+						margin: 16px;
+					}
+				}
+			}
+			.sign-company-name{
+				margin-bottom: 90px;
+				p{
+					color:#858e98;
+				}
+				.weui-cell__ft{
+
+				color:#000;
+				text-align: left;
+				}
+			}
+			.popup-btn-group{
+				position: fixed;
+				bottom: 0;left: 0;right: 0;
+				background-color: #FFF;
+				z-index: 900;
+				.weui-btn{
+					width: 50%;
+					float: left;
+					&+.weui-btn{
+						margin-top: 0;
+					}
+				}
+				.weui-btn_white_all{
+					@include border(top,solid,1px,#cfcfcf);
+					border-radius: 0;
+					color:#000;
+					&::after{
+						display: none;
+					}
+				}
+			}
+			
+		}
+	}
+}
