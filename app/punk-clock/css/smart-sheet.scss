@@ -1,0 +1,154 @@
+@import "../../Public/static-base/static-base.scss";
+@import './font-awesome-4.7.0/css/font-awesome.min.css';
+$manHeight:140px;
+$cicleWidth:5px;
+html {
+    body {
+        background-color: #f5f5f5;
+        .category-logo {
+            width: 10px;
+        }
+        header {
+            position: relative;
+            top: 0;right: 0;bottom: 0;left: 0;
+            height: 39px;
+            background-color: #fff;
+            z-index:10;
+            .time-show-select {
+                text-align: center;
+                padding: 10px;
+                background-color: #3bb1f0;
+                color: #fff;
+                font-size: 12px;
+            }
+            .time-select {
+            	display: none;
+                position: absolute;
+                top: 39px;
+                left: 0;
+                right: 0;
+                padding: 10px;
+                z-index: 10;
+                background-color: #fff;
+                p {}
+                ul {
+                    font-size: 0;
+                    li {
+                        box-sizing: border-box;
+                        width: 25%;
+                        margin: 5px 4.1%;
+                        display: inline-block;
+                        font-size: 14px;
+                        text-align: center;
+                        line-height: 28px;
+                        background-color: #f7f7f7;
+                        border-radius: 3px;
+                        &.active {
+                            background-color: #fff;
+                            border: 1px solid #3bb1f0;
+                            color: #000;
+                        }
+                    }
+                }
+                
+            }
+        }
+        .select-bg{
+        	display: none;
+        	background-color: rgba(59, 177, 240, 0.51);
+        	position: fixed;
+        	top: 0;right: 0;bottom: 0;left: 0;
+        	z-index:1;
+        }
+        .payment {
+            .weui-cells {
+                margin-top: 0;
+            }
+            .weui-flex {
+                padding: 10px 0px 0 10px;
+            }
+            .weui-flex__item {
+                line-height: 60px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+            .payment-tips {
+                margin-top: 0;
+                font-size: 18px;
+                &::before {
+                    display: none;
+                }
+                .payment-money {
+                    text-align: center;
+                    color: #cfcfcf;
+                }
+            }
+            .compare {
+                margin: 0;
+                font-size: 14px;
+                &::before,
+                &::after {
+                    display: none;
+                }
+                .align-right {
+                    text-align: right;
+                }
+                .compare-sign {
+                    color: #00ccff;
+                }
+            }
+        }
+        .add-staff {
+            .new-member {
+                font-size: 18px;
+                color: #000;
+                margin-right: 20px;
+            }
+        }
+        .section-punk {
+            min-height: 180px;
+            background-color: #fff;
+            border-bottom: 1px solid #e5e5e5;
+            @include cicle-clips(100px, 3px, #00ccff);
+            .cicle-clips {
+                left: 40px;
+                top: 20px;
+            }
+            .num {
+                padding-top: 22px;
+                line-height: 30px;
+                .percent {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+                .all {
+                    font-size: 14px;
+                    color: #333;
+                    line-height: 14px;
+                }
+            }
+            a:active{
+            	color: #3bb1f0;
+            }
+            .punk-tips {
+                max-width: 190px;
+                text-align: center;
+                margin-top: 16px;
+            }
+            p {
+                &.weight {
+                    width: 40px;
+                    font-weight: bold;
+                    font-size: 16px;
+                    margin-top: 5px;
+                }
+                &.normal {
+                    width: 40px;
+                    font-size: 12px;
+                    color: #333;
+                }
+            }
+        }
+    }
+}

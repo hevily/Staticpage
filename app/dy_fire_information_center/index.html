@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dy-fire-information-center</title>
+	<style type="text/css">
+		html,body{ margin: 0;padding: 0;text-align: center; }
+		*{ margin: 0;padding: 0; }
+		.topic-banner{ position: relative;width: 1080px;margin: 0 auto; }
+		.topic-banner .banner{  }
+		.topic-banner .banner img{ width: 1080px;display: block; }
+		/*文字*/
+		.topic-banner .banner-txt{
+			position: absolute;
+			left: 0;bottom: 0;right: 0;
+			padding: 20px 433px 20px 40px;
+			color: #f02;
+			font-size: 24px;
+			text-align: left;
+
+		}
+		.topic-banner .banner-txt p{ 
+			position: relative;
+			/*display: inline-block;*/
+
+		}
+		.topic-banner .banner-txt
+		 span,.topic-banner .banner-txt p span{ 
+			position: relative;
+		}
+		/*动态更替图片*/
+		.topic-banner .banner-img{
+			position: absolute;
+			top: 0;right: 0;bottom: 0;
+		}
+		.topic-banner .banner-img img{ height: 200px;width: 433px; }
+	</style>
+</head>
+<body>
+	<div class="topic-banner">
+		<div class="banner">
+			<img src="./img/main.png">
+			<div class="banner-txt" id="banner_txt">
+				<p id="scroll_txt">
+					<span class="scroll-txt" id="scroll_txt_1">纪律严明</span>
+					<span class="scroll-txt" id="scroll_txt_2">执法公正</span>
+					<span class="scroll-txt" id="scroll_txt_3">服务人民</span>
+					<span class="scroll-txt" id="scroll_txt_4">对党忠诚</span>
+				</p>
+			</div>
+			<div class="banner-img">
+				<img src="./img/8.png">
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.bootcss.com/jquery/1.8.0/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript">
+		window.onload = function () {
+			setInterval(function () {
+				direction = 'left',speed = 2
+				scrollTxt('scroll_txt_1',speed,direction)
+				// scrollTxt('scroll_txt_2',speed,direction)
+				// scrollTxt('scroll_txt_3',speed,direction)
+				// scrollTxt('scroll_txt_4',speed,direction)
+			},50)
+			function scrollTxt(id,spped,direction) {
+				var txt = $('#'+id)
+					position = txt.position()
+					oldLeft = position.left
+					parentWidth = 500
+				direction === undefined ? direction = 'left' : ''
+				if (direction === undefined ) {
+					direction = 'left'
+				}
+				if(direction === 'right'){
+					speed = speed * -1
+				}
+				if(oldLeft >= parentWidth) {
+					oldLeft = parentWidth - txt.width();
+					txt.css('right',0)
+				}else{
+					txt.css('left',oldLeft + speed)
+
+				}
+				console.log(oldLeft,speed)
+
+			}
+
+		}
+	</script>
+</body>
+</html>

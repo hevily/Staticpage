@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>判断跳转</title>
+	<script src="./isMobile.js"></script>
+</head>
+<body>
+	<h3>不同设备跳转不同目标连接</h3>
+	<ol>
+		<li> 电脑端跳转至腾讯</li>
+		<li> 手机端跳转至百度</li>
+	</ol>
+	<button id="jumper">点击试一试</button>
+	<script>
+		window.onload = function () {
+
+			var btn = document.getElementById('jumper')
+			btn.onclick = function () {
+				var bd = 'https://www.baidu.com',
+					tencent = 'http://www.qq.com'
+				anotherJumper(bd,tencent)
+			}
+			/* anotherJumper
+			*	传入移动端地址 PC 端地址
+			*	跳转逻辑方法内控制
+			*	外部进行调用 传参
+			*/
+			function anotherJumper(mobileHref,pcHref) {
+				if(isMobile()){
+					window.location.href = mobileHref
+				}else{
+					window.location.href = pcHref
+				}
+			}
+		}
+	</script>
+</body>
+</html>

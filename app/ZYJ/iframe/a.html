@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>珍爱良缘婚恋服务中心</title>
+<link type="text/css" rel="stylesheet" href="css/hunlian.css">
+<style>
+  body{ background-color: #65cbe2; }
+    iframe{border: none;z-index: 1;}
+    
+</style>
+<script src="https://cdn.bootcss.com/jquery/3.2.0/jquery.min.js"></script>
+</head>
+<body>
+	<div onclick="clicks()" >弹出框</div>
+	<!-- <div class="bg" style="background: rgba(0,0,0,0.1); width: 100%; height: 100%; position:fixed; top: 0px; z-index:666666;  display: none;" id="ceng"></div> -->
+	<iframe src="b.html"  style="display: none; position: absolute; z-index: 999999; background:#ffffff; width: 100%; height: 600px;" id="tan">
+	</iframe>
+
+	
+<script type="text/javascript">
+    function createShadow(obj) {
+        var style  = 'position:fixed;width:100%;height:100%;top:0;left:0;background-color:red;z-index:0;',
+            shadow = '<div style="'+style+'"></div>'
+        $(obj).append(shadow)
+    }
+    function clicks(){
+      // var bb=document.getElementById("ceng");
+      var aa=document.getElementById("tan");
+      aa.style.display="block";
+      // bb.style.display="block";
+      var par = $(window.parent.document).find('body'),
+          current= $('body')
+
+
+      createShadow(par)
+      createShadow(current)
+      console.log(par)
+    }
+    
+  </script>
+</body>

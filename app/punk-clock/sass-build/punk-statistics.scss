@@ -1,0 +1,32 @@
+@import "../../Public/static-base/static-base.scss";
+@import './font-awesome-4.7.0/css/font-awesome.min.css';
+$themeColor:#3296fa;
+html{
+	body{
+		.weui-navbar{
+			background-color: #fff;
+			.weui-navbar__item{
+				color: #333;
+				padding: 8px 0;
+				&::before,&::after{
+					display: none;
+				}
+				&.weui-bar__item--on{
+					background-color: #fff;
+					position: relative;
+					color:$themeColor;
+					&::before{
+						content:'';
+						display: block;
+						position: absolute;
+						left: 0;
+						bottom: 0;
+						width: 100%;
+						height: 2px;
+						background-color: $themeColor;
+					}
+				}
+			}
+		}
+	}
+}

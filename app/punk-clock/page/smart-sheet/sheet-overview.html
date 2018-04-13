@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../../js/plugin/jquery_WEUI/lib/weui.min.css">
+    <link rel="stylesheet" href="../../js/plugin/jquery_WEUI/css/jquery-weui.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/smart-sheet.css" />
+    <title>智能报表</title>
+</head>
+
+<body>
+    <header class="opening">
+        <div class="weui-flex">
+            <div class="weui-flex__item time-show-select">今天（2018-04-13）<span><i class="fa fa-angle-down"></i></span></div>
+        </div>
+        <div class="time-select">
+            <p>日期</p>
+            <ul>
+                <li class="active">今日</li>
+                <li>昨日</li>
+                <li>本周</li>
+                <li>上周</li>
+                <li>本月</li>
+                <li>上月</li>
+            </ul>
+        </div>
+    </header>
+    <div class="select-bg"></div>
+    <div class="container">
+        <!-- 报销 -->
+        <div class="section payment">
+            <div class="weui-cells">
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><img src="../../img/qiandao.jpg" class="category-logo"></div>
+                    <div class="weui-cell__bd">
+                        <p>报销</p>
+                    </div>
+                </div>
+            </div>
+            <div class="weui-cells payment-tips">
+                <div class="weui-flex">
+                    <div class="weui-flex__item">总报销金额</div>
+                    <div class="weui-flex__item payment-money">暂无数据</div>
+                    <div class="weui-flex__item ">
+                        <div class="weui-cells compare">
+                            <a class="weui-cell weui-cell_access align-right" href="javascript:;">
+                                <div class="weui-cell__bd">
+                                    <p>比前一日</p>
+                                    <p class="compare-sign">--</p>
+                                </div>
+                                <div class="weui-cell__ft">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 新增人员 -->
+        <div class="section add-staff">
+            <div class="weui-cells">
+                <div class="weui-cell weui-cell_access">
+                    <div class="weui-cell__hd"><img src="../../img/qiandao.jpg" class="category-logo"></div>
+                    <div class="weui-cell__bd">
+                        <p>
+                            新增人员
+                        </p>
+                    </div>
+                    <div class="weui-cell__ft"><span class="new-member">9</span></div>
+                </div>
+            </div>
+        </div>
+        <!-- 人员出勤 -->
+        <div class="section-punk">
+            <div class="weui-cells">
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><img src="../../img/qiandao.jpg" class="category-logo"></div>
+                    <div class="weui-cell__bd">
+                        <p>人员出勤</p>
+                    </div>
+                </div>
+            </div>
+        	<a href="punk-statistics.html">
+            	<div class="weui-flex">
+            		<div class="weui-flex__item">
+            		    <div class="cicle-clips">
+            		        <div class="clip">
+            		            <div class="left"></div>
+            		            <div class="right width-none"></div>
+            		        </div>
+            		        <div class="num">
+            		            <div class="percent"></div>
+            		            <div class="all">出勤人数</div>
+            		        </div>
+            		    </div>
+            		</div>
+            		<div class="weui-flex__item punk-tips">
+            		    <div class="weui-flex">
+            		        <div class="weui-flex__item">
+            		            <p class="weight">1</p>
+            		            <p class="normal">迟到</p>
+            		        </div>
+            		        <div class="weui-flex__item">
+            		            <p class="weight">1</p>
+            		            <p class="normal"> 早退</p>
+            		        </div>
+            		    </div>
+            		    <div class="weui-flex">
+            		        <div class="weui-flex__item">
+            		            <p class="weight">0</p>
+            		            <p class="normal">旷工</p>
+            		        </div>
+            		        <div class="weui-flex__item">
+            		            <p class="weight">1</p>
+            		            <p class="normal">缺卡</p>
+            		        </div>
+            		    </div>
+            		</div>
+            	</div>
+        	</a>
+        </div>
+        <div class="section">
+        </div>
+    </div>
+    <div class="header-mask stop_touch"></div>
+    <footer></footer>
+    <!-- jQuery 2.1.4 -->
+    <!-- <script src="https://staticcdn.yshjie.com/cdn/librarypath/jquery/jquery-2.1.4.min.js"></script> -->
+    <script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+    <script src="../../js/plugin/jquery_WEUI/js/jquery-weui.min.js"></script>
+    <!-- 如果使用了某些拓展插件还需要额外的JS -->
+    <script src="../../js/plugin/jquery_WEUI/lib/fastclick.js"></script>
+    <script src="../../js/plugin/jquery_WEUI/js/city-picker.min.js"></script>
+    <!-- statistics  -->
+    <script src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/js/storecommon.js"></script>
+    <script type="text/javascript" src="/statichtml/bjmovie01/estores/Home/JSLang?v=1.1"></script>
+    <!-- usr -->
+    <script>
+    $(function() {
+        // 阻止遮罩默认动作
+        $('.stop_touch').on('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        })
+        // 选择时间标签
+        function changeTime(box) {
+            var box = $(box).find('ul li'),
+                CN = 'active';
+            box.on('click', function() {
+                box.removeClass(CN);
+                $(this).addClass(CN);
+                $('.select-bg').hide();
+                $('.time-select').hide();
+            })
+        }
+        // 打开时间选择标签
+        $('.time-show-select').on('click', function() {
+            $('.select-bg').toggle();
+            $('.time-select').toggle();
+            changeTime('.time-select');
+        })
+        // 点击遮罩关闭时间选择
+        $('.select-bg').on('click', function() {
+            $('.select-bg').hide();
+            $('.time-select').hide();
+        })
+        /**
+         * [cicleClips 整体百分比占比 圆圈显示]
+         * @param  {[type]} current [实际数量]
+         * @param  {[type]} all     [总体数量]
+         * @return {[type]}         [ int]
+         */
+        function cicleClips(current, all) {
+            let clip = document.querySelector('.cicle-clips .clip'),
+                left = document.querySelector('.left'),
+                right = document.querySelector('.right'),
+                per = document.querySelector('.percent'),
+                rotate = 0,
+                percent = current / all * 100;
+            per.innerHTML = current + '/' + all;
+            let loop = setInterval(() => {
+                if (rotate >= 100) {
+                    rotate = 0;
+                    right.classList.add('width-none');
+                    clip.classList.remove('auto');
+                } else if (rotate > 50) {
+                    right.classList.remove('width-none');
+                    clip.classList.add('auto');
+                }
+                if (rotate >= percent) clearInterval(loop);
+                rotate++;
+                left.style.transform = 'rotate(' + 3.6 * rotate + 'deg)';
+                // per.innerHTML = `${rotate}%`
+            }, 25)
+        }
+        var clips = new cicleClips(4, 6)
+    })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+// 圆形 css
+// 饼图 组件 圆形
+// 传入外围总大小 边框大小即可
+			// ------------+-------------
+			// ----------+----+----------
+			// --------+--------+--------
+			// ------+------------+------
+			// -----+--------------+-----
+			// ----+-----------------+---
+			// ---+------------------+---
+			// ----+-----------------+---
+			// -----+---------------+----
+			// -------+-----------+------
+			// ----------+-----+---------
+			// -------------+------------
+
+@mixin cicle-clips($manWidth:200px,$cicleWidth:10px,$color:lightblue) {
+	.cicle-clips{
+	    width: $manWidth;
+	    height: $manWidth;
+	    position: relative;
+	    background-color: #ccc;
+	    border-radius: 50%;
+	    left:50px;
+	    top: 50px;
+	    box-sizing:border-box;
+	    .clip{
+	    	box-sizing:border-box;
+	        width: $manWidth;
+	        height: $manWidth;
+	        position: absolute;
+	        border: $cicleWidth solid #ccc;
+	        border-radius: 50%;
+	        clip: rect(0, $manWidth, $manWidth, $manWidth/2);
+	        .left{
+	        	box-sizing:border-box;
+	            width: $manWidth;
+	            height: $manWidth;
+	            position: absolute;
+	            border: $cicleWidth solid $color;
+	            border-radius: 50%;
+	            clip: rect(0 $manWidth/2 $manWidth 0);
+	            top: -$cicleWidth;
+	            left: -$cicleWidth;
+	        }
+	        .right{
+	        	box-sizing:border-box;
+	            width: $manWidth;
+	            height: $manWidth;
+	            position: absolute;
+	            border: $cicleWidth solid $color;
+	            border-radius: 50%;
+	            clip: rect(0 $manWidth $manWidth $manWidth/2);
+	            top: -$cicleWidth;
+	            left: -$cicleWidth;
+	        }
+	        .width-none{
+	            width: 0;
+	        }
+	        &.auto{
+	            clip: auto;
+	        }
+	    }
+	    .num{
+		    position: absolute;
+		    box-sizing:border-box;
+		    top: 50%;
+		    left: 50%;
+		    background: #fff;
+		    border-radius: 50%;
+		    width: $manWidth - $cicleWidth*2;
+		    height: $manWidth - $cicleWidth*2;
+		    transform: translate(-50%, -50%);
+		    text-align: center;
+		    // line-height: $manWidth - $cicleWidth*2;
+		    font-size: 24px;
+		}
+	}
+}
+
+
+
+
