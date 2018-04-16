@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -9,50 +10,185 @@
     <link rel="stylesheet" type="text/css" href="../../css/punk-statistics.css" />
     <title>统计</title>
 </head>
+
 <body>
-	<div class="container">
-		<div class="weui-tab">
-		  <div class="weui-navbar">
-		    <a class="weui-navbar__item weui-bar__item--on" href="#tab1">
+    <div class="container">
+        <div class="weui-tab">
+            <div class="weui-navbar">
+                <a class="weui-navbar__item weui-bar__item--on" href="#tab1">
 		      日统计
 		    </a>
-		    <a class="weui-navbar__item" href="#tab2">
+                <a class="weui-navbar__item " href="#tab2">
 		      月统计
 		    </a>
-		    <a class="weui-navbar__item" href="#tab2">
+                <a class="weui-navbar__item" href="#tab3">
 		      我的
 		    </a>
-		  </div>
-		  <div class="weui-tab__bd">
-		    <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
-		      <h1>页面一</h1>
-		    </div>
-		    <div id="tab2" class="weui-tab__bd-item">
-		      <h1>页面二</h1>
-		    </div>
-		  </div>
-		</div>
+            </div>
+            <div class="weui-tab__bd">
+                <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+                    <div class="time-select">
+                        <input type="text" class="search-date" value=""><i class="fa fa-angle-down"></i>
+                    </div>
+                    <div class="cicle-clips">
+                        <div class="clip">
+                            <div class="left"></div>
+                            <div class="right width-none"></div>
+                        </div>
+                        <div class="num">
+                            <div class="align-middle">
+                                <div class="all">打卡人数/应到人数</div>
+                                <div class="percent"></div>
+                                <div class="all"><a href="punk-detail-day.html">打卡明细<i class="fa fa-angle-right" style="margin-left: 5px;"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weui-flex punk-statistics">
+                        <div class="weui-flex__item">
+                            <p>3</p>
+                            <span>未打卡</span>
+                        </div>
+                        <div class="weui-flex__item">
+                            <p>3</p>
+                            <span>迟到</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab2" class="weui-tab__bd-item ">
+                    <div class="weui-panel punked-list-month">
+                        <div class="weui-panel__bd">
+                            <div class="weui-media-box weui-media-box_small-appmsg">
+                                <div class="weui-cells">
+                                    <a class="weui-cell weui-cell_access" href="punk-detail-month.html">
+                                        <!-- <div class="weui-cell__hd"><img src="../../img/daka.jpg"></div> -->
+                                        <div class="weui-cell__bd weui-cell_primary">
+                                            <div class="weui-flex">
+                                                <div class="weui-flex__item">
+                                                    <p>迟到</p>
+                                                </div>
+                                                <div class="placeholder punk-status">
+                                                    <div class="table ">
+                                                        <div class="align-middle">
+                                                            2人
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="weui-cell__ft"></span>
+                                    </a>
+                                    <a class="weui-cell weui-cell_access" href="javascript:;">
+                                        <!-- <div class="weui-cell__hd"><img src="../../img/daka.jpg"></div> -->
+                                        <div class="weui-cell__bd weui-cell_primary">
+                                            <div class="weui-flex">
+                                                <div class="weui-flex__item">
+                                                    <p>早退</p>
+                                                </div>
+                                                <div class="placeholder punk-status">
+                                                    <div class="table ">
+                                                        <div class="align-middle">
+                                                            0人
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="weui-cell__ft"></span>
+                                    </a>
+                                    <a class="weui-cell weui-cell_access" href="javascript:;">
+                                        <!-- <div class="weui-cell__hd"><img src="../../img/daka.jpg"></div> -->
+                                        <div class="weui-cell__bd weui-cell_primary">
+                                            <div class="weui-flex">
+                                                <div class="weui-flex__item">
+                                                    <p>缺卡</p>
+                                                </div>
+                                                <div class="placeholder punk-status">
+                                                    <div class="table ">
+                                                        <div class="align-middle">
+                                                            3人
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="weui-cell__ft"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab3" class="weui-tab__bd-item ">
+                    暂未统计，敬请期待....
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery 2.1.4 -->
+    <!-- <script src="https://staticcdn.yshjie.com/cdn/librarypath/jquery/jquery-2.1.4.min.js"></script> -->
+    <script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+    <script src="../../js/plugin/jquery_WEUI/js/jquery-weui.min.js"></script>
+    <!-- 如果使用了某些拓展插件还需要额外的JS -->
+    <script src="../../js/plugin/jquery_WEUI/lib/fastclick.js"></script>
+    <script src="../../js/plugin/jquery_WEUI/js/city-picker.min.js"></script>
+    <!-- statics  -->
+    <script src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/js/storecommon.js"></script>
+    <script type="text/javascript" src="/statichtml/bjmovie01/estores/Home/JSLang?v=1.1"></script>
+    <!-- usr -->
+    <script>
+    $(function() {
+        function getCurrentDate(split) {
+            let date = new Date(),
+                Y = date.getFullYear(),
+                M = addZero(date.getMonth() + 1),
+                D = addZero(date.getDate());
+            split === undefined ?
+                split = '-' :
+                ''
 
-		<div class="section statistics-tab">
-			<div class="weui-flex">
-			    <div class="weui-flex__item">日统计</div>
-			    <div class="weui-flex__item payment-money">月统计</div>
-			</div>
-		</div>
-		<div class="section statistics-pannel">
-			
-		</div>
-	</div>
-	<!-- jQuery 2.1.4 -->
-	<!-- <script src="https://staticcdn.yshjie.com/cdn/librarypath/jquery/jquery-2.1.4.min.js"></script> -->
-	<script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
-	<script src="../../js/plugin/jquery_WEUI/js/jquery-weui.min.js"></script>
-	<!-- 如果使用了某些拓展插件还需要额外的JS -->
-	<script src="../../js/plugin/jquery_WEUI/lib/fastclick.js"></script>
-	<script src="../../js/plugin/jquery_WEUI/js/city-picker.min.js"></script>
-	<!-- statistics  -->
-	<script src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/js/storecommon.js"></script>
-	<script type="text/javascript" src="/statichtml/bjmovie01/estores/Home/JSLang?v=1.1"></script>
-	<!-- usr -->
+            function addZero(num) {
+                num > 10 ?
+                    num = num :
+                    num = '0' + num
+                return num
+            }
+            return Y + split + M + split + D
+        }
+        $('.search-date').val(getCurrentDate());
+        $(".search-date").calendar();
+
+        /**
+         * [cicleClips 整体百分比占比 圆圈显示]
+         * @param  {[type]} current [实际数量]
+         * @param  {[type]} all     [总体数量]
+         * @return {[type]}         [ int]
+         */
+        function cicleClips(current, all) {
+            let clip = document.querySelector('.cicle-clips .clip'),
+                left = document.querySelector('.left'),
+                right = document.querySelector('.right'),
+                per = document.querySelector('.percent'),
+                rotate = 0,
+                percent = current / all * 100;
+            per.innerHTML = current + '/' + all;
+            let loop = setInterval(() => {
+                if (rotate >= 100) {
+                    rotate = 0;
+                    right.classList.add('width-none');
+                    clip.classList.remove('auto');
+                } else if (rotate > 50) {
+                    right.classList.remove('width-none');
+                    clip.classList.add('auto');
+                }
+                if (rotate >= percent) clearInterval(loop);
+                rotate++;
+                left.style.transform = 'rotate(' + 3.6 * rotate + 'deg)';
+                // per.innerHTML = `${rotate}%`
+            }, 25)
+        }
+        var clips = new cicleClips(4, 6)
+    })
+    </script>
 </body>
+
 </html>

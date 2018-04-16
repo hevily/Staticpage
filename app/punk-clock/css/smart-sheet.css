@@ -295,7 +295,8 @@ html body {
   html body .section-punk {
     min-height: 180px;
     background-color: #fff;
-    border-bottom: 1px solid #e5e5e5; }
+    border-bottom: 1px solid #e5e5e5;
+    color: #000; }
     html body .section-punk .cicle-clips {
       width: 100px;
       height: 100px;
@@ -364,8 +365,10 @@ html body {
         font-size: 14px;
         color: #333;
         line-height: 14px; }
-    html body .section-punk a:active {
-      color: #3bb1f0; }
+    html body .section-punk a {
+      color: #000; }
+      html body .section-punk a:active {
+        color: #3bb1f0; }
     html body .section-punk .punk-tips {
       max-width: 190px;
       text-align: center;
