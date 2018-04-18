@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../../js/plugin/jquery_WEUI/lib/weui.min.css">
+    <link rel="stylesheet" href="../../js/plugin/jquery_WEUI/css/jquery-weui.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/punk-statistics.css" />
+    <title>月统计-正常/迟到/缺卡</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="punk-detail-month-desc">
+            <span>2018年04月 迟到 共2人</span>
+        </div>
+        <div class="weui-panel punked-list punk-right">
+            <div class="weui-panel__bd">
+                <div class="weui-media-box weui-media-box_small-appmsg">
+                    <div class="weui-cells">
+                        <a class="weui-cell weui-cell_access" href="javascript:;">
+                            <div class="weui-cell__hd"><img src="../../img/daka.jpg"></div>
+                            <div class="weui-cell__bd weui-cell_primary">
+                                <div class="weui-flex">
+                                    <div class="weui-flex__item">
+                                        <p>姓名</p>
+                                        <p class="weui-media-box__desc">考勤打卡组名称</p>
+                                    </div>
+                                    <div class="placeholder punk-status">
+                                        <div class="table ">
+                                            <div class="align-middle">
+                                                <p>迟到</p>
+                                                <span>35分钟</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <span class="weui-cell__ft"></span> -->
+                        </a>
+                        <a class="weui-cell weui-cell_access" href="javascript:;">
+                            <div class="weui-cell__hd"><img src="../../img/daka.jpg"></div>
+                            <div class="weui-cell__bd weui-cell_primary">
+                                <div class="weui-flex">
+                                    <div class="weui-flex__item">
+                                        <p>姓名</p>
+                                        <p class="weui-media-box__desc">考勤打卡组名称</p>
+                                    </div>
+                                    <div class="placeholder punk-status">
+                                        <div class="table ">
+                                            <div class="align-middle">
+                                                <p>迟到</p>
+                                                <span>35分钟</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <span class="weui-cell__ft"></span> -->
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery 2.1.4 -->
+    <!-- <script src="https://staticcdn.yshjie.com/cdn/librarypath/jquery/jquery-2.1.4.min.js"></script> -->
+    <script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+    <script src="../../js/plugin/jquery_WEUI/js/jquery-weui.min.js"></script>
+    <!-- 如果使用了某些拓展插件还需要额外的JS -->
+    <script src="../../js/plugin/jquery_WEUI/lib/fastclick.js"></script>
+    <script src="../../js/plugin/jquery_WEUI/js/city-picker.min.js"></script>
+    <!-- statics  -->
+    <script src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/js/storecommon.js"></script>
+    <script type="text/javascript" src="/statichtml/bjmovie01/estores/Home/JSLang?v=1.1"></script>
+    <!-- usr -->
+    <script>
+    $(function() {
+        // 切换显示标签
+        $('.punk-tag').find('li').click(function() {
+            var CN = 'active';
+            $('.punk-tag').find('li').removeClass(CN)
+            $(this).addClass(CN)
+        })
+    })
+    </script>
+</body>
+
+</html>

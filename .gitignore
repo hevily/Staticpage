@@ -1,16 +1,15 @@
 ﻿#HMC 文件忽略摘要
 
-
-	#Mac OS X 操作系统用于储存某个文件夹图标位置和背景图片一类属性的文件
+# Mac OS X 操作系统用于储存某个文件夹图标位置和背景图片一类属性的文件
 .DS_Store
-	#node_modules
+	# node_modules
 node_modules/
-#编辑器 编译器
-	#忽略.idea文件夹所有文件
+# 编辑器 编译器
+	# 忽略.idea文件夹所有文件
 	.idea/
-	#codekit 临时文件
+	# codekit 临时文件
 	.sass-cache/
 .gulpfile.js
 
-#忽略所有rar.zipgdc
-zip
+# 忽略所有rar.zipgdc
+.zip

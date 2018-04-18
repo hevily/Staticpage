@@ -1,4 +1,4 @@
-@import url(../Font-Awesome-4.7.0/css/font-awesome.css);
+@import url(Font-Awesome-4.7.0/css/font-awesome.css);
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 button, hr, input {
   overflow: visible; }
@@ -188,6 +188,26 @@ summary {
 
 .normal-text {
   color: #3F3F3F; }
+
+.flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .flex .flex-item {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1; }
+
+.hide {
+  display: none; }
+
+.show {
+  display: block; }
+
+.show-inline {
+  display: inline-block; }
 
 html body header {
   width: 100%;

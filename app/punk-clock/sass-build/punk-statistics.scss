@@ -1,0 +1,157 @@
+@import "../../Public/static-base/static-base.scss";
+@import './font-awesome-4.7.0/css/font-awesome.min.css';
+@import "./usr-jq-weui-datepicker.scss";
+$themeColor:#3296fa;
+$darkText:#666666;
+$dark999:#999999;
+html {
+    height: 100%;
+    body {
+        height: 100%;
+        .container {
+            height: 100%;
+        }
+        .weui-navbar {
+            background-color: #fff;
+            .weui-navbar__item {
+                // color: #333;
+                padding: 8px 0;
+                &::before,
+                &::after {
+                    display: none;
+                }
+                &.weui-bar__item--on {
+                    background-color: #fff;
+                    position: relative;
+                    color: $themeColor;
+                    &::before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 2px;
+                        background-color: $themeColor;
+                    }
+                }
+            }
+        }
+        .time-select{
+            color: $themeColor;
+            line-height: 40px;
+            text-indent:10px;
+        	.search-date {
+        		color: $themeColor;
+        		border:none;
+        	    width: 90px;
+        	}
+        }
+        @include cicle-clips(200px, 9px, #3296fa);
+        .cicle-clips {
+            margin: 100px auto;
+            top: auto;
+            left: auto;
+            .num,.table {
+                display: table;
+                .align-middle {
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+                .percent{
+
+                }
+                .all {
+                    font-size: 16px;
+                    color: #666;
+                    a{
+                    	color:$themeColor;
+                    }
+                }
+            }
+        }
+        .punk-statistics {
+        	margin-top: 20px;
+            text-align: center;
+            p {
+                font-size: 20px;
+                font-weight: bold;
+                color: #555;
+            }
+            span {
+                font-size: 16px;
+                color: #666;
+            }
+        }
+
+
+
+        .punk-tag{
+        	margin-top: 11px;
+        	font-size: 14px;
+        	ul{
+        		list-style:none;
+        		li{
+        			display: inline-block;
+        			background-color: #f4f4f4;
+        			color:$darkText;
+        			padding: 4px 8px;
+        			margin-left: 8px;
+        			border-radius:3px;
+        			&.active{
+        				color:$themeColor;
+        				background-color: #dce9fd;
+        			}
+        		}
+        	}
+
+        }
+        .weui-navbar+.weui-tab__bd{
+        	padding-top: 39px;
+        }
+        .weui-panel:before{
+        	z-index:1;
+        }
+        .punked-list{
+        	.weui-media-box{
+				.weui-cell__hd{
+					height: 40px;width: 40px;
+					img{
+						height: 100%;width: 100%;
+						border-radius:50%;
+					}
+
+        		}
+        		.weui-cell__bd{
+        			padding-left: 10px;
+        		}
+        		.weui-cell:before{
+        			left: 60px;
+        			z-index:1;
+        		}
+        	}
+        }
+        .table {
+            display: table;
+            height: 100%;
+            .align-middle {
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+        .punk-status{
+        	color:$dark999;
+        }
+        .punk-detail-month-desc{
+        	color:$dark999;
+        	line-height: 40px;
+        	text-indent:20px;
+        	margin-bottom: -10px;
+        }
+        .punk-right{
+        	.table{
+        		font-size: 12px;
+        	}
+        }
+    }
+}

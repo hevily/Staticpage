@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>导航切换</title>
+	<style>
+		*{ margin: 0;padding: 0; }
+		ul { list-style: none; white-space: nowrap; margin: 20px;background-color: blue;}
+		ul li { display: inline-block; min-width: 50px;background-color: blue; color: #fff; padding: 8px 14px; }
+		li.active { background-color: #f02; }
+		li:hover { background-color: #f02; }
+
+	</style>
+</head>
+<body>
+	<ul id="nav">
+		<li class="active">导航1</li>
+		<li>导航2</li>
+		<li>导航3</li>
+		<li>导航4</li>
+		<li>导航5</li>
+		<li>导航6</li>
+		<li>导航7</li>
+		<li>导航8</li>
+		<li>导航9</li>
+		<li>导航10</li>
+		<li>导航11</li>
+		<li>导航12</li>
+		<li>导航13</li>
+		<li>导航14</li>
+		<li>导航15</li>
+		<li>导航16</li>
+		<li>导航17</li>
+		<li>导航18</li>
+		<li>导航19</li>
+		<li>导航20</li>
+	</ul>
+</body>
+<!-- <script src="https://cdn.bootcss.com/jquery/1.9.0/jquery.min.js"></script> -->
+<script src="https://cdn.bootcss.com/jquery/1.10.0/jquery.js"></script>
+<script>
+	$(function () {
+		$('#nav li').click(function () {
+			var _this = $(this),
+				other = $('#nav li'),
+				CN = 'active'
+			other.removeClass(CN)
+			_this.addClass(CN)
+		});
+		
+		
+	})
+</script>
+</html>
