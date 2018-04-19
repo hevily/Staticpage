@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>父页面</title>
+	<style>
+		body{ width: 320px;overflow: hidden; }
+		nav ul{ list-style: none;white-space: nowrap; }
+		nav ul li{ display: inline-block; width: 60px;margin: 2px;background-color: #cfcfcf;color: #fff;text-align: center;}
+		.container{ background-color: blue; }
+	</style>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li>选项1</li>
+			<li>选项2</li>
+			<li>选项3</li>
+			<li>选项4</li>
+			<li>选项5</li>
+		</ul>
+	</nav>
+	<div class="container">
+		<iframe id="iframe1"src="children1.html" frameborder="0"></iframe>
+		<iframe id="iframe2" src="child2.html" frameborder="0"></iframe>
+	</div>
+	<script>
+		window.onload = function () {
+			renderIframeHeight('iframe1')
+			renderIframeHeight('iframe2')
+		}
+		function renderIframeHeight(id) {
+			var iframe = document.getElementById(id)
+				children = iframe.contentWindow.document.body
+				width = children.offsetWidth
+				height = children.offsetHeight
+			iframe.style.width = width + 'px'
+			iframe.style.height = height + 'px'
+		}
+	</script>
+</body>
+</html>
