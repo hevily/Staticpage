@@ -10,6 +10,7 @@ html {
         height: 100%;
         .container {
             height: 100%;
+            @include mobile-container();
         }
         .weui-navbar {
             background-color: #fff;

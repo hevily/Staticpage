@@ -1,0 +1,88 @@
+@import "../../Public/static-base/static-base.scss";
+@import './font-awesome-4.7.0/css/font-awesome.min.css';
+@import "./usr-jq-weui-datepicker.scss";
+html{
+	body{
+		// 用户
+		.month-usr{
+			&.media{
+				.weui-media-box_appmsg .weui-media-box__hd{
+					width: 40px;height: 40px;
+					margin-right: 10px;
+				}
+				.weui-media-box{
+					padding: 10px;
+				}
+				.left-icon{
+					border-radius:50%;
+				}
+				.weui-media-box__title{
+					white-space:normal;
+					font-size: 16px;
+				}
+				.media-right{
+					white-space:nowrap;
+					font-size: 12px;
+					padding-right: 10px;
+				}
+				.weui-panel:after, .weui-panel:before{
+					display: none;
+				}
+			}
+		}
+		// 日历
+		.clandar{
+			padding-top: 10px;
+			background: #f8f8f8;
+			.toolbar{
+				display: none;
+			}
+			.picker-modal-inner{
+				background:#f8f8f8;
+			}
+			.picker-calendar-day-today span{
+				background:#deeaff;
+			}
+			.picker-calendar-day-selected span{
+				background-color: #4b8dfa;
+			}
+			.picker-calendar-week-days{
+				 background: #f8f8f8;
+				 color:#6f6f6f;
+				 &::after{
+				 	display: none;
+				 }
+			}
+			.picker-calendar-row:after {
+			    display: none;
+			}
+
+			.punked {
+			    position: relative;
+			}
+
+			.punked::after {
+			    content: '';
+			    display: block;
+			    position: absolute;
+			    bottom: 0;
+			    left: 50%;
+			    width: 4px;
+			    height: 4px;
+			    background-color: #30dbec;
+			    border-radius: 50%;
+			    margin-left: -2px;
+			}
+			.picker-calendar-day{
+				font-weight: normal;
+				color:#666;
+				font-size: 18px;
+			}
+			.picker-calendar-day-prev,.picker-calendar-day-next{
+				font-weight: normal;
+				color:#ccc;
+			}
+
+		}
+	}
+}

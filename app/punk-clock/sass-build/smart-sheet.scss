@@ -5,15 +5,22 @@ $cicleWidth:5px;
 html {
     body {
         background-color: #f5f5f5;
+        padding-bottom: 50px;
         .category-logo {
             width: 10px;
         }
+        .container {
+            @include mobile-container();
+        }
         header {
             position: relative;
-            top: 0;right: 0;bottom: 0;left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
             height: 39px;
             background-color: #fff;
-            z-index:10;
+            z-index: 10;
             .time-show-select {
                 text-align: center;
                 padding: 10px;
@@ -22,7 +29,7 @@ html {
                 font-size: 12px;
             }
             .time-select {
-            	display: none;
+                display: none;
                 position: absolute;
                 top: 39px;
                 left: 0;
@@ -50,15 +57,17 @@ html {
                         }
                     }
                 }
-                
             }
         }
-        .select-bg{
-        	display: none;
-        	background-color: rgba(59, 177, 240, 0.51);
-        	position: fixed;
-        	top: 0;right: 0;bottom: 0;left: 0;
-        	z-index:1;
+        .select-bg {
+            display: none;
+            background-color: rgba(59, 177, 240, 0.51);
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
         }
         .payment {
             .weui-cells {
@@ -109,8 +118,7 @@ html {
         .section-punk {
             min-height: 180px;
             background-color: #fff;
-            border-bottom: 1px solid #e5e5e5;
-            color:#000;
+            color: #000;
             @include cicle-clips(100px, 3px, #00ccff);
             .cicle-clips {
                 left: 40px;
@@ -129,9 +137,9 @@ html {
                     line-height: 14px;
                 }
             }
-            a{
-                color:#000;
-               &:active{
+            a {
+                color: #000;
+                &:active {
                     color: #3bb1f0;
                 }
             }
@@ -152,6 +160,67 @@ html {
                     font-size: 12px;
                     color: #333;
                 }
+            }
+        }
+        .section {
+            background-color: #fff;
+            &.separate-group,
+            &.qiandao {
+                padding-left: 15px;
+                color: #000;
+                overflow: hidden;
+                border-bottom:1px solid #e5e5e5;
+                padding-right: 15px;
+                .placeholder {
+                    flex: 1;
+                    line-height: 55px;
+                }
+                a {
+                    position: relative;
+                    overflow:hidden;
+                    color:#000;
+                    &::before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        width: 1000px;
+                        height: 1px;
+                        top: 0;
+                        left: 0px;
+                        background-color: #e5e5e5;
+                    }
+                    .weui-flex {
+                        position: relative;
+                        // padding-bottom: 5px;
+                    }
+                    .weui-flex__item {
+                        text-align: center;
+                        max-width:40px;
+                        &.punk-tips{
+                            max-width:190px;
+                        }
+                        p {
+                            width: 40px;
+                            font-weight: bold;
+                            font-size: 16px;
+                            margin-top: 5px;
+                            &.normal {
+                                font-size: 12px;
+                                color: #333;
+                                margin-top: 0;
+                                font-weight: normal;
+                            }
+                        }
+                    }
+                }
+            }
+            &.qiandao {
+                a{
+                    &::before{
+                        left: -30px;
+                    }
+                }
+                margin-top: 1.17647059em;
             }
         }
     }
