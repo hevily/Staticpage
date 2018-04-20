@@ -1,0 +1,85 @@
+.weui-popup__container {
+  z-index: 10000; }
+  .weui-popup__container .weui-popup__modal {
+    background-color: #f0eff5; }
+  .weui-popup__container .sign-top-info {
+    padding: 10px;
+    background-color: #FFF;
+    margin-bottom: 10px; }
+    .weui-popup__container .sign-top-info .left-desc {
+      width: 100px;
+      color: #858e98; }
+      .weui-popup__container .sign-top-info .left-desc span.icon {
+        display: inline-block;
+        width: 20px;
+        text-align: center; }
+  .weui-popup__container .input-area {
+    margin-bottom: 10px;
+    border-top: 1px solid #cfcfcf;
+    border-bottom: 1px solid #cfcfcf;
+    border-top: 0.5px solid #cfcfcf;
+    border-bottom: 0.5px solid #cfcfcf; }
+    .weui-popup__container .input-area .picture-upload {
+      font-size: 0; }
+      .weui-popup__container .input-area .picture-upload span {
+        display: inline-block;
+        box-sizing: border-box;
+        margin: 2.5%;
+        width: 69px;
+        height: 69px;
+        border: 1px dashed #cfcfcf;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        position: relative;
+        font-size: 0; }
+        .weui-popup__container .input-area .picture-upload span.del i {
+          display: block;
+          position: absolute;
+          right: -13px;
+          top: -10px;
+          font-size: 12px;
+          font-weight: 400;
+          color: #fff;
+          background: #f02;
+          width: 14px;
+          height: 14px;
+          margin: 5px;
+          border-radius: 10px;
+          text-align: center;
+          line-height: 14px; }
+        .weui-popup__container .input-area .picture-upload span img {
+          width: 100%;
+          display: block;
+          border-radius: 5px; }
+        .weui-popup__container .input-area .picture-upload span.camera {
+          padding: 16px; }
+          .weui-popup__container .input-area .picture-upload span.camera img {
+            width: 35px;
+            height: 35px; }
+      .weui-popup__container .input-area .picture-upload .fa {
+        font-size: 36px;
+        margin: 16px; }
+  .weui-popup__container .sign-company-name p {
+    color: #858e98; }
+  .weui-popup__container .sign-company-name .weui-cell__ft {
+    color: #000;
+    text-align: left; }
+  .weui-popup__container .popup-btn-group {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #FFF;
+    z-index: 900; }
+    .weui-popup__container .popup-btn-group .weui-btn {
+      width: 50%;
+      float: left; }
+      .weui-popup__container .popup-btn-group .weui-btn + .weui-btn {
+        margin-top: 0; }
+    .weui-popup__container .popup-btn-group .weui-btn_white_all {
+      border-radius: 0;
+      color: #000; }
+      .weui-popup__container .popup-btn-group .weui-btn_white_all::after {
+        display: none; }
+
+/*# sourceMappingURL=admin-change-result.css.map */

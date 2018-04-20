@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../../js/plugin/jquery_WEUI/lib/weui.min.css">
+    <link rel="stylesheet" href="../../js/plugin/jquery_WEUI/css/jquery-weui.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/punk-detail-usr-month.css" />
+    <title>考勤月历</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="media month-usr">
+            <div class="media-body">
+                <div class="weui-panel weui-panel_access">
+                    <div class="weui-panel__bd">
+                        <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+                            <div class="weui-media-box__hd">
+                                <img class="weui-media-box__thumb left-icon" src="../../img/creator.png">
+                            </div>
+                            <div class="weui-media-box__bd">
+                                <h4 class="weui-media-box__title">张俊辉张俊辉</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="media-right media-middle">
+                <span class="current-day">2018-04-19 星期四</span>
+            </div>
+        </div>
+        <div class="clandar" hidden>
+            <input type="text" id="clandar" hidden>
+        </div>
+        <div class="current-day-detail">
+            <p class="punk-role-group"> 班次:一天一班 09:00-18:00 考勤组:考勤组名称</p>
+            <div class="punked-total">
+                <i class="fa fa-clock-o"></i> 今日打卡1次，工时共计8
+            </div>
+            <div class="punk-time punk-in ">
+                <div class="punk-tips">
+                    <span class="punk-point">上</span> 打卡时间 08:50 <span class="punk-on-time">(上班时间09:00)</span>
+                </div>
+                <div class="punk-status">
+                    <div class="punk-on-time" hidden>
+                        <div class="punk-addr">
+                            <i class="fa fa-map-marker"></i> 北京市朝阳区南磨房镇南磨房地区.大成国际中心大成国际中心
+                        </div>
+                        <div class="punk-status-tag">
+                            <span>正常</span>
+                        </div>
+                    </div>
+                    <div class="punk-out-time">
+                        <div class="punk-addr">
+                            <i class="fa fa-map-marker"></i> 北京市朝阳区南磨房镇南磨房地区.大成国际中心大成国际中心
+                        </div>
+                        <div class="punk-status-tag">
+                            <span>缺卡</span><span>迟到 2小时22分钟</span>
+                        </div>
+                        <div class="out-time-action">
+                            <a href="javascript:;">提交申请></a>
+                        </div>
+                        <div class="admin-change">
+                            <a href="./admin-change-result.html">修改结果</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="punk-time punk-out ">
+                <div class="punk-tips">
+                    <span class="punk-point">下</span> 打卡时间 18:50 <span class="punk-on-time">(下班时间18:00)</span>
+                </div>
+                <div class="punk-status">
+                    <div class="punk-on-time">
+                        <div class="punk-addr">
+                            <i class="fa fa-map-marker"></i> 北京市朝阳区南磨房镇南磨房地区.大成国际中心大成国际中心
+                        </div>
+                        <div class="punk-status-tag">
+                            <span>正常</span>
+                        </div>
+                    </div>
+                    <div class="punk-out-time" hidden>
+                        <div class="punk-addr">
+                            <i class="fa fa-map-marker"></i> 北京市朝阳区南磨房镇南磨房地区.大成国际中心大成国际中心
+                        </div>
+                        <div class="punk-status-tag">
+                            <span>缺卡</span><span>迟到 2小时22分钟</span>
+                        </div>
+                        <div class="out-time-action">
+                            <a href="javascript:;">提交申请></a>
+                        </div>
+                        <div class="admin-change">
+                            <a href="./admin-change-result.html">修改结果</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact-admin">
+            <a href="javascript:;">联系管理员</a>
+        </div>
+    </div>
+    <!-- jQuery 2.1.4 -->
+    <!-- <script src="https://staticcdn.yshjie.com/cdn/librarypath/jquery/jquery-2.1.4.min.js"></script> -->
+    <script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+    <script src="../../js/plugin/jquery_WEUI/js/jquery-weui.min.js"></script>
+    <!-- 如果使用了某些拓展插件还需要额外的JS -->
+    <script src="../../js/plugin/jquery_WEUI/lib/fastclick.js"></script>
+    <script src="../../js/plugin/jquery_WEUI/js/city-picker.min.js"></script>
+    <!-- statics  -->
+    <!-- <script src="https://shop.yshjie.com/statichtml/bjmovie01/estores/Public/js/storecommon.js"></script> -->
+    <script type="text/javascript" src="/statichtml/bjmovie01/estores/Home/JSLang?v=1.1"></script>
+    <!-- usr -->
+    <script>
+    $(function() {
+        var punkeddate = {
+            y: 2018,
+            m: 3,
+            d: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"]
+        };
+        $("#clandar").calendar({
+            container: ".clandar",
+            input: "#date3",
+            onOpen: function() {
+                $('.clandar').slideDown(1200)
+            },
+            onDayClick: function(p, dayContainer, year, month, day) {
+                console.log(p, dayContainer, year, month, day)
+            },
+            onMonthAdd: function() {
+                var punkeddate = {
+                    y: 2018,
+                    m: 4,
+                    d: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"]
+                };
+                renderClandar('.clandar .weui-picker-calendar', punkeddate)
+            }
+        });
+
+
+        /**
+         * [renderClandar description]
+         * @param  {dom} clandar  目标日历
+         * @param  {text} json    打卡数据集合 {y:yyy,m:mmm,d:[1,2...30]}
+         * @return {[type]}         [description]
+         */
+        function renderClandar(clandar, json) {
+            var clandar = $(clandar),
+                month = clandar.find('.picker-calendar-month.picker-calendar-month-current'),
+                dayboxs = month.find('.picker-calendar-day'),
+                unnecessarypre = month.find('.picker-calendar-day-prev'),
+                unnecessarynext = month.find('.picker-calendar-day-next'),
+                y = json.y,
+                m = json.m,
+                d = json.d;
+            unnecessarypre.css("opacity", 0);
+            unnecessarynext.css("opacity", 0);
+            dayboxs.each(function(i, item) {
+                var el = $(item),
+                    cDate = el.data('date');
+                $.each(d, function(key, value) {
+                    var punkday = y + '-' + (m) + '-' + value;
+                    // console.log(key,'--->',value)
+                    if (cDate === punkday) {
+                        console.log(cDate, '££££££', punkday)
+                        el.addClass('punked')
+                    }
+                })
+            })
+        }
+        renderClandar('.clandar .weui-picker-calendar', punkeddate)
+
+        function drawLine(from, to) {
+            var start = $(from),
+                end = $(to)
+            if (end.length != 0) {
+                start.addClass('outshow')
+            } else {
+                start.removeClass('outshow')
+            }
+        }
+        drawLine('.punk-in', '.punk-out')
+    })
+    </script>
+</body>
+
+</html>

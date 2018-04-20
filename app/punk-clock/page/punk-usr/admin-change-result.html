@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../../js/plugin/jquery_WEUI/lib/weui.min.css">
+    <link rel="stylesheet" type="text/css" href="../../js/plugin/jquery_WEUI/css/jquery-weui.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/admin-change-result.css">
+    <title>签到</title>
+</head>
+
+<body>
+    <header></header>
+    <div class="container">
+        <div id="sign-in-popup" class="weui-popup__container">
+            <div class="weui-popup__overlay"></div>
+            <div class="weui-popup__modal">
+                <div class="sign-top-info">
+                    <div class="weui-flex">
+                        <div class="left-desc"><span class="icon"><i class="fa fa-clock-o"></i></span>签到时间:</div>
+                        <div class="weui-flex__item"><span class="punk-time-now">14:06</span>
+                        </div>
+                    </div>
+                    <div class="weui-flex">
+                        <div class="left-desc"><span class="icon"><i class="fa fa-map-marker"></i></span>签到地点:</div>
+                        <div class="weui-flex__item"><span class="location-text">北京市朝阳区双井街道百子湾路金隅·大成国际中心</span></div>
+                    </div>
+                </div>
+                <div class="weui-cells sign-company-name">
+                    <div class="weui-cell">
+                        <div class="">
+                            <p>将考勤结果修改为</p>
+                        </div>
+                        <div class="weui-cell__ft">和沐~钉钉考勤</div>
+                    </div>
+                </div>
+                <div class="input-area">
+                    <!-- <div class="weui-cells__title">文本域</div> -->
+                    <div class="weui-cells weui-cells_form">
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd">
+                                <textarea class="weui-textarea" placeholder="请输入文本" rows="6"></textarea>
+                                <div class="picture-upload">
+                                    <span class="del">
+			  		      		<i>x</i>
+			  		      		<img src="../../img/punk-usr/email.jpg">
+			  		      	</span>
+                                    <span class="del">
+			  		      		<i>x</i>
+			  		      		<img src="../../img/punk-usr/email.jpg">
+			  		      	</span>
+                                    <span class="del">
+			  		      		<i>x</i>
+			  		      		<img src="../../img/punk-usr/email.jpg">
+			  		      	</span>
+                                    <span class="del">
+			  		      		<i>x</i>
+			  		      		<img src="../../img/punk-usr/email.jpg">
+			  		      	</span>
+                                    <span class="del">
+			  		      		<i>x</i>
+			  		      		<img src="../../img/punk-usr/email.jpg">
+			  		      	</span>
+                                    <span class="camera">
+			  		      		<img src="../../img/punk-usr/camera.png">
+			  		      	</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="popup-btn-group">
+                <!-- <a href="javascript:;" class="weui-btn weui-btn_white_all close-popup ">返回</a> -->
+                <a href="javascript:;" class="weui-btn weui-btn_white_all ">提交</a>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+    <!-- jQuery 2.1.4 -->
+    <!-- <script src="https://staticcdn.yshjie.com/cdn/librarypath/jquery/jquery-2.1.4.min.js"></script> -->
+    <script src="/moviehelper/app/Public/jQuery/jquery-2.1.4.min.js"></script>
+    <!-- statistics  -->
+    <!-- <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.0&key=775f9b46c2ae55ce5e239ead400c40da"></script> -->
+    <script src="../../js/plugin/jquery_WEUI/js/jquery-weui.min.js"></script>
+    <script type="text/javascript">
+    // 点击签到弹层
+    $('#sign-in-popup').popup()
+    // 删除已选择照片
+    $('.picture-upload').on('click', '.del i', function() {
+        var _this = $(this).closest('span')
+        _this.remove()
+        if ($('.picture-upload').find('span').length < 10) {
+            $('.camera').show()
+        }
+    })
+    // 添加图片
+    $('.camera').on('click', function() {
+        var length = $('.picture-upload').find('span').length
+        if (length > 9) { return false; }
+        var _this = $(this),
+            img = '<span class="del"><i>x</i><img src="../../img/punk-usr/email.jpg"></span>';
+        _this.before(img);
+        if ($('.picture-upload').find('span').length > 9) {
+            _this.hide()
+        }
+    })
+    </script>
+</body>
+
+</html>
