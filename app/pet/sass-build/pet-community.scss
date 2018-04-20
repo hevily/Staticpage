@@ -7,11 +7,21 @@ html{
 		header{
 			@include site-head();
 		}
-		.site-search{
-			@include site-search();
+		.search{
+			background-color: #fff;
+			.site-search{
+				@include site-search();
+			}
 		}
+		.section{
+			@import "./inside-page-nav.scss";
+			@import "./banner.scss";
+			@import "./model.scss";
+		}
+		@import "./gap-block.scss";
 		footer{
-			@include manwidth();
+			background-color: $footerbackground;
+			@import "./footer.scss";
 		}
 	}
 }

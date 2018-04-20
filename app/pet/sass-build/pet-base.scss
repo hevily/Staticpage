@@ -6,6 +6,7 @@ $headbackground:#fff;
 $headtextcolor:#4d4d4d;
 $darktext:#b3b3b3;
 $bodybackground:$topheadbackgound;
+$footerbackground:#333;
 *{
 	box-sizing:border-box;
 	margin: 0;padding: 0;
@@ -28,7 +29,7 @@ input{
 	}
 }
 .section{
-	background-color: #fff;
+	// background-color: #fff;
 }
 .themecolor{
 	color:$themecolor;
@@ -61,6 +62,12 @@ input{
 // body color
 body{
 	background-color: $bodybackground;
+}
+.flex{
+	display:flex;
+	.flex-item{
+		flex:1;
+	}
 }
 @mixin manwidth() {
 	width:1190px;
