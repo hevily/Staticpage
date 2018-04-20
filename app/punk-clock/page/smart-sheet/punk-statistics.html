@@ -16,14 +16,14 @@
         <div class="weui-tab">
             <div class="weui-navbar">
                 <a class="weui-navbar__item " href="#tab1">
-		      日统计
-		    </a>
+              日统计
+            </a>
                 <a class="weui-navbar__item " href="#tab2">
-		      月统计
-		    </a>
+              月统计
+            </a>
                 <a class="weui-navbar__item weui-bar__item--on" href="#tab3">
-		      我的
-		    </a>
+              我的
+            </a>
             </div>
             <div class="weui-tab__bd">
                 <div id="tab1" class="weui-tab__bd-item ">
@@ -119,7 +119,170 @@
                     </div>
                 </div>
                 <div id="tab3" class="weui-tab__bd-item weui-tab__bd-item--active">
-                    <iframe src="./punk-detail-usr.html" frameborder="0" width="100%" height="100%"></iframe>
+                    <!-- <iframe src="./punk-detail-usr.html" frameborder="0" width="100%" height="100%"></iframe> -->
+                    <div class="owner-punk-info">
+                        <div class="looked-date">
+                            <input type="text" class="select-looked-date" value="">
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                        <div class="weui-flex">
+                            <div class="weui-flex__item">
+                                <div class="weui-panel usr-logo-name">
+                                    <div class="weui-panel__bd">
+                                        <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+                                            <div class="weui-media-box__hd">
+                                                <img class="weui-media-box__thumb" src="../../img/qiandao.jpg">
+                                            </div>
+                                            <div class="weui-media-box__bd">
+                                                <h4 class="weui-media-box__title">用户名称</h4>
+                                                <p class="weui-media-box__desc">
+                                                    考勤组:考勤组名称
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="punk-calendar-entrance">
+                                <div class="table">
+                                    <div class="align-middle">
+                                        <i class="fa fa-calendar"></i> 打卡月历
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="punked-month-info">
+                        <div class="weui-cells">
+                            <a class="weui-cell weui-cell_access" href="javascript:;">
+                                <div class="weui-cell__bd">
+                                    <p>出勤天数</p>
+                                </div>
+                                <div class="weui-cell__ft">
+                                    2天
+                                </div>
+                            </a>
+                            <div class="punk-item-detail">
+                                <ul>
+                                    <li>
+                                        <p class="man-day">
+                                            2018-04-19 （星期四）
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="man-day">
+                                            2018-04-20 （星期五）
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="man-day">
+                                            2018-04-21 （星期六）
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="man-day">
+                                            2018-04-22 （星期日）
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="man-day">
+                                            2018-04-23 （星期一）
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a class="weui-cell weui-cell_access" href="javascript:;">
+                                <div class="weui-cell__bd">
+                                    <p>休息天数</p>
+                                </div>
+                                <div class="weui-cell__ft">
+                                    2天
+                                </div>
+                            </a>
+                            <a class="weui-cell weui-cell_access" href="javascript:;">
+                                <div class="weui-cell__bd">
+                                    <p>迟到</p>
+                                </div>
+                                <div class="weui-cell__ft">
+                                    9次
+                                </div>
+                            </a>
+                            <div class="punk-item-detail">
+                                <ul>
+                                    <li>
+                                        <p class="man-day">
+                                            2018-04-19 （星期四）
+                                        </p>
+                                        <p class="day-desc"> 迟到20分钟</p>
+                                    </li>
+                                    <li>
+                                        <p class="man-day">
+                                            2018-04-20 （星期五）
+                                        </p>
+                                        <p class="day-desc"> 迟到20分钟</p>
+                                    </li>
+                                    <li>
+                                        <p class="man-day">
+                                            2018-04-21 （星期六）
+                                        </p>
+                                        <p class="day-desc"> 迟到20分钟</p>
+                                    </li>
+                                    <li>
+                                        <p class="man-day">
+                                            2018-04-22 （星期日）
+                                        </p>
+                                        <p class="day-desc"> 迟到20分钟</p>
+                                    </li>
+                                    <li>
+                                        <p class="man-day">
+                                            2018-04-23 （星期一）
+                                        </p>
+                                        <p class="day-desc"> 迟到20分钟</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a class="weui-cell weui-cell_access" href="javascript:;">
+                                <div class="weui-cell__bd">
+                                    <p>早退</p>
+                                </div>
+                                <div class="weui-cell__ft">
+                                    1次，共00分钟
+                                </div>
+                            </a>
+                            <a class="weui-cell weui-cell_access" href="javascript:;">
+                                <div class="weui-cell__bd">
+                                    <p>缺卡</p>
+                                </div>
+                                <div class="weui-cell__ft">
+                                    0次
+                                </div>
+                            </a>
+                            <a class="weui-cell weui-cell_access" href="javascript:;">
+                                <div class="weui-cell__bd">
+                                    <p>旷工</p>
+                                </div>
+                                <div class="weui-cell__ft">
+                                    2天
+                                </div>
+                            </a>
+                            <a class="weui-cell weui-cell_access" href="javascript:;">
+                                <div class="weui-cell__bd">
+                                    <p>外勤</p>
+                                </div>
+                                <div class="weui-cell__ft">
+                                    0次
+                                </div>
+                            </a>
+                            <a class="weui-cell weui-cell_access" href="javascript:;">
+                                <div class="weui-cell__bd">
+                                    <p>加班</p>
+                                </div>
+                                <div class="weui-cell__ft">
+                                    0小时
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -186,7 +349,30 @@
                 // per.innerHTML = `${rotate}%`
             }, 25)
         }
-        var clips = new cicleClips(4, 6)
+        var clips = new cicleClips(4, 6);
+
+        // 初始化可查看月份
+        (function() {
+            var date = new Date(),
+                Y = date.getFullYear(),
+                M = addZero(date.getMonth() + 1)
+
+            function addZero(num) {
+                num > 10 ?
+                    num = num :
+                    num = '0' + num
+                return num
+            }
+            $('.select-looked-date').val(Y + '.' + M);
+        })()
+        $('.select-looked-date').picker({
+            title: "选择将要查看的月份",
+            cols: [{
+                textAlign: 'center',
+                values: ['2018.04', '2018.03', '2018.02', '2018.01', '2017.12', '2017.11', '2017.10', '2017.09'],
+                displayValues: ['2018年04月', '2018年03月', '2018年02月', '2018年01月', '2017年12月', '2017年11月', '2017年10月', '2017年09月']
+            }]
+        })
     })
     </script>
 </body>

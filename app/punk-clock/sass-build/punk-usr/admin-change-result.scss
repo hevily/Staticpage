@@ -1,110 +1,136 @@
-
-.weui-popup__container{
-	z-index: 10000;
-	.weui-popup__modal{
-		background-color: #f0eff5;
-	}
-	.sign-top-info{
-		padding: 10px;
-		background-color: #FFF;
-		.left-desc{
-			width: 100px;
-			color:#858e98;
-			span.icon{
-				display: inline-block;
-				width: 20px;
-				text-align:center;
-			}
+@mixin changeResult() {
+	.weui-popup__container{
+		font-size: 12px;
+		z-index: 10000;
+		-webkit-overflow-scrolling:touch;
+		.weui-popup__modal{
+			background-color: #f0eff5;
 		}
-		// @include border(bottom,solid,1px,#cfcfcf);
-		margin-bottom: 10px;
-	}
-	.input-area{
-		margin-bottom: 10px;
-		border-top:1px solid #cfcfcf;
-		border-bottom:1px solid #cfcfcf;
-		border-top:0.5px solid #cfcfcf;
-		border-bottom:0.5px solid #cfcfcf;
-		.picture-upload{
-			font-size: 0;
-
-			span{
-				display: inline-block;
-				box-sizing:border-box;
-				margin:2.5%;
-				width: 69px;
-				height: 69px;
-				// overflow: hidden;
-				border:1px dashed #cfcfcf;
+		.sign-top-info{
+			padding: 10px;
+			margin-bottom: 10px;
+			color:#888;
+		}
+		.change-status{
+			background-color: #fff;
+			line-height: 42px;
+			color:#000;
+			font-size: 16px;
+			padding: 0 10px;
+			border-top:1px solid #f1f1f1;
+			border-bottom:1px solid #f1f1f1;
+			.status{
 				border-radius:5px;
-				margin-bottom: 10px;
-				position: relative;
-				font-size: 0;
-				&.del i{
-					display: block;
-					position: absolute;
-					right: -13px;top: -10px;
-					font-size: 12px;
-					font-weight: 400;
-					color:#fff;
-					background: #f02;
-					width: 14px;
-					height: 14px;
-					margin: 5px;
-					border-radius: 10px;
-					text-align: center;
-					line-height: 14px;
-				}
-				img{
-					width: 100%;
-					display: block;
-					border-radius: 5px;
-				}
-				&.camera{
-					padding: 16px;
-					img{
-						width: 35px;
-						height: 35px;
+				overflow:hidden;
+				border:1px solid #38adff;
+				margin-top: 5px;
+				font-size: 12px;
+				.weui-flex__item{
+					border-left:1px solid #38adff;
+					color:#38adff;
+					text-align:center;
+					line-height: 30px;
+					&:first-child{
+						border-left:none;
+					}
+					&.active{
+						color:#fff;
+						background-color: #38adff;
 					}
 				}
-			}
-			.fa{
-				font-size: 36px;
-				margin: 16px;
+				
 			}
 		}
-	}
-	.sign-company-name{
-		// margin-bottom: 90px;
-		p{
-			color:#858e98;
-		}
-		.weui-cell__ft{
-
-		color:#000;
-		text-align: left;
-		}
-	}
-	.popup-btn-group{
-		position: fixed;
-		bottom: 0;left: 0;right: 0;
-		background-color: #FFF;
-		z-index: 900;
-		.weui-btn{
-			width: 50%;
-			float: left;
-			&+.weui-btn{
-				margin-top: 0;
-			}
-		}
-		.weui-btn_white_all{
-			// @include border(top,solid,1px,#cfcfcf);
-			border-radius: 0;
-			color:#000;
-			&::after{
+		.input-area{
+			margin-bottom: 10px;
+			.weui-cells:before{
 				display: none;
 			}
+			.picture-upload{
+				font-size: 0;
+
+				span{
+					display: inline-block;
+					box-sizing:border-box;
+					margin:2.5%;
+					width: 69px;
+					height: 69px;
+					// overflow: hidden;
+					border-radius:5px;
+					margin-bottom: 10px;
+					position: relative;
+					font-size: 0;
+					&.del i{
+						display: block;
+						position: absolute;
+						right: -13px;top: -10px;
+						font-size: 12px;
+						font-weight: 400;
+						color:#fff;
+						background: #f02;
+						width: 14px;
+						height: 14px;
+						margin: 5px;
+						border-radius: 10px;
+						text-align: center;
+						line-height: 14px;
+					}
+					img{
+						width: 100%;
+						display: block;
+						border-radius: 5px;
+					}
+					&.camera{
+						border:1px dashed #cfcfcf;
+						padding: 16px;
+						img{
+							width: 35px;
+							height: 35px;
+						}
+					}
+				}
+				.fa{
+					font-size: 36px;
+					margin: 16px;
+				}
+			}
+		}
+		.sign-company-name{
+			// margin-bottom: 90px;
+			p{
+				color:#858e98;
+			}
+			.weui-cell__ft{
+
+			color:#000;
+			text-align: left;
+			}
+		}
+		.change-notice{
+			padding: 0 10px 160px 10px;
+			color:#888;
+		}
+		.popup-btn-group{
+			position: fixed;
+			bottom: 0;left: 0;right: 0;
+			background-color: #FFF;
+			padding: 10px;
+			z-index: 900;
+			border-top:1px soldi #ccc;
+			.weui-btn{
+				width: 100%;
+				background-color:#38adff;
+				line-height: 42px;
+				font-size: 14px;
+				border-radius:3px;
+			}
 		}
 	}
-	
+}
+html{
+	body{
+		background-color: #f8f8f8;
+		@include changeResult();
+
+	}
 }

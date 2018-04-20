@@ -64,7 +64,7 @@
                             <span>缺卡</span><span>迟到 2小时22分钟</span>
                         </div>
                         <div class="out-time-action">
-                            <a href="javascript:;">提交申请></a>
+                            <a href="javascript:;" class="make-apply">提交申请></a>
                         </div>
                         <div class="admin-change">
                             <a href="./admin-change-result.html">修改结果</a>
@@ -93,7 +93,7 @@
                             <span>缺卡</span><span>迟到 2小时22分钟</span>
                         </div>
                         <div class="out-time-action">
-                            <a href="javascript:;">提交申请></a>
+                            <a href="javascript:;" class="make-apply">提交申请></a>
                         </div>
                         <div class="admin-change">
                             <a href="./admin-change-result.html">修改结果</a>
@@ -186,6 +186,39 @@
             }
         }
         drawLine('.punk-in', '.punk-out')
+
+        // 提交申请
+        $('.make-apply').on('click',function () {
+            $.actions({
+            title:'选择提交申请类别',
+              actions: [{
+                text: "请假审批(研发中)",
+                onClick: function() {
+                  //do something
+                }
+              },{
+                text: "出差审批(研发中)",
+                onClick: function() {
+                  //do something
+                }
+              },{
+                text: "外出审批(研发中)",
+                onClick: function() {
+                  //do something
+                }
+              },{
+                text: "加班审批(研发中)",
+                onClick: function() {
+                  //do something
+                }
+              },{
+                text: "申请补卡",
+                onClick: function() {
+                  window.location.href='../apply/buka-apply.html'
+                }
+              }]
+            });
+        })
     })
     </script>
 </body>

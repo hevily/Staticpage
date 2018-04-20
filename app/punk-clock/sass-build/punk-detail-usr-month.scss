@@ -214,5 +214,36 @@ html{
 				color:#3aaeff;
 			}
 		}
+		// 提交申请 actions
+		.weui-mask.weui-mask--visible{
+			opacity:0.5;
+		}
+		$pd:10px;
+		$radius:8px;
+		.weui-actionsheet{
+			left: $pd;right: $pd;
+			width:calc(100% - 20px);
+			bottom:$pd;
+			border-radius:$radius;
+			background: transparent;
+			overflow:hidden;
+			.weui-actionsheet__menu{
+				border-bottom-left-radius:$radius;
+				border-bottom-right-radius:$radius;
+				.weui-actionsheet__cell {
+					font-size: 16px;
+					font-weight: normal;
+					color:#38adff;
+					&:first-child,&:nth-child(2),&:nth-child(3),&:nth-child(4){
+						color:#ccc;
+					}
+				}
+			}
+			.weui-actionsheet__action{
+				border-top-left-radius:$radius;
+				border-top-right-radius:$radius;
+				overflow:hidden;
+			}
+		}
 	}
 }
