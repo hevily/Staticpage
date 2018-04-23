@@ -221,9 +221,12 @@ i.icon.icon-prev {
 i.icon.icon-next {
   background-image: url(../img/triangle-right.svg); }
 
-/*选中样式更改*/
-.picker-calendar-day.picker-calendar-day-selected span {
-  background-color: #576a95; }
+.picker-calendar-day {
+  /*选中样式更改*/ }
+  .picker-calendar-day.picker-calendar-day-today span {
+    background: #deeaff; }
+  .picker-calendar-day.picker-calendar-day-selected span {
+    background-color: #4b8dfa; }
 
 html {
   height: 100%; }
@@ -256,7 +259,8 @@ html {
     html body .time-select {
       color: #3296fa;
       line-height: 40px;
-      text-indent: 10px; }
+      text-indent: 10px;
+      font-size: 14px; }
       html body .time-select .search-date {
         color: #3296fa;
         border: none;
@@ -361,6 +365,8 @@ html {
             background-color: #dce9fd; }
     html body .weui-navbar + .weui-tab__bd {
       padding-top: 39px; }
+      html body .weui-navbar + .weui-tab__bd .weui-tab__bd-item {
+        -webkit-overflow-scrolling: touch; }
     html body .weui-panel:before {
       z-index: 1; }
     html body .punked-list .weui-media-box .weui-cell__hd {
@@ -394,14 +400,26 @@ html {
       padding: 10px; }
       html body .owner-punk-info .select-looked-date {
         width: 60px;
-        margin-bottom: 10px; }
-      html body .owner-punk-info .punk-calendar-entrance {
+        margin-left: 5px;
+        margin-bottom: 10px;
+        border: none; }
+      html body .owner-punk-info .punk-calendar-entrance a {
         color: #3296fa;
         font-size: 12px; }
     html body .punked-month-info {
       background-color: #fff; }
+      html body .punked-month-info .weui-cells {
+        margin-top: 0; }
       html body .punked-month-info .weui-cell_access .weui-cell__ft:after {
         border-width: 0 2px 2px 0; }
+      html body .punked-month-info .punk-item + .punk-item-detail {
+        display: none; }
+      html body .punked-month-info .punk-item.showing .weui-cell__ft::after {
+        border-width: 2px 0px 0px 2px; }
+      html body .punked-month-info .punk-item.showing + .punk-item-detail {
+        display: block; }
+      html body .punked-month-info .punk-item.none {
+        color: #999; }
       html body .punked-month-info .weui-cell__ft {
         padding-right: 15px; }
       html body .punked-month-info .punk-item-detail {
@@ -410,7 +428,7 @@ html {
         html body .punked-month-info .punk-item-detail:before {
           content: " ";
           position: absolute;
-          left: 0;
+          left: 15px;
           right: 0;
           height: 1px;
           color: #e5e5e5;
@@ -427,7 +445,7 @@ html {
           padding-left: 15px;
           list-style: none; }
           html body .punked-month-info .punk-item-detail ul li {
-            padding-left: 50px;
+            font-size: 14px;
             line-height: 30px;
             position: relative; }
             html body .punked-month-info .punk-item-detail ul li:before {
@@ -463,5 +481,7 @@ html {
         height: 40px; }
     html body .usr-logo-name a.weui-media-box {
       padding: 0; }
+    html body .toolbar .title {
+      margin: 0; }
 
 /*# sourceMappingURL=punk-statistics.css.map */

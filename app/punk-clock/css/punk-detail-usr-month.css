@@ -221,9 +221,12 @@ i.icon.icon-prev {
 i.icon.icon-next {
   background-image: url(../img/triangle-right.svg); }
 
-/*选中样式更改*/
-.picker-calendar-day.picker-calendar-day-selected span {
-  background-color: #576a95; }
+.picker-calendar-day {
+  /*选中样式更改*/ }
+  .picker-calendar-day.picker-calendar-day-today span {
+    background: #deeaff; }
+  .picker-calendar-day.picker-calendar-day-selected span {
+    background-color: #4b8dfa; }
 
 html body {
   padding-bottom: 80px;
@@ -255,10 +258,6 @@ html body {
       display: none; }
     html body .clandar .picker-modal-inner {
       background: #f8f8f8; }
-    html body .clandar .picker-calendar-day-today span {
-      background: #deeaff; }
-    html body .clandar .picker-calendar-day-selected span {
-      background-color: #4b8dfa; }
     html body .clandar .picker-calendar-week-days {
       background: #f8f8f8;
       color: #6f6f6f; }

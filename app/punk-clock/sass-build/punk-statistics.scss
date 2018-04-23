@@ -42,6 +42,7 @@ html {
             color: $themeColor;
             line-height: 40px;
             text-indent: 10px;
+            font-size: 14px;
             .search-date {
                 color: $themeColor;
                 border: none;
@@ -107,6 +108,9 @@ html {
         }
         .weui-navbar+.weui-tab__bd {
             padding-top: 39px;
+            .weui-tab__bd-item{
+                -webkit-overflow-scrolling:touch;
+            }
         }
         .weui-panel:before {
             z-index: 1;
@@ -157,28 +161,53 @@ html {
             padding: 10px;
             .select-looked-date {
                 width: 60px;
+                margin-left: 5px;
                 margin-bottom: 10px;
+                border:none;
             }
             .punk-calendar-entrance {
-                color: #3296fa;
-                font-size: 12px;
+                a{
+
+                    color: #3296fa;
+                    font-size: 12px;
+                }
             }
         }
         .punked-month-info {
             background-color: #fff;
+            .weui-cells{
+                margin-top: 0;
+            }
             .weui-cell_access .weui-cell__ft:after {
                 border-width: 0 2px 2px 0;
+            }
+            .punk-item{
+                &+.punk-item-detail{
+                    display: none;
+                }
+                &.showing{
+                    .weui-cell__ft::after{
+                        border-width:2px 0px 0px 2px;
+                    }
+                    &+.punk-item-detail{
+                        display: block;
+                    }
+                }
+                &.none{
+                    color:#999;
+                }
             }
             .weui-cell__ft {
                 padding-right: 15px;
             }
+
             .punk-item-detail {
                 position: relative;
                 background-color: #f8f8f8;
                 &:before {
                     content: " ";
                     position: absolute;
-                    left: 0;
+                    left: 15px;
                     right: 0;
                     height: 1px;
                     color: #e5e5e5;
@@ -194,7 +223,7 @@ html {
                     padding-left: 15px;
                     list-style: none;
                     li {
-                        padding-left: 50px;
+                        font-size: 14px;
                         line-height: 30px;
                         position: relative;
                         &:before {
@@ -244,6 +273,9 @@ html {
             a.weui-media-box {
                 padding: 0;
             }
+        }
+        .toolbar .title{
+            margin: 0;
         }
     }
 }

@@ -9,8 +9,13 @@ $themecolor:#3296fa;
 	}i.icon.icon-next{
 		background-image: url(../img/triangle-right.svg);
 	}
-	/*选中样式更改*/
-	.picker-calendar-day.picker-calendar-day-selected span{
-		background-color: #576a95;
+	.picker-calendar-day{
+		// 当日
+		&.picker-calendar-day-today span{
+			background:#deeaff;
+		}
+		/*选中样式更改*/
+		&.picker-calendar-day-selected span{
+				background-color: #4b8dfa;
+			}
 	}
-	
